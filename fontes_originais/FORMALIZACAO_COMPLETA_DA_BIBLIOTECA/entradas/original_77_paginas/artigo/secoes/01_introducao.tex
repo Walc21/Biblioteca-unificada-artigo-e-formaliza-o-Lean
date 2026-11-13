@@ -1,0 +1,163 @@
+\section{Introdução}
+\label{sec:introduction}
+
+Catálogos de aproximação costumam ser descritos por dois números: quantos
+termos são usados e quão pequeno é o erro. Essa descrição omite um terceiro
+recurso que se torna decisivo quando a representação precisa ser armazenada,
+transmitida ou selecionada exatamente: o custo aritmético dos parâmetros. Uma
+reta com coeficientes reais arbitrários pode ter descrição finita apenas em um
+modelo idealizado; uma reta racional é finitamente codificável, mas o tamanho
+de numeradores e denominadores pode crescer independentemente do número de
+peças. Este trabalho torna essa complexidade aritmética uma variável de
+primeira classe. Construímos uma biblioteca enumerável de segmentos afins
+racionais, ancorados em células diádicas, e estudamos simultaneamente
+endereçamento, aproximação, altura, comprimento binário e seleção exata.
+
+O ponto de partida é propositalmente concreto. Cada átomo possui um centro
+diádico, um valor racional e uma inclinação racional não nula. O endereço
+aritmético descompacta esses dados, enquanto a interface global
+$(a,b,[c,d])$ permite recuperar a célula de origem. A condição $b\ne0$ é
+essencial para essa recuperação: uma peça constante colapsaria o intervalo de
+imagem e apagaria o suporte. Ao impor continuidade nos nós compartilhados,
+obtêm-se montagens lineares por partes que podem ser convertidas exatamente em
+redes ReLU rasas. Essa estrutura fornece um laboratório no qual representação,
+codificação e aproximação são verificáveis em aritmética racional de ponta a
+ponta.
+
+\subsection{Vizinhança bibliográfica e escopo}
+
+A aproximação linear por partes pertence à teoria clássica de splines, de nós
+livres e de aproximação não linear
+\citep{deboor1973variable,burchard1974,deboor2001,schumaker2007,devore1998}.
+A constante local $1/8$ da interpolação afim, a densidade em $C(K)$ e as taxas
+de ordem dois para funções $C^2$ não são reivindicadas como novas. O mesmo vale
+para a representação de splines lineares por expansões em hinges. Na teoria de
+redes, resultados gerais relacionam profundidade, conectividade, pesos
+codificáveis e classes de suavidade
+\citep{petersenvoigtlaender2018,elbrachter2021,bolcskei2019,guhringraslan2021,
+devorehaninpetrova2021}. Nosso incremento não é uma nova taxa abstrata de
+aproximação neural; é a contabilidade explícita que resulta de combinar uma
+malha diádica recuperável com coeficientes racionais de altura limitada.
+
+Essa distinção muda perguntas aparentemente equivalentes. A cardinalidade de
+um catálogo truncado não determina o maior índice produzido por uma enumeração
+específica; um fluxo decodificável não tem necessariamente o mesmo comprimento
+que a lista ingênua dos coeficientes; equivalência funcional entre uma montagem
+e uma rede não preserva automaticamente o tamanho binário de toda
+parametrização. A literatura de entropia métrica e codificação em árvores
+oferece o parâmetro de comparação apropriado
+\citep{kolmogorov1959,cohen2001,elias1975,coverthomas2006}. Aqui esses recursos
+são separados por definição e depois ligados por teoremas com decodificadores
+explícitos.
+
+Há ainda duas vizinhanças distintas. A primeira é algorítmica: o princípio de
+otimalidade de Bellman e a segmentação por programação dinâmica são clássicos
+\citep{bellman1957,bellman1961,stone1961,perezvidal1994}. O papel das
+recorrências deste trabalho é estabelecer uma teoria de exatidão para o
+catálogo aritmético: a truncagem de altura torna finito o alfabeto de valores e
+os dois valores de fronteira formam um estado suficiente para continuidade.
+As pequenas instâncias executáveis são auditorias dessas identidades, não um
+estudo de escalabilidade ou uma alegação de superioridade empírica. A segunda
+vizinhança é funcional-analítica: classes de aproximação e imersões para redes
+foram desenvolvidas em \citet{gribonval2022,grohs2023}. Quando se acrescenta a
+autorregularidade do aproximante ao erro, surge um funcional de realização no
+sentido de \citet{hristovivanov1990}; sua desigualdade inversa é universal. O
+conteúdo específico da biblioteca está no lado direto com altura racional
+controlada, e não na identificação abstrata do espaço de Besov.
+
+Também delimitamos expressamente o que não é afirmado. A enumeração por altura
+é minimax apenas para o calibre definido neste artigo; outro acoplamento entre
+resolução, translação e coeficientes muda o expoente de contagem. As cotas de
+programação dinâmica são pseudo-polinomiais nos orçamentos numéricos e as
+experiências distribuídas são testes de regressão. O funcional de taxa bruto
+não é uma quase-norma sobre escalares reais, pois o catálogo racional não é um
+cone. Por fim, a caracterização pelo funcional de realização mede suavidade do
+alvo para qualquer família suficientemente rica; não deve ser apresentada como
+uma propriedade exclusiva da biblioteca.
+
+\subsection{Contribuições demonstradas}
+
+As contribuições próprias podem ser enunciadas sem depender do volume do
+documento.
+
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+ \item \textbf{Endereçamento recuperável.} Uma enumeração sem repetições
+ produz todos os jatos $(x_0,y_0,s)$ com centro diádico não inteiro, valor
+ racional e inclinação racional não nula. A interface global recupera
+ exatamente a célula e, por consequência, o único endereço do átomo
+ (\cref{lem:cell-recovery,thm:injective}).
+
+ \item \textbf{Contagem e ótimo minimax sob altura.} Para o calibre fixado,
+ há $\Theta(H^6)$ átomos de altura no máximo $H$. O gerador aritmético
+ $\Gamma$, cuja inversa tem forma fechada, atinge índices de ordem
+ $\Theta(H^8)$; a enumeração por cascas $\Gamma^\sharp$ atinge exatamente o
+ menor maior índice possível. O fator $4/3$ entre os comprimentos assintóticos
+ das palavras é demonstrado, não inferido
+ (\cref{prop:gamma-exact-order,thm:sharp-optimal}).
+
+ \item \textbf{Semântica e codec separados.} $\Gamma$ permanece a semântica
+ operacional do átomo, enquanto $\Gamma^\sharp$ funciona como codec minimax.
+ A conversão em ambos os sentidos preserva exatamente a célula e a função
+ afim selecionada (\cref{rem:which-address}).
+
+ \item \textbf{Serializações executáveis.} Três formatos prefix-free
+ distinguem a escrita atômica, a forma ReLU com diádicos estruturais e a
+ expansão racional ingênua. As duas primeiras usam $O(N\log H)$ bits; existe
+ uma família para a qual a terceira exige $\Omega(NH)$, embora realize a mesma
+ função (\cref{thm:coding-formats}).
+
+ \item \textbf{Orçamento simultâneo e certificação.} Em bolas limitadas de
+ $C^2[0,1]$, uma construção canônica alcança erro $O(N^{-2})$, uma agenda
+ suficiente de altura $O(N^2)$ e descrição $O(N\log N)$. Para funções dadas por uma gramática
+ elementar, o refinamento adaptativo usa aritmética intervalar racional com
+ falha segura; assim, o majorante local é um certificado, não uma estimativa
+ amostral (\cref{thm:joint-budget,thm:adaptive}).
+
+ \item \textbf{Constantes estritamente diádicas.} Para interpolação em
+ árvores diádicas, provamos o envelope assintótico
+ $[I(f)^2/8,I(f)^2/2]$. Curvatura constante produz a lei exata por fases e o
+ conjunto completo de acumulação $[A,4A]$; quadráticas por partes exibem uma
+ função de fase periódica não constante
+ (\cref{thm:general-dyadic-envelope,thm:quadratic-dyadic-constant,thm:piecewise-quadratic-count}).
+
+ \item \textbf{Altura e regularidade.} Os pisos aritmético
+ $H(N)\gtrsim N^s$ e geométrico $H(N)\gtrsim N$ são separados. O teorema de
+ Jackson racional é fortalecido para uma versão uniforme sobre bolas de Besov,
+ com constantes independentes da função e sem limiar individual
+ (\cref{lem:rational-jackson-height,cor:uniform-besov-ball-embedding}).
+
+ \item \textbf{Recíproca aguda na biblioteca original.} Para erro bruto
+ $N^{-\alpha}$, crescimento Lipschitz $N^\gamma$ e $0<\alpha\le\gamma$, a ordem inversa
+ $\alpha/(\alpha+\gamma)$ é ótima. A testemunha por pente de tendas é
+ transferida da extensão marcada para a biblioteca original por uma
+ perturbação diádica de inclinações não nulas. Para o funcional de realização,
+ o lado direto preserva a agenda de altura e a direção inversa é identificada
+ explicitamente como universal
+ (\cref{thm:critical-tent-comb,rem:realization-functional-scope}).
+\end{enumerate}
+
+\subsection{Organização do documento-sistema}
+
+As \cref{sec:indexing,sec:generator} constroem a enumeração e a recuperação da
+célula. As \cref{sec:assemblies,sec:rates,sec:dyadic-trees,sec:adaptive}
+tratam montagens, aproximação e refinamento certificado. A
+\cref{sec:complexity} separa endereço, contagem, serialização, orçamento e
+entropia. O bloco das \cref{sec:interface,sec:numerical} é preservado como
+teoria auxiliar de seleção exata. As seções seguintes determinam as constantes
+diádicas, introduzem os estratos de altura e estabelecem os resultados diretos
+e inversos. A \cref{sec:verification} documenta a verificação computacional.
+
+Esta versão unificada é mantida como documento-sistema porque algumas conexões
+atravessam os blocos: a obstrução de translação reaparece tanto na seleção
+quanto nas agendas de altura, e a distinção entre semântica e codec liga o
+gerador à serialização. Para publicação em extensão convencional, o material
+se decompõe naturalmente em peças sobre (a) constantes diádicas, (b)
+endereçamento e codificação e (c) estratos de altura e teoremas inversos, com a
+programação dinâmica como apêndice de exatidão. Essa arquitetura não remove
+nenhum resultado do documento unificado.
+
+Contagens estruturais da programação dinâmica usam inicialmente aritmética
+racional de custo unitário; a \cref{thm:bit-complexity} fecha separadamente o
+crescimento dos operandos e a complexidade de bits. Comprimento de
+representação, custo de seleção e custo de decodificação permanecem recursos
+distintos em todos os enunciados.

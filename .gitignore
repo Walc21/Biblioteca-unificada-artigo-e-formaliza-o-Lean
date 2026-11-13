@@ -1,0 +1,18 @@
+# Caches pesados do Lean/Mathlib (restaure com `lake exe cache get` em cada ambiente)
+.lake/
+**/.lake/
+build/
+# Python / editor / sistema
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*~
+# Arquivos temporários do LaTeX (o .log/.toc/.aux são mantidos: o auditor os lê)
+*.fdb_latexmk
+*.fls
+*.blg
+# Credenciais e configs locais dos agentes
+.aws/
+.codex/
+.agents/

@@ -1,0 +1,20 @@
+{
+  "escopo": "Verificação editorial/estrutural nesta sessão. Lean não recompilado.",
+  "ambientes": 151,
+  "ambientes_original_77_cobertos": 108,
+  "associacoes_lean": 353,
+  "fontes_lean_comparados_byte_a_byte": 108,
+  "paginas": 122,
+  "categorias_recebidas": {
+    "correspondencia_inspecionada": 77,
+    "integrado_a_v2": 20,
+    "divergencia_documentada": 1,
+    "formalizado_compilado": 37,
+    "observacao_editorial": 10,
+    "cobertura_parcial": 2,
+    "generalizacao_documentada": 1,
+    "prova_textual_sincronizada": 1,
+    "nao_formalizado_no_acervo": 2
+  },
+  "erros": []
+}

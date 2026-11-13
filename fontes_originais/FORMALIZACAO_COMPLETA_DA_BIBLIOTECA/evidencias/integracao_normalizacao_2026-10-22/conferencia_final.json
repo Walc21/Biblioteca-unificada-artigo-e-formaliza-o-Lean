@@ -1,0 +1,39 @@
+{
+  "estado": "verificacao_final_aprovada",
+  "enunciados_retidos_exatamente_iguais": 24,
+  "enunciados_recuperados_no_complemento_exatamente_iguais": 4,
+  "demonstracoes_do_complemento_preservadas": 4,
+  "links_conferidos": 654,
+  "modulos_novos_sem_admissoes": 6,
+  "pacotes_isolados": {
+    "parte_1": 9,
+    "artigo_2": 31
+  },
+  "execucao_base_completa": "evidencias/validacoes/2026-10-22_19-20-19_L5Io81",
+  "auditoria_integrada": {
+    "declaracoes": 3265,
+    "teoremas": 2544,
+    "axiomas_inesperados": []
+  },
+  "pdfs": [
+    {
+      "arquivo": "artigos/artigo_1/artigo.pdf",
+      "sha256": "acb0e2881a3de8486478c70a4b6e684ce1b9e7dc19af6f625f9bd8ece6240141",
+      "paginas": 17,
+      "renderizacao_inspecionada": true,
+      "recompilacao_final": {
+        "script": "artigos/artigo_1/compilar.sh",
+        "exit_code": 0,
+        "texto_igual_ao_pdf_revisado": true,
+        "paginas_renderizadas_identicas_ao_pdf_revisado": 17
+      }
+    },
+    {
+      "arquivo": "artigos/complemento_original_77/complemento.pdf",
+      "sha256": "35250ecfcd094097e816936497ba5e6ebaf731868cec948a89b227a82e2fe668",
+      "paginas": 3,
+      "renderizacao_inspecionada": true
+    }
+  ],
+  "limite_documental": "Documento auxiliar historico posterior permanece com recuperacao parcial, explicitado nos relatorios; nao houve alegacao de recuperacao integral desse arquivo."
+}

@@ -1,0 +1,20 @@
+\section{Referência analítica para o exemplo de Runge}
+Para
+\begin{equation}
+ f(x)=\frac{1}{1+25x^2},\qquad
+ f''(x)=\frac{50(75x^2-1)}{(1+25x^2)^3},
+ \label{eq:runge}
+\end{equation}
+o refinamento certificado do primeiro artigo usa majorantes intervalares racionais. O máximo analítico abaixo é uma referência independente para medir a folga do certificado, sem substituir a garantia intervalar.
+
+\begin{lemma}[majorante local da função de Runge]\label{lem:runge-majorant}
+Em todo intervalo fechado $J\subset[-1,1]$, o máximo de $|f''|$ é atingido em um extremo de $J$ ou em um ponto de $\{0,-0{,}2,0{,}2\}\cap J$.
+\end{lemma}
+
+\begin{proof}
+Derivando \eqref{eq:runge},
+\[
+ f'''(x)=\frac{7500x(2-50x^2)}{(1+25x^2)^4},
+\]
+cujos únicos zeros são $0$ e $\pm0{,}2$. Um máximo interior não nulo de $|f''|$ deve ser ponto crítico de $f''$; os zeros de $f''$ têm módulo zero e não introduzem máximos positivos. Restam os três pontos críticos e os extremos do intervalo.
+\end{proof}

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "complemento_original:6.1",
+    "documento": "complemento_original",
+    "numero": "6.1",
+    "tipo": "teorema",
+    "titulo": "taxa garantida em árvores",
+    "secao": 6,
+    "titulo_secao": "Árvores diádicas, nós livres e regularidade de Besov",
+    "arquivo_tex": "artigos/complemento_original_77/06_arvores_besov.tex",
+    "linha_tex": 13,
+    "rotulos_tex": [
+      "thm:tree-rate",
+      "eq:tree-general",
+      "eq:tree-power"
+    ],
+    "enunciado_tex": "\\label{thm:tree-rate}\nSe $f\\in C^2(K)$, $L=|K|$, $M=\\|f''\\|_{\\infty,K}$ e $N\\ge2$, então\n\\begin{equation}\n \\sigma_N^{\\mathrm{dia}}(f)_\\infty\\le\\frac{ML^2}{2N^2}.\n \\label{eq:tree-general}\n\\end{equation}\nSe $N=2^r$, a constante melhora para\n\\begin{equation}\n \\sigma_N^{\\mathrm{dia}}(f)_\\infty\\le\\frac{ML^2}{8N^2}.\n \\label{eq:tree-power}\n\\end{equation}\nPara qualquer árvore finita $\\Lambda$ e $\\delta>0$, há uma montagem racional na mesma árvore cujo erro é menor que $\\|f-P_\\Lambda f\\|_\\infty+\\delta$.",
+    "sha256_enunciado": "f23238a01aad45ea40a3864449c52917afc7d0d7f5cda0fd004058f24d59770b",
+    "status": "formalizado_compilado",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean. [11/11/2026] σ_N^dia = `Edia`; f ∈ C²(K) via `ContDiffOn`; taxas M L²/(8N²) (N = 2^r) e M L²/(2N²); montagem racional na mesma árvore (qualquer `DShape`) com erro < ‖f − P_Λ f‖ + δ. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.tree_rate_pow",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Arvores.lean",
+        "linha_lean": 54,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Arvores.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.tree_rate",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Arvores.lean",
+        "linha_lean": 62,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Arvores.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.tree_rationalization",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Arvores.lean",
+        "linha_lean": 255,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Arvores.lean"
+      }
+    ],
+    "parte_volume": "V",
+    "numero_volume": "V.6.1",
+    "originais_77": [
+      "6.1"
+    ],
+    "rotulo_volume": "map:complemento_original:6.1",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 27,
+    "pagina_volume": 99
+  },
+  {
+    "id": "complemento_original:6.2",
+    "documento": "complemento_original",
+    "numero": "6.2",
+    "tipo": "teorema",
+    "titulo": "cota assintótica com nós livres",
+    "secao": 6,
+    "titulo_secao": "Árvores diádicas, nós livres e regularidade de Besov",
+    "arquivo_tex": "artigos/complemento_original_77/06_arvores_besov.tex",
+    "linha_tex": 42,
+    "rotulos_tex": [
+      "thm:free-knots",
+      "eq:free-knot"
+    ],
+    "enunciado_tex": "\\label{thm:free-knots}\nPara $f\\in C^2[\\alpha,\\beta]$,\n\\begin{equation}\n \\limsup_{N\\to\\infty}N^2E_N^{\\mathrm{lv}}(f)\n \\le\\frac18\\left(\\int_\\alpha^\\beta |f''(x)|^{1/2}\\dd x\\right)^2.\n \\label{eq:free-knot}\n\\end{equation}",
+    "sha256_enunciado": "01cd236ca1201b9460e8a04b7912090ba2c9d4a71b21a021360b39e3aca70227",
+    "status": "formalizado_compilado",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean. [13/11/2026] Cota assintotica com nos livres e derivadas unilaterais para funcoes C2 no intervalo fechado. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.NosLivres.free_knots",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/NosLivres.lean",
+        "linha_lean": 123,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/NosLivres.lean"
+      }
+    ],
+    "parte_volume": "V",
+    "numero_volume": "V.6.2",
+    "originais_77": [
+      "6.2"
+    ],
+    "rotulo_volume": "map:complemento_original:6.2",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 57,
+    "pagina_volume": 100
+  },
+  {
+    "id": "complemento_original:6.3",
+    "documento": "complemento_original",
+    "numero": "6.3",
+    "tipo": "teorema",
+    "titulo": "estimativa direta",
+    "secao": 6,
+    "titulo_secao": "Árvores diádicas, nós livres e regularidade de Besov",
+    "arquivo_tex": "artigos/complemento_original_77/06_arvores_besov.tex",
+    "linha_tex": 93,
+    "rotulos_tex": [
+      "thm:besov",
+      "eq:besov-rate"
+    ],
+    "enunciado_tex": "\\label{thm:besov}\nSe $0<s<2$, $|K|=L$ e o seminorma em \\eqref{eq:besov-seminorm} é finito, então, para $N\\ge2$,\n\\begin{equation}\n \\sigma_N^{\\mathrm{dia}}(f)_\\infty\n \\le C_sL^s|f|_{B^s_{\\infty,\\infty}(K)}N^{-s},\n \\label{eq:besov-rate}\n\\end{equation}\nonde $C_s$ independe de $f$ e $N$. Para todo $\\delta>0$, uma montagem racional com no máximo $N$ folhas alcança o lado direito de \\eqref{eq:besov-rate} acrescido de $\\delta$.",
+    "sha256_enunciado": "58883e324a0d19a4f2fda998382d5e98ba3ba56e091b77cb5b8fcea514bc6a48",
+    "status": "formalizado_compilado",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean. [13/11/2026] Estimativa direta em raiz diadica geral, constante de Whitney explicita e montagem racional com erro adicional arbitrario. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Jackson.besov_direct",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/BesovDireta.lean",
+        "linha_lean": 129,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/BesovDireta.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Jackson.besov_direct_whitney",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/BesovDireta.lean",
+        "linha_lean": 109,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/BesovDireta.lean"
+      }
+    ],
+    "parte_volume": "V",
+    "numero_volume": "V.6.3",
+    "originais_77": [
+      "6.3"
+    ],
+    "rotulo_volume": "map:complemento_original:6.3",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 109,
+    "pagina_volume": 100
+  },
+  {
+    "id": "complemento_original:21.1",
+    "documento": "complemento_original",
+    "numero": "21.1",
+    "tipo": "lema",
+    "titulo": "majorante local da função de Runge",
+    "secao": 21,
+    "titulo_secao": "Referência analítica para o exemplo de Runge",
+    "arquivo_tex": "artigos/complemento_original_77/21_runge.tex",
+    "linha_tex": 10,
+    "rotulos_tex": [
+      "lem:runge-majorant"
+    ],
+    "enunciado_tex": "\\label{lem:runge-majorant}\nEm todo intervalo fechado $J\\subset[-1,1]$, o máximo de $|f''|$ é atingido em um extremo de $J$ ou em um ponto de $\\{0,-0{,}2,0{,}2\\}\\cap J$.",
+    "sha256_enunciado": "a30f0c516288060654c97f00d0ac8e60b2bf89b29fa28b042b4339cf5690821b",
+    "status": "formalizado_compilado",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean. [11/11/2026] Provado; a forma `runge_majorant` dispensa J ⊆ [-1,1]. Inclui `deriv2_runge`. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Runge.runge_majorant_sub",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Runge.lean",
+        "linha_lean": 118,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Runge.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Runge.runge_majorant",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Runge.lean",
+        "linha_lean": 84,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Runge.lean"
+      }
+    ],
+    "parte_volume": "V",
+    "numero_volume": "V.21.1",
+    "originais_77": [
+      "21.1"
+    ],
+    "rotulo_volume": "map:complemento_original:21.1",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 152,
+    "pagina_volume": 101
+  }
+]

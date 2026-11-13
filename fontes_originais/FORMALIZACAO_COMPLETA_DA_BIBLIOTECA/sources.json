@@ -1,0 +1,216 @@
+{
+  "archives": {
+    "Fase1": "resultado_fase1_corrigido.tar.gz",
+    "Fase2": "d10591cf-aa44-4db0-adbd-c5a9915fdc58-aristotle.tar.gz",
+    "Fase3": "2212794c-ed5f-48b6-99e8-589164a49daf-aristotle.tar.gz",
+    "Consolidado": "1f896059-ad40-4065-83d6-25315c8982c8-aristotle (2).tar.gz"
+  },
+  "sources_count": 41,
+  "modules": [
+    {
+      "stage": "Fase1",
+      "from": "RequestProject.Indexing",
+      "to": "Unified.Fase1.Indexing"
+    },
+    {
+      "stage": "Fase1",
+      "from": "RequestProject.Dyadic",
+      "to": "Unified.Fase1.Dyadic"
+    },
+    {
+      "stage": "Fase1",
+      "from": "RequestProject.CalkinWilf",
+      "to": "Unified.Fase1.CalkinWilf"
+    },
+    {
+      "stage": "Fase2",
+      "from": "RequestProject.Pairing",
+      "to": "Unified.Fase2.Pairing"
+    },
+    {
+      "stage": "Fase2",
+      "from": "RequestProject.HeightEnum",
+      "to": "Unified.Fase2.HeightEnum"
+    },
+    {
+      "stage": "Fase2",
+      "from": "RequestProject.DyadicCells",
+      "to": "Unified.Fase2.DyadicCells"
+    },
+    {
+      "stage": "Fase2",
+      "from": "RequestProject.Assemblies",
+      "to": "Unified.Fase2.Assemblies"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Indexing",
+      "to": "Unified.Fase3.Indexing"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Heights",
+      "to": "Unified.Fase3.Heights"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Cells",
+      "to": "Unified.Fase3.Cells"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Assembly",
+      "to": "Unified.Fase3.Assembly"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Extension",
+      "to": "Unified.Fase3.Extension"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Rates",
+      "to": "Unified.Fase3.Rates"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Transcendental",
+      "to": "Unified.Fase3.Transcendental"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.IntervalArith",
+      "to": "Unified.Fase3.IntervalArith"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Refinement",
+      "to": "Unified.Fase3.Refinement"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Calibration",
+      "to": "Unified.Fase3.Calibration"
+    },
+    {
+      "stage": "Fase3",
+      "from": "RequestProject.Observation",
+      "to": "Unified.Fase3.Observation"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Lib.Indexing",
+      "to": "Unified.Consolidado.Lib.Indexing"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Lib.Library",
+      "to": "Unified.Consolidado.Lib.Library"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Lib.Assembly",
+      "to": "Unified.Consolidado.Lib.Assembly"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Lib.Calculus",
+      "to": "Unified.Consolidado.Lib.Calculus"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec4.ReLU",
+      "to": "Unified.Consolidado.Sec4.ReLU"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec4.Taylor",
+      "to": "Unified.Consolidado.Sec4.Taylor"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Address",
+      "to": "Unified.Consolidado.Sec7.Address"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Heights",
+      "to": "Unified.Consolidado.Sec7.Heights"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.JointError",
+      "to": "Unified.Consolidado.Sec7.JointError"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Codec",
+      "to": "Unified.Consolidado.Sec7.Codec"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Catalog",
+      "to": "Unified.Consolidado.Sec7.Catalog"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Bits",
+      "to": "Unified.Consolidado.Sec7.Bits"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Serialization",
+      "to": "Unified.Consolidado.Sec7.Serialization"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Chain",
+      "to": "Unified.Consolidado.Sec7.Chain"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Formats",
+      "to": "Unified.Consolidado.Sec7.Formats"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Interp",
+      "to": "Unified.Consolidado.Sec7.Interp"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Simultaneous",
+      "to": "Unified.Consolidado.Sec7.Simultaneous"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Precision",
+      "to": "Unified.Consolidado.Sec7.Precision"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Catalogs",
+      "to": "Unified.Consolidado.Sec7.Catalogs"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.SharpComputable",
+      "to": "Unified.Consolidado.Sec7.SharpComputable"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.EntropyLower",
+      "to": "Unified.Consolidado.Sec7.EntropyLower"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.EntropyUpper",
+      "to": "Unified.Consolidado.Sec7.EntropyUpper"
+    },
+    {
+      "stage": "Consolidado",
+      "from": "RequestProject.Sec7.Entropy",
+      "to": "Unified.Consolidado.Sec7.Entropy"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "arquivo_historico": "/home/victor/Projetos/Arquivo_Biblioteca_2026-10-22/antes_do_recorte_editorial/artigo_1",
+  "arquivos": [
+    {
+      "arquivo": "README.md",
+      "sha256": "b5a1d81d95442cb7bca0f7c2dfd0b4f989548e04ccd6a89ac2f1e7aeef7229d7"
+    },
+    {
+      "arquivo": "artigo.tex",
+      "sha256": "d3309c1889e4329b96bd2f299fa4c1a908e07d6a95cb4198920009fdd0202504"
+    },
+    {
+      "arquivo": "compilar.sh",
+      "sha256": "459bcd72b13e541ada4d7862081a2523f2ab7296a3a903bfa7d81e7d616be83e"
+    },
+    {
+      "arquivo": "dados/refinamento.json",
+      "sha256": "c909a6236379f930b99f35a6531acde3a128e372dc22b24a5461909849dd5849"
+    },
+    {
+      "arquivo": "dados/tabela_2.json",
+      "sha256": "944612a35e55e8c6448ce977860a7f84b2ded93e33f40714fa72871317e75d02"
+    },
+    {
+      "arquivo": "figuras/01_calkin_wilf.pdf",
+      "sha256": "0510810994430672efc3f7423a8c06d295159d41f03b3bfcaed383f1c0daf111"
+    },
+    {
+      "arquivo": "figuras/02_celulas.pdf",
+      "sha256": "10098877535583cf07fb559f0267ca71fdf91cdeba0f299252d7a010022ae1a6"
+    },
+    {
+      "arquivo": "figuras/03_montagem_continua.pdf",
+      "sha256": "6bb49062e82eac62c8990b4952e75b4ef12d5f66a6580d31de4451404dc96070"
+    },
+    {
+      "arquivo": "figuras/04_relu.pdf",
+      "sha256": "513dfac593f359f46bec3deced081095022bd853769b1090e227f93335e4a605"
+    },
+    {
+      "arquivo": "figuras/05_taxa_exponencial.pdf",
+      "sha256": "065abe3faca0d6ec1606373f031b639f187a85f6caa230f768be6770d02889a4"
+    },
+    {
+      "arquivo": "figuras/06_refinamento_certificado.pdf",
+      "sha256": "87b4b740d15f66127b248a02bb84c1d89de4647f2c81e8bd8681a5e20ae45d12"
+    },
+    {
+      "arquivo": "figuras/circuito.tex",
+      "sha256": "1b7ed8cdfa7a85f0d106b4a29f46fcba3d7165a574ce4db2fa222130657a314a"
+    },
+    {
+      "arquivo": "referencias.bib",
+      "sha256": "e498def055b95b068ca174ddbe04efcaaf3b88e7b1762ca46d1447272291b421"
+    },
+    {
+      "arquivo": "requirements.txt",
+      "sha256": "3375370eec2c6a1f458a4abab8f8f13f27981197d3b20cb8b14fb200dacf3fca"
+    },
+    {
+      "arquivo": "scripts/codigos.py",
+      "sha256": "d9f19979f15bc064863e5c78c191f135ef2dc86aad72a39feb6910feb327e27d"
+    },
+    {
+      "arquivo": "scripts/figuras.py",
+      "sha256": "f42402022488072ed0d3dcb0b422f033dc6c19cf51f3db4cec06f165475984e1"
+    },
+    {
+      "arquivo": "scripts/verificar.py",
+      "sha256": "1ad1bd105b982384859af11c450822fc35fd958d288fff07119d734104a1f812"
+    },
+    {
+      "arquivo": "secoes/00_resumos.tex",
+      "sha256": "8b478e63b8c19cabfc38701afbe89f130b02eead3ff0a23caddb5e42e8a2b3a1"
+    },
+    {
+      "arquivo": "secoes/01_introducao.tex",
+      "sha256": "6e533796de19c889d759acdc037fb2716d6092d339a24a0259cb9640230d26d2"
+    },
+    {
+      "arquivo": "secoes/02_indexacao.tex",
+      "sha256": "9d77d6062135c355fa42c4ae33830d2551e27201cb12fa901df90b843847623e"
+    },
+    {
+      "arquivo": "secoes/03_biblioteca.tex",
+      "sha256": "ccdd1550a86a023e07bd81228d5f337e32d1a2aa171861e709db1ebb870b5062"
+    },
+    {
+      "arquivo": "secoes/04_montagens.tex",
+      "sha256": "bb05b7c5ee704bb551d12fc74873ec00635711f9cdfa1fcb32c910ea094b3e1a"
+    },
+    {
+      "arquivo": "secoes/05_taxas.tex",
+      "sha256": "8c50f72ff318059cd7442a9a6631511141af740ee9e3f41c0d179092bf24f800"
+    },
+    {
+      "arquivo": "secoes/06_refinamento.tex",
+      "sha256": "e97d5ca662b1e8f855bef91edb6da7ef16bff9097b46264254bae2747451e13b"
+    },
+    {
+      "arquivo": "secoes/07_codificacao.tex",
+      "sha256": "c214417934a5d95ae0627a4cbf1ff6d78b4c3ed8cf8b5a594e59f3e7625a6e75"
+    },
+    {
+      "arquivo": "secoes/07b_erro_entropia.tex",
+      "sha256": "7bf662a18b3c013119f99ef879b8ec869be8846a46c4f2cd878e08a4518477cf"
+    },
+    {
+      "arquivo": "secoes/07c_catalogos.tex",
+      "sha256": "6231b50e4aa17baf30cbdba98a1b6794654bae4acac29b2e9d2c93b0e4912e8b"
+    },
+    {
+      "arquivo": "secoes/08_conclusao.tex",
+      "sha256": "3febd78407d65fba7804ce9dc6a9600a6ecad80e05214ecfc04100230f23518c"
+    },
+    {
+      "arquivo": "secoes/A_notacao.tex",
+      "sha256": "3f16a7c02f2423259c591b2e8ba842d0087fbff447c66b4c8925e42deed49117"
+    }
+  ],
+  "motivo": "Recorte editorial autorizado em 22/10/2026; bloco 7 destinado ao Artigo 2, com original integral preservado."
+}

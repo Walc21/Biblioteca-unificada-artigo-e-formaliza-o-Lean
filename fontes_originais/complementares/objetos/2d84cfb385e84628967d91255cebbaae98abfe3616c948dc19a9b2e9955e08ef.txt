@@ -1,0 +1,22 @@
+PACOTE V2 — FOCO NO PATCH (RECOMENDADO)
+
+1. Descompacte o PATCH sobre a MESMA pasta biblioteca_lean_pontes_v1 que já compilou.
+   O PATCH contém apenas 2 módulos novos, o agregador, o auditor, o validador v2,
+   e o relatório — não modifica os 41 módulos originais nem as 4 pontes v1.
+
+2. Na raiz já existente do projeto, rode:
+
+   python3 verificar_imports.py
+   python3 verificar_v2.py
+   lake build SemanticAudit 2>&1 | tee build_equivalencias_v2.log
+   lake env lean AuditoriaAxiomasPontes.lean 2>&1 | tee axiomas_equivalencias_v2.log
+
+3. Envie build_equivalencias_v2.log em caso de erro, ou ambos os logs para certificar.
+
+NOTA: o Lean e Mathlib existentes não precisam ser reinstalados. O ZIP COMPLETO
+é alternativa para auditoria/reprodução independente; nele, lake update pode
+ser necessário se o manifest não for copiado do seu projeto atual.
+
+Alteração LaTeX: na cópia em artigo/Biblioteca_Deterministica_LaTeX,
+secoes/04_montagens.tex e secoes/07_codificacao.tex foram corrigidos.
+O PDF original do artigo NÃO foi substituído.

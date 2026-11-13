@@ -1,0 +1,393 @@
+Artigo.Atom : Type
+Artigo.Atom.addr_injective : Function.Injective Artigo.Atom.addr
+Artigo.Atom.interface_injective : Function.Injective Artigo.Atom.interface
+Artigo.Edia_eq_sInf_nThr {f : ℝ → ℝ} {k : ℕ} {m : ℤ} (hf : ContinuousOn f (Artigo.cellIcc k m)) {N : ℕ} (hN : 1 ≤ N) :
+  Artigo.Edia f k m N = sInf {ε | 0 < ε ∧ Artigo.nThr f ε k m ≤ N}
+Artigo.EpsCodec (ε : ℝ) (F : Set (ℝ → ℝ)) : Type
+Artigo.GammaSharp (n : ℕ) : Artigo.Atom
+Artigo.IsAdmPair (H k : ℕ) (m : ℤ) (p : ℚ × ℚ) : Prop
+Artigo.LTree.WF : ℕ → ℤ → Artigo.LTree → Prop
+Artigo.LTree.eval_relu_form {k : ℕ} {m : ℤ} {T : Artigo.LTree} (h : Artigo.LTree.WF k m T) (x : ℝ) :
+  x ∈ Artigo.cellIcc k m →
+    Artigo.LTree.eval k m T x =
+      Artigo.LTree.eval k m T (Artigo.cL k m) + ↑T.firstLeaf.s * (x - Artigo.cL k m) + Artigo.LTree.hingeSum T.leaves x
+Artigo.Ldec (ε : ℝ) (F : Set (ℝ → ℝ)) : ℕ∞
+Artigo.Lfolhas (T : Artigo.LTree) : ℕ
+Artigo.Lglobal.{u_1} {α : Type u_1} (CB : Finset α) : ℕ
+Artigo.MGamma_bits : ∃ C H₀, ∀ H ≥ H₀, |Real.logb 2 (↑(Artigo.MGamma H) + 1) - 8 * Real.logb 2 ↑H| ≤ C
+Artigo.MGamma_theta :
+  ∃ c C, 0 < c ∧ 0 < C ∧ ∃ H₀, ∀ H ≥ H₀, c * ↑H ^ 8 ≤ ↑(Artigo.MGamma H) ∧ ↑(Artigo.MGamma H) ≤ C * ↑H ^ 8
+Artigo.PH (H k : ℕ) (m : ℤ) : Finset (ℚ × ℚ)
+Artigo.RepCat (H D k : ℕ) (m : ℤ) : Finset Artigo.LTree
+Artigo.Setup.Cfix (S : Artigo.Setup) : Artigo.Setup.Shape → ℕ → ℤ → ℚ → ℚ → WithTop ℚ
+Artigo.Setup.Cvar (S : Artigo.Setup) : ℕ → ℕ → ℤ → ℚ → ℚ → WithTop ℚ
+Artigo.Setup.bit_complexity (S : Artigo.Setup) {B L : ℕ}
+  (hdata : ∀ p ∈ S.data, Artigo.bl p.1 ≤ B ∧ Artigo.bl p.2.1 ≤ B ∧ Artigo.bl p.2.2 ≤ B) (hlb : Artigo.bl S.lb ≤ B)
+  (hls : Artigo.bl S.ls ≤ B) {k r : ℕ} {m : ℤ} (hd : Artigo.IsDesc S.k₀ S.m₀ k m r) {R : Artigo.LTree}
+  (hR : Artigo.LTree.WF k m R) (hdep : r + R.depth ≤ S.D) (hh : R.maxHeight ≤ S.H) (hL : (Artigo.serRec R).length ≤ L) :
+  Artigo.bl (S.costT R) ≤
+    2 * (S.data.length * (5 * B + 6 * Nat.clog 2 S.H + 2 * (S.k₀ + S.D) + 9) + 2 * B + 2 * Nat.clog 2 L + 2) + 3
+Artigo.Setup.bottleneck (S : Artigo.Setup) (hH : 2 ≤ S.H) (f : ℝ → ℝ) (N : ℕ) :
+  (Artigo.Etree f S.k₀ S.m₀ N S.H S.D =
+      (Finset.Icc 1 (min N (2 ^ S.D)) ×ˢ S.V ×ˢ S.V).inf fun q => S.Bb f S.D q.1 S.k₀ S.m₀ q.2.1 q.2.2) ∧
+    (S.H - S.k₀ - 1 ≤ S.D →
+      (∀ (a : Artigo.Atom), a.height ≤ S.H → S.k₀ ≤ a.k → a.k - S.k₀ ≤ S.D) ∧
+        ∀ (R : Artigo.LTree), Artigo.LTree.WF S.k₀ S.m₀ R → R.maxHeight ≤ S.H → R.depth ≤ S.D)
+Artigo.Setup.bottleneck_correctness (S : Artigo.Setup) (hH : 2 ≤ S.H) (f : ℝ → ℝ) (d n k r : ℕ) (m : ℤ) (u v : ℚ) :
+  Artigo.IsDesc S.k₀ S.m₀ k m r → r + d ≤ S.D → S.Bb f d n k m u v = (S.RsetN d n k m u v).inf (Artigo.bott f)
+Artigo.Setup.fixed_correctness (S : Artigo.Setup) (hH : 2 ≤ S.H) (T : Artigo.Setup.Shape) (k r : ℕ) (m : ℤ) (u v : ℚ) :
+  Artigo.IsDesc S.k₀ S.m₀ k m r → r + T.depth ≤ S.D → S.Cfix T k m u v = (S.RsetS T k m u v).inf S.costW
+Artigo.Setup.fixed_global (S : Artigo.Setup) (hH : 2 ≤ S.H) (T : Artigo.Setup.Shape) (hT : T.depth ≤ S.D) :
+  ((S.V ×ˢ S.V).inf fun p => S.Cfix T S.k₀ S.m₀ p.1 p.2) = (S.RepShape T).inf S.costW ∧
+    ((S.RepShape T).Nonempty → ∃! R, R ∈ S.RepShape T ∧ ∀ R' ∈ S.RepShape T, S.kappa R ≤ S.kappa R')
+Artigo.Setup.leaf_budget (S : Artigo.Setup) (hH : 2 ≤ S.H) (d n k r : ℕ) (m : ℤ) (u v : ℚ) :
+  Artigo.IsDesc S.k₀ S.m₀ k m r → r + d ≤ S.D → S.Cb d n k m u v = (S.RsetN d n k m u v).inf S.costW
+Artigo.Setup.leaf_budget_atMost (S : Artigo.Setup) (hH : 2 ≤ S.H) (N : ℕ) :
+  ((Finset.Icc 1 (min N (2 ^ S.D)) ×ˢ S.V ×ˢ S.V).inf fun q => S.Cb S.D q.1 S.k₀ S.m₀ q.2.1 q.2.2) =
+    {R ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀ | R.numLeaves ≤ N}.inf S.costW
+Artigo.Setup.shape_enumeration (S : Artigo.Setup) (hH : 2 ≤ S.H) :
+  (S.Cstar = (Artigo.Setup.allShapes S.D).inf fun T => (S.V ×ˢ S.V).inf fun p => S.Cfix T S.k₀ S.m₀ p.1 p.2) ∧
+    ∀ R ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀,
+      (∀ R' ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀, S.kappa R ≤ S.kappa R') →
+        Artigo.Setup.shapeOf R ∈ Artigo.Setup.allShapes S.D ∧
+          ∀ R' ∈ S.RepShape (Artigo.Setup.shapeOf R), S.kappa R ≤ S.kappa R'
+Artigo.Setup.state_complexity (S : Artigo.Setup) (hH : 2 ≤ S.H) (N : ℕ) :
+  (Artigo.cellsD S.D ×ˢ S.V ×ˢ S.V).card = (2 ^ (S.D + 1) - 1) * S.V.card ^ 2 ∧
+    (Artigo.internalCells S.D ×ˢ S.V ×ˢ S.V ×ˢ S.V).card ≤ (2 ^ (S.D + 1) - 1) * S.V.card ^ 3 ∧
+      (Artigo.cellsD S.D ×ˢ (S.V ×ˢ S.V) ×ˢ Finset.Icc 1 N).card = (2 ^ (S.D + 1) - 1) * N * S.V.card ^ 2 ∧
+        (Artigo.internalCells S.D ×ˢ (S.V ×ˢ S.V ×ˢ S.V) ×ˢ Artigo.budgetPairs N).card ≤
+            (2 ^ (S.D + 1) - 1) * N ^ 2 * S.V.card ^ 3 ∧
+          (Artigo.cellsD S.D ×ˢ (S.V ×ˢ S.V) ×ˢ Finset.range S.data.length).card =
+              (2 ^ (S.D + 1) - 1) * S.data.length * S.V.card ^ 2 ∧
+            (Artigo.internalCells S.D ×ˢ S.V ×ˢ S.V ×ˢ S.V).card ≤ (2 ^ (S.D + 1) - 1) * (36 ^ 3 * S.H ^ 18)
+Artigo.Setup.truncation_convergence (S : Artigo.Setup) :
+  (∀ {D D' H : ℕ}, 2 ≤ H → D ≤ D' → S.CstarE D' H ≤ S.CstarE D H) ∧
+    (∀ {D H H' : ℕ}, 2 ≤ H → H ≤ H' → S.CstarE D H' ≤ S.CstarE D H) ∧
+      ⨅ D, ⨅ H, ⨅ (_ : 2 ≤ H), S.CstarE D H = ⨅ R, ⨅ (_ : Artigo.LTree.WF S.k₀ S.m₀ R), S.costE R ∧
+        (∀ (Dj Hj : ℕ → ℕ),
+            Monotone Dj →
+              Monotone Hj →
+                Filter.Tendsto Dj Filter.atTop Filter.atTop →
+                  Filter.Tendsto Hj Filter.atTop Filter.atTop →
+                    (∀ (j : ℕ), 2 ≤ Hj j) →
+                      Filter.Tendsto (fun j => S.CstarE (Dj j) (Hj j)) Filter.atTop
+                        (nhds (⨅ R, ⨅ (_ : Artigo.LTree.WF S.k₀ S.m₀ R), S.costE R))) ∧
+          ((∃ R₀,
+              Artigo.LTree.WF S.k₀ S.m₀ R₀ ∧
+                ∀ (R : Artigo.LTree), Artigo.LTree.WF S.k₀ S.m₀ R → S.costT R₀ ≤ S.costT R) →
+            ∃ Rs,
+              Artigo.LTree.WF S.k₀ S.m₀ Rs ∧
+                (∀ (R : Artigo.LTree), Artigo.LTree.WF S.k₀ S.m₀ R → S.costT Rs ≤ S.costT R) ∧
+                  (∀ (R : Artigo.LTree),
+                      Artigo.LTree.WF S.k₀ S.m₀ R →
+                        (∀ (R' : Artigo.LTree), Artigo.LTree.WF S.k₀ S.m₀ R' → S.costT R ≤ S.costT R') →
+                          S.kappa Rs ≤ S.kappa R) ∧
+                    ∃ D₀ H₀,
+                      ∀ (D H : ℕ),
+                        D₀ ≤ D →
+                          H₀ ≤ H →
+                            Rs ∈ Artigo.RepCat H D S.k₀ S.m₀ ∧
+                              ∀ R' ∈ Artigo.RepCat H D S.k₀ S.m₀, S.kappa Rs ≤ S.kappa R')
+Artigo.Setup.variable_correctness (S : Artigo.Setup) (hH : 2 ≤ S.H) (d k r : ℕ) (m : ℤ) (u v : ℚ) :
+  Artigo.IsDesc S.k₀ S.m₀ k m r → r + d ≤ S.D → S.Cvar d k m u v = (S.Rset d k m u v).inf S.costW
+Artigo.Setup.variable_global (S : Artigo.Setup) (hH : 2 ≤ S.H) :
+  S.Cstar = (Artigo.RepCat S.H S.D S.k₀ S.m₀).inf S.costW ∧
+    (Artigo.HK S.k₀ S.m₀ ≤ S.H → S.Cstar ≠ ⊤ ∧ ∃ R ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀, S.costW R = S.Cstar) ∧
+      (Artigo.HK S.k₀ S.m₀ ≤ S.H →
+        ∃! R, R ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀ ∧ ∀ R' ∈ Artigo.RepCat S.H S.D S.k₀ S.m₀, S.kappa R ≤ S.kappa R')
+Artigo.SigmaCat (H D k : ℕ) (m : ℤ) : Finset (↑(Artigo.cellIcc k m) → ℝ)
+Artigo.Valphabet (H D k₀ : ℕ) (m₀ : ℤ) : Finset ℚ
+Artigo.Zenum_bijective : Function.Bijective Artigo.Zenum
+Artigo.Zinv_le (m : ℤ) : ↑(Artigo.Zinv m) ≤ 2 * |m| + 1
+Artigo.address_lower :
+  ∃ c,
+    0 < c ∧
+      ∃ C H₁,
+        2 ≤ H₁ ∧
+          ∀ (A : Artigo.Atom → ℕ),
+            Function.Injective A →
+              ∀ H ≥ H₁, ∃ a, a.height ≤ H ∧ c * ↑H ^ 6 - 1 ≤ ↑(A a) ∧ 6 * Real.logb 2 ↑H - C ≤ Real.logb 2 (↑(A a) + 1)
+Artigo.assemblies_dense {k₀ : ℕ} {m₀ : ℤ} {f : ℝ → ℝ} (hf : ContinuousOn f (Artigo.cellIcc k₀ m₀)) {ε : ℝ}
+  (hε : 0 < ε) : ∃ T, Artigo.LTree.WF k₀ m₀ T ∧ ∀ x ∈ Artigo.cellIcc k₀ m₀, |f x - Artigo.LTree.eval k₀ m₀ T x| < ε
+Artigo.assembly_height_arith {k : ℕ} {m : ℤ} {T : Artigo.LTree} (hT : Artigo.LTree.WF k m T) {H : ℕ}
+  (hH : T.maxHeight ≤ H) :
+  (∀ p ∈ T.leaves.zip T.leaves.tail,
+      Artigo.ht (p.2.s - p.1.s) ≤ 2 * H ^ 2 ∧
+        p.2.left.num.natAbs ≤ H ∧ (∃ j ≤ H, p.2.left.den = 2 ^ j) ∧ Artigo.ht (p.2.s * p.2.left) ≤ H * 2 ^ H) ∧
+    Artigo.ht (T.lval - T.firstLeaf.s * T.firstLeaf.left) ≤ 2 ^ (H + 1) * H ^ 2
+Artigo.assembly_serialization (k : ℕ) (m : ℤ) :
+  ∃ ser dec,
+    (∀ (T : Artigo.LTree), Artigo.LTree.WF k m T → ∀ (t : List Bool), dec (ser T ++ t) = some (T, t)) ∧
+      (∀ (T : Artigo.LTree),
+          Artigo.LTree.WF k m T →
+            (ser T).length ≤
+              2 * Nat.log 2 T.numLeaves + 1 + (2 * Nat.log 2 T.maxHeight + 1) +
+                T.numLeaves * Nat.clog 2 (18 * T.maxHeight ^ 6)) ∧
+        ∀ (T : Artigo.LTree),
+          Artigo.LTree.WF k m T →
+            (ser T).length ≤
+              2 * Nat.log 2 T.numLeaves + 1 + (2 * Nat.log 2 T.maxHeight + 1) +
+                T.numLeaves * (6 * Nat.log 2 T.maxHeight + 11)
+Artigo.assembly_serialization_Gamma (k : ℕ) (m : ℤ) :
+  ∃ ser dec,
+    (∀ (T : Artigo.LTree), Artigo.LTree.WF k m T → ∀ (t : List Bool), dec (ser T ++ t) = some (T, t)) ∧
+      ∀ (T : Artigo.LTree),
+        Artigo.LTree.WF k m T →
+          (ser T).length ≤
+            2 * Nat.log 2 T.numLeaves + 1 + (2 * Nat.log 2 T.maxHeight + 1) +
+              T.numLeaves * (8 * Nat.log 2 T.maxHeight + 20)
+Artigo.cantorPair_bijective : Function.Bijective fun p => Artigo.cantorPair p.1 p.2
+Artigo.cantorPair_le (u v : ℕ) : Artigo.cantorPair u v ≤ (u + v + 1) ^ 2
+Artigo.card_LH_ge : ∃ c, 0 < c ∧ ∃ H₁, 2 ≤ H₁ ∧ ∀ H ≥ H₁, c * ↑H ^ 6 ≤ ↑(Artigo.LH H).card
+Artigo.card_LH_le {H : ℕ} (hH : 2 ≤ H) : (Artigo.LH H).card ≤ 18 * H ^ 6
+Artigo.card_LH_theta :
+  ∃ c C, 0 < c ∧ 0 < C ∧ ∀ (H : ℕ), 2 ≤ H → c * ↑H ^ 6 ≤ ↑(Artigo.LH H).card ∧ ↑(Artigo.LH H).card ≤ C * ↑H ^ 6
+Artigo.card_QH_ge (H : ℕ) : ↑H ^ 2 / 4 ≤ ↑(Artigo.QH H).card
+Artigo.card_QH_le (H : ℕ) : (Artigo.QH H).card ≤ 3 * H ^ 2
+Artigo.catalog_consistency {k : ℕ} {m : ℤ} :
+  (∀ {H H' D D' : ℕ}, D ≤ D' → H ≤ H' → Artigo.SigmaCat H D k m ⊆ Artigo.SigmaCat H' D' k m) ∧
+    (∀ {H H' D D' : ℕ},
+        Artigo.HK k m ≤ H →
+          D ≤ D' →
+            H ≤ H' → ∀ (J : (↑(Artigo.cellIcc k m) → ℝ) → ℝ), Artigo.minVal H' D' k m J ≤ Artigo.minVal H D k m J) ∧
+      ∀ (J : (↑(Artigo.cellIcc k m) → ℝ) → ℝ),
+        (∃ H D, ∃ g ∈ Artigo.SigmaCat H D k m, ∀ (H' D' : ℕ), ∀ g' ∈ Artigo.SigmaCat H' D' k m, J g ≤ J g') →
+          ∃ Rs H₀ D₀, ∀ (H D : ℕ), H₀ ≤ H → D₀ ≤ D → Artigo.canon H D k m J = Rs
+Artigo.coding_format_orders :
+  ∃ C,
+    ∀ (H : ℕ),
+      2 ≤ H →
+        ∀ (L : List Artigo.Atom),
+          L ≠ [] →
+            (∀ a ∈ L, a.height ≤ H) →
+              Artigo.Latom L ≤ C * L.length * Nat.log 2 H ∧
+                Artigo.Lstr L ≤ C * L.length * Nat.log 2 H ∧ Artigo.Lrat L ≤ C * L.length * H
+Artigo.coding_formats_decoders :
+  (Artigo.CatomCodec.RT fun L => L ≠ []) ∧
+    (∀ (L : List Artigo.Atom) (t : List Bool),
+        Artigo.strCodec.dec (Artigo.strCodec.enc (Artigo.strParams L) ++ t) = some (Artigo.strParams L, t)) ∧
+      ∀ (L : List Artigo.Atom) (t : List Bool),
+        Artigo.ratReluCodec.dec (Artigo.ratReluCodec.enc (Artigo.ratParams L) ++ t) = some (Artigo.ratParams L, t)
+Artigo.coding_gap_family :
+  ∃ C,
+    ∀ (H N : ℕ),
+      2 ≤ H →
+        Even N →
+          2 ≤ N →
+            N ≤ H →
+              List.IsChain Artigo.LTree.Contig (Artigo.famList H N) ∧
+                (∀ a ∈ Artigo.famList H N, a.height = H) ∧
+                  (Artigo.famList H N).length = N ∧
+                    Artigo.Latom (Artigo.famList H N) ≤ C * N * Nat.log 2 H ∧
+                      Artigo.Lstr (Artigo.famList H N) ≤ C * N * Nat.log 2 H ∧
+                        N * H ≤ 2 * Artigo.Lrat (Artigo.famList H N)
+Artigo.complexity_chain (R M : ℝ) (hR : 0 < R) (hM : 0 < M) :
+  ∃ ε₀ C₁,
+    0 < ε₀ ∧
+      0 < C₁ ∧
+        ∀ (ε : ℝ),
+          0 < ε →
+            ε < ε₀ →
+              ∃ CB,
+                (∀ T ∈ CB, Artigo.LTree.WF 0 0 T) ∧
+                  (∀ f ∈ Artigo.FRM R M, ∃ T ∈ CB, Artigo.supDist f T ≤ ENNReal.ofReal ε) ∧
+                    ↑⌈Artigo.entropyH ε (Artigo.FRM R M)⌉.toNat ≤ Artigo.Ldec ε (Artigo.FRM R M) ∧
+                      Artigo.Ldec ε (Artigo.FRM R M) ≤ ↑(Artigo.Lglobal CB) ∧ ↑(Artigo.Lglobal CB) ≤ C₁ / √ε
+Artigo.derivative_control {R M : ℝ} {f : ℝ → ℝ} (hf : f ∈ Artigo.FRM R M) (x : ℝ) :
+  x ∈ Set.Icc 0 1 → |deriv f x| ≤ 4 * R + M / 2
+Artigo.description_lower (ε : ℝ) (F : Set (ℝ → ℝ)) :
+  (∀ (c : Artigo.EpsCodec ε F) (ℓ : ℕ), (∀ w ∈ c.W, w.length = ℓ) → ⌈Artigo.entropyH ε F⌉ ≤ ↑ℓ) ∧
+    (∀ (c : Artigo.EpsCodec ε F), Artigo.PrefixFreeSet c.W → ⌈Artigo.entropyH ε F⌉ ≤ ↑(Artigo.maxLen c.W)) ∧
+      ↑⌈Artigo.entropyH ε F⌉.toNat ≤ Artigo.Ldec ε F
+Artigo.endpoint_dictionary {H k : ℕ} {m : ℤ} (hH : 2 ≤ H) :
+  Set.BijOn (fun a => (a.lval, a.rval)) {a | a.height ≤ H ∧ a.k = k ∧ a.m = m} ↑(Artigo.PH H k m) ∧
+    (Artigo.PH H k m).card = if k + 1 ≤ H ∧ m.natAbs + 1 ≤ H then (Artigo.QH H).card * ((Artigo.QH H).card - 1) else 0
+Artigo.entropy_codebook (R M : ℝ) (hR : 0 < R) (hM : 0 < M) :
+  ∃ ε₀ c C C₁,
+    0 < ε₀ ∧
+      0 < c ∧
+        0 < C ∧
+          0 < C₁ ∧
+            ∀ (ε : ℝ),
+              0 < ε →
+                ε < ε₀ →
+                  c / √ε ≤ Artigo.entropyH ε (Artigo.FRM R M) ∧
+                    Artigo.entropyH ε (Artigo.FRM R M) ≤ C / √ε ∧
+                      ∃ CB,
+                        (∀ T ∈ CB, Artigo.LTree.WF 0 0 T) ∧
+                          (∀ f ∈ Artigo.FRM R M, ∃ T ∈ CB, Artigo.supDist f T ≤ ENNReal.ofReal ε) ∧
+                            ↑(Nat.clog 2 CB.card) ≤ C₁ / √ε
+Artigo.finite_catalog_minimizer {H D k : ℕ} {m : ℤ} (hH : Artigo.HK k m ≤ H) :
+  1 ≤ (Artigo.SigmaCat H D k m).card ∧
+    (Artigo.SigmaCat H D k m).card ≤ (Artigo.RepCat H D k m).card ∧
+      (Artigo.RepCat H D k m).card ≤ Artigo.Tshape D * (Artigo.LH H).card ^ 2 ^ D ∧
+        (∀ (J : (↑(Artigo.cellIcc k m) → ℝ) → ℝ),
+            ∃ g ∈ Artigo.SigmaCat H D k m, ∀ g' ∈ Artigo.SigmaCat H D k m, J g ≤ J g') ∧
+          ∀ (J : (↑(Artigo.cellIcc k m) → ℝ) → ℝ),
+            ∃! R, R ∈ Artigo.minSet H D k m J ∧ ∀ R' ∈ Artigo.minSet H D k m J, Artigo.canKey R ≤ Artigo.canKey R'
+Artigo.general_dyadic_envelope {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m₀ : ℤ} (hI : 0 < Artigo.curvI f k₀ m₀) :
+  (∀ δ > 0,
+      ∀ᶠ (ε : ℝ) in nhdsWithin 0 (Set.Ioi 0),
+        Artigo.curvI f k₀ m₀ / √8 - δ ≤ √ε * ↑(Artigo.nThr f ε k₀ m₀) ∧
+          √ε * ↑(Artigo.nThr f ε k₀ m₀) ≤ Artigo.curvI f k₀ m₀ / √2 + δ) ∧
+    ∀ δ > 0,
+      ∀ᶠ (N : ℕ) in Filter.atTop,
+        Artigo.curvI f k₀ m₀ ^ 2 / 8 - δ ≤ ↑N ^ 2 * Artigo.Edia f k₀ m₀ N ∧
+          ↑N ^ 2 * Artigo.Edia f k₀ m₀ N ≤ Artigo.curvI f k₀ m₀ ^ 2 / 2 + δ
+Artigo.general_dyadic_envelope_liminf {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m₀ : ℤ}
+  (hI : 0 < Artigo.curvI f k₀ m₀) :
+  Artigo.curvI f k₀ m₀ / √8 ≤ Filter.liminf (fun ε => √ε * ↑(Artigo.nThr f ε k₀ m₀)) (nhdsWithin 0 (Set.Ioi 0)) ∧
+    Filter.limsup (fun ε => √ε * ↑(Artigo.nThr f ε k₀ m₀)) (nhdsWithin 0 (Set.Ioi 0)) ≤ Artigo.curvI f k₀ m₀ / √2 ∧
+      Artigo.curvI f k₀ m₀ ^ 2 / 8 ≤ Filter.liminf (fun N => ↑N ^ 2 * Artigo.Edia f k₀ m₀ N) Filter.atTop ∧
+        Filter.limsup (fun N => ↑N ^ 2 * Artigo.Edia f k₀ m₀ N) Filter.atTop ≤ Artigo.curvI f k₀ m₀ ^ 2 / 2
+Artigo.general_dyadic_envelope_zero {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m₀ : ℤ}
+  (hI : Artigo.curvI f k₀ m₀ = 0) :
+  (∃ α β, ∀ x ∈ Artigo.cellIcc k₀ m₀, f x = α + β * x) ∧
+    (∀ ε > 0, Artigo.nThr f ε k₀ m₀ = 1) ∧ ∀ (N : ℕ), 1 ≤ N → Artigo.Edia f k₀ m₀ N = 0
+Artigo.heightFor (ε : ℝ) (N : ℕ) (f : ℝ → ℝ) : ℕ
+Artigo.height_for_epsilon (R M : ℝ) :
+  (∀ f ∈ Artigo.FRM R M,
+      ∀ (ε : ℝ),
+        0 < ε →
+          Artigo.jointErr (Artigo.nEps M ε) (Artigo.HEps R M ε) f ≤ ENNReal.ofReal ε ∧
+            Artigo.heightFor ε (Artigo.nEps M ε) f ≤ Artigo.HEps R M ε) ∧
+    ∃ C,
+      ∀ f ∈ Artigo.FRM R M,
+        ∀ (ε : ℝ),
+          0 < ε →
+            ε ≤ 1 →
+              ↑(Artigo.nEps M ε) ≤ C / √ε ∧
+                ↑(Artigo.HEps R M ε) ≤ C / ε ∧
+                  ∃ T,
+                    Artigo.AdmNH (Artigo.nEps M ε) (Artigo.HEps R M ε) T ∧
+                      Artigo.supDist f T ≤ ENNReal.ofReal ε ∧
+                        ↑(Artigo.Latom T.leaves) ≤ C / √ε * Real.log (2 / ε) ∧
+                          ↑(Artigo.Lstr T.leaves) ≤ C / √ε * Real.log (2 / ε) ∧
+                            ↑(Artigo.Lrat T.leaves) ≤ C / √ε * Real.log (2 / ε)
+Artigo.index_bound :
+  ∃ C C',
+    0 < C ∧
+      0 < C' ∧ ∀ (a : Artigo.Atom), ↑a.addr ≤ C * ↑a.height ^ 8 ∧ Real.logb 2 (↑a.addr + 1) ≤ C' * Real.logb 2 ↑a.height
+Artigo.instability :
+  Artigo.gPlus.height = 2 ∧
+    Artigo.gMinus.height = 2 ∧
+      (∀ (x : ℝ), Artigo.gPlus.eval x = x) ∧
+        (∀ (x : ℝ), Artigo.gMinus.eval x = -x) ∧
+          ⨆ x ∈ Set.Icc 0 1, |Artigo.gPlus.eval x - Artigo.gMinus.eval x| = 2 ∧
+            (∀ (z : ℝ), Artigo.costObs z Artigo.gPlus = (z - 1) ^ 2 ∧ Artigo.costObs z Artigo.gMinus = (z + 1) ^ 2) ∧
+              ∀ (sel : ℝ → Artigo.Atom),
+                (∀ (z : ℝ),
+                    (sel z = Artigo.gPlus ∨ sel z = Artigo.gMinus) ∧
+                      Artigo.costObs z (sel z) ≤ Artigo.costObs z Artigo.gPlus ∧
+                        Artigo.costObs z (sel z) ≤ Artigo.costObs z Artigo.gMinus) →
+                  ∀ δ > 0, ∃ z, |z| < δ ∧ ⨆ x ∈ Set.Icc 0 1, |(sel z).eval x - (sel 0).eval x| = 2
+Artigo.interp_remainder_C2 {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {a b M : ℝ} (hab : a < b)
+  (hM : ∀ x ∈ Set.Icc a b, |deriv (deriv f) x| ≤ M) (x : ℝ) :
+  x ∈ Set.Icc a b → |f x - Artigo.linInterp f a b x| ≤ (b - a) ^ 2 / 8 * M
+Artigo.jointErr (N H : ℕ) (f : ℝ → ℝ) : ENNReal
+Artigo.jointErr_succ_H_le (N H : ℕ) (f : ℝ → ℝ) : Artigo.jointErr N (H + 1) f ≤ Artigo.jointErr N H f
+Artigo.jointErr_succ_N_le (N H : ℕ) (f : ℝ → ℝ) : Artigo.jointErr (N + 1) H f ≤ Artigo.jointErr N H f
+Artigo.jointErr_tendsto (N : ℕ) (f : ℝ → ℝ) :
+  (Antitone fun H => Artigo.jointErr N H f) ∧
+    Filter.Tendsto (fun H => Artigo.jointErr N H f) Filter.atTop (nhds (Artigo.leafErr N f))
+Artigo.joint_all_N {R M : ℝ} {f : ℝ → ℝ} (hf : f ∈ Artigo.FRM R M) (N : ℕ) (hN : 2 ≤ N) :
+  Artigo.jointErr N ⌈Artigo.CH R M * ↑N ^ 2⌉₊ f < ENNReal.ofReal ((M + 4) / (2 * ↑N ^ 2))
+Artigo.joint_budget (R M : ℝ) :
+  ∃ Cb,
+    ∀ (r : ℕ),
+      1 ≤ r →
+        ∀ f ∈ Artigo.FRM R M,
+          ∃ T,
+            T = Artigo.uniformTree (Artigo.jvals f r) r 0 0 ∧
+              Artigo.LTree.WF 0 0 T ∧
+                T.numLeaves = 2 ^ r ∧
+                  (∀ x ∈ Set.Icc 0 1, |f x - Artigo.LTree.eval 0 0 T x| ≤ (M + 4) / (8 * (2 ^ r) ^ 2)) ∧
+                    ↑T.maxHeight ≤ Artigo.CH R M * (2 ^ r) ^ 2 ∧
+                      Artigo.Latom T.leaves ≤ Cb * 2 ^ r * Nat.log 2 (2 * 2 ^ r) ∧
+                        Artigo.Lstr T.leaves ≤ Cb * 2 ^ r * Nat.log 2 (2 * 2 ^ r) ∧
+                          Artigo.Lrat T.leaves ≤ Cb * 2 ^ r * Nat.log 2 (2 * 2 ^ r)
+Artigo.local_asymptotic_error {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m₀ : ℤ} {k : ℕ} {m : ℤ}
+  (hJ : Artigo.cellIcc k m ⊆ Artigo.cellIcc k₀ m₀) {x : ℝ} (hx : x ∈ Artigo.cellIcc k m) :
+  |Artigo.locErr f k m - |deriv (deriv f) x| / 8 * (Artigo.cR k m - Artigo.cL k m) ^ 2| ≤
+    Artigo.modCont (deriv (deriv f)) (Artigo.cellIcc k₀ m₀) (Artigo.cR k m - Artigo.cL k m) / 8 *
+      (Artigo.cR k m - Artigo.cL k m) ^ 2
+Artigo.nSharp (a : Artigo.Atom) : ℕ
+Artigo.no_minimizer : ⨅ a, |√2 - (↑a).eval (1 / 4)| = 0 ∧ ∀ (a : Artigo.Atom), 0 < |√2 - a.eval (1 / 4)|
+Artigo.piecewise_quadratic_count {f : ℝ → ℝ} {q₀ : ℕ} {κ : ℕ → ℝ} (hκ : ∀ i < 2 ^ q₀, κ i ≠ 0)
+  (hquad : ∀ i < 2 ^ q₀, ∃ b c, ∀ x ∈ Artigo.cellIcc q₀ ↑i, f x = κ i / 2 * x ^ 2 + b * x + c) {A : ℕ → ℝ}
+  (hA : ∀ (i : ℕ), A i = |κ i| * (Artigo.cR q₀ ↑i - Artigo.cL q₀ ↑i) ^ 2 / 8) :
+  (∃ ε₀ > 0,
+      ∀ (ε : ℝ),
+        0 < ε →
+          ε < ε₀ →
+            ↑(Artigo.nThr f ε 0 0) = ∑ i ∈ Finset.range (2 ^ q₀), 2 ^ ⌈Real.logb 4 (A i / ε)⌉ ∧
+              √ε * ↑(Artigo.nThr f ε 0 0) = Artigo.phaseFn A (2 ^ q₀) (-Real.logb 4 ε)) ∧
+    Function.Periodic (Artigo.phaseFn A (2 ^ q₀)) 1 ∧ ∃ s t, Artigo.phaseFn A (2 ^ q₀) s ≠ Artigo.phaseFn A (2 ^ q₀) t
+Artigo.quadratic_dyadic_constant {q : ℝ → ℝ} (hq : ContDiff ℝ 2 q) {k₀ : ℕ} {m₀ : ℤ} {κ : ℝ} (hκ : κ ≠ 0)
+  (hκq : ∀ x ∈ Artigo.cellIcc k₀ m₀, deriv (deriv q) x = κ) {A : ℝ}
+  (hA : A = |κ| * (Artigo.cR k₀ m₀ - Artigo.cL k₀ m₀) ^ 2 / 8) :
+  (∀ (N : ℕ), 1 ≤ N → Artigo.Edia q k₀ m₀ N = A / 4 ^ Nat.log 2 N) ∧
+    {x | MapClusterPt x Filter.atTop fun N => ↑N ^ 2 * Artigo.Edia q k₀ m₀ N} = Set.Icc A (4 * A) ∧
+      Filter.liminf (fun N => ↑N ^ 2 * Artigo.Edia q k₀ m₀ N) Filter.atTop = A ∧
+        Filter.limsup (fun N => ↑N ^ 2 * Artigo.Edia q k₀ m₀ N) Filter.atTop = 4 * A ∧
+          (¬∃ c, Filter.Tendsto (fun N => ↑N ^ 2 * Artigo.Edia q k₀ m₀ N) Filter.atTop (nhds c)) ∧
+            ∀ ε > 0, Artigo.nThr q ε k₀ m₀ = 2 ^ ⌈Real.logb 4 (A / ε)⌉.toNat
+Artigo.rank_lt_three_sq {r : ℚ} {H : ℕ} (h : Artigo.ht r ≤ H) :
+  Artigo.rankQ r < 3 * H ^ 2 ∧ (r ≠ 0 → Artigo.rankQs r < 3 * H ^ 2)
+Artigo.recursive_stream :
+  (∀ (T T' : Artigo.LTree), Artigo.serRec T <+: Artigo.serRec T' → T = T') ∧
+    Function.Injective Artigo.serRec ∧
+      (∀ (a : Artigo.Atom),
+          (Artigo.serRec (Artigo.LTree.leaf a)).length = 1 + (Artigo.gamma (Artigo.nSharp a + 1)).length) ∧
+        ∀ (l r : Artigo.LTree),
+          (Artigo.serRec (l.node r)).length = 1 + (Artigo.serRec l).length + (Artigo.serRec r).length
+Artigo.sharp_optimal :
+  Function.Bijective Artigo.GammaSharp ∧
+    Function.LeftInverse Artigo.GammaSharp Artigo.nSharp ∧
+      Function.RightInverse Artigo.GammaSharp Artigo.nSharp ∧
+        (∀ (H : ℕ),
+            2 ≤ H →
+              (Artigo.LH H).sup Artigo.nSharp = (Artigo.LH H).card - 1 ∧ (Artigo.LH H).card - 1 ≤ 18 * H ^ 6 - 1) ∧
+          ∀ (A : Artigo.Atom → ℕ),
+            Function.Injective A → ∀ (H : ℕ), 2 ≤ H → (Artigo.LH H).card - 1 ≤ (Artigo.LH H).sup A
+Artigo.synchronized_phases {f : ℝ → ℝ} {q₀ : ℕ} {κ : ℕ → ℝ} (hκ : ∀ i < 2 ^ q₀, κ i ≠ 0)
+  (hquad : ∀ i < 2 ^ q₀, ∃ b c, ∀ x ∈ Artigo.cellIcc q₀ ↑i, f x = κ i / 2 * x ^ 2 + b * x + c) {A : ℕ → ℝ}
+  (hA : ∀ (i : ℕ), A i = |κ i| * (Artigo.cR q₀ ↑i - Artigo.cL q₀ ↑i) ^ 2 / 8)
+  (hsync : ∀ i < 2 ^ q₀, ∀ j < 2 ^ q₀, ∃ z, A i / A j = 4 ^ z) :
+  Filter.liminf (fun N => ↑N ^ 2 * Artigo.Edia f 0 0 N) Filter.atTop =
+      (∫ (x : ℝ) in 0..1, √|deriv (deriv f) x|) ^ 2 / 8 ∧
+    Filter.limsup (fun N => ↑N ^ 2 * Artigo.Edia f 0 0 N) Filter.atTop =
+      (∫ (x : ℝ) in 0..1, √|deriv (deriv f) x|) ^ 2 / 2
+Artigo.threshold_optimality {f : ℝ → ℝ} {k : ℕ} {m : ℤ} (hf : ContinuousOn f (Artigo.cellIcc k m)) {ε : ℝ}
+  (hε : 0 < ε) :
+  (∃! T, Artigo.IsThr f ε k m T) ∧
+    Artigo.DShape.treeErr f (Artigo.thrTree f ε k m) k m ≤ ε ∧
+      (∀ (T : Artigo.DShape), Artigo.DShape.treeErr f T k m ≤ ε → T.Refines (Artigo.thrTree f ε k m)) ∧
+        (∀ (T : Artigo.DShape),
+            Artigo.DShape.treeErr f T k m ≤ ε →
+              (∀ (T' : Artigo.DShape), Artigo.DShape.treeErr f T' k m ≤ ε → T'.Refines T) →
+                T = Artigo.thrTree f ε k m) ∧
+          (∀ (T : Artigo.DShape), Artigo.DShape.treeErr f T k m ≤ ε → Artigo.nThr f ε k m ≤ T.numLeaves) ∧
+            ∀ (N : ℕ), 1 ≤ N → (Artigo.Edia f k m N ≤ ε ↔ Artigo.nThr f ε k m ≤ N)
+Artigo.tie_concatenation (S : Artigo.Setup) {L L' R R' : Artigo.LTree} (hL : S.kappa L ≤ S.kappa L')
+  (hR : S.kappa R ≤ S.kappa R') : S.kappa (L.node R) ≤ S.kappa (L'.node R')
+Artigo.translation_obstruction {H k₀ m₀ r : ℕ} (hH : 2 ≤ H) :
+  (∀ j < 2 ^ r, (Artigo.PH H (k₀ + r) ↑(2 ^ r * m₀ + j)).Nonempty ↔ k₀ + r + 1 ≤ H ∧ 2 ^ r * m₀ + j + 1 ≤ H) ∧
+    ({j ∈ Finset.range (2 ^ r) | (Artigo.PH H (k₀ + r) ↑(2 ^ r * m₀ + j)).Nonempty}.card =
+        if k₀ + r + 1 ≤ H then min (2 ^ r) (H - 2 ^ r * m₀) else 0) ∧
+      ((∀ j < 2 ^ r, (Artigo.PH H (k₀ + r) ↑(2 ^ r * m₀ + j)).Nonempty) ↔ k₀ + r + 1 ≤ H ∧ 2 ^ r * (m₀ + 1) ≤ H) ∧
+        (k₀ + r + 1 ≤ H ∧ 2 ^ r * (m₀ + 1) ≤ H ↔ ↑r ≤ min (↑H - ↑k₀ - 1) (Real.logb 2 (↑H / (↑m₀ + 1))))
+Artigo.uniform_convergence {k₀ : ℕ} {m₀ : ℤ} {f : ℝ → ℝ} (hf : ContinuousOn f (Artigo.cellIcc k₀ m₀)) :
+  ⨅ N, ⨅ H, ⨅ D, Artigo.Etree f k₀ m₀ N H D = 0 ∧
+    ∀ (N H D : ℕ → ℕ),
+      Filter.Tendsto N Filter.atTop Filter.atTop →
+        Filter.Tendsto H Filter.atTop Filter.atTop →
+          Filter.Tendsto D Filter.atTop Filter.atTop →
+            Filter.Tendsto (fun j => Artigo.Etree f k₀ m₀ (N j) (H j) (D j)) Filter.atTop (nhds 0)
+Artigo.value_alphabet {H D k₀ : ℕ} {m₀ : ℤ} (hH : 2 ≤ H) :
+  (∀ T ∈ Artigo.RepCat H D k₀ m₀,
+      ∀ a ∈ T.leaves, a.lval ∈ Artigo.Valphabet H D k₀ m₀ ∧ a.rval ∈ Artigo.Valphabet H D k₀ m₀) ∧
+    (Artigo.Valphabet H D k₀ m₀).card ≤ 2 * (2 ^ (D + 1) - 1) * ((Artigo.QH H).card * ((Artigo.QH H).card - 1)) ∧
+      (Artigo.Valphabet H D k₀ m₀).card ≤ 2 * (Artigo.LH H).card ∧
+        (Artigo.Valphabet H D k₀ m₀).card ≤ 18 * (2 ^ (D + 1) - 1) * H ^ 4 ∧
+          (Artigo.Valphabet H D k₀ m₀).card ≤ 36 * H ^ 6

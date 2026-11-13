@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amssymb}
+\usepackage{babel}
+\babelprovide[import,main]{portuguese}
+\usepackage{amsmath,amsthm,mathtools}
+
+\PassOptionsToPackage{obeyspaces,spaces}{url}% preserva os espaços em \code{...} (identificadores Lean)
+\usepackage{microtype,graphicx,xcolor,booktabs,longtable,array,float,tabularx,multicol,placeins,mathrsfs,xurl}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit}
+\usepackage[round,authoryear]{natbib}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,skip=7pt}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\definecolor{ink}{HTML}{172C3C}
+\definecolor{accent}{HTML}{166F80}
+\hypersetup{colorlinks=true,linkcolor=ink,citecolor=ink,urlcolor=accent,
+ pdftitle={Biblioteca determinística de segmentos afins racionais em células diádicas: endereçamento, aproximação e refinamento certificado},
+ pdfauthor={Victor Gabriel de Oliveira},
+ pdfsubject={Construção racional, aproximação certificada e descrição aritmética}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Biblioteca determinística de segmentos afins racionais}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\textfloatsep}{15pt plus 3pt minus 3pt}
+\setlength{\intextsep}{14pt plus 3pt minus 3pt}
+\setlist{nosep,leftmargin=2em}
+\newtheoremstyle{preciso}{8pt}{5pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{preciso}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicao}[teorema]{Proposição}
+\newtheorem{corolario}[teorema]{Corolário}
+\theoremstyle{definition}
+\newtheorem{definicao}[teorema]{Definição}
+\newtheorem{algoritmo}[teorema]{Algoritmo}
+\newtheorem{observacao}[teorema]{Observação}
+\renewcommand{\proofname}{Demonstração}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathbb D}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\Asm}{\mathcal A}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\heightq}{\operatorname{ht}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Eval}{\operatorname{Eval}}
+\newcommand{\ser}{\operatorname{ser}}
+\newcommand{\norm}[1]{\left\|#1\right\|_{\infty}}
+\newcommand{\normK}[2]{\left\|#1\right\|_{\infty,#2}}
+\newcommand{\eqn}[2]{\begin{equation}\label{eq:#1}#2\end{equation}}
+\newcommand{\figura}[4]{\begin{figure}[!htbp]\centering
+ \includegraphics[width=#2\linewidth]{figuras/#1.pdf}
+ \caption{#3}\label{fig:#4}\end{figure}}
+
+\newcommand{\Atoms}{\mathsf{Atom}}
+\newcommand{\Cell}{\mathsf{Cell}}
+\newcommand{\CK}{\mathsf C_K}
+\newcommand{\Fin}{\operatorname{Fin}}
+\newcommand{\FS}{\operatorname{Finset}}
+\newcommand{\card}{\operatorname{card}}
+\newcommand{\htq}{\operatorname{ht}}
+\newcommand{\Norm}{\operatorname{Norm}}
+\newcommand{\Act}{\operatorname{Active}}
+\newcommand{\Sep}{\operatorname{Sep}}
+\newcommand{\Cov}{\operatorname{Cover}}
+\newcommand{\Match}{\operatorname{Match}}
+\newcommand{\Agree}{\operatorname{Agree}}
+\newcommand{\Loc}{\operatorname{LocalRep}}
+\newcommand{\Str}{\operatorname{StrongRep}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\ImageRes}{\operatorname{ResImage}}
+\newcommand{\Aloc}{\mathcal A^{\mathrm{loc}}}
+\newcommand{\Astr}{\mathcal A^{\mathrm{con}}}
+\newcommand{\List}{\operatorname{List}}
+\newcommand{\pos}{\operatorname{pos}}
+\newcommand{\dec}{\operatorname{dec}}
+\newcommand{\enc}{\operatorname{enc}}
+\newcommand{\pred}{\operatorname{Pred}}
+\newcommand{\rankq}{\operatorname{rank}}
+\newcommand{\qstar}{\Q^{\times}}
+\newcommand{\co}{\operatorname{coef}}
+\newcommand{\cls}{\operatorname{closure}}
+\newcommand{\intr}{\operatorname{interior}}
+\newcommand{\ERealPos}{\overline{\R}_{\ge0}}
+\newcommand{\code}[1]{\nolinkurl{#1}}
+\newcommand{\crefrangeconjunction}{ a }
+\newcommand{\crefpairconjunction}{ e }
+\newcommand{\crefmiddleconjunction}{, }
+\newcommand{\creflastconjunction}{ e }
+\newcommand{\Nzero}{\mathbb{N}_0}
+\newcommand{\Qstar}{\mathbb{Q}^{\!*}}
+\newcommand{\Dmid}{\mathbb{D}_{\mathrm{mid}}}
+\newcommand{\Aclass}{\mathcal{A}}
+\newcommand{\Library}{\mathcal{L}}
+\newcommand{\Intervals}{\mathcal{I}}
+\newcommand{\Representations}{\mathfrak{R}}
+\newcommand{\Trees}{\mathfrak{T}}
+\newcommand{\Values}{\mathcal{V}}
+\newcommand{\Pairs}{\mathcal{P}}
+\newcommand{\height}{\operatorname{ht}}
+\newcommand{\own}{\mathrm{own}}
+\newcommand{\cost}{\mathcal{J}}
+\newcommand{\loss}{\mathcal{E}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\runningtitle}{Custo, seleção exata e interpolação diádica}
+\crefname{section}{seção}{seções}
+\Crefname{section}{Seção}{Seções}
+\crefname{subsection}{subseção}{subseções}
+\Crefname{subsection}{Subseção}{Subseções}
+\crefname{figure}{figura}{figuras}
+\Crefname{figure}{Figura}{Figuras}
+\crefname{table}{tabela}{tabelas}
+\Crefname{table}{Tabela}{Tabelas}
+\crefname{equation}{equação}{equações}
+\Crefname{equation}{Equação}{Equações}
+\crefname{appendix}{apêndice}{apêndices}
+\Crefname{appendix}{Apêndice}{Apêndices}
+\crefname{theorem}{teorema}{teoremas}
+\crefname{lemma}{lema}{lemas}
+\crefname{proposition}{proposição}{proposições}
+\crefname{corollary}{corolário}{corolários}
+\crefname{definition}{definição}{definições}
+\crefname{algorithm}{algoritmo}{algoritmos}
+\crefname{remark}{observação}{observações}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\theoremstyle{preciso}
+\newtheorem{theorem}[teorema]{Teorema}
+\theoremstyle{preciso}
+\newtheorem{lemma}[teorema]{Lema}
+\theoremstyle{preciso}
+\newtheorem{proposition}[teorema]{Proposição}
+\theoremstyle{preciso}
+\newtheorem{corollary}[teorema]{Corolário}
+\theoremstyle{definition}
+\newtheorem{definition}[teorema]{Definição}
+\theoremstyle{preciso}
+\newtheorem{algorithm}[teorema]{Algoritmo}
+\theoremstyle{definition}
+\newtheorem{remark}[teorema]{Observação}
+% Ambientes sem numeração (acréscimos editoriais): não alteram contadores nem o mapa de 151 ambientes.
+\theoremstyle{preciso}
+\newtheorem*{proposicaoSN}{Proposição (ponte entre as Partes~I e~III)}
+\theoremstyle{definition}
+\newtheorem*{observacaoSN}{Observação}
+
+\renewcommand{\partname}{Parte}
+\renewcommand{\contentsname}{Sumário}
+\renewcommand{\refname}{Referências}
+\renewcommand{\thesection}{\Roman{part}.\arabic{section}}
+\renewcommand{\thefigure}{\Roman{part}.\arabic{figure}}
+\renewcommand{\thetable}{\Roman{part}.\arabic{table}}
+\renewcommand{\theequation}{\Roman{part}.\arabic{equation}}
+\renewcommand{\theHsection}{\thesection}
+\renewcommand{\theHfigure}{\arabic{part}.\arabic{figure}}
+\renewcommand{\theHtable}{\arabic{part}.\arabic{table}}
+\renewcommand{\theHequation}{\arabic{part}.\arabic{equation}}
+\newcommand{\volumeparte}[1]{\clearpage\part{#1}\setcounter{section}{0}\setcounter{figure}{0}\setcounter{table}{0}\setcounter{equation}{0}\renewcommand{\thesection}{\Roman{part}.\arabic{section}}}
+\makeatletter
+\renewcommand*{\l@section}{\@dottedtocline{1}{1.5em}{4em}}
+\renewcommand*{\l@subsection}{\@dottedtocline{2}{4em}{5em}}
+\renewcommand*{\l@subsubsection}{\@dottedtocline{3}{8em}{6em}}
+\makeatother
+\fancyhead[L]{\small\itshape Biblioteca determinística: volume unificado}
+\hypersetup{pdftitle={Biblioteca determinística: volume unificado e correspondência Lean 4},pdfauthor={Victor Gabriel de Oliveira}}
+\title{\bfseries Biblioteca determinística de segmentos afins racionais\\[8pt]\Large Construção, seleção, aproximação e normalização\\[8pt]\large Volume unificado com correspondência Lean 4}
+\author{Victor Gabriel de Oliveira}
+\date{Edição consolidada de 13 de novembro de 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Este volume reúne a construção da biblioteca racional em células diádicas, a normalização das montagens, os custos aritméticos e a seleção exata, a teoria direta--inversa e os complementos do manuscrito de 77 páginas. Os enunciados e as demonstrações disponíveis são preservados em cinco partes. A correspondência final relaciona os 151 ambientes da edição atual aos fontes Lean existentes e aos 108 ambientes do manuscrito original. As diferenças semânticas e os resultados ainda sem formalização localizada permanecem identificados.
+\end{abstract}
+\section*{Convenções desta edição}
+A numeração tem a forma parte.seção.resultado. As remissões numéricas textuais herdadas dos artigos usam a numeração local da própria parte, salvo indicação explícita de outro artigo. A Parte I corresponde ao Artigo 1; a Parte II contém a normalização auxiliar; as Partes III e IV correspondem aos Artigos 2 e 3; a Parte V conserva os complementos das seções 6 e 21 originais. A correspondência documental reúne os destinos do original sem duplicar seu bloco de custo aritmético.
+
+Os fontes Lean recebidos permanecem inalterados; as novas provas ficam nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1}. Em 13 de novembro de 2026, os três ambientes foram recompilados e as auditorias dessas bibliotecas encontraram apenas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Correspondência herdada e prova compilada permanecem categorias distintas. A pasta \texttt{Fase3} pertence à base do Artigo 1. Quatro dos 42 casos do dossiê original permanecem sem fechamento completo, com motivos registrados no pacote; não se afirma formalização integral.
+\tableofcontents
+
+% I | fonte original: artigos/artigo_1/artigo.tex
+\volumeparte{Biblioteca, endereçamento e refinamento}
+\input{partes/artigo_1}
+
+% II | fonte original: entradas/parte_1/Solucao_Equivalencia_Montagens_Parte_1 (1).tex
+\volumeparte{Normalização e equivalência das montagens}
+\input{partes/normalizacao}
+
+% III | fonte original: artigos/artigo_2/Artigo_2.tex
+\volumeparte{Custo, entropia e seleção exata}
+\input{partes/artigo_2}
+
+% IV | fonte original: artigos/artigo_3/Artigo_3.tex
+\volumeparte{Agendas de altura e teoria direta--inversa}
+\input{partes/artigo_3}
+
+% V | fonte original: artigos/complemento_original_77/complemento.tex
+\volumeparte{Complementos do manuscrito original}
+\input{partes/complemento_original}
+
+\clearpage\part*{Correspondência documental e formal}\addcontentsline{toc}{part}{Correspondência documental e formal}
+\input{mapa_formal}
+\clearpage\bibliographystyle{plainnat}
+\bibliography{referencias}
+\end{document}

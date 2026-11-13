@@ -1,0 +1,56 @@
+{
+  "comando": "./compilar_pendencias/compilar_tudo.sh --axiomas",
+  "codigo_saida": 0,
+  "data_execucao": "2026-11-13T14:27:04-03:00",
+  "escopo": "Último gate completo após a integração de IV.5.9; fontes Lean integrados sem alterações posteriores.",
+  "logs": "compilar_pendencias/logs/20261113-142704",
+  "alvos": {
+    "artigo_2": "Pendencias",
+    "base_integrada": "PendenciasParte1",
+    "parte_1": "ValidationAll"
+  },
+  "log_sha256": {
+    "status_pendencias.txt": "1b869c5832fcdb92ab1d219dd6283c529350f062659dc7d48415b28a3fd6583c",
+    "axiomas-artigo_2.log": "23cca741b3617ceeaa5b7ed6c10af7da9090d37aa496b641614995bc26072415",
+    "latex.log": "66108383734ca6f9ffd97ebf3f6fca62d254e4d57ffccdce10e4ba71303d9f95",
+    "lean-base_integrada.log": "830c58eaf559670b5891109153992cc1f690a9d288e1746feba88f2241c1f9a2",
+    "lean-parte_1.log": "20230425360082356d7693812044f6e30373403624e357ac0e03d5ece0549ad8",
+    "lean-artigo_2.log": "a2d69cad3c137878354149daf400e2261f6f6a2b5fbbdd7ea18a7af63903799c",
+    "axiomas-base_integrada.log": "5f3712f93ce6f3aace5c83dc6f44b8316ff9f456c7ee72933c9f4a9675c3f192"
+  },
+  "jobs": {
+    "artigo_2": 8080,
+    "base_integrada": 8037,
+    "parte_1": 8036
+  },
+  "paginas": 120,
+  "associacoes_lean": 348,
+  "casos_tratados": {
+    "formalizado_compilado": 36,
+    "prova_textual_sincronizada": 1,
+    "total_de_42": 37
+  },
+  "declaracoes_auditadas_artigo_2": 82,
+  "declaracoes_auditadas_base_integrada": 2,
+  "permitidos": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorry_scan": {
+    "arquivos": 146,
+    "ocorrencias": 0,
+    "nota": "145 arquivos da rodada IV.5.2 mais Pente.lean; os oito teoremas novos também constam da auditoria de axiomas."
+  },
+  "fechamento_novo": "IV.5.9: Pendencias.PenteGemini.critical_tent_comb",
+  "semantica": "colaboracao/codex/REVISAO_IV_5_9.md",
+  "auditoria_suplementar_parte_1": {
+    "log": "verificacao/axiomas_parte_1_atual.log",
+    "declaracoes": 509,
+    "teoremas": 348,
+    "modulos": 8,
+    "axiomas_inesperados": [],
+    "escopo": "Rodada suplementar anterior; fontes da Parte I preservados byte a byte."
+  },
+  "limite": "37 provas Lean (inclui IV.5.4 corrigido) e 1 prova textual; quatro provas seguem abertas. As 97 correspondências herdadas não são novas provas semanticamente auditadas."
+}

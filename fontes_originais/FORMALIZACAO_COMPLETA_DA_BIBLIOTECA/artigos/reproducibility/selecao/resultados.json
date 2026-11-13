@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "deterministic": true,
+    "random_numbers_used": false,
+    "optimization_arithmetic": "fractions.Fraction",
+    "plots_only_use_floating_point": true
+  },
+  "definition_level_audit": {
+    "H": 2,
+    "rational_values_from_definition": 7,
+    "cells_checked": 3,
+    "atoms_checked": 126,
+    "losses_checked": 126,
+    "endpoint_dictionary_matches_definition": true,
+    "local_losses_match_direct_formula": true
+  },
+  "direct_enumeration_audit": {
+    "H": 2,
+    "D": 1,
+    "root_leaf_candidates": 42,
+    "split_pairs_tested": 1764,
+    "continuous_representations_tested": 102,
+    "dp_equals_direct_enumeration": true,
+    "winner_cost": "37/200",
+    "winner_stream": "010000000101001011000000011111010"
+  },
+  "main_instance_audit": {
+    "H": 4,
+    "D": 3,
+    "observations": 17,
+    "lambda_bits": "1/500",
+    "lambda_split": "1/100",
+    "rational_values": 23,
+    "nonzero_slopes": 22,
+    "atoms_per_admissible_cell": 506,
+    "tree_shapes_enumerated": 26,
+    "tree_shapes_feasible": 11,
+    "finite_shape_dp_equals_variable_dp": true,
+    "uniform_mesh_by_depth": [
+      {
+        "depth": 0,
+        "feasible": true,
+        "objective": 0.5658031361473532
+      },
+      {
+        "depth": 1,
+        "feasible": true,
+        "objective": 0.5721354673722759
+      },
+      {
+        "depth": 2,
+        "feasible": true,
+        "objective": 0.376158760184605
+      },
+      {
+        "depth": 3,
+        "feasible": false,
+        "objective": null
+      }
+    ],
+    "adaptive_epsilon": "1/2",
+    "adaptive_shape_leaves": 3,
+    "adaptive_sweep": [
+      {
+        "epsilon": "1/2",
+        "requested_leaves": 3,
+        "feasible": true,
+        "objective": 0.22949693256236897
+      },
+      {
+        "epsilon": "1/4",
+        "requested_leaves": 3,
+        "feasible": true,
+        "objective": 0.22949693256236897
+      },
+      {
+        "epsilon": "1/8",
+        "requested_leaves": 6,
+        "feasible": true,
+        "objective": 0.5718371946051788
+      },
+      {
+        "epsilon": "1/16",
+        "requested_leaves": 6,
+        "feasible": true,
+        "objective": 0.5718371946051788
+      },
+      {
+        "epsilon": "1/32",
+        "requested_leaves": 7,
+        "feasible": false,
+        "objective": null
+      },
+      {
+        "epsilon": "1/64",
+        "requested_leaves": 8,
+        "feasible": false,
+        "objective": null
+      },
+      {
+        "epsilon": "1/128",
+        "requested_leaves": 8,
+        "feasible": false,
+        "objective": null
+      },
+      {
+        "epsilon": "1/256",
+        "requested_leaves": 8,
+        "feasible": false,
+        "objective": null
+      },
+      {
+        "epsilon": "1/512",
+        "requested_leaves": 8,
+        "feasible": false,
+        "objective": null
+      },
+      {
+        "epsilon": "1/1024",
+        "requested_leaves": 8,
+        "feasible": false,
+        "objective": null
+      }
+    ],
+    "root_states": 3383,
+    "cached_cells": 15,
+    "exact_objective_no_worse_than_all_baselines": true
+  },
+  "tie_break_stress": [
+    {
+      "scenario": "sem dados, lambdas nulas, um nivel",
+      "H": 2,
+      "D": 1,
+      "continuous_representations": 102,
+      "tied_on_cost": 102,
+      "still_tied_on_length": 1,
+      "dp_equals_exhaustive_key": true,
+      "winner_stream": "11"
+    },
+    {
+      "scenario": "sem dados, lambdas nulas, dois niveis",
+      "H": 3,
+      "D": 2,
+      "continuous_representations": 1370,
+      "tied_on_cost": 1370,
+      "still_tied_on_length": 1,
+      "dp_equals_exhaustive_key": true,
+      "winner_stream": "11"
+    },
+    {
+      "scenario": "dados nulos, lambdas nulas",
+      "H": 3,
+      "D": 2,
+      "continuous_representations": 1370,
+      "tied_on_cost": 2,
+      "still_tied_on_length": 2,
+      "dp_equals_exhaustive_key": true,
+      "winner_stream": "010000000000100101001101000000000010111110111"
+    }
+  ],
+  "catalog_geometry": {
+    "H": 4,
+    "D": 3,
+    "cells_total": 15,
+    "cells_empty": 4,
+    "empty_cells": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "tree_shapes_total": 26,
+    "tree_shapes_feasible": 11,
+    "uniform_mesh_feasible_by_depth": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": false
+    },
+    "max_uniform_refinement_depth": 2
+  },
+  "geometry_formula_audit": {
+    "parameter_cases_checked": 1350,
+    "includes_scale_failure_cases": true,
+    "nonempty_cell_count_formula_verified": true,
+    "full_uniform_refinement_conditions_verified": true
+  },
+  "untruncated_robustness_audit": {
+    "H": 4,
+    "D": 2,
+    "scale_condition_holds": true,
+    "translation_condition_holds": true,
+    "cells_empty": 0,
+    "tree_shapes_feasible": 5,
+    "tree_shapes_total": 5,
+    "adaptive_epsilon": "1/2",
+    "objectives": {
+      "exact": 0.22949693256236897,
+      "uniform": 0.376158760184605,
+      "adaptive": 0.22949693256236897,
+      "greedy": 0.5658031361473532
+    },
+    "leaves": {
+      "exact": 3,
+      "uniform": 4,
+      "adaptive": 3,
+      "greedy": 1
+    },
+    "exact_cost_exact": "111935987753406487264303/487745027803307683240000",
+    "exact_matches_truncated_instance": true
+  },
+  "budget_and_bottleneck_audit": {
+    "H": 3,
+    "D": 2,
+    "continuous_representations": 1370,
+    "feasible_leaf_counts": [
+      1,
+      2,
+      3
+    ],
+    "additive_state_entries_checked": 873,
+    "at_most_leaf_budgets_checked": 4,
+    "leaf_budget_dp_equals_exhaustive": true,
+    "bottleneck_target": "f(x)=0",
+    "bottleneck_dp_equals_exhaustive": true
+  },
+  "methods": {
+    "Ótimo exato": {
+      "name": "Ótimo exato",
+      "cost_exact": "111935987753406487264303/487745027803307683240000",
+      "cost_decimal": 0.22949693256236897,
+      "loss_exact": "20239922526384642815183/487745027803307683240000",
+      "loss_decimal": 0.04149693256236898,
+      "bits": 84,
+      "splits": 2,
+      "leaves": 3,
+      "stream": "001000000000000010000011011100100000000000001000110010101110000000000001100101010111",
+      "leaf_atoms": [
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "left": "0",
+          "right": "1/4",
+          "left_value": "1/2",
+          "right_value": "1",
+          "y0": "3/4",
+          "slope": "2",
+          "height": 4,
+          "sharp_rank": 8411
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "left": "1/4",
+          "right": "1/2",
+          "left_value": "1",
+          "right_value": "1/2",
+          "y0": "3/4",
+          "slope": "-2",
+          "height": 4,
+          "sharp_rank": 9002
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "left": "1/2",
+          "right": "1",
+          "left_value": "1/2",
+          "right_value": "0",
+          "y0": "1/4",
+          "slope": "-1",
+          "height": 4,
+          "sharp_rank": 6486
+        }
+      ]
+    },
+    "Malha uniforme": {
+      "name": "Malha uniforme",
+      "cost_exact": "275204347417046848495187/731617541704961524860000",
+      "cost_decimal": 0.376158760184605,
+      "loss_exact": "84983786573756852031587/731617541704961524860000",
+      "loss_decimal": 0.11615876018460497,
+      "bits": 115,
+      "splits": 3,
+      "leaves": 4,
+      "stream": "0010000000000000100000110111001000000000000010001100101011010000000000000100100110100011000000000000010100101100100",
+      "leaf_atoms": [
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "left": "0",
+          "right": "1/4",
+          "left_value": "1/2",
+          "right_value": "1",
+          "y0": "3/4",
+          "slope": "2",
+          "height": 4,
+          "sharp_rank": 8411
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "left": "1/4",
+          "right": "1/2",
+          "left_value": "1",
+          "right_value": "1/2",
+          "y0": "3/4",
+          "slope": "-2",
+          "height": 4,
+          "sharp_rank": 9002
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "left": "1/2",
+          "right": "3/4",
+          "left_value": "1/2",
+          "right_value": "1/6",
+          "y0": "1/3",
+          "slope": "-4/3",
+          "height": 4,
+          "sharp_rank": 9424
+        },
+        {
+          "cell": [
+            2,
+            3
+          ],
+          "left": "3/4",
+          "right": "1",
+          "left_value": "1/6",
+          "right_value": "1/3",
+          "y0": "1/4",
+          "slope": "2/3",
+          "height": 4,
+          "sharp_rank": 10595
+        }
+      ]
+    },
+    "Adaptativo certificado": {
+      "name": "Adaptativo certificado",
+      "cost_exact": "111935987753406487264303/487745027803307683240000",
+      "cost_decimal": 0.22949693256236897,
+      "loss_exact": "20239922526384642815183/487745027803307683240000",
+      "loss_decimal": 0.04149693256236898,
+      "bits": 84,
+      "splits": 2,
+      "leaves": 3,
+      "stream": "001000000000000010000011011100100000000000001000110010101110000000000001100101010111",
+      "leaf_atoms": [
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "left": "0",
+          "right": "1/4",
+          "left_value": "1/2",
+          "right_value": "1",
+          "y0": "3/4",
+          "slope": "2",
+          "height": 4,
+          "sharp_rank": 8411
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "left": "1/4",
+          "right": "1/2",
+          "left_value": "1",
+          "right_value": "1/2",
+          "y0": "3/4",
+          "slope": "-2",
+          "height": 4,
+          "sharp_rank": 9002
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "left": "1/2",
+          "right": "1",
+          "left_value": "1/2",
+          "right_value": "0",
+          "y0": "1/4",
+          "slope": "-1",
+          "height": 4,
+          "sharp_rank": 6486
+        }
+      ]
+    },
+    "Heurística gulosa": {
+      "name": "Heurística gulosa",
+      "cost_exact": "2207741330971116057976299/3901960222426461465920000",
+      "cost_decimal": 0.5658031361473532,
+      "loss_exact": "2020447240294645907612139/3901960222426461465920000",
+      "loss_decimal": 0.5178031361473533,
+      "bits": 24,
+      "splits": 0,
+      "leaves": 1,
+      "stream": "100000000000110010000011",
+      "leaf_atoms": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "left": "0",
+          "right": "1",
+          "left_value": "7/8",
+          "right_value": "1/8",
+          "y0": "1/2",
+          "slope": "-3/4",
+          "height": 4,
+          "sharp_rank": 3202
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+% MAPA artigo_3:5.4
+\begin{proposition}[forma ancorada e comprimento estrutural]\label{map:artigo_3:5.4}
+\label{artigo_3:prop:anchored-relu-code}
+Se $g\in\Aclass^\square_{N,H}([0,1])$, sua forma reduzida possui
+$M\le N-1$ hinges e pode ser escrita, tomando o centro $x_*$ da folha mais à
+esquerda, como
+\begin{equation}
+ g(x)=g(x_*)+\sigma_0(x-x_*)
+      +\sum_{j=1}^{M}(\sigma_j-\sigma_{j-1})\rho(x-\tau_j).
+ \label{artigo_3:eq:anchored-relu-form}
+\end{equation}
+Os valores $g(x_*)$ e $\sigma_i$ têm altura no máximo $H$, os saltos têm
+altura no máximo $2H^2$, e os pontos diádicos são transmitidos por seus pares
+estruturais. Consequentemente, existe uma codificação prefix-free da forma
+ancorada com
+\begin{equation}
+ L_{\rm ReLU}^{\rm anc}(g)=O(N\log(2H)).
+ \label{artigo_3:eq:anchored-network-bits}
+\end{equation}
+
+Na direção contrária, se os coeficientes de
+\eqref{artigo_3:eq:reduced-relu-reverse} têm altura no máximo $W$ e as quebras têm
+profundidade no máximo $D$ (e as quebras são diádicas em $(0,1)$), então
+\begin{equation}
+ H_{\rm can}(R)\le 2^{D+1}\,(M+2)\,W^{M+3},
+ \qquad
+ \log_2 H_{\rm can}(R)
+ \le 5\bigl[(M+1)\log_2(2W)+D+\log_2(M+1)\bigr].
+ \label{artigo_3:eq:reverse-height-bit-bound}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Na ida, cada salto é a diferença de duas inclinações de altura no máximo
+$H$, logo sua altura não excede $2H^2$. A altura atômica limita os inteiros
+estruturais da célula, e todos os campos usam $O(\log(2H))$ bits. Somar os
+$O(N)$ campos prova \eqref{artigo_3:eq:anchored-network-bits}, com constante explícita:
+o código formalizado usa no máximo $40\,N\lfloor\log_2(2H)\rfloor$ bits. O ancoramento evita
+expandir desnecessariamente $g(x_*)-\sigma_0x_*$ em um intercepto com
+denominador diádico explícito.
+
+Na volta, toda folha $J_{k,m}$ de $\mathcal T(S)$ tem $k\le D$ e
+$|m|+1\le 2^k\le 2^D$. Cada inclinação local $\sigma_i$ é soma de no máximo $M+1$
+racionais de altura $\le W$: um denominador comum é $\le W^{M+1}$ e
+$|\sigma_i|\le(M+1)W$, logo $\operatorname{ht}\sigma_i\le (M+1)W^{M+2}$. O centro
+$x_{k,m}=(2m+1)/2^{k+1}$ e as quebras têm denominador dividindo $2^{D+1}$, e
+$0\le \max\{0,x_{k,m}-\tau_j\}\le1$. Assim, $R(x_{k,m})=c+qx_{k,m}+\sum_j
+a_j\max\{0,x_{k,m}-\tau_j\}$ admite o denominador comum
+$\operatorname{den}(c)\operatorname{den}(q)\,2^{D+1}\prod_j\operatorname{den}(a_j)\le
+2^{D+1}W^{M+2}$ (a parte diádica é compartilhada por todas as parcelas) e módulo
+$\le (M+2)W$; portanto $\operatorname{ht}R(x_{k,m})\le 2^{D+1}(M+2)W^{M+3}$. Os
+demais termos de \eqref{artigo_3:eq:canonical-network-height} ($2$, $k+1\le D+1$,
+$|m|+1\le 2^D$) são menores, o que dá $H_{\rm can}(R)\le 2^{D+1}(M+2)W^{M+3}$.
+Tomando $\log_2$, e usando $W\ge1$, $\log_2(M+2)\le 1+\log_2(M+1)$ e
+$(M+1)\log_2(2W)\ge1$, obtém-se
+\[
+ \log_2 H_{\rm can}\le D+1+\bigl(1+\log_2(M+1)\bigr)+(M+3)\log_2 W
+ \le 5\bigl[(M+1)\log_2(2W)+D+\log_2(M+1)\bigr].
+\]
+\end{proof}
+
+\begin{observacaoSN}\label{artigo_3:rem:reverse-height-correction}
+O fator é $M+1$, e não $M$, no primeiro termo: há $M+1$ inclinações locais e
+cada uma é soma de até $M+1$ racionais. A versão com $M\log(2W)$ é falsa já para
+$M=0$: em $R(x)=x$ ($M=0$, $D=0$, $W=1$) tem-se $H_{\rm can}=2$, de modo que
+$\log_2 H_{\rm can}=1$ e o lado direito é $0$; e em $R(x)=Wx$ tem-se
+$H_{\rm can}\ge W$ (a altura da inclinação), de modo que nenhum termo constante
+repara a cota. A volta corrigida está formalizada em
+\texttt{Pendencias/AlturaInversa.lean}; a ida (forma ancorada e código prefix-free)
+está formalizada em \texttt{Pendencias/FormaAncorada.lean} e
+\texttt{Pendencias/CodigoAncorado.lean}.
+\end{observacaoSN}
+

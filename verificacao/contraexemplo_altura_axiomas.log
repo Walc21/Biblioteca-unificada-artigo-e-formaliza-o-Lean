@@ -1,0 +1,4 @@
+'DiagnosticoAltura.affine_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiagnosticoAltura.affine_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiagnosticoAltura.affine_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiagnosticoAltura.affine_refutes_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2711 @@
+[
+  {
+    "id": "artigo_2:2.1",
+    "documento": "artigo_2",
+    "numero": "2.1",
+    "tipo": "lema",
+    "titulo": "indexação elementar",
+    "secao": 2,
+    "titulo_secao": "Biblioteca racional e preliminares",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 131,
+    "rotulos_tex": [
+      "lem:cantor",
+      "lem:integers",
+      "lem:rational-count",
+      "lem:rational-rank"
+    ],
+    "enunciado_tex": "\\label{lem:cantor}\\label{lem:integers}\\label{lem:rational-count}\\label{lem:rational-rank}\nO pareamento $\\pi(u,v)=(u+v)(u+v+1)/2+v$ é bijetivo e satisfaz $\\pi(u,v)\\le(u+v+1)^2$. A bijeção $Z(2j)=j$, $Z(2j+1)=-j-1$ satisfaz $Z^{-1}(m)\\le2|m|+1$. Se $\\mathcal Q_H=\\{r:\\height(r)\\le H\\}$, então\n\\[\n |\\mathcal Q_H|\\le3H^2,\\qquad |\\mathcal Q_H|\\ge H^2/4\\quad(H\\text{ suficientemente grande}).\n\\]\nOs postos de elementos de $\\mathcal Q_H$ em $Q$ e $Q^*$ são menores que $3H^2$.",
+    "sha256_enunciado": "a2188429c868594ebc5c8c2ecdde28b5ae714d74942d8bde2e037fc1210504c0",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.cantorPair_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 77,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.cantorPair_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 81,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Zenum_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 111,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Zinv_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 118,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.card_QH_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 191,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.card_QH_ge",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 320,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.rank_lt_three_sq",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "linha_lean": 536,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Indexing.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.2.1",
+    "originais_77": [],
+    "rotulo_volume": "map:artigo_2:2.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 26,
+    "pagina_volume": 37
+  },
+  {
+    "id": "artigo_2:2.2",
+    "documento": "artigo_2",
+    "numero": "2.2",
+    "tipo": "definicao",
+    "titulo": "átomos e montagens",
+    "secao": 2,
+    "titulo_secao": "Biblioteca racional e preliminares",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 147,
+    "rotulos_tex": [
+      "def:assembly",
+      "thm:dictionary",
+      "lem:cell-recovery"
+    ],
+    "enunciado_tex": "\\label{def:assembly}\\label{thm:dictionary}\\label{lem:cell-recovery}\nA biblioteca $\\Library$ consiste nos segmentos\n\\[\n \\ell(x)=y_0+s(x-x_{k,m}),\\qquad x\\in J_{k,m},\\quad y_0\\in\\mathbb Q,\\ s\\in\\Qstar.\n\\]\nSeu endereço é $\\Gamma^{-1}(\\ell)=\\pi(\\pi(k,Z^{-1}(m)),\\pi(Q^{-1}(y_0),(Q^*)^{-1}(s)))$. A interface $(a,b,[c,d])$ transmite a reta $a+bx$ e sua imagem no suporte. Como $b=s\\ne0$, a pré-imagem de $[c,d]$ recupera a célula. O comprimento e o extremo esquerdo recuperam $k,m$; a reta recupera $y_0,s$. Logo o endereço é único.\n\nUma montagem em uma raiz diádica $K$ é uma função contínua obtida por átomos nas folhas de uma árvore binária diádica cheia e finita. Denote por $\\Aclass(K)$ a classe dessas funções. A convenção de posse é semiaberta à direita, exceto na folha que contém o extremo direito de $K$.",
+    "sha256_enunciado": "5d33fd1b2c5a1c628a21241a86073ee68d2ea888f960356b3eecac6eb6641285",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Atom",
+        "tipo": "structure",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 17,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Atom.interface_injective",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 115,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Atom.addr_injective",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 178,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.LTree.WF",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Trees.lean",
+        "linha_lean": 98,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Trees.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.2.2",
+    "originais_77": [],
+    "rotulo_volume": "map:artigo_2:2.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 43,
+    "pagina_volume": 37
+  },
+  {
+    "id": "artigo_2:2.3",
+    "documento": "artigo_2",
+    "numero": "2.3",
+    "tipo": "proposicao",
+    "titulo": "densidade, interpolação e forma ReLU",
+    "secao": 2,
+    "titulo_secao": "Biblioteca racional e preliminares",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 157,
+    "rotulos_tex": [
+      "prop:preliminary-facts",
+      "eq:interpolation-remainder",
+      "eq:assembly-relu"
+    ],
+    "enunciado_tex": "\\label{prop:preliminary-facts}\nAs montagens são densas em $C(K)$. Se $P_Jf$ interpola $f$ nos extremos de $J$ e $f\\in C^2(J)$, então\n\\begin{equation}\n \\|f-P_Jf\\|_{\\infty,J}\\le\\frac{|J|^2}{8}\\|f''\\|_{\\infty,J}.\n \\label{eq:interpolation-remainder}\n\\end{equation}\nPara uma montagem com nós $t_0<\\cdots<t_N$ e inclinações $s_j$, vale, com $\\rho(z)=\\max\\{0,z\\}$,\n\\begin{equation}\n g(x)=g(t_0)+s_0(x-t_0)+\\sum_{j=1}^{N-1}(s_j-s_{j-1})\\rho(x-t_j).\n \\label{eq:assembly-relu}\n\\end{equation}",
+    "sha256_enunciado": "25fecece1f504b3659790e364ec46144480180b5e561cd728bdb3d442eeef5f2",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Cota de interpolação provada com `ContDiffOn ℝ 2 f (Icc a b)` e `derivWithin`, via extensão C² portada da Fase 3 (`Pendencias/Extensao.lean`). Densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.assemblies_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Uniform.lean",
+        "linha_lean": 231,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Uniform.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.interp_remainder_C2",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interp.lean",
+        "linha_lean": 126,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interp.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.LTree.eval_relu_form",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Trees.lean",
+        "linha_lean": 392,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Trees.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.interp_remainder_C2On",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Interpolacao.lean",
+        "linha_lean": 20,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Interpolacao.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.2.3",
+    "originais_77": [],
+    "rotulo_volume": "map:artigo_2:2.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 54,
+    "pagina_volume": 37
+  },
+  {
+    "id": "artigo_2:3.1",
+    "documento": "artigo_2",
+    "numero": "3.1",
+    "tipo": "teorema",
+    "titulo": "cota polinomial do endereço",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 187,
+    "rotulos_tex": [
+      "thm:index-bound",
+      "eq:index-bound"
+    ],
+    "enunciado_tex": "\\label{thm:index-bound}\nO único endereço $n$ do átomo satisfaz\n\\begin{equation}\n n=O(H^8),\\qquad \\log_2(n+1)=O(\\log H).\n \\label{eq:index-bound}\n\\end{equation}\nAs constantes são universais para a enumeração fixada.",
+    "sha256_enunciado": "a3408fb3d6276c48c5de4d6391296e3632973f94c6b601371b9c1f748e8fe8dd",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.index_bound",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 48,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.1",
+    "originais_77": [
+      "8.1"
+    ],
+    "rotulo_volume": "map:artigo_2:3.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 97,
+    "pagina_volume": 38
+  },
+  {
+    "id": "artigo_2:3.2",
+    "documento": "artigo_2",
+    "numero": "3.2",
+    "tipo": "lema",
+    "titulo": "cardinalidade das cascas de altura",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 212,
+    "rotulos_tex": [
+      "lem:atom-count",
+      "eq:atom-count-upper",
+      "eq:atom-count"
+    ],
+    "enunciado_tex": "\\label{lem:atom-count}\nPara todo $H\\ge2$,\n\\begin{equation}\n |\\Library_H|\\le18H^6.\n \\label{eq:atom-count-upper}\n\\end{equation}\nAlém disso, existem uma constante universal $c_\\Library>0$ e $H_1\\ge2$ tais\nque, para todo $H\\ge H_1$,\n\\begin{equation}\n |\\Library_H|\\ge c_\\Library H^6.\n \\label{eq:atom-count}\n\\end{equation}\nEm particular, $|\\Library_H|=\\Theta(H^6)$.",
+    "sha256_enunciado": "89f4f9ca38d6934d33393c56df50918b8c2514d70633c23fe6521598277511ab",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.card_LH_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 239,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.card_LH_ge",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 264,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.card_LH_theta",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "linha_lean": 272,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Atoms.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.2",
+    "originais_77": [
+      "8.2"
+    ],
+    "rotulo_volume": "map:artigo_2:3.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 123,
+    "pagina_volume": 39
+  },
+  {
+    "id": "artigo_2:3.3",
+    "documento": "artigo_2",
+    "numero": "3.3",
+    "tipo": "proposicao",
+    "titulo": "ordem exata do pior endereço aritmético",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 263,
+    "rotulos_tex": [
+      "prop:gamma-exact-order",
+      "eq:gamma-exact-order"
+    ],
+    "enunciado_tex": "\\label{prop:gamma-exact-order}\nSe\n\\[\n M_\\Gamma(H):=\\max_{a\\in\\Library_H}\\Gamma^{-1}(a),\n\\]\nentão\n\\begin{equation}\n M_\\Gamma(H)=\\Theta(H^8).\n \\label{eq:gamma-exact-order}\n\\end{equation}\nConsequentemente, o comprimento da maior palavra do gerador aritmético sobre\n$\\Library_H$ é $8\\log_2H+O(1)$ bits.",
+    "sha256_enunciado": "872d5f76d4533a4018eaa7b23856519e1e62f17372fc8e047014c2dd716dcfa1",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.MGamma_theta",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 137,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.MGamma_bits",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 148,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.3",
+    "originais_77": [
+      "8.3"
+    ],
+    "rotulo_volume": "map:artigo_2:3.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 175,
+    "pagina_volume": 39
+  },
+  {
+    "id": "artigo_2:3.4",
+    "documento": "artigo_2",
+    "numero": "3.4",
+    "tipo": "teorema",
+    "titulo": "cota minimax relativa ao calibre",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 303,
+    "rotulos_tex": [
+      "thm:address-lower",
+      "eq:address-pigeonhole",
+      "eq:address-lower"
+    ],
+    "enunciado_tex": "\\label{thm:address-lower}\nSeja $A:\\Library\\to\\Nzero$ uma aplicação injetiva qualquer. Para todo $H\\ge2$,\n\\begin{equation}\n \\max_{a\\in\\Library_H}A(a)\\ge |\\Library_H|-1.\n \\label{eq:address-pigeonhole}\n\\end{equation}\nConsequentemente, para todo $H\\ge H_1$, existe um átomo de altura no máximo\n$H$ com\n\\begin{equation}\n A(\\text{átomo})\\ \\ge\\ c_\\Library H^6-1,\n \\qquad\\text{logo}\\qquad\n \\log_2\\bigl(A(\\text{átomo})+1\\bigr)\\ \\ge\\ 6\\log_2H-O(1).\n \\label{eq:address-lower}\n\\end{equation}\nEm particular, nenhum esquema de endereçamento injetivo, canônico ou não,\npode usar $o(\\log H)$ bits no pior caso sobre $\\Library_H$. O expoente $6$ é\no expoente minimax para a exaustão determinada por \\eqref{eq:atom-height}.",
+    "sha256_enunciado": "a7cf7ca4804908e62edd256bd8a3edf4c67f185e1b4d65856d01a62cd94594df",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.address_lower",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 203,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.4",
+    "originais_77": [
+      "8.4"
+    ],
+    "rotulo_volume": "map:artigo_2:3.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 216,
+    "pagina_volume": 40
+  },
+  {
+    "id": "artigo_2:3.5",
+    "documento": "artigo_2",
+    "numero": "3.5",
+    "tipo": "observacao",
+    "titulo": "",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 331,
+    "rotulos_tex": [],
+    "enunciado_tex": "O argumento é puramente de contagem e não usa nenhuma propriedade de $\\Gamma$. Ele vale igualmente para endereçamentos que dependam de tabelas, de estado ou de escolhas arbitrárias. Combinado com a \\cref{prop:gamma-exact-order}, mostra que o gerador aritmético $\\Gamma$ usa, no pior caso, $8\\log_2H+O(1)$ bits, enquanto o limite minimax é $6\\log_2H+O(1)$. Logo a razão assintótica entre os comprimentos máximos das palavras é $8/6=4/3$.",
+    "sha256_enunciado": "52b28cd624eb2a00181fa2f11b01c87e243e21f1360e21a05fd42fe557fef6bf",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.3.5",
+    "originais_77": [
+      "8.5"
+    ],
+    "rotulo_volume": "map:artigo_2:3.5",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 245,
+    "pagina_volume": 40
+  },
+  {
+    "id": "artigo_2:3.6",
+    "documento": "artigo_2",
+    "numero": "3.6",
+    "tipo": "definicao",
+    "titulo": "enumeração por altura da biblioteca",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 337,
+    "rotulos_tex": [
+      "def:sharp"
+    ],
+    "enunciado_tex": "\\label{def:sharp}\nPara $H\\ge2$, a casca $\\Library_H\\setminus\\Library_{H-1}$ é finita e não vazia. Ordene $\\Library$ listando as cascas em ordem crescente de $H$ e, dentro de cada casca, ordenando as quádruplas $(k,m,y_0,s)$ lexicograficamente por $\\bigl(k,\\ Z^{-1}(m),\\ \\rank_Q(y_0),\\ \\rank_{Q^*}(s)\\bigr)$, onde $\\rank$ denota o posto nas enumerações \\eqref{eq:q-enums}. A bijeção resultante é denotada $\\Gamma^\\sharp:\\Nzero\\to\\Library$, e $n^\\sharp$ é o endereço de um átomo nessa ordem.",
+    "sha256_enunciado": "ca4e03cd3a94bc122434145172b1436e456c5f6f8ccac1440125962e318364c6",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.nSharp",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 245,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.GammaSharp",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 279,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.6",
+    "originais_77": [
+      "8.6"
+    ],
+    "rotulo_volume": "map:artigo_2:3.6",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 252,
+    "pagina_volume": 40
+  },
+  {
+    "id": "artigo_2:3.7",
+    "documento": "artigo_2",
+    "numero": "3.7",
+    "tipo": "teorema",
+    "titulo": "endereço minimax exato para a exaustão",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 341,
+    "rotulos_tex": [
+      "thm:sharp-optimal",
+      "eq:sharp-upper",
+      "eq:sharp-minimax"
+    ],
+    "enunciado_tex": "\\label{thm:sharp-optimal}\nA aplicação $\\Gamma^\\sharp$ é uma bijeção de $\\Nzero$ sobre $\\Library$, computável nos dois sentidos, e para todo $H\\ge2$\n\\begin{equation}\n \\max_{a\\in\\Library_H}n^\\sharp(a)=|\\Library_H|-1\\ \\le\\ 18H^6-1 .\n \\label{eq:sharp-upper}\n\\end{equation}\nAlém disso, para \\emph{qualquer} endereçamento injetivo $A:\\Library\\to\\Nzero$,\n\\begin{equation}\n \\max_{a\\in\\Library_H}A(a)\\ \\ge\\ |\\Library_H|-1 .\n \\label{eq:sharp-minimax}\n\\end{equation}\nLogo $\\Gamma^\\sharp$ realiza, com igualdade e para todo $H$, o mínimo possível\ndo maior índice no pior caso sobre $\\Library_H$; em particular esse pior\níndice é $\\Theta(H^6)$ e seu comprimento binário é minimax-ótimo para o\ncalibre \\eqref{eq:atom-height}.",
+    "sha256_enunciado": "ed3b7433c3a860686793ebb27dffe2bc052f21f17a730d1779f56fc9112c6216",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.sharp_optimal",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "linha_lean": 293,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Addresses.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.7",
+    "originais_77": [
+      "8.7"
+    ],
+    "rotulo_volume": "map:artigo_2:3.7",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 257,
+    "pagina_volume": 40
+  },
+  {
+    "id": "artigo_2:3.8",
+    "documento": "artigo_2",
+    "numero": "3.8",
+    "tipo": "observacao",
+    "titulo": "qual endereço usar",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 362,
+    "rotulos_tex": [
+      "rem:which-address"
+    ],
+    "enunciado_tex": "\\label{rem:which-address}\nAs duas enumerações resolvem problemas diferentes e ambas são mantidas neste trabalho.\n\\begin{itemize}[leftmargin=1.6em]\n \\item A etapa de Cantor de $\\Gamma$ tem inversa fechada: três raízes quadradas inteiras recuperam $(k,\\mu,r,t)$. A recuperação de $Q(r)$ e $Q^*(t)$ utiliza os decodificadores das enumerações racionais. O pior índice tem expoente $8$.\n \\item $\\Gamma^\\sharp$ atinge o mínimo exato de \\eqref{eq:sharp-minimax}, logo o expoente minimax $6$ para o maior índice sob o calibre fixado, mas sua inversa requer calcular cardinalidades de cascas, isto é, somas de totientes truncadas; o custo é polinomial em $H$, não constante.\n\\end{itemize}\nEm bits, os dois esquemas coincidem em ordem: $\\log_2(n+1)=\\Theta(\\log H)$ em ambos, e o \\cref{thm:address-lower} mostra que nenhum outro esquema faz melhor no pior caso sobre $\\Library_H$. A diferença é uma constante multiplicativa $4/3$ no comprimento da palavra.",
+    "sha256_enunciado": "b3ca2bcf37022bc29cc055ac13da77bc28fb14ae0fbaa1fef3b3e1084d31f4ee",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.3.8",
+    "originais_77": [
+      "8.8"
+    ],
+    "rotulo_volume": "map:artigo_2:3.8",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 279,
+    "pagina_volume": 41
+  },
+  {
+    "id": "artigo_2:3.9",
+    "documento": "artigo_2",
+    "numero": "3.9",
+    "tipo": "teorema",
+    "titulo": "serialização condicionada de montagens",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 389,
+    "rotulos_tex": [
+      "thm:assembly-serialization",
+      "eq:assembly-bitrate"
+    ],
+    "enunciado_tex": "\\label{thm:assembly-serialization}\nFixe, como informação compartilhada, o domínio $K$, a raiz diádica inicial,\na convenção de fronteira e a enumeração usada. Seja $g\\in\\Aclass(K)$ descrita\npor uma árvore diádica com $N$ folhas, e seja $H\\ge2$ a maior altura de seus\nátomos. Existe um fluxo de bits autodelimitado, decodificável sem conhecer\npreviamente $N$ ou $H$, com comprimento\n\\begin{align}\n L(g\\mid K)\n &\\le \\bigl(2\\lfloor\\log_2N\\rfloor+1\\bigr)\n      +\\bigl(2\\lfloor\\log_2H\\rfloor+1\\bigr)\n      +N\\left\\lceil\\log_2(18H^6)\\right\\rceil \\notag\\\\\n &=N\\bigl(6\\log_2H+O(1)\\bigr)+O(\\log N+\\log H)\n \\label{eq:assembly-bitrate}\n\\end{align}\nquando os átomos são transmitidos por $\\Gamma^\\sharp$. Com o gerador\naritmético $\\Gamma$, o termo por folha é $8\\log_2H+O(1)$ bits.",
+    "sha256_enunciado": "017c1acece9f55dc3e40a39a469435968bd73a9cf550b94a806549a12e16c3bb",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.assembly_serialization",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Serialization.lean",
+        "linha_lean": 184,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Serialization.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.assembly_serialization_Gamma",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Serialization.lean",
+        "linha_lean": 207,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Serialization.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.9",
+    "originais_77": [
+      "8.9"
+    ],
+    "rotulo_volume": "map:artigo_2:3.9",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 306,
+    "pagina_volume": 41
+  },
+  {
+    "id": "artigo_2:3.10",
+    "documento": "artigo_2",
+    "numero": "3.10",
+    "tipo": "observacao",
+    "titulo": "",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 423,
+    "rotulos_tex": [],
+    "enunciado_tex": "Sem o domínio e a convenção de fronteira compartilhados, a expressão\n``descrição completa'' seria incorreta para um intervalo $K$ com extremos\nreais arbitrários: esses dados têm custo próprio e não são codificáveis, em\ngeral, por uma palavra finita. O \\cref{thm:assembly-serialization} explicita\nprecisamente a informação lateral sob a qual a taxa de bits é afirmada.",
+    "sha256_enunciado": "8fef1912f45512c1edd1de044d54aaf9427eccd73ebe19aca7cb10e654240260",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.3.10",
+    "originais_77": [
+      "8.10"
+    ],
+    "rotulo_volume": "map:artigo_2:3.10",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 341,
+    "pagina_volume": 42
+  },
+  {
+    "id": "artigo_2:3.11",
+    "documento": "artigo_2",
+    "numero": "3.11",
+    "tipo": "lema",
+    "titulo": "cálculo elementar de alturas",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 460,
+    "rotulos_tex": [
+      "lem:height-arithmetic",
+      "eq:height-arithmetic",
+      "eq:slope-jump-height",
+      "eq:slope-knot-height",
+      "eq:intercept-height"
+    ],
+    "enunciado_tex": "\\label{lem:height-arithmetic}\nPara quaisquer $r,s\\in\\mathbb Q$,\n\\begin{equation}\n \\height(r\\pm s)\\le2\\height(r)\\height(s),\n \\qquad\n \\height(rs)\\le\\height(r)\\height(s).\n \\label{eq:height-arithmetic}\n\\end{equation}\nEm particular, se ambos têm altura no máximo $H$, as cotas respectivas são\n$2H^2$ e $H^2$.\nPara uma montagem de altura atômica máxima $H$, todo nó interno\n$t_j=u_j2^{-k_j}$ satisfaz $|u_j|\\le H$ e $k_j\\le H$ em sua forma reduzida;\nalém disso,\n\\begin{align}\n \\height(s_j-s_{j-1})&\\le2H^2,\\label{eq:slope-jump-height}\\\\\n \\height(s_jt_j)&\\le H2^H,\\label{eq:slope-knot-height}\\\\\n \\height\\bigl(g(t_0)-s_0t_0\\bigr)&\\le2^{H+1}H^2.\n \\label{eq:intercept-height}\n\\end{align}",
+    "sha256_enunciado": "62e0e2c19fadac90b55ad7b754ed54fe5a2596faebffd624f36e5c8927df34d3",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.assembly_height_arith",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Formats.lean",
+        "linha_lean": 160,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Formats.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.11",
+    "originais_77": [
+      "8.11"
+    ],
+    "rotulo_volume": "map:artigo_2:3.11",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 379,
+    "pagina_volume": 42
+  },
+  {
+    "id": "artigo_2:3.12",
+    "documento": "artigo_2",
+    "numero": "3.12",
+    "tipo": "teorema",
+    "titulo": "comparação rigorosa dos formatos",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 516,
+    "rotulos_tex": [
+      "thm:coding-formats",
+      "eq:coding-format-orders",
+      "eq:coding-gap-family"
+    ],
+    "enunciado_tex": "\\label{thm:coding-formats}\nOs três fluxos acima são prefix-free e possuem decodificadores exatos. Para\ntoda montagem com $N$ folhas e altura atômica máxima $H\\ge2$,\n\\begin{equation}\n L_{\\rm atom}(g)=O(N\\log H),\\qquad\n L_{\\rm ReLU,str}(g)=O(N\\log H),\\qquad\n L_{\\rm ReLU,rat}(g)=O(NH),\n \\label{eq:coding-format-orders}\n\\end{equation}\ncom constantes universais. A última ordem é atingida conjuntamente em $N$ e\n$H$: para todo $H\\ge2$ e todo $N$ par com $2\\le N\\le H$, considere as folhas\n$J_{H-1,j}$, $0\\le j<N$, com valores centrais zero e inclinações $(-1)^j$.\nEssa montagem contínua tem altura $H$, e\n\\begin{equation}\n L_{\\rm atom}=O(N\\log H),\\qquad\n L_{\\rm ReLU,str}=O(N\\log H),\\qquad\n L_{\\rm ReLU,rat}=\\Omega(NH).\n \\label{eq:coding-gap-family}\n\\end{equation}\nAssim, a equivalência funcional montagem--ReLU preserva a ordem de bits sob o\nformato estrutural fixado, mas não sob a expansão racional ingênua dos\ndiádicos.",
+    "sha256_enunciado": "ec4241d9a4d6880958b799b43fe2dc27e1f69b7a0b0af9cc3745879b6ada5f7a",
+    "status": "formalizado_compilado",
+    "observacao": "coding_gap_family prova uma cadeia para todo N par. O enunciado deste volume usa N=2^r e raiz J(H-1-r,0); a arvore em raiz unica para N=2^r continua nao formalizada em Lean (H=N=6 produz suporte [0,3/16], que nao e uma celula diadica unica). [11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.coding_formats_decoders",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Formats.lean",
+        "linha_lean": 270,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Formats.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.coding_format_orders",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Formats.lean",
+        "linha_lean": 421,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Formats.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.coding_gap_family",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Formats.lean",
+        "linha_lean": 526,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Formats.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.coding_formats_comparison",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Formatos.lean",
+        "linha_lean": 71,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Formatos.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.12",
+    "originais_77": [
+      "8.12"
+    ],
+    "rotulo_volume": "map:artigo_2:3.12",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 436,
+    "pagina_volume": 43
+  },
+  {
+    "id": "artigo_2:3.13",
+    "documento": "artigo_2",
+    "numero": "3.13",
+    "tipo": "definicao",
+    "titulo": "erro conjunto número--altura",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 584,
+    "rotulos_tex": [
+      "def:joint-error",
+      "eq:joint-error",
+      "eq:height-for-accuracy"
+    ],
+    "enunciado_tex": "\\label{def:joint-error}\nPara inteiros $N,H\\ge2$, seja $\\Aclass_{N,H}(K)$ o conjunto das funções\n$g\\in\\Aclass(K)$ que admitem uma representação como na\n\\cref{def:assembly} com no máximo $N$ folhas e com todos os átomos em\n$\\Library_H$. Defina\n\\begin{equation}\n E_{N,H}^{\\Library}(f)_\\infty\n :=\\inf_{g\\in\\Aclass_{N,H}(K)}\\|f-g\\|_{\\infty,K},\n \\qquad \\inf\\varnothing:=+\\infty.\n \\label{eq:joint-error}\n\\end{equation}\nQuando o conjunto abaixo não é vazio, ponha ainda\n\\begin{equation}\n H_{\\varepsilon,N}^{\\Library}(f)\n :=\\min\\{H\\ge2:E_{N,H}^{\\Library}(f)_\\infty\\le\\varepsilon\\}.\n \\label{eq:height-for-accuracy}\n\\end{equation}",
+    "sha256_enunciado": "e90b255f0793882534b9d5f698575f5d4bbbbaeb4e8612b470cde844d6c2339d",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.jointErr",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 30,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.heightFor",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 38,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.13",
+    "originais_77": [
+      "8.13"
+    ],
+    "rotulo_volume": "map:artigo_2:3.13",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 514,
+    "pagina_volume": 44
+  },
+  {
+    "id": "artigo_2:3.14",
+    "documento": "artigo_2",
+    "numero": "3.14",
+    "tipo": "proposicao",
+    "titulo": "monotonicidade dos dois orçamentos",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 610,
+    "rotulos_tex": [
+      "prop:joint-error-monotonicity",
+      "eq:joint-error-monotonicity"
+    ],
+    "enunciado_tex": "\\label{prop:joint-error-monotonicity}\nPara todo $f\\in C(K)$ e $N,H\\ge2$,\n\\begin{equation}\n E_{N+1,H}^{\\Library}(f)_\\infty\\le E_{N,H}^{\\Library}(f)_\\infty,\n \\qquad\n E_{N,H+1}^{\\Library}(f)_\\infty\\le E_{N,H}^{\\Library}(f)_\\infty.\n \\label{eq:joint-error-monotonicity}\n\\end{equation}\nSe\n\\[\n E_N^{\\Library}(f)_\\infty\n :=\\inf\\{\\|f-g\\|_{\\infty,K}:g\\in\\Aclass(K)\n       \\text{ admite no máximo $N$ folhas}\\},\n\\]\nentão $E_{N,H}^{\\Library}(f)_\\infty\\downarrow\nE_N^{\\Library}(f)_\\infty$ quando $H\\to\\infty$.",
+    "sha256_enunciado": "59637c1c92f3c2de778e167741a60b74030e7fd9cf2a0ae2ee6d1abbb59cca0e",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.jointErr_succ_N_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 55,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.jointErr_succ_H_le",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 59,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.jointErr_tendsto",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 72,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.14",
+    "originais_77": [
+      "8.14"
+    ],
+    "rotulo_volume": "map:artigo_2:3.14",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 541,
+    "pagina_volume": 44
+  },
+  {
+    "id": "artigo_2:3.15",
+    "documento": "artigo_2",
+    "numero": "3.15",
+    "tipo": "lema",
+    "titulo": "controle uniforme da primeira derivada",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 646,
+    "rotulos_tex": [
+      "lem:derivative-control",
+      "eq:derivative-constant"
+    ],
+    "enunciado_tex": "\\label{lem:derivative-control}\nSe $f\\in\\mathcal F_{R,M}$ e\n\\begin{equation}\n C_0:=4R+\\frac M2,\n \\label{eq:derivative-constant}\n\\end{equation}\nentão $\\|f'\\|_\\infty\\le C_0$.",
+    "sha256_enunciado": "e77f07ec9b7fbcd39ce505bc647fc6b78ffa654e9cabd0d0b98f95d9bbeafebe",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; |f′| ≤ 4R+M/2 com f′ unilateral. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.derivative_control",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interp.lean",
+        "linha_lean": 231,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interp.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.derivative_control_Icc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 129,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.FRM_subset_FRMIcc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 56,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.extF_mem_FRM",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 59,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.15",
+    "originais_77": [
+      "8.15"
+    ],
+    "rotulo_volume": "map:artigo_2:3.15",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 578,
+    "pagina_volume": 44
+  },
+  {
+    "id": "artigo_2:3.16",
+    "documento": "artigo_2",
+    "numero": "3.16",
+    "tipo": "teorema",
+    "titulo": "controle simultâneo de erro, folhas, altura e bits",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 667,
+    "rotulos_tex": [
+      "thm:joint-budget",
+      "eq:joint-height-constant",
+      "eq:joint-dyadic-error",
+      "eq:joint-dyadic-height",
+      "eq:joint-dyadic-bits",
+      "eq:joint-all-N"
+    ],
+    "enunciado_tex": "\\label{thm:joint-budget}\nDefina\n\\begin{equation}\n C_H:=\\max\\{4(R+1),\\ 2(C_0+1)\\}.\n \\label{eq:joint-height-constant}\n\\end{equation}\nPara toda potência diádica $n=2^r\\ge2$ e todo\n$f\\in\\mathcal F_{R,M}$, existe uma montagem $g_n$ com exatamente $n$\nfolhas tal que\n\\begin{align}\n \\|f-g_n\\|_\\infty\n &\\le\\frac{M+4}{8n^2},\n \\label{eq:joint-dyadic-error}\\\\\n \\height_{\\max}(g_n)&\\le C_Hn^2.\n \\label{eq:joint-dyadic-height}\n\\end{align}\nNos três formatos do \\cref{thm:coding-formats}, a mesma montagem satisfaz\n\\begin{equation}\n L_{\\rm atom}(g_n),\\ L_{\\rm ReLU,str}(g_n),\\\n L_{\\rm ReLU,rat}(g_n)=O_{R,M}(n\\log(2n)).\n \\label{eq:joint-dyadic-bits}\n\\end{equation}\nConsequentemente, para todo inteiro $N\\ge2$,\n\\begin{equation}\n E_{N,\\lceil C_HN^2\\rceil}^{\\Library}(f)_\\infty\n <\\frac{M+4}{2N^2}.\n \\label{eq:joint-all-N}\n\\end{equation}\nA construção é determinística: quando $f(t_j)$ é equidistante dos dois\npontos admissíveis da grade alternada, escolhe-se o ponto menor, ou,\nequivalentemente no denominador comum de \\eqref{eq:joint-common-denominator},\no menor numerador $b_j$.",
+    "sha256_enunciado": "c30c3a433ca2b439498261445657ee2b6105136090d73ee297327f967c88e705",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; mesma árvore determinística `uniformTree (jvals f r)` (só amostra f em [0,1]) e consequência para todo N ≥ 2. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.joint_budget",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 424,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.joint_all_N",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 509,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.joint_budget_Icc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 137,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.joint_all_N_Icc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 153,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.16",
+    "originais_77": [
+      "8.16"
+    ],
+    "rotulo_volume": "map:artigo_2:3.16",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 600,
+    "pagina_volume": 44
+  },
+  {
+    "id": "artigo_2:3.17",
+    "documento": "artigo_2",
+    "numero": "3.17",
+    "tipo": "corolario",
+    "titulo": "altura suficiente para precisão prescrita",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 781,
+    "rotulos_tex": [
+      "cor:height-for-epsilon",
+      "eq:epsilon-schedule",
+      "eq:epsilon-joint-error",
+      "eq:epsilon-joint-height",
+      "eq:epsilon-joint-bits"
+    ],
+    "enunciado_tex": "\\label{cor:height-for-epsilon}\nPara $\\varepsilon>0$, seja\n\\begin{equation}\n n_\\varepsilon\n =2^{\\left\\lceil\\log_2\\max\\left\\{2,\n        \\sqrt{\\frac{M+4}{8\\varepsilon}}\\right\\}\\right\\rceil},\n \\qquad\n H_\\varepsilon=\\lceil C_Hn_\\varepsilon^2\\rceil.\n \\label{eq:epsilon-schedule}\n\\end{equation}\nEntão, uniformemente para $f\\in\\mathcal F_{R,M}$,\n\\begin{align}\n E_{n_\\varepsilon,H_\\varepsilon}^{\\Library}(f)_\\infty\n &\\le\\varepsilon,\\label{eq:epsilon-joint-error}\\\\\n n_\\varepsilon&=O_{R,M}(\\varepsilon^{-1/2}),\n &H_\\varepsilon&=O_{R,M}(\\varepsilon^{-1}),\n \\label{eq:epsilon-joint-height}\\\\\n L_{\\rm atom},\\ L_{\\rm ReLU,str},\\ L_{\\rm ReLU,rat}\n &=O_{R,M}\\!\\left(\\varepsilon^{-1/2}\n                   \\log\\frac{2}{\\varepsilon}\\right).\n \\label{eq:epsilon-joint-bits}\n\\end{align}\nEm particular,\n$H_{\\varepsilon,n_\\varepsilon}^{\\Library}(f)\\le H_\\varepsilon$.",
+    "sha256_enunciado": "b9c2caeb04b710f73a7100142a427e3b85b7bcb85ff079bccd72a6228ff9ee80",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; n_ε, H_ε inalterados; `jointErr`, `heightFor` e `supDist` só dependem de f em [0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.height_for_epsilon",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "linha_lean": 663,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/JointBudget.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.height_for_epsilon_Icc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 159,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.17",
+    "originais_77": [
+      "8.17"
+    ],
+    "rotulo_volume": "map:artigo_2:3.17",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 715,
+    "pagina_volume": 46
+  },
+  {
+    "id": "artigo_2:3.18",
+    "documento": "artigo_2",
+    "numero": "3.18",
+    "tipo": "teorema",
+    "titulo": "entropia e codebook explícito",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 859,
+    "rotulos_tex": [
+      "thm:entropy",
+      "eq:entropy-order",
+      "eq:code-length"
+    ],
+    "enunciado_tex": "\\label{thm:entropy}\nExistem $\\varepsilon_0,c,C,C_1>0$, dependentes apenas de $R$ e $M$, tais que, para $0<\\varepsilon<\\varepsilon_0$,\n\\begin{equation}\n c\\varepsilon^{-1/2}\n \\le\\mathcal{H}_\\varepsilon(\\mathcal{F}_{R,M})\n \\le C\\varepsilon^{-1/2}.\n \\label{eq:entropy-order}\n\\end{equation}\nExiste também um codebook finito $\\mathcal{C}_\\varepsilon\\subset\\Aclass([0,1])$, composto somente por montagens de átomos de $\\Library$, com distorção no máximo $\\varepsilon$. Quando o codebook e seu decodificador são informação compartilhada, o comprimento de seu índice global de comprimento fixo é\n\\begin{equation}\n L_\\varepsilon^{\\mathrm{global}}(\\mathcal C_\\varepsilon)\n :=\\left\\lceil\\log_2|\\mathcal{C}_\\varepsilon|\\right\\rceil\n \\le C_1\\varepsilon^{-1/2}.\n \\label{eq:code-length}\n\\end{equation}\nLogo esse codebook atinge em ordem a entropia métrica da classe em cardinalidade e em bits de índice global.",
+    "sha256_enunciado": "ab6daab43d42af4ba856f0ea5a9cba01d24c87a435e2934067e674c0585c2798",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; coberturas de FRMIcc e FRM coincidem (`isCover_iff`), logo `entropyH ε (FRMIcc R M) = entropyH ε (FRM R M)`; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.entropy_codebook",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Entropy.lean",
+        "linha_lean": 46,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Entropy.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.entropy_codebook_Icc",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 178,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.18",
+    "originais_77": [
+      "8.18"
+    ],
+    "rotulo_volume": "map:artigo_2:3.18",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 794,
+    "pagina_volume": 47
+  },
+  {
+    "id": "artigo_2:3.19",
+    "documento": "artigo_2",
+    "numero": "3.19",
+    "tipo": "definicao",
+    "titulo": "recursos de um codec",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 969,
+    "rotulos_tex": [
+      "def:coding-resources"
+    ],
+    "enunciado_tex": "\\label{def:coding-resources}\nUm $\\varepsilon$-codec para $\\mathcal F$ é uma tripla\n$(\\mathcal W,\\mathsf{Enc},\\mathsf{Dec})$, na qual $\\mathcal W$ é um conjunto\nfinito de palavras binárias, $\\mathsf{Enc}:\\mathcal F\\to\\mathcal W$ e\n$\\mathsf{Dec}:\\mathcal W\\to X$ satisfazem\n\\[\n \\sup_{f\\in\\mathcal F}d\\bigl(f,\\mathsf{Dec}(\\mathsf{Enc}(f))\\bigr)\n \\le\\varepsilon.\n\\]\nO decodificador é compartilhado e seu armazenamento não é contado no\ncomprimento das palavras. Distinguem-se:\n\\begin{align*}\n \\mathcal H_\\varepsilon(\\mathcal F)\n  &=\\log_2N_\\varepsilon(\\mathcal F),\n  &&\\text{entropia métrica;}\\\\\n L_\\varepsilon^{\\mathrm{dec}}(\\mathcal F)\n  &=\\inf_{\\text{$\\varepsilon$-codecs prefix-free}}\n    \\max_{w\\in\\mathcal W}|w|,\n  &&\\text{menor comprimento máximo decodificável;}\\\\\n L_\\varepsilon^{\\mathrm{global}}(\\mathcal C_\\varepsilon)\n  &=\\left\\lceil\\log_2|\\mathcal C_\\varepsilon|\\right\\rceil,\n  &&\\text{índice fixo em um codebook compartilhado.}\n\\end{align*}\nPara um codebook de montagens e uma convenção de serialização fixada, ponha\n\\begin{align*}\n L^{\\mathrm{folhas}}(g\\mid K)\n   &=L_{\\mathrm{arv}}(g\\mid K)\n     +\\sum_{J\\in\\Lambda(g)}L_{\\mathrm{addr}}(g|_J),\\\\\n L_\\varepsilon^{\\mathrm{folhas}}(\\mathcal C_\\varepsilon\\mid K)\n   &=\\max_{g\\in\\mathcal C_\\varepsilon}L^{\\mathrm{folhas}}(g\\mid K).\n\\end{align*}\nPor fim, depois de fixados um modelo de computação $\\mathfrak M$, uma\nrepresentação de entrada para $f$ e o codec, $T_\\varepsilon^{\\mathrm{enc}}$\né o custo de selecionar/produzir a palavra e $T_\\varepsilon^{\\mathrm{dec}}$ é\no custo de reconstruí-la. Sem essas três escolhas, os dois custos temporais\nnão são quantidades matematicamente definidas.",
+    "sha256_enunciado": "85f08132fa4f3716b3af4e94d6f0f9d9faaf4355425b63f9abf296198adb43c4",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.EpsCodec",
+        "tipo": "structure",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 21,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Ldec",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 35,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Lglobal",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 39,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Lfolhas",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 43,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.19",
+    "originais_77": [
+      "8.19"
+    ],
+    "rotulo_volume": "map:artigo_2:3.19",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 905,
+    "pagina_volume": 48
+  },
+  {
+    "id": "artigo_2:3.20",
+    "documento": "artigo_2",
+    "numero": "3.20",
+    "tipo": "proposicao",
+    "titulo": "limite informacional para representação decodificável",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1012,
+    "rotulos_tex": [
+      "prop:description-lower",
+      "eq:description-lower"
+    ],
+    "enunciado_tex": "\\label{prop:description-lower}\nTodo $\\varepsilon$-codec de comprimento fixo $\\ell$ para $\\mathcal F$ satisfaz\n\\begin{equation}\n \\ell\\ge\\left\\lceil\\mathcal H_\\varepsilon(\\mathcal F)\\right\\rceil.\n \\label{eq:description-lower}\n\\end{equation}\nA mesma desigualdade vale se $\\mathcal W$ é prefix-free e $\\ell$ é o maior\ncomprimento de palavra. Em particular,\n\\[\n L_\\varepsilon^{\\mathrm{dec}}(\\mathcal F)\n \\ge\\left\\lceil\\mathcal H_\\varepsilon(\\mathcal F)\\right\\rceil.\n\\]\nSob convenções que acrescentem ou removam apenas um cabeçalho fixo, a forma\ninvariante é $\\ell\\ge\\mathcal H_\\varepsilon(\\mathcal F)-O(1)$.",
+    "sha256_enunciado": "1095723f00887fc9d8244f548e87be28e9ec953423bf1dbca3e76b2a96365f7b",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.description_lower",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 118,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.complexity_chain",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "linha_lean": 180,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Codecs.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.20",
+    "originais_77": [
+      "8.20"
+    ],
+    "rotulo_volume": "map:artigo_2:3.20",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 949,
+    "pagina_volume": 49
+  },
+  {
+    "id": "artigo_2:3.21",
+    "documento": "artigo_2",
+    "numero": "3.21",
+    "tipo": "proposicao",
+    "titulo": "",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1073,
+    "rotulos_tex": [
+      "prop:no-minimizer"
+    ],
+    "enunciado_tex": "\\label{prop:no-minimizer}\nPara $x=1/4$ e $y=\\sqrt2$,\n\\[\n \\inf\\{|y-\\ell_n(x)|:n\\in\\Nzero,\\ x\\in I_n^x\\}=0,\n\\]\nmas nenhum átomo realiza o ínfimo.",
+    "sha256_enunciado": "455fc62783d4acc6d573b9bcb95f614270946608a7990f524451b8716b9cfe28",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.no_minimizer",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 22,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.21",
+    "originais_77": [
+      "8.21"
+    ],
+    "rotulo_volume": "map:artigo_2:3.21",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1011,
+    "pagina_volume": 50
+  },
+  {
+    "id": "artigo_2:3.22",
+    "documento": "artigo_2",
+    "numero": "3.22",
+    "tipo": "definicao",
+    "titulo": "catálogo truncado",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1101,
+    "rotulos_tex": [
+      "def:finite-catalog",
+      "eq:represented-catalog",
+      "eq:finite-catalog"
+    ],
+    "enunciado_tex": "\\label{def:finite-catalog}\nPara uma montagem representada, ponha\n\\[\n \\height_{\\max}(R)=\\max_{J\\in\\Lambda}\n \\max\\{2,k(J)+1,|m(J)|+1,\\height(y_{0,J}),\\height(s_J)\\}.\n\\]\nSe\n$H\\ge H_K:=\\max\\{2,k_0+1,|m_0|+1\\}$, defina\n\\begin{align}\n \\mathfrak R_{D,H}^{\\Library}(K)\n   &=\\{R=(\\Lambda,n):\\Lambda\\in\\mathfrak T_D(K),\\\n       \\height_{\\max}(R)\\le H\\},\\label{eq:represented-catalog}\\\\\n \\Sigma_{D,H}^{\\Library}(K)\n   &=\\{\\operatorname{Eval}(R):R\\in\n       \\mathfrak R_{D,H}^{\\Library}(K)\\}\\subset\\Aclass(K).\n \\label{eq:finite-catalog}\n\\end{align}\nRepresentações distintas que avaliam na mesma função correspondem, portanto,\na um único elemento de $\\Sigma_{D,H}^{\\Library}(K)$.",
+    "sha256_enunciado": "89e7907f1bee8ca0761de598a9fa651c068fcb0a78a0ebf60042b2c084547e50",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.RepCat",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 92,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.SigmaCat",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 107,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.22",
+    "originais_77": [
+      "8.22"
+    ],
+    "rotulo_volume": "map:artigo_2:3.22",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1040,
+    "pagina_volume": 50
+  },
+  {
+    "id": "artigo_2:3.23",
+    "documento": "artigo_2",
+    "numero": "3.23",
+    "tipo": "teorema",
+    "titulo": "finitude, existência e desempate canônico",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1131,
+    "rotulos_tex": [
+      "thm:finite-catalog-minimizer",
+      "eq:finite-catalog-bound",
+      "eq:finite-argmin"
+    ],
+    "enunciado_tex": "\\label{thm:finite-catalog-minimizer}\nO catálogo $\\Sigma_{D,H}^{\\Library}(K)$ é finito e não vazio. Mais\nprecisamente, se\n\\[\n T_0=1,\\qquad T_{d+1}=1+T_d^2,\n\\]\nentão\n\\begin{equation}\n 1\\le |\\Sigma_{D,H}^{\\Library}(K)|\n \\le |\\mathfrak R_{D,H}^{\\Library}(K)|\n \\le T_D|\\Library_H|^{2^D}<\\infty.\n \\label{eq:finite-catalog-bound}\n\\end{equation}\nConsequentemente, para qualquer funcional\n$\\mathcal J:\\Sigma_{D,H}^{\\Library}(K)\\to\\mathbb R$, existe\n\\begin{equation}\n g^\\star\\in\\argmin_{g\\in\\Sigma_{D,H}^{\\Library}(K)}\\mathcal J(g).\n \\label{eq:finite-argmin}\n\\end{equation}\nEntre todos os minimizadores, a regra do menor fluxo shortlex seleciona uma\núnica função e uma única representação canônica.",
+    "sha256_enunciado": "89b73f055fa469fdff6359752ed815fdf2b64631a7f95fead81f4bcf0e44ec9e",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.finite_catalog_minimizer",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 329,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.23",
+    "originais_77": [
+      "8.23"
+    ],
+    "rotulo_volume": "map:artigo_2:3.23",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1071,
+    "pagina_volume": 50
+  },
+  {
+    "id": "artigo_2:3.24",
+    "documento": "artigo_2",
+    "numero": "3.24",
+    "tipo": "proposicao",
+    "titulo": "consistência sob truncagem",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1172,
+    "rotulos_tex": [
+      "prop:catalog-consistency",
+      "eq:catalog-nesting"
+    ],
+    "enunciado_tex": "\\label{prop:catalog-consistency}\nSe $D\\le D'$ e $H\\le H'$, então\n\\begin{equation}\n \\Sigma_{D,H}^{\\Library}(K)\n \\subseteq\\Sigma_{D',H'}^{\\Library}(K).\n \\label{eq:catalog-nesting}\n\\end{equation}\nPara um funcional fixado na união dos catálogos, os valores mínimos são, por\nisso, não crescentes em $D$ e $H$. Se o funcional possui um minimizador global\nnessa união, o minimizador global de menor fluxo shortlex e sua representação\ncanônica pertencem a algum catálogo finito; a partir desse par de truncagens,\no seletor canônico estabiliza.",
+    "sha256_enunciado": "f35aaa44fff7fa6b6ebb456c58d0e1f6481b184ff410b646e8c781b9a808f48f",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.catalog_consistency",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 360,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.24",
+    "originais_77": [
+      "8.24"
+    ],
+    "rotulo_volume": "map:artigo_2:3.24",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1113,
+    "pagina_volume": 51
+  },
+  {
+    "id": "artigo_2:3.25",
+    "documento": "artigo_2",
+    "numero": "3.25",
+    "tipo": "algoritmo",
+    "titulo": "enumeração exata do catálogo",
+    "secao": 3,
+    "titulo_secao": "Endereços, entropia, descrição e busca",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1196,
+    "rotulos_tex": [
+      "alg:finite-enumeration"
+    ],
+    "enunciado_tex": "\\label{alg:finite-enumeration}\nPara parâmetros pequenos, gere recursivamente todas as formas de\n$\\mathfrak T_D(K)$; em cada folha, liste somente os átomos de $\\Library_H$ com\no suporte exigido; ao unir duas subárvores, descarte pares cujos valores na\nfronteira diferem. Reduza representações funcionalmente idênticas ao menor\nfluxo $\\operatorname{ser}_\\sharp$, avalie $\\mathcal J$ em aritmética racional\nexata e aplique o desempate shortlex.",
+    "sha256_enunciado": "406ab02e3e34679d0149fa73cb07afcb051405d7722badbce07972d86152b392",
+    "status": "formalizado_compilado",
+    "observacao": "A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata. [11/11/2026] Programa computável `gen`/`select`/`enumSelect`; = `RepCat` e devolve `canon` quando J é avaliado exatamente em ℚ. Testado com `#eval` (|𝓛₂| = 252; 42 e 102 representações para D = 0, 1, H = 2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.finite_catalog_minimizer",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "linha_lean": 329,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Catalog.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.gen_eq_RepCat",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Enumeracao.lean",
+        "linha_lean": 56,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Enumeracao.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.enumSelect_eq_canon",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Enumeracao.lean",
+        "linha_lean": 136,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Enumeracao.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.3.25",
+    "originais_77": [
+      "8.25"
+    ],
+    "rotulo_volume": "map:artigo_2:3.25",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1138,
+    "pagina_volume": 51
+  },
+  {
+    "id": "artigo_2:4.1",
+    "documento": "artigo_2",
+    "numero": "4.1",
+    "tipo": "definicao",
+    "titulo": "pares de fronteira admissíveis",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1298,
+    "rotulos_tex": [
+      "def:admissible-pairs",
+      "eq:pair-nonzero",
+      "eq:pair-arithmetic",
+      "eq:pair-geometry"
+    ],
+    "enunciado_tex": "\\label{def:admissible-pairs}\nPara $H\\ge2$, defina $\\Pairs_H(J)$ como o conjunto dos pares\n$(u,v)\\in\\mathbb Q^2$ que satisfazem\n\\begin{align}\n u&\\ne v,\\label{eq:pair-nonzero}\\\\\n \\max\\!\\left\\{\\height\\!\\left(\\frac{u+v}{2}\\right),\n \\height\\!\\left(2^k(v-u)\\right)\\right\\}&\\le H,\\label{eq:pair-arithmetic}\\\\\n k+1&\\le H,\\qquad |m|+1\\le H.\\label{eq:pair-geometry}\n\\end{align}",
+    "sha256_enunciado": "975e8c3fbb47c811d96ddc7781bcc83ccbc87d32b3f2d2539e849c007e421869",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.IsAdmPair",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 19,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.PH",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 27,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.4.1",
+    "originais_77": [
+      "9.1"
+    ],
+    "rotulo_volume": "map:artigo_2:4.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1241,
+    "pagina_volume": 52
+  },
+  {
+    "id": "artigo_2:4.2",
+    "documento": "artigo_2",
+    "numero": "4.2",
+    "tipo": "proposicao",
+    "titulo": "dicionário exato de fronteiras",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1310,
+    "rotulos_tex": [
+      "prop:endpoint-dictionary",
+      "eq:pair-count"
+    ],
+    "enunciado_tex": "\\label{prop:endpoint-dictionary}\nO mapa que associa a um átomo de $\\Library_H$ com suporte $J$ seus valores\nnas extremidades é uma bijeção sobre $\\Pairs_H(J)$. Em particular, se\n\\[\n \\mathcal Q_H=\\{r\\in\\mathbb Q:\\height(r)\\le H\\},\n \\qquad q_H=|\\mathcal Q_H|,\n\\]\nentão\n\\begin{equation}\n |\\Pairs_H(J)|=\n \\begin{cases}\n q_H(q_H-1),&\\text{se \\eqref{eq:pair-geometry} vale},\\\\\n 0,&\\text{caso contrário}.\n \\end{cases}\n \\label{eq:pair-count}\n\\end{equation}",
+    "sha256_enunciado": "d6aea6b76af8b5b873a08ef8f4a80775e61776c29f7d6e1d02387162b6620672",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.endpoint_dictionary",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 63,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.4.2",
+    "originais_77": [
+      "9.2"
+    ],
+    "rotulo_volume": "map:artigo_2:4.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1254,
+    "pagina_volume": 52
+  },
+  {
+    "id": "artigo_2:4.3",
+    "documento": "artigo_2",
+    "numero": "4.3",
+    "tipo": "definicao",
+    "titulo": "alfabeto de fronteira",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1351,
+    "rotulos_tex": [
+      "def:value-alphabet",
+      "eq:value-alphabet"
+    ],
+    "enunciado_tex": "\\label{def:value-alphabet}\nDefina\n\\begin{equation}\n \\Values_{D,H}(K)\n =\\bigcup_{J\\in\\mathcal D_D(K)}\n \\{u,v:(u,v)\\in\\Pairs_H(J)\\}.\n \\label{eq:value-alphabet}\n\\end{equation}",
+    "sha256_enunciado": "412aee0d9d09c093d14ec02a5b81e3b6a91887256cebfa873a3d992e02f86465",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Valphabet",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 102,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.4.3",
+    "originais_77": [
+      "9.3"
+    ],
+    "rotulo_volume": "map:artigo_2:4.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1296,
+    "pagina_volume": 53
+  },
+  {
+    "id": "artigo_2:4.4",
+    "documento": "artigo_2",
+    "numero": "4.4",
+    "tipo": "lema",
+    "titulo": "finitude e suficiência",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1362,
+    "rotulos_tex": [
+      "lem:value-alphabet",
+      "eq:value-alphabet-bound"
+    ],
+    "enunciado_tex": "\\label{lem:value-alphabet}\nO conjunto $\\Values_{D,H}(K)$ é finito. Todo valor assumido em uma fronteira\nde folha por qualquer representação de\n$\\Representations_{D,H}^{\\Library}(K)$ pertence a\n$\\Values_{D,H}(K)$. Se $S_D=2^{D+1}-1$, então\n\\begin{equation}\n |\\Values_{D,H}(K)|\n \\le \\min\\{2S_Dq_H(q_H-1),\\,2|\\Library_H|\\}\n \\le \\min\\{18S_DH^4,\\,36H^6\\}.\n \\label{eq:value-alphabet-bound}\n\\end{equation}",
+    "sha256_enunciado": "a5a0a41ba63186b00145557999a5c434477b6e5ee4739937c5c15dcff24462f8",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.value_alphabet",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 122,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.4.4",
+    "originais_77": [
+      "9.4"
+    ],
+    "rotulo_volume": "map:artigo_2:4.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1308,
+    "pagina_volume": 53
+  },
+  {
+    "id": "artigo_2:4.5",
+    "documento": "artigo_2",
+    "numero": "4.5",
+    "tipo": "proposicao",
+    "titulo": "células vazias e refinamento uniforme máximo",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1397,
+    "rotulos_tex": [
+      "prop:translation-obstruction",
+      "eq:two-obstructions",
+      "eq:nonempty-cell-count",
+      "eq:uniform-refinement-conditions",
+      "eq:uniform-refinement-depth"
+    ],
+    "enunciado_tex": "\\label{prop:translation-obstruction}\nSeja $K=J_{k_0,m_0}$ com $m_0\\ge0$ e seja\n$J=J_{k_0+r,\\,2^rm_0+j}$, $0\\le j<2^r$, um descendente na profundidade\nrelativa $r$. Então $\\Pairs_H(J)\\ne\\varnothing$ se e somente se\n\\begin{equation}\n k_0+r+1\\le H\n \\qquad\\text{e}\\qquad\n 2^rm_0+j+1\\le H.\n \\label{eq:two-obstructions}\n\\end{equation}\nEm particular, o número $N_r$ de células não vazias na profundidade $r$ é\n\\begin{equation}\n N_r=\n \\begin{cases}\n \\min\\{2^r,\\ \\max\\{0,H-2^rm_0\\}\\},&k_0+r+1\\le H,\\\\\n 0,&k_0+r+1>H.\n \\end{cases}\n \\label{eq:nonempty-cell-count}\n\\end{equation}\nAlém disso, \\emph{todas} as $2^r$ células dessa profundidade são não vazias\nse e somente se\n\\begin{equation}\n k_0+r+1\\le H\n \\qquad\\text{e}\\qquad\n 2^r(m_0+1)\\le H,\n \\label{eq:uniform-refinement-conditions}\n\\end{equation}\nisto é,\n\\begin{equation}\n r\\le\n \\min\\!\\left\\{H-k_0-1,\\ \\log_2\\frac{H}{m_0+1}\\right\\}.\n \\label{eq:uniform-refinement-depth}\n\\end{equation}",
+    "sha256_enunciado": "ead9c795568497ed6350e9a5879859c274089da70c532e935738bb59626080c5",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.translation_obstruction",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Interface.lean",
+        "linha_lean": 230,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Interface.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.4.5",
+    "originais_77": [
+      "9.5"
+    ],
+    "rotulo_volume": "map:artigo_2:4.5",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1344,
+    "pagina_volume": 53
+  },
+  {
+    "id": "artigo_2:4.6",
+    "documento": "artigo_2",
+    "numero": "4.6",
+    "tipo": "observacao",
+    "titulo": "assimetria espacial do catálogo",
+    "secao": 4,
+    "titulo_secao": "Interface da biblioteca e estados de fronteira",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1447,
+    "rotulos_tex": [
+      "rem:asymmetry"
+    ],
+    "enunciado_tex": "\\label{rem:asymmetry}\nAs obstruções de escala e translação impõem limiares distintos. A obstrução de escala permite profundidade\n$r\\le H-k_0-1$, enquanto a de translação permite refinamento uniforme apenas\naté $r\\le\\log_2\\bigl(H/(m_0+1)\\bigr)$. A profundidade disponível é o menor\ndesses dois limiares. Para $k_0,m_0$ fixos e $H$ suficientemente grande, o\nsegundo cresce apenas de modo logarítmico e acaba sendo o limitante; para\noutros regimes, a escala pode ser a condição ativa. Quando a translação\nlimita antes da escala, ela o faz de maneira \\emph{espacialmente assimétrica}:\nentre as células da mesma profundidade sobrevivem as de menor índice, isto é,\nas mais próximas da origem no semieixo não negativo.\n\nUm exemplo é usado adiante. Com $K=[0,1]=J_{0,0}$ e $H=4$, a profundidade\n$r=2$ é uniformemente refinável, mas em $r=3$ apenas as células de índice\n$m\\le3$ admitem átomos: as quatro células que cobrem $[\\tfrac12,1]$ têm\n$m\\in\\{4,5,6,7\\}$ e satisfazem $\\Pairs_4(J)=\\varnothing$. O catálogo com\n$(D,H)=(3,4)$ refina $[0,\\tfrac12]$ até a profundidade $3$ e\n$[\\tfrac12,1]$ apenas até a profundidade $2$.\n\nPela \\eqref{eq:uniform-refinement-conditions}, uma malha uniforme de passo\n$2^{-r}$ em $[0,1]$ está disponível para\n$H\\ge\\max\\{2,2^r\\}$. Nessa malha, a altura necessária cresce linearmente em $1/h$. A \\cref{sec:dyadic-asymptotic} separa a constante geométrica sem\ntruncagem da agenda necessária para realizá-la; as\nas seções de classes de aproximação e agendas de altura do terceiro artigo incorporam esse acoplamento\naos estratos de aproximação.",
+    "sha256_enunciado": "5efd2e82cb688e8a6e2ed539100a42eb3ad7fe4f583f83c6b96991b1953eaa7d",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.4.6",
+    "originais_77": [
+      "9.6"
+    ],
+    "rotulo_volume": "map:artigo_2:4.6",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1395,
+    "pagina_volume": 54
+  },
+  {
+    "id": "artigo_2:5.1",
+    "documento": "artigo_2",
+    "numero": "5.1",
+    "tipo": "lema",
+    "titulo": "decodificação e aditividade",
+    "secao": 5,
+    "titulo_secao": "Funcional aditivo e representação canônica",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1532,
+    "rotulos_tex": [
+      "lem:recursive-stream",
+      "eq:stream-additivity"
+    ],
+    "enunciado_tex": "\\label{lem:recursive-stream}\nO conjunto dos fluxos \\eqref{eq:recursive-stream} é prefix-free e cada fluxo\nrecupera uma única árvore rotulada. Seu comprimento $B(R)$ satisfaz\n\\begin{equation}\n B(a)=1+|\\gamma(n^\\sharp(a)+1)|,\\qquad\n B(R_L\\vee R_R)=1+B(R_L)+B(R_R).\n \\label{eq:stream-additivity}\n\\end{equation}",
+    "sha256_enunciado": "795d24538170dc41bf7e85596a11a4b25d6423b2875fc6c4aaa00be6b64a3450",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.recursive_stream",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Functional.lean",
+        "linha_lean": 57,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Functional.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.5.1",
+    "originais_77": [
+      "10.1"
+    ],
+    "rotulo_volume": "map:artigo_2:5.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1481,
+    "pagina_volume": 55
+  },
+  {
+    "id": "artigo_2:5.2",
+    "documento": "artigo_2",
+    "numero": "5.2",
+    "tipo": "lema",
+    "titulo": "compatibilidade do desempate com a colagem",
+    "secao": 5,
+    "titulo_secao": "Funcional aditivo e representação canônica",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1602,
+    "rotulos_tex": [
+      "lem:tie-concatenation"
+    ],
+    "enunciado_tex": "\\label{lem:tie-concatenation}\nConsidere subárvores compatíveis com os mesmos estados externos, de modo que\nas substituições abaixo preservem a continuidade. Se\n$\\kappa(R_L)\\le\\kappa(R'_L)$ e $\\kappa(R_R)\\le\\kappa(R'_R)$, então\n\\[\n \\kappa(R_L\\vee R_R)\\le\\kappa(R'_L\\vee R'_R).\n\\]\nEm particular, substituir um filho por outro de chave menor nunca piora a\nchave de nenhuma superárvore.",
+    "sha256_enunciado": "0951f7fbd8969e717843d4c10769901eccf287cbac870e09b3337e12d08a2a4c",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.tie_concatenation",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Functional.lean",
+        "linha_lean": 178,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Functional.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.5.2",
+    "originais_77": [
+      "10.2"
+    ],
+    "rotulo_volume": "map:artigo_2:5.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1552,
+    "pagina_volume": 55
+  },
+  {
+    "id": "artigo_2:6.1",
+    "documento": "artigo_2",
+    "numero": "6.1",
+    "tipo": "definicao",
+    "titulo": "recorrência para árvore fixa",
+    "secao": 6,
+    "titulo_secao": "Programação dinâmica em uma árvore fixa",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1641,
+    "rotulos_tex": [
+      "def:fixed-recurrence",
+      "eq:fixed-leaf",
+      "eq:fixed-split"
+    ],
+    "enunciado_tex": "\\label{def:fixed-recurrence}\nDefina $C_T(J;u,v)$ de baixo para cima. Se $J$ é folha de $T$,\n\\begin{equation}\n C_T(J;u,v)=\\Phi_H(J;u,v).\n \\label{eq:fixed-leaf}\n\\end{equation}\nSe $J$ é interno, com filhos $J_L,J_R$, defina\n\\begin{equation}\n C_T(J;u,v)=\\lambda_{\\rm bits}+\\lambda_{\\rm split}\n +\\min_{w\\in\\Values_{D,H}(K)}\n \\{C_T(J_L;u,w)+C_T(J_R;w,v)\\}.\n \\label{eq:fixed-split}\n\\end{equation}\nAdota-se $\\min\\varnothing=+\\infty$ e as regras usuais para soma com\n$+\\infty$.",
+    "sha256_enunciado": "5022c4c176759069acf24f184ed77074010dcb86ff7d13cc4bb5bd8980fde711",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.Cfix",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 114,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.6.1",
+    "originais_77": [
+      "11.1"
+    ],
+    "rotulo_volume": "map:artigo_2:6.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1592,
+    "pagina_volume": 56
+  },
+  {
+    "id": "artigo_2:6.2",
+    "documento": "artigo_2",
+    "numero": "6.2",
+    "tipo": "teorema",
+    "titulo": "correção para árvore fixa",
+    "secao": 6,
+    "titulo_secao": "Programação dinâmica em uma árvore fixa",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1673,
+    "rotulos_tex": [
+      "thm:fixed-correctness",
+      "eq:fixed-correctness",
+      "eq:fixed-global"
+    ],
+    "enunciado_tex": "\\label{thm:fixed-correctness}\nPara todo nó $J$ de $T$ e todo par de estados $(u,v)$,\n\\begin{equation}\n C_T(J;u,v)\n =\\min_{R\\in\\Representations_H(T_J;u,v)}\n \\cost_{\\mathcal Z}(R),\n \\label{eq:fixed-correctness}\n\\end{equation}\ncom valor $+\\infty$ se o conjunto à direita for vazio. Se, em cada mínimo,\nfor armazenado também o candidato de menor chave \\eqref{eq:tie-key}, a\nretropropagação reconstrói uma única representação canônica. Em particular,\n\\begin{equation}\n \\min_{u,v\\in\\Values_{D,H}(K)}C_T(K;u,v)\n =\\min_{R\\in\\Representations_H(T)}\\cost_{\\mathcal Z}(R).\n \\label{eq:fixed-global}\n\\end{equation}",
+    "sha256_enunciado": "c54c56e5c2745114d6079f6554f97bd712ec4fa35b0bfe2269d57f52dfb10506",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.fixed_correctness",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 164,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.fixed_global",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 189,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.6.2",
+    "originais_77": [
+      "11.2"
+    ],
+    "rotulo_volume": "map:artigo_2:6.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1625,
+    "pagina_volume": 56
+  },
+  {
+    "id": "artigo_2:6.3",
+    "documento": "artigo_2",
+    "numero": "6.3",
+    "tipo": "algoritmo",
+    "titulo": "rotulação exata de uma árvore fixa",
+    "secao": 6,
+    "titulo_secao": "Programação dinâmica em uma árvore fixa",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1722,
+    "rotulos_tex": [
+      "alg:fixed-tree"
+    ],
+    "enunciado_tex": "\\label{alg:fixed-tree}\nEnumere $\\Pairs_H(J)$ em cada folha. Percorra $T$ em pós-ordem. Em cada nó\ninterno, agrupe os estados do filho direito pelo valor de fronteira esquerdo\n$w$ e una apenas pares com o mesmo $w$. Para cada estado externo $(u,v)$,\nretenha a menor chave \\eqref{eq:tie-key} e um apontador para os dois filhos.\nNa raiz, escolha a menor entrada finita e siga os apontadores.",
+    "sha256_enunciado": "1f7cdee0fb618a3d2dc0d612d0809f542cdc82e9995a86a8a47be6ebf8626d3b",
+    "status": "formalizado_compilado",
+    "observacao": "A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata. [11/11/2026] Tabela em pós-ordem com o κ-mínimo por estado (`fixTable`, colagem por w), custo = `Cfix`, raiz = rotulação κ-mínima de `fixed_global` (via Lema 5.2 `tie_concatenation`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.fixed_correctness",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 164,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.fixed_global",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 189,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DPprog.fixTable_cost",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ProgDin.lean",
+        "linha_lean": 190,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ProgDin.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DPprog.fixRoot_spec",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ProgDin.lean",
+        "linha_lean": 244,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ProgDin.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.6.3",
+    "originais_77": [
+      "11.3"
+    ],
+    "rotulo_volume": "map:artigo_2:6.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1675,
+    "pagina_volume": 57
+  },
+  {
+    "id": "artigo_2:7.1",
+    "documento": "artigo_2",
+    "numero": "7.1",
+    "tipo": "definicao",
+    "titulo": "recorrência de Bellman com árvore variável",
+    "secao": 7,
+    "titulo_secao": "Seleção simultânea da árvore e dos átomos",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1752,
+    "rotulos_tex": [
+      "def:variable-recurrence",
+      "eq:variable-base",
+      "eq:variable-recurrence"
+    ],
+    "enunciado_tex": "\\label{def:variable-recurrence}\nPara $d=0$, ponha\n\\begin{equation}\n C_0(J;u,v)=\\Phi_H(J;u,v).\n \\label{eq:variable-base}\n\\end{equation}\nPara $d\\ge1$, se $J_L,J_R$ são os filhos de $J$, defina\n\\begin{align}\n C_d(J;u,v)\n =\\min\\Bigl\\{&\n \\Phi_H(J;u,v),\\notag\\\\\n &\\lambda_{\\rm bits}+\\lambda_{\\rm split}\n +\\min_{w\\in\\Values_{D,H}(K)}\n \\bigl[C_{d-1}(J_L;u,w)+C_{d-1}(J_R;w,v)\\bigr]\n \\Bigr\\}.\n \\label{eq:variable-recurrence}\n\\end{align}",
+    "sha256_enunciado": "80f71c1ae4f64907f2e4571fbec6ef9bfd5f258e6f35d2fdb7ca448a171672ec",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.Cvar",
+        "tipo": "def",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 24,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.7.1",
+    "originais_77": [
+      "12.1"
+    ],
+    "rotulo_volume": "map:artigo_2:7.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1706,
+    "pagina_volume": 57
+  },
+  {
+    "id": "artigo_2:7.2",
+    "documento": "artigo_2",
+    "numero": "7.2",
+    "tipo": "teorema",
+    "titulo": "exatidão, existência e determinismo",
+    "secao": 7,
+    "titulo_secao": "Seleção simultânea da árvore e dos átomos",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1777,
+    "rotulos_tex": [
+      "thm:variable-correctness",
+      "eq:variable-correctness",
+      "eq:variable-global"
+    ],
+    "enunciado_tex": "\\label{thm:variable-correctness}\nSeja $J$ uma célula descendente de $K$ na profundidade relativa $r$. Para todo\n$d\\le D-r$ e todo $(u,v)\\in\\Values_{D,H}(K)^2$,\n\\begin{equation}\n C_d(J;u,v)\n =\\min_{R\\in\\Representations_{d,H}(J;u,v)}\n \\cost_{\\mathcal Z}(R).\n \\label{eq:variable-correctness}\n\\end{equation}\nConsequentemente,\n\\begin{equation}\n C_{D,H}^{\\star}(K)\n :=\\min_{u,v\\in\\Values_{D,H}(K)}C_D(K;u,v)\n =\\min_{R\\in\\Representations_{D,H}^{\\Library}(K)}\n \\cost_{\\mathcal Z}(R).\n \\label{eq:variable-global}\n\\end{equation}\nO mínimo é finito quando\n$H\\ge\\max\\{2,k_0+1,|m_0|+1\\}$. Com o desempate\n\\eqref{eq:tie-key}, o algoritmo devolve uma única representação, independentemente\nda ordem em que estados, átomos ou valores intermediários sejam gerados.",
+    "sha256_enunciado": "4bdad8f547f17afa16199c6fc3042f0cc34d20f49d7afbb26e7f0d87554e8cbd",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.variable_correctness",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 43,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.variable_global",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 67,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.7.2",
+    "originais_77": [
+      "12.2"
+    ],
+    "rotulo_volume": "map:artigo_2:7.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1732,
+    "pagina_volume": 58
+  },
+  {
+    "id": "artigo_2:7.3",
+    "documento": "artigo_2",
+    "numero": "7.3",
+    "tipo": "corolario",
+    "titulo": "compatibilidade com a enumeração de formas",
+    "secao": 7,
+    "titulo_secao": "Seleção simultânea da árvore e dos átomos",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1824,
+    "rotulos_tex": [
+      "cor:shape-enumeration",
+      "eq:shape-equivalence"
+    ],
+    "enunciado_tex": "\\label{cor:shape-enumeration}\nSe $\\Trees_D(K)$ é o conjunto finito de todas as formas de árvore de\nprofundidade no máximo $D$, então\n\\begin{equation}\n C_{D,H}^{\\star}(K)\n =\\min_{T\\in\\Trees_D(K)}\n   \\min_{u,v\\in\\Values_{D,H}(K)}C_T(K;u,v).\n \\label{eq:shape-equivalence}\n\\end{equation}\nO mesmo fluxo canônico vence nos dois lados.",
+    "sha256_enunciado": "cc6ad176de8791a0e91e256745d492e5bba43a4216c3ea18ed93357ed4fbee84",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.shape_enumeration",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 235,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.7.3",
+    "originais_77": [
+      "12.3"
+    ],
+    "rotulo_volume": "map:artigo_2:7.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1780,
+    "pagina_volume": 58
+  },
+  {
+    "id": "artigo_2:7.4",
+    "documento": "artigo_2",
+    "numero": "7.4",
+    "tipo": "algoritmo",
+    "titulo": "seletor exato por programação dinâmica",
+    "secao": 7,
+    "titulo_secao": "Seleção simultânea da árvore e dos átomos",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1844,
+    "rotulos_tex": [
+      "alg:variable-tree"
+    ],
+    "enunciado_tex": "\\label{alg:variable-tree}\nConstrua as tabelas em pós-ordem na árvore diádica completa de profundidade\n$D$. Inicialize cada estado com o candidato folha, quando admissível. Una as\ntabelas dos filhos pelo valor intermediário $w$, acrescente o marcador e a\npenalidade de subdivisão e substitua a entrada somente quando a chave completa\ndiminuir. A tabela da raiz e os apontadores guardados fornecem o ótimo global\ne sua representação.",
+    "sha256_enunciado": "cc55f56fc48f37277ab7e5c2bf0fbca820b21cb9f872904dd03a54006a91a63f",
+    "status": "formalizado_compilado",
+    "observacao": "A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata. [11/11/2026] Tabela `varTable` (candidato folha + colagens, troca só se κ diminui), custo = `Cvar`, raiz = ótimo `Cstar` e representação κ-mínima de `variable_global`. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.variable_correctness",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 43,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.variable_global",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DP.lean",
+        "linha_lean": 67,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DP.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DPprog.varTable_cost",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ProgDin.lean",
+        "linha_lean": 316,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ProgDin.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DPprog.varRoot_spec",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ProgDin.lean",
+        "linha_lean": 339,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ProgDin.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.7.4",
+    "originais_77": [
+      "12.4"
+    ],
+    "rotulo_volume": "map:artigo_2:7.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1801,
+    "pagina_volume": 58
+  },
+  {
+    "id": "artigo_2:8.1",
+    "documento": "artigo_2",
+    "numero": "8.1",
+    "tipo": "teorema",
+    "titulo": "correção sob orçamento de folhas",
+    "secao": 8,
+    "titulo_secao": "Orçamentos rígidos e erro uniforme",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1877,
+    "rotulos_tex": [
+      "thm:leaf-budget",
+      "eq:at-most-N"
+    ],
+    "enunciado_tex": "\\label{thm:leaf-budget}\nAs recorrências \\eqref{eq:budget-base}--\\eqref{eq:budget-recurrence}\ncalculam exatamente o menor custo entre representações de profundidade no\nmáximo $d$, altura no máximo $H$, fronteiras $(u,v)$ e exatamente $n$\nfolhas. Em particular, o ótimo com no máximo $N$ folhas é\n\\begin{equation}\n \\min_{\\substack{1\\le n\\le\\min\\{N,2^D\\}\\\\\n                  u,v\\in\\Values_{D,H}(K)}}\n C_{D,n}(K;u,v).\n \\label{eq:at-most-N}\n\\end{equation}",
+    "sha256_enunciado": "d01124c38b99261d485d077059e120cb770158c3c209e9a36c4b055355c4d82d",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.leaf_budget",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "linha_lean": 181,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Budgets.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.leaf_budget_atMost",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "linha_lean": 208,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Budgets.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.8.1",
+    "originais_77": [
+      "13.1"
+    ],
+    "rotulo_volume": "map:artigo_2:8.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1835,
+    "pagina_volume": 59
+  },
+  {
+    "id": "artigo_2:8.2",
+    "documento": "artigo_2",
+    "numero": "8.2",
+    "tipo": "teorema",
+    "titulo": "cálculo exato do melhor erro truncado",
+    "secao": 8,
+    "titulo_secao": "Orçamentos rígidos e erro uniforme",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1936,
+    "rotulos_tex": [
+      "thm:bottleneck",
+      "eq:bottleneck-optimum",
+      "eq:depth-inactive"
+    ],
+    "enunciado_tex": "\\label{thm:bottleneck}\nSob o oráculo \\eqref{eq:local-uniform-error},\n\\begin{equation}\n E_{N,H,D}^{\\rm tree}(f)_\\infty\n =\\min_{\\substack{1\\le n\\le\\min\\{N,2^D\\}\\\\\n                  u,v\\in\\Values_{D,H}(K)}}\n B_{D,n}(K;u,v).\n \\label{eq:bottleneck-optimum}\n\\end{equation}\nSe\n\\begin{equation}\n D\\ge \\max\\{0,H-k_0-1\\},\n \\label{eq:depth-inactive}\n\\end{equation}\na restrição de profundidade já é inativa: nenhum átomo de $\\Library_H$\napoiado em descendente de $K$ pode ocorrer abaixo desse nível.",
+    "sha256_enunciado": "cb375545cdb62cdf7a7b24493e6a9e91295e786d24fc5a90b31437a85a9b9ced",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.bottleneck_correctness",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "linha_lean": 327,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Budgets.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.bottleneck",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "linha_lean": 361,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Budgets.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.8.2",
+    "originais_77": [
+      "13.2"
+    ],
+    "rotulo_volume": "map:artigo_2:8.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1895,
+    "pagina_volume": 59
+  },
+  {
+    "id": "artigo_2:8.3",
+    "documento": "artigo_2",
+    "numero": "8.3",
+    "tipo": "observacao",
+    "titulo": "interação entre profundidade e translação",
+    "secao": 8,
+    "titulo_secao": "Orçamentos rígidos e erro uniforme",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1969,
+    "rotulos_tex": [
+      "rem:depth-vs-translation"
+    ],
+    "enunciado_tex": "\\label{rem:depth-vs-translation}\nA condição \\eqref{eq:depth-inactive} satura o ganho obtido pelo aumento de $D$\nalém de $H-k_0-1$. A admissibilidade de cada célula também depende de sua\nposição.\nPara $m_0\\ge0$, a \\cref{prop:translation-obstruction} mostra que o refinamento\nuniforme completo exige também\n$r\\le\\log_2\\bigl(H/(m_0+1)\\bigr)$. Quando esse segundo limiar é o menor, o\ncatálogo se torna espacialmente assimétrico antes de a escala se esgotar. Ao ler\n\\eqref{eq:bottleneck-optimum} para um dado $(N,H,D)$, portanto, o orçamento de\nfolhas $N$ compete com uma família de árvores que já está truncada pela\ntranslação, não apenas pela profundidade.",
+    "sha256_enunciado": "367e61bd2d70b337a2ccf1c036d477ef1b38362c705305a66dc21cf320b1c1d1",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.8.3",
+    "originais_77": [
+      "13.3"
+    ],
+    "rotulo_volume": "map:artigo_2:8.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1929,
+    "pagina_volume": 60
+  },
+  {
+    "id": "artigo_2:8.4",
+    "documento": "artigo_2",
+    "numero": "8.4",
+    "tipo": "corolario",
+    "titulo": "convergência para funções contínuas",
+    "secao": 8,
+    "titulo_secao": "Orçamentos rígidos e erro uniforme",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 1983,
+    "rotulos_tex": [
+      "cor:uniform-convergence",
+      "eq:uniform-convergence"
+    ],
+    "enunciado_tex": "\\label{cor:uniform-convergence}\nPara todo $f\\in C(K)$,\n\\begin{equation}\n \\inf_{N,H,D}E_{N,H,D}^{\\rm tree}(f)_\\infty=0.\n \\label{eq:uniform-convergence}\n\\end{equation}\nMais precisamente, ao longo de qualquer sequência de triplas $(N,H,D)$ que\nseja componente a componente não decrescente e cofinal, os erros convergem a\nzero.",
+    "sha256_enunciado": "9f69509edacb0f636b89a7d1a4fc22364bf877be1965f914f92ccc4532d91ab5",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.uniform_convergence",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "linha_lean": 387,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Budgets.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.8.4",
+    "originais_77": [
+      "13.4"
+    ],
+    "rotulo_volume": "map:artigo_2:8.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1944,
+    "pagina_volume": 60
+  },
+  {
+    "id": "artigo_2:9.1",
+    "documento": "artigo_2",
+    "numero": "9.1",
+    "tipo": "teorema",
+    "titulo": "complexidade em número de estados",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2034,
+    "rotulos_tex": [
+      "thm:state-complexity",
+      "eq:dense-time",
+      "eq:dense-memory",
+      "eq:budget-time"
+    ],
+    "enunciado_tex": "\\label{thm:state-complexity}\nSuponha os custos de folha pré-computados. Uma implementação densa do\n\\cref{alg:variable-tree} usa\n\\begin{equation}\n O(S_DM^3)\n \\label{eq:dense-time}\n\\end{equation}\noperações e\n\\begin{equation}\n O(S_DM^2)\n \\label{eq:dense-memory}\n\\end{equation}\nentradas de memória quando preserva todos os apontadores de reconstrução.\nA versão com orçamento de até $N$ folhas usa\n\\begin{equation}\n O(S_DN^2M^3)\n \\label{eq:budget-time}\n\\end{equation}\noperações e $O(S_DNM^2)$ entradas. Se cada custo local\n\\eqref{eq:local-loss} for calculado diretamente sobre $P$ observações, a\ninicialização densa acrescenta $O(S_DPM^2)$ operações.",
+    "sha256_enunciado": "fa139ae7347b0c3c5577db67712b65635248003471185957800669d41148c5ab",
+    "status": "cobertura_parcial",
+    "observacao": "Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.state_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Complexity.lean",
+        "linha_lean": 89,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Complexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.1",
+    "originais_77": [
+      "14.1"
+    ],
+    "rotulo_volume": "map:artigo_2:9.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1996,
+    "pagina_volume": 60
+  },
+  {
+    "id": "artigo_2:9.2",
+    "documento": "artigo_2",
+    "numero": "9.2",
+    "tipo": "observacao",
+    "titulo": "tabelas esparsas",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2070,
+    "rotulos_tex": [
+      "rem:sparse"
+    ],
+    "enunciado_tex": "\\label{rem:sparse}\nAs cotas são deliberadamente densas. O algoritmo distribuído armazena apenas\npares realizáveis e agrupa o filho direito por $w$. Seu trabalho em um nó é\nproporcional ao tamanho da junção\n\\[\n \\#\\{((u,w),(w,v)):\\text{os dois estados estão presentes}\\},\n\\]\nque pode ser muito menor que $M^3$. Essa melhora depende da instância e não\naltera a cota de pior caso.\n\nNa instância principal da \\cref{sec:numerical}, com\n$(D,H)=(3,4)$, o alfabeto efetivo tem $M=475$ elementos, contra\n$2S_Dq_H(q_H-1)=15\\,180$ pela primeira cota de\n\\eqref{eq:value-alphabet-bound} e $36H^6=147\\,456$ pela segunda; e a tabela da\nraiz contém $3\\,383$ estados realizáveis, contra $M^2=225\\,625$ posições\ndensas, isto é, uma ocupação de $1{,}5\\%$. Nas instâncias examinadas, a\nestrutura esparsa reduz substancialmente o trabalho em relação à cota densa de\npior caso.",
+    "sha256_enunciado": "734e781b3b37531558878a7c878b5b4414f57f734b5846eea9241d1c569cfc23",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.9.2",
+    "originais_77": [
+      "14.2"
+    ],
+    "rotulo_volume": "map:artigo_2:9.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2033,
+    "pagina_volume": 61
+  },
+  {
+    "id": "artigo_2:9.3",
+    "documento": "artigo_2",
+    "numero": "9.3",
+    "tipo": "teorema",
+    "titulo": "cota grosseira de complexidade de bits",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2119,
+    "rotulos_tex": [
+      "thm:bit-complexity",
+      "eq:cost-bit-growth",
+      "eq:dense-bit-time",
+      "eq:dense-bit-memory"
+    ],
+    "enunciado_tex": "\\label{thm:bit-complexity}\nTodos os custos racionais que aparecem na recorrência possuem numeradores e\ndenominadores de comprimento no máximo\n\\begin{equation}\n B_{\\rm cost}\n =O\\!\\left(\n P\\bigl(B_{\\mathcal Z}+D+|k_0|+\\log(2H)\\bigr)\n +B_{\\mathcal Z}+D+\\log(2L)\n \\right).\n \\label{eq:cost-bit-growth}\n\\end{equation}\nConsequentemente, a versão densa sem orçamento de folhas pode ser executada em\n\\begin{equation}\n O\\!\\left(\n (S_DM^3+S_DPM^2)\n \\bigl[\\mathsf M_{\\mathbb Z}(B_{\\rm cost})\n       \\log(2B_{\\rm cost})+L\\bigr]\n \\right)\n \\label{eq:dense-bit-time}\n\\end{equation}\noperações de bit e\n\\begin{equation}\n O\\!\\left(S_DM^2(B_{\\rm cost}+L)\\right)\n \\label{eq:dense-bit-memory}\n\\end{equation}\nbits de memória quando todos os estados e fluxos são armazenados. Na versão\ncom até $N$ folhas, substituem-se $S_DM^3$ e $S_DM^2$ por\n$S_DN^2M^3$ e $S_DNM^2$, respectivamente. Com multiplicação escolar,\n$\\mathsf M_{\\mathbb Z}(b)=O(b^2)$.",
+    "sha256_enunciado": "def7169385bdaa70c999abd133a64c5eb72617a6192a60f912562244f72967af",
+    "status": "cobertura_parcial",
+    "observacao": "bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.bit_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/BitComplexity.lean",
+        "linha_lean": 266,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.3",
+    "originais_77": [
+      "14.3"
+    ],
+    "rotulo_volume": "map:artigo_2:9.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2083,
+    "pagina_volume": 61
+  },
+  {
+    "id": "artigo_2:9.4",
+    "documento": "artigo_2",
+    "numero": "9.4",
+    "tipo": "proposicao",
+    "titulo": "convergência dos mínimos penalizados",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2195,
+    "rotulos_tex": [
+      "prop:truncation-convergence",
+      "eq:penalized-limit"
+    ],
+    "enunciado_tex": "\\label{prop:truncation-convergence}\nOs valores $C_{D,H}^{\\star}(K)$ de \\eqref{eq:variable-global} são não\ncrescentes separadamente em $D$ e $H$, e\n\\begin{equation}\n \\inf_{D,H}C_{D,H}^{\\star}(K)\n =\\inf_{R\\in\\Representations_{\\infty}^{\\Library}(K)}\n   \\cost_{\\mathcal Z}(R).\n \\label{eq:penalized-limit}\n\\end{equation}\nAo longo de qualquer sequência componente a componente não decrescente e\ncofinal em $(D,H)$, os valores convergem ao lado direito.\n\nSe o ínfimo em \\eqref{eq:penalized-limit} é atingido, o minimizador global de\nmenor chave \\eqref{eq:tie-key} pertence a algum catálogo finito; a partir de\numa truncagem que o contenha, o seletor canônico estabiliza.",
+    "sha256_enunciado": "112c205d15294b034c079e5fed2b3f0c94a753606dc561d676ea38ef6d77b696",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.truncation_convergence",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Complexity.lean",
+        "linha_lean": 200,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Complexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.4",
+    "originais_77": [
+      "14.4"
+    ],
+    "rotulo_volume": "map:artigo_2:9.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2160,
+    "pagina_volume": 62
+  },
+  {
+    "id": "artigo_2:9.5",
+    "documento": "artigo_2",
+    "numero": "9.5",
+    "tipo": "proposicao",
+    "titulo": "um seletor exato pode ser descontínuo",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2229,
+    "rotulos_tex": [
+      "prop:instability"
+    ],
+    "enunciado_tex": "\\label{prop:instability}\nConsidere, em $K=[0,1]$, o subcatálogo formado pelos dois átomos\n\\[\n g_+(x)=x,\\qquad g_-(x)=-x,\n\\]\nambos de altura $2$. Para uma única observação $(x,z)=(1,z)$, custo igual à\nperda quadrática e qualquer desempate determinístico, o mapa que envia $z$ ao\nátomo selecionado é descontínuo em $z=0$ na norma uniforme.",
+    "sha256_enunciado": "42f876842faaa1efc966cb3f5ad4f0921736b0271c63101c10e8e30f7ca2b5d7",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.instability",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Complexity.lean",
+        "linha_lean": 288,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Complexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.5",
+    "originais_77": [
+      "14.5"
+    ],
+    "rotulo_volume": "map:artigo_2:9.5",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2195,
+    "pagina_volume": 63
+  },
+  {
+    "id": "artigo_2:11.1",
+    "documento": "artigo_2",
+    "numero": "11.1",
+    "tipo": "teorema",
+    "titulo": "minimalidade exata do limiar",
+    "secao": 11,
+    "titulo_secao": "Erro interpolatório ótimo em árvores estritamente diádicas",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2554,
+    "rotulos_tex": [
+      "thm:threshold-optimality",
+      "eq:threshold-inversion"
+    ],
+    "enunciado_tex": "\\label{thm:threshold-optimality}\nSe $f\\in C(K)$, então $T_\\varepsilon(f)$ é finita e é a única árvore\nmenos refinada (\\emph{coarsest}) cuja interpolação tem erro no máximo $\\varepsilon$. Em particular,\nela possui o menor número de folhas entre todas as árvores viáveis e\n\\begin{equation}\n E_N^{\\rm dia}(f)_\\infty\\le\\varepsilon\n \\quad\\Longleftrightarrow\\quad\n n_f(\\varepsilon)\\le N,\n \\qquad\n E_N^{\\rm dia}(f)_\\infty\n =\\inf\\{\\varepsilon>0:n_f(\\varepsilon)\\le N\\}.\n \\label{eq:threshold-inversion}\n\\end{equation}",
+    "sha256_enunciado": "cf713c9daa60eb658f454f18f2afd37af2840e681af3a00173c136446fbccbb9",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.threshold_optimality",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Dyadic.lean",
+        "linha_lean": 337,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Dyadic.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Edia_eq_sInf_nThr",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Dyadic.lean",
+        "linha_lean": 363,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Dyadic.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.11.1",
+    "originais_77": [
+      "16.1"
+    ],
+    "rotulo_volume": "map:artigo_2:11.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2521,
+    "pagina_volume": 67
+  },
+  {
+    "id": "artigo_2:11.2",
+    "documento": "artigo_2",
+    "numero": "11.2",
+    "tipo": "lema",
+    "titulo": "expansão local uniforme",
+    "secao": 11,
+    "titulo_secao": "Erro interpolatório ótimo em árvores estritamente diádicas",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2613,
+    "rotulos_tex": [
+      "lem:local-asymptotic-error",
+      "eq:local-asymptotic-error"
+    ],
+    "enunciado_tex": "\\label{lem:local-asymptotic-error}\nPara toda célula $J\\subseteq K$ e todo $x\\in J$,\n\\begin{equation}\n \\left|e_f(J)-\\frac{|f''(x)|}{8}|J|^2\\right|\n \\le \\frac{\\omega_{f''}(|J|)}{8}|J|^2.\n \\label{eq:local-asymptotic-error}\n\\end{equation}",
+    "sha256_enunciado": "1f8e38d5770a2b75660538a27551497afb7fa5ed342bbed161a313d3aee3aae6",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.local_asymptotic_error",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Dyadic.lean",
+        "linha_lean": 455,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Dyadic.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.local_asymptotic_error_on",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 229,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.11.2",
+    "originais_77": [
+      "16.2"
+    ],
+    "rotulo_volume": "map:artigo_2:11.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2581,
+    "pagina_volume": 68
+  },
+  {
+    "id": "artigo_2:11.3",
+    "documento": "artigo_2",
+    "numero": "11.3",
+    "tipo": "teorema",
+    "titulo": "envelope diádico universal e agudo",
+    "secao": 11,
+    "titulo_secao": "Erro interpolatório ótimo em árvores estritamente diádicas",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2639,
+    "rotulos_tex": [
+      "thm:general-dyadic-envelope",
+      "eq:threshold-envelope",
+      "eq:budget-envelope"
+    ],
+    "enunciado_tex": "\\label{thm:general-dyadic-envelope}\nSe $f\\in C^2(K)$ e $I(f)>0$, então\n\\begin{align}\n \\frac{I(f)}{\\sqrt8}\n &\\le \\liminf_{\\varepsilon\\downarrow0}\n       \\sqrt\\varepsilon\\,n_f(\\varepsilon)\n \\le \\limsup_{\\varepsilon\\downarrow0}\n       \\sqrt\\varepsilon\\,n_f(\\varepsilon)\n \\le \\frac{I(f)}{\\sqrt2},\n \\label{eq:threshold-envelope}\\\\\n \\frac{I(f)^2}{8}\n &\\le \\liminf_{N\\to\\infty}N^2E_N^{\\rm dia}(f)_\\infty\n \\le \\limsup_{N\\to\\infty}N^2E_N^{\\rm dia}(f)_\\infty\n \\le \\frac{I(f)^2}{2}.\n \\label{eq:budget-envelope}\n\\end{align}\nAs afirmações continuam válidas se $f''$ possui zeros ou muda de sinal. Se\n$I(f)=0$, então $f$ é afim e ambos os erros são identicamente zero.",
+    "sha256_enunciado": "9ba14b11fe650a5d566d46e8209edba99f8a9a8708d8d10ce2dd8f967d21e091",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.general_dyadic_envelope",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicEnvelope.lean",
+        "linha_lean": 519,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.general_dyadic_envelope_zero",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicEnvelope.lean",
+        "linha_lean": 544,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.general_dyadic_envelope_liminf",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicEnvelope.lean",
+        "linha_lean": 597,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.general_dyadic_envelope_on",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 240,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.general_dyadic_envelope_liminf_on",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 255,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.general_dyadic_envelope_zero_on",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/Ponte.lean",
+        "linha_lean": 270,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/Ponte.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.11.3",
+    "originais_77": [
+      "16.3"
+    ],
+    "rotulo_volume": "map:artigo_2:11.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2608,
+    "pagina_volume": 68
+  },
+  {
+    "id": "artigo_2:12.1",
+    "documento": "artigo_2",
+    "numero": "12.1",
+    "tipo": "teorema",
+    "titulo": "lei exata e intervalo de acumulação",
+    "secao": 12,
+    "titulo_secao": "Casos exatos, fases diádicas e validação",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2735,
+    "rotulos_tex": [
+      "thm:quadratic-dyadic-constant",
+      "eq:quadratic-A",
+      "eq:quadratic-exact-law",
+      "eq:quadratic-liminf-limsup"
+    ],
+    "enunciado_tex": "\\label{thm:quadratic-dyadic-constant}\nSe $K$ é uma célula diádica de comprimento $L$ e\n$q''\\equiv\\kappa\\ne0$ em $K$, ponha\n\\begin{equation}\n A=\\frac{|\\kappa|L^2}{8}.\n \\label{eq:quadratic-A}\n\\end{equation}\nEntão, para todo $N\\ge1$,\n\\begin{equation}\n E_N^{\\rm dia}(q)_\\infty\n =A\\,4^{-\\lfloor\\log_2N\\rfloor}.\n \\label{eq:quadratic-exact-law}\n\\end{equation}\nConsequentemente,\n\\begin{equation}\n \\liminf_{N\\to\\infty}N^2E_N^{\\rm dia}(q)_\\infty=A,\n \\qquad\n \\limsup_{N\\to\\infty}N^2E_N^{\\rm dia}(q)_\\infty=4A,\n \\label{eq:quadratic-liminf-limsup}\n\\end{equation}\ne o conjunto completo dos valores de acumulação de\n$N^2E_N^{\\rm dia}(q)_\\infty$ é o intervalo $[A,4A]$. Em particular, a\nconstante obtida por um limite simples não existe.",
+    "sha256_enunciado": "848a522e2433af8d49959afbe62847d20da6c9261b2dcd1edadb73e77bdda1ac",
+    "status": "formalizado_compilado",
+    "observacao": "Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados. [11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.quadratic_dyadic_constant",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicExact.lean",
+        "linha_lean": 58,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicExact.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.quadratic_dyadic_constant_on",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/LeiExata.lean",
+        "linha_lean": 74,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/LeiExata.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.12.1",
+    "originais_77": [
+      "17.1"
+    ],
+    "rotulo_volume": "map:artigo_2:12.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2705,
+    "pagina_volume": 69
+  },
+  {
+    "id": "artigo_2:12.2",
+    "documento": "artigo_2",
+    "numero": "12.2",
+    "tipo": "teorema",
+    "titulo": "contagem exata em uma malha diádica base",
+    "secao": 12,
+    "titulo_secao": "Casos exatos, fases diádicas e validação",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2842,
+    "rotulos_tex": [
+      "thm:piecewise-quadratic-count",
+      "eq:piecewise-count-law",
+      "eq:piecewise-phase-law"
+    ],
+    "enunciado_tex": "\\label{thm:piecewise-quadratic-count}\nSeja $\\mathcal Q_{q_0}$ a partição uniforme de $K=[0,1]$ em células\n$Q_i$ de comprimento $2^{-q_0}$. Suponha que $f\\in C^1(K)$ seja quadrática\nem cada $Q_i$ e\n\\[\n f''|_{\\mathring Q_i}=\\kappa_i\\ne0,\n \\qquad\n A_i=\\frac{|\\kappa_i||Q_i|^2}{8}.\n\\]\nExiste $\\varepsilon_0>0$ tal que, para\n$0<\\varepsilon<\\varepsilon_0$,\n\\begin{equation}\n n_f(\\varepsilon)\n =\\sum_i2^{\\lceil\\log_4(A_i/\\varepsilon)\\rceil}.\n \\label{eq:piecewise-count-law}\n\\end{equation}\nSe $s=-\\log_4\\varepsilon$ e $a_i=\\log_4A_i$, então\n\\begin{equation}\n \\sqrt\\varepsilon\\,n_f(\\varepsilon)\n =\\Phi(s),\n \\qquad\n \\Phi(s)=\\sum_i\\sqrt{A_i}\\,\n 2^{\\lceil s+a_i\\rceil-(s+a_i)}.\n \\label{eq:piecewise-phase-law}\n\\end{equation}\nA função $\\Phi$ é $1$-periódica e não constante. Portanto nem mesmo a\nnormalização em tolerância possui, em geral, um limite simples.",
+    "sha256_enunciado": "7090a3cdf6ffb6c577aead967abbc7e94807eef93af5f8f943434798835990b6",
+    "status": "generalizacao_documentada",
+    "observacao": "O Lean dispensa C1: a igualdade com quadraticas nas celulas fechadas conserva compatibilidade nos extremos. O texto mantem C1; nao foi modificado.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.piecewise_quadratic_count",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicPhase.lean",
+        "linha_lean": 238,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicPhase.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.12.2",
+    "originais_77": [
+      "17.2"
+    ],
+    "rotulo_volume": "map:artigo_2:12.2",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2813,
+    "pagina_volume": 70
+  },
+  {
+    "id": "artigo_2:12.3",
+    "documento": "artigo_2",
+    "numero": "12.3",
+    "tipo": "corolario",
+    "titulo": "fases sincronizadas",
+    "secao": 12,
+    "titulo_secao": "Casos exatos, fases diádicas e validação",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2888,
+    "rotulos_tex": [
+      "cor:synchronized-phases",
+      "eq:synchronized-extremes"
+    ],
+    "enunciado_tex": "\\label{cor:synchronized-phases}\nNas hipóteses do \\cref{thm:piecewise-quadratic-count}, suponha ainda que\n$A_i/A_j\\in4^{\\mathbb Z}$ para todos $i,j$. Então\n\\begin{equation}\n \\liminf_{N\\to\\infty}N^2E_N^{\\rm dia}(f)_\\infty=\\frac{I(f)^2}{8},\n \\qquad\n \\limsup_{N\\to\\infty}N^2E_N^{\\rm dia}(f)_\\infty=\\frac{I(f)^2}{2}.\n \\label{eq:synchronized-extremes}\n\\end{equation}",
+    "sha256_enunciado": "51283e61b203c64e4e8e9bbe1d4cc7e2ce8cb228bd7115937b0b12e0ca803f4d",
+    "status": "prova_textual_sincronizada",
+    "observacao": "A demonstracao Lean evita aplicar o envelope C2 global a uma funcao quadratica por partes que pode nao ser C2. Manter o enunciado e atualizar a demonstracao textual em etapa posterior. [13/11/2026] Demonstracao textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a funcao quadratica por partes. PDF recompilado nesta rodada.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.synchronized_phases",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/DyadicSync.lean",
+        "linha_lean": 99,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/DyadicSync.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.12.3",
+    "originais_77": [
+      "17.3"
+    ],
+    "rotulo_volume": "map:artigo_2:12.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2860,
+    "pagina_volume": 71
+  },
+  {
+    "id": "artigo_2:12.4",
+    "documento": "artigo_2",
+    "numero": "12.4",
+    "tipo": "observacao",
+    "titulo": "agudeza uniforme e comportamento pontual",
+    "secao": 12,
+    "titulo_secao": "Casos exatos, fases diádicas e validação",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2963,
+    "rotulos_tex": [
+      "rem:envelope-not-pointwise"
+    ],
+    "enunciado_tex": "\\label{rem:envelope-not-pointwise}\nO \\cref{thm:general-dyadic-envelope} é agudo \\emph{uniformemente sobre a\nclasse} $C^2$: a mesma função quadrática do\n\\cref{thm:quadratic-dyadic-constant} realiza $I(f)^2/8$ e $I(f)^2/2$ ao longo\nde subsequências. Logo as duas constantes são ótimas em teoremas uniformes\nsobre $C^2$. Para uma função fixa, o conjunto de acumulação pode ser um\nsubconjunto próprio do envelope.\n\nNo modelo finito do \\cref{thm:piecewise-quadratic-count}, essa distinção pode\nser tornada exata. Ponha $w_i=\\sqrt{A_i}$ e considere os resíduos de\n$a_i=\\log_4A_i$ módulo $1$. Cada fator\n\\[\n g(s+a_i)=2^{\\lceil s+a_i\\rceil-(s+a_i)}\n\\]\npertence a $[1,2)$ e vale $1$ precisamente quando $s+a_i\\in\\mathbb Z$. Se os\nresíduos não são todos iguais, não existe fase que torne simultaneamente\ntodos os fatores iguais a $1$, nem uma sequência de fases que os faça tender\nsimultaneamente a $2$. Como há apenas um número finito de fases de salto no\ncírculo, existem $\\delta_-,\\delta_+>0$ tais que\n\\[\n \\frac{I(f)}{\\sqrt8}+\\delta_-\n \\le \\Phi(s)\n \\le \\frac{I(f)}{\\sqrt2}-\\delta_+\n \\qquad(s\\in\\mathbb R).\n\\]\nAssim, a normalização dual $\\varepsilon n_f(\\varepsilon)^2$ permanece\nestritamente dentro do envelope para todas as tolerâncias suficientemente\npequenas nessa família defasada. No caso sincronizado, a condição\n$A_i/A_j\\in4^{\\mathbb Z}$ do \\cref{cor:synchronized-phases} alinha os\nresíduos e permite recuperar os extremos.\n\nA prova finita usa o número discreto de fases de salto e, portanto, é\nespecífica da curvatura quadrática por partes. A\n\\cref{tab:smooth-diagnostics} registra que, em $400$ tolerâncias entre\n$10^{-3}$ e $10^{-10}$, os dois exemplos suaves permanecem estritamente no\ninterior. A caracterização, para $f$ dada, do conjunto exato de acumulação de\n$N^2E_N^{\\rm dia}(f)_\\infty$ dentro de\n$[I(f)^2/8,I(f)^2/2]$ constitui o problema de fases para curvatura variável.",
+    "sha256_enunciado": "a155bc94a15a8086b8ee14fd33cd30083004d1082e57491c9be473102ef92e72",
+    "status": "observacao_editorial",
+    "observacao": "Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [],
+    "parte_volume": "III",
+    "numero_volume": "III.12.4",
+    "originais_77": [
+      "17.4"
+    ],
+    "rotulo_volume": "map:artigo_2:12.4",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2967,
+    "pagina_volume": 73
+  }
+]

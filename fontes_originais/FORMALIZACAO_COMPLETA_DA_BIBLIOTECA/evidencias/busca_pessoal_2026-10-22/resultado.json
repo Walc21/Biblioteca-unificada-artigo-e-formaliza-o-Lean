@@ -1,0 +1,782 @@
+{
+  "concluido_em": "2026-10-22T18:20:25.415674-03:00",
+  "escopo": "Busca ampliada na pasta pessoal, com inventarios de documentos e pacotes; busca dirigida em caches e historicos. Nao equivale a uma pericia de todos os bytes do disco.",
+  "arquivo_procurado": "Fechamento_Parte_2_Formalizacao_Aristotle.tex",
+  "sha256_tex_esperado": "c7409380fbd49ff0739f9f1cb628a6443990558ca889413cc6a5ed78017ca8b4",
+  "sha256_pdf_esperado": "ca576151f7788d17c015d9a6f03a643d469a4006e775b0928a36276db23343ab",
+  "tamanho_zip_esperado": 759458,
+  "resultado": "Fonte final, PDF final e ZIP final nao localizados nas buscas efetuadas.",
+  "contagens": {
+    "tex_avulsos": 430,
+    "arquivos_comprimidos_inventariados": 75,
+    "arquivos_comprimidos_inspecionados": 74,
+    "membros_textuais_com_hash": 7972,
+    "pacotes_internos_inspecionados": 46,
+    "arquivos_sem_extensao_na_faixa_de_tamanho_conferidos": 1040,
+    "pdfs_inventariados": 341,
+    "pdfs_com_hash": 334
+  },
+  "limites": [
+    "Pastas de dependencias e de infraestrutura nao foram integralmente varridas; caches relevantes receberam buscas dirigidas.",
+    "Um item com sufixo .tar e 65 bytes era metadado do Tectonic, nao um pacote de documentos legivel.",
+    "Nos pacotes, foram inspecionados nomes e membros textuais selecionados; nao foi calculado hash de todo membro binario.",
+    "Arquivos PDF acima de 2 MB foram inventariados, mas nao tiveram o hash comparado; o ZIP final esperado tem 759458 bytes.",
+    "O historico remoto disponivel continua truncando dois blocos do fonte; os trechos nao substituem o documento final."
+  ],
+  "integridade_matematica": {
+    "arquivos": 130,
+    "todos_intactos": true,
+    "conferencia": [
+      {
+        "arquivo": "AuditoriaAxiomas.lean",
+        "sha256_atual": "3f009703f22cee7c7db263118d4f6cc4198ee06af063922674f5e6b90a12c05a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "AuditoriaAxiomasPontes.lean",
+        "sha256_atual": "87c24f0be348e5935fb7f2d18aadead7bed7664320404797f3bf146ee5af368d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "SemanticAudit.lean",
+        "sha256_atual": "1ea3b70dc3e2b3865e7ca6845b4a2210df00f78cf52f08c44304183f29b96a59",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Lib/Assembly.lean",
+        "sha256_atual": "4dd1e97bf6d1de3c90df4872a210d69898ece75cb6eb63a54a26a671631be8a7",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Lib/Calculus.lean",
+        "sha256_atual": "2a400898650517789478d21bc08e96dc051a4b01ca0e852afad1f202c73eb863",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Lib/Indexing.lean",
+        "sha256_atual": "cd3ab3cfd2e8293e8bc9571e6d5a2c24485634d3517c303eeee9b1ea398d43f9",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Lib/Library.lean",
+        "sha256_atual": "fcb255d6dfa40274e6aac928c17028436044073175bcd30f42b8f79de3371ece",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec4/ReLU.lean",
+        "sha256_atual": "34ea77eceb8fa52e99eb1d67f0187cd7e2268c503afc52935cfff90dfbff7d66",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec4/Taylor.lean",
+        "sha256_atual": "eb35ae9d2a5cc4977972015cd76fa69de01c58e73e6df8763895c3a83bf865a2",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Address.lean",
+        "sha256_atual": "db8ae523a6872f0c3e42487997ab5c85a5ed10a850c3c3a87bdfc5667b019d49",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Bits.lean",
+        "sha256_atual": "1febcf55ba0cacb56a9ddb2a7bcc54a0991a99e753ec9845786eaa4becf0feea",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Catalog.lean",
+        "sha256_atual": "d27007d69b444aa114d9d16d2d3993f2f6059738b7480284e6eb13dbc1d53748",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Catalogs.lean",
+        "sha256_atual": "f020c743ad039e734bc00821dc3b0f76e10cb7a24671d0dafa6ca78a2b16f4a1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Chain.lean",
+        "sha256_atual": "2e2c6cd5abae4f6042cf58f75799b5f5464baab2ab8b095fe7c2f27b9d5d5f3f",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Codec.lean",
+        "sha256_atual": "0ba12aa5f00065ec54c614e5d7a0d5a0bc67dfc578e8adfc5f2a2d912370e840",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Entropy.lean",
+        "sha256_atual": "b273de8b46223cd8979e863fe2a456ce97a6063b9804290ebfc7251f03a33248",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/EntropyLower.lean",
+        "sha256_atual": "472394f535a4aa477510a1596c2c512b65ae6f42668e0a4ddf85d627da7ade24",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/EntropyUpper.lean",
+        "sha256_atual": "694e6f20faed2427f3830c634441f5d6276820dc6f9fd49f8eb5b324f70a3f91",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Formats.lean",
+        "sha256_atual": "b72b01f8f4498b34631198bd50b2ec36fe26775df9c8c3efafc69f61e43e77bc",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Heights.lean",
+        "sha256_atual": "66d72dd84a5775d4972238aa83d3e8ca40dad287e86cf49cbdbb20f1602e1fa9",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Interp.lean",
+        "sha256_atual": "75519b9b197dd5887828bf80fa4aa6e1babfdb5c9190449733b21cef53a4ed5f",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/JointError.lean",
+        "sha256_atual": "e3da40d61fed4c41332733acd657a7a8d667c83fa0ed02c898c357dc91d4408e",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Precision.lean",
+        "sha256_atual": "2d5b162866ba0b51572b37b0dcf1ca663757c9b08e281d111202d17179a61355",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Serialization.lean",
+        "sha256_atual": "aa7987e2e0ca8ef10204099681ed5659118e56470e8afe5e4e96f2afb1ab6601",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/SharpComputable.lean",
+        "sha256_atual": "97807842fa08a313aef9eec296e9ac609ed869e7c89fd67de99b54eebc25d82a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Consolidado/Sec7/Simultaneous.lean",
+        "sha256_atual": "6b72d84f152d5f61ef06d99ab54704bf7dc832dfc28fa82b8943d9c7f73d5723",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase1/CalkinWilf.lean",
+        "sha256_atual": "119d6c9eeb96a056832a6bb5f59f21f43894eb905c01703598cc14fb19bfdd53",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase1/Dyadic.lean",
+        "sha256_atual": "c8d861d167033248d794554637c0bba056850931a2d07852025f89686bfbd597",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase1/Indexing.lean",
+        "sha256_atual": "3a0979f8c4512ba9feee14a4fbc7bea6345f0f34a8ed1c281f8618b6874a4117",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase2/Assemblies.lean",
+        "sha256_atual": "ecce2399a7c41d47d6da9316b72ff3e9be485ee0c0ade68d2c9a17e86de39717",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase2/DyadicCells.lean",
+        "sha256_atual": "66d9128174986470ee87929f492f22b0428ca004304f896216f5418791970907",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase2/HeightEnum.lean",
+        "sha256_atual": "0de0d4d1ce35e6817b31e52631a40791c5f5cef206ad51d0091d0917b6a678d4",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase2/Pairing.lean",
+        "sha256_atual": "30d2a1cf691437337708df012097534fe755e2d9aac61d8b2dea97f7c5b0cc0a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Assembly.lean",
+        "sha256_atual": "5c8ef313d9e70dbf6577efbcec8a412b15e16e9e229797125e45c76e976587d9",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Calibration.lean",
+        "sha256_atual": "17dba7e119bca4726ec95eb7b36d347b5d1bd01b3d3500382dcd0f1f5c3e96ea",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Cells.lean",
+        "sha256_atual": "c871870ae029f668d96bc808f56ff7bd39e619c6b8713bfd7e5aa19bbf75cffd",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Extension.lean",
+        "sha256_atual": "27466435e463ca1b4a42cb955e08ffb19aaad3e63a0abafd0da3085ea753ee9a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Heights.lean",
+        "sha256_atual": "46d41df659a03b03fc4d5b494b824894893872eaf146362dcb22924a1a1e3e45",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Indexing.lean",
+        "sha256_atual": "a6dc74d467ff12408e28897f2c3823ded896f0cdc2b3342fcd95eee1a0e29ae1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/IntervalArith.lean",
+        "sha256_atual": "e14315bcd893d8653e763ebcc8b183799006b8dea74c0a32fce878de15a2306f",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Observation.lean",
+        "sha256_atual": "79eb3d50c8371b1cd5dffec4d4bb85482f7722a09ff1d23f0228f07535b672e7",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Rates.lean",
+        "sha256_atual": "bd13171e10222501da735c64af3ed32130832c4ff02b0b09a10aa6791e717d10",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Refinement.lean",
+        "sha256_atual": "ead05417e0ac9ed991552b63a5762e6b325d8f42bfdeef108e20027d534b9c63",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/Fase3/Transcendental.lean",
+        "sha256_atual": "6217850d4f36e9632af2b0170a68d9e8c5a0e2fff25763f359552367234b6a4a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/Addresses.lean",
+        "sha256_atual": "812e7418f893033b65f73a93e3b1c287016032b37ef568242999b47daa2fb942",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/Assemblies.lean",
+        "sha256_atual": "bc0c6bf86208cc4d28aac916545230e7f23bde1a59aac356b895518853b761d1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/AssemblyEquivalence.lean",
+        "sha256_atual": "27f7472777323d1c3da105f17e440914a9f63b39312a6ab3bd736237a95d5287",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/CanonicalAtoms.lean",
+        "sha256_atual": "8b7922f135fd6c48713a212ef53ce6fdd40ab3c46136169e06e449f2217c6e8c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/Errors.lean",
+        "sha256_atual": "a838e28b9656788dd44b13f85d6e7bf1b1387f9c538c3d9199aca7ca327d4d4b",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified/SemanticBridge/Geometry.lean",
+        "sha256_atual": "f329728d1e93a4299fec05ac9bab371a24d1bd471a5b598e83071f62d5328e59",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "Unified.lean",
+        "sha256_atual": "459f67389a039d2ccc827cf0abf7d17d1a820de77e6d1a450ed5054824f55dd7",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/artigo.tex",
+        "sha256_atual": "d3309c1889e4329b96bd2f299fa4c1a908e07d6a95cb4198920009fdd0202504",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/01_calkin_wilf.pdf",
+        "sha256_atual": "0510810994430672efc3f7423a8c06d295159d41f03b3bfcaed383f1c0daf111",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/02_celulas.pdf",
+        "sha256_atual": "10098877535583cf07fb559f0267ca71fdf91cdeba0f299252d7a010022ae1a6",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/03_montagem_continua.pdf",
+        "sha256_atual": "6bb49062e82eac62c8990b4952e75b4ef12d5f66a6580d31de4451404dc96070",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/04_relu.pdf",
+        "sha256_atual": "513dfac593f359f46bec3deced081095022bd853769b1090e227f93335e4a605",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/05_taxa_exponencial.pdf",
+        "sha256_atual": "065abe3faca0d6ec1606373f031b639f187a85f6caa230f768be6770d02889a4",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/06_refinamento_certificado.pdf",
+        "sha256_atual": "87b4b740d15f66127b248a02bb84c1d89de4647f2c81e8bd8681a5e20ae45d12",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/figuras/circuito.tex",
+        "sha256_atual": "1b7ed8cdfa7a85f0d106b4a29f46fcba3d7165a574ce4db2fa222130657a314a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/referencias.bib",
+        "sha256_atual": "e498def055b95b068ca174ddbe04efcaaf3b88e7b1762ca46d1447272291b421",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/00_resumos.tex",
+        "sha256_atual": "8b478e63b8c19cabfc38701afbe89f130b02eead3ff0a23caddb5e42e8a2b3a1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/01_introducao.tex",
+        "sha256_atual": "6e533796de19c889d759acdc037fb2716d6092d339a24a0259cb9640230d26d2",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/02_indexacao.tex",
+        "sha256_atual": "9d77d6062135c355fa42c4ae33830d2551e27201cb12fa901df90b843847623e",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/03_biblioteca.tex",
+        "sha256_atual": "ccdd1550a86a023e07bd81228d5f337e32d1a2aa171861e709db1ebb870b5062",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/04_montagens.tex",
+        "sha256_atual": "bb05b7c5ee704bb551d12fc74873ec00635711f9cdfa1fcb32c910ea094b3e1a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/05_taxas.tex",
+        "sha256_atual": "8c50f72ff318059cd7442a9a6631511141af740ee9e3f41c0d179092bf24f800",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/06_refinamento.tex",
+        "sha256_atual": "e97d5ca662b1e8f855bef91edb6da7ef16bff9097b46264254bae2747451e13b",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/07_codificacao.tex",
+        "sha256_atual": "c214417934a5d95ae0627a4cbf1ff6d78b4c3ed8cf8b5a594e59f3e7625a6e75",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/07b_erro_entropia.tex",
+        "sha256_atual": "7bf662a18b3c013119f99ef879b8ec869be8846a46c4f2cd878e08a4518477cf",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/07c_catalogos.tex",
+        "sha256_atual": "6231b50e4aa17baf30cbdba98a1b6794654bae4acac29b2e9d2c93b0e4912e8b",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/08_conclusao.tex",
+        "sha256_atual": "3febd78407d65fba7804ce9dc6a9600a6ecad80e05214ecfc04100230f23518c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_1/secoes/A_notacao.tex",
+        "sha256_atual": "3f16a7c02f2423259c591b2e8ba842d0087fbff447c66b4c8925e42deed49117",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/Artigo_2.pdf",
+        "sha256_atual": "e0a4b0d5f1b53dc700592ba96ae6f0a4ab8f4f95c8196f8db45d54e1792a33a1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/Artigo_2.tex",
+        "sha256_atual": "5c08f51c466ed2e6b870f8162765e6fed058ebb3e160b91496d60a329eab7d8d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig01_estado_fronteira.pdf",
+        "sha256_atual": "7699191b4ec2e5fe3f835fd6f261a61932b6bbf78ad42327f5f792a6ad2decb1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig02_comparacao_seletores.pdf",
+        "sha256_atual": "55d2a1068e333eb21a1dd1915aa6b3a3e67ce738c29f7135f58ac5de55b64b3c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig03_constante_quadratica.pdf",
+        "sha256_atual": "c5dc42ccf9acf741283ab35915f24a16de1ed12b32740a2ce5f02bb02f34b615",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig04_fases_piecewise.pdf",
+        "sha256_atual": "3aab02995568dc669f40de2a4b0defaace4e0e648e3d3f1716e7a78ab821a5f1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig05_envelope_c2.pdf",
+        "sha256_atual": "86909de5c7069c30c4a5298e2b4fcc47801f8d5d248eab024b65a1fdd4bab193",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig06_enderecos.pdf",
+        "sha256_atual": "5b6533a2f71b3bcc0a41d2f6f1e69e6307159c09933cbb495a4aef191df943d2",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/figuras/fig08_codificacoes.pdf",
+        "sha256_atual": "d6bd672e7167e5e2116a57ec33203316abfd82df57d277da82850694b593eeb5",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_2/referencias.bib",
+        "sha256_atual": "983f0e6cc165ab22a03b0dc902b454d466c54828109bad2e1bdd81edf5d6a858",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/Artigo_3.pdf",
+        "sha256_atual": "55e8427650d1bbeecea94c21421daa17e8dbc7094a4c8c587e0701a0e19eb10d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/Artigo_3.tex",
+        "sha256_atual": "4d07bb84022210ed6a5b99fade89fd5822ee1ebfcb5f2ad1a453b74252513fef",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/figuras/fig_altura_agendas.pdf",
+        "sha256_atual": "f7dbfa82146e8603a4096e82ffa167fef6a4fe2bc57441d03244281da14f9455",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/figuras/fig_restricoes_rede.pdf",
+        "sha256_atual": "231fa736355a3f8a3ff37dc41ee8df976cfa9a32629c7beffd614513c483650a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/figuras/fig_reversibilidade_regularizada.pdf",
+        "sha256_atual": "9bfb3bafa9e361dbab852d249a064b7cc7fa2ac908171ad0bdd7ff167666f3ed",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "artigos/artigo_3/referencias.bib",
+        "sha256_atual": "983f0e6cc165ab22a03b0dc902b454d466c54828109bad2e1bdd81edf5d6a858",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/Artigo_2.tex",
+        "sha256_atual": "5c08f51c466ed2e6b870f8162765e6fed058ebb3e160b91496d60a329eab7d8d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Addresses.lean",
+        "sha256_atual": "e73e58dbefabbe8cee75beceff126e9885952b78462f9cf74104a8ededcb31a1",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Atoms.lean",
+        "sha256_atual": "aaaf448efe35941e70486152b16d68c9024bd328ba932f78364fc4c1b7c15b24",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/BitComplexity.lean",
+        "sha256_atual": "757230861581c0c3b43c8025a62e87cebd621540568571f4ffb1959b677a4910",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Budgets.lean",
+        "sha256_atual": "84b82d0058c066123cd59268aeb62599c2989347d2f6b4554d447a727e6e83ef",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Catalog.lean",
+        "sha256_atual": "3aac8a72b9902320e0926a5b7117a54c1dfdb7a2f8ab7a6d59a5826c57348d6f",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Codebook.lean",
+        "sha256_atual": "5026f0b13530672cbb33bf82328cb181642294e21c55095ddeafcc1ca8642b6f",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Codecs.lean",
+        "sha256_atual": "41845c6157386f309c8dee33b7e43e7cf52519843cc199fc5c1d25e0b08eab97",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Coding.lean",
+        "sha256_atual": "7beaaecd017654f299b319070086336237a7a7b5490b589c65f07e2c35b39b1d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Complexity.lean",
+        "sha256_atual": "6ee9abd4bbffeafc57c97324ae5bcb07a6400bc883dae5a7c583d4c69b134788",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DP.lean",
+        "sha256_atual": "7acebb443a9393cde1ff5e693dbd9a8635873acbaa91bfc023219091e7940d49",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DPBase.lean",
+        "sha256_atual": "8149fc78ff16d3c73ee8550324e647a5200933b54a71089d1f1c9181d2240480",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Dyadic.lean",
+        "sha256_atual": "fda284eb37943c960b80814059fc248c2a68a6f70515ef27c19cbd2aa83f20c8",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicEnvelope.lean",
+        "sha256_atual": "c724d9942f68a27d2f043e56e253cece7934536b0bb7a9b930f6383ec15d4fc9",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicExact.lean",
+        "sha256_atual": "f63e43f1db5329ae27ca61e9bbb35edc77e4bcda510bed0bb2be8ecc56b4a76a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicInterp.lean",
+        "sha256_atual": "ca6ea043970f30faf7bad8f88556de9f6ca6cba3ff359145b43f6c06bc0d178e",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicPhase.lean",
+        "sha256_atual": "72b08fd76a7adf570db6bed3b2ba53f43f5217769b260fe59a9b29be85bc2f3e",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicSync.lean",
+        "sha256_atual": "44ce7e9aeacbdd1ae8c54a9919463ae205260bb056f7675d0972549ac8ea2e4a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/DyadicTools.lean",
+        "sha256_atual": "e558b48ab9a02f41dcbc8824e748a11d762e1f2bdb2dcba43186bf039dfa0277",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Entropy.lean",
+        "sha256_atual": "978226353f6e7dc7935db6c09f5a7afae8d3347b6c037c7c8786cc308842bfeb",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/EntropyLower.lean",
+        "sha256_atual": "ee7906bf518359025a9f0115579e7a2fb9d95156c556a22d3be88c0536ae032a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Formats.lean",
+        "sha256_atual": "2e6a4f7f1e8233462726652264f9077c39276c6f9ebbc51c60df213f029e9be3",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Functional.lean",
+        "sha256_atual": "a23b977b074c07bf74d880e4bec9f516e736a71781892f5114af22ec1ec53e0a",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Indexing.lean",
+        "sha256_atual": "52b9adf1b6613900880f6b1ab992a03b919eff4ae82df6172289d532d12fba35",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Interface.lean",
+        "sha256_atual": "8f545c7bd1df9440b2a5d2ab259b329a80191f2857b7f6e8ea80417a94d11a68",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Interp.lean",
+        "sha256_atual": "ae603a6ca8c3e155496b093ff10dbdfdddc989c6c95f662fd9f76cdc6f501b19",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/JointBudget.lean",
+        "sha256_atual": "5ab251753aba768dad648d3fa4432e91dbb6ab9aa35303139dc1692a46307c83",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Main.lean",
+        "sha256_atual": "929b0bddef0b781f3fb42c7a99f252dc0bda7331f698104f7075e12ff637c52d",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Sawtooth.lean",
+        "sha256_atual": "219180b781dc5718d7b945c9d4508ca13793ee71da8b53a6e89f0ca4ac127592",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Serialization.lean",
+        "sha256_atual": "47015bef28dea6b9510b514112a2fda95ceec2080465d496eb4fae420c8db924",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Trees.lean",
+        "sha256_atual": "8da734a82b59fd08094e9707bfd8cbe328a2069317b5c44cc138477ad88ccd56",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/artigo_2/RequestProject/Uniform.lean",
+        "sha256_atual": "4db69a0edd711ac8ced5131022f22a9a769d108370d56a631997cf1748243653",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Appendix.lean",
+        "sha256_atual": "6bc23bba740d4165953fa7cfd5f0bb782c42ad205cf1100be2f9b27a3c27040c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Basic.lean",
+        "sha256_atual": "3221749989e2ed9289879c21ae88fbb449e0248ce3860ea6fde60a95e18071e6",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Bridge.lean",
+        "sha256_atual": "0a7d8ae7a91b98e84154eee239a6f9ac2e8b40cc77cb0146e3e78490a100086c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Chain.lean",
+        "sha256_atual": "46ce1cdc7f60c654de16e376f1b9a0ef5d8156a126c5dff18113735184d98907",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Enumeration.lean",
+        "sha256_atual": "e83f55bd0e5e17e3fe95a926f3a252c395bbc8f4e2f01edb226cf5f0730944e7",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Error.lean",
+        "sha256_atual": "b235337d01e39b76d39b167880de1a14a560b5fcb7002b56121ee29e4ccb5617",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Main.lean",
+        "sha256_atual": "08e10597b3d3a356f6f4ba194dfd9696d7b8c77ec952823d413008377ec02446",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/Normalization.lean",
+        "sha256_atual": "2b65d8231a57290ea88534d8be436d9c7008e7b7b8e0fffe9677ff3d0e6dd86c",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/RequestProject/ReLU.lean",
+        "sha256_atual": "e559563a5d6e0dbb0e059fa419e782f6de0642f385d1a0fd401655fcd30e2a01",
+        "igual_ao_retrato_anterior": true
+      },
+      {
+        "arquivo": "entradas/parte_1/Solucao_Equivalencia_Montagens_Parte_1 (1).tex",
+        "sha256_atual": "665f435fbbc7da9c3ea9a070f0c71137806fdc599aaf90349c1cdf3fff7af0dd",
+        "igual_ao_retrato_anterior": true
+      }
+    ]
+  },
+  "validacao_dos_pacotes": {
+    "completed_at": "2026-10-22T18:18:08.673571-03:00",
+    "packages": {
+      "parte_1": {
+        "status": "validado_localmente",
+        "lean_modules": 9,
+        "build_jobs": 8036,
+        "sources_unchanged": true,
+        "all_modules_imported": true,
+        "exit_codes": {
+          "build": 0,
+          "axioms": 0,
+          "mapped_names": 0
+        },
+        "axiom_audit": {
+          "axioms_union": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declarations": 509,
+          "dependency_constants_visited": 16633,
+          "modules_with_declarations": [
+            "RequestProject.Appendix",
+            "RequestProject.ReLU",
+            "RequestProject.Enumeration",
+            "RequestProject.Normalization",
+            "RequestProject.Error",
+            "RequestProject.Chain",
+            "RequestProject.Basic",
+            "RequestProject.Bridge"
+          ],
+          "theorems": 348,
+          "unexpected_axioms": []
+        },
+        "environment": "compatibility with current pinned environment; original package configs unavailable",
+        "semantic_integration_with_v2": "pending"
+      },
+      "artigo_2": {
+        "status": "validado_localmente",
+        "lean_modules": 31,
+        "build_jobs": 8058,
+        "sources_unchanged": true,
+        "all_modules_imported": true,
+        "exit_codes": {
+          "build": 0,
+          "axioms": 0,
+          "mapped_names": 0
+        },
+        "axiom_audit": {
+          "axioms_union": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declarations": 2199,
+          "dependency_constants_visited": 47934,
+          "modules_with_declarations": [
+            "RequestProject.Codecs",
+            "RequestProject.Indexing",
+            "RequestProject.Interface",
+            "RequestProject.Formats",
+            "RequestProject.Catalog",
+            "RequestProject.Interp",
+            "RequestProject.Atoms",
+            "RequestProject.Uniform",
+            "RequestProject.Entropy",
+            "RequestProject.Dyadic",
+            "RequestProject.DPBase",
+            "RequestProject.DyadicTools",
+            "RequestProject.Complexity",
+            "RequestProject.Budgets",
+            "RequestProject.Addresses",
+            "RequestProject.Functional",
+            "RequestProject.BitComplexity",
+            "RequestProject.EntropyLower",
+            "RequestProject.DyadicSync",
+            "RequestProject.DyadicInterp",
+            "RequestProject.Codebook",
+            "RequestProject.Serialization",
+            "RequestProject.Sawtooth",
+            "RequestProject.DyadicPhase",
+            "RequestProject.DP",
+            "RequestProject.Coding",
+            "RequestProject.DyadicExact",
+            "RequestProject.JointBudget",
+            "RequestProject.DyadicEnvelope",
+            "RequestProject.Trees"
+          ],
+          "theorems": 1700,
+          "unexpected_axioms": []
+        },
+        "environment": "compatibility with current pinned environment; original package configs unavailable",
+        "semantic_integration_with_v2": "pending"
+      }
+    },
+    "scope": "Compilação integral isolada e dependências axiomáticas; não substitui as pontes semânticas ao artigo e à base v2."
+  },
+  "proximo_passo_independente": "Integrar a normalizacao da Parte I aos tipos concretos da v2, conservando hipoteses, N, H e erro, e auditar as correspondencias semanticas. Manter o Artigo 2 separado ate sua revisao.",
+  "pendencia_documental": "Recuperar o fechamento final da Biblioteca do chat de origem e comparar o hash antes de incorpora-lo."
+}

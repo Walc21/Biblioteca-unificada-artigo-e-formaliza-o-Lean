@@ -1,0 +1,760 @@
+{
+ "_comentario": "Registro persistente das rodadas de 11 e 13/11/2026: provas Lean compiladas nos ambientes artigo_2 e base_integrada, e sincronizacao textual de III.12.3. Reaplicado por reconstruir.py; prova textual nao conta como nova prova Lean.",
+ "casos": {
+  "artigo_2:2.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Cota de interpolação provada com `ContDiffOn ℝ 2 f (Icc a b)` e `derivWithin`, via extensão C² portada da Fase 3 (`Pendencias/Extensao.lean`). Densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.interp_remainder_C2On",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Interpolacao.lean",
+     "linha_lean": 20
+    }
+   ],
+   "observacao_tex": "Cota de interpolação provada com \\texttt{ContDiffOn} de ordem 2 em \\texttt{Icc a b} e \\texttt{derivWithin}, via extensão $C^2$ portada da Fase 3 (\\texttt{Pendencias/Extensao.lean}); densidade e forma ReLU já batiam."
+  },
+  "artigo_2:3.15": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; |f′| ≤ 4R+M/2 com f′ unilateral. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.derivative_control_Icc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 129
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.FRM_subset_FRMIcc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 56
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.extF_mem_FRM",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 59
+    }
+   ],
+   "observacao_tex": "Classe \\texttt{FRMIcc R M} ($C^2$ apenas em $[0,1]$, $f''$ unilateral); $\\mathrm{FRM}\\subseteq\\mathrm{FRMIcc}$ e \\texttt{extF f 0 1} pertence a FRM e coincide com $f$ em $[0,1]$; $|f'|\\le 4R+M/2$ com $f'$ unilateral."
+  },
+  "artigo_2:3.16": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; mesma árvore determinística `uniformTree (jvals f r)` (só amostra f em [0,1]) e consequência para todo N ≥ 2. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.joint_budget_Icc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 137
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.joint_all_N_Icc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 153
+    }
+   ],
+   "observacao_tex": "Classe \\texttt{FRMIcc R M} como em III.3.15; mesma árvore determinística \\texttt{uniformTree (jvals f r)}, que só amostra $f$ em $[0,1]$, e consequência para todo $N\\ge 2$."
+  },
+  "artigo_2:3.17": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; n_ε, H_ε inalterados; `jointErr`, `heightFor` e `supDist` só dependem de f em [0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.height_for_epsilon_Icc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 159
+    }
+   ],
+   "observacao_tex": "Classe \\texttt{FRMIcc R M} como em III.3.15; $n_\\varepsilon$ e $H_\\varepsilon$ inalterados; \\texttt{jointErr}, \\texttt{heightFor} e \\texttt{supDist} só dependem de $f$ em $[0,1]$."
+  },
+  "artigo_2:3.18": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; coberturas de FRMIcc e FRM coincidem (`isCover_iff`), logo `entropyH ε (FRMIcc R M) = entropyH ε (FRM R M)`; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.entropy_codebook_Icc",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 178
+    }
+   ],
+   "observacao_tex": "Classe \\texttt{FRMIcc R M} como em III.3.15; as coberturas de FRMIcc e FRM coincidem (\\texttt{isCover\\_iff}), logo as entropias coincidem; codebook transportado."
+  },
+  "artigo_2:11.2": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.local_asymptotic_error_on",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 229
+    }
+   ],
+   "observacao_tex": "$f\\in C^2(K)$ via \\texttt{ContDiffOn}; $e_f(J)$, $f''$ e $\\omega_{f''}$ unilaterais em $K$, por \\texttt{extF} e lemas de congruência."
+  },
+  "artigo_2:11.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.general_dyadic_envelope_on",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 240
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.general_dyadic_envelope_liminf_on",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 255
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.general_dyadic_envelope_zero_on",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Ponte.lean",
+     "linha_lean": 270
+    }
+   ],
+   "observacao_tex": "$f\\in C^2(K)$ via \\texttt{ContDiffOn}, com \\texttt{curvIOn} ($I(f)$ com $f''$ unilateral); as três formas (eventual, $\\liminf/\\limsup$, caso $I(f)=0$)."
+  },
+  "artigo_2:12.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.quadratic_dyadic_constant_on",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/LeiExata.lean",
+     "linha_lean": 74
+    }
+   ],
+   "observacao_tex": "Mesmas seis conclusões de \\texttt{quadratic\\_dyadic\\_constant} com $q\\in C^2(K)$ (\\texttt{ContDiffOn}) e $q''\\equiv\\kappa$ unilateral em $K$; usa \\texttt{extF} e lemas de congruência (\\texttt{Edia\\_congr}, \\texttt{nThr\\_congr})."
+  },
+  "artigo_3:3.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Definições `Sigma`, `pErr` formalizadas sobre K=[0,1] (domínio de `jointErr`); inclusão, monotonia, cota por ‖f‖ e atingimento do ínfimo (catálogo finito), além da fórmula min{‖f‖, E_{N,H(N)}}. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.schedule_nesting",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Agenda.lean",
+     "linha_lean": 67
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.pErr_eq_min",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Agenda.lean",
+     "linha_lean": 44
+    }
+   ],
+   "observacao_tex": "Definições \\texttt{Sigma} e \\texttt{pErr} sobre $K=[0,1]$ (domínio de \\texttt{jointErr}); inclusão, monotonia, cota por $\\|f\\|$ e atingimento do ínfimo (catálogo finito), além da fórmula $\\min\\{\\|f\\|,E_{N,H(N)}\\}$."
+  },
+  "artigo_3:4.5": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Funcional `rateInf` (𝔞_{α,∞}) e agenda `H2 R M N = ⌈C_H N²⌉` definidos; sup sobre `FRMIcc R M` (C² só em [0,1]) de 𝔞_{2,∞} ≤ max{R,(M+4)/2}; para N ≥ 2, montagem admissível com códigos ≤ C_b N log₂(2N). Base: `joint_all_N_Icc`, `joint_budget_Icc`, `pErr_eq_min`. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.c2_endpoint",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Endpoint.lean",
+     "linha_lean": 31
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.c2_endpoint_bits",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Endpoint.lean",
+     "linha_lean": 56
+    }
+   ],
+   "observacao_tex": "Funcional \\texttt{rateInf} ($\\mathfrak{a}_{\\alpha,\\infty}$) e agenda \\texttt{H2 R M N} $=\\lceil C_H N^2\\rceil$; supremo sobre \\texttt{FRMIcc R M} de $\\mathfrak{a}_{2,\\infty}\\le\\max\\{R,(M+4)/2\\}$; para $N\\ge 2$, montagem admissível com códigos $\\le C_b N\\log_2(2N)$. Base: \\texttt{joint\\_all\\_N\\_Icc}, \\texttt{joint\\_budget\\_Icc}, \\texttt{pErr\\_eq\\_min}."
+  },
+  "artigo_3:4.6": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Piso e_N ≥ 1/(2H(N)), dist(1/(2H), 𝒬_H) = 1/(2H) e a consequência H(N) ≥ (2C)⁻¹N^s (para N ≥ 1), sobre K=[0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.arithmetic_floor",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Agenda.lean",
+     "linha_lean": 125
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.infDist_QH",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Agenda.lean",
+     "linha_lean": 111
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.height_lower_bound",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Agenda.lean",
+     "linha_lean": 160
+    }
+   ],
+   "observacao_tex": "Piso $e_N\\ge 1/(2H(N))$, $\\mathrm{dist}(1/(2H),\\mathcal{Q}_H)=1/(2H)$ e a consequência $H(N)\\ge (2C)^{-1}N^s$ (para $N\\ge 1$), sobre $K=[0,1]$."
+  },
+  "complemento_original:21.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Provado; a forma `runge_majorant` dispensa J ⊆ [-1,1]. Inclui `deriv2_runge`. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Runge.runge_majorant_sub",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Runge.lean",
+     "linha_lean": 118
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Runge.runge_majorant",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Runge.lean",
+     "linha_lean": 84
+    }
+   ],
+   "observacao_tex": "Provado; a forma \\texttt{runge\\_majorant} dispensa $J\\subseteq[-1,1]$. Inclui \\texttt{deriv2\\_runge}."
+  },
+  "artigo_1:6.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "base_v2",
+     "nome": "PendenciasParte1.certRefine",
+     "tipo": "theorem",
+     "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+     "linha_lean": 55
+    },
+    {
+     "pacote": "base_v2",
+     "nome": "PendenciasParte1.certified_refinement",
+     "tipo": "theorem",
+     "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+     "linha_lean": 135
+    }
+   ],
+   "observacao_tex": "Provas: \\code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_1:6.4": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "base_v2",
+     "nome": "PendenciasParte1.certified_refinement",
+     "tipo": "theorem",
+     "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+     "linha_lean": 135
+    }
+   ],
+   "observacao_tex": "Provas: \\code{PendenciasParte1.certified_refinement}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_2:3.12": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.coding_formats_comparison",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Formatos.lean",
+     "linha_lean": 71
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.coding_formats_comparison}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_2:3.25": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Programa computável `gen`/`select`/`enumSelect`; = `RepCat` e devolve `canon` quando J é avaliado exatamente em ℚ. Testado com `#eval` (|𝓛₂| = 252; 42 e 102 representações para D = 0, 1, H = 2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.gen_eq_RepCat",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Enumeracao.lean",
+     "linha_lean": 56
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.enumSelect_eq_canon",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Enumeracao.lean",
+     "linha_lean": 136
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.gen_eq_RepCat, Pendencias.enumSelect_eq_canon}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_2:6.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Tabela em pós-ordem com o κ-mínimo por estado (`fixTable`, colagem por w), custo = `Cfix`, raiz = rotulação κ-mínima de `fixed_global` (via Lema 5.2 `tie_concatenation`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.DPprog.fixTable_cost",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/ProgDin.lean",
+     "linha_lean": 190
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.DPprog.fixRoot_spec",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/ProgDin.lean",
+     "linha_lean": 244
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.DPprog.fixTable_cost, Pendencias.DPprog.fixRoot_spec}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_2:7.4": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Tabela `varTable` (candidato folha + colagens, troca só se κ diminui), custo = `Cvar`, raiz = ótimo `Cstar` e representação κ-mínima de `variable_global`. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.DPprog.varTable_cost",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/ProgDin.lean",
+     "linha_lean": 316
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.DPprog.varRoot_spec",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/ProgDin.lean",
+     "linha_lean": 339
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.DPprog.varTable_cost, Pendencias.DPprog.varRoot_spec}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_2:12.3": {
+   "status": "prova_textual_sincronizada",
+   "observacao_adicional": "[13/11/2026] Demonstracao textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a funcao quadratica por partes. PDF recompilado nesta rodada.",
+   "resultados_lean": [],
+   "observacao_tex": "Demonstracao textual sincronizada com \\code{Artigo.synchronized_phases}; usa contagem exata e periodicidade, sem o envelope $C^2$ global."
+  },
+  "artigo_3:3.2": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Funcional `rateQ` (q<∞) e `rateInf` (q=∞); constantes `C = 2^α` e `K = (1+2·(2^α)^q)^{1/q}` só dependem de α, q. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.dyadic_reduction",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Taxa.lean",
+     "linha_lean": 142
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.dyadic_reduction_inf",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Taxa.lean",
+     "linha_lean": 181
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Agenda.dyadic_reduction, Pendencias.Agenda.dyadic_reduction_inf}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:3.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Com H(1) ≥ 2: 𝔞(x) = 0 e 𝔞(√2 x) > 0, para 0<q<∞ e q=∞ (irracionalidade de √2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.homogeneity_failure",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Taxa.lean",
+     "linha_lean": 253
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.homogeneity_failure_inf",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Taxa.lean",
+     "linha_lean": 269
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Agenda.homogeneity_failure, Pendencias.Agenda.homogeneity_failure_inf}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:5.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Definições `MAtom` (s ∈ ℚ qualquer), `MTree`, `MWF`, `MAsm`, `MAsmNH`; inclusões 𝓛 ⊂ 𝓛^□, 𝒜 ⊂ 𝒜^□, 𝒜_{N,H} ⊂ 𝒜^□_{N,H}. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.marked_extends",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 157
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.Atom.toM_injective",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 52
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Marcada.marked_extends, Pendencias.Marcada.Atom.toM_injective}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:5.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] Definições `canonShape` (𝒯(S)), `RedReLU`, `Hcan`; H_can = maior altura dos átomos da montagem canônica; folhas de 𝒯(S) sem quebras no interior. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.RedReLU.Hcan",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 265
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 274
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.canonShape_no_interior",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 203
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.RedReLU.canon_leaves_free",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Marcada.lean",
+     "linha_lean": 280
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Marcada.RedReLU.Hcan, Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight, Pendencias.Marcada.canonShape_no_interior, Pendencias.Marcada.RedReLU.canon_leaves_free}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:5.7": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] ω₂ e Besov pela norma diádica do texto em [0,1]; C = 4 + 2^{γ+1}; hipótese A_α(f) ≤ A na forma e_N ≤ A N^{-α}; conclusões B^{θ*}_{∞,∞} e B^θ_{∞,p} (θ<θ*, 0<p<∞). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.inverse_modulus",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 167
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.inverse_besov",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 262
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Agenda.inverse_modulus, Pendencias.Agenda.inverse_besov}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:5.8": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] H(N) ≤ C N^γ ⟹ 𝒜^α_q ⊂ B^{α/(α+γ)}_{∞,∞} (q<∞ via IV.3.2 e q=∞); agendas `Hsk` = H_{s,κ} em [0,1] (C_K = 8): ϑ_s e ordens < ϑ_s com fator logarítmico. Montagens H(N)-Lipschitz (`Sigma_lipschitz`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.raw_library_inverse_inf",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 419
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.raw_library_inverse",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 430
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.schedule_raw_inverse",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 536
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.vartheta_eq",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 526
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Agenda.raw_library_inverse_inf, Pendencias.Agenda.raw_library_inverse, Pendencias.Agenda.schedule_raw_inverse, Pendencias.Agenda.vartheta_eq}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:5.10": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] ω₂(f,1/N) ≤ 4 𝓡_N(f) para toda agenda, toda f e todo N (`realN`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Agenda.universal_inverse",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Inversa.lean",
+     "linha_lean": 109
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.Agenda.universal_inverse}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "complemento_original:6.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[11/11/2026] σ_N^dia = `Edia`; f ∈ C²(K) via `ContDiffOn`; taxas M L²/(8N²) (N = 2^r) e M L²/(2N²); montagem racional na mesma árvore (qualquer `DShape`) com erro < ‖f − P_Λ f‖ + δ. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.tree_rate_pow",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Arvores.lean",
+     "linha_lean": 54
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.tree_rate",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Arvores.lean",
+     "linha_lean": 62
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.tree_rationalization",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Arvores.lean",
+     "linha_lean": 255
+    }
+   ],
+   "observacao_tex": "Provas: \\code{Pendencias.tree_rate_pow, Pendencias.tree_rate, Pendencias.tree_rationalization}. Ver declaracoes e contratos nos fontes Lean."
+  },
+  "artigo_3:4.1": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Jackson racional em raiz diadica geral, constante absoluta 8 e versao uniforme sobre bolas; Whitney demonstrada, sem hipotese adicional nao provada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.rational_jackson_height",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Jackson.lean",
+     "linha_lean": 508
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.rational_jackson_uniform",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Jackson.lean",
+     "linha_lean": 678
+    }
+   ],
+   "observacao_tex": "Jackson racional em raiz diadica geral, constante absoluta 8 e versao uniforme sobre bolas; Whitney demonstrada, sem hipotese adicional nao provada."
+  },
+  "artigo_3:4.2": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Inclusoes diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diadica geral. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.direct_besov_height",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Direta.lean",
+     "linha_lean": 594
+    }
+   ],
+   "observacao_tex": "Inclusoes diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diadica geral."
+  },
+  "artigo_3:4.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Cotas quantitativas uniformes sobre bolas nos tres regimes, com constantes independentes da funcao e do raio. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.uniform_besov_ball",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Direta.lean",
+     "linha_lean": 718
+    }
+   ],
+   "observacao_tex": "Cotas quantitativas uniformes sobre bolas nos tres regimes, com constantes independentes da funcao e do raio."
+  },
+  "artigo_3:5.12": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Jackson para o funcional de realizacao em [0,1], cota bilateral e versao uniforme; constantes universais explicitas. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.regularized_jackson",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Realizacao.lean",
+     "linha_lean": 87
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.regularized_jackson_uniform",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Realizacao.lean",
+     "linha_lean": 119
+    }
+   ],
+   "observacao_tex": "Jackson para o funcional de realizacao em [0,1], cota bilateral e versao uniforme; constantes universais explicitas."
+  },
+  "artigo_3:5.13": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Igualdades de classes de Besov e realizacao em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.complete_besov_reversibility",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Realizacao.lean",
+     "linha_lean": 393
+    }
+   ],
+   "observacao_tex": "Igualdades de classes de Besov e realizacao em todos os regimes declarados, incluindo folga polinomial."
+  },
+  "artigo_3:5.14": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Estabilidade das igualdades para familias aninhadas que contem zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.architecture_stable_reversibility",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Realizacao.lean",
+     "linha_lean": 448
+    }
+   ],
+   "observacao_tex": "Estabilidade das igualdades para familias aninhadas que contem zero e as montagens na escala linear declarada."
+  },
+  "complemento_original:6.2": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Cota assintotica com nos livres e derivadas unilaterais para funcoes C2 no intervalo fechado. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.NosLivres.free_knots",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/NosLivres.lean",
+     "linha_lean": 123
+    }
+   ],
+   "observacao_tex": "Cota assintotica com nos livres e derivadas unilaterais para funcoes C2 no intervalo fechado."
+  },
+  "complemento_original:6.3": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Estimativa direta em raiz diadica geral, constante de Whitney explicita e montagem racional com erro adicional arbitrario. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.besov_direct",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/BesovDireta.lean",
+     "linha_lean": 129
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Jackson.besov_direct_whitney",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/BesovDireta.lean",
+     "linha_lean": 109
+    }
+   ],
+   "observacao_tex": "Estimativa direta em raiz diadica geral, constante de Whitney explicita e montagem racional com erro adicional arbitrario."
+  },
+  "artigo_3:5.2": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Teorema completo exact_shallow_reversal para parametros reais: equivalencia marcada e aritmetica, construcao canonica, minimalidade e unicidade inclusive dos rotulos atomicos, M+1 <= N_can <= 1+sum d_j e equivalencia com a biblioteca original quando todas as inclinacoes sao nao nulas. Igualdade de funcoes em [0,1], como no TeX; inclui M=0. Build Pendencias e auditoria de axiomas aprovados, apenas propext, Classical.choice, Quot.sound.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.RealReLU.exact_shallow_reversal",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/ReversaoOriginal.lean",
+     "linha_lean": 219
+    }
+   ],
+   "observacao_tex": "Reversibilidade rasa completa para parametros reais: equivalencia aritmetica, arvore canonica unica (inclusive rotulos), cotas explicitas de folhas e condicao de inclinacoes nao nulas para a biblioteca original. Prova: \\code{RealReLU.exact_shallow_reversal}; funcoes em $[0,1]$, incluindo $M=0$."
+  },
+  "artigo_3:5.9": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] Teorema do pente de tendas IV.5.9 concluido em Pendencias.PenteGemini.critical_tent_comb: continuidade, aproximacao para todo N >= 1 na biblioteca original e nao pertencimento as classes Besov acima e no expoente critico para todo r finito. Build Pendencias e auditoria agregada passaram; axiomas permitidos.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.PenteGemini.critical_tent_comb",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/Pente.lean",
+     "linha_lean": 1194
+    }
+   ],
+   "observacao_tex": "Teorema formalizado na biblioteca original: continuidade, taxa para todo $N\\ge1$ e nao pertencimento as classes Besov prescritas. Prova: \\code{Pendencias.PenteGemini.critical_tent_comb}."
+  },
+  "artigo_3:5.4": {
+   "status": "formalizado_compilado",
+   "observacao_adicional": "[13/11/2026] IV.5.4 fechado nas duas direcoes, com a cota inversa CORRIGIDA aprovada pelo usuário (a cota impressa e falsa: R(x)=x, M=0, D=0, W=1). Volta: H_can(R) <= 2^(D+1)(M+2)W^(M+3) e log2 H_can <= 5[(M+1)log2(2W)+D+log2(M+1)] (AlturaInversa.lean); no_additive_constant_fix mostra que nenhum termo aditivo conserta a versao antiga. Ida: forma ancorada reduzida e codigo prefix-free de comprimento <= 40 N floor(log2 2H) (FormaAncorada.lean, CodigoAncorado.lean). Ressalva: a forma reduzida e a estrutura Anchored, sem ponte explicita para RealReLU. Enunciado original preservado em verificacao/IV_5_4/IV_5_4_trecho_original.tex.",
+   "resultados_lean": [
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.AlturaInversa.Hcan_le",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/AlturaInversa.lean",
+     "linha_lean": 365
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/AlturaInversa.lean",
+     "linha_lean": 376
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.AlturaInversa.no_additive_constant_fix",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/AlturaInversa.lean",
+     "linha_lean": 442
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.Ancorada.anchored_form",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/FormaAncorada.lean",
+     "linha_lean": 465
+    },
+    {
+     "pacote": "artigo_2",
+     "nome": "Pendencias.Marcada.Ancorada.direct_part",
+     "tipo": "theorem",
+     "arquivo_lean": "Pendencias/CodigoAncorado.lean",
+     "linha_lean": 175
+    }
+   ],
+   "observacao_tex": "Formalizado nas duas direcoes; a cota inversa foi corrigida (fator $M+1$, constante $C=5$) porque a impressa e falsa para $M=0$. Provas: \\code{Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound} e \\code{Pendencias.Marcada.Ancorada.direct_part}."
+  }
+ }
+}

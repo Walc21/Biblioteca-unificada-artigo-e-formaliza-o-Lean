@@ -1,0 +1,197 @@
+Montagens.Active (α β : ℝ) (a : Montagens.Atom) : Prop
+Montagens.Agree (Λ : Finset Montagens.Atom) : Prop
+Montagens.AlocNH (α β : ℝ) (N H : ℕ) : Set (Montagens.CK α β)
+Montagens.AlocNH_eq_AstrNH {α β : ℝ} (hK : α < β) (N H : ℕ) : Montagens.AlocNH α β N H = Montagens.AstrNH α β N H
+Montagens.Aloc_eq_Astr {α β : ℝ} (hK : α < β) : Montagens.Aloc α β = Montagens.Astr α β
+Montagens.AstrNH (α β : ℝ) (N H : ℕ) : Set (Montagens.CK α β)
+Montagens.Atom : Type
+Montagens.Atom.height (a : Montagens.Atom) : ℕ
+Montagens.B2 (α β : ℝ) : Set (Montagens.CK α β)
+Montagens.B3 (α β : ℝ) : Set (ℝ → ℝ)
+Montagens.B3_eq_Bcon {α β : ℝ} (hK : α < β) : Montagens.B3 α β = Montagens.Bcon α β
+Montagens.Bcon (α β : ℝ) : Set (ℝ → ℝ)
+Montagens.Budget (N H : ℕ) (Λ : Finset Montagens.Atom) : Prop
+Montagens.Cell : Type
+Montagens.CellRep (i : Montagens.Phase) (α β : ℝ) (g : Montagens.CK α β) (F : Finset Montagens.Cell)
+  (e : Montagens.Cell → ℕ) : Prop
+Montagens.CellRepG (i : Montagens.Phase) (α β : ℝ) (G : ℝ → ℝ) (F : Finset Montagens.Cell) (e : Montagens.Cell → ℕ) :
+  Prop
+Montagens.ContOn (α β : ℝ) (G : ℝ → ℝ) : Prop
+Montagens.Cover (Kset : Set ℝ) (Λ : Finset Montagens.Atom) : Prop
+Montagens.Dy : Set ℝ
+Montagens.E0 {α β : ℝ} (hK : α ≤ β) (g : Montagens.CK α β) : C(ℝ, ℝ)
+Montagens.Err {α β : ℝ} (f : Montagens.CK α β) (S : Set (Montagens.CK α β)) : ENNReal
+Montagens.Err_empty {α β : ℝ} (f : Montagens.CK α β) : Montagens.Err f ∅ = ⊤
+Montagens.J (c : Montagens.Cell) : Set ℝ
+Montagens.LQ (c : Montagens.Cell) : ℚ
+Montagens.LocalRep (α β : ℝ) (g : Montagens.CK α β) (Λ : Finset Montagens.Atom) : Prop
+Montagens.MatchK (α β : ℝ) (g : Montagens.CK α β) (Λ : Finset Montagens.Atom) : Prop
+Montagens.NormChain (α β : ℝ) (Λ : Finset Montagens.Atom) : Type
+Montagens.NormChain.Fpart {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) (r : ℕ) :
+  r < q.M → ℝ → ℝ
+Montagens.NormChain.Rext {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) : ℝ → ℝ
+Montagens.NormChain.Rext_anchor {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) (x : ℝ) :
+  q.Rext x =
+    (q.a q.i0).line ↑(q.t 0) + ↑(q.sl q.i0) * (x - ↑(q.t 0)) +
+      ∑ j with 1 ≤ ↑j, ↑(q.wt j) * Montagens.relu (x - ↑(q.t j.castSucc))
+Montagens.NormChain.Rext_of_M_eq_one {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ)
+  (hM1 : q.M = 1) : q.Rext = (q.a q.i0).line
+Montagens.NormChain.Rext_sum {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) (x : ℝ) :
+  q.Rext x = ↑q.c0 + ↑(q.sl q.i0) * x + ∑ j with 1 ≤ ↑j, ↑(q.wt j) * Montagens.relu (x - ↑(q.t j.castSucc))
+Montagens.NormChain.extension {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) (hK : α < β)
+  {g : Montagens.CK α β} (h : Montagens.LocalRep α β g Λ) :
+  Continuous q.Rext ∧
+    (∀ (j : Fin q.M) (x : ℝ), ↑(q.t j.castSucc) ≤ x → x ≤ ↑(q.t j.succ) → q.Rext x = (q.a j).line x) ∧
+      (∀ (z : ↑(Set.Icc α β)), q.Rext ↑z = g z) ∧
+        (∀ x ≤ ↑(q.t 0), q.Rext x = (q.a q.i0).line x) ∧
+          (∀ (x : ℝ), ↑(q.t q.iLast.castSucc) ≤ x → q.Rext x = (q.a q.iLast).line x) ∧
+            (∀ (j : Fin (q.M + 1)), 1 ≤ ↑j → ↑j < q.M → ↑(q.t j) ∈ Montagens.Kint α β ∩ Montagens.Dy) ∧
+              ∀ (hM : 1 < q.M), ∀ x ≤ ↑(q.t ⟨1, ⋯⟩), q.Rext x = (q.a q.i0).line x
+Montagens.NormChain.incident {α β : ℝ} {Λ : Finset Montagens.Atom} (q : Montagens.NormChain α β Λ) (j : ℕ)
+  (hj : j + 1 < q.M) (h : (q.a ⟨j + 1, hj⟩).line ↑(q.t ⟨j + 1, ⋯⟩) = (q.a ⟨j, ⋯⟩).line ↑(q.t ⟨j + 1, ⋯⟩)) (x : ℝ) :
+  (q.a ⟨j + 1, hj⟩).line x - (q.a ⟨j, ⋯⟩).line x = ↑(q.sl ⟨j + 1, hj⟩ - q.sl ⟨j, ⋯⟩) * (x - ↑(q.t ⟨j + 1, ⋯⟩))
+Montagens.NormK (α β : ℝ) (Λ : Finset Montagens.Atom) : Finset Montagens.Atom
+Montagens.O (c : Montagens.Cell) : Set ℝ
+Montagens.P (c : Montagens.Cell) : Set ℝ
+Montagens.Pred (i : Montagens.Phase) (r : ℚ) : Finset ℚ
+Montagens.QH (H : ℕ) : Finset ℚ
+Montagens.RQ (c : Montagens.Cell) : ℚ
+Montagens.Res {α β : ℝ} (G : ℝ → ℝ) (h : Montagens.ContOn α β G) : Montagens.CK α β
+Montagens.ResImage (α β : ℝ) (S : Set (ℝ → ℝ)) : Set (Montagens.CK α β)
+Montagens.Res_E0 {α β : ℝ} (hK : α ≤ β) (g : Montagens.CK α β) (h : Montagens.ContOn α β ⇑(Montagens.E0 hK g)) :
+  Montagens.Res (⇑(Montagens.E0 hK g)) h = g
+Montagens.Res_extOp {α β : ℝ} (hK : α < β) (g : { g // g ∈ Montagens.Aloc α β })
+  (hc : Montagens.ContOn α β ⇑(Montagens.extOp hK g)) : Montagens.Res (⇑(Montagens.extOp hK g)) hc = ↑g
+Montagens.Rext_unique {α β : ℝ} (hK : α < β) {g : Montagens.CK α β} {Λ Λ' : Finset Montagens.Atom}
+  (h : Montagens.LocalRep α β g Λ) (h' : Montagens.LocalRep α β g Λ') (q : Montagens.NormChain α β Λ)
+  (q' : Montagens.NormChain α β Λ') : q.Rext = q'.Rext
+Montagens.Sep (Λ : Finset Montagens.Atom) : Prop
+Montagens.StrongRep (α β : ℝ) (g : Montagens.CK α β) (Λ : Finset Montagens.Atom) : Prop
+Montagens.T : ℕ → ℕ
+Montagens.XQ (c : Montagens.Cell) : ℚ
+Montagens.Zenc (n : ℕ) : ℤ
+Montagens.Zenc_Zinv (m : ℤ) : Montagens.Zenc (Montagens.Zinv m) = m
+Montagens.Zinv (m : ℤ) : ℕ
+Montagens.Zinv_Zenc (n : ℕ) : Montagens.Zinv (Montagens.Zenc n) = n
+Montagens.active_iff {α β : ℝ} (hK : α < β) (a : Montagens.Atom) : Montagens.Active α β a ↔ a.La < β ∧ α < a.Ra
+Montagens.affine_eq_of_two_points {c s c' s' x₁ x₂ : ℝ} (hx : x₁ ≠ x₂) (h₁ : c + s * x₁ = c' + s' * x₁)
+  (h₂ : c + s * x₂ = c' + s' * x₂) (x : ℝ) : c + s * x = c' + s' * x
+Montagens.atomsToCells_spec {α β : ℝ} (i : Montagens.Phase) {g : Montagens.CK α β} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRep α β g Λ) :
+  Montagens.CellRep i α β g (Montagens.atomsToCells Λ) (Montagens.addrOf i Λ) ∧
+    (Montagens.atomsToCells Λ).card = Λ.card ∧
+      Montagens.cellsToAtoms i (Montagens.atomsToCells Λ) (Montagens.addrOf i Λ) = Λ
+Montagens.atomsToCells_specG {α β : ℝ} (i : Montagens.Phase) {G : ℝ → ℝ} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRepG α β G Λ) :
+  Montagens.CellRepG i α β G (Montagens.atomsToCells Λ) (Montagens.addrOf i Λ) ∧
+    (Montagens.atomsToCells Λ).card = Λ.card ∧
+      Montagens.cellsToAtoms i (Montagens.atomsToCells Λ) (Montagens.addrOf i Λ) = Λ
+Montagens.bridge {α β : ℝ} (hK : α < β) :
+  (Montagens.B2 α β = Montagens.Aloc α β ∧ Montagens.Aloc α β = Montagens.Astr α β) ∧
+    Montagens.ResImage α β (Montagens.B3 α β) = Montagens.Aloc α β ∧
+      Montagens.ResImage α β (Montagens.Bcon α β) = Montagens.Astr α β ∧ Montagens.B3 α β = Montagens.Bcon α β
+Montagens.cellsToAtoms_spec {α β : ℝ} (i : Montagens.Phase) {g : Montagens.CK α β} {F : Finset Montagens.Cell}
+  {e : Montagens.Cell → ℕ} (h : Montagens.CellRep i α β g F e) :
+  Montagens.LocalRep α β g (Montagens.cellsToAtoms i F e) ∧
+    (Montagens.cellsToAtoms i F e).card = F.card ∧
+      Montagens.atomsToCells (Montagens.cellsToAtoms i F e) = F ∧
+        ∀ c ∈ F, Montagens.addrOf i (Montagens.cellsToAtoms i F e) c = e c
+Montagens.cellsToAtoms_specG {α β : ℝ} (i : Montagens.Phase) {G : ℝ → ℝ} {F : Finset Montagens.Cell}
+  {e : Montagens.Cell → ℕ} (h : Montagens.CellRepG i α β G F e) :
+  Montagens.LocalRepG α β G (Montagens.cellsToAtoms i F e) ∧
+    (Montagens.cellsToAtoms i F e).card = F.card ∧
+      Montagens.atomsToCells (Montagens.cellsToAtoms i F e) = F ∧
+        ∀ c ∈ F, Montagens.addrOf i (Montagens.cellsToAtoms i F e) c = e c
+Montagens.chainOf {α β : ℝ} (hK : α < β) {g : Montagens.CK α β} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRep α β g Λ) : Montagens.NormChain α β Λ
+Montagens.chainOf_nodes_dyadic {α β : ℝ} (hK : α < β) {g : Montagens.CK α β} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRep α β g Λ) (j : Fin ((Montagens.chainOf hK h).M + 1)) :
+  ↑((Montagens.chainOf hK h).t j) ∈ Montagens.Dy
+Montagens.codec (i : Montagens.Phase) :
+  (∀ (a : Montagens.Atom), Montagens.dec i (Montagens.enc i a) = a) ∧
+    (∀ (n : ℕ), Montagens.enc i (Montagens.dec i n) = n) ∧
+      ∀ (n : ℕ) (x : ℝ), Montagens.lam i n x = (Montagens.dec i n).line x
+Montagens.dK {α β : ℝ} (f g : Montagens.CK α β) : ℝ
+Montagens.dK_isMax {α β : ℝ} (hK : α < β) (f g : Montagens.CK α β) :
+  (∃ z₀, Montagens.dK f g = |f z₀ - g z₀| ∧ ∀ (z : ↑(Set.Icc α β)), |f z - g z| ≤ |f z₀ - g z₀|) ∧
+    Montagens.dK f g = ‖f - g‖ ∧ 0 ≤ Montagens.dK f g
+Montagens.dec (i : Montagens.Phase) (n : ℕ) : Montagens.Atom
+Montagens.enc (i : Montagens.Phase) (a : Montagens.Atom) : ℕ
+Montagens.errors_eq {α β : ℝ} (hK : α < β) (f : Montagens.CK α β) (N H : ℕ) :
+  Montagens.Eloc N H f = Montagens.Econ N H f
+Montagens.extOp {α β : ℝ} (hK : α < β) (g : { g // g ∈ Montagens.Aloc α β }) : C(ℝ, ℝ)
+Montagens.geometry (c : Montagens.Cell) :
+  Montagens.RQ c - Montagens.LQ c = (2 ^ c.1)⁻¹ ∧
+    0 < Montagens.RQ c - Montagens.LQ c ∧
+      Montagens.XQ c = (Montagens.LQ c + Montagens.RQ c) / 2 ∧
+        IsClosed (Montagens.J c) ∧
+          Montagens.L c < Montagens.R c ∧
+            (Montagens.O c).Nonempty ∧
+              Montagens.L c < Montagens.X c ∧
+                Montagens.X c < Montagens.R c ∧
+                  Montagens.L c ∈ Montagens.Dy ∧
+                    Montagens.R c ∈ Montagens.Dy ∧
+                      Montagens.X c ∈ Montagens.Dy ∧ ∀ (d : Montagens.Cell), Montagens.J c = Montagens.J d → c = d
+Montagens.heights_eq {α β : ℝ} (hK : α < β) (f : Montagens.CK α β) (N : ℕ) (ε : ℝ) :
+  {H | 2 ≤ H ∧ Montagens.Eloc N H f ≤ ENNReal.ofReal ε} = {H | 2 ≤ H ∧ Montagens.Econ N H f ≤ ENNReal.ofReal ε} ∧
+    sInf {H | 2 ≤ H ∧ Montagens.Eloc N H f ≤ ENNReal.ofReal ε} =
+      sInf {H | 2 ≤ H ∧ Montagens.Econ N H f ≤ ENNReal.ofReal ε}
+Montagens.ht (r : ℚ) : ℕ
+Montagens.ht_props (r : ℚ) : 1 ≤ Montagens.ht r ∧ r.num.natAbs ≤ Montagens.ht r ∧ r.den ≤ Montagens.ht r
+Montagens.line_forms (a : Montagens.Atom) :
+  (∀ (x : ℝ), a.line x = ↑a.u + ↑a.b * x) ∧ a.line a.Xa = ↑a.y ∧ Continuous a.line ∧ ↑a.b ≠ 0
+Montagens.norm_fixed_of_active {α β : ℝ} {Λ : Finset Montagens.Atom} (h : ∀ a ∈ Λ, Montagens.Active α β a) :
+  Montagens.NormK α β Λ = Λ
+Montagens.norm_fixed_of_subset {α β : ℝ} {Λ : Finset Montagens.Atom} (h : ∀ a ∈ Λ, a.Ja ⊆ Montagens.K α β) :
+  Montagens.NormK α β Λ = Λ
+Montagens.normalization {α β : ℝ} (hK : α < β) {g : Montagens.CK α β} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRep α β g Λ) :
+  (Montagens.NormK α β Λ ⊆ Λ ∧ (Montagens.NormK α β Λ).card ≤ Λ.card) ∧
+    (Montagens.Cover (Montagens.K α β) (Montagens.NormK α β Λ) ∧ (Montagens.NormK α β Λ).Nonempty) ∧
+      (∀ a ∈ Montagens.NormK α β Λ, ∀ b ∈ Montagens.NormK α β Λ, a ≠ b → a.Ja ∩ b.Ja ⊆ Montagens.Kint α β) ∧
+        Montagens.StrongRep α β g (Montagens.NormK α β Λ) ∧
+          Montagens.NormK α β (Montagens.NormK α β Λ) = Montagens.NormK α β Λ
+Montagens.normalizationG {α β : ℝ} (hK : α < β) {G : ℝ → ℝ} {Λ : Finset Montagens.Atom}
+  (h : Montagens.LocalRepG α β G Λ) :
+  (Montagens.NormK α β Λ ⊆ Λ ∧ (Montagens.NormK α β Λ).card ≤ Λ.card) ∧
+    (Montagens.Cover (Montagens.K α β) (Montagens.NormK α β Λ) ∧ (Montagens.NormK α β Λ).Nonempty) ∧
+      (∀ a ∈ Montagens.NormK α β Λ, ∀ b ∈ Montagens.NormK α β Λ, a ≠ b → a.Ja ∩ b.Ja ⊆ Montagens.Kint α β) ∧
+        Montagens.StrongRepG α β G (Montagens.NormK α β Λ) ∧
+          Montagens.NormK α β (Montagens.NormK α β Λ) = Montagens.NormK α β Λ
+Montagens.pack (x : ℕ × ℕ × ℕ × ℕ) : ℕ
+Montagens.pair (u v : ℕ) : ℕ
+Montagens.pair_props :
+  (∀ (n : ℕ),
+      Montagens.T (Montagens.wdiag n) ≤ n ∧
+        n < Montagens.T (Montagens.wdiag n + 1) ∧ Montagens.vdiag n ≤ Montagens.wdiag n) ∧
+    (∀ (u v : ℕ), Montagens.unpair (Montagens.pair u v) = (u, v)) ∧
+      (∀ (n : ℕ), Montagens.pair (Montagens.unpair n).1 (Montagens.unpair n).2 = n) ∧
+        (∀ (x : ℕ × ℕ × ℕ × ℕ), Montagens.unpack (Montagens.pack x) = x) ∧
+          (∀ (n : ℕ), Montagens.pack (Montagens.unpack n) = n) ∧
+            ∀ (n : ℕ), Montagens.wdiag n = ((8 * n + 1).sqrt - 1) / 2
+Montagens.prec : Montagens.Phase → ℚ → ℚ → Prop
+Montagens.prec_coincide (i : Montagens.Phase) (r s : ℚ) : Montagens.prec i r s ↔ Montagens.prec2 r s
+Montagens.projK {α β : ℝ} (hK : α ≤ β) (x : ℝ) : ↑(Set.Icc α β)
+Montagens.rank (i : Montagens.Phase) (r : ℚ) : ℕ
+Montagens.rankStar (i : Montagens.Phase) (r : Montagens.Qstar) : ℕ
+Montagens.rankStar_bijective (i : Montagens.Phase) : Function.Bijective (Montagens.rankStar i)
+Montagens.rank_bijective (i : Montagens.Phase) : Function.Bijective (Montagens.rank i)
+Montagens.separated_inter {u v p q : ℝ} (huv : u < v) (hpq : p < q) (h : Set.Ioo u v ∩ Set.Ioo p q = ∅)
+  (hne : (Set.Icc u v ∩ Set.Icc p q).Nonempty) :
+  v = p ∧ Set.Icc u v ∩ Set.Icc p q = {v} ∨ q = u ∧ Set.Icc u v ∩ Set.Icc p q = {u}
+Montagens.separated_of_disjoint {u v p q : ℝ} (huv : u < v) (hpq : p < q) (h : Set.Ioo u v ∩ Set.Ioo p q = ∅) :
+  v ≤ p ∨ q ≤ u
+Montagens.sortAtoms (F : Finset Montagens.Atom) : List Montagens.Atom
+Montagens.sortAtoms_props (F : Finset Montagens.Atom) :
+  (Montagens.sortAtoms F).length = F.card ∧
+    (Montagens.sortAtoms F).Nodup ∧
+      (∀ (a : Montagens.Atom), a ∈ Montagens.sortAtoms F ↔ a ∈ F) ∧
+        List.Pairwise (fun x1 x2 => x1 < x2) (Montagens.sortAtoms F)
+Montagens.tau (i j : Montagens.Phase) (n : ℕ) : ℕ
+Montagens.tau_props (i j : Montagens.Phase) (n : ℕ) (x : ℝ) :
+  Montagens.dec j (Montagens.tau i j n) = Montagens.dec i n ∧
+    Montagens.Ci j (Montagens.tau i j n) = Montagens.Ci i n ∧
+      Montagens.lam j (Montagens.tau i j n) x = Montagens.lam i n x
+Montagens.unpack (n : ℕ) : ℕ × ℕ × ℕ × ℕ
+Montagens.unpair (n : ℕ) : ℕ × ℕ
+Montagens.zeta (a : Montagens.Atom) : Lex (ℚ × Lex (ℕ × Lex (ℤ × Lex (ℚ × ℚ))))

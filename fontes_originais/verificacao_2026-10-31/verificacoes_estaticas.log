@@ -1,0 +1,7 @@
+PASS: 41 source modules, SHA-256 verified, all imports resolved, no import cycles
+NOTE: this is a static check; it does not validate the Lean kernel or compile proofs.
+PASS: 53 Lean modules (41 baseline unchanged), all local imports found, no sorry/admit/axiom in bridges.
+WARNING: static check only; kernel validation and axiom audit run on the user Lean installation.
+PASS: 12 semantic modules + entrypoint, references statically resolved; originals untouched
+NOTE: Lean proof validation requires `lake build SemanticAudit`.
+PASS: 130 arquivos anteriores conferidos; 10 alteracoes editoriais registradas; originais preservados.

@@ -1,0 +1,2 @@
+PASS: 41 source modules, SHA-256 verified, all imports resolved, no import cycles
+NOTE: this is a static check; it does not validate the Lean kernel or compile proofs.

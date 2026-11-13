@@ -1,0 +1,98 @@
+{
+  "completed_at": "2026-10-22T20:01:42.294895-03:00",
+  "packages": {
+    "parte_1": {
+      "status": "validado_localmente",
+      "lean_modules": 9,
+      "build_jobs": 8036,
+      "sources_unchanged": true,
+      "all_modules_imported": true,
+      "exit_codes": {
+        "build": 0,
+        "axioms": 0,
+        "mapped_names": 0
+      },
+      "axiom_audit": {
+        "axioms_union": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "declarations": 509,
+        "dependency_constants_visited": 16633,
+        "modules_with_declarations": [
+          "RequestProject.Appendix",
+          "RequestProject.ReLU",
+          "RequestProject.Enumeration",
+          "RequestProject.Normalization",
+          "RequestProject.Error",
+          "RequestProject.Chain",
+          "RequestProject.Basic",
+          "RequestProject.Bridge"
+        ],
+        "theorems": 348,
+        "unexpected_axioms": []
+      },
+      "environment": "compatibility with current pinned environment; original package configs unavailable",
+      "semantic_integration_with_v2": "not_checked_by_this_isolated_validation"
+    },
+    "artigo_2": {
+      "status": "validado_localmente",
+      "lean_modules": 31,
+      "build_jobs": 8058,
+      "sources_unchanged": true,
+      "all_modules_imported": true,
+      "exit_codes": {
+        "build": 0,
+        "axioms": 0,
+        "mapped_names": 0
+      },
+      "axiom_audit": {
+        "axioms_union": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "declarations": 2199,
+        "dependency_constants_visited": 47934,
+        "modules_with_declarations": [
+          "RequestProject.Codecs",
+          "RequestProject.Indexing",
+          "RequestProject.Interface",
+          "RequestProject.Formats",
+          "RequestProject.Catalog",
+          "RequestProject.Interp",
+          "RequestProject.Atoms",
+          "RequestProject.Uniform",
+          "RequestProject.Entropy",
+          "RequestProject.Dyadic",
+          "RequestProject.DPBase",
+          "RequestProject.DyadicTools",
+          "RequestProject.Complexity",
+          "RequestProject.Budgets",
+          "RequestProject.Addresses",
+          "RequestProject.Functional",
+          "RequestProject.BitComplexity",
+          "RequestProject.EntropyLower",
+          "RequestProject.DyadicSync",
+          "RequestProject.DyadicInterp",
+          "RequestProject.Codebook",
+          "RequestProject.Serialization",
+          "RequestProject.Sawtooth",
+          "RequestProject.DyadicPhase",
+          "RequestProject.DP",
+          "RequestProject.Coding",
+          "RequestProject.DyadicExact",
+          "RequestProject.JointBudget",
+          "RequestProject.DyadicEnvelope",
+          "RequestProject.Trees"
+        ],
+        "theorems": 1700,
+        "unexpected_axioms": []
+      },
+      "environment": "compatibility with current pinned environment; original package configs unavailable",
+      "semantic_integration_with_v2": "not_checked_by_this_isolated_validation"
+    }
+  },
+  "scope": "Compilação integral isolada e dependências axiomáticas; não substitui as pontes semânticas ao artigo e à base v2."
+}

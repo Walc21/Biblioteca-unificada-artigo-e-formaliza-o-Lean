@@ -1,0 +1,245 @@
+\subsection{Erro conjunto sob orçamentos de folhas e altura}
+Os dois orçamentos abaixo são impostos à mesma representação por folhas.
+\begin{definicao}[erro conjunto número--altura]
+Para inteiros $N,H\ge2$, seja $\Asm_{N,H}(K)$ o conjunto das funções $g\in\Asm(K)$ que admitem uma representação como na definição~4.1 com no máximo $N$ folhas e com todos os átomos em $\LL_H$. Defina
+\eqn{65}{E^{\LL}_{N,H}(f)_\infty:=\inf_{g\in\Asm_{N,H}(K)}\normK{f-g}{K},\qquad\inf\varnothing:=+\infty.}
+Quando o conjunto abaixo não é vazio, ponha ainda
+\eqn{66}{H^{\LL}_{\varepsilon,N}(f):=\min\{H\ge2:E^{\LL}_{N,H}(f)_\infty\le\varepsilon\}.}
+\end{definicao}
+$N$ mede a complexidade geométrica e $H$ controla resolução, posição e complexidade aritmética sob o calibre \eqref{eq:46}.
+
+\begin{proposicao}[monotonicidade dos dois orçamentos]
+Para todo $f\in C(K)$ e $N,H\ge2$,
+\eqn{67}{E^{\LL}_{N+1,H}(f)_\infty\le E^{\LL}_{N,H}(f)_\infty,\qquad
+E^{\LL}_{N,H+1}(f)_\infty\le E^{\LL}_{N,H}(f)_\infty.}
+Se
+\[
+E^{\LL}_N(f)_\infty:=\inf\{\normK{f-g}{K}:g\in\Asm(K)\text{ admite no máximo }N\text{ folhas}\},
+\]
+então $E^{\LL}_{N,H}(f)_\infty\downarrow E^{\LL}_N(f)_\infty$ quando $H\to\infty$.
+\end{proposicao}
+\begin{proof}
+As inclusões $\Asm_{N,H}(K)\subseteq\Asm_{N+1,H}(K)$ e $\Asm_{N,H}(K)\subseteq\Asm_{N,H+1}(K)$ provam \eqref{eq:67}. Toda representação finita tem altura máxima finita, logo a união de $\Asm_{N,H}(K)$ sobre $H\ge2$ é exatamente a classe usada para definir $E^{\LL}_N$. O ínfimo sobre essa união é o limite da sequência decrescente de ínfimos.
+\end{proof}
+Fixe $R,M>0$ e considere
+\eqn{68}{\FF_{R,M}=\{f\in C^2[0,1]:\norm f\le R,\ \norm{f''}\le M\}.}
+
+\begin{lema}[controle uniforme da primeira derivada]
+Se $f\in\FF_{R,M}$ e
+\eqn{69}{C_0:=4R+\frac M2,}
+então $\norm{f'}\le C_0$.
+\end{lema}
+\begin{proof}
+Para $x\in[0,1]$, escolha $a\in\{0,1\}$ com $|a-x|\ge1/2$. Taylor com resto de Lagrange dá
+\eqn{70}{|f'(x)|\le\frac{|f(a)|+|f(x)|}{|a-x|}+\frac M2|a-x|
+\le4R+\frac M2=C_0.}
+\end{proof}
+
+\begin{teorema}[controle simultâneo de erro, folhas, altura e bits]
+Defina
+\eqn{71}{C_H:=\max\{4(R+1),2(C_0+1)\}.}
+Para toda potência diádica $n=2^r\ge2$ e todo $f\in\FF_{R,M}$, existe uma montagem $g_n$ com exatamente $n$ folhas tal que
+\eqn{72}{\norm{f-g_n}\le\frac{M+4}{8n^2},}
+\eqn{73}{\heightq_{\max}(g_n)\le C_Hn^2.}
+Nos três formatos do teorema~7.12, a mesma montagem satisfaz
+\eqn{74}{L_{\rm atom}(g_n),L_{\rm ReLU,str}(g_n),L_{\rm ReLU,rat}(g_n)
+=O_{R,M}(n\log(2n)).}
+Consequentemente, para todo inteiro $N\ge2$,
+\eqn{75}{E^{\LL}_{N,\lceil C_HN^2\rceil}(f)_\infty<\frac{M+4}{2N^2}.}
+A construção é determinística: quando $f(t_j)$ é equidistante dos dois pontos admissíveis da grade alternada, escolhe-se o ponto menor, ou, equivalentemente no denominador comum de \eqref{eq:77}, o menor numerador $b_j$.
+\end{teorema}
+\begin{proof}
+Nos nós $t_j=j/n$, $0\le j\le n$, ponha $\Delta=n^{-2}$ e use as grades alternadas
+\eqn{76}{G_j^{(n)}=\Delta\left(\Z+\frac{j\bmod2}{2}\right).}
+Escolha $v_j\in G_j^{(n)}$ mais próximo de $f(t_j)$; no empate, escolha o ponto menor. Então $|v_j-f(t_j)|\le\Delta/2$, e grades consecutivas são disjuntas, de modo que $v_{j+1}\ne v_j$. O interpolante $g_n$ desses dados tem, portanto, $n$ peças com inclinações racionais não nulas; cada peça é um átomo pelo teorema~3.6. A estimativa de interpolação e a estabilidade convexa nos valores nodais dão
+\[
+\norm{f-g_n}\le\frac{M}{8n^2}+\frac1{2n^2}=\frac{M+4}{8n^2},
+\]
+o que prova \eqref{eq:72}.
+
+Resta acompanhar a aritmética sem recorrer a uma cota genérica de soma de racionais. Escreva, de modo comum,
+\eqn{77}{v_j=\frac{b_j}{2n^2},\qquad b_j\in\Z,\quad b_j\equiv j\pmod2.}
+Como $|v_j|\le R+(2n^2)^{-1}$,
+\eqn{78}{|b_j|\le2Rn^2+1.}
+Na folha $J_{r,j}$, o valor central e a inclinação são
+\eqn{79}{y_{0,j}=\frac{b_j+b_{j+1}}{4n^2},\qquad s_j=\frac{b_{j+1}-b_j}{2n}.}
+O numerador de $s_j$ é ímpar, portanto a segunda fração já está reduzida e é não nula. Pelo lema~7.15,
+\eqn{80}{|b_{j+1}-b_j|=2n^2|v_{j+1}-v_j|
+\le2n^2\left(\frac{C_0}n+\frac1{n^2}\right)=2C_0n+2.}
+Reduzir $y_{0,j}$ só diminui sua altura; logo
+\eqn{81}{\heightq(y_{0,j})\le4(R+1)n^2,\qquad\heightq(s_j)\le2(C_0+1)n.}
+Além disso, $r+1\le n$ e $|j|+1\le n$. A definição \eqref{eq:46} e \eqref{eq:71} provam \eqref{eq:73}.
+
+Para os bits, no formato ReLU expandido o intercepto é $c=v_0$, $\heightq(c)\le2(R+1)n^2$; cada nó interno tem altura no máximo $n$; e, de \eqref{eq:80},
+\[
+\heightq(s_j-s_{j-1})\le4(C_0+1)n.
+\]
+Assim, tanto os parâmetros atômicos quanto os parâmetros ReLU desta construção têm altura polinomial em $n$. Nos códigos concretos \eqref{eq:57}--\eqref{eq:58}, cada bloco usa $O_{R,M}(\log(2n))$ bits; há $O(n)$ blocos em qualquer dos três fluxos. Isso prova \eqref{eq:74}. Observe que a cota geral $O(NH)$ do formato racional ingênuo não é saturada por esta família: seus nós têm denominador apenas $n$, e não $2^H$.
+
+Por fim, dado $N\ge2$, tome $n=2^{\lfloor\log_2N\rfloor}$. Então $N/2<n\le N$. A montagem já construída usa no máximo $N$ folhas, tem altura no máximo $C_Hn^2\le C_HN^2$ e erro menor que $(M+4)/(2N^2)$, provando \eqref{eq:75}.
+\end{proof}
+
+\begin{corolario}[altura suficiente para precisão prescrita]
+Para $\varepsilon>0$, seja
+\eqn{82}{n_\varepsilon=
+2^{\left\lceil\log_2\max\left\{2,\sqrt{\frac{M+4}{8\varepsilon}}\right\}\right\rceil},
+\qquad H_\varepsilon=\lceil C_Hn_\varepsilon^2\rceil.}
+Então, uniformemente para $f\in\FF_{R,M}$,
+\eqn{83}{E^{\LL}_{n_\varepsilon,H_\varepsilon}(f)_\infty\le\varepsilon,}
+\eqn{84}{n_\varepsilon=O_{R,M}(\varepsilon^{-1/2}),\qquad
+H_\varepsilon=O_{R,M}(\varepsilon^{-1}),}
+\eqn{85}{L_{\rm atom},L_{\rm ReLU,str},L_{\rm ReLU,rat}
+=O_{R,M}\left(\varepsilon^{-1/2}\log\frac2\varepsilon\right).}
+Em particular, $H^{\LL}_{\varepsilon,n_\varepsilon}(f)\le H_\varepsilon$.
+\end{corolario}
+\begin{proof}
+A escolha de $n_\varepsilon$ torna o lado direito de \eqref{eq:72} no máximo $\varepsilon$. A menor potência de dois acima de um número positivo é menor que duas vezes esse número, salvo o piso fixo $2$; as três ordens seguem então do teorema~7.16.
+\end{proof}
+O denominador diádico comum de \eqref{eq:77} e o controle das diferenças adjacentes fornecem a cota construtiva $H_\varepsilon=O(\varepsilon^{-1})$.
+
+A tabela~\ref{tab:bits} reúne erro, altura e descrição para $f_*(x)=4x(x-1)$, $R=1$ e $M=8$. Nesse caso, $C_0=8$, $C_H=18$, o erro exato é $49/(64N^2)$ e a altura efetiva é $4N^2$. Os três comprimentos são contados bit a bit pelos codificadores.
+\begin{table}[!htbp]\centering
+\caption{Construção do teorema~7.16 para $f_*(x)=4x(x-1)$. $e_{\rm cert}$ é a cota \eqref{eq:72}, $e_{\rm exato}$ é obtido nos extremos e no ponto crítico de cada folha, e $H_N=18N^2$.}\label{tab:bits}
+\small\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{rrrrrrrr}\toprule
+$N$&$e_{\rm cert}$&$e_{\rm exato}$&$\heightq_{\max}$&$H_N$&$L_{\rm atom}$&$L_{\rm str}$&$L_{\rm rat}$\\\midrule
+2&$3/8$&$49/256$&16&72&77&59&37\\
+4&$3/32$&$49/1024$&64&288&195&115&89\\
+8&$3/128$&$49/4096$&256&1152&513&235&211\\
+16&$3/512$&$49/16384$&1024&4608&1243&495&497\\
+32&$3/2048$&$49/65536$&4096&18432&2921&1067&1159\\
+64&$3/8192$&$49/262144$&16384&73728&6731&2329&2669\\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Entropia de uma classe limitada de \texorpdfstring{$C^2$}{C2}}
+Se $\mathcal N_\varepsilon(\FF_{R,M})$ é o menor número de bolas de raio $\varepsilon$ em norma uniforme que cobre a classe, escreva
+\[
+\mathcal H_\varepsilon(\FF_{R,M})=\log_2\mathcal N_\varepsilon(\FF_{R,M}).
+\]
+\begin{teorema}[entropia e codebook explícito]
+Existem $\varepsilon_0,c,C,C_1>0$, dependentes apenas de $R$ e $M$, tais que, para $0<\varepsilon<\varepsilon_0$,
+\eqn{86}{c\varepsilon^{-1/2}\le\mathcal H_\varepsilon(\FF_{R,M})\le C\varepsilon^{-1/2}.}
+Existe também um codebook finito $\CC_\varepsilon\subset\Asm([0,1])$, composto somente por montagens de átomos de $\LL$, com distorção no máximo $\varepsilon$. Quando o codebook e seu decodificador são informação compartilhada, o comprimento de seu índice global de comprimento fixo é
+\eqn{87}{L_\varepsilon^{\rm global}(\CC_\varepsilon):=
+\lceil\log_2|\CC_\varepsilon|\rceil\le C_1\varepsilon^{-1/2}.}
+Esse codebook atinge em ordem a entropia métrica da classe em cardinalidade e em bits de índice global.
+\end{teorema}
+\begin{proof}
+\emph{Cota superior em \eqref{eq:86}.} Tome
+\[
+N=\left\lceil\sqrt{M/\varepsilon}\right\rceil+1,\qquad h=1/N,
+\]
+e seja $P_Nf$ o interpolante nos nós $j/N$. A estimativa local \eqref{eq:34}, válida para intervalos arbitrários, fornece $\norm{f-P_Nf}\le Mh^2/8\le\varepsilon/8$. Quantize cada $v_j=f(j/N)$ no múltiplo mais próximo de $\Delta=\varepsilon/4$, obtendo $v'_j$ com $|v'_j-v_j|\le\varepsilon/8$. O interpolante quantizado $g$ satisfaz $\norm{f-g}\le\varepsilon/4<\varepsilon$.
+
+Resta contar os vetores quantizados que podem ocorrer. Há $O(\varepsilon^{-1})$ escolhas para $v'_0$. Dado $v'_0$, \eqref{eq:70} implica
+\[
+|v'_1-v'_0|\le C_0h+\varepsilon/4,
+\]
+e portanto há $O((N\varepsilon)^{-1})=O(\varepsilon^{-1/2})$ escolhas para $v'_1$. Para $1\le j\le N-1$, a identidade integral
+\[
+v_{j+1}-2v_j+v_{j-1}=\int_0^h\int_0^h
+f''((j-1)h+s+t)\,ds\,dt
+\]
+dá módulo no máximo $Mh^2\le\varepsilon$. A quantização altera a diferença segunda em no máximo $4(\varepsilon/8)=\varepsilon/2$. Dados $v'_{j-1}$ e $v'_j$, o próximo valor está, pois, em um intervalo de comprimento $3\varepsilon$, que contém no máximo uma constante universal $K$ de pontos da grade de passo $\varepsilon/4$. Consequentemente, o número total de vetores é
+\[
+O(\varepsilon^{-1})\,O(\varepsilon^{-1/2})\,K^N
+=\exp\bigl(O(\varepsilon^{-1/2})\bigr),
+\]
+e a cota superior segue ao tomar $\log_2$.
+
+\emph{Cota inferior em \eqref{eq:86}.} Fixe $\psi\in C_c^2(0,1)$ com $\norm\psi=1$. Ponha $A=4\varepsilon$ e
+\[
+w=\sqrt{\frac{A\norm{\psi''}}M}.
+\]
+Para $\varepsilon$ pequeno, $A\le R$ e cabem $m=\lfloor1/w\rfloor\asymp\varepsilon^{-1/2}$ intervalos consecutivos de largura $w$ em $[0,1]$. Se $a_j=(j-1)w$, defina
+\[
+\varphi_j(x)=A\psi\left(\frac{x-a_j}w\right),\qquad
+f_S=\sum_{j\in S}\varphi_j,\quad S\subseteq\{1,\ldots,m\}.
+\]
+Os suportes são disjuntos, $\norm{f_S}\le A\le R$ e $\norm{f_S''}\le M$. Se $S\ne T$, então $\norm{f_S-f_T}=A=4\varepsilon$. Logo os $2^m$ elementos formam um empacotamento $4\varepsilon$-separado; uma bola de raio $\varepsilon$ contém no máximo um deles. Assim, $\mathcal N_\varepsilon\ge2^m$ e $\mathcal H_\varepsilon\ge m\ge c\varepsilon^{-1/2}$.
+
+\emph{Codebook de montagens.} Seja $N=2^k$ a menor potência de dois com $M/(8N^2)\le\varepsilon/2$. Pela minimalidade da potência de dois, $N=\Theta(\varepsilon^{-1/2})$ e $h=N^{-1}=\Theta(\varepsilon^{1/2})$. Defina
+\[
+\delta=2^{-\lceil\log_2(1/\varepsilon)\rceil},\qquad
+\varepsilon/2<\delta\le\varepsilon,
+\]
+e, no nó $t_j=j/N$, use a grade finita alternada
+\eqn{88}{G_j=\delta\left(\Z+\frac{j\bmod2}{2}\right)\cap[-R-\delta,R+\delta].}
+Para cada $f$, escolha em $G_j$ um ponto $v_j$ mais próximo de $f(t_j)$, com desempate determinístico. Então $|v_j-f(t_j)|\le\delta/2$. As grades de paridades opostas são disjuntas, de modo que $v_{j+1}\ne v_j$. Como $N$ e $\delta$ são diádicos, o interpolante $g$ dos dados $(t_j,v_j)$ é uma montagem de átomos. Além disso,
+\[
+\norm{f-g}\le\norm{f-P_kf}+\norm{P_kf-g}
+\le\frac M{8N^2}+\frac\delta2\le\varepsilon.
+\]
+Defina $\CC_\varepsilon$ como a imagem desse mapa de quantização. É exatamente o mesmo conjunto finito de interpolantes; resta apenas contá-lo usando a restrição de curvatura, em vez de contar todos os vetores da grade. Há $O(\varepsilon^{-1})$ escolhas para $v_0$. Dado $v_0$, o controle \eqref{eq:70} e os erros de quantização dão
+\[
+|v_1-v_0|\le C_0h+\delta,
+\]
+de modo que há $O(h/\delta+1)=O(\varepsilon^{-1/2})$ escolhas para $v_1$. Para $1\le j\le N-1$, a identidade de diferença segunda já usada acima e $Mh^2\le4\varepsilon$ implicam
+\[
+|v_{j+1}-2v_j+v_{j-1}|\le Mh^2+2\delta\le6\varepsilon.
+\]
+Fixados $v_{j-1}$ e $v_j$, o valor $v_{j+1}$ fica, portanto, confinado a um intervalo de comprimento $12\varepsilon$. Os pontos de $G_{j+1}$ têm passo $\delta>\varepsilon/2$, logo esse intervalo contém no máximo uma constante universal $K$ de candidatos; por exemplo, $K=25$ serve. Consequentemente,
+\[
+|\CC_\varepsilon|\le C\varepsilon^{-1}C'\varepsilon^{-1/2}K^{N-1},
+\]
+e, como $N=O(\varepsilon^{-1/2})$,
+\[
+\log_2|\CC_\varepsilon|\le O(\log(1/\varepsilon))+N\log_2K=O(\varepsilon^{-1/2}).
+\]
+Isso prova \eqref{eq:87} sem alterar os átomos, as grades alternadas ou a garantia de distorção.
+\end{proof}
+
+\subsection{Cobertura, bits, serialização, seleção e decodificação}
+Seja $(X,d)$ um espaço métrico, $\FF\subset X$ totalmente limitado e $\varepsilon>0$.
+\begin{definicao}[recursos de um codec]
+Um $\varepsilon$-codec para $\FF$ é uma tripla $(W,\operatorname{Enc},\operatorname{Dec})$, na qual $W$ é um conjunto finito de palavras binárias, $\operatorname{Enc}:\FF\to W$ e $\operatorname{Dec}:W\to X$ satisfazem
+\[
+\sup_{f\in\FF}d\bigl(f,\operatorname{Dec}(\operatorname{Enc}(f))\bigr)\le\varepsilon.
+\]
+O decodificador é compartilhado e seu armazenamento não é contado no comprimento das palavras. Distinguem-se:
+\begin{align*}
+\mathcal H_\varepsilon(\FF)&=\log_2\mathcal N_\varepsilon(\FF)
+&&\text{entropia métrica},\\
+L_\varepsilon^{\rm dec}(\FF)&=
+\inf_{\substack{\varepsilon\text{-codecs}\\\text{prefix-free}}}\max_{w\in W}|w|
+&&\text{menor comprimento máximo decodificável},\\
+L_\varepsilon^{\rm global}(\CC_\varepsilon)&=\lceil\log_2|\CC_\varepsilon|\rceil
+&&\text{índice fixo em codebook compartilhado}.
+\end{align*}
+Para um codebook de montagens e uma convenção de serialização fixada, ponha
+\[
+L_{\rm folhas}(g\mid K)=L_{\rm arv}(g\mid K)+
+\sum_{J\in\Lambda(g)}L_{\rm addr}(g|_J),
+\qquad
+L_\varepsilon^{\rm folhas}(\CC_\varepsilon\mid K)=
+\max_{g\in\CC_\varepsilon}L_{\rm folhas}(g\mid K).
+\]
+Fixados um modelo de computação $\mathfrak M$, uma representação de entrada para $f$ e o codec, $T_\varepsilon^{\rm enc}$ é o custo de selecionar ou produzir a palavra e $T_\varepsilon^{\rm dec}$ é o custo de reconstruí-la.
+\end{definicao}
+O índice global nomeia uma entrada da tabela compartilhada; $L_\varepsilon^{\rm dec}$ mede comprimento de palavra. Os tempos são dados por $T_\varepsilon^{\rm enc}$ e $T_\varepsilon^{\rm dec}$.
+
+\begin{proposicao}[limite informacional para representação decodificável]
+Todo $\varepsilon$-codec de comprimento fixo $\ell$ para $\FF$ satisfaz
+\eqn{89}{\ell\ge\lceil\mathcal H_\varepsilon(\FF)\rceil.}
+A mesma desigualdade vale se $W$ é prefix-free e $\ell$ é o maior comprimento de palavra. Em particular,
+\[
+L_\varepsilon^{\rm dec}(\FF)\ge\lceil\mathcal H_\varepsilon(\FF)\rceil.
+\]
+Sob convenções que acrescentem ou removam apenas um cabeçalho fixo, a forma invariante é $\ell\ge\mathcal H_\varepsilon(\FF)-O(1)$.
+\end{proposicao}
+\begin{proof}
+As reconstruções $\operatorname{Dec}(W)$ formam uma cobertura de $\FF$ por bolas de raio $\varepsilon$. Portanto,
+\[
+\mathcal N_\varepsilon(\FF)\le|\operatorname{Dec}(W)|\le|W|.
+\]
+No caso de comprimento fixo, $|W|\le2^\ell$. No caso prefix-free, a desigualdade de Kraft e $|w|\le\ell$ dão
+\[
+|W|2^{-\ell}\le\sum_{w\in W}2^{-|w|}\le1,
+\]
+e novamente $|W|\le2^\ell$. Tomar logaritmos prova \eqref{eq:89}. Essa separação entre entropia e complexidade de descrição é a que se usa em limites informacionais para esquemas quantizados \citep{bolcskei2019}.
+\end{proof}
+Aplicada ao teorema~7.18, a proposição fornece
+\eqn{90}{\mathcal H_\varepsilon(\FF_{R,M})\le L_\varepsilon^{\rm dec}(\FF_{R,M})
+\le L_\varepsilon^{\rm global}(\CC_\varepsilon)=O(\varepsilon^{-1/2}).}
+A cota inferior $\Omega(\varepsilon^{-1/2})$ prova a otimalidade em ordem quanto à cardinalidade e aos bits do índice global. A serialização folha a folha da mesma construção segue o teorema~7.9 e pode usar $O(\log(1/\varepsilon))$ bits por folha, pois as alturas são polinomiais em $1/\varepsilon$.

@@ -1,0 +1,722 @@
+[
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/AuditoriaAxiomasPontes.lean",
+    "sha256": "87c24f0be348e5935fb7f2d18aadead7bed7664320404797f3bf146ee5af368d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/AuditoriaIntegracao.lean",
+    "sha256": "bb6bb067e4567ad4ec8df4c8469bcbcdc81623bc9f66020a6ae70e7d0748d73d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/SemanticAudit.lean",
+    "sha256": "85063dfc3adf2dc61b548eaf5aa399777e9029ed219afbe9f06d8a8896a78a36"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/AuditoriaAxiomas.lean",
+    "sha256": "3f009703f22cee7c7db263118d4f6cc4198ee06af063922674f5e6b90a12c05a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified.lean",
+    "sha256": "459f67389a039d2ccc827cf0abf7d17d1a820de77e6d1a450ed5054824f55dd7"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/d88690b43ab8e56b006c9b84b2131b35009e8e631ab5849b94f3708d2fd30eed.lean",
+    "sha256": "d88690b43ab8e56b006c9b84b2131b35009e8e631ab5849b94f3708d2fd30eed"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/189b3563d55b17fdd92d8ccc67c7bca0a53f130730a0eab2f6cff5bf8d1b417a.lean",
+    "sha256": "189b3563d55b17fdd92d8ccc67c7bca0a53f130730a0eab2f6cff5bf8d1b417a"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/88d15f18a28f10af513b0afdb108bcd1df42e69c91c5ab185bc9b1ccd486b803.lean",
+    "sha256": "88d15f18a28f10af513b0afdb108bcd1df42e69c91c5ab185bc9b1ccd486b803"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/98dab3aa9df949360f63062a8eeabf2f1f438dc38af48a57f8a96ba6a617cc57.lean",
+    "sha256": "98dab3aa9df949360f63062a8eeabf2f1f438dc38af48a57f8a96ba6a617cc57"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/38fb6234e36a2c724611cc4605fb3b4df68ab6dfab1001bb346a795a27ee2d61.lean",
+    "sha256": "38fb6234e36a2c724611cc4605fb3b4df68ab6dfab1001bb346a795a27ee2d61"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/29afde974b268cfc4876bebb8cfbf669771e7167e38f625bdc8cb4e9d24d9b56.lean",
+    "sha256": "29afde974b268cfc4876bebb8cfbf669771e7167e38f625bdc8cb4e9d24d9b56"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/f5e513fb6ba9c8e24786cb84a021731534d771a9844e69c3b84b6e8d1274e3c9.lean",
+    "sha256": "f5e513fb6ba9c8e24786cb84a021731534d771a9844e69c3b84b6e8d1274e3c9"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/c345f24a370b23ab2daeae5e1c6d403f41403d84de6c9144ab1ea5b8049472a9.lean",
+    "sha256": "c345f24a370b23ab2daeae5e1c6d403f41403d84de6c9144ab1ea5b8049472a9"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/bdd716b9015c7de089e1520d77bb5b47eb43c6aa8378ac162afbcfb816e30b60.lean",
+    "sha256": "bdd716b9015c7de089e1520d77bb5b47eb43c6aa8378ac162afbcfb816e30b60"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/ce16f842f438f26e078209327f488250b5400724776664f34d5ecd47cdac82d6.lean",
+    "sha256": "ce16f842f438f26e078209327f488250b5400724776664f34d5ecd47cdac82d6"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/d2a381e76b788cdd5afb317ac82346f8facda8353c225c646dc4fe60d23a7cb2.lean",
+    "sha256": "d2a381e76b788cdd5afb317ac82346f8facda8353c225c646dc4fe60d23a7cb2"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/cff524e0ce0390c663ee9c759ba58dc97e338a7d6a22e7c4340badae68377959.lean",
+    "sha256": "cff524e0ce0390c663ee9c759ba58dc97e338a7d6a22e7c4340badae68377959"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/6f0b10a0a536c98728d76fa9296652207268a37f59394c6b26ceb24b54a30cf1.lean",
+    "sha256": "6f0b10a0a536c98728d76fa9296652207268a37f59394c6b26ceb24b54a30cf1"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/87d7f4e212a984ab0a96be6a782662e042f97cc1ffeff42c6296af15f60d55cb.lean",
+    "sha256": "87d7f4e212a984ab0a96be6a782662e042f97cc1ffeff42c6296af15f60d55cb"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/99e73461cd56dcd4d0bb10d6ff58c4a011ab02928c172ccfd98710f7474fa6d2.lean",
+    "sha256": "99e73461cd56dcd4d0bb10d6ff58c4a011ab02928c172ccfd98710f7474fa6d2"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/364cdf87cb96475a20b4ea306ec03ab9c06cd65af28eb6a98aefe7f61dabcdca.lean",
+    "sha256": "364cdf87cb96475a20b4ea306ec03ab9c06cd65af28eb6a98aefe7f61dabcdca"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/3cd4dd464fee50a4e2fcbe34e2f8dd63bc7bfcbed1d4a1ec0bec2e79a2a4aeb9.lean",
+    "sha256": "3cd4dd464fee50a4e2fcbe34e2f8dd63bc7bfcbed1d4a1ec0bec2e79a2a4aeb9"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/53572de9c7061a2bdd12ebae65ee7ead1fb8e4c5051ceab0a456d6cb773f2bff.lean",
+    "sha256": "53572de9c7061a2bdd12ebae65ee7ead1fb8e4c5051ceab0a456d6cb773f2bff"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/fb1c2d0489b76bf82c3761a4cab9cb519c46385b0f7fbd0670fab3180d425730.lean",
+    "sha256": "fb1c2d0489b76bf82c3761a4cab9cb519c46385b0f7fbd0670fab3180d425730"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/6e3e011127ab87170fddf78f1fafd0806ce514ffcb327e3da8e7ebf3314b58b0.lean",
+    "sha256": "6e3e011127ab87170fddf78f1fafd0806ce514ffcb327e3da8e7ebf3314b58b0"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/42803008aef7c2faec3a4ae2584ceca3cc954fa7082e99bbd3596969929836f7.lean",
+    "sha256": "42803008aef7c2faec3a4ae2584ceca3cc954fa7082e99bbd3596969929836f7"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/98948f040af5077ce04158f0e3ce29a6dced3e4e77f33c11d5e57bb5d8a40e0a.lean",
+    "sha256": "98948f040af5077ce04158f0e3ce29a6dced3e4e77f33c11d5e57bb5d8a40e0a"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/365e10142c5fcd07b1576cc8ef404423210e513f79554fac01afdd59eb3f699a.lean",
+    "sha256": "365e10142c5fcd07b1576cc8ef404423210e513f79554fac01afdd59eb3f699a"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/9b924bd6b94540e4d0d43834b0b47ee7504fee344b65e8a2eb124c404d520dd2.lean",
+    "sha256": "9b924bd6b94540e4d0d43834b0b47ee7504fee344b65e8a2eb124c404d520dd2"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/b18ead14b7ec3b24a19e09931cb7a67746d688e7ba3e63341d24badffd859366.lean",
+    "sha256": "b18ead14b7ec3b24a19e09931cb7a67746d688e7ba3e63341d24badffd859366"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/af33fc9938552c2d594706c6f2b326b1ed969e531c6e813019e79bd3c14a0c12.lean",
+    "sha256": "af33fc9938552c2d594706c6f2b326b1ed969e531c6e813019e79bd3c14a0c12"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/39af4dfd45b36e7054800919f9770f03bb133083756c87258b9a3a22eb7ca12c.lean",
+    "sha256": "39af4dfd45b36e7054800919f9770f03bb133083756c87258b9a3a22eb7ca12c"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/1b2e88277f627083f1cd66c619b009f3bd041bcdf850d058652d899551e50120.lean",
+    "sha256": "1b2e88277f627083f1cd66c619b009f3bd041bcdf850d058652d899551e50120"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/0771920f80e526269bcc810336f1ef6eaeba12cfc0e1e874037c4168450df54c.lean",
+    "sha256": "0771920f80e526269bcc810336f1ef6eaeba12cfc0e1e874037c4168450df54c"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/1ea3b70dc3e2b3865e7ca6845b4a2210df00f78cf52f08c44304183f29b96a59.lean",
+    "sha256": "1ea3b70dc3e2b3865e7ca6845b4a2210df00f78cf52f08c44304183f29b96a59"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/34be61b9296329969bae4ae798c6f27d9a08ee3a0865f853670ee219fa717bca.lean",
+    "sha256": "34be61b9296329969bae4ae798c6f27d9a08ee3a0865f853670ee219fa717bca"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/dd5f452c0c9e04e841bac753b869357ec7e1a52a702de61042602fa80017760f.lean",
+    "sha256": "dd5f452c0c9e04e841bac753b869357ec7e1a52a702de61042602fa80017760f"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/e45bae39bf741f84ac530ea7dec7f2668e3859229f11997467156af4ef1916d2.lean",
+    "sha256": "e45bae39bf741f84ac530ea7dec7f2668e3859229f11997467156af4ef1916d2"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/ee3f656f610091a3eb34763b0912bb795a1e48c5698c0cf849b4d052a73eb479.lean",
+    "sha256": "ee3f656f610091a3eb34763b0912bb795a1e48c5698c0cf849b4d052a73eb479"
+  },
+  {
+    "arquivo": "fontes_originais/complementares/objetos/099d803b46d23a89df2bfe1e6d4742326b32e6e73e59b16939915469f73bf17e.lean",
+    "sha256": "099d803b46d23a89df2bfe1e6d4742326b32e6e73e59b16939915469f73bf17e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationEnumerations.lean",
+    "sha256": "45f3bf9d8d4e50c7e3586c99c1670cd94073b99cfbb29b276934cce3c01885ae"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationErrors.lean",
+    "sha256": "a041c7472c7f9d9cb3b8bfbecf1d6458c8638af1162678c128d272e8105d5ec9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/AssemblyEquivalence.lean",
+    "sha256": "27f7472777323d1c3da105f17e440914a9f63b39312a6ab3bd736237a95d5287"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/CanonicalAtoms.lean",
+    "sha256": "8b7922f135fd6c48713a212ef53ce6fdd40ab3c46136169e06e449f2217c6e8c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/Assemblies.lean",
+    "sha256": "bc0c6bf86208cc4d28aac916545230e7f23bde1a59aac356b895518853b761d1"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/Errors.lean",
+    "sha256": "a838e28b9656788dd44b13f85d6e7bf1b1387f9c538c3d9199aca7ca327d4d4b"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationReLU.lean",
+    "sha256": "06c75578d171856a757f9c549a1b7aae41888b182680d9e4f7e677d9d5df7c15"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationAtoms.lean",
+    "sha256": "a65565e9f36d80f1535141b92d546ce8fa27003ebe997bb5aa5068ccb365ef56"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/Geometry.lean",
+    "sha256": "f329728d1e93a4299fec05ac9bab371a24d1bd471a5b598e83071f62d5328e59"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationClasses.lean",
+    "sha256": "d8e56025b538e89b70683182fc25f5aab28b469382fe03b806986f65d1e9f025"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/NormalizationContracts.lean",
+    "sha256": "f7a4eb90f4785652b8bac98c66424cf5732785ce471b397fa7efa7f8ff11ef97"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/SemanticBridge/Addresses.lean",
+    "sha256": "812e7418f893033b65f73a93e3b1c287016032b37ef568242999b47daa2fb942"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase2/DyadicCells.lean",
+    "sha256": "66d9128174986470ee87929f492f22b0428ca004304f896216f5418791970907"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase2/Assemblies.lean",
+    "sha256": "ecce2399a7c41d47d6da9316b72ff3e9be485ee0c0ade68d2c9a17e86de39717"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase2/HeightEnum.lean",
+    "sha256": "0de0d4d1ce35e6817b31e52631a40791c5f5cef206ad51d0091d0917b6a678d4"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase2/Pairing.lean",
+    "sha256": "30d2a1cf691437337708df012097534fe755e2d9aac61d8b2dea97f7c5b0cc0a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Cells.lean",
+    "sha256": "c871870ae029f668d96bc808f56ff7bd39e619c6b8713bfd7e5aa19bbf75cffd"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/IntervalArith.lean",
+    "sha256": "e14315bcd893d8653e763ebcc8b183799006b8dea74c0a32fce878de15a2306f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Extension.lean",
+    "sha256": "27466435e463ca1b4a42cb955e08ffb19aaad3e63a0abafd0da3085ea753ee9a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Calibration.lean",
+    "sha256": "17dba7e119bca4726ec95eb7b36d347b5d1bd01b3d3500382dcd0f1f5c3e96ea"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Observation.lean",
+    "sha256": "79eb3d50c8371b1cd5dffec4d4bb85482f7722a09ff1d23f0228f07535b672e7"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Assembly.lean",
+    "sha256": "5c8ef313d9e70dbf6577efbcec8a412b15e16e9e229797125e45c76e976587d9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Rates.lean",
+    "sha256": "bd13171e10222501da735c64af3ed32130832c4ff02b0b09a10aa6791e717d10"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Refinement.lean",
+    "sha256": "ead05417e0ac9ed991552b63a5762e6b325d8f42bfdeef108e20027d534b9c63"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Heights.lean",
+    "sha256": "46d41df659a03b03fc4d5b494b824894893872eaf146362dcb22924a1a1e3e45"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Indexing.lean",
+    "sha256": "a6dc74d467ff12408e28897f2c3823ded896f0cdc2b3342fcd95eee1a0e29ae1"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase3/Transcendental.lean",
+    "sha256": "6217850d4f36e9632af2b0170a68d9e8c5a0e2fff25763f359552367234b6a4a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase1/CalkinWilf.lean",
+    "sha256": "119d6c9eeb96a056832a6bb5f59f21f43894eb905c01703598cc14fb19bfdd53"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase1/Dyadic.lean",
+    "sha256": "c8d861d167033248d794554637c0bba056850931a2d07852025f89686bfbd597"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Fase1/Indexing.lean",
+    "sha256": "3a0979f8c4512ba9feee14a4fbc7bea6345f0f34a8ed1c281f8618b6874a4117"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Lib/Library.lean",
+    "sha256": "fcb255d6dfa40274e6aac928c17028436044073175bcd30f42b8f79de3371ece"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Lib/Assembly.lean",
+    "sha256": "4dd1e97bf6d1de3c90df4872a210d69898ece75cb6eb63a54a26a671631be8a7"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Lib/Calculus.lean",
+    "sha256": "2a400898650517789478d21bc08e96dc051a4b01ca0e852afad1f202c73eb863"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Lib/Indexing.lean",
+    "sha256": "cd3ab3cfd2e8293e8bc9571e6d5a2c24485634d3517c303eeee9b1ea398d43f9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec4/ReLU.lean",
+    "sha256": "34ea77eceb8fa52e99eb1d67f0187cd7e2268c503afc52935cfff90dfbff7d66"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec4/Taylor.lean",
+    "sha256": "eb35ae9d2a5cc4977972015cd76fa69de01c58e73e6df8763895c3a83bf865a2"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Entropy.lean",
+    "sha256": "b273de8b46223cd8979e863fe2a456ce97a6063b9804290ebfc7251f03a33248"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/SharpComputable.lean",
+    "sha256": "97807842fa08a313aef9eec296e9ac609ed869e7c89fd67de99b54eebc25d82a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/EntropyUpper.lean",
+    "sha256": "694e6f20faed2427f3830c634441f5d6276820dc6f9fd49f8eb5b324f70a3f91"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Simultaneous.lean",
+    "sha256": "6b72d84f152d5f61ef06d99ab54704bf7dc832dfc28fa82b8943d9c7f73d5723"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Catalogs.lean",
+    "sha256": "f020c743ad039e734bc00821dc3b0f76e10cb7a24671d0dafa6ca78a2b16f4a1"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Serialization.lean",
+    "sha256": "aa7987e2e0ca8ef10204099681ed5659118e56470e8afe5e4e96f2afb1ab6601"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/EntropyLower.lean",
+    "sha256": "472394f535a4aa477510a1596c2c512b65ae6f42668e0a4ddf85d627da7ade24"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Bits.lean",
+    "sha256": "1febcf55ba0cacb56a9ddb2a7bcc54a0991a99e753ec9845786eaa4becf0feea"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Heights.lean",
+    "sha256": "66d72dd84a5775d4972238aa83d3e8ca40dad287e86cf49cbdbb20f1602e1fa9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Catalog.lean",
+    "sha256": "d27007d69b444aa114d9d16d2d3993f2f6059738b7480284e6eb13dbc1d53748"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Address.lean",
+    "sha256": "db8ae523a6872f0c3e42487997ab5c85a5ed10a850c3c3a87bdfc5667b019d49"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Chain.lean",
+    "sha256": "2e2c6cd5abae4f6042cf58f75799b5f5464baab2ab8b095fe7c2f27b9d5d5f3f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Formats.lean",
+    "sha256": "b72b01f8f4498b34631198bd50b2ec36fe26775df9c8c3efafc69f61e43e77bc"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/JointError.lean",
+    "sha256": "e3da40d61fed4c41332733acd657a7a8d667c83fa0ed02c898c357dc91d4408e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Precision.lean",
+    "sha256": "2d5b162866ba0b51572b37b0dcf1ca663757c9b08e281d111202d17179a61355"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Interp.lean",
+    "sha256": "75519b9b197dd5887828bf80fa4aa6e1babfdb5c9190449733b21cef53a4ed5f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/Unified/Consolidado/Sec7/Codec.lean",
+    "sha256": "0ba12aa5f00065ec54c614e5d7a0d5a0bc67dfc578e8adfc5f2a2d912370e840"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/AuditoriaPacote.lean",
+    "sha256": "acab60522308533a1b9c9e3b921f71fe03b2196cf7e00fa4a506c4bddcbef99f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/CorrespondenciasAudit.lean",
+    "sha256": "0571b31ea4c0acc2d11536a9fb47510fefd9e344ab76355275701603dc1ee44b"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/ValidationAll.lean",
+    "sha256": "cb62143121cb6c230c8866fe044ff7141a7e6a80ecb9d00bd5e84079334da237"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/AuditoriaPacote.lean",
+    "sha256": "acab60522308533a1b9c9e3b921f71fe03b2196cf7e00fa4a506c4bddcbef99f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/CorrespondenciasAudit.lean",
+    "sha256": "bfadc4fd8895d90ddd453b07e039250f2a1d4d82425a4aee1aba6b3f4c459e86"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/ValidationAll.lean",
+    "sha256": "74366ebed90024ece7ae1c819dde20028f0510721f3fd2834faedfc39fdfe5d9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/base_v2/CorrespondenciasAudit.lean",
+    "sha256": "61e9032f9911f2ec366e4fa3f1e6bf34e277728f9fc6aeee89a7749401e14f1d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Enumeration.lean",
+    "sha256": "e83f55bd0e5e17e3fe95a926f3a252c395bbc8f4e2f01edb226cf5f0730944e7"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Normalization.lean",
+    "sha256": "2b65d8231a57290ea88534d8be436d9c7008e7b7b8e0fffe9677ff3d0e6dd86c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Basic.lean",
+    "sha256": "3221749989e2ed9289879c21ae88fbb449e0248ce3860ea6fde60a95e18071e6"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/ReLU.lean",
+    "sha256": "e559563a5d6e0dbb0e059fa419e782f6de0642f385d1a0fd401655fcd30e2a01"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Bridge.lean",
+    "sha256": "0a7d8ae7a91b98e84154eee239a6f9ac2e8b40cc77cb0146e3e78490a100086c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Main.lean",
+    "sha256": "08e10597b3d3a356f6f4ba194dfd9696d7b8c77ec952823d413008377ec02446"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Chain.lean",
+    "sha256": "46ce1cdc7f60c654de16e376f1b9a0ef5d8156a126c5dff18113735184d98907"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Appendix.lean",
+    "sha256": "6bc23bba740d4165953fa7cfd5f0bb782c42ad205cf1100be2f9b27a3c27040c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/parte_1/RequestProject/Error.lean",
+    "sha256": "b235337d01e39b76d39b167880de1a14a560b5fcb7002b56121ee29e4ccb5617"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Entropy.lean",
+    "sha256": "978226353f6e7dc7935db6c09f5a7afae8d3347b6c037c7c8786cc308842bfeb"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicTools.lean",
+    "sha256": "e558b48ab9a02f41dcbc8824e748a11d762e1f2bdb2dcba43186bf039dfa0277"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Coding.lean",
+    "sha256": "7beaaecd017654f299b319070086336237a7a7b5490b589c65f07e2c35b39b1d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicEnvelope.lean",
+    "sha256": "c724d9942f68a27d2f043e56e253cece7934536b0bb7a9b930f6383ec15d4fc9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Dyadic.lean",
+    "sha256": "fda284eb37943c960b80814059fc248c2a68a6f70515ef27c19cbd2aa83f20c8"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicInterp.lean",
+    "sha256": "ca6ea043970f30faf7bad8f88556de9f6ca6cba3ff359145b43f6c06bc0d178e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Codecs.lean",
+    "sha256": "41845c6157386f309c8dee33b7e43e7cf52519843cc199fc5c1d25e0b08eab97"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicExact.lean",
+    "sha256": "f63e43f1db5329ae27ca61e9bbb35edc77e4bcda510bed0bb2be8ecc56b4a76a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DP.lean",
+    "sha256": "7acebb443a9393cde1ff5e693dbd9a8635873acbaa91bfc023219091e7940d49"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Codebook.lean",
+    "sha256": "5026f0b13530672cbb33bf82328cb181642294e21c55095ddeafcc1ca8642b6f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Functional.lean",
+    "sha256": "a23b977b074c07bf74d880e4bec9f516e736a71781892f5114af22ec1ec53e0a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Complexity.lean",
+    "sha256": "6ee9abd4bbffeafc57c97324ae5bcb07a6400bc883dae5a7c583d4c69b134788"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicSync.lean",
+    "sha256": "44ce7e9aeacbdd1ae8c54a9919463ae205260bb056f7675d0972549ac8ea2e4a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Serialization.lean",
+    "sha256": "47015bef28dea6b9510b514112a2fda95ceec2080465d496eb4fae420c8db924"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/EntropyLower.lean",
+    "sha256": "ee7906bf518359025a9f0115579e7a2fb9d95156c556a22d3be88c0536ae032a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Interface.lean",
+    "sha256": "8f545c7bd1df9440b2a5d2ab259b329a80191f2857b7f6e8ea80417a94d11a68"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Atoms.lean",
+    "sha256": "aaaf448efe35941e70486152b16d68c9024bd328ba932f78364fc4c1b7c15b24"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Main.lean",
+    "sha256": "929b0bddef0b781f3fb42c7a99f252dc0bda7331f698104f7075e12ff637c52d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DyadicPhase.lean",
+    "sha256": "72b08fd76a7adf570db6bed3b2ba53f43f5217769b260fe59a9b29be85bc2f3e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Uniform.lean",
+    "sha256": "4db69a0edd711ac8ced5131022f22a9a769d108370d56a631997cf1748243653"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Budgets.lean",
+    "sha256": "84b82d0058c066123cd59268aeb62599c2989347d2f6b4554d447a727e6e83ef"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Catalog.lean",
+    "sha256": "3aac8a72b9902320e0926a5b7117a54c1dfdb7a2f8ab7a6d59a5826c57348d6f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Indexing.lean",
+    "sha256": "52b9adf1b6613900880f6b1ab992a03b919eff4ae82df6172289d532d12fba35"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Sawtooth.lean",
+    "sha256": "219180b781dc5718d7b945c9d4508ca13793ee71da8b53a6e89f0ca4ac127592"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/DPBase.lean",
+    "sha256": "8149fc78ff16d3c73ee8550324e647a5200933b54a71089d1f1c9181d2240480"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Formats.lean",
+    "sha256": "2e6a4f7f1e8233462726652264f9077c39276c6f9ebbc51c60df213f029e9be3"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/BitComplexity.lean",
+    "sha256": "757230861581c0c3b43c8025a62e87cebd621540568571f4ffb1959b677a4910"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Interp.lean",
+    "sha256": "ae603a6ca8c3e155496b093ff10dbdfdddc989c6c95f662fd9f76cdc6f501b19"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/JointBudget.lean",
+    "sha256": "5ab251753aba768dad648d3fa4432e91dbb6ab9aa35303139dc1692a46307c83"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Trees.lean",
+    "sha256": "8da734a82b59fd08094e9707bfd8cbe328a2069317b5c44cc138477ad88ccd56"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/validacao/artigo_2/RequestProject/Addresses.lean",
+    "sha256": "e73e58dbefabbe8cee75beceff126e9885952b78462f9cf74104a8ededcb31a1"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Enumeration.lean",
+    "sha256": "e83f55bd0e5e17e3fe95a926f3a252c395bbc8f4e2f01edb226cf5f0730944e7"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Normalization.lean",
+    "sha256": "2b65d8231a57290ea88534d8be436d9c7008e7b7b8e0fffe9677ff3d0e6dd86c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Basic.lean",
+    "sha256": "3221749989e2ed9289879c21ae88fbb449e0248ce3860ea6fde60a95e18071e6"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/ReLU.lean",
+    "sha256": "e559563a5d6e0dbb0e059fa419e782f6de0642f385d1a0fd401655fcd30e2a01"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Bridge.lean",
+    "sha256": "0a7d8ae7a91b98e84154eee239a6f9ac2e8b40cc77cb0146e3e78490a100086c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Main.lean",
+    "sha256": "08e10597b3d3a356f6f4ba194dfd9696d7b8c77ec952823d413008377ec02446"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Chain.lean",
+    "sha256": "46ce1cdc7f60c654de16e376f1b9a0ef5d8156a126c5dff18113735184d98907"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Appendix.lean",
+    "sha256": "6bc23bba740d4165953fa7cfd5f0bb782c42ad205cf1100be2f9b27a3c27040c"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/parte_1/RequestProject/Error.lean",
+    "sha256": "b235337d01e39b76d39b167880de1a14a560b5fcb7002b56121ee29e4ccb5617"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Entropy.lean",
+    "sha256": "978226353f6e7dc7935db6c09f5a7afae8d3347b6c037c7c8786cc308842bfeb"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicTools.lean",
+    "sha256": "e558b48ab9a02f41dcbc8824e748a11d762e1f2bdb2dcba43186bf039dfa0277"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Coding.lean",
+    "sha256": "7beaaecd017654f299b319070086336237a7a7b5490b589c65f07e2c35b39b1d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicEnvelope.lean",
+    "sha256": "c724d9942f68a27d2f043e56e253cece7934536b0bb7a9b930f6383ec15d4fc9"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Dyadic.lean",
+    "sha256": "fda284eb37943c960b80814059fc248c2a68a6f70515ef27c19cbd2aa83f20c8"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicInterp.lean",
+    "sha256": "ca6ea043970f30faf7bad8f88556de9f6ca6cba3ff359145b43f6c06bc0d178e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Codecs.lean",
+    "sha256": "41845c6157386f309c8dee33b7e43e7cf52519843cc199fc5c1d25e0b08eab97"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicExact.lean",
+    "sha256": "f63e43f1db5329ae27ca61e9bbb35edc77e4bcda510bed0bb2be8ecc56b4a76a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DP.lean",
+    "sha256": "7acebb443a9393cde1ff5e693dbd9a8635873acbaa91bfc023219091e7940d49"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Codebook.lean",
+    "sha256": "5026f0b13530672cbb33bf82328cb181642294e21c55095ddeafcc1ca8642b6f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Functional.lean",
+    "sha256": "a23b977b074c07bf74d880e4bec9f516e736a71781892f5114af22ec1ec53e0a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Complexity.lean",
+    "sha256": "6ee9abd4bbffeafc57c97324ae5bcb07a6400bc883dae5a7c583d4c69b134788"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicSync.lean",
+    "sha256": "44ce7e9aeacbdd1ae8c54a9919463ae205260bb056f7675d0972549ac8ea2e4a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Serialization.lean",
+    "sha256": "47015bef28dea6b9510b514112a2fda95ceec2080465d496eb4fae420c8db924"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/EntropyLower.lean",
+    "sha256": "ee7906bf518359025a9f0115579e7a2fb9d95156c556a22d3be88c0536ae032a"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Interface.lean",
+    "sha256": "8f545c7bd1df9440b2a5d2ab259b329a80191f2857b7f6e8ea80417a94d11a68"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Atoms.lean",
+    "sha256": "aaaf448efe35941e70486152b16d68c9024bd328ba932f78364fc4c1b7c15b24"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Main.lean",
+    "sha256": "929b0bddef0b781f3fb42c7a99f252dc0bda7331f698104f7075e12ff637c52d"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DyadicPhase.lean",
+    "sha256": "72b08fd76a7adf570db6bed3b2ba53f43f5217769b260fe59a9b29be85bc2f3e"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Uniform.lean",
+    "sha256": "4db69a0edd711ac8ced5131022f22a9a769d108370d56a631997cf1748243653"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Budgets.lean",
+    "sha256": "84b82d0058c066123cd59268aeb62599c2989347d2f6b4554d447a727e6e83ef"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Catalog.lean",
+    "sha256": "3aac8a72b9902320e0926a5b7117a54c1dfdb7a2f8ab7a6d59a5826c57348d6f"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Indexing.lean",
+    "sha256": "52b9adf1b6613900880f6b1ab992a03b919eff4ae82df6172289d532d12fba35"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Sawtooth.lean",
+    "sha256": "219180b781dc5718d7b945c9d4508ca13793ee71da8b53a6e89f0ca4ac127592"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/DPBase.lean",
+    "sha256": "8149fc78ff16d3c73ee8550324e647a5200933b54a71089d1f1c9181d2240480"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Formats.lean",
+    "sha256": "2e6a4f7f1e8233462726652264f9077c39276c6f9ebbc51c60df213f029e9be3"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/BitComplexity.lean",
+    "sha256": "757230861581c0c3b43c8025a62e87cebd621540568571f4ffb1959b677a4910"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Interp.lean",
+    "sha256": "ae603a6ca8c3e155496b093ff10dbdfdddc989c6c95f662fd9f76cdc6f501b19"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/JointBudget.lean",
+    "sha256": "5ab251753aba768dad648d3fa4432e91dbb6ab9aa35303139dc1692a46307c83"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Trees.lean",
+    "sha256": "8da734a82b59fd08094e9707bfd8cbe328a2069317b5c44cc138477ad88ccd56"
+  },
+  {
+    "arquivo": "fontes_originais/FORMALIZACAO_COMPLETA_DA_BIBLIOTECA/entradas/artigo_2/RequestProject/Addresses.lean",
+    "sha256": "e73e58dbefabbe8cee75beceff126e9885952b78462f9cf74104a8ededcb31a1"
+  }
+]

@@ -1,0 +1,65 @@
+\subsection{Catálogos finitos, minimizadores e truncagem}
+A existência de minimizadores depende da classe de busca. Na biblioteca infinita, o ínfimo pode deixar de ser atingido mesmo para uma única avaliação.
+\begin{proposicao}
+Para $x=1/4$ e $y=\sqrt2$,
+\[
+\inf\{|y-\ell_n(x)|:n\in\N_0,\ x\in I_n^x\}=0,
+\]
+mas nenhum átomo realiza o ínfimo.
+\end{proposicao}
+\begin{proof}
+Para todo átomo, $a_n=y_{0,n}-s_nx_{0,n}\in\Q$ e $b_n=s_n\in\Q$; como $x=1/4$ é racional, $\ell_n(x)\in\Q$. Portanto, $\ell_n(x)\ne\sqrt2$.
+
+Por outro lado, dado $\eta>0$, escolha $q\in\Q$ com $|q-\sqrt2|<\eta$. Use a célula $J_{2,1}=[1/4,1/2]$, de centro $x_0=3/8$, escolha $s=1$ e $y_0=q-s(x-x_0)=q+1/8\in\Q$. O teorema~3.6 fornece um átomo nessa célula com $\ell_n(1/4)=q$. Assim, os erros tendem a zero, mas nenhum é zero.
+\end{proof}
+Fixe uma raiz diádica $K=J_{k_0,m_0}$ e seja $\mathcal T_D(K)$ o conjunto das partições obtidas por árvores binárias diádicas completas de profundidade relativa no máximo $D$. Uma montagem representada é um par $\mathscr R=(\Lambda,n)$ formado por $\Lambda\in\mathcal T_D(K)$ e um endereço $n(J)$ para cada folha, com suporte exatamente $J$ e concordância dos valores nas fronteiras.
+
+\begin{definicao}[catálogo truncado]
+Para uma montagem representada, ponha
+\[
+\heightq_{\max}(\mathscr R)=
+\max_{J\in\Lambda}\max\{2,k(J)+1,|m(J)|+1,\heightq(y_{0,J}),\heightq(s_J)\}.
+\]
+Se $H\ge H_K:=\max\{2,k_0+1,|m_0|+1\}$, defina
+\eqn{91}{\RR^{\LL}_{D,H}(K)=
+\{\mathscr R=(\Lambda,n):\Lambda\in\mathcal T_D(K),\ \heightq_{\max}(\mathscr R)\le H\},}
+\eqn{92}{\Sigma^{\LL}_{D,H}(K)=
+\{\Eval(\mathscr R):\mathscr R\in\RR^{\LL}_{D,H}(K)\}\subset\Asm(K).}
+Representações distintas que avaliam na mesma função correspondem a um único elemento de $\Sigma^{\LL}_{D,H}(K)$.
+\end{definicao}
+Para fixar o desempate, serialize a árvore em pré-ordem com $0$ para nó interno e $1$ para folha e, depois, escreva os endereços $n^\sharp(J)+1$ das folhas em ordem espacial com o código gama de Elias. O esqueleto informa quantas palavras devem ser lidas, logo o fluxo $\ser^\sharp(\mathscr R)$ é autodelimitado. Ordene os fluxos por shortlex: primeiro pelo comprimento e depois lexicograficamente. Para cada função, retenha o menor fluxo entre suas representações no catálogo.
+
+\begin{teorema}[finitude, existência e desempate canônico]
+O catálogo $\Sigma^{\LL}_{D,H}(K)$ é finito e não vazio. Mais precisamente, se
+\[
+T_0=1,\qquad T_{d+1}=1+T_d^2,
+\]
+então
+\eqn{93}{1\le|\Sigma^{\LL}_{D,H}(K)|\le|\RR^{\LL}_{D,H}(K)|
+\le T_D|\LL_H|^{2^D}<\infty.}
+Consequentemente, para qualquer funcional $\mathcal J:\Sigma^{\LL}_{D,H}(K)\to\R$, existe
+\eqn{94}{g^\star\in\operatorname*{arg\,min}_{g\in\Sigma^{\LL}_{D,H}(K)}\mathcal J(g).}
+Entre todos os minimizadores, a regra do menor fluxo shortlex seleciona uma única função e uma única representação canônica.
+\end{teorema}
+\begin{proof}
+A recorrência de $T_D$ conta todas as formas ordenadas de árvore: ou a raiz é folha, ou seus dois filhos recebem independentemente uma forma de profundidade no máximo $D-1$. Cada árvore tem no máximo $2^D$ folhas e cada folha recebe um rótulo de $\LL_H$. Ignorar as restrições de suporte e continuidade só aumenta a contagem, o que prova a cota superior. A árvore reduzida à raiz pode ser rotulada, por exemplo, com $y_0=0$ e $s=1$, logo o catálogo não é vazio. A imagem de um conjunto finito por $\Eval$ é finita; qualquer função real em um conjunto finito não vazio atinge seu mínimo.
+
+Resta o desempate. Há um número finito de representações de cada função, e a ordem shortlex é total; portanto existe um menor fluxo. A serialização é injetiva sobre representações, pois recupera a árvore e cada endereço de folha. Assim, dois candidatos distintos não compartilham o mesmo fluxo, e o menor minimizador é único.
+\end{proof}
+
+\begin{proposicao}[consistência sob truncagem]
+Se $D\le D'$ e $H\le H'$, então
+\eqn{95}{\Sigma^{\LL}_{D,H}(K)\subseteq\Sigma^{\LL}_{D',H'}(K).}
+Para um funcional fixado na união dos catálogos, os valores mínimos são não crescentes em $D$ e $H$. Se o funcional possui um minimizador global nessa união, o minimizador global de menor fluxo shortlex e sua representação canônica pertencem a algum catálogo finito; a partir desse par de truncagens, o seletor canônico estabiliza.
+\end{proposicao}
+\begin{proof}
+Uma representação admissível sob $(D,H)$ continua admissível quando os dois limites aumentam, o que prova \eqref{eq:95} e a monotonicidade dos mínimos. A ordem shortlex bem ordena as palavras binárias finitas. Logo, entre todas as representações de todos os minimizadores globais, existe uma menor; ela tem profundidade e altura finitas. Qualquer catálogo que já a contenha não pode ser superado posteriormente nem no valor do funcional nem no desempate.
+\end{proof}
+
+\begin{algoritmo}[enumeração exata do catálogo]
+\leavevmode\par\nobreak\noindent
+Para parâmetros pequenos, gere recursivamente todas as formas de $\mathcal T_D(K)$; em cada folha, liste somente os átomos de $\LL_H$ com o suporte exigido; ao unir duas subárvores, descarte pares cujos valores na fronteira diferem. Reduza representações funcionalmente idênticas ao menor fluxo $\ser^\sharp$, avalie $\mathcal J$ em aritmética racional exata e aplique o desempate shortlex.
+\end{algoritmo}
+O algoritmo realiza o mínimo do teorema~7.23 por enumeração do catálogo. A figura~\ref{fig:circuito} reúne as etapas da construção.
+\input{figuras/circuito}
+\clearpage

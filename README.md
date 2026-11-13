@@ -25,6 +25,3 @@ cd tex && latexmk -pdf -interaction=nonstopmode -halt-on-error principal.tex
 ```
 
 Os caches `.lake` (~22 GB) não são versionados. Detalhes: `LEIA_PRIMEIRO.md`.
-# Biblioteca-unificada-artigo-e-formaliza-o-Lean
-# Biblioteca-unificada-artigo-e-formaliza-o-Lean
-# Biblioteca-unificada-artigo-e-formaliza-o-Lean

@@ -1,0 +1,32 @@
+[
+  {
+    "verificador": "seletor_dinamico_exato",
+    "exit_code": 0,
+    "segundos": 5.044,
+    "log": "verificacao/numerica/seletor_dinamico_exato/execucao.log"
+  },
+  {
+    "verificador": "constante_diadica",
+    "exit_code": 0,
+    "segundos": 20.707,
+    "log": "verificacao/numerica/constante_diadica/execucao.log"
+  },
+  {
+    "verificador": "espacos_aproximacao",
+    "exit_code": 0,
+    "segundos": 2.138,
+    "log": "verificacao/numerica/espacos_aproximacao/execucao.log"
+  },
+  {
+    "verificador": "restricoes_rede",
+    "exit_code": 0,
+    "segundos": 3.135,
+    "log": "verificacao/numerica/restricoes_rede/execucao.log"
+  },
+  {
+    "verificador": "reversibilidade_regularizada",
+    "exit_code": 0,
+    "segundos": 13.589,
+    "log": "verificacao/numerica/reversibilidade_regularizada/execucao.log"
+  }
+]

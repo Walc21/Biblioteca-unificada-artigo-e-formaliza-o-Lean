@@ -1,0 +1,1522 @@
+{
+  "versao": 1,
+  "criterio": "Mapa editorial inspecionado sobre hashes congelados; nao e uma prova de equivalencia Lean. As quatro excecoes conservam explicitamente o texto original.",
+  "recortes": [
+    {
+      "original": "original_77:2.1",
+      "sha256_original": "f7369bcd0cf6e219096b7afc14116a1b943f8f35e2ae75d8f5a1f7cef6b17d33",
+      "destinos": [
+        {
+          "id": "artigo_1:2.1",
+          "papel": "principal",
+          "sha256_enunciado": "979f0f246d5bb65cb9a169fcb677342229346e63243477f1db839c06415ca479"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:2.2",
+      "sha256_original": "f6fca90b233d42e8ec4f129cfccf0155e596d6db9c1735f982e8def9f125ca29",
+      "destinos": [
+        {
+          "id": "artigo_1:2.2",
+          "papel": "principal",
+          "sha256_enunciado": "017c75b1e5c8ac7530360e39a3efa3411c866327948928b037f55afbbe405498"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:2.3",
+      "sha256_original": "09d899d2968d95b4077a8486d2ce8a61bf5b2ef4ce932add3dd7be5cacc3e5d0",
+      "destinos": [
+        {
+          "id": "artigo_1:2.3",
+          "papel": "principal",
+          "sha256_enunciado": "f8632e1a6e4e085c47cd919dc195f494564f565531bfa8ebdbb68b76edc49b33"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:2.4",
+      "sha256_original": "a69ef749d5ff2419f9249b23a731d90e3e6525a9089e1b9a3b4eb970beed826d",
+      "destinos": [
+        {
+          "id": "artigo_1:2.4",
+          "papel": "principal",
+          "sha256_enunciado": "2047d90c51818c4dae6b9fc86841f3398522f2eff3b326d6bb367b29e18b7719"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:2.5",
+      "sha256_original": "197d39ad50da27cf588fea90e8242fd77ae1d312f0ce73ddd89c8a7572782059",
+      "destinos": [
+        {
+          "id": "artigo_1:2.5",
+          "papel": "principal",
+          "sha256_enunciado": "9877800ecd303794b85c9b94c71aefd7394e3b63885e6cd584a4efc07679298d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.1",
+      "sha256_original": "7d9a23bada6ac76a78d03fe443524c8312fee007a883ef92dba3e9e94f625806",
+      "destinos": [
+        {
+          "id": "artigo_1:3.1",
+          "papel": "principal",
+          "sha256_enunciado": "f832533641a9aa84c6ccd152fef21e61e4bd6e5f670a5aa13eae15eea78e4ba0"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.2",
+      "sha256_original": "497f000136e4ecd1845acbb67abd5b2f98151bf7f8f109ab5aaa01b3be6a8b1d",
+      "destinos": [
+        {
+          "id": "artigo_1:3.2",
+          "papel": "principal",
+          "sha256_enunciado": "9a6de581445d5d016b71913da7d3ea0769757b8868395045d56cf47e65ef5de5"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.3",
+      "sha256_original": "cbfe5858ae4e82dcc946716d633b60890363ea9cd0891e8b6841ec4614f93b8e",
+      "destinos": [
+        {
+          "id": "artigo_1:3.3",
+          "papel": "principal",
+          "sha256_enunciado": "3c592a30ad0008e70f65e27ceaa326dcb29a55156d825c0cb25612b609968e22"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.4",
+      "sha256_original": "6c11e350991717c9fcd41125e2cc37b00015c482e4e118dc04ae4e22dfd6db3e",
+      "destinos": [
+        {
+          "id": "artigo_1:3.4",
+          "papel": "principal",
+          "sha256_enunciado": "376a7efc4abd73f8b788341b20831e19c937bb6d0569e47d17972d59af210630"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.5",
+      "sha256_original": "252d714a1f2824c15bf7e055a7478333d445e20ae17108baafd027aef5cab5a0",
+      "destinos": [
+        {
+          "id": "artigo_1:3.5",
+          "papel": "principal",
+          "sha256_enunciado": "0045618f8ea113ff5471bef33547ee62d889c714fd02e0e21dcff7e2c2003d70"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:3.6",
+      "sha256_original": "6fa00e0d40ebbf52ebbc715094be4f1e46520f9e8f9e087c1998d50c7179d18a",
+      "destinos": [
+        {
+          "id": "artigo_1:3.6",
+          "papel": "principal",
+          "sha256_enunciado": "fac2b646bed9c829fad7f4fb4646cf054dae8da11a945e20577cd7b8eb63aed6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:4.1",
+      "sha256_original": "76c495a2bef5b7516f8aed5bdfb4262f0ee02ec1d5462c994f7f8e5e3f31b1a9",
+      "destinos": [
+        {
+          "id": "artigo_1:4.1",
+          "papel": "principal",
+          "sha256_enunciado": "6c915ef1cf2a1cfb70023c224b53ed511a569ebe2a27f0cc8146a30c86fb880f"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:4.2",
+      "sha256_original": "b03b1a9dc628fce5324f56d52195c8d8a1064f565d44144a78e110e0ca81906a",
+      "destinos": [
+        {
+          "id": "artigo_1:4.2",
+          "papel": "principal",
+          "sha256_enunciado": "6440534da2ad79578efb99c425a837278b42836bd1cdd9deb4edb0265b5296b6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:4.3",
+      "sha256_original": "99e702eb7d24a8c500bc4ee1d16640476512dafebd61e1d6a6096c6443c121e2",
+      "destinos": [
+        {
+          "id": "artigo_1:4.3",
+          "papel": "principal",
+          "sha256_enunciado": "7a7f04ab5c21dd412009c8cd1c2bfef487b9562c40c7bcc73ad0ac6097ae1f3f"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:4.4",
+      "sha256_original": "a1d9a16a3b0c8aef5696e98cb84877537e8cdaa64c140eb1d027b8ab64029ac1",
+      "destinos": [
+        {
+          "id": "artigo_1:4.4",
+          "papel": "principal",
+          "sha256_enunciado": "17fa218f46712e2f2badcdb1825b50437abe0c21b0a8837001bd0c77d1474832"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:4.5",
+      "sha256_original": "2db92883d232ea0321a794f4e1e4b9b0e08f9fbffb8a5b7be1635822037779ee",
+      "destinos": [
+        {
+          "id": "artigo_1:4.5",
+          "papel": "principal",
+          "sha256_enunciado": "a287e492549d0953c7087af9b3e954b9ff17de1cec726beb8670ed64b3eb8996"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:5.1",
+      "sha256_original": "dc3709807f41613d2f69e13e6c9c14001940974462a6fb0222a5a870881df608",
+      "destinos": [
+        {
+          "id": "artigo_1:5.1",
+          "papel": "principal",
+          "sha256_enunciado": "416fcb79450c3a8358a3cbf07bb91ff65972086692d614b469014b89897ed490"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:5.2",
+      "sha256_original": "c2497d2f3ae4650c4df81af2663dc07ebb6148af242faac3c77ebc3342856e79",
+      "destinos": [
+        {
+          "id": "artigo_1:5.2",
+          "papel": "principal",
+          "sha256_enunciado": "d7021c63e4829671e33ff6ea7a0e625973ab08395fb193c4fab6ba4584e6e939"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:6.1",
+      "sha256_original": "f23238a01aad45ea40a3864449c52917afc7d0d7f5cda0fd004058f24d59770b",
+      "destinos": [],
+      "status": "ingredientes_sem_enunciado_integral",
+      "locais_relacionados": [
+        "artigo_1:5.1",
+        "artigo_2:11.1",
+        "artigo_2:11.3"
+      ],
+      "observacao": "As cotas para todo N>=2 e para N=2^r, com racionalizacao na mesma arvore, nao reaparecem reunidas como o enunciado original. Existem ingredientes nas taxas uniformes e na prova do envelope; uma deducao explicita ainda deve ser registrada."
+    },
+    {
+      "original": "original_77:6.2",
+      "sha256_original": "01cd236ca1201b9460e8a04b7912090ba2c9d4a71b21a021360b39e3aca70227",
+      "destinos": [],
+      "status": "referencia_abreviada",
+      "locais_relacionados": [],
+      "observacao": "O Artigo 2 menciona a constante de nos livres no texto apos a Proposicao 2.3, mas nao reproduz o enunciado com limsup para toda f em C2 nem a demonstracao do original. Preservar como resultado classico de referencia."
+    },
+    {
+      "original": "original_77:6.3",
+      "sha256_original": "58883e324a0d19a4f2fda998382d5e98ba3ba56e091b77cb5b8fcea514bc6a48",
+      "destinos": [],
+      "status": "ingredientes_sem_enunciado_integral",
+      "locais_relacionados": [
+        "artigo_3:4.1",
+        "artigo_3:4.2"
+      ],
+      "observacao": "O Artigo 3 retoma Whitney e resultados diretos com altura, mas nao reproduz literalmente a cota original em termos do seminorma Besov e sua clausula de racionalizacao. Nao declarar equivalencia sem a deducao correspondente."
+    },
+    {
+      "original": "original_77:7.1",
+      "sha256_original": "d8dbfcfa74ad52e576966a8dc95a8d5e18ffe7717eacf739f13d212f9ede06b3",
+      "destinos": [
+        {
+          "id": "artigo_1:6.1",
+          "papel": "principal",
+          "sha256_enunciado": "6544cffbb59a71853baf56c6608f8a6a21f6aa2649e890c19e7d01c142f39fc3"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:7.2",
+      "sha256_original": "971e5649c11b63426742341d8978b0cce7b7d4f82aecb8956931ae873c8a77b5",
+      "destinos": [
+        {
+          "id": "artigo_1:6.2",
+          "papel": "principal",
+          "sha256_enunciado": "c5717a9c83a39cb4e2b51cd80347599e9ca897ab447f6320f3146e7943c2704d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Foram mantidos a inclusao intervalar, o majorante e a falha segura. A frase final sobre independencia de amostragem foi abreviada; nao altera as hipoteses do certificado."
+    },
+    {
+      "original": "original_77:7.3",
+      "sha256_original": "058aadf9a9119ace9ad69525fd70ccfb6a4b57c5f1fbe60895702af1470ceb6f",
+      "destinos": [
+        {
+          "id": "artigo_1:6.3",
+          "papel": "principal",
+          "sha256_enunciado": "24c9bc8ecc4396772377a01e8c3d33ba00ea38d2101ba8ff08edeb69e1530cc0"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Permanecem a hipotese de majorante validado, o limite uniforme M_* e as etapas do algoritmo. Ha abreviacoes de redacao e mudancas de formatacao."
+    },
+    {
+      "original": "original_77:7.4",
+      "sha256_original": "ff8e491f3783340a5e616e7ed3725365d93782d282019b9acaed5c22b3ab7f50",
+      "destinos": [
+        {
+          "id": "artigo_1:6.4",
+          "papel": "principal",
+          "sha256_enunciado": "a059de8f548816d329b50900d528bd9723f9c66b7f28995be29b5c2af4f1ded0"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Correspondencia inspecionada. No Artigo 1, mudancas de macros, diagramacao e referencias numericas nao sao tratadas como identidade literal do TeX."
+    },
+    {
+      "original": "original_77:7.5",
+      "sha256_original": "916455ac83b7414ddb4bdfc2b7f696c920f547eefa510df7f58b6d5039285615",
+      "destinos": [
+        {
+          "id": "artigo_1:6.5",
+          "papel": "principal",
+          "sha256_enunciado": "dfc2e17b0b87ad0df72bdad5897b5e0b5cc27f1fac8d0547935059309a746cf8"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "As formulas exatas para folhas e os dois limites de acumulacao foram preservados; a explicacao final foi abreviada."
+    },
+    {
+      "original": "original_77:7.6",
+      "sha256_original": "e62a5d77f71e1bc3c22d531a0d523e873327a56f6580b7743b1ca88fe09a6091",
+      "destinos": [
+        {
+          "id": "artigo_1:6.6",
+          "papel": "principal",
+          "sha256_enunciado": "436d49b37c6de55e23596d134893e665a119f24ff44a57debb146f3496cc9e15"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "A identidade de segunda diferenca e o contraexemplo cubico foram preservados; a conclusao remete ao majorante intervalar."
+    },
+    {
+      "original": "original_77:8.1",
+      "sha256_original": "a3408fb3d6276c48c5de4d6391296e3632973f94c6b601371b9c1f748e8fe8dd",
+      "destinos": [
+        {
+          "id": "artigo_2:3.1",
+          "papel": "principal",
+          "sha256_enunciado": "a3408fb3d6276c48c5de4d6391296e3632973f94c6b601371b9c1f748e8fe8dd"
+        },
+        {
+          "id": "artigo_1:7.1",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "85acb71cd6928b40d66c1d26dee83b2e3b576d1d8b6bd75f9987d53a5ffd9ef4"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.2",
+      "sha256_original": "89f4f9ca38d6934d33393c56df50918b8c2514d70633c23fe6521598277511ab",
+      "destinos": [
+        {
+          "id": "artigo_2:3.2",
+          "papel": "principal",
+          "sha256_enunciado": "89f4f9ca38d6934d33393c56df50918b8c2514d70633c23fe6521598277511ab"
+        },
+        {
+          "id": "artigo_1:7.2",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "02267b3df35720030cc4bfb37c71d37be29523d023fb8ffd673b2c6b373d5db6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.3",
+      "sha256_original": "872d5f76d4533a4018eaa7b23856519e1e62f17372fc8e047014c2dd716dcfa1",
+      "destinos": [
+        {
+          "id": "artigo_2:3.3",
+          "papel": "principal",
+          "sha256_enunciado": "872d5f76d4533a4018eaa7b23856519e1e62f17372fc8e047014c2dd716dcfa1"
+        },
+        {
+          "id": "artigo_1:7.3",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "78e17647efb542d3a5ac660a5cd2758f13d56efa74715685ea32e4b76b4a45d0"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.4",
+      "sha256_original": "91f14fa2e592a0b31bc78e9692db572ca884d6c41fd6de886fc14cbae26a1ce8",
+      "destinos": [
+        {
+          "id": "artigo_2:3.4",
+          "papel": "principal",
+          "sha256_enunciado": "a7cf7ca4804908e62edd256bd8a3edf4c67f185e1b4d65856d01a62cd94594df"
+        },
+        {
+          "id": "artigo_1:7.4",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "252f711df81bb58da0993f6d1fbd7e6d962f5223cb09bda6fdc79bc851c5f72e"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "O calibre continua explicito. A ressalva final sobre outros calibres foi retirada do enunciado, mas permanece no paragrafo sobre dependencia do expoente no calibre."
+    },
+    {
+      "original": "original_77:8.5",
+      "sha256_original": "65980e8d01eb169614b5782fb17493eb035bc30648ce3c37e2e437e4c5343aeb",
+      "destinos": [
+        {
+          "id": "artigo_2:3.5",
+          "papel": "principal",
+          "sha256_enunciado": "52b28cd624eb2a00181fa2f11b01c87e243e21f1360e21a05fd42fe557fef6bf"
+        },
+        {
+          "id": "artigo_1:7.5",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "38be04b9540352308beff609dffb9a55ea7c1a8e89f5d0865db646f052f62dbd"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "A razao assintotica 8/6=4/3 permanece identica; a redacao foi abreviada."
+    },
+    {
+      "original": "original_77:8.6",
+      "sha256_original": "ca4e03cd3a94bc122434145172b1436e456c5f6f8ccac1440125962e318364c6",
+      "destinos": [
+        {
+          "id": "artigo_2:3.6",
+          "papel": "principal",
+          "sha256_enunciado": "ca4e03cd3a94bc122434145172b1436e456c5f6f8ccac1440125962e318364c6"
+        },
+        {
+          "id": "artigo_1:7.6",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "83bd63d48a0f455b268792997d6f10cf05f230573c4eaae76970aa5afca207ea"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.7",
+      "sha256_original": "ed3b7433c3a860686793ebb27dffe2bc052f21f17a730d1779f56fc9112c6216",
+      "destinos": [
+        {
+          "id": "artigo_2:3.7",
+          "papel": "principal",
+          "sha256_enunciado": "ed3b7433c3a860686793ebb27dffe2bc052f21f17a730d1779f56fc9112c6216"
+        },
+        {
+          "id": "artigo_1:7.7",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "1a4e4baa1f30a15e5750aceaa381890b6a24991d413971d494f0ae3d7308c0b1"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.8",
+      "sha256_original": "1acb5035c1c53a06fe5dfac3667dc8b9fa8760501d21abd26f3a44849b5943c0",
+      "destinos": [
+        {
+          "id": "artigo_2:3.8",
+          "papel": "principal",
+          "sha256_enunciado": "b3ca2bcf37022bc29cc055ac13da77bc28fb14ae0fbaa1fef3b3e1084d31f4ee"
+        },
+        {
+          "id": "artigo_1:7.8",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "69bc9f284d8b8dbf38ebbf7a533377b0248312b965eb3124e0105fd8db181677"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Ha esclarecimento operacional preexistente: o derivado atribui inversa fechada a etapa de Cantor e explicita que Q e Q* precisam de seus proprios decodificadores. Nao se deve transportar a alegacao original de decodificacao total sem enumeracao auxiliar."
+    },
+    {
+      "original": "original_77:8.9",
+      "sha256_original": "017c1acece9f55dc3e40a39a469435968bd73a9cf550b94a806549a12e16c3bb",
+      "destinos": [
+        {
+          "id": "artigo_2:3.9",
+          "papel": "principal",
+          "sha256_enunciado": "017c1acece9f55dc3e40a39a469435968bd73a9cf550b94a806549a12e16c3bb"
+        },
+        {
+          "id": "artigo_1:7.9",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "dc7aa1e0c6b4c98a16960b1e790be6703fdc9c73d5c0798324cff73fe31c8a5c"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.10",
+      "sha256_original": "8fef1912f45512c1edd1de044d54aaf9427eccd73ebe19aca7cb10e654240260",
+      "destinos": [
+        {
+          "id": "artigo_2:3.10",
+          "papel": "principal",
+          "sha256_enunciado": "8fef1912f45512c1edd1de044d54aaf9427eccd73ebe19aca7cb10e654240260"
+        },
+        {
+          "id": "artigo_1:7.10",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "63014c4cf9765b17af8dc7db0367c628df45cab8f8af96d846a2fbac25f42102"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.11",
+      "sha256_original": "62e0e2c19fadac90b55ad7b754ed54fe5a2596faebffd624f36e5c8927df34d3",
+      "destinos": [
+        {
+          "id": "artigo_2:3.11",
+          "papel": "principal",
+          "sha256_enunciado": "62e0e2c19fadac90b55ad7b754ed54fe5a2596faebffd624f36e5c8927df34d3"
+        },
+        {
+          "id": "artigo_1:7.11",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "096bf63613cad26624cebab54052cbffc4f8e085cee5f0c67ea6c2e3f06aefea"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.12",
+      "sha256_original": "ec4241d9a4d6880958b799b43fe2dc27e1f69b7a0b0af9cc3745879b6ada5f7a",
+      "destinos": [
+        {
+          "id": "artigo_2:3.12",
+          "papel": "principal",
+          "sha256_enunciado": "ec4241d9a4d6880958b799b43fe2dc27e1f69b7a0b0af9cc3745879b6ada5f7a"
+        },
+        {
+          "id": "artigo_1:7.12",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "9b1b49ceb46a2e860b3a522612aff95c93ec5f28519ed58fe9e48ceffaac98c9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.13",
+      "sha256_original": "e90b255f0793882534b9d5f698575f5d4bbbbaeb4e8612b470cde844d6c2339d",
+      "destinos": [
+        {
+          "id": "artigo_2:3.13",
+          "papel": "principal",
+          "sha256_enunciado": "e90b255f0793882534b9d5f698575f5d4bbbbaeb4e8612b470cde844d6c2339d"
+        },
+        {
+          "id": "artigo_1:7.13",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "561d6223aa7d09c8e4a6f8c67df7d822583207509bb20c671914439cdccc001c"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.14",
+      "sha256_original": "59637c1c92f3c2de778e167741a60b74030e7fd9cf2a0ae2ee6d1abbb59cca0e",
+      "destinos": [
+        {
+          "id": "artigo_2:3.14",
+          "papel": "principal",
+          "sha256_enunciado": "59637c1c92f3c2de778e167741a60b74030e7fd9cf2a0ae2ee6d1abbb59cca0e"
+        },
+        {
+          "id": "artigo_1:7.14",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "b757a133bafb984d69a69221b3ab8910165d6ef71f4d1b589ec93dc9ed48e2d0"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.15",
+      "sha256_original": "e77f07ec9b7fbcd39ce505bc647fc6b78ffa654e9cabd0d0b98f95d9bbeafebe",
+      "destinos": [
+        {
+          "id": "artigo_2:3.15",
+          "papel": "principal",
+          "sha256_enunciado": "e77f07ec9b7fbcd39ce505bc647fc6b78ffa654e9cabd0d0b98f95d9bbeafebe"
+        },
+        {
+          "id": "artigo_1:7.15",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "7ba8d7deccbdf158206f9849dc1aa6b44a5c75ce7d66c8ea70d8a3d9c9d5a2b9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.16",
+      "sha256_original": "c30c3a433ca2b439498261445657ee2b6105136090d73ee297327f967c88e705",
+      "destinos": [
+        {
+          "id": "artigo_2:3.16",
+          "papel": "principal",
+          "sha256_enunciado": "c30c3a433ca2b439498261445657ee2b6105136090d73ee297327f967c88e705"
+        },
+        {
+          "id": "artigo_1:7.16",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "8652ad312dd69104beef037841d3669653888b6b9a03d0ae6c0fd0ee75bd392a"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.17",
+      "sha256_original": "b9c2caeb04b710f73a7100142a427e3b85b7bcb85ff079bccd72a6228ff9ee80",
+      "destinos": [
+        {
+          "id": "artigo_2:3.17",
+          "papel": "principal",
+          "sha256_enunciado": "b9c2caeb04b710f73a7100142a427e3b85b7bcb85ff079bccd72a6228ff9ee80"
+        },
+        {
+          "id": "artigo_1:7.17",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "5fbaad9687c83457f86d0382401648a460dbc3fd9674a368fdfc83a9ae43d9c9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.18",
+      "sha256_original": "ab6daab43d42af4ba856f0ea5a9cba01d24c87a435e2934067e674c0585c2798",
+      "destinos": [
+        {
+          "id": "artigo_2:3.18",
+          "papel": "principal",
+          "sha256_enunciado": "ab6daab43d42af4ba856f0ea5a9cba01d24c87a435e2934067e674c0585c2798"
+        },
+        {
+          "id": "artigo_1:7.18",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "071cf55afe54cd4dd263e92f764152149f7da6c9e45c9247dca10a0b178a5dca"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.19",
+      "sha256_original": "85f08132fa4f3716b3af4e94d6f0f9d9faaf4355425b63f9abf296198adb43c4",
+      "destinos": [
+        {
+          "id": "artigo_2:3.19",
+          "papel": "principal",
+          "sha256_enunciado": "85f08132fa4f3716b3af4e94d6f0f9d9faaf4355425b63f9abf296198adb43c4"
+        },
+        {
+          "id": "artigo_1:7.19",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "978753a42be7e8e4f1f0234c83b5b87d641c49dcf45a00ae254dedeed6db7163"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.20",
+      "sha256_original": "1095723f00887fc9d8244f548e87be28e9ec953423bf1dbca3e76b2a96365f7b",
+      "destinos": [
+        {
+          "id": "artigo_2:3.20",
+          "papel": "principal",
+          "sha256_enunciado": "1095723f00887fc9d8244f548e87be28e9ec953423bf1dbca3e76b2a96365f7b"
+        },
+        {
+          "id": "artigo_1:7.20",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "2dd4f4767bb3ed218a47ef5e2bc7d8c1be91e6491531460ff2c0c78c95ff30de"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.21",
+      "sha256_original": "455fc62783d4acc6d573b9bcb95f614270946608a7990f524451b8716b9cfe28",
+      "destinos": [
+        {
+          "id": "artigo_2:3.21",
+          "papel": "principal",
+          "sha256_enunciado": "455fc62783d4acc6d573b9bcb95f614270946608a7990f524451b8716b9cfe28"
+        },
+        {
+          "id": "artigo_1:7.21",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "ee77f2c1b21d8b06e7ddcd5639cb0f7e2367c16046f204b89d81d4644b8ee794"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.22",
+      "sha256_original": "89e7907f1bee8ca0761de598a9fa651c068fcb0a78a0ebf60042b2c084547e50",
+      "destinos": [
+        {
+          "id": "artigo_2:3.22",
+          "papel": "principal",
+          "sha256_enunciado": "89e7907f1bee8ca0761de598a9fa651c068fcb0a78a0ebf60042b2c084547e50"
+        },
+        {
+          "id": "artigo_1:7.22",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "6046c55e9de56815824819a46b0a9849fed51b9de83fe419d67afce128988acd"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.23",
+      "sha256_original": "89b73f055fa469fdff6359752ed815fdf2b64631a7f95fead81f4bcf0e44ec9e",
+      "destinos": [
+        {
+          "id": "artigo_2:3.23",
+          "papel": "principal",
+          "sha256_enunciado": "89b73f055fa469fdff6359752ed815fdf2b64631a7f95fead81f4bcf0e44ec9e"
+        },
+        {
+          "id": "artigo_1:7.23",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "fb7d11e603e643d2f96db4ffac6aee6bb4e9f3d14b59b6f95c72bb6429770353"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.24",
+      "sha256_original": "f35aaa44fff7fa6b6ebb456c58d0e1f6481b184ff410b646e8c781b9a808f48f",
+      "destinos": [
+        {
+          "id": "artigo_2:3.24",
+          "papel": "principal",
+          "sha256_enunciado": "f35aaa44fff7fa6b6ebb456c58d0e1f6481b184ff410b646e8c781b9a808f48f"
+        },
+        {
+          "id": "artigo_1:7.24",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "e6946110c32359aa108f8d458051d9f52c60388869ca6ba515c5a3f29ae94d50"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:8.25",
+      "sha256_original": "406ab02e3e34679d0149fa73cb07afcb051405d7722badbce07972d86152b392",
+      "destinos": [
+        {
+          "id": "artigo_2:3.25",
+          "papel": "principal",
+          "sha256_enunciado": "406ab02e3e34679d0149fa73cb07afcb051405d7722badbce07972d86152b392"
+        },
+        {
+          "id": "artigo_1:7.25",
+          "papel": "duplicacao_preservada",
+          "sha256_enunciado": "252a2a9f48005a00cc04ba33530e9789af655aacce572b71204b0bb7e76dbaf9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.1",
+      "sha256_original": "975e8c3fbb47c811d96ddc7781bcc83ccbc87d32b3f2d2539e849c007e421869",
+      "destinos": [
+        {
+          "id": "artigo_2:4.1",
+          "papel": "principal",
+          "sha256_enunciado": "975e8c3fbb47c811d96ddc7781bcc83ccbc87d32b3f2d2539e849c007e421869"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.2",
+      "sha256_original": "d6aea6b76af8b5b873a08ef8f4a80775e61776c29f7d6e1d02387162b6620672",
+      "destinos": [
+        {
+          "id": "artigo_2:4.2",
+          "papel": "principal",
+          "sha256_enunciado": "d6aea6b76af8b5b873a08ef8f4a80775e61776c29f7d6e1d02387162b6620672"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.3",
+      "sha256_original": "412aee0d9d09c093d14ec02a5b81e3b6a91887256cebfa873a3d992e02f86465",
+      "destinos": [
+        {
+          "id": "artigo_2:4.3",
+          "papel": "principal",
+          "sha256_enunciado": "412aee0d9d09c093d14ec02a5b81e3b6a91887256cebfa873a3d992e02f86465"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.4",
+      "sha256_original": "a5a0a41ba63186b00145557999a5c434477b6e5ee4739937c5c15dcff24462f8",
+      "destinos": [
+        {
+          "id": "artigo_2:4.4",
+          "papel": "principal",
+          "sha256_enunciado": "a5a0a41ba63186b00145557999a5c434477b6e5ee4739937c5c15dcff24462f8"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.5",
+      "sha256_original": "ead9c795568497ed6350e9a5879859c274089da70c532e935738bb59626080c5",
+      "destinos": [
+        {
+          "id": "artigo_2:4.5",
+          "papel": "principal",
+          "sha256_enunciado": "ead9c795568497ed6350e9a5879859c274089da70c532e935738bb59626080c5"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:9.6",
+      "sha256_original": "715d90a075e8051458c3efe9417e211c34688234b2aef8955edba6212f8e4b0c",
+      "destinos": [
+        {
+          "id": "artigo_2:4.6",
+          "papel": "principal",
+          "sha256_enunciado": "5efd2e82cb688e8a6e2ed539100a42eb3ad7fe4f583f83c6b96991b1953eaa7d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Mantem as obstrucoes de escala e translacao e a altura linear em 1/h; as referencias a agendas de altura passam ao terceiro artigo."
+    },
+    {
+      "original": "original_77:10.1",
+      "sha256_original": "795d24538170dc41bf7e85596a11a4b25d6423b2875fc6c4aaa00be6b64a3450",
+      "destinos": [
+        {
+          "id": "artigo_2:5.1",
+          "papel": "principal",
+          "sha256_enunciado": "795d24538170dc41bf7e85596a11a4b25d6423b2875fc6c4aaa00be6b64a3450"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:10.2",
+      "sha256_original": "0951f7fbd8969e717843d4c10769901eccf287cbac870e09b3337e12d08a2a4c",
+      "destinos": [
+        {
+          "id": "artigo_2:5.2",
+          "papel": "principal",
+          "sha256_enunciado": "0951f7fbd8969e717843d4c10769901eccf287cbac870e09b3337e12d08a2a4c"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:11.1",
+      "sha256_original": "5022c4c176759069acf24f184ed77074010dcb86ff7d13cc4bb5bd8980fde711",
+      "destinos": [
+        {
+          "id": "artigo_2:6.1",
+          "papel": "principal",
+          "sha256_enunciado": "5022c4c176759069acf24f184ed77074010dcb86ff7d13cc4bb5bd8980fde711"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:11.2",
+      "sha256_original": "c54c56e5c2745114d6079f6554f97bd712ec4fa35b0bfe2269d57f52dfb10506",
+      "destinos": [
+        {
+          "id": "artigo_2:6.2",
+          "papel": "principal",
+          "sha256_enunciado": "c54c56e5c2745114d6079f6554f97bd712ec4fa35b0bfe2269d57f52dfb10506"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:11.3",
+      "sha256_original": "1f7cdee0fb618a3d2dc0d612d0809f542cdc82e9995a86a8a47be6ebf8626d3b",
+      "destinos": [
+        {
+          "id": "artigo_2:6.3",
+          "papel": "principal",
+          "sha256_enunciado": "1f7cdee0fb618a3d2dc0d612d0809f542cdc82e9995a86a8a47be6ebf8626d3b"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:12.1",
+      "sha256_original": "80f71c1ae4f64907f2e4571fbec6ef9bfd5f258e6f35d2fdb7ca448a171672ec",
+      "destinos": [
+        {
+          "id": "artigo_2:7.1",
+          "papel": "principal",
+          "sha256_enunciado": "80f71c1ae4f64907f2e4571fbec6ef9bfd5f258e6f35d2fdb7ca448a171672ec"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:12.2",
+      "sha256_original": "4bdad8f547f17afa16199c6fc3042f0cc34d20f49d7afbb26e7f0d87554e8cbd",
+      "destinos": [
+        {
+          "id": "artigo_2:7.2",
+          "papel": "principal",
+          "sha256_enunciado": "4bdad8f547f17afa16199c6fc3042f0cc34d20f49d7afbb26e7f0d87554e8cbd"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:12.3",
+      "sha256_original": "cc6ad176de8791a0e91e256745d492e5bba43a4216c3ea18ed93357ed4fbee84",
+      "destinos": [
+        {
+          "id": "artigo_2:7.3",
+          "papel": "principal",
+          "sha256_enunciado": "cc6ad176de8791a0e91e256745d492e5bba43a4216c3ea18ed93357ed4fbee84"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:12.4",
+      "sha256_original": "cc55f56fc48f37277ab7e5c2bf0fbca820b21cb9f872904dd03a54006a91a63f",
+      "destinos": [
+        {
+          "id": "artigo_2:7.4",
+          "papel": "principal",
+          "sha256_enunciado": "cc55f56fc48f37277ab7e5c2bf0fbca820b21cb9f872904dd03a54006a91a63f"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:13.1",
+      "sha256_original": "d01124c38b99261d485d077059e120cb770158c3c209e9a36c4b055355c4d82d",
+      "destinos": [
+        {
+          "id": "artigo_2:8.1",
+          "papel": "principal",
+          "sha256_enunciado": "d01124c38b99261d485d077059e120cb770158c3c209e9a36c4b055355c4d82d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:13.2",
+      "sha256_original": "cb375545cdb62cdf7a7b24493e6a9e91295e786d24fc5a90b31437a85a9b9ced",
+      "destinos": [
+        {
+          "id": "artigo_2:8.2",
+          "papel": "principal",
+          "sha256_enunciado": "cb375545cdb62cdf7a7b24493e6a9e91295e786d24fc5a90b31437a85a9b9ced"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:13.3",
+      "sha256_original": "367e61bd2d70b337a2ccf1c036d477ef1b38362c705305a66dc21cf320b1c1d1",
+      "destinos": [
+        {
+          "id": "artigo_2:8.3",
+          "papel": "principal",
+          "sha256_enunciado": "367e61bd2d70b337a2ccf1c036d477ef1b38362c705305a66dc21cf320b1c1d1"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:13.4",
+      "sha256_original": "9f69509edacb0f636b89a7d1a4fc22364bf877be1965f914f92ccc4532d91ab5",
+      "destinos": [
+        {
+          "id": "artigo_2:8.4",
+          "papel": "principal",
+          "sha256_enunciado": "9f69509edacb0f636b89a7d1a4fc22364bf877be1965f914f92ccc4532d91ab5"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:14.1",
+      "sha256_original": "fa139ae7347b0c3c5577db67712b65635248003471185957800669d41148c5ab",
+      "destinos": [
+        {
+          "id": "artigo_2:9.1",
+          "papel": "principal",
+          "sha256_enunciado": "fa139ae7347b0c3c5577db67712b65635248003471185957800669d41148c5ab"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:14.2",
+      "sha256_original": "16c70da85a9dbbd5f9f7d8cc42e06930f4a63eef39b9f5c9715d2697315d6f4d",
+      "destinos": [
+        {
+          "id": "artigo_2:9.2",
+          "papel": "principal",
+          "sha256_enunciado": "734e781b3b37531558878a7c878b5b4414f57f734b5846eea9241d1c569cfc23"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Foi retirada somente a expressao introdutoria Convém dizer o quanto; permanecem os dados e a cota de pior caso."
+    },
+    {
+      "original": "original_77:14.3",
+      "sha256_original": "def7169385bdaa70c999abd133a64c5eb72617a6192a60f912562244f72967af",
+      "destinos": [
+        {
+          "id": "artigo_2:9.3",
+          "papel": "principal",
+          "sha256_enunciado": "def7169385bdaa70c999abd133a64c5eb72617a6192a60f912562244f72967af"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:14.4",
+      "sha256_original": "112c205d15294b034c079e5fed2b3f0c94a753606dc561d676ea38ef6d77b696",
+      "destinos": [
+        {
+          "id": "artigo_2:9.4",
+          "papel": "principal",
+          "sha256_enunciado": "112c205d15294b034c079e5fed2b3f0c94a753606dc561d676ea38ef6d77b696"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:14.5",
+      "sha256_original": "42f876842faaa1efc966cb3f5ad4f0921736b0271c63101c10e8e30f7ca2b5d7",
+      "destinos": [
+        {
+          "id": "artigo_2:9.5",
+          "papel": "principal",
+          "sha256_enunciado": "42f876842faaa1efc966cb3f5ad4f0921736b0271c63101c10e8e30f7ca2b5d7"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:16.1",
+      "sha256_original": "cf713c9daa60eb658f454f18f2afd37af2840e681af3a00173c136446fbccbb9",
+      "destinos": [
+        {
+          "id": "artigo_2:11.1",
+          "papel": "principal",
+          "sha256_enunciado": "cf713c9daa60eb658f454f18f2afd37af2840e681af3a00173c136446fbccbb9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:16.2",
+      "sha256_original": "1f8e38d5770a2b75660538a27551497afb7fa5ed342bbed161a313d3aee3aae6",
+      "destinos": [
+        {
+          "id": "artigo_2:11.2",
+          "papel": "principal",
+          "sha256_enunciado": "1f8e38d5770a2b75660538a27551497afb7fa5ed342bbed161a313d3aee3aae6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:16.3",
+      "sha256_original": "9ba14b11fe650a5d566d46e8209edba99f8a9a8708d8d10ce2dd8f967d21e091",
+      "destinos": [
+        {
+          "id": "artigo_2:11.3",
+          "papel": "principal",
+          "sha256_enunciado": "9ba14b11fe650a5d566d46e8209edba99f8a9a8708d8d10ce2dd8f967d21e091"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:17.1",
+      "sha256_original": "848a522e2433af8d49959afbe62847d20da6c9261b2dcd1edadb73e77bdda1ac",
+      "destinos": [
+        {
+          "id": "artigo_2:12.1",
+          "papel": "principal",
+          "sha256_enunciado": "848a522e2433af8d49959afbe62847d20da6c9261b2dcd1edadb73e77bdda1ac"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:17.2",
+      "sha256_original": "7090a3cdf6ffb6c577aead967abbc7e94807eef93af5f8f943434798835990b6",
+      "destinos": [
+        {
+          "id": "artigo_2:12.2",
+          "papel": "principal",
+          "sha256_enunciado": "7090a3cdf6ffb6c577aead967abbc7e94807eef93af5f8f943434798835990b6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:17.3",
+      "sha256_original": "51283e61b203c64e4e8e9bbe1d4cc7e2ce8cb228bd7115937b0b12e0ca803f4d",
+      "destinos": [
+        {
+          "id": "artigo_2:12.3",
+          "papel": "principal",
+          "sha256_enunciado": "51283e61b203c64e4e8e9bbe1d4cc7e2ce8cb228bd7115937b0b12e0ca803f4d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:17.4",
+      "sha256_original": "a155bc94a15a8086b8ee14fd33cd30083004d1082e57491c9be473102ef92e72",
+      "destinos": [
+        {
+          "id": "artigo_2:12.4",
+          "papel": "principal",
+          "sha256_enunciado": "a155bc94a15a8086b8ee14fd33cd30083004d1082e57491c9be473102ef92e72"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:18.1",
+      "sha256_original": "997e862072219b4f944a55ab889a9627fca5eb3463aa8bf39ab11312a803a5ee",
+      "destinos": [
+        {
+          "id": "artigo_3:3.1",
+          "papel": "principal",
+          "sha256_enunciado": "997e862072219b4f944a55ab889a9627fca5eb3463aa8bf39ab11312a803a5ee"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:18.2",
+      "sha256_original": "6f77516dd3c4682caa4e84060ed2a89241c543889a39b405c47286313d38900c",
+      "destinos": [
+        {
+          "id": "artigo_3:3.2",
+          "papel": "principal",
+          "sha256_enunciado": "6f77516dd3c4682caa4e84060ed2a89241c543889a39b405c47286313d38900c"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:18.3",
+      "sha256_original": "5ce452b65bf5176d09f2cfe9eebc48fda1c3f547d33ed56f5471f34773ccf43e",
+      "destinos": [
+        {
+          "id": "artigo_3:3.3",
+          "papel": "principal",
+          "sha256_enunciado": "5ce452b65bf5176d09f2cfe9eebc48fda1c3f547d33ed56f5471f34773ccf43e"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:18.4",
+      "sha256_original": "d7229d2c9fd6bd93a9133b2e5280a9d63643649807e608c390e50dd52f374ab1",
+      "destinos": [
+        {
+          "id": "artigo_3:3.4",
+          "papel": "principal",
+          "sha256_enunciado": "d7229d2c9fd6bd93a9133b2e5280a9d63643649807e608c390e50dd52f374ab1"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:19.1",
+      "sha256_original": "6cb2bfb61b7140b97217deee43b17109e17d2ac44ca04e500cac96d425f57b22",
+      "destinos": [
+        {
+          "id": "artigo_3:4.1",
+          "papel": "principal",
+          "sha256_enunciado": "6cb2bfb61b7140b97217deee43b17109e17d2ac44ca04e500cac96d425f57b22"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:19.2",
+      "sha256_original": "bb812d5fad41035250a1441cd57b29c30ba93714b60220e608eb574d6da7505d",
+      "destinos": [
+        {
+          "id": "artigo_3:4.2",
+          "papel": "principal",
+          "sha256_enunciado": "bb812d5fad41035250a1441cd57b29c30ba93714b60220e608eb574d6da7505d"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:19.3",
+      "sha256_original": "6b9ee893e5e7223a3af153859b8be6e0d9aa49f6338e6e6ff6a08e3dfe2b4780",
+      "destinos": [
+        {
+          "id": "artigo_3:4.3",
+          "papel": "principal",
+          "sha256_enunciado": "6b9ee893e5e7223a3af153859b8be6e0d9aa49f6338e6e6ff6a08e3dfe2b4780"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:19.4",
+      "sha256_original": "325829c83eab4a5824459b945882178524bf7a2b524201df8733fb7b6cf10ef3",
+      "destinos": [
+        {
+          "id": "artigo_3:4.4",
+          "papel": "principal",
+          "sha256_enunciado": "325829c83eab4a5824459b945882178524bf7a2b524201df8733fb7b6cf10ef3"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:19.5",
+      "sha256_original": "78b42b3d0660ae167d714b6c8f0463a26bd62881c67ed3ee35cbdbaa5b7d3921",
+      "destinos": [
+        {
+          "id": "artigo_3:4.5",
+          "papel": "principal",
+          "sha256_enunciado": "2a190e44d1917ac8dead8e9b9e749f186182f5151b948b1cd0772be5e97af0a7"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "A cota C2 foi preservada; a referencia aos formatos prefix-free foi convertida em citacao ao segundo artigo."
+    },
+    {
+      "original": "original_77:19.6",
+      "sha256_original": "fc2147579c3b48e316d586861e73058d664bac253bcf854601e0a08cc700a70f",
+      "destinos": [
+        {
+          "id": "artigo_3:4.6",
+          "papel": "principal",
+          "sha256_enunciado": "fc2147579c3b48e316d586861e73058d664bac253bcf854601e0a08cc700a70f"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.1",
+      "sha256_original": "4ee53365886c5596f2cca278ec2c12ad4d6c501f5d9d4732c74de1fee29354be",
+      "destinos": [
+        {
+          "id": "artigo_3:5.1",
+          "papel": "principal",
+          "sha256_enunciado": "4ee53365886c5596f2cca278ec2c12ad4d6c501f5d9d4732c74de1fee29354be"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.2",
+      "sha256_original": "1991e2df339c8d1c7ef82f4850669017a9dcb020232bb85c03f63b063cf2be31",
+      "destinos": [
+        {
+          "id": "artigo_3:5.2",
+          "papel": "principal",
+          "sha256_enunciado": "1991e2df339c8d1c7ef82f4850669017a9dcb020232bb85c03f63b063cf2be31"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.3",
+      "sha256_original": "bb7f0a6e7fc1c6d5ff02af9888c2f56bc661a3f8bef5854e624a1409bf16e671",
+      "destinos": [
+        {
+          "id": "artigo_3:5.3",
+          "papel": "principal",
+          "sha256_enunciado": "bb7f0a6e7fc1c6d5ff02af9888c2f56bc661a3f8bef5854e624a1409bf16e671"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.4",
+      "sha256_original": "725773c6678448f9101547d5c03011b62b4baa16d7ad97bd1573e81b59df33c7",
+      "destinos": [
+        {
+          "id": "artigo_3:5.4",
+          "papel": "principal",
+          "sha256_enunciado": "725773c6678448f9101547d5c03011b62b4baa16d7ad97bd1573e81b59df33c7"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.5",
+      "sha256_original": "7157868b6c115ada8967d920041d857f8ca6481f13afbe94648e10ab14e840c9",
+      "destinos": [
+        {
+          "id": "artigo_3:5.5",
+          "papel": "principal",
+          "sha256_enunciado": "7157868b6c115ada8967d920041d857f8ca6481f13afbe94648e10ab14e840c9"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.6",
+      "sha256_original": "86f62574466e14f4542daa0d19e1b118cae7ec3724b028c309dd48c704dce11f",
+      "destinos": [
+        {
+          "id": "artigo_3:5.6",
+          "papel": "principal",
+          "sha256_enunciado": "86f62574466e14f4542daa0d19e1b118cae7ec3724b028c309dd48c704dce11f"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.7",
+      "sha256_original": "5a2a52a6af1ad714a0b8d1d58bb1285d18c4f04b2634079338f599d218a49756",
+      "destinos": [
+        {
+          "id": "artigo_3:5.7",
+          "papel": "principal",
+          "sha256_enunciado": "5a2a52a6af1ad714a0b8d1d58bb1285d18c4f04b2634079338f599d218a49756"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.8",
+      "sha256_original": "2ce8b71c082d903ed93b4d7838af2e292ebac2c79230813a7326d16da6ab3f25",
+      "destinos": [
+        {
+          "id": "artigo_3:5.8",
+          "papel": "principal",
+          "sha256_enunciado": "2ce8b71c082d903ed93b4d7838af2e292ebac2c79230813a7326d16da6ab3f25"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.9",
+      "sha256_original": "06de82a13009ce6e00ac99ab24c8dbf89b39740c12d9d5921fba8c44082622f6",
+      "destinos": [
+        {
+          "id": "artigo_3:5.9",
+          "papel": "principal",
+          "sha256_enunciado": "06de82a13009ce6e00ac99ab24c8dbf89b39740c12d9d5921fba8c44082622f6"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.10",
+      "sha256_original": "f462323de892ca27dc2e4aa9bbfbe74af45e8bbdb4e4a125db53d1f4bdf56dea",
+      "destinos": [
+        {
+          "id": "artigo_3:5.10",
+          "papel": "principal",
+          "sha256_enunciado": "f462323de892ca27dc2e4aa9bbfbe74af45e8bbdb4e4a125db53d1f4bdf56dea"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.11",
+      "sha256_original": "5d84d465dc46c50b043a28763216a1fc49af2d8054aeec16598137859291c58f",
+      "destinos": [
+        {
+          "id": "artigo_3:5.11",
+          "papel": "principal",
+          "sha256_enunciado": "04634500c1ce3c1042fdeda9efa7ad75d03ce00947a9127a2f5a178396480367"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Foi abreviada a explicacao, mantendo a direcao inversa universal e o lado direto especifico da biblioteca."
+    },
+    {
+      "original": "original_77:20.12",
+      "sha256_original": "ca782888872ea91201caee80671221657058fdaffc4d6905d474cd1e57111faf",
+      "destinos": [
+        {
+          "id": "artigo_3:5.12",
+          "papel": "principal",
+          "sha256_enunciado": "ca782888872ea91201caee80671221657058fdaffc4d6905d474cd1e57111faf"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.13",
+      "sha256_original": "2dfd514020218d7646b96fc5134b2dede966f3c6d04307ec3e0a74a7fff62417",
+      "destinos": [
+        {
+          "id": "artigo_3:5.13",
+          "papel": "principal",
+          "sha256_enunciado": "2dfd514020218d7646b96fc5134b2dede966f3c6d04307ec3e0a74a7fff62417"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:20.14",
+      "sha256_original": "bf5f2f34794847bd142ce9c7d5049de4f9decc8974c909bb938c4f252d847d4a",
+      "destinos": [
+        {
+          "id": "artigo_3:5.14",
+          "papel": "principal",
+          "sha256_enunciado": "bf5f2f34794847bd142ce9c7d5049de4f9decc8974c909bb938c4f252d847d4a"
+        }
+      ],
+      "status": "correspondencia_editorial_revisada",
+      "observacao": "Enunciado correspondente identificado; comparacao textual e estado Lean sao registrados separadamente."
+    },
+    {
+      "original": "original_77:21.1",
+      "sha256_original": "a30f0c516288060654c97f00d0ac8e60b2bf89b29fa28b042b4339cf5690821b",
+      "destinos": [],
+      "status": "exemplo_sem_enunciado_derivado",
+      "locais_relacionados": [],
+      "observacao": "Nao localizado como enunciado nos tres derivados. E uma referencia analitica auxiliar do exemplo de Runge; o certificado intervalar principal nao depende de usar esse maximo exato. O texto integral permanece no original recebido."
+    }
+  ]
+}

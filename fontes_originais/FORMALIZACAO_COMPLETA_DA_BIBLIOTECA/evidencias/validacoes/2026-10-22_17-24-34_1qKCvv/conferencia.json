@@ -1,0 +1,381 @@
+{
+  "generated_at": "2026-10-22T17:30:04.529043-03:00",
+  "scope": "Integrity comparison, build of v2, targeted source inspection and continuation plan; input packages were not compiled",
+  "snapshot": {
+    "checked": 196,
+    "divergences": []
+  },
+  "incorporation_manifest": {
+    "checked": 120,
+    "divergences": []
+  },
+  "v2": {
+    "lean_version": "4.28.0",
+    "lean_modules": 47,
+    "baseline_modules": 41,
+    "build": "passed",
+    "build_jobs": 8075,
+    "axiom_audit": "passed",
+    "declarations_audited": 2638,
+    "theorems_audited": 2086,
+    "axioms_outside_allowlist": 0,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "input_packages": [
+    {
+      "package": "parte_1",
+      "lean_files": 9,
+      "lines": 2164,
+      "original_environment_files_present": [],
+      "modules_reached_by_Main": [
+        "RequestProject.Appendix",
+        "RequestProject.Basic",
+        "RequestProject.Bridge",
+        "RequestProject.Chain",
+        "RequestProject.Enumeration",
+        "RequestProject.Error",
+        "RequestProject.Main",
+        "RequestProject.Normalization",
+        "RequestProject.ReLU"
+      ],
+      "import_graph": {
+        "RequestProject.Appendix": [
+          "RequestProject.Normalization"
+        ],
+        "RequestProject.Basic": [
+          "Mathlib"
+        ],
+        "RequestProject.Bridge": [
+          "RequestProject.Normalization",
+          "RequestProject.Enumeration"
+        ],
+        "RequestProject.Chain": [
+          "RequestProject.Normalization"
+        ],
+        "RequestProject.Enumeration": [
+          "RequestProject.Basic"
+        ],
+        "RequestProject.Error": [
+          "RequestProject.Normalization"
+        ],
+        "RequestProject.Main": [
+          "Mathlib",
+          "RequestProject.Basic",
+          "RequestProject.Normalization",
+          "RequestProject.Enumeration",
+          "RequestProject.Bridge",
+          "RequestProject.Error",
+          "RequestProject.Chain",
+          "RequestProject.ReLU",
+          "RequestProject.Appendix"
+        ],
+        "RequestProject.Normalization": [
+          "RequestProject.Basic"
+        ],
+        "RequestProject.ReLU": [
+          "RequestProject.Chain",
+          "RequestProject.Bridge"
+        ]
+      },
+      "source_hashes": {
+        "entradas/parte_1/RequestProject/Appendix.lean": "6bc23bba740d4165953fa7cfd5f0bb782c42ad205cf1100be2f9b27a3c27040c",
+        "entradas/parte_1/RequestProject/Basic.lean": "3221749989e2ed9289879c21ae88fbb449e0248ce3860ea6fde60a95e18071e6",
+        "entradas/parte_1/RequestProject/Bridge.lean": "0a7d8ae7a91b98e84154eee239a6f9ac2e8b40cc77cb0146e3e78490a100086c",
+        "entradas/parte_1/RequestProject/Chain.lean": "46ce1cdc7f60c654de16e376f1b9a0ef5d8156a126c5dff18113735184d98907",
+        "entradas/parte_1/RequestProject/Enumeration.lean": "e83f55bd0e5e17e3fe95a926f3a252c395bbc8f4e2f01edb226cf5f0730944e7",
+        "entradas/parte_1/RequestProject/Error.lean": "b235337d01e39b76d39b167880de1a14a560b5fcb7002b56121ee29e4ccb5617",
+        "entradas/parte_1/RequestProject/Main.lean": "08e10597b3d3a356f6f4ba194dfd9696d7b8c77ec952823d413008377ec02446",
+        "entradas/parte_1/RequestProject/Normalization.lean": "2b65d8231a57290ea88534d8be436d9c7008e7b7b8e0fffe9677ff3d0e6dd86c",
+        "entradas/parte_1/RequestProject/ReLU.lean": "e559563a5d6e0dbb0e059fa419e782f6de0642f385d1a0fd401655fcd30e2a01"
+      },
+      "current_review_compilation": "not_run",
+      "current_review_axiom_audit": "not_run"
+    },
+    {
+      "package": "artigo_2",
+      "lean_files": 31,
+      "lines": 9528,
+      "original_environment_files_present": [],
+      "modules_reached_by_Main": [
+        "RequestProject.Main"
+      ],
+      "import_graph": {
+        "RequestProject.Addresses": [
+          "RequestProject.Atoms"
+        ],
+        "RequestProject.Atoms": [
+          "RequestProject.Indexing"
+        ],
+        "RequestProject.BitComplexity": [
+          "RequestProject.Complexity"
+        ],
+        "RequestProject.Budgets": [
+          "RequestProject.DP",
+          "RequestProject.Uniform"
+        ],
+        "RequestProject.Catalog": [
+          "RequestProject.Serialization"
+        ],
+        "RequestProject.Codebook": [
+          "RequestProject.EntropyLower"
+        ],
+        "RequestProject.Codecs": [
+          "RequestProject.Entropy"
+        ],
+        "RequestProject.Coding": [
+          "RequestProject.Addresses"
+        ],
+        "RequestProject.Complexity": [
+          "RequestProject.Budgets"
+        ],
+        "RequestProject.DP": [
+          "RequestProject.DPBase"
+        ],
+        "RequestProject.DPBase": [
+          "RequestProject.Functional"
+        ],
+        "RequestProject.Dyadic": [
+          "RequestProject.Trees"
+        ],
+        "RequestProject.DyadicEnvelope": [
+          "RequestProject.DyadicPhase"
+        ],
+        "RequestProject.DyadicExact": [
+          "RequestProject.DyadicTools",
+          "RequestProject.Sawtooth"
+        ],
+        "RequestProject.DyadicInterp": [
+          "RequestProject.Dyadic"
+        ],
+        "RequestProject.DyadicPhase": [
+          "RequestProject.DyadicExact"
+        ],
+        "RequestProject.DyadicSync": [
+          "RequestProject.DyadicPhase"
+        ],
+        "RequestProject.DyadicTools": [
+          "RequestProject.Dyadic"
+        ],
+        "RequestProject.Entropy": [
+          "RequestProject.Codebook"
+        ],
+        "RequestProject.EntropyLower": [
+          "RequestProject.JointBudget"
+        ],
+        "RequestProject.Formats": [
+          "RequestProject.Coding",
+          "RequestProject.Trees"
+        ],
+        "RequestProject.Functional": [
+          "RequestProject.Interface"
+        ],
+        "RequestProject.Indexing": [
+          "Mathlib"
+        ],
+        "RequestProject.Interface": [
+          "RequestProject.Catalog"
+        ],
+        "RequestProject.Interp": [
+          "Mathlib"
+        ],
+        "RequestProject.JointBudget": [
+          "RequestProject.Uniform",
+          "RequestProject.Formats",
+          "RequestProject.Serialization"
+        ],
+        "RequestProject.Main": [
+          "Mathlib"
+        ],
+        "RequestProject.Sawtooth": [
+          "Mathlib"
+        ],
+        "RequestProject.Serialization": [
+          "RequestProject.Addresses",
+          "RequestProject.Formats"
+        ],
+        "RequestProject.Trees": [
+          "RequestProject.Atoms",
+          "RequestProject.Interp"
+        ],
+        "RequestProject.Uniform": [
+          "RequestProject.Trees"
+        ]
+      },
+      "source_hashes": {
+        "entradas/artigo_2/RequestProject/Addresses.lean": "e73e58dbefabbe8cee75beceff126e9885952b78462f9cf74104a8ededcb31a1",
+        "entradas/artigo_2/RequestProject/Atoms.lean": "aaaf448efe35941e70486152b16d68c9024bd328ba932f78364fc4c1b7c15b24",
+        "entradas/artigo_2/RequestProject/BitComplexity.lean": "757230861581c0c3b43c8025a62e87cebd621540568571f4ffb1959b677a4910",
+        "entradas/artigo_2/RequestProject/Budgets.lean": "84b82d0058c066123cd59268aeb62599c2989347d2f6b4554d447a727e6e83ef",
+        "entradas/artigo_2/RequestProject/Catalog.lean": "3aac8a72b9902320e0926a5b7117a54c1dfdb7a2f8ab7a6d59a5826c57348d6f",
+        "entradas/artigo_2/RequestProject/Codebook.lean": "5026f0b13530672cbb33bf82328cb181642294e21c55095ddeafcc1ca8642b6f",
+        "entradas/artigo_2/RequestProject/Codecs.lean": "41845c6157386f309c8dee33b7e43e7cf52519843cc199fc5c1d25e0b08eab97",
+        "entradas/artigo_2/RequestProject/Coding.lean": "7beaaecd017654f299b319070086336237a7a7b5490b589c65f07e2c35b39b1d",
+        "entradas/artigo_2/RequestProject/Complexity.lean": "6ee9abd4bbffeafc57c97324ae5bcb07a6400bc883dae5a7c583d4c69b134788",
+        "entradas/artigo_2/RequestProject/DP.lean": "7acebb443a9393cde1ff5e693dbd9a8635873acbaa91bfc023219091e7940d49",
+        "entradas/artigo_2/RequestProject/DPBase.lean": "8149fc78ff16d3c73ee8550324e647a5200933b54a71089d1f1c9181d2240480",
+        "entradas/artigo_2/RequestProject/Dyadic.lean": "fda284eb37943c960b80814059fc248c2a68a6f70515ef27c19cbd2aa83f20c8",
+        "entradas/artigo_2/RequestProject/DyadicEnvelope.lean": "c724d9942f68a27d2f043e56e253cece7934536b0bb7a9b930f6383ec15d4fc9",
+        "entradas/artigo_2/RequestProject/DyadicExact.lean": "f63e43f1db5329ae27ca61e9bbb35edc77e4bcda510bed0bb2be8ecc56b4a76a",
+        "entradas/artigo_2/RequestProject/DyadicInterp.lean": "ca6ea043970f30faf7bad8f88556de9f6ca6cba3ff359145b43f6c06bc0d178e",
+        "entradas/artigo_2/RequestProject/DyadicPhase.lean": "72b08fd76a7adf570db6bed3b2ba53f43f5217769b260fe59a9b29be85bc2f3e",
+        "entradas/artigo_2/RequestProject/DyadicSync.lean": "44ce7e9aeacbdd1ae8c54a9919463ae205260bb056f7675d0972549ac8ea2e4a",
+        "entradas/artigo_2/RequestProject/DyadicTools.lean": "e558b48ab9a02f41dcbc8824e748a11d762e1f2bdb2dcba43186bf039dfa0277",
+        "entradas/artigo_2/RequestProject/Entropy.lean": "978226353f6e7dc7935db6c09f5a7afae8d3347b6c037c7c8786cc308842bfeb",
+        "entradas/artigo_2/RequestProject/EntropyLower.lean": "ee7906bf518359025a9f0115579e7a2fb9d95156c556a22d3be88c0536ae032a",
+        "entradas/artigo_2/RequestProject/Formats.lean": "2e6a4f7f1e8233462726652264f9077c39276c6f9ebbc51c60df213f029e9be3",
+        "entradas/artigo_2/RequestProject/Functional.lean": "a23b977b074c07bf74d880e4bec9f516e736a71781892f5114af22ec1ec53e0a",
+        "entradas/artigo_2/RequestProject/Indexing.lean": "52b9adf1b6613900880f6b1ab992a03b919eff4ae82df6172289d532d12fba35",
+        "entradas/artigo_2/RequestProject/Interface.lean": "8f545c7bd1df9440b2a5d2ab259b329a80191f2857b7f6e8ea80417a94d11a68",
+        "entradas/artigo_2/RequestProject/Interp.lean": "ae603a6ca8c3e155496b093ff10dbdfdddc989c6c95f662fd9f76cdc6f501b19",
+        "entradas/artigo_2/RequestProject/JointBudget.lean": "5ab251753aba768dad648d3fa4432e91dbb6ab9aa35303139dc1692a46307c83",
+        "entradas/artigo_2/RequestProject/Main.lean": "929b0bddef0b781f3fb42c7a99f252dc0bda7331f698104f7075e12ff637c52d",
+        "entradas/artigo_2/RequestProject/Sawtooth.lean": "219180b781dc5718d7b945c9d4508ca13793ee71da8b53a6e89f0ca4ac127592",
+        "entradas/artigo_2/RequestProject/Serialization.lean": "47015bef28dea6b9510b514112a2fda95ceec2080465d496eb4fae420c8db924",
+        "entradas/artigo_2/RequestProject/Trees.lean": "8da734a82b59fd08094e9707bfd8cbe328a2069317b5c44cc138477ad88ccd56",
+        "entradas/artigo_2/RequestProject/Uniform.lean": "4db69a0edd711ac8ced5131022f22a9a769d108370d56a631997cf1748243653"
+      },
+      "current_review_compilation": "not_run",
+      "current_review_axiom_audit": "not_run"
+    }
+  ],
+  "article2_tex_matches_original_package": true,
+  "article2_tex_sha256": "5c08f51c466ed2e6b870f8162765e6fed058ebb3e160b91496d60a329eab7d8d",
+  "article3_targets": [
+    {
+      "line": 186,
+      "kind": "proposition",
+      "title": "aninhamento da agenda",
+      "label": "prop:schedule-nesting"
+    },
+    {
+      "line": 237,
+      "kind": "theorem",
+      "title": "redução exata às escalas diádicas",
+      "label": "thm:dyadic-rate-equivalence"
+    },
+    {
+      "line": 269,
+      "kind": "proposition",
+      "title": "falha exata de homogeneidade",
+      "label": "prop:nonhomogeneous-functional"
+    },
+    {
+      "line": 378,
+      "kind": "lemma",
+      "title": "Jackson racional com altura explícita",
+      "label": "lem:rational-jackson-height"
+    },
+    {
+      "line": 498,
+      "kind": "theorem",
+      "title": "direção direta com altura aritmética",
+      "label": "thm:direct-besov-height"
+    },
+    {
+      "line": 552,
+      "kind": "corollary",
+      "title": "imersões quantitativas uniformes sobre bolas",
+      "label": "cor:uniform-besov-ball-embedding"
+    },
+    {
+      "line": 615,
+      "kind": "corollary",
+      "title": "endpoint $C^2$",
+      "label": "cor:c2-direct-endpoint"
+    },
+    {
+      "line": 651,
+      "kind": "proposition",
+      "title": "piso aritmético uniforme",
+      "label": "prop:arithmetic-floor"
+    },
+    {
+      "line": 887,
+      "kind": "theorem",
+      "title": "reversibilidade rasa exata",
+      "label": "thm:exact-marked-reversal"
+    },
+    {
+      "line": 955,
+      "kind": "proposition",
+      "title": "forma ancorada e comprimento estrutural",
+      "label": "prop:anchored-relu-code"
+    },
+    {
+      "line": 1013,
+      "kind": "theorem",
+      "title": "reversão aproximada quantizada",
+      "label": "thm:quantized-approximate-reverse"
+    },
+    {
+      "line": 1074,
+      "kind": "corollary",
+      "title": "redes profundas medidas pela função realizada",
+      "label": "cor:deep-functional-reverse"
+    },
+    {
+      "line": 1176,
+      "kind": "theorem",
+      "title": "imersão inversa sob crescimento de Lipschitz",
+      "label": "thm:raw-lossy-inverse"
+    },
+    {
+      "line": 1230,
+      "kind": "corollary",
+      "title": "aplicação às agendas diretas",
+      "label": "cor:raw-library-inverse"
+    },
+    {
+      "line": 1265,
+      "kind": "theorem",
+      "title": "agudeza por um pente de tendas",
+      "label": "thm:critical-tent-comb"
+    },
+    {
+      "line": 1373,
+      "kind": "lemma",
+      "title": "desigualdade inversa universal",
+      "label": "lem:universal-regularized-inverse"
+    },
+    {
+      "line": 1398,
+      "kind": "theorem",
+      "title": "Jackson racional para o funcional de realização",
+      "label": "thm:regularized-jackson-bernstein"
+    },
+    {
+      "line": 1445,
+      "kind": "theorem",
+      "title": "caracterização pelo funcional de realização",
+      "label": "thm:complete-besov-reversibility"
+    },
+    {
+      "line": 1530,
+      "kind": "theorem",
+      "title": "reversibilidade estável por inclusão de redes",
+      "label": "thm:architecture-stable-reversibility"
+    }
+  ],
+  "missing_recent_artifacts": {
+    "chat_title": "Revisão Lean Parte 2",
+    "chat_id": "6ad98373-ab24-83e8-b0df-04ea8319d1eb",
+    "files": [
+      "Fechamento_Parte_2_Formalizacao_Aristotle.tex",
+      "Pacote_Aristotle_Fechamento_Parte_2.zip"
+    ],
+    "status": "Recorded in prior chat; not located in current project or Downloads"
+  },
+  "completed_at": "2026-10-22T17:35:30.776529-03:00",
+  "outputs": [
+    "CONFERENCIA_E_PLANO.md",
+    "conferencia.json",
+    "cobertura_artigo_3.csv",
+    "resultado.txt",
+    "build.log",
+    "axiomas.log"
+  ]
+}

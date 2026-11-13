@@ -1,0 +1,39 @@
+⚠ [8030/8079] Replayed RequestProject.Indexing
+warning: RequestProject/Indexing.lean:314:13: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+warning: RequestProject/Indexing.lean:345:0: automatically included section variable(s) unused in theorem `Artigo.shell_mono`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RequestProject/Indexing.lean:348:0: automatically included section variable(s) unused in theorem `Artigo.lvl_le_of_lt`:
+  [DecidableEq α]
+  hS
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] hS in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8041/8079] Replayed RequestProject.Formats
+warning: RequestProject/Formats.lean:476:34: unused variable `hH`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8053/8079] Replayed Pendencias.Taxa
+warning: Pendencias/Taxa.lean:132:15: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Pendencias/Taxa.lean:134:8: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Pendencias/Taxa.lean:199:16: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+⚠ [8054/8079] Replayed Pendencias.Inversa
+warning: Pendencias/Inversa.lean:203:27: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Pendencias/Inversa.lean:230:8: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Pendencias/Inversa.lean:412:59: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+⚠ [8075/8079] Built Pendencias.MarcadaParticao (4.9s)
+warning: Pendencias/MarcadaParticao.lean:154:17: This simp argument is unused:
+  MAtom.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp_all only ̵[̵M̵A̵t̵o̵m̵.̵m̵k̵.̵i̵n̵j̵E̵q̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8076/8079] Built Pendencias.ReversaoExata (6.0s)
+✔ [8077/8079] Built Pendencias.ReversaoOriginal (4.0s)
+✔ [8078/8079] Built Pendencias (4.1s)
+Build completed successfully (8079 jobs).

@@ -1,0 +1,44 @@
+% MAPA artigo_3:5.4
+\begin{proposition}[forma ancorada e comprimento estrutural]\label{map:artigo_3:5.4}
+\label{artigo_3:prop:anchored-relu-code}
+Se $g\in\Aclass^\square_{N,H}([0,1])$, sua forma reduzida possui
+$M\le N-1$ hinges e pode ser escrita, tomando o centro $x_*$ da folha mais à
+esquerda, como
+\begin{equation}
+ g(x)=g(x_*)+\sigma_0(x-x_*)
+      +\sum_{j=1}^{M}(\sigma_j-\sigma_{j-1})\rho(x-\tau_j).
+ \label{artigo_3:eq:anchored-relu-form}
+\end{equation}
+Os valores $g(x_*)$ e $\sigma_i$ têm altura no máximo $H$, os saltos têm
+altura no máximo $2H^2$, e os pontos diádicos são transmitidos por seus pares
+estruturais. Consequentemente, existe uma codificação prefix-free da forma
+ancorada com
+\begin{equation}
+ L_{\rm ReLU}^{\rm anc}(g)=O(N\log(2H)).
+ \label{artigo_3:eq:anchored-network-bits}
+\end{equation}
+
+Na direção contrária, se os coeficientes de
+\eqref{artigo_3:eq:reduced-relu-reverse} têm altura no máximo $W$ e as quebras têm
+profundidade no máximo $D$, então
+\begin{equation}
+ \log_2 H_{\rm can}(R)
+ \le C\bigl[M\log(2W)+D+\log(M+1)\bigr]
+ \label{artigo_3:eq:reverse-height-bit-bound}
+\end{equation}
+para uma constante universal $C$.
+\end{proposition}
+
+\begin{proof}
+Na ida, cada salto é a diferença de duas inclinações de altura no máximo
+$H$, logo sua altura não excede $2H^2$. A altura atômica limita os inteiros
+estruturais da célula, e todos os campos usam $O(\log(2H))$ bits. Somar os
+$O(N)$ campos prova \eqref{artigo_3:eq:anchored-network-bits}. O ancoramento evita
+expandir desnecessariamente $g(x_*)-\sigma_0x_*$ em um intercepto com
+denominador diádico explícito.
+
+Na volta, cada inclinação local é soma de no máximo $M+1$ racionais. Um
+denominador comum tem no máximo $O(M\log(2W))$ bits. Avaliar em um centro de
+profundidade no máximo $D$ acrescenta $D+O(\log(M+1))$ bits. Exponenciar a
+cota de comprimento fornece \eqref{artigo_3:eq:reverse-height-bit-bound}.
+\end{proof}

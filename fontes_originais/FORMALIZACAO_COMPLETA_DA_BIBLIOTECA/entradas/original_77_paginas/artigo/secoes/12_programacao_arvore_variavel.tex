@@ -1,0 +1,119 @@
+\section{Seleção simultânea da árvore e dos átomos}
+\label{sec:variable-dp}
+
+Para uma célula $J$ e um inteiro $d\ge0$, seja
+\[
+ \Representations_{d,H}(J;u,v)
+\]
+o conjunto das representações contínuas enraizadas em $J$, com profundidade
+relativa no máximo $d$, folhas rotuladas por $\Library_H$ e valores externos
+$u,v$. Diferentemente da seção anterior, a forma da árvore não é fixada.
+
+A recorrência usa o princípio de otimalidade de \citet{bellman1957}. A
+aproximação de curvas por segmentos via programação dinâmica já aparece em
+\citet{bellman1961}, com antecedentes para segmentos lineares em
+\citet{stone1961} e desenvolvimentos posteriores para aproximação poligonal
+ótima em \citet{perezvidal1994}; aqui o estado contém os dois valores de
+fronteira e a decisão de manter ou subdividir uma célula diádica.
+
+\begin{definition}[recorrência de Bellman com árvore variável]
+\label{def:variable-recurrence}
+Para $d=0$, ponha
+\begin{equation}
+ C_0(J;u,v)=\Phi_H(J;u,v).
+ \label{eq:variable-base}
+\end{equation}
+Para $d\ge1$, se $J_L,J_R$ são os filhos de $J$, defina
+\begin{align}
+ C_d(J;u,v)
+ =\min\Bigl\{&
+ \Phi_H(J;u,v),\notag\\
+ &\lambda_{\rm bits}+\lambda_{\rm split}
+ +\min_{w\in\Values_{D,H}(K)}
+ \bigl[C_{d-1}(J_L;u,w)+C_{d-1}(J_R;w,v)\bigr]
+ \Bigr\}.
+ \label{eq:variable-recurrence}
+\end{align}
+\end{definition}
+
+O primeiro ramo mantém $J$ como folha; o segundo subdivide, escolhe o valor
+racional intermediário e reutiliza os ótimos dos dois filhos. A profundidade
+global $D$ é usada somente para fixar um alfabeto comum suficientemente
+grande; na chamada em $J$, $d$ é o número de níveis ainda disponíveis.
+
+\begin{theorem}[exatidão, existência e determinismo]
+\label{thm:variable-correctness}
+Seja $J$ uma célula descendente de $K$ na profundidade relativa $r$. Para todo
+$d\le D-r$ e todo $(u,v)\in\Values_{D,H}(K)^2$,
+\begin{equation}
+ C_d(J;u,v)
+ =\min_{R\in\Representations_{d,H}(J;u,v)}
+ \cost_{\mathcal Z}(R).
+ \label{eq:variable-correctness}
+\end{equation}
+Consequentemente,
+\begin{equation}
+ C_{D,H}^{\star}(K)
+ :=\min_{u,v\in\Values_{D,H}(K)}C_D(K;u,v)
+ =\min_{R\in\Representations_{D,H}^{\Library}(K)}
+ \cost_{\mathcal Z}(R).
+ \label{eq:variable-global}
+\end{equation}
+O mínimo é finito quando
+$H\ge\max\{2,k_0+1,|m_0|+1\}$. Com o desempate
+\eqref{eq:tie-key}, o algoritmo devolve uma única representação, independentemente
+da ordem em que estados, átomos ou valores intermediários sejam gerados.
+\end{theorem}
+
+\begin{proof}
+A prova é por indução em $d$. Para $d=0$, apenas a árvore-folha é permitida,
+e \eqref{eq:variable-base} coincide com seu custo ou vale $+\infty$ quando o
+par é inadmissível.
+
+Suponha o resultado para $d-1$. Toda representação de profundidade no máximo
+$d$ está em exatamente um de dois casos: a raiz é folha; ou a raiz é interna
+e possui duas subárvores de profundidade no máximo $d-1$. No segundo caso, a
+continuidade produz um único valor compartilhado $w$. Reciprocamente, a
+colagem de quaisquer duas subárvores com o mesmo $w$ é admissível. A
+decomposição do custo é a mesma do \cref{thm:fixed-correctness}; portanto a
+partição exaustiva dos candidatos nos dois casos é exatamente
+\eqref{eq:variable-recurrence}. A hipótese de indução completa
+\eqref{eq:variable-correctness}.
+
+Minimizar os estados externos na raiz prova \eqref{eq:variable-global}. Sob a
+hipótese sobre $H$, o átomo de parâmetros $(k_0,m_0,0,1)$ pertence a
+$\Library_H$, logo o catálogo contém ao menos a árvore-folha e o mínimo é
+finito. Todos os conjuntos examinados são finitos. A chave
+\eqref{eq:tie-key} é total e depende somente do candidato, não da ordem de
+geração, o que prova o determinismo.
+\end{proof}
+
+\begin{corollary}[compatibilidade com a enumeração de formas]
+\label{cor:shape-enumeration}
+Se $\Trees_D(K)$ é o conjunto finito de todas as formas de árvore de
+profundidade no máximo $D$, então
+\begin{equation}
+ C_{D,H}^{\star}(K)
+ =\min_{T\in\Trees_D(K)}
+   \min_{u,v\in\Values_{D,H}(K)}C_T(K;u,v).
+ \label{eq:shape-equivalence}
+\end{equation}
+O mesmo fluxo canônico vence nos dois lados.
+\end{corollary}
+
+\begin{proof}
+As classes $\Representations_H(T)$, $T\in\Trees_D(K)$, particionam as
+representações pela forma da árvore. Aplique os
+\cref{thm:fixed-correctness,thm:variable-correctness} e o mesmo desempate
+total.
+\end{proof}
+
+\begin{algorithm}[seletor exato por programação dinâmica]
+\label{alg:variable-tree}
+Construa as tabelas em pós-ordem na árvore diádica completa de profundidade
+$D$. Inicialize cada estado com o candidato folha, quando admissível. Una as
+tabelas dos filhos pelo valor intermediário $w$, acrescente o marcador e a
+penalidade de subdivisão e substitua a entrada somente quando a chave completa
+diminuir. A tabela da raiz e os apontadores guardados fornecem o ótimo global
+e sua representação.
+\end{algorithm}

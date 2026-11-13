@@ -1,0 +1,131 @@
+{
+  "validation_kind": "compatibility with current pinned environment; original package configs unavailable",
+  "lean_toolchain": "leanprover/lean4:v4.28.0",
+  "mathlib_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "sources": [
+    {
+      "path": "RequestProject/Addresses.lean",
+      "sha256": "e73e58dbefabbe8cee75beceff126e9885952b78462f9cf74104a8ededcb31a1"
+    },
+    {
+      "path": "RequestProject/Atoms.lean",
+      "sha256": "aaaf448efe35941e70486152b16d68c9024bd328ba932f78364fc4c1b7c15b24"
+    },
+    {
+      "path": "RequestProject/BitComplexity.lean",
+      "sha256": "757230861581c0c3b43c8025a62e87cebd621540568571f4ffb1959b677a4910"
+    },
+    {
+      "path": "RequestProject/Budgets.lean",
+      "sha256": "84b82d0058c066123cd59268aeb62599c2989347d2f6b4554d447a727e6e83ef"
+    },
+    {
+      "path": "RequestProject/Catalog.lean",
+      "sha256": "3aac8a72b9902320e0926a5b7117a54c1dfdb7a2f8ab7a6d59a5826c57348d6f"
+    },
+    {
+      "path": "RequestProject/Codebook.lean",
+      "sha256": "5026f0b13530672cbb33bf82328cb181642294e21c55095ddeafcc1ca8642b6f"
+    },
+    {
+      "path": "RequestProject/Codecs.lean",
+      "sha256": "41845c6157386f309c8dee33b7e43e7cf52519843cc199fc5c1d25e0b08eab97"
+    },
+    {
+      "path": "RequestProject/Coding.lean",
+      "sha256": "7beaaecd017654f299b319070086336237a7a7b5490b589c65f07e2c35b39b1d"
+    },
+    {
+      "path": "RequestProject/Complexity.lean",
+      "sha256": "6ee9abd4bbffeafc57c97324ae5bcb07a6400bc883dae5a7c583d4c69b134788"
+    },
+    {
+      "path": "RequestProject/DP.lean",
+      "sha256": "7acebb443a9393cde1ff5e693dbd9a8635873acbaa91bfc023219091e7940d49"
+    },
+    {
+      "path": "RequestProject/DPBase.lean",
+      "sha256": "8149fc78ff16d3c73ee8550324e647a5200933b54a71089d1f1c9181d2240480"
+    },
+    {
+      "path": "RequestProject/Dyadic.lean",
+      "sha256": "fda284eb37943c960b80814059fc248c2a68a6f70515ef27c19cbd2aa83f20c8"
+    },
+    {
+      "path": "RequestProject/DyadicEnvelope.lean",
+      "sha256": "c724d9942f68a27d2f043e56e253cece7934536b0bb7a9b930f6383ec15d4fc9"
+    },
+    {
+      "path": "RequestProject/DyadicExact.lean",
+      "sha256": "f63e43f1db5329ae27ca61e9bbb35edc77e4bcda510bed0bb2be8ecc56b4a76a"
+    },
+    {
+      "path": "RequestProject/DyadicInterp.lean",
+      "sha256": "ca6ea043970f30faf7bad8f88556de9f6ca6cba3ff359145b43f6c06bc0d178e"
+    },
+    {
+      "path": "RequestProject/DyadicPhase.lean",
+      "sha256": "72b08fd76a7adf570db6bed3b2ba53f43f5217769b260fe59a9b29be85bc2f3e"
+    },
+    {
+      "path": "RequestProject/DyadicSync.lean",
+      "sha256": "44ce7e9aeacbdd1ae8c54a9919463ae205260bb056f7675d0972549ac8ea2e4a"
+    },
+    {
+      "path": "RequestProject/DyadicTools.lean",
+      "sha256": "e558b48ab9a02f41dcbc8824e748a11d762e1f2bdb2dcba43186bf039dfa0277"
+    },
+    {
+      "path": "RequestProject/Entropy.lean",
+      "sha256": "978226353f6e7dc7935db6c09f5a7afae8d3347b6c037c7c8786cc308842bfeb"
+    },
+    {
+      "path": "RequestProject/EntropyLower.lean",
+      "sha256": "ee7906bf518359025a9f0115579e7a2fb9d95156c556a22d3be88c0536ae032a"
+    },
+    {
+      "path": "RequestProject/Formats.lean",
+      "sha256": "2e6a4f7f1e8233462726652264f9077c39276c6f9ebbc51c60df213f029e9be3"
+    },
+    {
+      "path": "RequestProject/Functional.lean",
+      "sha256": "a23b977b074c07bf74d880e4bec9f516e736a71781892f5114af22ec1ec53e0a"
+    },
+    {
+      "path": "RequestProject/Indexing.lean",
+      "sha256": "52b9adf1b6613900880f6b1ab992a03b919eff4ae82df6172289d532d12fba35"
+    },
+    {
+      "path": "RequestProject/Interface.lean",
+      "sha256": "8f545c7bd1df9440b2a5d2ab259b329a80191f2857b7f6e8ea80417a94d11a68"
+    },
+    {
+      "path": "RequestProject/Interp.lean",
+      "sha256": "ae603a6ca8c3e155496b093ff10dbdfdddc989c6c95f662fd9f76cdc6f501b19"
+    },
+    {
+      "path": "RequestProject/JointBudget.lean",
+      "sha256": "5ab251753aba768dad648d3fa4432e91dbb6ab9aa35303139dc1692a46307c83"
+    },
+    {
+      "path": "RequestProject/Main.lean",
+      "sha256": "929b0bddef0b781f3fb42c7a99f252dc0bda7331f698104f7075e12ff637c52d"
+    },
+    {
+      "path": "RequestProject/Sawtooth.lean",
+      "sha256": "219180b781dc5718d7b945c9d4508ca13793ee71da8b53a6e89f0ca4ac127592"
+    },
+    {
+      "path": "RequestProject/Serialization.lean",
+      "sha256": "47015bef28dea6b9510b514112a2fda95ceec2080465d496eb4fae420c8db924"
+    },
+    {
+      "path": "RequestProject/Trees.lean",
+      "sha256": "8da734a82b59fd08094e9707bfd8cbe328a2069317b5c44cc138477ad88ccd56"
+    },
+    {
+      "path": "RequestProject/Uniform.lean",
+      "sha256": "4db69a0edd711ac8ced5131022f22a9a769d108370d56a631997cf1748243653"
+    }
+  ]
+}

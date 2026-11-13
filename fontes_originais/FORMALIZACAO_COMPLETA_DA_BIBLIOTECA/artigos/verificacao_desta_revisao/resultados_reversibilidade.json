@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "arithmetic": "fractions.Fraction except plotting"
+  },
+  "exact_reversibility": {
+    "exact_roundtrips": 2952,
+    "roundtrips_with_flat_regions": 1160,
+    "max_canonical_leaves": 5,
+    "all_leaf_bounds_hold": true
+  },
+  "approximate_reverse": {
+    "networks_quantized": 84,
+    "maximum_error_over_epsilon": 0.024479166666666666,
+    "all_error_bounds_hold": true
+  },
+  "regularized_triangle": {
+    "triangle_certificates": 1260,
+    "maximum_lhs_over_rhs": 1.0,
+    "all_certificates_hold": true
+  },
+  "kink": [
+    {
+      "r": 1,
+      "N": 2,
+      "raw_error": "0",
+      "roughness": "1",
+      "scaled_s_half": 1.4142135623730951,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 2.8284271247461903
+    },
+    {
+      "r": 2,
+      "N": 4,
+      "raw_error": "0",
+      "roughness": "1/2",
+      "scaled_s_half": 1.0,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 4.0
+    },
+    {
+      "r": 3,
+      "N": 8,
+      "raw_error": "0",
+      "roughness": "1/4",
+      "scaled_s_half": 0.7071067811865476,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 5.656854249492381
+    },
+    {
+      "r": 4,
+      "N": 16,
+      "raw_error": "0",
+      "roughness": "1/8",
+      "scaled_s_half": 0.5,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 8.0
+    },
+    {
+      "r": 5,
+      "N": 32,
+      "raw_error": "0",
+      "roughness": "1/16",
+      "scaled_s_half": 0.3535533905932738,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 11.313708498984761
+    },
+    {
+      "r": 6,
+      "N": 64,
+      "raw_error": "0",
+      "roughness": "1/32",
+      "scaled_s_half": 0.25,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 16.0
+    },
+    {
+      "r": 7,
+      "N": 128,
+      "raw_error": "0",
+      "roughness": "1/64",
+      "scaled_s_half": 0.1767766952966369,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 22.627416997969522
+    },
+    {
+      "r": 8,
+      "N": 256,
+      "raw_error": "0",
+      "roughness": "1/128",
+      "scaled_s_half": 0.125,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 32.0
+    },
+    {
+      "r": 9,
+      "N": 512,
+      "raw_error": "0",
+      "roughness": "1/256",
+      "scaled_s_half": 0.08838834764831845,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 45.254833995939045
+    },
+    {
+      "r": 10,
+      "N": 1024,
+      "raw_error": "0",
+      "roughness": "1/512",
+      "scaled_s_half": 0.0625,
+      "scaled_s_one": 2.0,
+      "scaled_s_three_halves": 64.0
+    }
+  ],
+  "deep_tent": [
+    {
+      "depth": 1,
+      "regions": 2,
+      "lipschitz": 2,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 2,
+      "regions": 4,
+      "lipschitz": 4,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 3,
+      "regions": 8,
+      "lipschitz": 8,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 4,
+      "regions": 16,
+      "lipschitz": 16,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 5,
+      "regions": 32,
+      "lipschitz": 32,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 6,
+      "regions": 64,
+      "lipschitz": 64,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 7,
+      "regions": 128,
+      "lipschitz": 128,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 8,
+      "regions": 256,
+      "lipschitz": 256,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 9,
+      "regions": 512,
+      "lipschitz": 512,
+      "roughness_at_region_scale": "2"
+    },
+    {
+      "depth": 10,
+      "regions": 1024,
+      "lipschitz": 1024,
+      "roughness_at_region_scale": "2"
+    }
+  ],
+  "critical_comb": [
+    {
+      "j": 1,
+      "N": 16,
+      "leaves": 16,
+      "height": 2048,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/1024",
+      "perturbation_error": "1/1024",
+      "tail_plus_perturbation_bound": "5/1024",
+      "height_constant": 128,
+      "amplitude": "1/16",
+      "half_width": "1/256",
+      "critical_ratio": 2.0
+    },
+    {
+      "j": 2,
+      "N": 256,
+      "leaves": 32,
+      "height": 32768,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/16384",
+      "perturbation_error": "1/16384",
+      "tail_plus_perturbation_bound": "5/16384",
+      "height_constant": 128,
+      "amplitude": "1/256",
+      "half_width": "1/65536",
+      "critical_ratio": 2.0
+    },
+    {
+      "j": 3,
+      "N": 4096,
+      "leaves": 48,
+      "height": 524288,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/262144",
+      "perturbation_error": "1/262144",
+      "tail_plus_perturbation_bound": "5/262144",
+      "height_constant": 128,
+      "amplitude": "1/4096",
+      "half_width": "1/16777216",
+      "critical_ratio": 2.0
+    },
+    {
+      "j": 4,
+      "N": 65536,
+      "leaves": 64,
+      "height": 8388608,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/4194304",
+      "perturbation_error": "1/4194304",
+      "tail_plus_perturbation_bound": "5/4194304",
+      "height_constant": 128,
+      "amplitude": "1/65536",
+      "half_width": "1/4294967296",
+      "critical_ratio": 2.0
+    },
+    {
+      "j": 5,
+      "N": 1048576,
+      "leaves": 80,
+      "height": 134217728,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/67108864",
+      "perturbation_error": "1/67108864",
+      "tail_plus_perturbation_bound": "5/67108864",
+      "height_constant": 128,
+      "amplitude": "1/1048576",
+      "half_width": "1/1099511627776",
+      "critical_ratio": 2.0
+    },
+    {
+      "j": 6,
+      "N": 16777216,
+      "leaves": 96,
+      "height": 2147483648,
+      "original_library": true,
+      "all_local_slopes_nonzero": true,
+      "flat_leaf_perturbation": "1/1073741824",
+      "perturbation_error": "1/1073741824",
+      "tail_plus_perturbation_bound": "5/1073741824",
+      "height_constant": 128,
+      "amplitude": "1/16777216",
+      "half_width": "1/281474976710656",
+      "critical_ratio": 2.0
+    }
+  ],
+  "all_assertions_passed": true
+}

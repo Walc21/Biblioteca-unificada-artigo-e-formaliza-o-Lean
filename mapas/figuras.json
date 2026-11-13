@@ -1,0 +1,76 @@
+[
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/01_calkin_wilf.pdf",
+    "rotulo": "artigo_1:fig:cw",
+    "legenda": "Primeiros níveis da árvore de Calkin--Wilf. O ramo esquerdo contém $1/q$ no índice $2^{q-1}$; a ordenação por altura fornece índices polinomiais na altura."
+  },
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/02_celulas.pdf",
+    "rotulo": "artigo_1:fig:celulas",
+    "legenda": "Células diádicas, centros e posse das fronteiras. Cada célula se divide em dois filhos; os centros determinam a célula de origem."
+  },
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/03_montagem_continua.pdf",
+    "rotulo": "artigo_1:fig:montagem",
+    "legenda": "Montagem contínua de átomos. À esquerda, cada cor identifica uma célula e seu segmento; peças consecutivas compartilham o mesmo valor no nó. À direita, o refinamento substitui células por filhos e aproxima a função-alvo com mais peças conectadas."
+  },
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/04_relu.pdf",
+    "rotulo": "artigo_1:fig:relu",
+    "legenda": "Uma montagem racional com quatro folhas e a rede ReLU rasa dada pela identidade \\eqref{artigo_1:eq:24}. O gráfico e os pesos são calculados a partir dos mesmos dados racionais."
+  },
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/05_taxa_exponencial.pdf",
+    "rotulo": "artigo_1:fig:taxa",
+    "legenda": "Erro do interpolante de $e^x$ e razão entre erro e cota. A razão converge a $1$, conforme \\eqref{artigo_1:eq:32}."
+  },
+  {
+    "parte": "artigo_1",
+    "arquivo": "figuras/artigo_1/06_refinamento_certificado.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig01_estado_fronteira.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig02_comparacao_seletores.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig03_constante_quadratica.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig04_fases_piecewise.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig05_envelope_c2.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig08_codificacoes.pdf"
+  },
+  {
+    "parte": "artigo_2",
+    "arquivo": "figuras/artigo_2/fig06_enderecos.pdf"
+  },
+  {
+    "parte": "artigo_3",
+    "arquivo": "figuras/artigo_3/fig_altura_agendas.pdf"
+  },
+  {
+    "parte": "artigo_3",
+    "arquivo": "figuras/artigo_3/fig_restricoes_rede.pdf"
+  },
+  {
+    "parte": "artigo_3",
+    "arquivo": "figuras/artigo_3/fig_reversibilidade_regularizada.pdf"
+  }
+]

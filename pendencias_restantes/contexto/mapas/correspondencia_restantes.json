@@ -1,0 +1,494 @@
+[
+  {
+    "id": "artigo_2:9.1",
+    "documento": "artigo_2",
+    "numero": "9.1",
+    "tipo": "teorema",
+    "titulo": "complexidade em número de estados",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2034,
+    "rotulos_tex": [
+      "thm:state-complexity",
+      "eq:dense-time",
+      "eq:dense-memory",
+      "eq:budget-time"
+    ],
+    "enunciado_tex": "\\label{thm:state-complexity}\nSuponha os custos de folha pré-computados. Uma implementação densa do\n\\cref{alg:variable-tree} usa\n\\begin{equation}\n O(S_DM^3)\n \\label{eq:dense-time}\n\\end{equation}\noperações e\n\\begin{equation}\n O(S_DM^2)\n \\label{eq:dense-memory}\n\\end{equation}\nentradas de memória quando preserva todos os apontadores de reconstrução.\nA versão com orçamento de até $N$ folhas usa\n\\begin{equation}\n O(S_DN^2M^3)\n \\label{eq:budget-time}\n\\end{equation}\noperações e $O(S_DNM^2)$ entradas. Se cada custo local\n\\eqref{eq:local-loss} for calculado diretamente sobre $P$ observações, a\ninicialização densa acrescenta $O(S_DPM^2)$ operações.",
+    "sha256_enunciado": "fa139ae7347b0c3c5577db67712b65635248003471185957800669d41148c5ab",
+    "status": "cobertura_parcial",
+    "observacao": "Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.state_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/Complexity.lean",
+        "linha_lean": 89,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Complexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.1",
+    "originais_77": [
+      "14.1"
+    ],
+    "rotulo_volume": "map:artigo_2:9.1",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 1996,
+    "pagina_volume": 60
+  },
+  {
+    "id": "artigo_2:9.3",
+    "documento": "artigo_2",
+    "numero": "9.3",
+    "tipo": "teorema",
+    "titulo": "cota grosseira de complexidade de bits",
+    "secao": 9,
+    "titulo_secao": "Complexidade, truncagem e estabilidade",
+    "arquivo_tex": "artigos/artigo_2/Artigo_2.tex",
+    "linha_tex": 2119,
+    "rotulos_tex": [
+      "thm:bit-complexity",
+      "eq:cost-bit-growth",
+      "eq:dense-bit-time",
+      "eq:dense-bit-memory"
+    ],
+    "enunciado_tex": "\\label{thm:bit-complexity}\nTodos os custos racionais que aparecem na recorrência possuem numeradores e\ndenominadores de comprimento no máximo\n\\begin{equation}\n B_{\\rm cost}\n =O\\!\\left(\n P\\bigl(B_{\\mathcal Z}+D+|k_0|+\\log(2H)\\bigr)\n +B_{\\mathcal Z}+D+\\log(2L)\n \\right).\n \\label{eq:cost-bit-growth}\n\\end{equation}\nConsequentemente, a versão densa sem orçamento de folhas pode ser executada em\n\\begin{equation}\n O\\!\\left(\n (S_DM^3+S_DPM^2)\n \\bigl[\\mathsf M_{\\mathbb Z}(B_{\\rm cost})\n       \\log(2B_{\\rm cost})+L\\bigr]\n \\right)\n \\label{eq:dense-bit-time}\n\\end{equation}\noperações de bit e\n\\begin{equation}\n O\\!\\left(S_DM^2(B_{\\rm cost}+L)\\right)\n \\label{eq:dense-bit-memory}\n\\end{equation}\nbits de memória quando todos os estados e fluxos são armazenados. Na versão\ncom até $N$ folhas, substituem-se $S_DM^3$ e $S_DM^2$ por\n$S_DN^2M^3$ e $S_DNM^2$, respectivamente. Com multiplicação escolar,\n$\\mathsf M_{\\mathbb Z}(b)=O(b^2)$.",
+    "sha256_enunciado": "def7169385bdaa70c999abd133a64c5eb72617a6192a60f912562244f72967af",
+    "status": "cobertura_parcial",
+    "observacao": "bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.",
+    "destino_editorial": "artigo_2",
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Artigo.Setup.bit_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "entradas/artigo_2/RequestProject/BitComplexity.lean",
+        "linha_lean": 266,
+        "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean"
+      }
+    ],
+    "parte_volume": "III",
+    "numero_volume": "III.9.3",
+    "originais_77": [
+      "14.3"
+    ],
+    "rotulo_volume": "map:artigo_2:9.3",
+    "tex_volume": "tex/partes/artigo_2.tex",
+    "linha_volume": 2083,
+    "pagina_volume": 61
+  },
+  {
+    "id": "artigo_3:4.1",
+    "documento": "artigo_3",
+    "numero": "4.1",
+    "tipo": "lema",
+    "titulo": "Jackson racional com altura explícita",
+    "secao": 4,
+    "titulo_secao": "Teoremas diretos e agendas de altura",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 378,
+    "rotulos_tex": [
+      "lem:rational-jackson-height",
+      "eq:height-geometry-condition",
+      "eq:rational-jackson-height",
+      "eq:uniform-ball-height-threshold"
+    ],
+    "enunciado_tex": "\\label{lem:rational-jackson-height}\nSeja $f\\in B^s_{\\infty,\\infty}(K)$, $R=\\|f\\|_\\infty$. Existe\n$n_0=n_0(f,K,s)$ tal que, para toda potência de dois $n=2^r\\ge n_0$ e todo\ninteiro\n\\[\n H\\ge\\max\\{C_Kn^{\\nu_s},16(R+1)\\}\n\\]\nque satisfaça\n\\begin{equation}\n H\\ge\\max\\{2,k_0+r+1,\n      \\max_{0\\le j<n}|2^rm_0+j|+1\\},\n \\label{eq:height-geometry-condition}\n\\end{equation}\nexiste $g_{n,H}\\in\\Aclass_{n,H}(K)$ tal que\n\\begin{equation}\n \\|f-g_{n,H}\\|_\\infty\n \\le 2C_W\\omega_2(f,L/n)_{\\infty,K}\n      +\\frac{C(R+1)}{H},\n \\label{eq:rational-jackson-height}\n\\end{equation}\nonde $C$ é absoluto e $C_W$ é a constante de Whitney.\n\nAlém disso, existe $A_{K,s}\\ge1$, independente de $f$, com a seguinte versão\nuniforme. Se $B\\ge1$, $\\|f\\|_{B^s_{\\infty,\\infty}(K)}^*\\le B$, $n=2^r\\ge2$\ne\n\\begin{equation}\n H\\ge A_{K,s}(B+1)n^{\\nu_s},\n \\label{eq:uniform-ball-height-threshold}\n\\end{equation}\nentão todas as conclusões anteriores valem sem limiar dependente de $f$ e com\no último termo de \\eqref{eq:rational-jackson-height} igual a\n$8(B+1)/H$. A constante $A_{K,s}$ também torna automática a condição\ngeométrica \\eqref{eq:height-geometry-condition}.",
+    "sha256_enunciado": "6cb2bfb61b7140b97217deee43b17109e17d2ac44ca04e500cac96d425f57b22",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.4.1",
+    "originais_77": [
+      "19.1"
+    ],
+    "rotulo_volume": "map:artigo_3:4.1",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 277,
+    "pagina_volume": 82
+  },
+  {
+    "id": "artigo_3:4.2",
+    "documento": "artigo_3",
+    "numero": "4.2",
+    "tipo": "teorema",
+    "titulo": "direção direta com altura aritmética",
+    "secao": 4,
+    "titulo_secao": "Teoremas diretos e agendas de altura",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 498,
+    "rotulos_tex": [
+      "thm:direct-besov-height",
+      "eq:direct-endpoint",
+      "eq:direct-subcritical",
+      "eq:direct-critical-log",
+      "eq:polynomial-slack-schedule"
+    ],
+    "enunciado_tex": "\\label{thm:direct-besov-height}\nSe $0<s<2$, então as seguintes inclusões de conjuntos valem:\n\\begin{align}\n B^s_{\\infty,\\infty}(K)\n &\\subset\n \\mathscr A^s_\\infty(\\Library,H_{s,0}),\n \\label{eq:direct-endpoint}\\\\\n B^s_{\\infty,q}(K)\n &\\subset\n \\mathscr A^s_q(\\Library,H_{s,0}),\n &&0<q<\\infty,\\qquad 0<s<1,\n \\label{eq:direct-subcritical}\\\\\n B^s_{\\infty,q}(K)\n &\\subset\n \\mathscr A^s_q(\\Library,H_{s,\\kappa}),\n &&0<q<\\infty,\\qquad 1\\le s<2,\\qquad\\kappa>1/q.\n \\label{eq:direct-critical-log}\n\\end{align}\nEm particular, para $s\\ge1$, o endpoint $q=\\infty$ admite\n$H(N)=O_K(N^s)$; para $q<\\infty$, basta acrescentar um fator logarítmico\ncrítico. Como\nalternativa sem logaritmo, para qualquer $\\eta>0$ pode-se substituir\n$H_{s,\\kappa}$ em \\eqref{eq:direct-critical-log} por\n\\begin{equation}\n \\widetilde H_{s,\\eta}(N)\n =\\left\\lceil C_K(N+1)^{\\max\\{1,s+\\eta\\}}\\right\\rceil.\n \\label{eq:polynomial-slack-schedule}\n\\end{equation}",
+    "sha256_enunciado": "bb812d5fad41035250a1441cd57b29c30ba93714b60220e608eb574d6da7505d",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.4.2",
+    "originais_77": [
+      "19.2"
+    ],
+    "rotulo_volume": "map:artigo_3:4.2",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 398,
+    "pagina_volume": 83
+  },
+  {
+    "id": "artigo_3:4.3",
+    "documento": "artigo_3",
+    "numero": "4.3",
+    "tipo": "corolario",
+    "titulo": "imersões quantitativas uniformes sobre bolas",
+    "secao": 4,
+    "titulo_secao": "Teoremas diretos e agendas de altura",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 552,
+    "rotulos_tex": [
+      "cor:uniform-besov-ball-embedding",
+      "eq:ball-calibrated-height-schedule",
+      "eq:uniform-ball-endpoint",
+      "eq:uniform-ball-subcritical",
+      "eq:uniform-ball-critical"
+    ],
+    "enunciado_tex": "\\label{cor:uniform-besov-ball-embedding}\nPara $B\\ge1$ e $\\kappa\\ge0$, defina\n\\begin{equation}\n \\widehat H_{s,\\kappa}^{[B]}(N)\n =\\left\\lceil A_{K,s}(B+1)(N+1)^{\\nu_s}\n        [\\log(eN)]^\\kappa\\right\\rceil .\n \\label{eq:ball-calibrated-height-schedule}\n\\end{equation}\nExistem constantes independentes de $B$ e de $f$ tais que\n\\begin{align}\n \\sup_{\\|f\\|_{B^s_{\\infty,\\infty}(K)}^*\\le B}\n \\mathfrak a_{s,\\infty}^{\\Library,\n       \\widehat H_{s,0}^{[B]}}(f)\n &\\le C_{K,s}(B+1), &&0<s<2,\\label{eq:uniform-ball-endpoint}\\\\\n \\sup_{\\|f\\|_{B^s_{\\infty,q}(K)}^*\\le B}\n \\mathfrak a_{s,q}^{\\Library,\n       \\widehat H_{s,0}^{[B]}}(f)\n &\\le C_{K,s,q}(B+1), &&0<s<1,\\quad0<q<\\infty,\n \\label{eq:uniform-ball-subcritical}\\\\\n \\sup_{\\|f\\|_{B^s_{\\infty,q}(K)}^*\\le B}\n \\mathfrak a_{s,q}^{\\Library,\n       \\widehat H_{s,\\kappa}^{[B]}}(f)\n &\\le C_{K,s,q,\\kappa}(B+1),\n &&1\\le s<2,\\quad0<q<\\infty,\\quad\\kappa>1/q.\n \\label{eq:uniform-ball-critical}\n\\end{align}\nAssim, cada bola de Besov é enviada uniformemente a uma bola do funcional de\ntaxa sob uma única agenda, sem qualquer limiar dependente da função.",
+    "sha256_enunciado": "6b9ee893e5e7223a3af153859b8be6e0d9aa49f6338e6e6ff6a08e3dfe2b4780",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.4.3",
+    "originais_77": [
+      "19.3"
+    ],
+    "rotulo_volume": "map:artigo_3:4.3",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 453,
+    "pagina_volume": 84
+  },
+  {
+    "id": "artigo_3:5.2",
+    "documento": "artigo_3",
+    "numero": "5.2",
+    "tipo": "teorema",
+    "titulo": "reversibilidade rasa exata",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 887,
+    "rotulos_tex": [
+      "thm:exact-marked-reversal",
+      "eq:marked-reversal-conditions",
+      "eq:canonical-tree-leaf-bounds",
+      "eq:original-nonflat-condition"
+    ],
+    "enunciado_tex": "\\label{thm:exact-marked-reversal}\nUma função na forma reduzida \\eqref{eq:reduced-relu-reverse} pertence a\n$\\Aclass^\\square([0,1])$ se e somente se\n\\begin{equation}\n c,q,a_1,\\ldots,a_M\\in\\mathbb Q,\n \\qquad\n \\tau_1,\\ldots,\\tau_M\\in\\mathbb D.\n \\label{eq:marked-reversal-conditions}\n\\end{equation}\nNessas condições, $\\mathcal T(\\{\\tau_1,\\ldots,\\tau_M\\})$ é a única árvore\nmenos refinada que realiza $R$. Se $N_{\\rm can}(R)$ é seu número de folhas e\n$d_j$ é a profundidade diádica reduzida de $\\tau_j$, então\n\\begin{equation}\n M+1\\le N_{\\rm can}(R)\n \\le 1+\\sum_{j=1}^{M}d_j.\n \\label{eq:canonical-tree-leaf-bounds}\n\\end{equation}\nA função pertence à biblioteca original $\\Aclass([0,1])$ exatamente quando,\nalém de \\eqref{eq:marked-reversal-conditions},\n\\begin{equation}\n \\sigma_i\\ne0\\qquad(0\\le i\\le M).\n \\label{eq:original-nonflat-condition}\n\\end{equation}",
+    "sha256_enunciado": "1991e2df339c8d1c7ef82f4850669017a9dcb020232bb85c03f63b063cf2be31",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.2",
+    "originais_77": [
+      "20.2"
+    ],
+    "rotulo_volume": "map:artigo_3:5.2",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 793,
+    "pagina_volume": 88
+  },
+  {
+    "id": "artigo_3:5.4",
+    "documento": "artigo_3",
+    "numero": "5.4",
+    "tipo": "proposicao",
+    "titulo": "forma ancorada e comprimento estrutural",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 955,
+    "rotulos_tex": [
+      "prop:anchored-relu-code",
+      "eq:anchored-relu-form",
+      "eq:anchored-network-bits",
+      "eq:reverse-height-bit-bound"
+    ],
+    "enunciado_tex": "\\label{prop:anchored-relu-code}\nSe $g\\in\\Aclass^\\square_{N,H}([0,1])$, sua forma reduzida possui\n$M\\le N-1$ hinges e pode ser escrita, tomando o centro $x_*$ da folha mais à\nesquerda, como\n\\begin{equation}\n g(x)=g(x_*)+\\sigma_0(x-x_*)\n      +\\sum_{j=1}^{M}(\\sigma_j-\\sigma_{j-1})\\rho(x-\\tau_j).\n \\label{eq:anchored-relu-form}\n\\end{equation}\nOs valores $g(x_*)$ e $\\sigma_i$ têm altura no máximo $H$, os saltos têm\naltura no máximo $2H^2$, e os pontos diádicos são transmitidos por seus pares\nestruturais. Consequentemente, existe uma codificação prefix-free da forma\nancorada com\n\\begin{equation}\n L_{\\rm ReLU}^{\\rm anc}(g)=O(N\\log(2H)).\n \\label{eq:anchored-network-bits}\n\\end{equation}\n\nNa direção contrária, se os coeficientes de\n\\eqref{eq:reduced-relu-reverse} têm altura no máximo $W$ e as quebras têm\nprofundidade no máximo $D$, então\n\\begin{equation}\n \\log_2 H_{\\rm can}(R)\n \\le C\\bigl[M\\log(2W)+D+\\log(M+1)\\bigr]\n \\label{eq:reverse-height-bit-bound}\n\\end{equation}\npara uma constante universal $C$.",
+    "sha256_enunciado": "725773c6678448f9101547d5c03011b62b4baa16d7ad97bd1573e81b59df33c7",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.4",
+    "originais_77": [
+      "20.4"
+    ],
+    "rotulo_volume": "map:artigo_3:5.4",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 863,
+    "pagina_volume": 88
+  },
+  {
+    "id": "artigo_3:5.5",
+    "documento": "artigo_3",
+    "numero": "5.5",
+    "tipo": "teorema",
+    "titulo": "reversão aproximada quantizada",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1013,
+    "rotulos_tex": [
+      "thm:quantized-approximate-reverse",
+      "eq:real-network-weight-bound",
+      "eq:approximate-reverse-error",
+      "eq:approximate-reverse-leaves",
+      "eq:approximate-reverse-height"
+    ],
+    "enunciado_tex": "\\label{thm:quantized-approximate-reverse}\nSeja $R$ como em \\eqref{eq:reduced-relu-reverse}, agora com parâmetros reais,\ne suponha\n\\begin{equation}\n |c|,|q|,|a_1|,\\ldots,|a_M|\\le W,\n \\qquad W\\ge1.\n \\label{eq:real-network-weight-bound}\n\\end{equation}\nPara todo $0<\\varepsilon\\le1$, existe uma montagem da biblioteca original\n$g_\\varepsilon\\in\\Aclass([0,1])$ tal que\n\\begin{align}\n \\|R-g_\\varepsilon\\|_\\infty&\\le\\varepsilon,\n \\label{eq:approximate-reverse-error}\\\\\n |\\Lambda(g_\\varepsilon)|&\\le1+MD_\\varepsilon,\n \\qquad\n D_\\varepsilon=\n \\left\\lceil\\log_2\\frac{C(M+1)(W+1)}{\\varepsilon}\\right\\rceil,\n \\label{eq:approximate-reverse-leaves}\\\\\n \\height_{\\max}(g_\\varepsilon)\n &\\le\n C(M+1)^3(W+1)^3\\varepsilon^{-2},\n \\label{eq:approximate-reverse-height}\n\\end{align}\nonde $C$ é universal. A conclusão permanece válida quando $R$ possui regiões\nplanas.",
+    "sha256_enunciado": "7157868b6c115ada8967d920041d857f8ca6481f13afbe94648e10ab14e840c9",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.5",
+    "originais_77": [
+      "20.5"
+    ],
+    "rotulo_volume": "map:artigo_3:5.5",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 922,
+    "pagina_volume": 89
+  },
+  {
+    "id": "artigo_3:5.6",
+    "documento": "artigo_3",
+    "numero": "5.6",
+    "tipo": "corolario",
+    "titulo": "redes profundas medidas pela função realizada",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1074,
+    "rotulos_tex": [
+      "cor:deep-functional-reverse",
+      "eq:deep-realized-resources"
+    ],
+    "enunciado_tex": "\\label{cor:deep-functional-reverse}\nSe uma rede ReLU univariada arbitrária realiza uma função $F$ com $R(F)$\nregiões afins máximas, norma uniforme no máximo $B$ e constante de Lipschitz\nno máximo $L_F$, então o \\cref{thm:quantized-approximate-reverse} vale com\n\\begin{equation}\n M=R(F)-1,\n \\qquad\n W\\le2\\max\\{1,B,L_F\\}.\n \\label{eq:deep-realized-resources}\n\\end{equation}",
+    "sha256_enunciado": "86f62574466e14f4542daa0d19e1b118cae7ec3724b028c309dd48c704dce11f",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.6",
+    "originais_77": [
+      "20.6"
+    ],
+    "rotulo_volume": "map:artigo_3:5.6",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 984,
+    "pagina_volume": 90
+  },
+  {
+    "id": "artigo_3:5.9",
+    "documento": "artigo_3",
+    "numero": "5.9",
+    "tipo": "teorema",
+    "titulo": "agudeza por um pente de tendas",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1265,
+    "rotulos_tex": [
+      "thm:critical-tent-comb",
+      "eq:comb-approximation-rate",
+      "eq:comb-sharpness"
+    ],
+    "enunciado_tex": "\\label{thm:critical-tent-comb}\nFixe $0<\\alpha\\le\\gamma$ e ponha\n$\\theta_*=\\alpha/(\\alpha+\\gamma)$. Existe\n$f\\in C([0,1])$ e uma constante $C$ tais que, para a biblioteca original sob\n$H(N)=\\lceil CN^\\gamma\\rceil$,\n\\begin{equation}\n e_N^{\\Library,H}(f)\\le CN^{-\\alpha},\n \\label{eq:comb-approximation-rate}\n\\end{equation}\nmas\n\\begin{equation}\n f\\notin B^\\theta_{\\infty,\\infty}\\quad(\\theta>\\theta_*),\n \\qquad\n f\\notin B^{\\theta_*}_{\\infty,r}\\quad(0<r<\\infty).\n \\label{eq:comb-sharpness}\n\\end{equation}",
+    "sha256_enunciado": "06de82a13009ce6e00ac99ab24c8dbf89b39740c12d9d5921fba8c44082622f6",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.9",
+    "originais_77": [
+      "20.9"
+    ],
+    "rotulo_volume": "map:artigo_3:5.9",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 1178,
+    "pagina_volume": 92
+  },
+  {
+    "id": "artigo_3:5.12",
+    "documento": "artigo_3",
+    "numero": "5.12",
+    "tipo": "teorema",
+    "titulo": "Jackson racional para o funcional de realização",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1398,
+    "rotulos_tex": [
+      "thm:regularized-jackson-bernstein",
+      "eq:two-sided-regularized-equivalence"
+    ],
+    "enunciado_tex": "\\label{thm:regularized-jackson-bernstein}\nSe $0<s<2$ e $f\\in B^s_{\\infty,\\infty}([0,1])$, então, para toda potência de\ndois $N$ suficientemente grande e toda altura que satisfaz as hipóteses do\n\\cref{lem:rational-jackson-height},\n\\begin{equation}\n \\frac14\\omega_2(f,N^{-1})_\\infty\n \\le \\mathcal R_N^{\\Library,H}(f)\n \\le C_0\\omega_2(f,N^{-1})_\\infty+\\frac{C_f}{H(N)},\n \\label{eq:two-sided-regularized-equivalence}\n\\end{equation}\nonde $C_0$ é universal e $C_f$ depende apenas de $\\|f\\|_\\infty$ e das\nconstantes fixadas na racionalização.\nSe $\\|f\\|_{B^s_{\\infty,\\infty}}^*\\le B$, $B\\ge1$, e\n$H(N)\\ge\\widehat H_{s,0}^{[B]}(N)$, a mesma estimativa vale para toda potência\ndiádica $N\\ge2$, com $C_f/H(N)$ substituído por $C(B+1)/H(N)$ e constantes\nindependentes de $f$.",
+    "sha256_enunciado": "ca782888872ea91201caee80671221657058fdaffc4d6905d474cd1e57111faf",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.12",
+    "originais_77": [
+      "20.12"
+    ],
+    "rotulo_volume": "map:artigo_3:5.12",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 1314,
+    "pagina_volume": 93
+  },
+  {
+    "id": "artigo_3:5.13",
+    "documento": "artigo_3",
+    "numero": "5.13",
+    "tipo": "teorema",
+    "titulo": "caracterização pelo funcional de realização",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1445,
+    "rotulos_tex": [
+      "thm:complete-besov-reversibility",
+      "eq:complete-reverse-endpoint",
+      "eq:complete-reverse-subcritical",
+      "eq:complete-reverse-critical"
+    ],
+    "enunciado_tex": "\\label{thm:complete-besov-reversibility}\nPara $0<s<2$, valem as igualdades de conjuntos\n\\begin{align}\n B^s_{\\infty,\\infty}([0,1])\n &=\\mathscr R_\\infty^s(\\Library,H_{s,0}),\n \\label{eq:complete-reverse-endpoint}\\\\\n B^s_{\\infty,q}([0,1])\n &=\\mathscr R_q^s(\\Library,H_{s,0}),\n &&0<q<\\infty,\\quad0<s<1,\n \\label{eq:complete-reverse-subcritical}\\\\\n B^s_{\\infty,q}([0,1])\n &=\\mathscr R_q^s(\\Library,H_{s,\\kappa}),\n &&0<q<\\infty,\\quad1\\le s<2,\\quad\\kappa>1/q.\n \\label{eq:complete-reverse-critical}\n\\end{align}\nPode-se substituir a agenda logarítmica da última linha por qualquer agenda\ncom folga polinomial \\eqref{eq:polynomial-slack-schedule}.",
+    "sha256_enunciado": "2dfd514020218d7646b96fc5134b2dede966f3c6d04307ec3e0a74a7fff62417",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.13",
+    "originais_77": [
+      "20.13"
+    ],
+    "rotulo_volume": "map:artigo_3:5.13",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 1362,
+    "pagina_volume": 94
+  },
+  {
+    "id": "artigo_3:5.14",
+    "documento": "artigo_3",
+    "numero": "5.14",
+    "tipo": "teorema",
+    "titulo": "reversibilidade estável por inclusão de redes",
+    "secao": 5,
+    "titulo_secao": "Reversibilidade regularizada e ponte quantitativa com redes ReLU",
+    "arquivo_tex": "artigos/artigo_3/Artigo_3.tex",
+    "linha_tex": 1530,
+    "rotulos_tex": [
+      "thm:architecture-stable-reversibility",
+      "eq:network-family-nesting",
+      "eq:network-family-contains-library",
+      "eq:network-regularized-certificate"
+    ],
+    "enunciado_tex": "\\label{thm:architecture-stable-reversibility}\nSeja $(\\mathcal N_N)$ qualquer família de funções realizadas por redes ReLU\naninhada no orçamento, isto é,\n\\begin{equation}\n 0\\in\\mathcal N_N,\n \\qquad \\mathcal N_N\\subseteq\\mathcal N_{N+1}\n \\qquad(N\\ge1),\n \\label{eq:network-family-nesting}\n\\end{equation}\ne suponha que, para alguma constante $c\\ge1$,\n\\begin{equation}\n \\Sigma_N^{\\Library,H}([0,1])\\subseteq\\mathcal N_{\\lceil cN\\rceil}\n \\qquad(N\\ge1).\n \\label{eq:network-family-contains-library}\n\\end{equation}\nDefina\n\\begin{equation}\n \\mathcal R_N^{\\mathcal N}(f)\n =\\inf_{R\\in\\mathcal N_N}\n \\left\\{\\|f-R\\|_\\infty+\\omega_2(R,N^{-1})_\\infty\\right\\}.\n \\label{eq:network-regularized-certificate}\n\\end{equation}\nSob cada uma das agendas do\n\\cref{thm:complete-besov-reversibility}, substituir\n$\\mathcal R_N^{\\Library,H}$ por $\\mathcal R_N^{\\mathcal N}$ preserva as\nigualdades \\eqref{eq:complete-reverse-endpoint}--\n\\eqref{eq:complete-reverse-critical}.",
+    "sha256_enunciado": "bf5f2f34794847bd142ce9c7d5049de4f9decc8974c909bb938c4f252d847d4a",
+    "status": "nao_formalizado_no_acervo",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "destino_editorial": "artigo_3",
+    "resultados_lean": [],
+    "parte_volume": "IV",
+    "numero_volume": "IV.5.14",
+    "originais_77": [
+      "20.14"
+    ],
+    "rotulo_volume": "map:artigo_3:5.14",
+    "tex_volume": "tex/partes/artigo_3.tex",
+    "linha_volume": 1448,
+    "pagina_volume": 95
+  },
+  {
+    "id": "complemento_original:6.2",
+    "documento": "complemento_original",
+    "numero": "6.2",
+    "tipo": "teorema",
+    "titulo": "cota assintótica com nós livres",
+    "secao": 6,
+    "titulo_secao": "Árvores diádicas, nós livres e regularidade de Besov",
+    "arquivo_tex": "artigos/complemento_original_77/06_arvores_besov.tex",
+    "linha_tex": 42,
+    "rotulos_tex": [
+      "thm:free-knots",
+      "eq:free-knot"
+    ],
+    "enunciado_tex": "\\label{thm:free-knots}\nPara $f\\in C^2[\\alpha,\\beta]$,\n\\begin{equation}\n \\limsup_{N\\to\\infty}N^2E_N^{\\mathrm{lv}}(f)\n \\le\\frac18\\left(\\int_\\alpha^\\beta |f''(x)|^{1/2}\\dd x\\right)^2.\n \\label{eq:free-knot}\n\\end{equation}",
+    "sha256_enunciado": "01cd236ca1201b9460e8a04b7912090ba2c9d4a71b21a021360b39e3aca70227",
+    "status": "sem_formalizacao_localizada",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [],
+    "parte_volume": "V",
+    "numero_volume": "V.6.2",
+    "originais_77": [
+      "6.2"
+    ],
+    "rotulo_volume": "map:complemento_original:6.2",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 57,
+    "pagina_volume": 98
+  },
+  {
+    "id": "complemento_original:6.3",
+    "documento": "complemento_original",
+    "numero": "6.3",
+    "tipo": "teorema",
+    "titulo": "estimativa direta",
+    "secao": 6,
+    "titulo_secao": "Árvores diádicas, nós livres e regularidade de Besov",
+    "arquivo_tex": "artigos/complemento_original_77/06_arvores_besov.tex",
+    "linha_tex": 93,
+    "rotulos_tex": [
+      "thm:besov",
+      "eq:besov-rate"
+    ],
+    "enunciado_tex": "\\label{thm:besov}\nSe $0<s<2$, $|K|=L$ e o seminorma em \\eqref{eq:besov-seminorm} é finito, então, para $N\\ge2$,\n\\begin{equation}\n \\sigma_N^{\\mathrm{dia}}(f)_\\infty\n \\le C_sL^s|f|_{B^s_{\\infty,\\infty}(K)}N^{-s},\n \\label{eq:besov-rate}\n\\end{equation}\nonde $C_s$ independe de $f$ e $N$. Para todo $\\delta>0$, uma montagem racional com no máximo $N$ folhas alcança o lado direito de \\eqref{eq:besov-rate} acrescido de $\\delta$.",
+    "sha256_enunciado": "58883e324a0d19a4f2fda998382d5e98ba3ba56e091b77cb5b8fcea514bc6a48",
+    "status": "sem_formalizacao_localizada",
+    "observacao": "Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.",
+    "destino_editorial": "complemento_original",
+    "resultados_lean": [],
+    "parte_volume": "V",
+    "numero_volume": "V.6.3",
+    "originais_77": [
+      "6.3"
+    ],
+    "rotulo_volume": "map:complemento_original:6.3",
+    "tex_volume": "tex/partes/complemento_original.tex",
+    "linha_volume": 109,
+    "pagina_volume": 98
+  }
+]

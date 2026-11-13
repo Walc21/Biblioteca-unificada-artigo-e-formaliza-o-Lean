@@ -1,0 +1,130 @@
+\section{Árvores diádicas, nós livres e regularidade de Besov}
+\label{sec:dyadic-trees}
+
+\subsection{Partições em árvore}
+
+Se $K$ é uma célula diádica, uma partição em árvore $\Lambda$ é o conjunto de folhas de uma subárvore diádica finita com raiz $K$. Seja $P_\Lambda f$ o interpolante de $f$ nos extremos das folhas e defina
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty
+ =\inf\{\|f-P_\Lambda f\|_{\infty,K}:\Lambda\text{ árvore},\ |\Lambda|\le N\}.
+ \label{eq:sigma-dyadic}
+\end{equation}
+
+\begin{theorem}[taxa garantida em árvores]\label{thm:tree-rate}
+Se $f\in C^2(K)$, $L=|K|$, $M=\|f''\|_{\infty,K}$ e $N\ge2$, então
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty\le\frac{ML^2}{2N^2}.
+ \label{eq:tree-general}
+\end{equation}
+Se $N=2^r$, a constante melhora para
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty\le\frac{ML^2}{8N^2}.
+ \label{eq:tree-power}
+\end{equation}
+Para qualquer árvore finita $\Lambda$ e $\delta>0$, há uma montagem racional na mesma árvore cujo erro é menor que $\|f-P_\Lambda f\|_\infty+\delta$.
+\end{theorem}
+
+\begin{proof}
+Tome $r=\lfloor\log_2N\rfloor$ e refine $K$ uniformemente $r$ vezes. Há $2^r\le N$ folhas de largura $L2^{-r}$. Aplicando \eqref{eq:interpolation-remainder} em cada folha,
+\[
+ \|f-P_\Lambda f\|_\infty\le\frac{ML^2}{8}4^{-r}.
+\]
+Se $N=2^r$, resulta \eqref{eq:tree-power}. Em geral, $2^r>N/2$, logo $4^{-r}<4N^{-2}$, o que dá \eqref{eq:tree-general}. Para a racionalização, ordene os nós, aproxime os valores de $f$ por racionais compartilhados com erro menor que $\delta$ e evite igualdade entre vizinhos. Em cada folha, a diferença entre o interpolante exato e o racional é combinação convexa dos erros nodais; o argumento do \cref{thm:density} identifica cada peça como átomo.
+\end{proof}
+
+\subsection{Referência assintótica com nós livres}
+
+Se $E_N^{\mathrm{lv}}(f)$ é o menor erro de interpolação linear com $N$
+subintervalos e nós arbitrários, o regime de nós livres fornece a referência
+contínua para comparação com árvores diádicas
+\citep{deboor1973variable,burchard1974,deboor2001,powell1981,schumaker2007}.
+
+\begin{theorem}[cota assintótica com nós livres]\label{thm:free-knots}
+Para $f\in C^2[\alpha,\beta]$,
+\begin{equation}
+ \limsup_{N\to\infty}N^2E_N^{\mathrm{lv}}(f)
+ \le\frac18\left(\int_\alpha^\beta |f''(x)|^{1/2}\dd x\right)^2.
+ \label{eq:free-knot}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Fixe $\eta>0$ e ponha $\rho_\eta=(|f''|+\eta)^{1/2}$ e $I_\eta=\int_\alpha^\beta\rho_\eta$. Como $\rho_\eta$ é contínua e estritamente positiva, existem nós $\alpha=x_{N,0}<\cdots<x_{N,N}=\beta$ tais que
+\[
+ \int_{x_{N,j-1}}^{x_{N,j}}\rho_\eta=I_\eta/N.
+\]
+O comprimento máximo das células tende uniformemente a zero. Em $J_j=[x_{N,j-1},x_{N,j}]$, \eqref{eq:interpolation-remainder} e $|f''|\le\rho_\eta^2$ dão
+\[
+ \|f-P_{J_j}f\|_{\infty,J_j}
+ \le\frac18\left(\frac{I_\eta}{N}\right)^2
+ \left(\frac{\sup_{J_j}\rho_\eta}{\inf_{J_j}\rho_\eta}\right)^2.
+\]
+Por continuidade uniforme e positividade, a última razão converge uniformemente a $1$. Assim,
+\[
+ \limsup_{N\to\infty}N^2E_N^{\mathrm{lv}}(f)\le I_\eta^2/8.
+\]
+Fazendo $\eta\downarrow0$ e usando convergência dominada, obtém-se \eqref{eq:free-knot}.
+\end{proof}
+
+A constante em \eqref{eq:free-knot} pertence ao regime de nós livres. A
+constante sob restrição diádica será determinada na
+\cref{sec:dyadic-asymptotic}; é essa comparação, retomada explicitamente nos
+\cref{thm:general-dyadic-envelope,thm:quadratic-dyadic-constant}, que mede o
+custo da restrição de malha.
+
+\subsection{Estimativa direta na escala de Besov}
+
+As relações diretas e inversas entre aproximação por partes, splines e classes
+de suavidade têm uma tradição ampla
+\citep{birman1967,petrushev1988,devorepopov1988}. A formulação abaixo fixa a
+escala estritamente diádica e o interpolante linear usados neste artigo.
+
+Para $f\in C(K)$, defina
+\begin{equation}
+ \omega_2(f,t)_{\infty,K}
+ =\sup_{\substack{0<h\le t\\x,x+2h\in K}}
+ |f(x+2h)-2f(x+h)+f(x)|,
+\end{equation}
+e, para $0<s<2$,
+\begin{equation}
+ |f|_{B^s_{\infty,\infty}(K)}
+ =\sup_{0<t\le|K|}t^{-s}\omega_2(f,t)_{\infty,K}.
+ \label{eq:besov-seminorm}
+\end{equation}
+
+\begin{theorem}[estimativa direta]\label{thm:besov}
+Se $0<s<2$, $|K|=L$ e o seminorma em \eqref{eq:besov-seminorm} é finito, então, para $N\ge2$,
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty
+ \le C_sL^s|f|_{B^s_{\infty,\infty}(K)}N^{-s},
+ \label{eq:besov-rate}
+\end{equation}
+onde $C_s$ independe de $f$ e $N$. Para todo $\delta>0$, uma montagem racional com no máximo $N$ folhas alcança o lado direito de \eqref{eq:besov-rate} acrescido de $\delta$.
+\end{theorem}
+
+\begin{proof}
+A desigualdade de Whitney de ordem dois afirma que existe constante universal $C_W$ tal que, em todo intervalo $J$ \citep{whitney1957,devore1998},
+\[
+ E_1(f;J)_\infty:=\inf_{\ell\ \mathrm{afim}}\|f-\ell\|_{\infty,J}
+ \le C_W\omega_2(f,|J|)_{\infty,J}.
+\]
+O interpolante de extremos $P_J$ reproduz funções afins e tem norma de operador no máximo $1$. Logo, para toda $\ell$ afim,
+\[
+ \|f-P_Jf\|_\infty
+ \le\|f-\ell\|_\infty+\|P_J(f-\ell)\|_\infty
+ \le2\|f-\ell\|_\infty.
+\]
+Tomando o ínfimo e observando que o módulo em $J\subset K$ não excede o de $K$,
+\[
+ \|f-P_Jf\|_{\infty,J}
+ \le2C_W|J|^s|f|_{B^s_{\infty,\infty}(K)}.
+\]
+Refine $K$ uniformemente $r=\lfloor\log_2N\rfloor$ vezes. As folhas têm largura $L2^{-r}<2L/N$, e o máximo das estimativas locais prova \eqref{eq:besov-rate} com $C_s=2^{s+1}C_W$. A racionalização segue do último enunciado do \cref{thm:tree-rate}.
+\end{proof}
+
+O \cref{thm:besov} estabelece a direção regularidade--taxa. As
+\cref{sec:approximation-classes,sec:direct-height,sec:regularized-reversibility}
+incorporam altura aritmética, demonstram a recíproca crítica do erro bruto e
+obtêm a caracterização regularizada completa. Para bases de ondaletas, as
+caracterizações correspondentes seguem hipóteses próprias
+\citep{devore1998,cohen2001}.

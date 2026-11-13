@@ -1,0 +1,63 @@
+\section{Taxas uniformes e constante assintótica}
+Para $f\in C^2[\alpha,\beta]$, use a extensão
+\eqn{30}{F(x)=\begin{cases}
+f(\alpha)+f'(\alpha)(x-\alpha)+\frac12f''(\alpha)(x-\alpha)^2,&x<\alpha,\\
+f(x),&\alpha\le x\le\beta,\\
+f(\beta)+f'(\beta)(x-\beta)+\frac12f''(\beta)(x-\beta)^2,&x>\beta.
+\end{cases}}
+Então $F\in C^2(\R)$ e $\normK{F''}{\R}=\normK{f''}{[\alpha,\beta]}$. Seja $P_kF$ o interpolante nos nós $j2^{-k}$.
+
+\begin{teorema}[cota aguda e limite]
+Ponha $h=2^{-k}$ e $M=\normK{f''}{[\alpha,\beta]}$. Então
+\eqn{31}{\normK{f-P_kF}{[\alpha,\beta]}\le\frac{h^2M}8,}
+e
+\eqn{32}{\lim_{k\to\infty}\frac8{h^2}\normK{f-P_kF}{[\alpha,\beta]}=M.}
+Além disso, para todo $\delta>0$ existe $g_{k,\delta}\in\Asm([\alpha,\beta])$ com
+\eqn{33}{\norm{f-g_{k,\delta}}\le\frac{h^2M}8+\delta.}
+\end{teorema}
+\begin{proof}
+Em uma célula $[x_L,x_R]$ de largura $h$, ponha $e=F-P_kF$. Para $x\in(x_L,x_R)$, a função
+\[
+\psi(t)=e(t)-\frac{(t-x_L)(t-x_R)}{(x-x_L)(x-x_R)}e(x)
+\]
+anula-se em $x_L,x,x_R$. Três aplicações de Rolle produzem $\xi_x\in(x_L,x_R)$ com $\psi''(\xi_x)=0$; portanto
+\eqn{34}{F(x)-P_kF(x)=\frac12F''(\xi_x)(x-x_L)(x-x_R).}
+O módulo do produto é no máximo $h^2/4$, com igualdade no centro, o que prova \eqref{eq:31}.
+
+Se $M=0$, \eqref{eq:32} é imediata. Se $M>0$, escolha $x_*\in[\alpha,\beta]$ com $|f''(x_*)|=M$. Para cada $k$ suficientemente grande, escolha um centro de escala $k$, $z_k\in[\alpha,\beta]$, com $z_k\to x_*$. Avaliando \eqref{eq:34} em $z_k$,
+\[
+|F(z_k)-P_kF(z_k)|=\frac{h^2}8|F''(\xi_k)|,
+\]
+onde $\xi_k$ pertence à célula de $z_k$. O diâmetro da célula tende a zero, logo $\xi_k\to x_*$ e $|F''(\xi_k)|\to M$. Isso dá o limite inferior; \eqref{eq:31} fornece o superior.
+
+Para a última afirmação, racionalize todos os valores nodais da cobertura finita com erro menor que $\delta$ e mantenha valores adjacentes distintos, como no teorema~4.2. O interpolante resultante é uma montagem e dista menos que $\delta$ de $P_kF$ em norma uniforme. A desigualdade triangular conclui.
+\end{proof}
+
+\begin{corolario}[preservação da constante]
+Existe uma sequência $g_k\in\Asm([\alpha,\beta])$ tal que
+\[
+\lim_{k\to\infty}\frac8{h^2}\norm{f-g_k}=M.
+\]
+\end{corolario}
+\begin{proof}
+Na construção do teorema~5.1, escolha erros nodais $\delta_k=o(h^2)$. Então
+\[
+\left|\norm{f-g_k}-\norm{f-P_kF}\right|\le\norm{g_k-P_kF}<\delta_k.
+\]
+Divida por $h^2/8$ e aplique \eqref{eq:32}.
+\end{proof}
+Com $N_k$ de \eqref{eq:23}, $h=(\beta-\alpha)N_k^{-1}(1+O(N_k^{-1}))$ e, portanto,
+\eqn{35}{\norm{f-P_kF}\le\frac{(\beta-\alpha)^2M}8N_k^{-2}\bigl(1+O(N_k^{-1})\bigr).}
+Quando os extremos já são nós da malha, o termo de borda desaparece.
+\begin{table}[!htbp]\centering
+\caption{Erro exato do interpolante de $e^x$ em $[0,1]$.}
+\begin{tabular}{rrrr}\toprule
+$k$&erro exato&$2^{-2k}e/8$&razão\\\midrule
+2&$1{,}8774\times10^{-2}$&$2{,}1237\times10^{-2}$&$0{,}8840$\\
+4&$1{,}2866\times10^{-3}$&$1{,}3273\times10^{-3}$&$0{,}9693$\\
+6&$8{,}2310\times10^{-5}$&$8{,}2955\times10^{-5}$&$0{,}9922$\\
+8&$5{,}1746\times10^{-6}$&$5{,}1847\times10^{-6}$&$0{,}9980$\\
+10&$3{,}2389\times10^{-7}$&$3{,}2404\times10^{-7}$&$0{,}9995$\\\bottomrule
+\end{tabular}
+\end{table}
+\figura{05_taxa_exponencial}{.98}{Erro do interpolante de $e^x$ e razão entre erro e cota. A razão converge a $1$, conforme \eqref{eq:32}.}{taxa}

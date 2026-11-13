@@ -1,0 +1,377 @@
+Dyadic.Lib.Asm (K : Set ℝ) : Set (ℝ → ℝ)
+Dyadic.Lib.Cat (k0 : ℕ) (m0 : ℤ) (D H : ℕ) : Set (ℝ → ℝ)
+Dyadic.Lib.Codec.{u_1} {X : Type u_1} [PseudoMetricSpace X] (F : Set X) (ε : ℝ) : Type u_1
+Dyadic.Lib.FRM.deriv_bound {R M : ℝ} {f : ℝ → ℝ} (hf : f ∈ Dyadic.Lib.FRM R M) (x : ℝ) :
+  x ∈ Set.Icc 0 1 → |derivWithin f (Set.Icc 0 1) x| ≤ Dyadic.Lib.C0 R M
+Dyadic.Lib.GammaSharp : ℕ ≃ Dyadic.Lib.Atom
+Dyadic.Lib.GammaSharp_computable :
+  (∀ (n : ℕ), Dyadic.Lib.gammaSharpc n = Dyadic.Lib.GammaSharp n) ∧
+    (∀ (a : Dyadic.Lib.Atom), Dyadic.Lib.addrSharpc a = Dyadic.Lib.addrSharp a) ∧
+      (∀ (n : ℕ), Dyadic.Lib.addrSharpc (Dyadic.Lib.gammaSharpc n) = n) ∧
+        ∀ (a : Dyadic.Lib.Atom), Dyadic.Lib.gammaSharpc (Dyadic.Lib.addrSharpc a) = a
+Dyadic.Lib.IsAssemblyRep (K : Set ℝ) (g : ℝ → ℝ) (Λ : Finset Dyadic.Lib.Atom) : Prop
+Dyadic.Lib.RR (k0 : ℕ) (m0 : ℤ) (D H : ℕ) : Set Dyadic.Lib.LTree
+Dyadic.Lib.addrSharp (a : Dyadic.Lib.Atom) : ℕ
+Dyadic.Lib.addrSharp_minimax :
+  Function.Bijective Dyadic.Lib.addrSharp ∧
+    ∀ H ≥ 2,
+      (Dyadic.Lib.atomsUpTo H).sup Dyadic.Lib.addrSharp = (Dyadic.Lib.atomsUpTo H).card - 1 ∧
+        (Dyadic.Lib.atomsUpTo H).card - 1 ≤ 18 * H ^ 6 - 1 ∧
+          ∀ (A : Dyadic.Lib.Atom → ℕ),
+            Function.Injective A → (Dyadic.Lib.atomsUpTo H).card - 1 ≤ (Dyadic.Lib.atomsUpTo H).sup A
+Dyadic.Lib.address_polynomial_bound :
+  ∃ C₁ C₂,
+    ∀ (a : Dyadic.Lib.Atom),
+      ↑(Dyadic.Lib.encode a) ≤ C₁ * ↑a.height ^ 8 ∧
+        Real.logb 2 (↑(Dyadic.Lib.encode a) + 1) ≤ C₂ * Real.logb 2 ↑a.height
+Dyadic.Lib.assembly_eq_relu {N : ℕ} {a : ℕ → Dyadic.Lib.Atom} (K : Set ℝ) (g : ℝ → ℝ) (hN : 1 ≤ N)
+  (hcons : ∀ (j : ℕ), j + 1 < N → (a j).right = (a (j + 1)).left)
+  (hmatch : ∀ (j : ℕ), j + 1 < N → (a j).line ↑(a j).right = (a (j + 1)).line ↑(a (j + 1)).left)
+  (hg : ∀ j < N, ∀ x ∈ (a j).cell ∩ K, g x = (a j).line x) (hK : K ⊆ Set.Icc ↑(a 0).left ↑(a (N - 1)).right) (x : ℝ) :
+  x ∈ K →
+    g x =
+      (a 0).line ↑(a 0).left + ↑(a 0).s * (x - ↑(a 0).left) +
+        ∑ j ∈ Finset.Ico 1 N, ↑((a j).s - (a (j - 1)).s) * Dyadic.Lib.relu (x - ↑(a j).left)
+Dyadic.Lib.card_atomsUpTo_ge : ∃ c, 0 < c ∧ ∃ H₁, 2 ≤ H₁ ∧ ∀ H ≥ H₁, c * ↑H ^ 6 ≤ ↑(Dyadic.Lib.atomsUpTo H).card
+Dyadic.Lib.card_atomsUpTo_le {H : ℕ} (hH : 2 ≤ H) : (Dyadic.Lib.atomsUpTo H).card ≤ 18 * H ^ 6
+Dyadic.Lib.catalog_finite_canonical (k0 : ℕ) (m0 : ℤ) (D H : ℕ) (hH : Dyadic.Lib.HK k0 m0 ≤ H) :
+  (Dyadic.Lib.RR k0 m0 D H).Finite ∧
+    (Dyadic.Lib.Cat k0 m0 D H).Finite ∧
+      1 ≤ (Dyadic.Lib.Cat k0 m0 D H).ncard ∧
+        (Dyadic.Lib.Cat k0 m0 D H).ncard ≤ (Dyadic.Lib.RR k0 m0 D H).ncard ∧
+          (Dyadic.Lib.RR k0 m0 D H).ncard ≤ Dyadic.Lib.Tshape D * (Dyadic.Lib.atomsUpTo H).card ^ 2 ^ D ∧
+            (∀ (J : (ℝ → ℝ) → ℝ), ∃ g, Dyadic.Lib.IsCatMin k0 m0 D H J g) ∧
+              ∀ (J : (ℝ → ℝ) → ℝ), ∃! t, Dyadic.Lib.IsCanonical k0 m0 D H J t
+Dyadic.Lib.catalog_truncation (k0 : ℕ) (m0 : ℤ) :
+  (∀ (D D' H H' : ℕ), D ≤ D' → H ≤ H' → Dyadic.Lib.Cat k0 m0 D H ⊆ Dyadic.Lib.Cat k0 m0 D' H') ∧
+    (∀ (J : (ℝ → ℝ) → ℝ) (D D' H H' : ℕ) (g g' : ℝ → ℝ),
+        D ≤ D' → H ≤ H' → Dyadic.Lib.IsCatMin k0 m0 D H J g → Dyadic.Lib.IsCatMin k0 m0 D' H' J g' → J g' ≤ J g) ∧
+      ∀ (J : (ℝ → ℝ) → ℝ),
+        (∃ g ∈ ⋃ D, ⋃ H, Dyadic.Lib.Cat k0 m0 D H, ∀ g' ∈ ⋃ D, ⋃ H, Dyadic.Lib.Cat k0 m0 D H, J g ≤ J g') →
+          ∃ tstar D₀ H₀,
+            tstar ∈ Dyadic.Lib.RR k0 m0 D₀ H₀ ∧
+              (∀ g' ∈ ⋃ D, ⋃ H, Dyadic.Lib.Cat k0 m0 D H, J (Dyadic.Lib.evalRep tstar) ≤ J g') ∧
+                (∀ (t : Dyadic.Lib.LTree) (D H : ℕ),
+                    t ∈ Dyadic.Lib.RR k0 m0 D H →
+                      (∀ g' ∈ ⋃ D, ⋃ H, Dyadic.Lib.Cat k0 m0 D H, J (Dyadic.Lib.evalRep t) ≤ J g') →
+                        Dyadic.Lib.shortlex (Dyadic.Lib.serRep tstar) ≤ Dyadic.Lib.shortlex (Dyadic.Lib.serRep t)) ∧
+                  ∀ (D H : ℕ), D₀ ≤ D → H₀ ≤ H → Dyadic.Lib.IsCanonical k0 m0 D H J tstar
+Dyadic.Lib.decLength.{u_1} {X : Type u_1} [PseudoMetricSpace X] (F : Set X) (ε : ℝ) : ℕ
+Dyadic.Lib.entropy_codebook {R M : ℝ} (hR : 0 < R) (hM : 0 < M) :
+  ∃ ε₀ > 0,
+    ∃ c > 0,
+      ∃ C > 0,
+        ∃ C₁ > 0,
+          ∀ (ε : ℝ),
+            0 < ε →
+              ε < ε₀ →
+                c / √ε ≤ Dyadic.Lib.metricEntropy (Dyadic.Lib.FRMC R M) ε ∧
+                  Dyadic.Lib.metricEntropy (Dyadic.Lib.FRMC R M) ε ≤ C / √ε ∧
+                    ∃ CB,
+                      ↑CB ⊆ Dyadic.Lib.Asm (Set.Icc 0 1) ∧
+                        (∀ f ∈ Dyadic.Lib.FRM R M, ∃ g ∈ CB, ∀ x ∈ Set.Icc 0 1, |f x - g x| ≤ ε) ∧
+                          ↑⌈Real.logb 2 ↑CB.card⌉₊ ≤ C₁ / √ε ∧
+                            Dyadic.Lib.metricEntropy (Dyadic.Lib.FRMC R M) ε ≤ Real.logb 2 ↑CB.card
+Dyadic.Lib.formats_comparison :
+  (∀ (a : ℕ → Dyadic.Lib.Atom) (N : ℕ),
+      1 ≤ N →
+        ∀ (r : List Bool),
+          Dyadic.Lib.decStreamAtom (Dyadic.Lib.streamAtom a N ++ r) = some (List.map a (List.range N), r) ∧
+            Dyadic.Lib.decStreamStr (Dyadic.Lib.streamStr a N ++ r) =
+                some (((a 0).center, (a 0).y0, (a 0).s, Dyadic.Lib.jumps a N), r) ∧
+              Dyadic.Lib.decStreamRat (Dyadic.Lib.streamRat a N ++ r) =
+                some (((a 0).intercept, (a 0).s, Dyadic.Lib.jumps a N), r)) ∧
+    (∀ (a b : ℕ → Dyadic.Lib.Atom) (N M : ℕ),
+        1 ≤ N →
+          1 ≤ M →
+            (Dyadic.Lib.streamAtom a N <+: Dyadic.Lib.streamAtom b M →
+                Dyadic.Lib.streamAtom a N = Dyadic.Lib.streamAtom b M) ∧
+              (Dyadic.Lib.streamStr a N <+: Dyadic.Lib.streamStr b M →
+                  Dyadic.Lib.streamStr a N = Dyadic.Lib.streamStr b M) ∧
+                (Dyadic.Lib.streamRat a N <+: Dyadic.Lib.streamRat b M →
+                  Dyadic.Lib.streamRat a N = Dyadic.Lib.streamRat b M)) ∧
+      (∀ (K : Set ℝ) (g : ℝ → ℝ) (a : ℕ → Dyadic.Lib.Atom) (N : ℕ),
+          1 ≤ N →
+            (∀ (j : ℕ), j + 1 < N → (a j).right = (a (j + 1)).left) →
+              (∀ (j : ℕ), j + 1 < N → (a j).line ↑(a j).right = (a (j + 1)).line ↑(a (j + 1)).left) →
+                (∀ j < N, ∀ x ∈ (a j).cell ∩ K, g x = (a j).line x) →
+                  K ⊆ Set.Icc ↑(a 0).left ↑(a (N - 1)).right →
+                    (a 0).intercept = (a 0).y0 - (a 0).s * (a 0).center ∧
+                      ∀ x ∈ K, g x = Dyadic.Lib.reluEval (a 0).intercept (a 0).s (Dyadic.Lib.jumps a N) x) ∧
+        ∃ C,
+          ∀ (a : ℕ → Dyadic.Lib.Atom) (N H : ℕ),
+            1 ≤ N →
+              2 ≤ H →
+                (∀ j < N, (a j).height ≤ H) →
+                  ↑(Dyadic.Lib.streamAtom a N).length ≤ C * ↑N * Real.logb 2 ↑H ∧
+                    ↑(Dyadic.Lib.streamStr a N).length ≤ C * ↑N * Real.logb 2 ↑H ∧
+                      ↑(Dyadic.Lib.streamRat a N).length ≤ C * ↑N * ↑H
+Dyadic.Lib.formats_family {H N : ℕ} (hH : 2 ≤ H) (hNe : Even N) (hN2 : 2 ≤ N) (hNH : N ≤ H) :
+  (∀ (j : ℕ), j + 1 < N → (Dyadic.Lib.famAtom H j).right = (Dyadic.Lib.famAtom H (j + 1)).left) ∧
+    (∀ (j : ℕ),
+        j + 1 < N →
+          (Dyadic.Lib.famAtom H j).line ↑(Dyadic.Lib.famAtom H j).right =
+            (Dyadic.Lib.famAtom H (j + 1)).line ↑(Dyadic.Lib.famAtom H (j + 1)).left) ∧
+      Dyadic.Lib.chainFun (Dyadic.Lib.famAtom H) N ∈
+          Dyadic.Lib.Asm (Set.Icc ↑(Dyadic.Lib.famAtom H 0).left ↑(Dyadic.Lib.famAtom H (N - 1)).right) ∧
+        Dyadic.Lib.IsAssemblyRep (Set.Icc ↑(Dyadic.Lib.famAtom H 0).left ↑(Dyadic.Lib.famAtom H (N - 1)).right)
+            (Dyadic.Lib.chainFun (Dyadic.Lib.famAtom H) N) (Finset.image (Dyadic.Lib.famAtom H) (Finset.range N)) ∧
+          (Finset.image (Dyadic.Lib.famAtom H) (Finset.range N)).card = N ∧
+            Dyadic.Lib.maxHeight (Finset.image (Dyadic.Lib.famAtom H) (Finset.range N)) = H ∧
+              ↑(Dyadic.Lib.streamAtom (Dyadic.Lib.famAtom H) N).length ≤ 200 * ↑N * Real.logb 2 ↑H ∧
+                ↑(Dyadic.Lib.streamStr (Dyadic.Lib.famAtom H) N).length ≤ 200 * ↑N * Real.logb 2 ↑H ∧
+                  ↑N * ↑H / 2 ≤ ↑(Dyadic.Lib.streamRat (Dyadic.Lib.famAtom H) N).length
+Dyadic.Lib.height_calculus {H : ℕ} (a b : Dyadic.Lib.Atom) (ha : a.height ≤ H) (hb : b.height ≤ H) :
+  (∀ t ∈ {a.left, a.right}, t.num.natAbs ≤ H ∧ ∃ k' ≤ H, t.den = 2 ^ k') ∧
+    Dyadic.Lib.ratHeight (b.s - a.s) ≤ 2 * H ^ 2 ∧
+      Dyadic.Lib.ratHeight (b.s * b.left) ≤ H * 2 ^ H ∧ Dyadic.Lib.ratHeight a.intercept ≤ 2 ^ (H + 1) * H ^ 2
+Dyadic.Lib.informational_limit.{u_1} {X : Type u_1} [PseudoMetricSpace X] (F : Set X) (ε : ℝ) :
+  (∀ (c : Dyadic.Lib.Codec F ε) (ℓ : ℕ), (∀ w ∈ c.W, w.length = ℓ) → ⌈Dyadic.Lib.metricEntropy F ε⌉ ≤ ↑ℓ) ∧
+    (∀ (c : Dyadic.Lib.Codec F ε) (ℓ : ℕ),
+        Dyadic.Lib.PrefixFree c.W → (∀ w ∈ c.W, w.length ≤ ℓ) → ⌈Dyadic.Lib.metricEntropy F ε⌉ ≤ ↑ℓ) ∧
+      ((∃ c, Dyadic.Lib.PrefixFree c.W) → ⌈Dyadic.Lib.metricEntropy F ε⌉ ≤ ↑(Dyadic.Lib.decLength F ε))
+Dyadic.Lib.jointError (K : Set ℝ) (N H : ℕ) (f : ℝ → ℝ) : ENNReal
+Dyadic.Lib.jointError_monotone (K : Set ℝ) (f : ℝ → ℝ) (N H : ℕ) :
+  Dyadic.Lib.jointError K (N + 1) H f ≤ Dyadic.Lib.jointError K N H f ∧
+    Dyadic.Lib.jointError K N (H + 1) f ≤ Dyadic.Lib.jointError K N H f ∧
+      (Antitone fun H => Dyadic.Lib.jointError K N H f) ∧
+        Filter.Tendsto (fun H => Dyadic.Lib.jointError K N H f) Filter.atTop (nhds (Dyadic.Lib.leafError K N f))
+Dyadic.Lib.minHeight (K : Set ℝ) (ε : ℝ) (N : ℕ) (f : ℝ → ℝ) : ℕ
+Dyadic.Lib.minimax_lower_bound_asymptotic :
+  ∃ c,
+    0 < c ∧
+      ∃ C H₁,
+        2 ≤ H₁ ∧
+          ∀ (A : Dyadic.Lib.Atom → ℕ),
+            Function.Injective A →
+              ∀ H ≥ H₁, ∃ a, a.height ≤ H ∧ c * ↑H ^ 6 - 1 ≤ ↑(A a) ∧ 6 * Real.logb 2 ↑H - C ≤ Real.logb 2 (↑(A a) + 1)
+Dyadic.Lib.precision_height (R M : ℝ) :
+  (∀ (ε : ℝ),
+      0 < ε →
+        ∀ f ∈ Dyadic.Lib.FRM R M,
+          Dyadic.Lib.jointError (Set.Icc 0 1) (Dyadic.Lib.nEps M ε) (Dyadic.Lib.HEps R M ε) f ≤ ENNReal.ofReal ε ∧
+            Dyadic.Lib.minHeight (Set.Icc 0 1) ε (Dyadic.Lib.nEps M ε) f ≤ Dyadic.Lib.HEps R M ε) ∧
+    (∃ C, ∀ (ε : ℝ), 0 < ε → ε ≤ 1 → ↑(Dyadic.Lib.nEps M ε) ≤ C / √ε ∧ ↑(Dyadic.Lib.HEps R M ε) ≤ C / ε) ∧
+      ∃ C,
+        ∀ (ε : ℝ),
+          0 < ε →
+            ε ≤ 1 →
+              ∀ f ∈ Dyadic.Lib.FRM R M,
+                ↑(Dyadic.Lib.streamAtom (Dyadic.Lib.leafAtom f (Dyadic.Lib.rEps M ε)) (Dyadic.Lib.nEps M ε)).length ≤
+                    C / √ε * Real.logb 2 (2 / ε) ∧
+                  ↑(Dyadic.Lib.streamStr (Dyadic.Lib.leafAtom f (Dyadic.Lib.rEps M ε)) (Dyadic.Lib.nEps M ε)).length ≤
+                      C / √ε * Real.logb 2 (2 / ε) ∧
+                    ↑(Dyadic.Lib.streamRat (Dyadic.Lib.leafAtom f (Dyadic.Lib.rEps M ε)) (Dyadic.Lib.nEps M ε)).length ≤
+                      C / √ε * Real.logb 2 (2 / ε)
+Dyadic.Lib.relu_mem_Asm (α β : ℝ) (hαβ : α < β) (c q : ℚ) (M : ℕ) (w τ : ℕ → ℚ) (hτ : ∀ j < M, ∃ u e, τ j = ↑u / 2 ^ e)
+  (hslope : ∀ x ∈ Set.Icc α β, (∀ j < M, x ≠ ↑(τ j)) → q + ∑ j ∈ Finset.range M with ↑(τ j) < x, w j ≠ 0) :
+  Dyadic.Lib.reluNet c q M w τ ∈ Dyadic.Lib.Asm (Set.Icc α β)
+Dyadic.Lib.relu_parameters_height {N H : ℕ} (hN : 1 ≤ N) (a : ℕ → Dyadic.Lib.Atom) (ha : ∀ j < N, (a j).height ≤ H) :
+  2 + 2 * (N - 1) = 2 * N ∧
+    Dyadic.Lib.ratHeight (a 0).intercept ≤ 2 ^ (H + 1) * H ^ 2 ∧
+      Dyadic.Lib.ratHeight (a 0).s ≤ 2 ^ (H + 1) * H ^ 2 ∧
+        ∀ j ∈ Finset.Ico 1 N,
+          Dyadic.Lib.ratHeight (a j).left ≤ 2 ^ (H + 1) * H ^ 2 ∧
+            Dyadic.Lib.ratHeight ((a j).s - (a (j - 1)).s) ≤ 2 ^ (H + 1) * H ^ 2
+Dyadic.Lib.serialization_gamma :
+  (∀ (Λ : Finset Dyadic.Lib.Atom),
+      Λ.Nonempty → ∀ (r : List Bool), Dyadic.Lib.deserGamma (Dyadic.Lib.serGamma Λ ++ r) = some (Λ, r)) ∧
+    (∃ C H₀, ∀ H ≥ H₀, |↑(Dyadic.Lib.widthGamma H) - 8 * Real.logb 2 ↑H| ≤ C) ∧
+      ∃ C,
+        ∀ (Λ : Finset Dyadic.Lib.Atom),
+          Λ.Nonempty →
+            ↑(Dyadic.Lib.serGamma Λ).length ≤
+              ↑Λ.card * (8 * Real.logb 2 ↑(Dyadic.Lib.maxHeight Λ) + C) +
+                C * (Real.logb 2 ↑Λ.card + Real.logb 2 ↑(Dyadic.Lib.maxHeight Λ))
+Dyadic.Lib.serialization_sharp :
+  (∀ (K : Set ℝ) (g : ℝ → ℝ) (Λ : Finset Dyadic.Lib.Atom),
+      g ∈ Dyadic.Lib.Asm K →
+        Dyadic.Lib.IsAssemblyRep K g Λ →
+          Λ.Nonempty →
+            (∀ (r : List Bool), Dyadic.Lib.deserSharp (Dyadic.Lib.serSharp Λ ++ r) = some (Λ, r)) ∧
+              (∀ (g' : ℝ → ℝ), Dyadic.Lib.IsAssemblyRep K g' Λ → ∀ x ∈ K, g' x = g x) ∧
+                2 ≤ Dyadic.Lib.maxHeight Λ ∧
+                  ↑(Dyadic.Lib.serSharp Λ).length =
+                    2 * ↑⌊Real.logb 2 ↑Λ.card⌋₊ + 1 + (2 * ↑⌊Real.logb 2 ↑(Dyadic.Lib.maxHeight Λ)⌋₊ + 1) +
+                      ↑Λ.card * ↑⌈Real.logb 2 (18 * ↑(Dyadic.Lib.maxHeight Λ) ^ 6)⌉₊) ∧
+    ∃ C,
+      ∀ (Λ : Finset Dyadic.Lib.Atom),
+        Λ.Nonempty →
+          ↑(Dyadic.Lib.serSharp Λ).length ≤
+            ↑Λ.card * (6 * Real.logb 2 ↑(Dyadic.Lib.maxHeight Λ) + C) +
+              C * (Real.logb 2 ↑Λ.card + Real.logb 2 ↑(Dyadic.Lib.maxHeight Λ))
+Dyadic.Lib.simultaneous_control (R M : ℝ) :
+  (∀ f ∈ Dyadic.Lib.FRM R M,
+      ∀ (r : ℕ),
+        1 ≤ r →
+          Dyadic.Lib.IsAssemblyRep (Set.Icc 0 1) (Dyadic.Lib.gN f r) (Dyadic.Lib.leavesN f r) ∧
+            (Dyadic.Lib.leavesN f r).card = 2 ^ r ∧
+              Dyadic.Lib.gN f r ∈ Dyadic.Lib.Asm (Set.Icc 0 1) ∧
+                (∀ x ∈ Set.Icc 0 1, |f x - Dyadic.Lib.gN f r x| ≤ (M + 4) / (8 * (2 ^ r) ^ 2)) ∧
+                  (∀ a ∈ Dyadic.Lib.leavesN f r, ↑a.height ≤ Dyadic.Lib.CH R M * (2 ^ r) ^ 2) ∧
+                    ∀ (j : ℕ),
+                      ↑(Dyadic.Lib.vNode f r j) ∈ Dyadic.Lib.altGrid r j ∧
+                        ∀ w ∈ Dyadic.Lib.altGrid r j,
+                          |↑(Dyadic.Lib.vNode f r j) - f (↑j / 2 ^ r)| ≤ |w - f (↑j / 2 ^ r)| ∧
+                            (|↑(Dyadic.Lib.vNode f r j) - f (↑j / 2 ^ r)| = |w - f (↑j / 2 ^ r)| →
+                              ↑(Dyadic.Lib.vNode f r j) ≤ w)) ∧
+    (∃ C,
+        ∀ f ∈ Dyadic.Lib.FRM R M,
+          ∀ (r : ℕ),
+            1 ≤ r →
+              ↑(Dyadic.Lib.streamAtom (Dyadic.Lib.leafAtom f r) (2 ^ r)).length ≤ C * 2 ^ r * Real.logb 2 (2 * 2 ^ r) ∧
+                ↑(Dyadic.Lib.streamStr (Dyadic.Lib.leafAtom f r) (2 ^ r)).length ≤ C * 2 ^ r * Real.logb 2 (2 * 2 ^ r) ∧
+                  ↑(Dyadic.Lib.streamRat (Dyadic.Lib.leafAtom f r) (2 ^ r)).length ≤
+                    C * 2 ^ r * Real.logb 2 (2 * 2 ^ r)) ∧
+      ∀ f ∈ Dyadic.Lib.FRM R M,
+        ∀ (N : ℕ),
+          2 ≤ N →
+            Dyadic.Lib.jointError (Set.Icc 0 1) N ⌈Dyadic.Lib.CH R M * ↑N ^ 2⌉₊ f <
+              ENNReal.ofReal ((M + 4) / (2 * ↑N ^ 2))
+Dyadic.Lib.sqrt_two_inf_not_attained :
+  sInf {e | ∃ n, 1 / 4 ∈ (Dyadic.Lib.decode n).cell ∧ e = |√2 - (Dyadic.Lib.decode n).line (1 / 4)|} = 0 ∧
+    ∀ (n : ℕ), 1 / 4 ∈ (Dyadic.Lib.decode n).cell → |√2 - (Dyadic.Lib.decode n).line (1 / 4)| ≠ 0
+Dyadic.Lib.taylor_jet (k : ℕ) (m : ℤ) (f : ℝ → ℝ) (hf : ContDiffOn ℝ 2 f (Dyadic.Lib.dyCell k m)) :
+  (∀ (y₀ s : ℚ),
+      s ≠ 0 →
+        f (Dyadic.Lib.dyCenter k m) = ↑y₀ →
+          derivWithin f (Dyadic.Lib.dyCell k m) (Dyadic.Lib.dyCenter k m) = ↑s →
+            ∃ a,
+              a.k = k ∧
+                a.m = m ∧
+                  a.cell = Dyadic.Lib.dyCell k m ∧
+                    ∀ (x : ℝ),
+                      a.line x =
+                        f (Dyadic.Lib.dyCenter k m) +
+                          derivWithin f (Dyadic.Lib.dyCell k m) (Dyadic.Lib.dyCenter k m) *
+                            (x - Dyadic.Lib.dyCenter k m)) ∧
+    ∀ (M : ℝ),
+      (∀ x ∈ Dyadic.Lib.dyCell k m, |iteratedDerivWithin 2 f (Dyadic.Lib.dyCell k m) x| ≤ M) →
+        ∀ δ > 0,
+          ∃ q₀ q₁,
+            q₁ ≠ 0 ∧
+              (∀ x ∈ Dyadic.Lib.dyCell k m,
+                  |f (Dyadic.Lib.dyCenter k m) +
+                          derivWithin f (Dyadic.Lib.dyCell k m) (Dyadic.Lib.dyCenter k m) *
+                            (x - Dyadic.Lib.dyCenter k m) -
+                        (↑q₀ + ↑q₁ * (x - Dyadic.Lib.dyCenter k m))| <
+                    δ) ∧
+                ∀ x ∈ Dyadic.Lib.dyCell k m,
+                  |f x - (↑q₀ + ↑q₁ * (x - Dyadic.Lib.dyCenter k m))| ≤ (1 / 2 ^ k) ^ 2 / 8 * M + δ
+Dyadic.Lib.worstAddress_theta :
+  (∃ c C,
+      0 < c ∧
+        0 < C ∧ ∃ H₀, ∀ H ≥ H₀, c * ↑H ^ 8 ≤ ↑(Dyadic.Lib.worstAddress H) ∧ ↑(Dyadic.Lib.worstAddress H) ≤ C * ↑H ^ 8) ∧
+    ∃ C H₀, ∀ H ≥ H₀, |Real.logb 2 (↑(Dyadic.Lib.worstAddress H) + 1) - 8 * Real.logb 2 ↑H| ≤ C
+Fase3.IsAssembly (α β : ℝ) (g : ℝ → ℝ) : Prop
+Fase3.Mint_ge_supNorm (E : Fase3.Expr) (J : Fase3.Iv) (P d : ℕ) (I : Fase3.Iv)
+  (h : Fase3.boundSecondDerivative E J P d = some I) (hJ : J.lo ≤ J.hi) :
+  Fase3.supNormOn (Set.Icc ↑J.lo ↑J.hi) (deriv (deriv E.eval)) ≤ ↑(Fase3.Mint I)
+Fase3.Qenum_bijective : Function.Bijective Fase3.Qenum
+Fase3.QstarEnum_bijective : Function.Bijective Fase3.QstarEnum
+Fase3.assembly_dense {α β : ℝ} (hαβ : α < β) {f : ℝ → ℝ} (hf : ContinuousOn f (Set.Icc α β)) {ε : ℝ} (hε : 0 < ε) :
+  ∃ g, Fase3.IsAssembly α β g ∧ (Fase3.supNormOn (Set.Icc α β) fun x => f x - g x) < ε
+Fase3.boundSecondDerivative_correct (E : Fase3.Expr) (J : Fase3.Iv) (P d : ℕ) (I : Fase3.Iv)
+  (h : Fase3.boundSecondDerivative E J P d = some I) (x : ℝ) (hx : J.Mem x) :
+  ContDiffAt ℝ 2 E.eval x ∧ deriv (deriv E.eval) x ∈ Set.Icc ↑I.lo ↑I.hi ∧ |deriv (deriv E.eval) x| ≤ ↑(Fase3.Mint I)
+Fase3.calibration {M : ℕ × ℤ → ℝ} {J0 : ℕ × ℤ} {κ : ℝ} (f : ℝ → ℝ) (hκ : κ ≠ 0)
+  (hM : ∀ (J : ℕ × ℤ), Fase3.cC J ⊆ Fase3.cC J0 → M J = |κ|)
+  (hf2 : ∀ x ∈ Set.Icc (Fase3.cL J0) (Fase3.cR J0), Fase3.d2 f (Fase3.cL J0) (Fase3.cR J0) x = κ) :
+  (∀ ε > 0,
+      (∀ (s : ℕ),
+          Fase3.refineAll M ε [J0] (Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε + s) =
+            Fase3.refineAll M ε [J0] (Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε)) ∧
+        (Fase3.refineAll M ε [J0] (Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε)).length =
+          2 ^ Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε) ∧
+    Filter.liminf (fun ε => √ε * ↑(Fase3.refineAll M ε [J0] (Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε)).length)
+          (nhdsWithin 0 (Set.Ioi 0)) =
+        1 / √8 * ∫ (x : ℝ) in Fase3.cL J0..Fase3.cR J0, √|Fase3.d2 f (Fase3.cL J0) (Fase3.cR J0) x| ∧
+      Filter.limsup (fun ε => √ε * ↑(Fase3.refineAll M ε [J0] (Fase3.rcal (Fase3.mesh J0.1 ^ 2 * |κ| / 8) ε)).length)
+          (nhdsWithin 0 (Set.Ioi 0)) =
+        1 / √2 * ∫ (x : ℝ) in Fase3.cL J0..Fase3.cR J0, √|Fase3.d2 f (Fase3.cL J0) (Fase3.cR J0) x|
+Fase3.calkinWilf_two_pow (q : ℕ) (hq : 1 ≤ q) : Fase3.calkinWilf (2 ^ (q - 1)) = 1 / ↑q
+Fase3.card_QH_ge (H : ℕ) : ↑H ^ 2 / 4 ≤ ↑(Fase3.QH H).card
+Fase3.card_QH_le (H : ℕ) (hH : 1 ≤ H) : (Fase3.QH H).card ≤ 3 * H ^ 2
+Fase3.cdiag_eq_floor (n : ℕ) : ↑(Fase3.cdiag n) = ⌊(√(8 * ↑n + 1) - 1) / 2⌋
+Fase3.cellOwn_partition (k : ℕ) (x : ℝ) : ∃! m, x ∈ Fase3.cellOwn k m
+Fase3.cell_length (k : ℕ) (m : ℤ) : Fase3.cellR k m - Fase3.cellL k m = 2 ^ (-↑k)
+Fase3.cell_refine (k : ℕ) (m : ℤ) : Fase3.cell k m = Fase3.cell (k + 1) (2 * m) ∪ Fase3.cell (k + 1) (2 * m + 1)
+Fase3.center_bijOn :
+  (Function.Injective fun p => Fase3.center p.1 p.2) ∧ (Set.range fun p => Fase3.center p.1 p.2) = Fase3.dyadicMid
+Fase3.center_error_eq (f : ℝ → ℝ) {xL xR : ℝ} (h : xL ≠ xR) :
+  |f ((xL + xR) / 2) - Fase3.linInterp xL xR (f xL) (f xR) ((xL + xR) / 2)| =
+    1 / 2 * |f xL - 2 * f ((xL + xR) / 2) + f xR|
+Fase3.cpair_bijective : Function.Bijective fun p => Fase3.cpair p.1 p.2
+Fase3.cpair_le (u v : ℕ) : Fase3.cpair u v ≤ (u + v + 1) ^ 2
+Fase3.cube_example :
+  (∀ (x : ℝ), Fase3.linInterp (-1) 1 ((-1) ^ 3) (1 ^ 3) x = x) ∧
+    (-1) ^ 3 - 2 * 0 ^ 3 + 1 ^ 3 = 0 ∧ (Fase3.supNormOn (Set.Icc (-1) 1) fun x => x ^ 3 - x) = 2 / (3 * √3)
+Fase3.decode4_bijective : Function.Bijective Fase3.decode4
+Fase3.dyadicMid_dense : Dense Fase3.dyadicMid
+Fase3.errP_le {f : ℝ → ℝ} {α β : ℝ} (hαβ : α < β) (hf : ContDiffOn ℝ 2 f (Set.Icc α β)) (k : ℕ) :
+  Fase3.errP f α β k ≤ Fase3.mesh k ^ 2 * Fase3.normD2 f α β / 8
+Fase3.exists_assembly_rate {f : ℝ → ℝ} {α β : ℝ} (hαβ : α < β) (hf : ContDiffOn ℝ 2 f (Set.Icc α β)) (k : ℕ) {δ : ℝ}
+  (hδ : 0 < δ) :
+  ∃ g,
+    Fase3.IsAssembly α β g ∧
+      (Fase3.supNormOn (Set.Icc α β) fun x => f x - g x) ≤ Fase3.mesh k ^ 2 * Fase3.normD2 f α β / 8 + δ
+Fase3.exists_assembly_seq_constant {f : ℝ → ℝ} {α β : ℝ} (hαβ : α < β) (hf : ContDiffOn ℝ 2 f (Set.Icc α β)) :
+  ∃ g,
+    (∀ (k : ℕ), Fase3.IsAssembly α β (g k)) ∧
+      Filter.Tendsto (fun k => 8 / Fase3.mesh k ^ 2 * Fase3.supNormOn (Set.Icc α β) fun x => f x - g k x) Filter.atTop
+        (nhds (Fase3.normD2 f α β))
+Fase3.exp_sub_expPoly_bounds {z : ℝ} (hz0 : 0 ≤ z) (hz1 : z ≤ 1 / 2) (n : ℕ) :
+  0 ≤ Real.exp z - Fase3.expPoly n z ∧
+    Real.exp z - Fase3.expPoly n z ≤ z ^ (n + 1) / ↑(n + 1).factorial * (1 / (1 - z / (↑n + 2)))
+Fase3.gen (n : ℕ) : ℝ × ℝ × ℝ × ℝ
+Fase3.gen_injective : Function.Injective Fase3.gen
+Fase3.jet_bijective : Function.Injective Fase3.jet ∧ Set.range Fase3.jet = {p | p.1 ∈ Fase3.dyadicMid ∧ p.2.2 ≠ 0}
+Fase3.jet_dense : Dense (Set.range fun n => (Fase3.x0 n, ↑(Fase3.y0 n), ↑(Fase3.slope n)))
+Fase3.library : Set (ℝ × ℝ × ℝ × ℝ)
+Fase3.preimageInterval_eq (n : ℕ) : Fase3.preimageInterval n = Fase3.cell (Fase3.gK n) (Fase3.gM n)
+Fase3.rStar (h0 Mstar εI : ℝ) : ℕ
+Fase3.rankQ_lt (r : ℚ) (H : ℕ) (hH : Fase3.ht r ≤ H) : Fase3.rankQ r < 3 * H ^ 2
+Fase3.rankQstar_lt (r : { r // r ≠ 0 }) (H : ℕ) (hH : Fase3.ht ↑r ≤ H) : Fase3.rankQstar r < 3 * H ^ 2
+Fase3.refineAll (M : ℕ × ℤ → ℝ) (ε : ℝ) (roots : List (ℕ × ℤ)) (r : ℕ) : List (ℕ × ℤ)
+Fase3.refineCell (M : ℕ × ℤ → ℝ) (ε : ℝ) : ℕ → ℕ × ℤ → List (ℕ × ℤ)
+Fase3.refine_correct {f : ℝ → ℝ} {α β : ℝ} (hαβ : α < β) (hf : ContDiffOn ℝ 2 f (Set.Icc α β)) (M : ℕ × ℤ → ℝ)
+  {Mstar εI εR h0 : ℝ}
+  (hM : ∀ (J : ℕ × ℤ), (∀ x ∈ Fase3.cC J, |deriv (deriv (Fase3.extF f α β)) x| ≤ M J) ∧ M J ≤ Mstar) (hεI : 0 < εI)
+  (hεR : 0 < εR) (roots : List (ℕ × ℤ)) (hroots : List.Pairwise Fase3.DisjInt roots)
+  (hcov : Set.Icc α β ⊆ ⋃ J ∈ roots, Fase3.cC J) (hh0 : ∀ J ∈ roots, Fase3.mesh J.1 ≤ h0) :
+  (∃ v,
+      (∀ J ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI),
+          |↑(v (Fase3.cL J)) - Fase3.extF f α β (Fase3.cL J)| < εR ∧
+            |↑(v (Fase3.cR J)) - Fase3.extF f α β (Fase3.cR J)| < εR) ∧
+        ∀ J ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI), v (Fase3.cL J) ≠ v (Fase3.cR J)) ∧
+    ∀ (v : ℝ → ℚ),
+      (∀ J ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI),
+          |↑(v (Fase3.cL J)) - Fase3.extF f α β (Fase3.cL J)| < εR ∧
+            |↑(v (Fase3.cR J)) - Fase3.extF f α β (Fase3.cR J)| < εR) →
+        (∀ J ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI), v (Fase3.cL J) ≠ v (Fase3.cR J)) →
+          Fase3.IsAssembly α β
+              (Fase3.cellInterp (Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI)).toFinset fun t => ↑(v t)) ∧
+            (∀ J ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI),
+                ∃! n,
+                  Fase3.gK n = J.1 ∧
+                    Fase3.gM n = J.2 ∧ ∀ (x : ℝ), Fase3.atomLine n x = Fase3.lin J (fun t => ↑(v t)) x) ∧
+              (Fase3.supNormOn (Set.Icc α β) fun x =>
+                  f x -
+                    Fase3.cellInterp (Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI)).toFinset (fun t => ↑(v t))
+                      x) ≤
+                εI + εR
+Fase3.refine_terminates (M : ℕ × ℤ → ℝ) {Mstar εI h0 : ℝ} (hM : ∀ (J : ℕ × ℤ), M J ≤ Mstar) (hεI : 0 < εI)
+  (roots : List (ℕ × ℤ)) (hh0 : ∀ J ∈ roots, Fase3.mesh J.1 ≤ h0) :
+  (∀ (s : ℕ),
+      Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI + s) = Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI)) ∧
+    (∀ L ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI), Fase3.cert M L ≤ εI) ∧
+      (∀ L ∈ Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI),
+          ∃ J0 ∈ roots, J0.1 ≤ L.1 ∧ L.1 ≤ J0.1 + Fase3.rStar h0 Mstar εI ∧ Fase3.cC L ⊆ Fase3.cC J0) ∧
+        (Fase3.refineAll M εI roots (Fase3.rStar h0 Mstar εI)).length ≤ roots.length * 2 ^ Fase3.rStar h0 Mstar εI
+Fase3.sin_cos_lagrange (n : ℕ) {a b z : ℝ} (hz : z ∈ Set.Icc a b) :
+  |Real.sin z - Fase3.sinPoly n z| ≤ max |a| |b| ^ (2 * n + 2) / ↑(2 * n + 2).factorial ∧
+    |Real.cos z - Fase3.cosPoly n z| ≤ max |a| |b| ^ (2 * n + 1) / ↑(2 * n + 1).factorial
+Fase3.tendsto_errP {f : ℝ → ℝ} {α β : ℝ} (hαβ : α < β) (hf : ContDiffOn ℝ 2 f (Set.Icc α β)) :
+  Filter.Tendsto (fun k => 8 / Fase3.mesh k ^ 2 * Fase3.errP f α β k) Filter.atTop (nhds (Fase3.normD2 f α β))
+Fase3.zEnum_bijective : Function.Bijective Fase3.zEnum
+Fase3.zInv_le (m : ℤ) : ↑(Fase3.zInv m) ≤ 2 * |m| + 1

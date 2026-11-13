@@ -1,0 +1,476 @@
+{
+  "archives": [
+    {
+      "path": "/home/victor/Downloads/1f896059-ad40-4065-83d6-25315c8982c8-aristotle (1).tar.gz",
+      "size": 59078,
+      "members": 15,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/2212794c-ed5f-48b6-99e8-589164a49daf-aristotle.tar.gz",
+      "size": 58016,
+      "members": 15,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/COLLLATS.tar.gz",
+      "size": 8085,
+      "members": 4,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything (4).zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything (5).zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything (2).zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/ESFERAS.tar.gz",
+      "size": 52272,
+      "members": 10,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything.zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything (3).zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/math-research-lab/vendor/llama-b11669-bin-ubuntu-x64.tar.gz",
+      "size": 17851611,
+      "members": 61,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/math-research-lab/runs/controlled-v1/source-snapshot.zip",
+      "size": 24741,
+      "members": 19,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20.zip",
+      "size": 12980958842,
+      "members": 12650,
+      "hits": [
+        {
+          "member": "Preservar-antes-de-formatar-2026-10-20/99_Controle/script-de-fechamento.py",
+          "reason": "name"
+        }
+      ]
+    },
+    {
+      "path": "/home/victor/Documentos/Arquivo-Formalizacao-Biblioteca-2026-10-22/versoes-anteriores.tar.gz",
+      "size": 1420959,
+      "members": 71,
+      "hits": [
+        {
+          "member": "historico_v2/RELATORIO_FECHAMENTO_V2.md",
+          "reason": "name"
+        },
+        {
+          "member": "historico_v2/Biblioteca_Lean_Equivalencias_v2_PATCH/RELATORIO_FECHAMENTO_V2.md",
+          "reason": "name"
+        }
+      ]
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/08_Relatorios-essenciais/Investigacao-2026-10-08.tar.gz",
+      "size": 128632508,
+      "members": 1280,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.cache/tectonic/bundles/hashes/https,58,,47,,47,relay.fullyjustified.net,47,default_bundle_v33.tar",
+      "size": 65,
+      "members": 0,
+      "hits": [],
+      "status": "unsupported_or_partial"
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/06_Variantes-exclusivas/LOOP-PRIMER-raiz/input/inbox/source.zip",
+      "size": 4510,
+      "members": 4,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/06_Variantes-exclusivas/LOOP-PRIMER-raiz/workspaces/hermes-offline-cycle-20261010/input/inbox/source.zip",
+      "size": 228,
+      "members": 1,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/workspace-01a1608b-58e9-705a-8a91-81f5e9b10242 (1).zip",
+      "size": 64282,
+      "members": 9,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/workspace-01a1608b-58e9-705a-8a91-81f5e9b10242.zip",
+      "size": 64282,
+      "members": 9,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/1f896059-ad40-4065-83d6-25315c8982c8-aristotle.tar.gz",
+      "size": 59085,
+      "members": 15,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/d10591cf-aa44-4db0-adbd-c5a9915fdc58-aristotle.tar.gz",
+      "size": 23572,
+      "members": 7,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/bda24d71-19d6-4f64-98bf-f550be4df57f-aristotle.tar.gz",
+      "size": 166426,
+      "members": 34,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/1f896059-ad40-4065-83d6-25315c8982c8-aristotle (2).tar.gz",
+      "size": 103412,
+      "members": 27,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/46aaa729-2bbe-4dfd-9509-16f10e7a0515-aristotle (1).tar.gz",
+      "size": 515749,
+      "members": 8,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/74ba78b5-6512-407b-9a33-9d3b82b9b112-aristotle.tar.gz",
+      "size": 42633,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/46aaa729-2bbe-4dfd-9509-16f10e7a0515-aristotle.tar.gz",
+      "size": 515749,
+      "members": 8,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/redacao-cientifica-precisa.zip",
+      "size": 7572,
+      "members": 4,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/mcp-site-connector-skill.zip",
+      "size": 21366,
+      "members": 13,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Downloads/REA-reverse-engineer-anything (1).zip",
+      "size": 43606,
+      "members": 12,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/t/outputs/recuperacao-glitch-tv.zip",
+      "size": 11713,
+      "members": 5,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/workspace-01a0754b-dcec-704f-93df-042950390e69.zip",
+      "size": 3285604,
+      "members": 31,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/OPENAI_MATH_CAUSA_SUI_COMPLEMENTARY_AUDIT_2026-10-07.zip",
+      "size": 3453508,
+      "members": 548,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/Minecraft.tar.gz",
+      "size": 1102510,
+      "members": 2,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/Antigravity.tar.gz",
+      "size": 171679600,
+      "members": 389,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LOOP-PRIMER-main (2).zip",
+      "size": 887101,
+      "members": 295,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LibreOffice_26.8.0_Linux_x86-64_rpm.tar.gz",
+      "size": 253085452,
+      "members": 49,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/PARA SEMPREEE.zip",
+      "size": 148831981,
+      "members": 6196,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/workspace-01a07520-4587-7547-846d-2225209a3723.zip",
+      "size": 27173018,
+      "members": 14,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LibreOffice_26.8.0_Linux_x86-64_deb_langpack_pt-BR.tar.gz",
+      "size": 3758155,
+      "members": 5,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LOOP-PRIMER-main (1).zip",
+      "size": 373222,
+      "members": 212,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/CAUSA-SUI-main/docs/semantic_input/evidence/demonstration.zip",
+      "size": 265352,
+      "members": 80,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/CAUSA-SUI-main/theory/dlpg-temporal/baseline/pacote_original.zip",
+      "size": 5967495,
+      "members": 67,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.local/share/Trash/files/biblioteca_lean_unificada.zip",
+      "size": 180805,
+      "members": 48,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.local/share/Trash/files/Biblioteca_Deterministica_Fontes_LaTeX (1).zip",
+      "size": 510496,
+      "members": 30,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.local/share/Trash/files/aristotle_biblioteca_fase1.zip",
+      "size": 30115,
+      "members": 10,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/CAUSA-SUI-main/analysis/statistical-atlas/CAUSA_SUI_statistical_analysis.zip",
+      "size": 88800763,
+      "members": 1283,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LibreOffice_26.8.0_Linux_x86-64_rpm_langpack_pt-BR.tar.gz",
+      "size": 5818725,
+      "members": 7,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/ventoy-1.1.17-linux.tar.gz",
+      "size": 20291141,
+      "members": 163,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LOOP-PRIMER-main.zip",
+      "size": 373222,
+      "members": 212,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/CAUSA-SUI-main.zip",
+      "size": 157367075,
+      "members": 607,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/03_Downloads/LibreOffice_26.8.0_Linux_x86-64_deb.tar.gz",
+      "size": 219786895,
+      "members": 46,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/Biblioteca_Lean_Equivalencias_v2_PATCH.zip",
+      "size": 10920,
+      "members": 9,
+      "hits": [
+        {
+          "member": "RELATORIO_FECHAMENTO_V2.md",
+          "reason": "name"
+        }
+      ]
+    },
+    {
+      "path": "/home/victor/Projetos/Arquivo_Biblioteca_2026-10-22/recebidos/d10591cf-aa44-4db0-adbd-c5a9915fdc58-aristotle (1).tar.gz",
+      "size": 23575,
+      "members": 7,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/Arquivo_Biblioteca_2026-10-22/recebidos/bda24d71-19d6-4f64-98bf-f550be4df57f-aristotle (1).tar.gz",
+      "size": 166420,
+      "members": 34,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/Arquivo_Biblioteca_2026-10-22/recebidos/1f896059-ad40-4065-83d6-25315c8982c8-aristotle (3).tar.gz",
+      "size": 103408,
+      "members": 27,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/Arquivo_Biblioteca_2026-10-22/recebidos/2212794c-ed5f-48b6-99e8-589164a49daf-aristotle (1).tar.gz",
+      "size": 58012,
+      "members": 15,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/Artigos_2_e_3_Fontes_Completos.zip",
+      "size": 1565607,
+      "members": 45,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/aristotle_biblioteca_fase1/resultado.tar.gz",
+      "size": 3801,
+      "members": 4,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/01_Projetos/Recuperacao-LOOP-PRIMER/m13-routed-jury-working-tree.tar.gz",
+      "size": 91401,
+      "members": 8,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/aristotle_biblioteca_fase1/resultado_fase1_corrigido.tar.gz",
+      "size": 20165,
+      "members": 6,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Projetos/biblioteca_lean_unificada_corrigida.zip",
+      "size": 181254,
+      "members": 48,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Trilogia-Biblioteca-Deterministica/BIBLIOTECA FORMALIZADA LEAN 21 DE OUTUBRO/biblioteca1.zip",
+      "size": 181254,
+      "members": 48,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/curvas/pacote_original/CURVAS_EDICAO_CONSOLIDADA_APOS_PARECER-3.zip",
+      "size": 134507,
+      "members": 11,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/moa_vap_dlpg/pacote_original/MOA_VAP_DLPG_publicacao_completa.zip",
+      "size": 5575840,
+      "members": 61,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/biblioteca_deterministica/pacote_original/OUTPUT_ROOt28.088.zip",
+      "size": 134433555,
+      "members": 3572,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/biblioteca_deterministica/pacote_original/OUTPUT_ROOt28.08.zip",
+      "size": 134664830,
+      "members": 3573,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/dlpg/pacote_original/DLPG_ultimate_impoluto-1.zip",
+      "size": 6012276,
+      "members": 65,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Entrega-cientifica/curvas_formalizacao_lean/pacote_original/1b35f17e-bf79-4230-ad2b-d99df248db19-aristotle.tar.gz",
+      "size": 31224,
+      "members": 14,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Producoes-Codex/2026-08-30/a/work/tooling/tectonic/tectonic.tar.gz",
+      "size": 22749118,
+      "members": 1,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Producoes-Codex/2026-08-30/a/outputs/Trilogia_Biblioteca_Deterministica.zip",
+      "size": 985987,
+      "members": 3,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/Documentos/Preservar-antes-de-formatar-2026-10-20/02_Artigos-e-estudos/Producoes-Codex/2026-09-14/new-chat/outputs/Calculo_II_Pacote_Completo.zip",
+      "size": 6214807,
+      "members": 37,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/share/config/images_colibre.zip",
+      "size": 2956398,
+      "members": 4541,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz",
+      "size": 156400,
+      "members": 619,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.cache/mathlib/leantar-0.1.15.tar.gz",
+      "size": 1101164,
+      "members": 2,
+      "hits": []
+    },
+    {
+      "path": "/home/victor/.cache/mathlib/leantar-0.1.16.tar.gz",
+      "size": 1152602,
+      "members": 2,
+      "hits": []
+    }
+  ],
+  "text_members_hashed": 7972,
+  "expected_tex_sha256": "c7409380fbd49ff0739f9f1cb628a6443990558ca889413cc6a5ed78017ca8b4"
+}

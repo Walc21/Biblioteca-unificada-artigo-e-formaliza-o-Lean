@@ -1,0 +1,62 @@
+[
+  {
+    "N": 2,
+    "erro_certificado": "3/8",
+    "erro_exato": "49/256",
+    "altura": 16,
+    "H_N": 72,
+    "L_atom": 77,
+    "L_str": 59,
+    "L_rat": 37
+  },
+  {
+    "N": 4,
+    "erro_certificado": "3/32",
+    "erro_exato": "49/1024",
+    "altura": 64,
+    "H_N": 288,
+    "L_atom": 195,
+    "L_str": 115,
+    "L_rat": 89
+  },
+  {
+    "N": 8,
+    "erro_certificado": "3/128",
+    "erro_exato": "49/4096",
+    "altura": 256,
+    "H_N": 1152,
+    "L_atom": 513,
+    "L_str": 235,
+    "L_rat": 211
+  },
+  {
+    "N": 16,
+    "erro_certificado": "3/512",
+    "erro_exato": "49/16384",
+    "altura": 1024,
+    "H_N": 4608,
+    "L_atom": 1243,
+    "L_str": 495,
+    "L_rat": 497
+  },
+  {
+    "N": 32,
+    "erro_certificado": "3/2048",
+    "erro_exato": "49/65536",
+    "altura": 4096,
+    "H_N": 18432,
+    "L_atom": 2921,
+    "L_str": 1067,
+    "L_rat": 1159
+  },
+  {
+    "N": 64,
+    "erro_certificado": "3/8192",
+    "erro_exato": "49/262144",
+    "altura": 16384,
+    "H_N": 73728,
+    "L_atom": 6731,
+    "L_str": 2329,
+    "L_rat": 2669
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "quadratic_dp": true,
+    "quadratic_threshold": true,
+    "piecewise_count": true,
+    "piecewise_dp": true,
+    "synchronized_extremes": true,
+    "smooth_positive_envelope": true,
+    "sign_change_envelope": true,
+    "smooth_strict_interior_scan": true
+  }
+}
+

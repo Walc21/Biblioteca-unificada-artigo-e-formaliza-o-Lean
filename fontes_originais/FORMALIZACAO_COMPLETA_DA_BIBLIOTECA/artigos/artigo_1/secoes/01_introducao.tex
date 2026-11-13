@@ -1,0 +1,10 @@
+\section{Introdução}
+Representar uma curva por segmentos afins envolve erro, número de peças e tamanho aritmético dos parâmetros. Este artigo constrói uma biblioteca de segmentos racionais ancorados em células diádicas. Cada átomo possui endereço único e uma interface global que recupera seu suporte.
+
+A aproximação linear por partes, a escolha de nós e a aproximação não linear têm tratamento clássico em \citet{deboor1973,burchard1974,deboor2001,powell1981,schumaker2007,devore1998}. A representação por hinges e sua relação com redes ReLU são desenvolvidas em \citet{yarotsky2017,devore2021,daubechies2022}; a aproximação com pesos codificáveis, em \citet{petersen2018,elbrachter2021,bolcskei2019,guhring2021}. Aqui, esses resultados se integram a uma parametrização racional com recuperação exata da célula.
+
+A construção usa a altura elementar dos racionais \citep{bombieri2006} e distingue a enumeração por altura da ordem de Calkin--Wilf \citep{calkin2000}, relacionada à sequência de Stern \citep{stern1858,northshield2010}. O refinamento combina aproximação em árvores \citep{cohen2001,binev2004,kessebohmer2025} com aritmética intervalar \citep{moore2009,silva2025}.
+
+O modelo fixa inclinações não nulas para tornar o suporte recuperável pela imagem do segmento. A certificação adaptativa requer majorantes validados da segunda derivada; testes em pontos isolados não substituem esse contrato. A quantização diádica é distinguida da escolha de nós livres.
+
+A exposição progride da indexação à biblioteca, das montagens às garantias de aproximação uniforme e destas ao refinamento certificado. A contagem de átomos, os limites minimax do endereçamento, os formatos de codificação, a entropia e a seleção em catálogos finitos ficam no segundo artigo da série. Os resultados clássicos sobre árvores, nós livres e Besov e o lema auxiliar de Runge permanecem integralmente no complemento do manuscrito original, com a numeração de origem preservada.

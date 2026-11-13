@@ -1,0 +1,118 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {part}{I\hspace {1em}Biblioteca, endereçamento e refinamento}{5}{part.1}%
+\contentsline {section}{\numberline {I.1}Introdução}{5}{section.I.1}%
+\contentsline {section}{\numberline {I.2}Ferramentas de indexação}{6}{section.I.2}%
+\contentsline {subsection}{\numberline {I.2.1}Pareamento de Cantor}{6}{subsection.I.2.1}%
+\contentsline {subsection}{\numberline {I.2.2}Inteiros e racionais por altura}{6}{subsection.I.2.2}%
+\contentsline {subsection}{\numberline {I.2.3}Bijetividade e crescimento do índice}{7}{subsection.I.2.3}%
+\contentsline {section}{\numberline {I.3}Células diádicas e operador gerador}{8}{section.I.3}%
+\contentsline {subsection}{\numberline {I.3.1}Células, posse e centros}{8}{subsection.I.3.1}%
+\contentsline {subsection}{\numberline {I.3.2}Retas ancoradas e descompactação}{8}{subsection.I.3.2}%
+\contentsline {subsection}{\numberline {I.3.3}Recuperação da célula e endereço canônico}{9}{subsection.I.3.3}%
+\contentsline {subsection}{\numberline {I.3.4}Calibre dos parâmetros}{10}{subsection.I.3.4}%
+\contentsline {section}{\numberline {I.4}Montagens e densidade em espaços de funções contínuas}{10}{section.I.4}%
+\contentsline {subsection}{\numberline {I.4.1}Equivalência exata com redes ReLU racionais}{11}{subsection.I.4.1}%
+\contentsline {subsection}{\numberline {I.4.2}Relação com o 1-jato de Taylor}{13}{subsection.I.4.2}%
+\contentsline {section}{\numberline {I.5}Taxas uniformes e constante assintótica}{13}{section.I.5}%
+\contentsline {section}{\numberline {I.6}Refinamento diádico adaptativo certificado}{14}{section.I.6}%
+\contentsline {subsection}{\numberline {I.6.1}Fechamento operacional por aritmética intervalar}{15}{subsection.I.6.1}%
+\contentsline {section}{\numberline {I.7}Conclusão}{19}{section.I.7}%
+\contentsline {section}{Apêndice da Parte I}{21}{section*.11}%
+\contentsline {section}{\numberline {I.A}Quadro de notação}{21}{section.I.A}%
+\contentsline {part}{II\hspace {1em}Normalização e equivalência das montagens}{22}{part.2}%
+\contentsline {section}{\numberline {II.1}Base de tipos e convenções}{22}{section.II.1}%
+\contentsline {paragraph}{Primitivos.}{22}{section*.12}%
+\contentsline {paragraph}{Subtipos e igualdade.}{22}{section*.13}%
+\contentsline {paragraph}{Conjuntos finitos.}{22}{section*.14}%
+\contentsline {paragraph}{Índices finitos.}{22}{section*.15}%
+\contentsline {paragraph}{Domínio.}{22}{section*.16}%
+\contentsline {section}{\numberline {II.2}Racionais, células e átomos}{23}{section.II.2}%
+\contentsline {section}{\numberline {II.3}Predicados de representação e normalização}{24}{section.II.3}%
+\contentsline {paragraph}{Decidibilidade.}{25}{section*.17}%
+\contentsline {section}{\numberline {II.4}Enumerações fixadas por fórmulas}{25}{section.II.4}%
+\contentsline {section}{\numberline {II.5}Representações por células e mapas entre os tipos de função}{28}{section.II.5}%
+\contentsline {section}{\numberline {II.6}Orçamentos e erro com codomínio completo}{29}{section.II.6}%
+\contentsline {section}{\numberline {II.7}Ordenação finita e cadeia normalizada}{30}{section.II.7}%
+\contentsline {section}{\numberline {II.8}Extensão ReLU por recursão finita}{32}{section.II.8}%
+\contentsline {section}{\numberline {II.A}Vinculação às definições Lean existentes}{34}{section.II.A}%
+\contentsline {paragraph}{Predicados auxiliares importados.}{34}{section*.18}%
+\contentsline {paragraph}{Identidades obrigatórias dos adaptadores.}{35}{section*.19}%
+\contentsline {section}{\numberline {II.B}Ordem de formalização e fronteiras das obrigações}{35}{section.II.B}%
+\contentsline {part}{III\hspace {1em}Custo, entropia e seleção exata}{36}{part.3}%
+\contentsline {section}{\numberline {III.1}Introdução}{36}{section.III.1}%
+\contentsline {section}{\numberline {III.2}Biblioteca racional e preliminares}{37}{section.III.2}%
+\contentsline {section}{\numberline {III.3}Endereços, entropia, descrição e busca}{38}{section.III.3}%
+\contentsline {subsection}{\numberline {III.3.1}Comprimento do índice canônico}{38}{subsection.III.3.1}%
+\contentsline {subsection}{\numberline {III.3.2}Contagem por altura e consequência minimax para o endereço}{39}{subsection.III.3.2}%
+\contentsline {paragraph}{Dependência do expoente no calibre.}{39}{section*.20}%
+\contentsline {subsection}{\numberline {III.3.3}Três formatos prefix-free e propagação de altura}{42}{subsection.III.3.3}%
+\contentsline {subsection}{\numberline {III.3.4}Erro conjunto sob orçamentos de folhas e altura}{44}{subsection.III.3.4}%
+\contentsline {subsection}{\numberline {III.3.5}Entropia de uma classe limitada de $C^2$}{46}{subsection.III.3.5}%
+\contentsline {subsection}{\numberline {III.3.6}Cinco recursos distintos: cobertura, bits, serialização, seleção e decodificação}{48}{subsection.III.3.6}%
+\contentsline {subsection}{\numberline {III.3.7}Catálogos finitos, minimizadores e truncagem}{49}{subsection.III.3.7}%
+\contentsline {section}{\numberline {III.4}Interface da biblioteca e estados de fronteira}{51}{section.III.4}%
+\contentsline {subsection}{\numberline {III.4.1}Núcleo aritmético}{51}{subsection.III.4.1}%
+\contentsline {subsection}{\numberline {III.4.2}Pares admissíveis}{52}{subsection.III.4.2}%
+\contentsline {subsection}{\numberline {III.4.3}Alfabeto finito dos estados}{53}{subsection.III.4.3}%
+\contentsline {subsection}{\numberline {III.4.4}As obstruções de escala e de translação}{53}{subsection.III.4.4}%
+\contentsline {section}{\numberline {III.5}Funcional aditivo e representação canônica}{54}{section.III.5}%
+\contentsline {subsection}{\numberline {III.5.1}Dados racionais e perda local}{54}{subsection.III.5.1}%
+\contentsline {subsection}{\numberline {III.5.2}Fluxo recursivo}{55}{subsection.III.5.2}%
+\contentsline {subsection}{\numberline {III.5.3}Objetivo e desempate}{55}{subsection.III.5.3}%
+\contentsline {section}{\numberline {III.6}Programação dinâmica em uma árvore fixa}{56}{section.III.6}%
+\contentsline {section}{\numberline {III.7}Seleção simultânea da árvore e dos átomos}{57}{section.III.7}%
+\contentsline {section}{\numberline {III.8}Orçamentos rígidos e erro uniforme}{58}{section.III.8}%
+\contentsline {subsection}{\numberline {III.8.1}Número exato de folhas}{59}{subsection.III.8.1}%
+\contentsline {subsection}{\numberline {III.8.2}Recorrência de gargalo para a norma uniforme}{59}{subsection.III.8.2}%
+\contentsline {section}{\numberline {III.9}Complexidade, truncagem e estabilidade}{60}{section.III.9}%
+\contentsline {subsection}{\numberline {III.9.1}Contagem de operações}{60}{subsection.III.9.1}%
+\contentsline {subsection}{\numberline {III.9.2}Modelo de custo e complexidade de bits}{61}{subsection.III.9.2}%
+\contentsline {subsection}{\numberline {III.9.3}Valores sob truncagem}{62}{subsection.III.9.3}%
+\contentsline {subsection}{\numberline {III.9.4}Um limite de estabilidade}{63}{subsection.III.9.4}%
+\contentsline {section}{\numberline {III.10}Validação computacional exata}{63}{section.III.10}%
+\contentsline {subsection}{\numberline {III.10.1}Implementação}{63}{subsection.III.10.1}%
+\contentsline {subsection}{\numberline {III.10.2}Auditoria por enumeração direta}{64}{subsection.III.10.2}%
+\contentsline {subsection}{\numberline {III.10.3}Instância de regressão e rotas de controle}{64}{subsection.III.10.3}%
+\contentsline {subsection}{\numberline {III.10.4}Propriedades verificadas}{66}{subsection.III.10.4}%
+\contentsline {subsection}{\numberline {III.10.5}Robustez sob truncagem do catálogo}{66}{subsection.III.10.5}%
+\contentsline {section}{\numberline {III.11}Erro interpolatório ótimo em árvores estritamente diádicas}{67}{section.III.11}%
+\contentsline {subsection}{\numberline {III.11.1}A árvore de limiar é exatamente mínima}{67}{subsection.III.11.1}%
+\contentsline {subsection}{\numberline {III.11.2}Lema local e funcional de curvatura}{68}{subsection.III.11.2}%
+\contentsline {subsection}{\numberline {III.11.3}O envelope assintótico geral}{68}{subsection.III.11.3}%
+\contentsline {section}{\numberline {III.12}Casos exatos, fases diádicas e validação}{69}{section.III.12}%
+\contentsline {subsection}{\numberline {III.12.1}Curvatura constante: resposta completa}{69}{subsection.III.12.1}%
+\contentsline {subsection}{\numberline {III.12.2}Quadráticas por partes e lei de fase}{70}{subsection.III.12.2}%
+\contentsline {subsection}{\numberline {III.12.3}Implementação e auditorias independentes}{72}{subsection.III.12.3}%
+\contentsline {subsection}{\numberline {III.12.4}Compatibilidade com a altura aritmética}{73}{subsection.III.12.4}%
+\contentsline {section}{\numberline {III.13}Verificações de codificação e entropia}{74}{section.III.13}%
+\contentsline {subsection}{\numberline {III.13.1}Roundtrip dos formatos de codificação}{74}{subsection.III.13.1}%
+\contentsline {subsection}{\numberline {III.13.2}Restrição de curvatura e codebook sem fator logarítmico}{75}{subsection.III.13.2}%
+\contentsline {subsection}{\numberline {III.13.3}Contagem de átomos e otimalidade minimax do endereço}{76}{subsection.III.13.3}%
+\contentsline {section}{\numberline {III.14}Conclusão}{78}{section.III.14}%
+\contentsline {part}{IV\hspace {1em}Agendas de altura e teoria direta--inversa}{79}{part.4}%
+\contentsline {section}{\numberline {IV.1}Introdução}{79}{section.IV.1}%
+\contentsline {section}{\numberline {IV.2}Biblioteca, altura e erro de aproximação}{80}{section.IV.2}%
+\contentsline {section}{\numberline {IV.3}Classes de aproximação sob uma agenda de altura}{80}{section.IV.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Erro apontado e funcional de taxa}{80}{subsection.IV.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Obstrução de homogeneidade}{81}{subsection.IV.3.2}%
+\contentsline {section}{\numberline {IV.4}Teoremas diretos e agendas de altura}{82}{section.IV.4}%
+\contentsline {subsection}{\numberline {IV.4.1}Racionalização com denominador comensurável}{82}{subsection.IV.4.1}%
+\contentsline {subsection}{\numberline {IV.4.2}Imersões diretas com altura controlada}{84}{subsection.IV.4.2}%
+\contentsline {subsection}{\numberline {IV.4.3}Endpoint quadrático e agudeza da agenda construtiva}{85}{subsection.IV.4.3}%
+\contentsline {subsection}{\numberline {IV.4.4}Validação executável}{86}{subsection.IV.4.4}%
+\contentsline {section}{\numberline {IV.5}Reversibilidade regularizada e ponte quantitativa com redes ReLU}{87}{section.IV.5}%
+\contentsline {subsection}{\numberline {IV.5.1}A obstrução que toda volta deve respeitar}{88}{subsection.IV.5.1}%
+\contentsline {subsection}{\numberline {IV.5.2}A extensão marcada e a volta ReLU exata}{88}{subsection.IV.5.2}%
+\contentsline {subsection}{\numberline {IV.5.3}Volta aproximada para redes rasas reais}{90}{subsection.IV.5.3}%
+\contentsline {subsection}{\numberline {IV.5.4}A melhor recíproca para o erro bruto}{91}{subsection.IV.5.4}%
+\contentsline {subsection}{\numberline {IV.5.5}Funcional de realização: lado direto com altura controlada}{94}{subsection.IV.5.5}%
+\contentsline {subsection}{\numberline {IV.5.6}Estabilidade da caracterização ao ampliar a arquitetura}{96}{subsection.IV.5.6}%
+\contentsline {subsection}{\numberline {IV.5.7}Validação executável}{97}{subsection.IV.5.7}%
+\contentsline {section}{\numberline {IV.6}Conclusão}{98}{section.IV.6}%
+\contentsline {part}{V\hspace {1em}Complementos do manuscrito original}{99}{part.5}%
+\contentsline {section}{\numberline {V.6}Árvores diádicas, nós livres e regularidade de Besov}{99}{section.V.6}%
+\contentsline {subsection}{\numberline {V.6.1}Partições em árvore}{99}{subsection.V.6.1}%
+\contentsline {subsection}{\numberline {V.6.2}Referência assintótica com nós livres}{100}{subsection.V.6.2}%
+\contentsline {subsection}{\numberline {V.6.3}Estimativa direta na escala de Besov}{100}{subsection.V.6.3}%
+\contentsline {section}{\numberline {V.21}Referência analítica para o exemplo de Runge}{101}{section.V.21}%
+\contentsline {part}{Correspondência documental e formal}{102}{part*.46}%

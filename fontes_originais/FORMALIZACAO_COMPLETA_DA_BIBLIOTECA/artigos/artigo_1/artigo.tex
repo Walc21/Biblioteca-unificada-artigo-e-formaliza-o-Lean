@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,
+ ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,
+ ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]
+\setmonofont{lmmono10-regular.otf}
+\usepackage{babel}
+\babelprovide[import,main]{portuguese}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{microtype,graphicx,xcolor,booktabs,longtable,array,float}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit}
+\usepackage[round,authoryear]{natbib}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,skip=7pt}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{172C3C}
+\definecolor{accent}{HTML}{166F80}
+\hypersetup{colorlinks=true,linkcolor=ink,citecolor=ink,urlcolor=accent,
+ pdftitle={Biblioteca determinística de segmentos afins racionais em células diádicas: endereçamento, aproximação e refinamento certificado},
+ pdfauthor={Victor Gabriel de Oliveira},
+ pdfsubject={Construção racional, aproximação certificada e descrição aritmética}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Biblioteca determinística de segmentos afins racionais}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\textfloatsep}{15pt plus 3pt minus 3pt}
+\setlength{\intextsep}{14pt plus 3pt minus 3pt}
+\setlist{nosep,leftmargin=2em}
+\newtheoremstyle{preciso}{8pt}{5pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{preciso}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicao}[teorema]{Proposição}
+\newtheorem{corolario}[teorema]{Corolário}
+\theoremstyle{definition}
+\newtheorem{definicao}[teorema]{Definição}
+\newtheorem{algoritmo}[teorema]{Algoritmo}
+\newtheorem{observacao}[teorema]{Observação}
+\renewcommand{\proofname}{Demonstração}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathbb D}
+\newcommand{\LL}{\mathcal L}
+\newcommand{\Asm}{\mathcal A}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\heightq}{\operatorname{ht}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Eval}{\operatorname{Eval}}
+\newcommand{\ser}{\operatorname{ser}}
+\newcommand{\norm}[1]{\left\|#1\right\|_{\infty}}
+\newcommand{\normK}[2]{\left\|#1\right\|_{\infty,#2}}
+\newcommand{\eqn}[2]{\begin{equation}\label{eq:#1}#2\end{equation}}
+\newcommand{\figura}[4]{\begin{figure}[!htbp]\centering
+ \includegraphics[width=#2\linewidth]{figuras/#1.pdf}
+ \caption{#3}\label{fig:#4}\end{figure}}
+\title{\vspace{-18mm}\bfseries Biblioteca determinística de segmentos afins racionais em células diádicas\\[4pt]
+ \large Endereçamento, aproximação e refinamento certificado}
+\author{Victor Gabriel de Oliveira\\
+ \small Pesquisador independente, Brasil\\[-1pt]
+ \small\href{mailto:vg32518@gmail.com}{vg32518@gmail.com}}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\input{secoes/00_resumos}
+\input{secoes/01_introducao}
+\input{secoes/02_indexacao}
+\input{secoes/03_biblioteca}
+\input{secoes/04_montagens}
+\input{secoes/05_taxas}
+\input{secoes/06_refinamento}
+\input{secoes/08_conclusao}
+\appendix
+\input{secoes/A_notacao}
+\bibliographystyle{plainnat}
+\bibliography{referencias}
+\end{document}

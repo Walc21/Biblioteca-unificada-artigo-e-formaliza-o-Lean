@@ -1,0 +1,10 @@
+{
+  "quadratic_values_reproduced": true,
+  "quadratic_error_formula_exact": true,
+  "arithmetic_lower_bound_enumerated": true,
+  "uniform_mesh_height_exact": true,
+  "critical_log_integral_test_recorded": true,
+  "direct_schedules_checked_exactly": true,
+  "raw_functional_not_mislabeled_quasinorm": true
+}
+

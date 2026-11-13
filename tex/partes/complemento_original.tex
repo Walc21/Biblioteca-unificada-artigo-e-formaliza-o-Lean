@@ -1,0 +1,163 @@
+% Reconstruído de artigos/complemento_original_77/complemento.tex
+
+
+Este complemento conserva os três resultados da seção 6 e o lema 21.1 do documento original de 77 páginas. A numeração original é mantida para permitir o cruzamento com os três artigos da série. As hipóteses e conclusões foram reproduzidas integralmente; as remissões externas foram convertidas em referências textuais aos artigos correspondentes.
+
+Usamos a biblioteca e a densidade das montagens racionais do primeiro artigo. Para o interpolante afim nos extremos de um intervalo $J$, vale a estimativa clássica
+\begin{equation}
+\|f-P_Jf\|_{\infty,J}\le\frac{|J|^2}{8}\|f''\|_{\infty,J}.
+\label{complemento_original:eq:interpolation-remainder}
+\end{equation}
+O primeiro artigo contém a racionalização por valores nodais compartilhados. Os resultados abaixo servem de ponte entre as taxas uniformes, a comparação com nós livres e a teoria direta com altura do terceiro artigo.
+\setcounter{section}{5}
+% INICIO artigos/complemento_original_77/06_arvores_besov.tex
+\section{Árvores diádicas, nós livres e regularidade de Besov}
+\label{complemento_original:sec:dyadic-trees}
+
+\subsection{Partições em árvore}
+
+Se $K$ é uma célula diádica, uma partição em árvore $\Lambda$ é o conjunto de folhas de uma subárvore diádica finita com raiz $K$. Seja $P_\Lambda f$ o interpolante de $f$ nos extremos das folhas e defina
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty
+ =\inf\{\|f-P_\Lambda f\|_{\infty,K}:\Lambda\text{ árvore},\ |\Lambda|\le N\}.
+ \label{complemento_original:eq:sigma-dyadic}
+\end{equation}
+
+% MAPA complemento_original:6.1 | fonte artigos/complemento_original_77/06_arvores_besov.tex:13
+\begin{theorem}[taxa garantida em árvores]\label{map:complemento_original:6.1}\label{complemento_original:thm:tree-rate}
+Se $f\in C^2(K)$, $L=|K|$, $M=\|f''\|_{\infty,K}$ e $N\ge2$, então
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty\le\frac{ML^2}{2N^2}.
+ \label{complemento_original:eq:tree-general}
+\end{equation}
+Se $N=2^r$, a constante melhora para
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty\le\frac{ML^2}{8N^2}.
+ \label{complemento_original:eq:tree-power}
+\end{equation}
+Para qualquer árvore finita $\Lambda$ e $\delta>0$, há uma montagem racional na mesma árvore cujo erro é menor que $\|f-P_\Lambda f\|_\infty+\delta$.
+\end{theorem}
+
+\begin{proof}
+Tome $r=\lfloor\log_2N\rfloor$ e refine $K$ uniformemente $r$ vezes. Há $2^r\le N$ folhas de largura $L2^{-r}$. Aplicando \eqref{complemento_original:eq:interpolation-remainder} em cada folha,
+\[
+ \|f-P_\Lambda f\|_\infty\le\frac{ML^2}{8}4^{-r}.
+\]
+Se $N=2^r$, resulta \eqref{complemento_original:eq:tree-power}. Em geral, $2^r>N/2$, logo $4^{-r}<4N^{-2}$, o que dá \eqref{complemento_original:eq:tree-general}. Para a racionalização, ordene os nós, aproxime os valores de $f$ por racionais compartilhados com erro menor que $\delta$ e evite igualdade entre vizinhos. Em cada folha, a diferença entre o interpolante exato e o racional é combinação convexa dos erros nodais; o argumento de densidade do primeiro artigo da série identifica cada peça como átomo.
+\end{proof}
+
+\subsection{Referência assintótica com nós livres}
+
+Se $E_N^{\mathrm{lv}}(f)$ é o menor erro de interpolação linear com $N$
+subintervalos e nós arbitrários, o regime de nós livres fornece a referência
+contínua para comparação com árvores diádicas
+\citep{artigo_1-deboor1973,artigo_1-burchard1974,artigo_1-deboor2001,artigo_1-powell1981,artigo_1-schumaker2007}.
+
+% MAPA complemento_original:6.2 | fonte artigos/complemento_original_77/06_arvores_besov.tex:42
+\begin{theorem}[cota assintótica com nós livres]\label{map:complemento_original:6.2}\label{complemento_original:thm:free-knots}
+Para $f\in C^2[\alpha,\beta]$,
+\begin{equation}
+ \limsup_{N\to\infty}N^2E_N^{\mathrm{lv}}(f)
+ \le\frac18\left(\int_\alpha^\beta |f''(x)|^{1/2}\dd x\right)^2.
+ \label{complemento_original:eq:free-knot}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Fixe $\eta>0$ e ponha $\rho_\eta=(|f''|+\eta)^{1/2}$ e $I_\eta=\int_\alpha^\beta\rho_\eta$. Como $\rho_\eta$ é contínua e estritamente positiva, existem nós $\alpha=x_{N,0}<\cdots<x_{N,N}=\beta$ tais que
+\[
+ \int_{x_{N,j-1}}^{x_{N,j}}\rho_\eta=I_\eta/N.
+\]
+O comprimento máximo das células tende uniformemente a zero. Em $J_j=[x_{N,j-1},x_{N,j}]$, \eqref{complemento_original:eq:interpolation-remainder} e $|f''|\le\rho_\eta^2$ dão
+\[
+ \|f-P_{J_j}f\|_{\infty,J_j}
+ \le\frac18\left(\frac{I_\eta}{N}\right)^2
+ \left(\frac{\sup_{J_j}\rho_\eta}{\inf_{J_j}\rho_\eta}\right)^2.
+\]
+Por continuidade uniforme e positividade, a última razão converge uniformemente a $1$. Assim,
+\[
+ \limsup_{N\to\infty}N^2E_N^{\mathrm{lv}}(f)\le I_\eta^2/8.
+\]
+Fazendo $\eta\downarrow0$ e usando convergência dominada, obtém-se \eqref{complemento_original:eq:free-knot}.
+\end{proof}
+
+A constante em \eqref{complemento_original:eq:free-knot} pertence ao regime de nós livres. A
+constante sob restrição diádica será determinada nas seções de interpolação diádica do segundo artigo da série; é essa comparação, retomada explicitamente nos resultados de envelope e curvatura constante do segundo artigo, que mede o
+custo da restrição de malha.
+
+\subsection{Estimativa direta na escala de Besov}
+
+As relações diretas e inversas entre aproximação por partes, splines e classes
+de suavidade têm uma tradição ampla
+\citep{artigo_2-birman1967,artigo_2-petrushev1988,artigo_2-devorepopov1988}. A formulação abaixo fixa a
+escala estritamente diádica e o interpolante linear usados neste artigo.
+
+Para $f\in C(K)$, defina
+\begin{equation}
+ \omega_2(f,t)_{\infty,K}
+ =\sup_{\substack{0<h\le t\\x,x+2h\in K}}
+ |f(x+2h)-2f(x+h)+f(x)|,
+\end{equation}
+e, para $0<s<2$,
+\begin{equation}
+ |f|_{B^s_{\infty,\infty}(K)}
+ =\sup_{0<t\le|K|}t^{-s}\omega_2(f,t)_{\infty,K}.
+ \label{complemento_original:eq:besov-seminorm}
+\end{equation}
+
+% MAPA complemento_original:6.3 | fonte artigos/complemento_original_77/06_arvores_besov.tex:93
+\begin{theorem}[estimativa direta]\label{map:complemento_original:6.3}\label{complemento_original:thm:besov}
+Se $0<s<2$, $|K|=L$ e o seminorma em \eqref{complemento_original:eq:besov-seminorm} é finito, então, para $N\ge2$,
+\begin{equation}
+ \sigma_N^{\mathrm{dia}}(f)_\infty
+ \le C_sL^s|f|_{B^s_{\infty,\infty}(K)}N^{-s},
+ \label{complemento_original:eq:besov-rate}
+\end{equation}
+onde $C_s$ independe de $f$ e $N$. Para todo $\delta>0$, uma montagem racional com no máximo $N$ folhas alcança o lado direito de \eqref{complemento_original:eq:besov-rate} acrescido de $\delta$.
+\end{theorem}
+
+\begin{proof}
+A desigualdade de Whitney de ordem dois afirma que existe constante universal $C_W$ tal que, em todo intervalo $J$ \citep{artigo_2-whitney1957,artigo_1-devore1998},
+\[
+ E_1(f;J)_\infty:=\inf_{\ell\ \mathrm{afim}}\|f-\ell\|_{\infty,J}
+ \le C_W\omega_2(f,|J|)_{\infty,J}.
+\]
+O interpolante de extremos $P_J$ reproduz funções afins e tem norma de operador no máximo $1$. Logo, para toda $\ell$ afim,
+\[
+ \|f-P_Jf\|_\infty
+ \le\|f-\ell\|_\infty+\|P_J(f-\ell)\|_\infty
+ \le2\|f-\ell\|_\infty.
+\]
+Tomando o ínfimo e observando que o módulo em $J\subset K$ não excede o de $K$,
+\[
+ \|f-P_Jf\|_{\infty,J}
+ \le2C_W|J|^s|f|_{B^s_{\infty,\infty}(K)}.
+\]
+Refine $K$ uniformemente $r=\lfloor\log_2N\rfloor$ vezes. As folhas têm largura $L2^{-r}<2L/N$, e o máximo das estimativas locais prova \eqref{complemento_original:eq:besov-rate} com $C_s=2^{s+1}C_W$. A racionalização segue do último enunciado do \cref{complemento_original:thm:tree-rate}.
+\end{proof}
+
+% FIM artigos/complemento_original_77/06_arvores_besov.tex
+\setcounter{section}{20}
+% INICIO artigos/complemento_original_77/21_runge.tex
+\section{Referência analítica para o exemplo de Runge}
+Para
+\begin{equation}
+ f(x)=\frac{1}{1+25x^2},\qquad
+ f''(x)=\frac{50(75x^2-1)}{(1+25x^2)^3},
+ \label{complemento_original:eq:runge}
+\end{equation}
+o refinamento certificado do primeiro artigo usa majorantes intervalares racionais. O máximo analítico abaixo é uma referência independente para medir a folga do certificado, sem substituir a garantia intervalar.
+
+% MAPA complemento_original:21.1 | fonte artigos/complemento_original_77/21_runge.tex:10
+\begin{lemma}[majorante local da função de Runge]\label{map:complemento_original:21.1}\label{complemento_original:lem:runge-majorant}
+Em todo intervalo fechado $J\subset[-1,1]$, o máximo de $|f''|$ é atingido em um extremo de $J$ ou em um ponto de $\{0,-0{,}2,0{,}2\}\cap J$.
+\end{lemma}
+
+\begin{proof}
+Derivando \eqref{complemento_original:eq:runge},
+\[
+ f'''(x)=\frac{7500x(2-50x^2)}{(1+25x^2)^4},
+\]
+cujos únicos zeros são $0$ e $\pm0{,}2$. Um máximo interior não nulo de $|f''|$ deve ser ponto crítico de $f''$; os zeros de $f''$ têm módulo zero e não introduzem máximos positivos. Restam os três pontos críticos e os extremos do intervalo.
+\end{proof}
+% FIM artigos/complemento_original_77/21_runge.tex

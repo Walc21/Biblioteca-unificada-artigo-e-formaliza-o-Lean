@@ -1,0 +1,36 @@
+⚠ [8044/8075] Replayed Unified.Consolidado.Lib.Indexing
+warning: Unified/Consolidado/Lib/Indexing.lean:88:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Unified/Consolidado/Lib/Indexing.lean:88:19: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Unified/Consolidado/Lib/Indexing.lean:282:17: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+warning: Unified/Consolidado/Lib/Indexing.lean:414:46: unused variable `he`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Unified/Consolidado/Lib/Indexing.lean:428:47: unused variable `he`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8045/8075] Replayed Unified.Consolidado.Lib.Library
+warning: Unified/Consolidado/Lib/Library.lean:236:11: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Unified/Consolidado/Lib/Library.lean:237:12: unused variable `p`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8049/8075] Replayed Unified.Consolidado.Sec4.ReLU
+warning: Unified/Consolidado/Sec4/ReLU.lean:217:44: '(try exact_mod_cast h1)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8052/8075] Replayed Unified.Consolidado.Sec7.Bits
+warning: Unified/Consolidado/Sec7/Bits.lean:44:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Unified/Consolidado/Sec7/Bits.lean:194:17: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8072/8075] Built Unified.SemanticBridge.AssemblyEquivalence (3.0s)
+✔ [8073/8075] Built Unified.SemanticBridge.CanonicalAtoms (4.8s)
+✔ [8074/8075] Built SemanticAudit (3.6s)
+Build completed successfully (8075 jobs).

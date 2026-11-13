@@ -1,0 +1,1098 @@
+[
+  {
+    "id": "artigo_1:2.1",
+    "documento": "artigo_1",
+    "numero": "2.1",
+    "tipo": "lema",
+    "titulo": "pareamento e cota",
+    "secao": 2,
+    "titulo_secao": "Ferramentas de indexação",
+    "arquivo_tex": "artigos/artigo_1/secoes/02_indexacao.tex",
+    "linha_tex": 7,
+    "rotulos_tex": [],
+    "enunciado_tex": "$\\pi:\\N_0^2\\to\\N_0$ é bijetiva. Para $n\\in\\N_0$, sua inversa é\n\\eqn{02}{w=\\left\\lfloor\\frac{\\sqrt{8n+1}-1}{2}\\right\\rfloor,\\qquad v=n-T_w,\\qquad u=w-v.}\nAlém disso, $\\pi(u,v)\\le(u+v+1)^2$.",
+    "sha256_enunciado": "979f0f246d5bb65cb9a169fcb677342229346e63243477f1db839c06415ca479",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cpair_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Indexing.lean",
+        "linha_lean": 93,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cdiag_eq_floor",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Indexing.lean",
+        "linha_lean": 103,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cpair_le",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Indexing.lean",
+        "linha_lean": 126,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.2.1",
+    "originais_77": [
+      "2.1"
+    ],
+    "rotulo_volume": "map:artigo_1:2.1",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 40,
+    "pagina_volume": 6
+  },
+  {
+    "id": "artigo_1:2.2",
+    "documento": "artigo_1",
+    "numero": "2.2",
+    "tipo": "lema",
+    "titulo": "",
+    "secao": 2,
+    "titulo_secao": "Ferramentas de indexação",
+    "arquivo_tex": "artigos/artigo_1/secoes/02_indexacao.tex",
+    "linha_tex": 19,
+    "rotulos_tex": [],
+    "enunciado_tex": "$Z$ é bijetiva, com $Z^{-1}(m)=2m$ para $m\\ge0$ e $Z^{-1}(m)=-2m-1$ para $m<0$. Em particular, $Z^{-1}(m)\\le2|m|+1$.",
+    "sha256_enunciado": "017c75b1e5c8ac7530360e39a3efa3411c866327948928b037f55afbbe405498",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.zEnum_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Indexing.lean",
+        "linha_lean": 148,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.zInv_le",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Indexing.lean",
+        "linha_lean": 151,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.2.2",
+    "originais_77": [
+      "2.2"
+    ],
+    "rotulo_volume": "map:artigo_1:2.2",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 53,
+    "pagina_volume": 6
+  },
+  {
+    "id": "artigo_1:2.3",
+    "documento": "artigo_1",
+    "numero": "2.3",
+    "tipo": "lema",
+    "titulo": "contagem por altura",
+    "secao": 2,
+    "titulo_secao": "Ferramentas de indexação",
+    "arquivo_tex": "artigos/artigo_1/secoes/02_indexacao.tex",
+    "linha_tex": 32,
+    "rotulos_tex": [],
+    "enunciado_tex": "Seja $\\Q_H=\\{r\\in\\Q:\\heightq(r)\\le H\\}$. Então\n\\eqn{06}{|\\Q_H|\\le3H^2\\qquad\\text{para todo }H\\ge1,}\ne existem $H_0$ e $c_1>0$ universais tais que\n\\eqn{07}{|\\Q_H|\\ge c_1H^2\\qquad\\text{para todo }H\\ge H_0.}\nPode-se tomar $c_1=1/4$.",
+    "sha256_enunciado": "f8632e1a6e4e085c47cd919dc195f494564f565531bfa8ebdbb68b76edc49b33",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.card_QH_le",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 44,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.card_QH_ge",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 118,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.2.3",
+    "originais_77": [
+      "2.3"
+    ],
+    "rotulo_volume": "map:artigo_1:2.3",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 67,
+    "pagina_volume": 7
+  },
+  {
+    "id": "artigo_1:2.4",
+    "documento": "artigo_1",
+    "numero": "2.4",
+    "tipo": "lema",
+    "titulo": "posto por altura",
+    "secao": 2,
+    "titulo_secao": "Ferramentas de indexação",
+    "arquivo_tex": "artigos/artigo_1/secoes/02_indexacao.tex",
+    "linha_tex": 49,
+    "rotulos_tex": [],
+    "enunciado_tex": "As aplicações em \\eqref{eq:05} são bijetivas. Se $\\heightq(p/q)\\le H$, então o posto de $p/q$ em qualquer uma delas é estritamente menor que $3H^2$.",
+    "sha256_enunciado": "2047d90c51818c4dae6b9fc86841f3398522f2eff3b326d6bb367b29e18b7719",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.Qenum_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 254,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.QstarEnum_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 257,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.rankQ_lt",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 268,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.rankQstar_lt",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 282,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.2.4",
+    "originais_77": [
+      "2.4"
+    ],
+    "rotulo_volume": "map:artigo_1:2.4",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 85,
+    "pagina_volume": 7
+  },
+  {
+    "id": "artigo_1:2.5",
+    "documento": "artigo_1",
+    "numero": "2.5",
+    "tipo": "lema",
+    "titulo": "",
+    "secao": 2,
+    "titulo_secao": "Ferramentas de indexação",
+    "arquivo_tex": "artigos/artigo_1/secoes/02_indexacao.tex",
+    "linha_tex": 60,
+    "rotulos_tex": [],
+    "enunciado_tex": "Para todo $q\\ge1$, $CW(2^{q-1})=1/q$.",
+    "sha256_enunciado": "9877800ecd303794b85c9b94c71aefd7394e3b63885e6cd584a4efc07679298d",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.calkinWilf_two_pow",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Heights.lean",
+        "linha_lean": 333,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.2.5",
+    "originais_77": [
+      "2.5"
+    ],
+    "rotulo_volume": "map:artigo_1:2.5",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 97,
+    "pagina_volume": 7
+  },
+  {
+    "id": "artigo_1:3.1",
+    "documento": "artigo_1",
+    "numero": "3.1",
+    "tipo": "lema",
+    "titulo": "estrutura diádica",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 11,
+    "rotulos_tex": [],
+    "enunciado_tex": "Para cada $k$, as células $J_{k,m}^{\\rm own}$ particionam $\\R$ e\n\\eqn{11}{J_{k,m}=J_{k+1,2m}\\cup J_{k+1,2m+1},\\qquad |J_{k,m}|=2^{-k}.}\nO mapa $(k,m)\\mapsto x_0(k,m)$ é uma bijeção de $\\N_0\\times\\Z$ sobre $\\D_{\\rm mid}$, que é denso em $\\R$.",
+    "sha256_enunciado": "f832533641a9aa84c6ccd152fef21e61e4bd6e5f670a5aa13eae15eea78e4ba0",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cellOwn_partition",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 58,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cell_refine",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 62,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cell_length",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 76,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.center_bijOn",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 134,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.dyadicMid_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 140,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.1",
+    "originais_77": [
+      "3.1"
+    ],
+    "rotulo_volume": "map:artigo_1:3.1",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 125,
+    "pagina_volume": 8
+  },
+  {
+    "id": "artigo_1:3.2",
+    "documento": "artigo_1",
+    "numero": "3.2",
+    "tipo": "lema",
+    "titulo": "",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 28,
+    "rotulos_tex": [],
+    "enunciado_tex": "O mapa $n\\mapsto(k,\\mu,r,t)$ de \\eqref{eq:13} é uma bijeção de $\\N_0$ sobre $\\N_0^4$.",
+    "sha256_enunciado": "9a6de581445d5d016b71913da7d3ea0769757b8868395045d56cf47e65ef5de5",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.decode4_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 169,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.2",
+    "originais_77": [
+      "3.2"
+    ],
+    "rotulo_volume": "map:artigo_1:3.2",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 145,
+    "pagina_volume": 9
+  },
+  {
+    "id": "artigo_1:3.3",
+    "documento": "artigo_1",
+    "numero": "3.3",
+    "tipo": "definicao",
+    "titulo": "gerador e biblioteca",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 44,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $\\mathcal I$ é o conjunto dos intervalos fechados não degenerados de $\\R$, defina\n\\eqn{17}{\\Gamma:\\N_0\\to\\R\\times(\\R\\setminus\\{0\\})\\times\\mathcal I,\\qquad\n\\Gamma(n)=(a_n,b_n,[c_n,d_n]).}\nA biblioteca é $\\LL=\\Gamma(\\N_0)$. O átomo de endereço $n$ é a restrição de $\\ell_n$ à célula $J_{k(n),m(n)}$.",
+    "sha256_enunciado": "3c592a30ad0008e70f65e27ceaa326dcb29a55156d825c0cb25612b609968e22",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.gen",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 212,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.library",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 215,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.3",
+    "originais_77": [
+      "3.3"
+    ],
+    "rotulo_volume": "map:artigo_1:3.3",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 162,
+    "pagina_volume": 9
+  },
+  {
+    "id": "artigo_1:3.4",
+    "documento": "artigo_1",
+    "numero": "3.4",
+    "tipo": "lema",
+    "titulo": "validade espacial exata",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 56,
+    "rotulos_tex": [],
+    "enunciado_tex": "Para todo $n\\in\\N_0$, o intervalo $I_n^x$ definido em \\eqref{eq:18} satisfaz\n\\[\nI_n^x=J_{k(n),m(n)}.\n\\]",
+    "sha256_enunciado": "376a7efc4abd73f8b788341b20831e19c937bb6d0569e47d17972d59af210630",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.preimageInterval_eq",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 237,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.4",
+    "originais_77": [
+      "3.4"
+    ],
+    "rotulo_volume": "map:artigo_1:3.4",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 175,
+    "pagina_volume": 9
+  },
+  {
+    "id": "artigo_1:3.5",
+    "documento": "artigo_1",
+    "numero": "3.5",
+    "tipo": "teorema",
+    "titulo": "unicidade do endereço",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 65,
+    "rotulos_tex": [],
+    "enunciado_tex": "$\\Gamma$ é injetiva. Portanto, é uma bijeção de $\\N_0$ sobre $\\LL$ e cada átomo tem um único endereço.",
+    "sha256_enunciado": "0045618f8ea113ff5471bef33547ee62d889c714fd02e0e21dcff7e2c2003d70",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.gen_injective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 320,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.5",
+    "originais_77": [
+      "3.5"
+    ],
+    "rotulo_volume": "map:artigo_1:3.5",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 185,
+    "pagina_volume": 10
+  },
+  {
+    "id": "artigo_1:3.6",
+    "documento": "artigo_1",
+    "numero": "3.6",
+    "tipo": "teorema",
+    "titulo": "dicionário de jatos racionais",
+    "secao": 3,
+    "titulo_secao": "Células diádicas e operador gerador",
+    "arquivo_tex": "artigos/artigo_1/secoes/03_biblioteca.tex",
+    "linha_tex": 74,
+    "rotulos_tex": [],
+    "enunciado_tex": "O mapa\n\\eqn{19}{n\\longmapsto(x_{0,n},y_{0,n},s_n)}\né uma bijeção de $\\N_0$ sobre $\\D_{\\rm mid}\\times\\Q\\times\\Q^*$. Sua imagem é densa em $\\R^3$.",
+    "sha256_enunciado": "fac2b646bed9c829fad7f4fb4646cf054dae8da11a945e20577cd7b8eb63aed6",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.jet_bijective",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 292,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.jet_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Cells.lean",
+        "linha_lean": 303,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.3.6",
+    "originais_77": [
+      "3.6"
+    ],
+    "rotulo_volume": "map:artigo_1:3.6",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 195,
+    "pagina_volume": 10
+  },
+  {
+    "id": "artigo_1:4.1",
+    "documento": "artigo_1",
+    "numero": "4.1",
+    "tipo": "definicao",
+    "titulo": "montagem contínua",
+    "secao": 4,
+    "titulo_secao": "Montagens e densidade em espaços de funções contínuas",
+    "arquivo_tex": "artigos/artigo_1/secoes/04_montagens.tex",
+    "linha_tex": 2,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $K=[\\alpha,\\beta]$ é um intervalo compacto não degenerado, $\\Asm(K)$ é o conjunto das funções $g\\in C(K)$ para as quais existe uma coleção finita $\\Lambda$ de células diádicas, com interiores disjuntos e união contendo $K$, e endereços $n(J)$, $J\\in\\Lambda$, tais que\n\\eqn{20}{g|_{J\\cap K}=\\ell_{n(J)}|_{J\\cap K},}\ncom valores coincidentes nas fronteiras compartilhadas.",
+    "sha256_enunciado": "6c915ef1cf2a1cfb70023c224b53ed511a569ebe2a27f0cc8146a30c86fb880f",
+    "status": "integrado_a_v2",
+    "observacao": "Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.IsAssembly",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Assembly.lean",
+        "linha_lean": 53,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.IsAssemblyRep",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Consolidado/Lib/Assembly.lean",
+        "linha_lean": 19,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Lib/Assembly.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.Asm",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Consolidado/Lib/Assembly.lean",
+        "linha_lean": 26,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Lib/Assembly.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "SemanticBridge.fase3_assembly_iff_consolidated",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/SemanticBridge/NormalizationClasses.lean",
+        "linha_lean": 105,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "SemanticBridge.fase2_restriction_eq_consolidated",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/SemanticBridge/NormalizationClasses.lean",
+        "linha_lean": 142,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.4.1",
+    "originais_77": [
+      "4.1"
+    ],
+    "rotulo_volume": "map:artigo_1:4.1",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 213,
+    "pagina_volume": 10
+  },
+  {
+    "id": "artigo_1:4.2",
+    "documento": "artigo_1",
+    "numero": "4.2",
+    "tipo": "teorema",
+    "titulo": "densidade das montagens",
+    "secao": 4,
+    "titulo_secao": "Montagens e densidade em espaços de funções contínuas",
+    "arquivo_tex": "artigos/artigo_1/secoes/04_montagens.tex",
+    "linha_tex": 12,
+    "rotulos_tex": [],
+    "enunciado_tex": "Para todo $f\\in C[\\alpha,\\beta]$ e todo $\\varepsilon>0$, existe $g\\in\\Asm([\\alpha,\\beta])$ tal que\n\\[\n\\normK{f-g}{[\\alpha,\\beta]}<\\varepsilon.\n\\]\nTodas as peças de $g$ pertencem a $\\LL$ e têm inclinação não nula.",
+    "sha256_enunciado": "6440534da2ad79578efb99c425a837278b42836bd1cdd9deb4edb0265b5296b6",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.assembly_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Assembly.lean",
+        "linha_lean": 386,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.4.2",
+    "originais_77": [
+      "4.2"
+    ],
+    "rotulo_volume": "map:artigo_1:4.2",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 226,
+    "pagina_volume": 11
+  },
+  {
+    "id": "artigo_1:4.3",
+    "documento": "artigo_1",
+    "numero": "4.3",
+    "tipo": "teorema",
+    "titulo": "equivalência montagem--ReLU racional",
+    "secao": 4,
+    "titulo_secao": "Montagens e densidade em espaços de funções contínuas",
+    "arquivo_tex": "artigos/artigo_1/secoes/04_montagens.tex",
+    "linha_tex": 38,
+    "rotulos_tex": [],
+    "enunciado_tex": "Seja $g\\in\\Asm(K)$ dada por $N$ folhas consecutivas, com nós $t_0<t_1<\\cdots<t_N$ e inclinação racional não nula $s_j$ em $[t_j,t_{j+1}]\\cap K$, $0\\le j<N$. Então, em $K$,\n\\eqn{24}{g(x)=g(t_0)+s_0(x-t_0)+\\sum_{j=1}^{N-1}(s_j-s_{j-1})\\rho(x-t_j).}\nDepois de expandido o primeiro termo afim, todos os coeficientes são racionais, todos os pontos de quebra internos são diádicos e \\eqref{eq:24} é uma rede ReLU rasa normalizada com $N-1$ unidades hinge e um termo afim de saída. Unidades cujo peso de saída é zero podem ser removidas.\n\nReciprocamente, seja\n\\eqn{25}{R(x)=c+qx+\\sum_{j=1}^Ma_j\\rho(x-\\tau_j),\\qquad c,q,a_j\\in\\Q,\\quad\\tau_j\\in\\D,}\ncom nós distintos. Suponha que $K$ admita uma cobertura por células diádicas compatível com os $\\tau_j$, que os valores nodais sejam racionais e que cada inclinação local\n\\eqn{26}{q+\\sum_{\\tau_j<x}a_j}\nseja não nula. Então $R|_K\\in\\Asm(K)$. Uma malha diádica uniforme que refine todos os $\\tau_j$ fornece essa montagem explicitamente.",
+    "sha256_enunciado": "7a7f04ab5c21dd412009c8cd1c2bfef487b9562c40c7bcc73ad0ac6097ae1f3f",
+    "status": "divergencia_documentada",
+    "observacao": "O operador de extensao normalizado foi integrado a classe concreta da Fase 2. O enunciado TeX deste volume le g(t0) como o valor em t0 da primeira peca (t0 pode estar fora de K); essa leitura nao foi reverificada contra o enunciado Lean.",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.assembly_eq_relu",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Consolidado/Sec4/ReLU.lean",
+        "linha_lean": 92,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.relu_mem_Asm",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Consolidado/Sec4/ReLU.lean",
+        "linha_lean": 183,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.4.3",
+    "originais_77": [
+      "4.3"
+    ],
+    "rotulo_volume": "map:artigo_1:4.3",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 253,
+    "pagina_volume": 11
+  },
+  {
+    "id": "artigo_1:4.4",
+    "documento": "artigo_1",
+    "numero": "4.4",
+    "tipo": "proposicao",
+    "titulo": "parâmetros e altura",
+    "secao": 4,
+    "titulo_secao": "Montagens e densidade em espaços de funções contínuas",
+    "arquivo_tex": "artigos/artigo_1/secoes/04_montagens.tex",
+    "linha_tex": 56,
+    "rotulos_tex": [],
+    "enunciado_tex": "Na forma normalizada, a conversão de uma montagem com $N$ folhas armazena $2N$ racionais: o intercepto e a inclinação iniciais, mais um nó e um salto de inclinação para cada uma das $N-1$ unidades. Se todos os átomos têm altura no máximo $H\\ge2$, a altura máxima dos parâmetros produzidos satisfaz\n\\eqn{27}{H_{\\rm ReLU}\\le2^{H+1}H^2.}",
+    "sha256_enunciado": "17fa218f46712e2f2badcdb1825b50437abe0c21b0a8837001bd0c77d1474832",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.relu_parameters_height",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Consolidado/Sec4/ReLU.lean",
+        "linha_lean": 360,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.4.4",
+    "originais_77": [
+      "4.4"
+    ],
+    "rotulo_volume": "map:artigo_1:4.4",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 272,
+    "pagina_volume": 12
+  },
+  {
+    "id": "artigo_1:4.5",
+    "documento": "artigo_1",
+    "numero": "4.5",
+    "tipo": "proposicao",
+    "titulo": "pertencimento e aderência",
+    "secao": 4,
+    "titulo_secao": "Montagens e densidade em espaços de funções contínuas",
+    "arquivo_tex": "artigos/artigo_1/secoes/04_montagens.tex",
+    "linha_tex": 75,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $f(x_0)\\in\\Q$ e $f'(x_0)\\in\\Q^*$, então $T_{x_0}f$ é o átomo de $\\LL$ associado à célula. Em geral, para todo $\\delta>0$ existem $q_0\\in\\Q$ e $q_1\\in\\Q^*$ tais que $\\ell_q(x)=q_0+q_1(x-x_0)$ satisfaz\n\\eqn{28}{\\normK{T_{x_0}f-\\ell_q}{J_{k,m}}<\\delta,}\n\\eqn{29}{\\normK{f-\\ell_q}{J_{k,m}}\\le\\frac{h^2}8\\normK{f''}{J_{k,m}}+\\delta.}",
+    "sha256_enunciado": "a287e492549d0953c7087af9b3e954b9ff17de1cec726beb8670ed64b3eb8996",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Dyadic.Lib.taylor_jet",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Consolidado/Sec4/Taylor.lean",
+        "linha_lean": 55,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/Taylor.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.4.5",
+    "originais_77": [
+      "4.5"
+    ],
+    "rotulo_volume": "map:artigo_1:4.5",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 294,
+    "pagina_volume": 13
+  },
+  {
+    "id": "artigo_1:5.1",
+    "documento": "artigo_1",
+    "numero": "5.1",
+    "tipo": "teorema",
+    "titulo": "cota aguda e limite",
+    "secao": 5,
+    "titulo_secao": "Taxas uniformes e constante assintótica",
+    "arquivo_tex": "artigos/artigo_1/secoes/05_taxas.tex",
+    "linha_tex": 10,
+    "rotulos_tex": [],
+    "enunciado_tex": "Ponha $h=2^{-k}$ e $M=\\normK{f''}{[\\alpha,\\beta]}$. Então\n\\eqn{31}{\\normK{f-P_kF}{[\\alpha,\\beta]}\\le\\frac{h^2M}8,}\ne\n\\eqn{32}{\\lim_{k\\to\\infty}\\frac8{h^2}\\normK{f-P_kF}{[\\alpha,\\beta]}=M.}\nAlém disso, para todo $\\delta>0$ existe $g_{k,\\delta}\\in\\Asm([\\alpha,\\beta])$ com\n\\eqn{33}{\\norm{f-g_{k,\\delta}}\\le\\frac{h^2M}8+\\delta.}",
+    "sha256_enunciado": "416fcb79450c3a8358a3cbf07bb91ff65972086692d614b469014b89897ed490",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.errP_le",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Rates.lean",
+        "linha_lean": 148,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.tendsto_errP",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Rates.lean",
+        "linha_lean": 269,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.exists_assembly_rate",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Rates.lean",
+        "linha_lean": 304,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.5.1",
+    "originais_77": [
+      "5.1"
+    ],
+    "rotulo_volume": "map:artigo_1:5.1",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 320,
+    "pagina_volume": 13
+  },
+  {
+    "id": "artigo_1:5.2",
+    "documento": "artigo_1",
+    "numero": "5.2",
+    "tipo": "corolario",
+    "titulo": "preservação da constante",
+    "secao": 5,
+    "titulo_secao": "Taxas uniformes e constante assintótica",
+    "arquivo_tex": "artigos/artigo_1/secoes/05_taxas.tex",
+    "linha_tex": 36,
+    "rotulos_tex": [],
+    "enunciado_tex": "Existe uma sequência $g_k\\in\\Asm([\\alpha,\\beta])$ tal que\n\\[\n\\lim_{k\\to\\infty}\\frac8{h^2}\\norm{f-g_k}=M.\n\\]",
+    "sha256_enunciado": "d7021c63e4829671e33ff6ea7a0e625973ab08395fb193c4fab6ba4584e6e939",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.exists_assembly_seq_constant",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Rates.lean",
+        "linha_lean": 319,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.5.2",
+    "originais_77": [
+      "5.2"
+    ],
+    "rotulo_volume": "map:artigo_1:5.2",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 347,
+    "pagina_volume": 14
+  },
+  {
+    "id": "artigo_1:6.1",
+    "documento": "artigo_1",
+    "numero": "6.1",
+    "tipo": "lema",
+    "titulo": "restos transcendentais com extremos racionais",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 22,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $I=[a,b]\\in\\mathbb I_{\\Q}$, as rotinas descritas acima produzem intervalos de extremos racionais que contêm $\\exp(I)$, $\\sin(I)$ e $\\cos(I)$. Mais explicitamente, para $0\\le z\\le1/2$ e $n\\ge0$,\n\\eqn{37}{0\\le e^z-\\sum_{j=0}^n\\frac{z^j}{j!}\n\\le\\frac{z^{n+1}}{(n+1)!}\\frac1{1-z/(n+2)}.}\nSe $R=\\max\\{|a|,|b|\\}$ e\n\\[\nP_n^{\\sin}(z)=\\sum_{j=0}^n(-1)^j\\frac{z^{2j+1}}{(2j+1)!},\\qquad\nP_n^{\\cos}(z)=\\sum_{j=0}^n(-1)^j\\frac{z^{2j}}{(2j)!},\n\\]\nentão, para todo $z\\in I$,\n\\eqn{38}{|\\sin z-P_n^{\\sin}(z)|\\le\\frac{R^{2n+2}}{(2n+2)!},\\qquad\n|\\cos z-P_n^{\\cos}(z)|\\le\\frac{R^{2n+1}}{(2n+1)!}.}\nAvaliar os polinômios em $I$, inflar pelos respectivos restos e intersectar com $[-1,1]$ preserva a inclusão.",
+    "sha256_enunciado": "6544cffbb59a71853baf56c6608f8a6a21f6aa2649e890c19e7d01c142f39fc3",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.exp_sub_expPoly_bounds",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Transcendental.lean",
+        "linha_lean": 61,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.sin_cos_lagrange",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Transcendental.lean",
+        "linha_lean": 225,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.1",
+    "originais_77": [
+      "7.1"
+    ],
+    "rotulo_volume": "map:artigo_1:6.1",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 401,
+    "pagina_volume": 15
+  },
+  {
+    "id": "artigo_1:6.2",
+    "documento": "artigo_1",
+    "numero": "6.2",
+    "tipo": "proposicao",
+    "titulo": "correção do majorante intervalar",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 42,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $E\\in\\EE$ define uma função $C^2$ em $J$ e a rotina \\eqref{eq:36} termina com sucesso, então\n\\eqn{39}{E''(x)\\in[\\underline m_J,\\overline m_J]\\ (x\\in J),\\qquad\nM_{\\rm int}(J):=\\max\\{|\\underline m_J|,|\\overline m_J|\\}\\ge\\normK{E''}{J}.}\nSe algum intervalo de denominador contém zero mesmo após a subdivisão permitida, a rotina devolve falha e nenhum número é aceito como certificado.",
+    "sha256_enunciado": "c5717a9c83a39cb4e2b51cd80347599e9ca897ab447f6320f3146e7943c2704d",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.boundSecondDerivative_correct",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/IntervalArith.lean",
+        "linha_lean": 619,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.Mint_ge_supNorm",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/IntervalArith.lean",
+        "linha_lean": 629,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.2",
+    "originais_77": [
+      "7.2"
+    ],
+    "rotulo_volume": "map:artigo_1:6.2",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 422,
+    "pagina_volume": 16
+  },
+  {
+    "id": "artigo_1:6.3",
+    "documento": "artigo_1",
+    "numero": "6.3",
+    "tipo": "algoritmo",
+    "titulo": "refinamento certificado",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 53,
+    "rotulos_tex": [],
+    "enunciado_tex": "Dados $f\\in C^2[\\alpha,\\beta]$, tolerâncias $\\varepsilon_I,\\varepsilon_R>0$ e a extensão $F$ de \\eqref{eq:30}, use, para toda célula $J$, um majorante validado\n\\eqn{40}{\\normK{F''}{J}\\le M(J)\\le M_*<\\infty.}\nQuando $F$ é fornecida por uma expressão de $\\EE$, tome $M(J)=M_{\\rm int}(J)$ de \\eqref{eq:39}; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \\eqref{eq:40} é um contrato de entrada.\n\\begin{enumerate}[label=(\\roman*),topsep=6pt,itemsep=3pt]\n\\item Inicie com uma cobertura diádica finita de $[\\alpha,\\beta]$.\n\\item Para cada folha $J$, calcule\n\\eqn{41}{\\eta_{\\rm cert}(J)=\\frac{|J|^2M(J)}8.}\n\\item Enquanto existir folha com $\\eta_{\\rm cert}(J)>\\varepsilon_I$, substitua-a por seus dois filhos.\n\\item Nos nós finais, escolha racionais compartilhados $v_t$ com $|v_t-F(t)|<\\varepsilon_R$ e valores adjacentes distintos.\n\\item Emita, em cada folha, o endereço do átomo que interpola seus dois valores nodais.\n\\end{enumerate}",
+    "sha256_enunciado": "24c9bc8ecc4396772377a01e8c3d33ba00ea38d2101ba8ff08edeb69e1530cc0",
+    "status": "formalizado_compilado",
+    "observacao": "Refinamento recursivo certificado sob hipoteses sobre os majorantes; composicao executavel com avaliacao intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.refineCell",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Refinement.lean",
+        "linha_lean": 29,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.refineAll",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Refinement.lean",
+        "linha_lean": 35,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.rStar",
+        "tipo": "def",
+        "arquivo_lean": "Unified/Fase3/Refinement.lean",
+        "linha_lean": 39,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "PendenciasParte1.certRefine",
+        "tipo": "theorem",
+        "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+        "linha_lean": 55,
+        "caminho_entrega": "lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "PendenciasParte1.certified_refinement",
+        "tipo": "theorem",
+        "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+        "linha_lean": 135,
+        "caminho_entrega": "lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.3",
+    "originais_77": [
+      "7.3"
+    ],
+    "rotulo_volume": "map:artigo_1:6.3",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 434,
+    "pagina_volume": 16
+  },
+  {
+    "id": "artigo_1:6.4",
+    "documento": "artigo_1",
+    "numero": "6.4",
+    "tipo": "teorema",
+    "titulo": "correção, término e tamanho",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 67,
+    "rotulos_tex": [],
+    "enunciado_tex": "O algoritmo~6.3 termina e produz $g\\in\\Asm([\\alpha,\\beta])$ com\n\\eqn{42}{\\norm{f-g}\\le\\varepsilon_I+\\varepsilon_R.}\nSe a cobertura inicial tem $R_0$ raízes de largura máxima $h_0$ e $M_*>0$, nenhuma ramificação ultrapassa\n\\eqn{43}{r_*=\\max\\left\\{0,\\left\\lceil\\frac12\\log_2\\left(\\frac{h_0^2M_*}{8\\varepsilon_I}\\right)\\right\\rceil\\right\\}}\nníveis, e há no máximo $R_02^{r_*}$ folhas. Se $M_*=0$, pode-se tomar $r_*=0$.",
+    "sha256_enunciado": "a059de8f548816d329b50900d528bd9723f9c66b7f28995be29b5c2af4f1ded0",
+    "status": "formalizado_compilado",
+    "observacao": "Termino e correcao sob os contratos formais; nao equivale a certificar uma implementacao completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.refine_terminates",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Refinement.lean",
+        "linha_lean": 222,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.refine_correct",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Refinement.lean",
+        "linha_lean": 292,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "PendenciasParte1.certified_refinement",
+        "tipo": "theorem",
+        "arquivo_lean": "PendenciasParte1/Refinamento.lean",
+        "linha_lean": 135,
+        "caminho_entrega": "lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.4",
+    "originais_77": [
+      "7.4"
+    ],
+    "rotulo_volume": "map:artigo_1:6.4",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 449,
+    "pagina_volume": 17
+  },
+  {
+    "id": "artigo_1:6.5",
+    "documento": "artigo_1",
+    "numero": "6.5",
+    "tipo": "proposicao",
+    "titulo": "calibração exata para curvatura constante",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 93,
+    "rotulos_tex": [],
+    "enunciado_tex": "Suponha que $[\\alpha,\\beta]=J_0$ seja uma única célula diádica inicial, $F''\\equiv\\kappa\\ne0$ em $J_0$ e $M(J)=|\\kappa|$ em todo descendente. Pondo\n\\[\nA=\\frac{|J_0|^2|\\kappa|}8,\n\\]\no número de folhas produzido com tolerância $\\varepsilon_I$ é\n\\eqn{44}{N(\\varepsilon_I)=2^{r(\\varepsilon_I)},\\qquad\nr(\\varepsilon_I)=\\max\\left\\{0,\\left\\lceil\\log_4\\left(\\frac A{\\varepsilon_I}\\right)\\right\\rceil\\right\\}.}\nConsequentemente,\n\\eqn{45}{\\begin{aligned}\n\\liminf_{\\varepsilon_I\\downarrow0}\\sqrt{\\varepsilon_I}\\,N(\\varepsilon_I)\n&=\\frac1{\\sqrt8}\\int_\\alpha^\\beta|f''(x)|^{1/2}\\,dx,\\\\\n\\limsup_{\\varepsilon_I\\downarrow0}\\sqrt{\\varepsilon_I}\\,N(\\varepsilon_I)\n&=\\frac1{\\sqrt2}\\int_\\alpha^\\beta|f''(x)|^{1/2}\\,dx.\n\\end{aligned}}\nA quantização diádica introduz, nesse caso, um fator dois entre os limites de acumulação.",
+    "sha256_enunciado": "dfc2e17b0b87ad0df72bdad5897b5e0b5cc27f1fac8d0547935059309a746cf8",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.calibration",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Calibration.lean",
+        "linha_lean": 94,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Calibration.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.5",
+    "originais_77": [
+      "7.5"
+    ],
+    "rotulo_volume": "map:artigo_1:6.5",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 476,
+    "pagina_volume": 18
+  },
+  {
+    "id": "artigo_1:6.6",
+    "documento": "artigo_1",
+    "numero": "6.6",
+    "tipo": "observacao",
+    "titulo": "diferença segunda e erro no centro",
+    "secao": 6,
+    "titulo_secao": "Refinamento diádico adaptativo certificado",
+    "arquivo_tex": "artigos/artigo_1/secoes/06_refinamento.tex",
+    "linha_tex": 118,
+    "rotulos_tex": [],
+    "enunciado_tex": "Se $x_0=(x_L+x_R)/2$, então\n\\[\n|f(x_0)-P_Jf(x_0)|=\\frac12|f(x_L)-2f(x_0)+f(x_R)|.\n\\]\nIsso mede o erro no centro. Para $f(x)=x^3$ em $[-1,1]$, $P_Jf(x)=x$ e a diferença segunda central é zero, enquanto\n\\[\n\\norm{x^3-x}=\\frac2{3\\sqrt3}\\approx0{,}3849.\n\\]\nO controle em todo o intervalo é fornecido pelo majorante de \\eqref{eq:40}.",
+    "sha256_enunciado": "436d49b37c6de55e23596d134893e665a119f24ff44a57debb146f3496cc9e15",
+    "status": "correspondencia_inspecionada",
+    "observacao": "",
+    "destino_editorial": "artigo_1",
+    "resultados_lean": [
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.center_error_eq",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Observation.lean",
+        "linha_lean": 16,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Observation.lean"
+      },
+      {
+        "pacote": "base_v2",
+        "nome": "Fase3.cube_example",
+        "tipo": "theorem",
+        "arquivo_lean": "Unified/Fase3/Observation.lean",
+        "linha_lean": 27,
+        "caminho_entrega": "lean4/ambientes/base_integrada/Unified/Fase3/Observation.lean"
+      }
+    ],
+    "parte_volume": "I",
+    "numero_volume": "I.6.6",
+    "originais_77": [
+      "7.6"
+    ],
+    "rotulo_volume": "map:artigo_1:6.6",
+    "tex_volume": "tex/partes/artigo_1.tex",
+    "linha_volume": 502,
+    "pagina_volume": 19
+  }
+]

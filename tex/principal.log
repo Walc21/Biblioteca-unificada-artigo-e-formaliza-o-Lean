@@ -1,0 +1,3041 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Debian) (preloaded format=pdflatex 2026.10.31)  13 NOV 2026 18:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**principal.tex
+(./principal.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/06/14 v26.9 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count287
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2084.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2086.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2088.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2089.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2090.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2092.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2117.
+\U@D=\dimen159
+\l@unhyphenated=\language2
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count288
+Package babel Info: You haven't specified a language as a class or package
+(babel)             option. I'll load 'nil'. Reported on input line 4311.
+Package babel Info: Importing font and identification data for 'nil'
+(babel)             from babel-und-x-nil.ini. Reported on input line 4380.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2026/06/14 v26.9 Nil language
+\l@nil=\language3
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/babel/locale/pt/babel-portuguese.tex)
+Package babel Info: Importing data for 'portuguese'
+(babel)             from babel-pt.ini. Reported on input line 7.
+Package babel Info: Hyphen rules for 'portuguese' set to \l@nil
+(babel)             (\language3). Reported on input line 7.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen160
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen161
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count289
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count290
+\leftroot@=\count291
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count292
+\DOTSCASE@=\count293
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen162
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count294
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count295
+\dotsspace@=\muskip17
+\c@parentequation=\count296
+\dspbrk@lvl=\count297
+\tag@help=\toks23
+\row@=\count298
+\column@=\count299
+\maxfields@=\count300
+\andhelp@=\toks24
+\eqnshift@=\dimen163
+\alignsep@=\dimen164
+\tagshift@=\dimen165
+\tagwidth@=\dimen166
+\totwidth@=\dimen167
+\lineht@=\dimen168
+\@envbody=\toks25
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks32
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count301
+\calc@Bcount=\count302
+\calc@Adimen=\dimen169
+\calc@Bdimen=\dimen170
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count303
+\calc@Cskip=\skip59
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count304
+\l_MT_multwidth_dim=\dimen171
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen172
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen173
+\l_MT_above_intertext_sep=\dimen174
+\l_MT_below_intertext_sep=\dimen175
+\l_MT_above_shortintertext_sep=\dimen176
+\l_MT_below_shortintertext_sep=\dimen177
+\xmathstrut@box=\box55
+\xmathstrut@dim=\dimen178
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count305
+)
+\MT@toks=\toks33
+\MT@tempbox=\box56
+\MT@count=\count306
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks34
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen179
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count307
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip61
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen180
+\Gin@req@width=\dimen181
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen182
+\lightrulewidth=\dimen183
+\cmidrulewidth=\dimen184
+\belowrulesep=\dimen185
+\belowbottomsep=\dimen186
+\aboverulesep=\dimen187
+\abovetopsep=\dimen188
+\cmidrulesep=\dimen189
+\cmidrulekern=\dimen190
+\defaultaddspace=\dimen191
+\@cmidla=\count308
+\@cmidlb=\count309
+\@aboverulesep=\dimen192
+\@belowrulesep=\dimen193
+\@thisruleclass=\count310
+\@lastruleclass=\count311
+\@thisrulewidth=\dimen194
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+\LTleft=\skip62
+\LTright=\skip63
+\LTpre=\skip64
+\LTpost=\skip65
+\LTchunksize=\count312
+\LTcapwidth=\dimen195
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count313
+\LT@rows=\count314
+\c@LT@tables=\count315
+\c@LT@chunks=\count316
+\LT@p@ftn=\toks35
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/tools/array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen196
+\ar@mcellbox=\box62
+\extrarowheight=\dimen197
+\NC@list=\toks36
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box63
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count317
+\float@exts=\toks37
+\float@box=\box64
+\@float@everytoks=\toks38
+\@floatcapt=\box65
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen198
+\TX@old@table=\dimen199
+\TX@old@col=\dimen256
+\TX@target=\dimen257
+\TX@delta=\dimen258
+\TX@cols=\count318
+\TX@ftn=\toks39
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count319
+\mult@box=\box66
+\multicol@leftmargin=\dimen259
+\c@unbalance=\count320
+\c@collectmore=\count321
+\doublecol@number=\count322
+\multicoltolerance=\count323
+\multicolpretolerance=\count324
+\full@width=\dimen260
+\page@free=\dimen261
+\premulticols=\dimen262
+\postmulticols=\dimen263
+\multicolsep=\skip68
+\multicolbaselineskip=\skip69
+\partial@page=\box67
+\last@line=\box68
+\mc@boxedresult=\box69
+\maxbalancingoverflow=\dimen264
+\mult@rightbox=\box70
+\mult@grightbox=\box71
+\mult@firstbox=\box72
+\mult@gfirstbox=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\c@minrows=\count325
+\c@columnbadness=\count326
+\c@finalcolumnbadness=\count327
+\last@try=\dimen265
+\multicolovershoot=\dimen266
+\multicolundershoot=\dimen267
+\mult@nat@firstbox=\box110
+\colbreak@box=\box111
+\mc@col@check@num=\count328
+\g__mc_curr_col_int=\count329
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip70
+\enit@outerparindent=\dimen268
+\enit@toks=\toks40
+\enit@inbox=\box112
+\enit@count@id=\count330
+\enitdp@description=\count331
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks41
+\pgfutil@tempdima=\dimen269
+\pgfutil@tempdimb=\dimen270
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box113
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks42
+\pgfkeys@temptoks=\toks43
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks44
+))
+\pgf@x=\dimen271
+\pgf@y=\dimen272
+\pgf@xa=\dimen273
+\pgf@ya=\dimen274
+\pgf@xb=\dimen275
+\pgf@yb=\dimen276
+\pgf@xc=\dimen277
+\pgf@yc=\dimen278
+\pgf@xd=\dimen279
+\pgf@yd=\dimen280
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count332
+\c@pgf@countb=\count333
+\c@pgf@countc=\count334
+\c@pgf@countd=\count335
+\t@pgf@toka=\toks45
+\t@pgf@tokb=\toks46
+\t@pgf@tokc=\toks47
+\pgf@sys@id@count=\count336
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count337
+\pgfsyssoftpath@bigbuffer@items=\count338
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen281
+\pgfmath@count=\count339
+\pgfmath@box=\box114
+\pgfmath@toks=\toks48
+\pgfmath@stack@operand=\toks49
+\pgfmath@stack@operation=\toks50
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count340
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen282
+\pgf@picmaxx=\dimen283
+\pgf@picminy=\dimen284
+\pgf@picmaxy=\dimen285
+\pgf@pathminx=\dimen286
+\pgf@pathmaxx=\dimen287
+\pgf@pathminy=\dimen288
+\pgf@pathmaxy=\dimen289
+\pgf@xx=\dimen290
+\pgf@xy=\dimen291
+\pgf@yx=\dimen292
+\pgf@yy=\dimen293
+\pgf@zx=\dimen294
+\pgf@zy=\dimen295
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen296
+\pgf@path@lasty=\dimen297
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen298
+\pgf@shorten@start@additional=\dimen299
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box115
+\pgf@hbox=\box116
+\pgf@layerbox@main=\box117
+\pgf@picture@serial@count=\count341
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen300
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen301
+\pgf@pt@y=\dimen302
+\pgf@pt@temp=\dimen303
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen304
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen305
+\pgf@sys@shading@range@num=\count342
+\pgf@shadingcount=\count343
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box118
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box119
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen306
+\pgf@nodesepend=\dimen307
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen308
+\pgffor@skip=\dimen309
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count344
+\pgfplotmarksize=\dimen310
+)
+\tikz@lastx=\dimen311
+\tikz@lasty=\dimen312
+\tikz@lastxsaved=\dimen313
+\tikz@lastysaved=\dimen314
+\tikz@lastmovetox=\dimen315
+\tikz@lastmovetoy=\dimen316
+\tikzleveldistance=\dimen317
+\tikzsiblingdistance=\dimen318
+\tikz@figbox=\box120
+\tikz@figbox@bg=\box121
+\tikz@tempbox=\box122
+\tikz@tempbox@bg=\box123
+\tikztreelevel=\count345
+\tikznumberofchildren=\count346
+\tikznumberofcurrentchild=\count347
+\tikz@fig@count=\count348
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count349
+\pgfmatrixcurrentcolumn=\count350
+\pgf@matrix@numberofcolumns=\count351
+)
+\tikz@expandcount=\count352
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.co
+de.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen319
+\pgfarrowlength=\dimen320
+\pgfarrowwidth=\dimen321
+\pgfarrowlinewidth=\dimen322
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositionin
+g.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.
+tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.t
+ex
+File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip71
+\bibsep=\skip72
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count353
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen323
+\captionmargin=\dimen324
+\caption@leftmargin=\dimen325
+\caption@rightmargin=\dimen326
+\caption@width=\dimen327
+\caption@indent=\dimen328
+\caption@parindent=\dimen329
+\caption@hangindent=\dimen330
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count354
+\c@continuedfloat=\count355
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip73
+\f@nch@offset@elh=\skip74
+\f@nch@offset@erh=\skip75
+\f@nch@offset@olh=\skip76
+\f@nch@offset@orh=\skip77
+\f@nch@offset@elf=\skip78
+\f@nch@offset@erf=\skip79
+\f@nch@offset@olf=\skip80
+\f@nch@offset@orf=\skip81
+\f@nch@height=\skip82
+\f@nch@footalignment=\skip83
+\f@nch@widthL=\skip84
+\f@nch@widthC=\skip85
+\f@nch@widthR=\skip86
+\@temptokenb=\toks53
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count356
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen331
+\Hy@linkcounter=\count357
+\Hy@pagecounter=\count358
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count359
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count360
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen332
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count361
+\Field@Width=\dimen333
+\Fld@charsize=\dimen334
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count362
+\c@Item=\count363
+\c@Hfootnote=\count364
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-06-17 v7.01r Hyperref driver for pdfTeX
+\Fld@listcount=\count365
+\c@bookmark@seq@number=\count366
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip87
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7836.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7852.
+Package cleveref Info: no abbreviation of names on input line 7852.
+)
+==> First Aid for cleveref.sty applied!
+Package hyperref Info: Option `colorlinks' set `true' on input line 26.
+\c@teorema=\count367
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
+4.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count368
+) (./principal.aux)
+\openout1 = `principal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(68.2866pt, 460.93466pt, 68.2866pt)
+* v-part:(T,H,B)=(68.2866pt, 708.47363pt, 68.2866pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=460.93466pt
+* \textheight=708.47363pt
+* \oddsidemargin=-3.98338pt
+* \evensidemargin=-3.98338pt
+* \topmargin=-42.98338pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 184.
+Package microtype Info: Applying patch `item' on input line 184.
+Package microtype Info: Applying patch `toc' on input line 184.
+Package microtype Info: Applying patch `eqnum' on input line 184.
+Package microtype Info: Applying patch `footnote' on input line 184.
+Package microtype Info: Applying patch `verbatim' on input line 184.
+LaTeX Info: Redefining \microtypesetup on input line 184.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count369
+\scratchdimen=\dimen335
+\scratchbox=\box124
+\nofMPsegments=\count370
+\nofMParguments=\count371
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen336
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
+\everyMPtoPDFconversion=\toks55
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 184.
+ (./principal.out)
+(./principal.out)
+\@outlinefile=\write4
+\openout4 = `principal.out'.
+
+Package babel Info: Main language set to 'portuguese'.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+92.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (./principal.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+3.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+3.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
+
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+{/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/var/lib/texmf/fo
+nts/map/pdftex/updmap/pdftex.map}{/home/victor/Projetos/Arquivos_Extraidos_2026
+-11-13/tex-local/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}] [2{/home/victor
+/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-lo
+cal/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] [3])
+\tf@toc=\write5
+\openout5 = `principal.toc'.
+
+ [4] (./partes/artigo_1.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 8.
+ [5
+
+] [6{/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/victor/Projetos/Arquivos_Extraidos_
+2026-11-13/tex-local/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+<figuras/artigo_1/01_calkin_wilf.pdf, id=677, 365.77654pt x 157.58473pt>
+File: figuras/artigo_1/01_calkin_wilf.pdf Graphic file (type pdf)
+<use figuras/artigo_1/01_calkin_wilf.pdf>
+Package pdftex.def Info: figuras/artigo_1/01_calkin_wilf.pdf  used on input lin
+e 110.
+(pdftex.def)             Requested size: 433.2797pt x 186.67934pt.
+ [7]
+<figuras/artigo_1/02_celulas.pdf, id=692, 368.99918pt x 134.63487pt>
+File: figuras/artigo_1/02_celulas.pdf Graphic file (type pdf)
+<use figuras/artigo_1/02_celulas.pdf>
+Package pdftex.def Info: figuras/artigo_1/02_celulas.pdf  used on input line 13
+6.
+(pdftex.def)             Requested size: 424.05904pt x 154.73643pt.
+ [8 <./figuras/artigo_1/01_calkin_wilf.pdf>] [9 <./figuras/artigo_1/02_celulas.
+pdf>]
+<figuras/artigo_1/03_montagem_continua.pdf, id=766, 457.6859pt x 185.27594pt>
+File: figuras/artigo_1/03_montagem_continua.pdf Graphic file (type pdf)
+<use figuras/artigo_1/03_montagem_continua.pdf>
+Package pdftex.def Info: figuras/artigo_1/03_montagem_continua.pdf  used on inp
+ut line 222.
+(pdftex.def)             Requested size: 460.93466pt x 186.60138pt.
+ [10] [11 <./figuras/artigo_1/03_montagem_continua.pdf>]
+<figuras/artigo_1/04_relu.pdf, id=819, 473.77061pt x 174.27484pt>
+File: figuras/artigo_1/04_relu.pdf Graphic file (type pdf)
+<use figuras/artigo_1/04_relu.pdf>
+Package pdftex.def Info: figuras/artigo_1/04_relu.pdf  used on input line 284.
+(pdftex.def)             Requested size: 460.93466pt x 169.5596pt.
+ [12] [13 <./figuras/artigo_1/04_relu.pdf>]
+<figuras/artigo_1/05_taxa_exponencial.pdf, id=876, 444.52055pt x 145.30717pt>
+File: figuras/artigo_1/05_taxa_exponencial.pdf Graphic file (type pdf)
+<use figuras/artigo_1/05_taxa_exponencial.pdf>
+Package pdftex.def Info: figuras/artigo_1/05_taxa_exponencial.pdf  used on inpu
+t line 375.
+(pdftex.def)             Requested size: 451.71399pt x 147.6637pt.
+
+[14] [15 <./figuras/artigo_1/05_taxa_exponencial.pdf>] [16]
+<figuras/artigo_1/06_refinamento_certificado.pdf, id=942, 467.16501pt x 334.244
+8pt>
+File: figuras/artigo_1/06_refinamento_certificado.pdf Graphic file (type pdf)
+<use figuras/artigo_1/06_refinamento_certificado.pdf>
+Package pdftex.def Info: figuras/artigo_1/06_refinamento_certificado.pdf  used 
+on input line 470.
+(pdftex.def)             Requested size: 414.83838pt x 296.8088pt.
+ [17] [18 <./figuras/artigo_1/06_refinamento_certificado.pdf>] [19] [20]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 572.
+) [21
+
+]
+(./partes/normalizacao.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+76.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [22
+
+] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+[32] [33] [34
+
+]) [35] (./partes/artigo_2.tex [36
+
+] [37] [38] [39] [40]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+82.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/
+tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [41{/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-ts1.enc}] [42] [43] [44]
+[45]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 785.
+ [46] [47]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 936
+.
+
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texliv
+e/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+) [48] [49] [50]
+Underfull \hbox (badness 1337) in paragraph at lines 1139--1145
+[]\T1/lmr/bx/n/10.95 (+20) Algoritmo III.3.25 \T1/lmr/m/n/10.95 (+20) (enumeraç
+ão exata do catálogo)\T1/lmr/bx/n/10.95 (+20) . []\T1/lmr/m/it/10.95 (+20) Para
+ parâmetros pequenos, gere
+ []
+
+[51] [52] [53] [54] [55]
+<figuras/artigo_2/fig01_estado_fronteira.pdf, id=1564, 621.52202pt x 216.81pt>
+File: figuras/artigo_2/fig01_estado_fronteira.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig01_estado_fronteira.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig01_estado_fronteira.pdf  used on i
+nput line 1617.
+(pdftex.def)             Requested size: 424.05904pt x 147.93169pt.
+ [56 <./figuras/artigo_2/fig01_estado_fronteira.pdf>]
+[57] [58] [59] [60] [61] [62] [63] [64] [65]
+<figuras/artigo_2/fig02_comparacao_seletores.pdf, id=1764, 664.88402pt x 256.55
+85pt>
+File: figuras/artigo_2/fig02_comparacao_seletores.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig02_comparacao_seletores.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig02_comparacao_seletores.pdf  used 
+on input line 2438.
+(pdftex.def)             Requested size: 460.93466pt x 177.8594pt.
+ [66 <./figuras/artigo_2/fig02_comparacao_seletores.pdf>] [67] [68] [69]
+<figuras/artigo_2/fig03_constante_quadratica.pdf, id=1845, 514.01863pt x 251.89
+47pt>
+File: figuras/artigo_2/fig03_constante_quadratica.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig03_constante_quadratica.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig03_constante_quadratica.pdf  used 
+on input line 2797.
+(pdftex.def)             Requested size: 405.62474pt x 198.77937pt.
+ [70] [71 <./figuras/artigo_2/fig03_constante_quadratica.pdf>]
+<figuras/artigo_2/fig04_fases_piecewise.pdf, id=1892, 513.84798pt x 260.55908pt
+>
+File: figuras/artigo_2/fig04_fases_piecewise.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig04_fases_piecewise.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig04_fases_piecewise.pdf  used on in
+put line 2930.
+(pdftex.def)             Requested size: 405.62474pt x 205.68037pt.
+ [72 <./figuras/artigo_2/fig04_fases_piecewise.pdf>]
+<figuras/artigo_2/fig05_envelope_c2.pdf, id=1926, 513.6653pt x 262.98238pt>
+File: figuras/artigo_2/fig05_envelope_c2.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig05_envelope_c2.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig05_envelope_c2.pdf  used on input 
+line 3027.
+(pdftex.def)             Requested size: 405.62474pt x 207.66951pt.
+
+[73] [74 <./figuras/artigo_2/fig05_envelope_c2.pdf>]
+<figuras/artigo_2/fig08_codificacoes.pdf, id=1967, 475.20744pt x 238.45897pt>
+File: figuras/artigo_2/fig08_codificacoes.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig08_codificacoes.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig08_codificacoes.pdf  used on input
+ line 3124.
+(pdftex.def)             Requested size: 377.96979pt x 189.67221pt.
+ [75 <./figuras/artigo_2/fig08_codificacoes.pdf>]
+<figuras/artigo_2/fig06_enderecos.pdf, id=2003, 633.16335pt x 227.3646pt>
+File: figuras/artigo_2/fig06_enderecos.pdf Graphic file (type pdf)
+<use figuras/artigo_2/fig06_enderecos.pdf>
+Package pdftex.def Info: figuras/artigo_2/fig06_enderecos.pdf  used on input li
+ne 3218.
+(pdftex.def)             Requested size: 424.05904pt x 152.27797pt.
+ [76] [77 <./figuras/artigo_2/fig06_enderecos.pdf>])
+[78
+
+] (./partes/artigo_3.tex [79
+
+] [80] [81] [82] [83] [84] [85]
+<figuras/artigo_3/fig_altura_agendas.pdf, id=2221, 520.34402pt x 310.761pt>
+File: figuras/artigo_3/fig_altura_agendas.pdf Graphic file (type pdf)
+<use figuras/artigo_3/fig_altura_agendas.pdf>
+Package pdftex.def Info: figuras/artigo_3/fig_altura_agendas.pdf  used on input
+ line 653.
+(pdftex.def)             Requested size: 405.62474pt x 242.25983pt.
+ [86] [87 <./figuras/artigo_3/fig_altura_agendas.pdf>] [88] [89] [90]
+<figuras/artigo_3/fig_restricoes_rede.pdf, id=2338, 726.86981pt x 251.37099pt>
+File: figuras/artigo_3/fig_restricoes_rede.pdf Graphic file (type pdf)
+<use figuras/artigo_3/fig_restricoes_rede.pdf>
+Package pdftex.def Info: figuras/artigo_3/fig_restricoes_rede.pdf  used on inpu
+t line 1074.
+(pdftex.def)             Requested size: 405.62474pt x 140.27966pt.
+ [91] [92 <./figuras/artigo_3/fig_restricoes_rede.pdf>] [93] [94] [95] [96]
+<figuras/artigo_3/fig_reversibilidade_regularizada.pdf, id=2451, 843.54669pt x 
+233.36798pt>
+File: figuras/artigo_3/fig_reversibilidade_regularizada.pdf Graphic file (type 
+pdf)
+<use figuras/artigo_3/fig_reversibilidade_regularizada.pdf>
+Package pdftex.def Info: figuras/artigo_3/fig_reversibilidade_regularizada.pdf 
+ used on input line 1543.
+(pdftex.def)             Requested size: 451.71399pt x 124.96635pt.
+ [97 <./figuras/artigo_3/fig_reversibilidade_regularizada.pdf>]) [98] (./partes
+/complemento_original.tex
+[99
+
+] [100]) [101] (./mapa_formal.tex
+Underfull \hbox (badness 4328) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 23--23
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 23--23
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 23--23
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas:
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 32--32
+\T1/lmr/m/n/10 (+20) Ver declaracoes e contratos nos fontes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/10 (+20) composicao executavel com avaliacao
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 33--33
+\T1/lmr/m/n/10 (+20) uma implementacao completa ligada ao
+ []
+
+[102
+
+]
+Underfull \hbox (badness 5893) in paragraph at lines 42--42
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 42--42
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 43--43
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 43--43
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 44--44
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 44--44
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 45--45
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 45--45
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 45--45
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 45--45
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 46--46
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 46--46
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 46--46
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 46--46
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 47--47
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 47--47
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 47--47
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 47--47
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 48--48
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 48--48
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 49--49
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 49--49
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 50--50
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 50--50
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 51--51
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 51--51
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 51--51
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 51--51
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 52--52
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 52--52
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 52--52
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 52--52
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 53--53
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 53--53
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 54--54
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 54--54
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 54--54
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 54--54
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 55--55
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 55--55
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 55--55
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 55--55
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 56--56
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 56--56
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 57--57
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 57--57
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 57--57
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 57--57
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 58--58
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 58--58
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 59--59
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 59--59
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 59--59
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 59--59
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 60--60
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 60--60
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 61--61
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 61--61
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 61--61
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 61--61
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 62--62
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 62--62
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 62--62
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 62--62
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 63--63
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 63--63
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 64--64
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 64--64
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 65--65
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 65--65
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 65--65
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 65--65
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 66--66
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 66--66
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 66--66
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 66--66
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 67--67
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 67--67
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 67--67
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 67--67
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 68--68
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 68--68
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 68--68
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 68--68
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 69--69
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 69--69
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 69--69
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 69--69
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 70--70
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 70--70
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 71--71
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 71--71
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 72--72
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 72--72
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 73--73
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 73--73
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 74--74
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 74--74
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 75--75
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 75--75
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 76--76
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 76--76
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 77--77
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 77--77
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 78--78
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 78--78
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 78--78
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 78--78
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 79--79
+\T1/lmr/m/n/10 (+20) recebido preservado. A identificacao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+\T1/lmr/m/n/10 (+20) dos tipos de atomos, enderecos,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 79--79
+\T1/lmr/m/n/10 (+20) classes e erros com a v2 esta provada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+\T1/lmr/m/n/10 (+20) nas pontes Normalization; consultar
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 80--80
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 80--80
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 80--80
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 80--80
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 81--81
+[]|\T1/lmr/m/n/10 (+20) Integrado à base. Identificacao com
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 81--81
+\T1/lmr/m/n/10 (+20) os tipos concretos da v2 provada nos
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 81--81
+\T1/lmr/m/n/10 (+20) modulos NormalizationAtoms, Contracts,
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 81--81
+\T1/lmr/m/n/10 (+20) Enumerations, Classes, Errors e ReLU.
+ []
+
+[103] [104] [105] [106] [107]
+Underfull \hbox (badness 6445) in paragraph at lines 90--90
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Cota de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) interpolação provada com \T1/lmtt/m/n/10 ContDiffOn
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) via extensão $\OML/lmm/m/it/10 C[]$ \T1/lmr/m/n/10 (+20) p
+ortada da Fase 3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) (\T1/lmtt/m/n/10 Pendencias/Extensao.lean\T1/lmr/m/n/10 (+
+20) ); densidade
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) e forma ReLU já batiam. Compilado
+ []
+
+
+Underfull \hbox (badness 7116) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) com Lean/Mathlib 4.28.0 (\T1/lmtt/m/n/10 lake build
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/lmtt/m/n/10 Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/10 prop
+ext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 90--90
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 95--95
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 98--98
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 100--100
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 102--102
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas: $\T1/lmtt/m/n/10 P e
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 102--102
+\T1/lmtt/m/n/10 n d e n c i a s . c o d i n g _ f o r m a t s _ c o m p a r
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Classe
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 106--106
+\T1/lmtt/m/n/10 FRMIcc R M \T1/lmr/m/n/10 (+20) como em III.3.15; mesma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\T1/lmr/m/n/10 (+20) árvore determinística \T1/lmtt/m/n/10 uniformTree
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 106--106
+\T1/lmtt/m/n/10 (jvals f r)\T1/lmr/m/n/10 (+20) , que só amostra $\OML/lmm/m/it
+/10 f$ \T1/lmr/m/n/10 (+20) em
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 106--106
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 106--106
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Classe
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 107--107
+\T1/lmtt/m/n/10 FRMIcc R M \T1/lmr/m/n/10 (+20) como em III.3.15; $\OML/lmm/m/i
+t/10 n[]$ \T1/lmr/m/n/10 (+20) e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+\OML/lmm/m/it/10 H[]$ \T1/lmr/m/n/10 (+20) inalterados; \T1/lmtt/m/n/10 jointEr
+r\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 heightFor
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 107--107
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 107--107
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 108--108
+\T1/lmr/m/n/10 (+20) logo as entropias coincidem; codebook
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 115--115
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas: $\T1/lmtt/m/n/10 P e
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 115--115
+\T1/lmtt/m/n/10 n d e n c i a s . g e n _ e q _ R e p C a t ,[]  P e n d e
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 115--115
+\T1/lmtt/m/n/10 n c i a s . e n u m S e l e c t _ e q _ c a n o n$\T1/lmr/m/n/1
+0 (+20) . Ver
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 115--115
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 5022) in paragraph at lines 115--115
+\T1/lmr/m/n/10 (+20) anterior: A recorrencia ou existencia
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 121--121
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 126--126
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas: $\T1/lmtt/m/n/10 P e
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 126--126
+\T1/lmtt/m/n/10 n d e n c i a s . D P p r o g . f i x T a b l e _ c o s
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 126--126
+\T1/lmtt/m/n/10 t ,[]  P e n d e n c i a s . D P p r o g . f i x R o o t _
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 130--130
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas: $\T1/lmtt/m/n/10 P e
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 130--130
+\T1/lmtt/m/n/10 n d e n c i a s . D P p r o g . v a r T a b l e _ c o s
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 130--130
+\T1/lmtt/m/n/10 t ,[]  P e n d e n c i a s . D P p r o g . v a r R o o t _
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 133--133
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 136--136
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 141--141
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 141--141
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+\T1/lmr/m/n/10 (+20) via \T1/lmtt/m/n/10 ContDiffOn\T1/lmr/m/n/10 (+20) , com \
+T1/lmtt/m/n/10 curvIOn \T1/lmr/m/n/10 (+20) ($\OML/lmm/m/it/10 I\OT1/lmr/m/n/10
+ (+20) (\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 (+20) )$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+\T1/lmr/m/n/10 (+20) com $\OML/lmm/m/it/10 f[]$ \T1/lmr/m/n/10 (+20) unilateral
+); as três formas
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 142--142
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 142--142
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 143--143
+\OML/lmm/m/it/10 ^^T$ \T1/lmr/m/n/10 (+20) unilateral em $\OML/lmm/m/it/10 K$\T
+1/lmr/m/n/10 (+20) ; usa \T1/lmtt/m/n/10 extF \T1/lmr/m/n/10 (+20) e lemas
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 143--143
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 143--143
+\T1/lmr/m/n/10 (+20) admite C2 no intervalo; transportar a
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 144--144
+[]|\T1/lmr/m/n/10 (+20) Generalização documentada. O Lean
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 146--146
+[]|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+[108] [109] [110] [111]
+Underfull \hbox (badness 1616) in paragraph at lines 153--153
+\T1/lmr/m/n/10 (+20) e \T1/lmtt/m/n/10 pErr \T1/lmr/m/n/10 (+20) sobre $\OML/lm
+m/m/it/10 K \OT1/lmr/m/n/10 (+20) = [0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 
+1]$ \T1/lmr/m/n/10 (+20) (domínio de
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 153--153
+\OMS/lmsy/m/n/10 k\OML/lmm/m/it/10 f\OMS/lmsy/m/n/10 k$ \T1/lmr/m/n/10 (+20) e 
+atingimento do ínfimo (catálogo
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 153--153
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 154--154
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 155--155
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 157--157
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 158--158
+\T1/lmr/m/n/10 (+20) agenda com folga polinomial, em raiz
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 158--158
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Cotas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/lmr/m/n/10 (+20) quantitativas uniformes sobre bolas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/lmr/m/n/10 (+20) nos tres regimes, com constantes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/lmr/m/n/10 (+20) independentes da funcao e do raio.
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 159--159
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 161--161
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Funcional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/lmtt/m/n/10 rateInf \T1/lmr/m/n/10 (+20) ($\U/euf/m/n/10 a[]$\T1/lmr/m/n/10
+ (+20) ) e agenda \T1/lmtt/m/n/10 H2 R M N
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\OT1/lmr/m/n/10 (+20) = \OMS/lmsy/m/n/10 d\OML/lmm/m/it/10 C[]N[]\OMS/lmsy/m/n/
+10 e$\T1/lmr/m/n/10 (+20) ; supremo sobre \T1/lmtt/m/n/10 FRMIcc
+ []
+
+
+Underfull \hbox (badness 4378) in paragraph at lines 161--161
+\T1/lmtt/m/n/10 R M \T1/lmr/m/n/10 (+20) de $\U/euf/m/n/10 a[] \OMS/lmsy/m/n/10
+ ^^T []f\OML/lmm/m/it/10 R; \OT1/lmr/m/n/10 (+20) (\OML/lmm/m/it/10 M \OT1/lmr/
+m/n/10 (+20) + 4)\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20) 2\OMS/lmsy/m/n/10 g$\T
+1/lmr/m/n/10 (+20) ;
+ []
+
+
+Underfull \hbox (badness 5475) in paragraph at lines 161--161
+\T1/lmr/m/n/10 (+20) para $\OML/lmm/m/it/10 N \OMS/lmsy/m/n/10 ^^U \OT1/lmr/m/n
+/10 (+20) 2$\T1/lmr/m/n/10 (+20) , montagem admissível
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 161--161
+\T1/lmr/m/n/10 (+20) com códigos $\OMS/lmsy/m/n/10 ^^T \OML/lmm/m/it/10 C[]N []
+[]\OT1/lmr/m/n/10 (+20) (2\OML/lmm/m/it/10 N\OT1/lmr/m/n/10 (+20) )$\T1/lmr/m/n
+/10 (+20) . Base:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/lmtt/m/n/10 joint_all_N_Icc\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 joint_bud
+get_Icc\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 162--162
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Piso $\OML/lmm/m/it/10 e[] \OM
+S/lmsy/m/n/10 ^^U
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 162--162
+\OT1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20) (2\OML/lmm/m/it/
+10 H\OT1/lmr/m/n/10 (+20) (\OML/lmm/m/it/10 N\OT1/lmr/m/n/10 (+20) ))$\T1/lmr/m
+/n/10 (+20) , $[]\OT1/lmr/m/n/10 (+20) (1\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20
+) (2\OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (+20) )\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/1
+0 Q[]\OT1/lmr/m/n/10 (+20) ) = 1\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (+20) (2\OML/
+lmm/m/it/10 H\OT1/lmr/m/n/10 (+20) )$
+ []
+
+
+Underfull \hbox (badness 2735) in paragraph at lines 162--162
+\T1/lmr/m/n/10 (+20) e a consequência $\OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (+20) 
+(\OML/lmm/m/it/10 N\OT1/lmr/m/n/10 (+20) ) \OMS/lmsy/m/n/10 ^^U \OT1/lmr/m/n/10
+ (+20) (2\OML/lmm/m/it/10 C\OT1/lmr/m/n/10 (+20) )[]\OML/lmm/m/it/10 N[]$
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 162--162
+\T1/lmr/m/n/10 (+20) (para $\OML/lmm/m/it/10 N \OMS/lmsy/m/n/10 ^^U \OT1/lmr/m/
+n/10 (+20) 1$\T1/lmr/m/n/10 (+20) ), sobre $\OML/lmm/m/it/10 K \OT1/lmr/m/n/10 
+(+20) = [0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 1]$\T1/lmr/m/n/10 (+20) .
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 162--162
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 163--163
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+\T1/lmr/m/n/10 (+20) rasa completa para parametros reais:
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 164--164
+\T1/lmr/m/n/10 (+20) equivalencia aritmetica, arvore canonica
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 164--164
+\T1/lmr/m/n/10 (+20) funcoes em $\OT1/lmr/m/n/10 (+20) [0\OML/lmm/m/it/10 ; \OT
+1/lmr/m/n/10 (+20) 1]$\T1/lmr/m/n/10 (+20) , incluindo $\OML/lmm/m/it/10 M \OT1
+/lmr/m/n/10 (+20) = 0$\T1/lmr/m/n/10 (+20) .
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 164--164
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 165--165
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 169--169
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 170--170
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provas: $\T1/lmtt/m/n/10 P e
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 170--170
+\T1/lmtt/m/n/10 n d e n c i a s . A g e n d a . r a w _ l i b r a r y _ i n
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 170--170
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Teorema
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/lmr/m/n/10 (+20) formalizado na biblioteca original:
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 171--171
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 172--172
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 174--174
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 175--175
+\T1/lmr/m/n/10 (+20) classes de Besov e realizacao em todos
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 175--175
+\T1/lmr/m/n/10 (+20) os regimes declarados, incluindo folga
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 175--175
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 176--176
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Estabilidade
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 176--176
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
+ []
+
+[112] [113] [114] [115] [116] [117]
+Underfull \hbox (badness 8151) in paragraph at lines 183--183
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Resultado original
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 184--184
+\T1/lmr/m/n/10 (+20) com nos livres e derivadas unilaterais
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 184--184
+\T1/lmr/m/n/10 (+20) para funcoes C2 no intervalo fechado.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\T1/lmr/m/n/10 (+20) Compilado com Lean/Mathlib 4.28.0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\T1/lmr/m/n/10 (+20) (\T1/lmtt/m/n/10 lake build Pendencias\T1/lmr/m/n/10 (+20)
+ ); axiomas:
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 184--184
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Resultado original
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 185--185
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Estimativa
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) direta em raiz diadica geral, constante
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) de Whitney explicita e montagem
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) racional com erro adicional arbitrario.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) Compilado com Lean/Mathlib 4.28.0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) (\T1/lmtt/m/n/10 lake build Pendencias\T1/lmr/m/n/10 (+20)
+ ); axiomas:
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 185--185
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Resultado original
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Provado;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+\T1/lmr/m/n/10 (+20) a forma \T1/lmtt/m/n/10 runge_majorant \T1/lmr/m/n/10 (+20
+) dispensa
+ []
+
+
+Underfull \hbox (badness 5288) in paragraph at lines 186--186
+\OML/lmm/m/it/10 J \OMS/lmsy/m/n/10 ^^R \OT1/lmr/m/n/10 (+20) [\OMS/lmsy/m/n/10
+ ^^@\OT1/lmr/m/n/10 (+20) 1\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 1]$\T1/lmr/
+m/n/10 (+20) . Inclui \T1/lmtt/m/n/10 deriv2_runge\T1/lmr/m/n/10 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+\T1/lmr/m/n/10 (+20) Compilado com Lean/Mathlib 4.28.0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+\T1/lmr/m/n/10 (+20) (\T1/lmtt/m/n/10 lake build Pendencias\T1/lmr/m/n/10 (+20)
+ ); axiomas:
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 186--186
+\T1/lmr/m/n/10 (+20) Ressalva anterior: Resultado original
+ []
+
+[118]) [119] (./principal.bbl [120
+
+] [121]) [122] (./principal.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+ ***********
+Package rerunfilecheck Info: File `principal.out' has not changed.
+(rerunfilecheck)             Checksum: ED578A08AEEEC51E3E54DA313B95D585;27319.
+ ) 
+Here is how much of TeX's memory you used:
+ 33426 strings out of 469171
+ 657201 string characters out of 5453943
+ 1142686 words of memory out of 5000000
+ 60561 multiletter control sequences out of 15000+600000
+ 772172 words of font info for 397 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 84i,14n,94p,1282b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></home/victor/Proje
+tos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/
+lm/lmbx10.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/us
+r/share/texmf/fonts/type1/public/lm/lmbx12.pfb></home/victor/Projetos/Arquivos_
+Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
+></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf
+/fonts/type1/public/lm/lmmi10.pfb></home/victor/Projetos/Arquivos_Extraidos_202
+6-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></home/victo
+r/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/
+public/lm/lmmi6.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-lo
+cal/usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></home/victor/Projetos/Arqu
+ivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmmi8
+.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/t
+exmf/fonts/type1/public/lm/lmmi9.pfb></home/victor/Projetos/Arquivos_Extraidos_
+2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></home/vic
+tor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type
+1/public/lm/lmr12.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-
+local/usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></home/victor/Projetos/Arq
+uivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmr7
+.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/t
+exmf/fonts/type1/public/lm/lmr8.pfb></home/victor/Projetos/Arquivos_Extraidos_2
+026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></home/victo
+r/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/
+public/lm/lmri10.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-l
+ocal/usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></home/victor/Projetos/Ar
+quivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lms
+y10.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/shar
+e/texmf/fonts/type1/public/lm/lmsy5.pfb></home/victor/Projetos/Arquivos_Extraid
+os_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></home/
+victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/t
+ype1/public/lm/lmsy7.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/t
+ex-local/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></home/victor/Projetos
+/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/
+lmsy9.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/sh
+are/texmf/fonts/type1/public/lm/lmtt10.pfb></home/victor/Projetos/Arquivos_Extr
+aidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb></
+home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/victor/Projeto
+s/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msam7.pfb></home/victor/Projetos/Arquivos_Extraidos
+_2026-11-13/tex-local/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-loc
+al/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><
+/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive
+/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on principal.pdf (122 pages, 1346745 bytes).
+PDF statistics:
+ 3270 PDF objects out of 3580 (max. 8388607)
+ 2886 compressed objects within 29 object streams
+ 780 named destinations out of 1000 (max. 500000)
+ 75197 words of extra memory for PDF output out of 89155 (max. 10000000)
+

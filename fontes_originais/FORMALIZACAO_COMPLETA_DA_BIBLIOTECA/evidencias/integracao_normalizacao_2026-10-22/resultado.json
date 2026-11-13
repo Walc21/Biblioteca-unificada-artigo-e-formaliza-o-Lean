@@ -1,0 +1,120 @@
+{
+  "status": "aprovado",
+  "build_jobs": 8089,
+  "modulos_novos": [
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationAtoms.lean",
+      "sha256": "a65565e9f36d80f1535141b92d546ce8fa27003ebe997bb5aa5068ccb365ef56"
+    },
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationClasses.lean",
+      "sha256": "d8e56025b538e89b70683182fc25f5aab28b469382fe03b806986f65d1e9f025"
+    },
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationContracts.lean",
+      "sha256": "f7a4eb90f4785652b8bac98c66424cf5732785ce471b397fa7efa7f8ff11ef97"
+    },
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationEnumerations.lean",
+      "sha256": "45f3bf9d8d4e50c7e3586c99c1670cd94073b99cfbb29b276934cce3c01885ae"
+    },
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationErrors.lean",
+      "sha256": "a041c7472c7f9d9cb3b8bfbecf1d6458c8638af1162678c128d272e8105d5ec9"
+    },
+    {
+      "arquivo": "Unified/SemanticBridge/NormalizationReLU.lean",
+      "sha256": "06c75578d171856a757f9c549a1b7aae41888b182680d9e4f7e677d9d5df7c15"
+    }
+  ],
+  "declaracoes_publicas_novas": {
+    "def": 7,
+    "theorem": 67
+  },
+  "auditoria_integrada": {
+    "axioms_union": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "declarations": 3265,
+    "dependency_constants_visited": 49979,
+    "modules_with_declarations": [
+      "Unified.SemanticBridge.Assemblies",
+      "Unified.Consolidado.Sec7.Catalogs",
+      "Unified.Consolidado.Sec7.EntropyUpper",
+      "Unified.Consolidado.Lib.Library",
+      "Unified.Fase3.Assembly",
+      "Unified.SemanticBridge.Geometry",
+      "Unified.Consolidado.Sec7.Catalog",
+      "RequestProject.Appendix",
+      "Unified.Consolidado.Sec7.Codec",
+      "Unified.SemanticBridge.NormalizationClasses",
+      "Unified.SemanticBridge.NormalizationAtoms",
+      "Unified.Consolidado.Sec4.ReLU",
+      "Unified.Consolidado.Sec7.Heights",
+      "Unified.SemanticBridge.CanonicalAtoms",
+      "RequestProject.ReLU",
+      "RequestProject.Enumeration",
+      "Unified.SemanticBridge.NormalizationReLU",
+      "Unified.SemanticBridge.NormalizationEnumerations",
+      "Unified.Consolidado.Sec7.Address",
+      "Unified.Fase1.Dyadic",
+      "Unified.Fase3.Calibration",
+      "Unified.Consolidado.Sec7.Chain",
+      "RequestProject.Normalization",
+      "RequestProject.Error",
+      "RequestProject.Chain",
+      "Unified.Fase3.IntervalArith",
+      "Unified.Fase3.Transcendental",
+      "Unified.Consolidado.Sec7.Entropy",
+      "Unified.Consolidado.Sec7.Bits",
+      "Unified.Fase3.Rates",
+      "Unified.Consolidado.Sec7.Serialization",
+      "Unified.Consolidado.Lib.Assembly",
+      "Unified.Consolidado.Sec4.Taylor",
+      "Unified.Fase1.CalkinWilf",
+      "Unified.SemanticBridge.Addresses",
+      "Unified.Consolidado.Sec7.EntropyLower",
+      "Unified.Consolidado.Sec7.JointError",
+      "Unified.Consolidado.Sec7.Simultaneous",
+      "Unified.Fase3.Heights",
+      "RequestProject.Basic",
+      "Unified.SemanticBridge.Errors",
+      "Unified.Fase3.Indexing",
+      "Unified.Consolidado.Lib.Indexing",
+      "Unified.Fase3.Extension",
+      "Unified.Fase2.HeightEnum",
+      "Unified.Consolidado.Sec7.Precision",
+      "RequestProject.Bridge",
+      "Unified.Fase3.Cells",
+      "Unified.Consolidado.Sec7.SharpComputable",
+      "Unified.Consolidado.Sec7.Formats",
+      "Unified.Fase3.Refinement",
+      "Unified.SemanticBridge.NormalizationContracts",
+      "Unified.Fase2.Assemblies",
+      "Unified.Fase2.Pairing",
+      "Unified.Fase3.Observation",
+      "Unified.Consolidado.Sec7.Interp",
+      "Unified.Fase2.DyadicCells",
+      "Unified.SemanticBridge.AssemblyEquivalence",
+      "Unified.Consolidado.Lib.Calculus",
+      "Unified.SemanticBridge.NormalizationErrors",
+      "SemanticAudit",
+      "Unified.Fase1.Indexing"
+    ],
+    "theorems": 2544,
+    "unexpected_axioms": []
+  },
+  "base_validacao_completa": "evidencias/validacoes/2026-10-22_19-20-19_L5Io81",
+  "conferencia_nomes_lean": {
+    "nomes": 191,
+    "exit_code": 0,
+    "log": "nomes_integracao.log"
+  },
+  "limites": [
+    "Artigo 2 permanece em ambiente separado; compilacao integral nao implica equivalencia semantica integral com seu texto.",
+    "Os quatro resultados do complemento foram recuperados em TeX; nao foram apresentados como novas provas Lean.",
+    "O arquivo historico auxiliar Fechamento_Parte_2_Formalizacao_Aristotle.tex continua parcialmente recuperado, distinto do fechamento matematico agora integrado."
+  ]
+}

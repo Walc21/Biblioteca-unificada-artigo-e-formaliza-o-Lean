@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "original_integral_e_recortes": "aprovado",
+    "links_do_relatorio": 241,
+    "base_v2_estatica": "evidencias/validacoes/2026-10-22_18-50-36_uDTIkN",
+    "pacotes": "hashes, agregadores, artefatos e logs aprovados; sem nova compilacao nesta etapa"
+  },
+  "pacotes": {
+    "parte_1": {
+      "modulos": 9,
+      "teoremas": 348,
+      "axiomas_inesperados": []
+    },
+    "artigo_2": {
+      "modulos": 31,
+      "teoremas": 1700,
+      "axiomas_inesperados": []
+    }
+  },
+  "novas_provas_lean": 0,
+  "fontes_matematicos_anteriores_editados": 0,
+  "residuos_editoriais": 4,
+  "limite": "Conferencia documental e de integridade; a integracao semantica continua pendente."
+}

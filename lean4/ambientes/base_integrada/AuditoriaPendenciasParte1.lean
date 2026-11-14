@@ -1,3 +1,7 @@
 import PendenciasParte1
 #print axioms PendenciasParte1.certified_refinement
 #print axioms PendenciasParte1.d2_eq_eval2
+#print axioms PendenciasParte1.CoberturaExterna.projected_certificate_sound
+#print axioms PendenciasParte1.CoberturaExterna.refinement_contract_external
+#print axioms PendenciasParte1.CoberturaExterna.certified_refinement_external
+#print axioms PendenciasParte1.CoberturaExterna.thirds_success

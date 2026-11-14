@@ -232,31 +232,36 @@ Original de 77 páginas: 7.3.
 
 Fonte editável: [tex/partes/artigo_1.tex:434](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
 
-Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
+Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto.
 
 - [`Fase3.refineCell`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 29.
 - [`Fase3.refineAll`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 35.
 - [`Fase3.rStar`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 39.
 - [`PendenciasParte1.certRefine`](../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean) — linha 55.
 - [`PendenciasParte1.certified_refinement`](../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean) — linha 135.
+- [`PendenciasParte1.CoberturaExterna.certRefineProjected`](../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean) — linha 69.
+- [`PendenciasParte1.CoberturaExterna.projected_certificate_sound`](../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean) — linha 78.
 
 ## I.6.4 — teorema correção, término e tamanho
 
 Original de 77 páginas: 7.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:449](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
+Fonte editável: [tex/partes/artigo_1.tex:467](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
 
-Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
+Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para qualquer cobertura diádica de [α,β], inclusive externa, sem essa hipótese; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável.
 
 - [`Fase3.refine_terminates`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 222.
 - [`Fase3.refine_correct`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 292.
 - [`PendenciasParte1.certified_refinement`](../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean) — linha 135.
+- [`PendenciasParte1.CoberturaExterna.refinement_contract_external`](../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean) — linha 91.
+- [`PendenciasParte1.CoberturaExterna.certified_refinement_external`](../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean) — linha 126.
+- [`PendenciasParte1.CoberturaExterna.thirds_success`](../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean) — linha 250.
 
 ## I.6.5 — proposição calibração exata para curvatura constante
 
 Original de 77 páginas: 7.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:476](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
+Fonte editável: [tex/partes/artigo_1.tex:496](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -266,7 +271,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.6.
 
-Fonte editável: [tex/partes/artigo_1.tex:502](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
+Fonte editável: [tex/partes/artigo_1.tex:522](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -280,7 +285,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:89](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.1`.
+Fonte editável: [tex/partes/normalizacao.tex:95](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -291,7 +296,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:106](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.2`.
+Fonte editável: [tex/partes/normalizacao.tex:112](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -308,7 +313,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:129](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.3`.
+Fonte editável: [tex/partes/normalizacao.tex:135](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -318,7 +323,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:149](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.4`.
+Fonte editável: [tex/partes/normalizacao.tex:155](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -331,7 +336,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:170](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.5`.
+Fonte editável: [tex/partes/normalizacao.tex:176](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -342,7 +347,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:191](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.1`.
+Fonte editável: [tex/partes/normalizacao.tex:197](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.1`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -359,7 +364,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:228](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.2`.
+Fonte editável: [tex/partes/normalizacao.tex:234](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -370,7 +375,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:241](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.3`.
+Fonte editável: [tex/partes/normalizacao.tex:247](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -380,7 +385,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:262](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.4`.
+Fonte editável: [tex/partes/normalizacao.tex:268](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -391,7 +396,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:275](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.5`.
+Fonte editável: [tex/partes/normalizacao.tex:281](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -406,7 +411,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:314](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.6`.
+Fonte editável: [tex/partes/normalizacao.tex:320](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -417,7 +422,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:329](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.1`.
+Fonte editável: [tex/partes/normalizacao.tex:335](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -431,7 +436,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:354](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.2`.
+Fonte editável: [tex/partes/normalizacao.tex:360](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -444,7 +449,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:382](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.3`.
+Fonte editável: [tex/partes/normalizacao.tex:388](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -459,7 +464,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:393](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.4`.
+Fonte editável: [tex/partes/normalizacao.tex:399](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -473,7 +478,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:430](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.5`.
+Fonte editável: [tex/partes/normalizacao.tex:436](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -491,7 +496,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:468](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.6`.
+Fonte editável: [tex/partes/normalizacao.tex:474](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.6`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -503,7 +508,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:491](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.7`.
+Fonte editável: [tex/partes/normalizacao.tex:497](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.7`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -520,7 +525,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:517](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.1`.
+Fonte editável: [tex/partes/normalizacao.tex:523](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -531,7 +536,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:537](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.2`.
+Fonte editável: [tex/partes/normalizacao.tex:543](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -544,7 +549,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:558](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.3`.
+Fonte editável: [tex/partes/normalizacao.tex:564](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -559,7 +564,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:575](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.4`.
+Fonte editável: [tex/partes/normalizacao.tex:581](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -572,7 +577,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:629](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.5`.
+Fonte editável: [tex/partes/normalizacao.tex:635](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -584,7 +589,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:644](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.6`.
+Fonte editável: [tex/partes/normalizacao.tex:650](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -597,7 +602,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:676](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.1`.
+Fonte editável: [tex/partes/normalizacao.tex:682](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.1`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -610,7 +615,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:693](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.2`.
+Fonte editável: [tex/partes/normalizacao.tex:699](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -622,7 +627,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:705](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.3`.
+Fonte editável: [tex/partes/normalizacao.tex:711](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -636,7 +641,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:731](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.4`.
+Fonte editável: [tex/partes/normalizacao.tex:737](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -650,7 +655,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:749](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.5`.
+Fonte editável: [tex/partes/normalizacao.tex:755](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -661,7 +666,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:769](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.1`.
+Fonte editável: [tex/partes/normalizacao.tex:775](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -672,7 +677,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:800](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.2`.
+Fonte editável: [tex/partes/normalizacao.tex:806](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -682,7 +687,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:820](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.3`.
+Fonte editável: [tex/partes/normalizacao.tex:826](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -692,7 +697,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:844](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.4`.
+Fonte editável: [tex/partes/normalizacao.tex:850](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -703,7 +708,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:890](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.1`.
+Fonte editável: [tex/partes/normalizacao.tex:896](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -714,7 +719,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:920](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.2`.
+Fonte editável: [tex/partes/normalizacao.tex:926](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -726,7 +731,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:948](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.3`.
+Fonte editável: [tex/partes/normalizacao.tex:954](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -736,7 +741,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:965](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.4`.
+Fonte editável: [tex/partes/normalizacao.tex:971](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -748,7 +753,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1013](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.5`.
+Fonte editável: [tex/partes/normalizacao.tex:1019](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -758,7 +763,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1025](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.6`.
+Fonte editável: [tex/partes/normalizacao.tex:1031](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -769,7 +774,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1060](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.7`.
+Fonte editável: [tex/partes/normalizacao.tex:1066](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.7`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -944,7 +949,7 @@ Original de 77 páginas: 8.12.
 
 Fonte editável: [tex/partes/artigo_2.tex:436](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.12`.
 
-Estado: **Formalizado e compilado**. coding_gap_family prova uma cadeia para todo N par. O enunciado deste volume usa N=2^r e raiz J(H-1-r,0); a árvore em raiz única para N=2^r continua não formalizada em Lean (H=N=6 produz suporte [0,3/16], que não é uma célula diádica única). [11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
+Estado: **Formalizado e compilado**. Ressalva anterior, superada: coding_gap_family provava só a cadeia de átomos para N par; a árvore de raiz única J(H-1-r,0), com N=2^r, é construída por famTree e tratada em coding_formats_comparison (ver abaixo). [11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
 - [`Artigo.coding_formats_decoders`](../lean4/ambientes/artigo_2/RequestProject/Formats.lean) — linha 270.
 - [`Artigo.coding_format_orders`](../lean4/ambientes/artigo_2/RequestProject/Formats.lean) — linha 421.
@@ -1414,7 +1419,7 @@ Original de 77 páginas: 17.2.
 
 Fonte editável: [tex/partes/artigo_2.tex:2813](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
 
-Estado: **Generalização documentada**. O Lean dispensa C1: a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos. O texto mantém C1; não foi modificado.
+Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.
 
 - [`Artigo.piecewise_quadratic_count`](../lean4/ambientes/artigo_2/RequestProject/DyadicPhase.lean) — linha 238.
 

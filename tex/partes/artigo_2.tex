@@ -1995,7 +1995,7 @@ troca esse fator de memória por trabalho adicional na comparação.
 % MAPA artigo_2:9.1
 \begin{theorem}[complexidade em número de estados]\label{map:artigo_2:9.1}
 \label{artigo_2:thm:state-complexity}
-Suponha os custos de folha pré-computados. Uma implementação densa do
+Suponha os custos de folha pré-computados e, como modelo de custo, que ler ou escrever uma entrada da tabela, somar e comparar custos custam uma operação cada. Uma implementação densa do
 \cref{artigo_2:alg:variable-tree} usa
 \begin{equation}
  O(S_DM^3)
@@ -2092,7 +2092,7 @@ denominadores de comprimento no máximo
  \right).
  \label{artigo_2:eq:cost-bit-growth}
 \end{equation}
-Consequentemente, a versão densa sem orçamento de folhas pode ser executada em
+Consequentemente, no modelo em que somar, comparar ou reduzir frações de $b$ bits custa $O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit, a versão densa sem orçamento de folhas pode ser executada em
 \begin{equation}
  O\!\left(
  (S_DM^3+S_DPM^2)
@@ -2813,7 +2813,7 @@ produzida por regiões com curvaturas diferentes.
 \begin{theorem}[contagem exata em uma malha diádica base]\label{map:artigo_2:12.2}
 \label{artigo_2:thm:piecewise-quadratic-count}
 Seja $\mathcal Q_{q_0}$ a partição uniforme de $K=[0,1]$ em células
-$Q_i$ de comprimento $2^{-q_0}$. Suponha que $f\in C^1(K)$ seja quadrática
+$Q_i$ de comprimento $2^{-q_0}$. Suponha que $f\in C(K)$ seja quadrática
 em cada $Q_i$ e
 \[
  f''|_{\mathring Q_i}=\kappa_i\ne0,

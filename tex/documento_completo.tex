@@ -1,4 +1,4 @@
-% Fonte único completo. Compilar nesta pasta com pdflatex duas vezes.
+% Fonte única completa. Compilar nesta pasta com pdflatex duas vezes.
 % Figuras externas: figuras/<parte>/<nome>.pdf; bibliografia incorporada.
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=24mm,headheight=14pt]{geometry}
@@ -186,12 +186,12 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Este volume reúne a construção da biblioteca racional em células diádicas, a normalização das montagens, os custos aritméticos e a seleção exata, a teoria direta--inversa e os complementos do manuscrito de 77 páginas. Os enunciados e as demonstrações disponíveis são preservados em cinco partes. A correspondência final relaciona os 151 ambientes da edição atual aos fontes Lean existentes e aos 108 ambientes do manuscrito original. As diferenças semânticas e os resultados ainda sem formalização localizada permanecem identificados.
+Este volume reúne a construção da biblioteca racional em células diádicas, a normalização das montagens, os custos aritméticos e a seleção exata, a teoria direta--inversa e os complementos do manuscrito de 77 páginas. Os enunciados e as demonstrações disponíveis são preservados em cinco partes. A correspondência final relaciona os 151 ambientes da edição atual às fontes Lean existentes e aos 108 ambientes do manuscrito original. As diferenças semânticas e os resultados ainda sem formalização localizada permanecem identificados.
 \end{abstract}
 \section*{Convenções desta edição}
 A numeração tem a forma parte.seção.resultado. As remissões numéricas textuais herdadas dos artigos usam a numeração local da própria parte, salvo indicação explícita de outro artigo. A Parte I corresponde ao Artigo 1; a Parte II contém a normalização auxiliar; as Partes III e IV correspondem aos Artigos 2 e 3; a Parte V conserva os complementos das seções 6 e 21 originais. A correspondência documental reúne os destinos do original sem duplicar seu bloco de custo aritmético.
 
-Os fontes Lean recebidos permanecem inalterados; as novas provas ficam nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1}. Em 13 de novembro de 2026, os três ambientes foram recompilados e as auditorias dessas bibliotecas encontraram apenas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Correspondência herdada e prova compilada permanecem categorias distintas. A pasta \texttt{Fase3} pertence à base do Artigo 1. Dos 42 casos do dossiê original, 41 têm prova Lean compilada e auditada (III.9.1 e III.9.3 sob modelos de custo explícitos, descritos no aparato de correspondência) e um (III.12.3) tem prova textual sincronizada; o enunciado de IV.5.4 foi corrigido porque a cota impressa era falsa. As 77 correspondências inspecionadas herdadas não são promovidas a novas provas; não se afirma formalização integral.
+As fontes Lean recebidas permanecem inalteradas; as novas provas ficam nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1}. Em 13 de novembro de 2026, os três ambientes foram recompilados e as auditorias dessas bibliotecas encontraram apenas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Correspondência herdada e prova compilada permanecem categorias distintas. A pasta \texttt{Fase3} pertence à base do Artigo 1. Dos 42 casos do dossiê original, 41 têm prova Lean compilada e auditada (III.9.1 e III.9.3 sob modelos de custo explícitos, descritos no aparato de correspondência) e um (III.12.3) tem prova textual sincronizada; o enunciado de IV.5.4 foi corrigido porque a cota impressa era falsa. As 77 correspondências inspecionadas herdadas não são promovidas a novas provas; não se afirma formalização integral.
 \tableofcontents
 
 % I | fonte original: artigos/artigo_1/artigo.tex
@@ -797,6 +797,7 @@ $H$&Calibre atômico definido em \eqref{artigo_1:eq:46}.\\
 
 
 
+\renewcommand{\abstractname}{Resumo}
 \begin{abstract}
 Fixamos os tipos e as dependências de todas as construções usadas na
 normalização de montagens diádicas. Definimos as representações por
@@ -807,6 +808,11 @@ formulações com os mesmos limites de folhas e altura. A ordenação finita,
 a cadeia de nós e a extensão ReLU recebem construções explícitas. As
 operações recursivas incluem medidas de término e casos iniciais.
 \end{abstract}
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+We fix the types and dependencies of all constructions used in the normalization of dyadic assemblies. We define the representations by atoms and by addressed cells, their conversions, the function classes, and the budgets and errors in a complete lattice. We prove normalization by active cells and the equivalence of the three formulations with the same leaf and height bounds. The finite ordering, the node chain, and the ReLU extension receive explicit constructions. The recursive operations include termination measures and base cases.
+\end{abstract}
+\renewcommand{\abstractname}{Resumo}
 
 \section{Base de tipos e convenções}
 \label{normalizacao:sec:base}
@@ -2810,8 +2816,8 @@ $N$ & $e_{\rm cert}$ & $e_{\rm exato}$ & $\height_{\max}$ & $H_N$ & $L_{\rm atom
 4 & $\frac{3}{32}$ & $\frac{49}{1024}$ & 64 & 288 & 195 & 115 & 89\\
 8 & $\frac{3}{128}$ & $\frac{49}{4096}$ & 256 & 1152 & 513 & 235 & 211\\
 16 & $\frac{3}{512}$ & $\frac{49}{16384}$ & 1024 & 4608 & 1243 & 495 & 497\\
-32 & $\frac{3}{2048}$ & $\frac{49}{65536}$ & 4096 & 18432 & 2921 & 1067 & 1159\\
-64 & $\frac{3}{8192}$ & $\frac{49}{262144}$ & 16384 & 73728 & 6731 & 2329 & 2669\\
+32 & $\frac{3}{2048}$ & $\frac{49}{65536}$ & 4096 & 18\,432 & 2921 & 1067 & 1159\\
+64 & $\frac{3}{8192}$ & $\frac{49}{262144}$ & 16\,384 & 73\,728 & 6731 & 2329 & 2669\\
 \bottomrule
 \end{tabular}
 }
@@ -4086,7 +4092,7 @@ Na instância principal da \cref{artigo_2:sec:numerical}, com
 $(D,H)=(3,4)$, o alfabeto efetivo tem $M=475$ elementos, contra
 $2S_Dq_H(q_H-1)=15\,180$ pela primeira cota de
 \eqref{artigo_2:eq:value-alphabet-bound} e $36H^6=147\,456$ pela segunda; e a tabela da
-raiz contém $3\,383$ estados realizáveis, contra $M^2=225\,625$ posições
+raiz contém $3383$ estados realizáveis, contra $M^2=225\,625$ posições
 densas, isto é, uma ocupação de $1{,}5\%$. Nas instâncias examinadas, a
 estrutura esparsa reduz substancialmente o trabalho em relação à cota densa de
 pior caso.
@@ -4273,7 +4279,7 @@ de treinamento por perda quadrática em esquemas não lineares
 \subsection{Implementação}
 
 O script
-\path{reproducibility/selecao/seletor_dinamico_exato.py}
+\path{verificacao/seletor_dinamico_exato.py}
 implementa os \cref{artigo_2:alg:fixed-tree,artigo_2:alg:variable-tree}. O domínio numérico é
 \texttt{Fraction}. As tabelas são dicionários esparsos indexados
 por pares de \texttt{Fraction}; a junção dos filhos usa igualdade racional
@@ -4440,17 +4446,17 @@ As rotas de controle são definidas sob o mesmo funcional:
  \centering
  \caption{Regressão sob o mesmo custo racional. Os decimais são
  apresentações dos valores exatos registrados em
- \texttt{resultados.json}.}
+ \texttt{verificacao/resultados.json}.}
  \label{artigo_2:tab:selector-comparison}
  \small
  \begin{tabular}{lrrrr}
 \toprule
 Método & folhas & erro quadrático & bits & objetivo \\
 \midrule
-Ótimo exato & 3 & 0.041497 & 84 & 0.229497 \\
-Malha uniforme & 4 & 0.116159 & 115 & 0.376159 \\
-Adaptativo certificado & 3 & 0.041497 & 84 & 0.229497 \\
-Heurística gulosa & 1 & 0.517803 & 24 & 0.565803 \\
+Ótimo exato & 3 & 0{,}041497 & 84 & 0{,}229497 \\
+Malha uniforme & 4 & 0{,}116159 & 115 & 0{,}376159 \\
+Adaptativo certificado & 3 & 0{,}041497 & 84 & 0{,}229497 \\
+Heurística gulosa & 1 & 0{,}517803 & 24 & 0{,}565803 \\
 \bottomrule
 \end{tabular}
 
@@ -4819,15 +4825,15 @@ constante, com a lei de refinamento certificado da descrição do refinamento ce
 \toprule
 $N$ & $\lfloor\log_2N\rfloor$ & $E_N^{\rm dia}(q)_\infty$ & $N^2E_N/A$ \\
 \midrule
-1 & 0 & $\frac{1}{4}$ & 1.000000 \\
-2 & 1 & $\frac{1}{16}$ & 1.000000 \\
-3 & 1 & $\frac{1}{16}$ & 2.250000 \\
-4 & 2 & $\frac{1}{64}$ & 1.000000 \\
-7 & 2 & $\frac{1}{64}$ & 3.062500 \\
-8 & 3 & $\frac{1}{256}$ & 1.000000 \\
-15 & 3 & $\frac{1}{256}$ & 3.515625 \\
-16 & 4 & $\frac{1}{1024}$ & 1.000000 \\
-31 & 4 & $\frac{1}{1024}$ & 3.753906 \\
+1 & 0 & $\frac{1}{4}$ & 1{,}000000 \\
+2 & 1 & $\frac{1}{16}$ & 1{,}000000 \\
+3 & 1 & $\frac{1}{16}$ & 2{,}250000 \\
+4 & 2 & $\frac{1}{64}$ & 1{,}000000 \\
+7 & 2 & $\frac{1}{64}$ & 3{,}062500 \\
+8 & 3 & $\frac{1}{256}$ & 1{,}000000 \\
+15 & 3 & $\frac{1}{256}$ & 3{,}515625 \\
+16 & 4 & $\frac{1}{1024}$ & 1{,}000000 \\
+31 & 4 & $\frac{1}{1024}$ & 3{,}753906 \\
 \bottomrule
 \end{tabular}
 
@@ -4981,7 +4987,7 @@ A sincronização e a defasagem previstas por
 
 \subsection{Implementação e auditorias independentes}
 
-O programa \texttt{constante\_diadica.py} implementa duas rotas que não
+O programa \path{verificacao/constante_diadica.py} implementa duas rotas que não
 reutilizam a mesma recorrência: a árvore menos refinada do
 \cref{artigo_2:thm:threshold-optimality} e uma programação dinâmica por número exato
 de folhas,
@@ -5056,8 +5062,8 @@ $[I(f)^2/8,\allowbreak I(f)^2/2]$ constitui o problema de fases para curvatura v
 \toprule
 função & $I(f)^2/8$ & faixa observada de $\varepsilon n_f(\varepsilon)^2$ & $I(f)^2/2$ \\
 \midrule
-$e^x$ & 0.210420 & [0.339008, 0.515293] & 0.841679 \\
-$(x-\frac{1}{2})^3$ & 0.166667 & [0.275877, 0.417099] & 0.666667 \\
+$e^x$ & 0{,}210420 & [0{,}339008; 0{,}515293] & 0{,}841679 \\
+$(x-\frac{1}{2})^3$ & 0{,}166667 & [0{,}275877; 0{,}417099] & 0{,}666667 \\
 \bottomrule
 \end{tabular}
 
@@ -5125,12 +5131,12 @@ erro racional com deslocamentos nodais são objetos distintos; a constante
 assintótica do segundo sob uma agenda fixa de altura permanece em aberto.
 \section{Verificações de codificação e entropia}
 \label{artigo_2:sec:coding-validation}
-Os registros desta seção acompanham os programas da construção original. As verificações usam aritmética racional para os formatos e parâmetros; as curvas e as sondas de distorção são diagnósticos numéricos.
+Os registros desta seção acompanham o programa \path{verificacao/reproduzir_curvas.py}. As verificações usam aritmética racional para os formatos e parâmetros; as curvas e as sondas de distorção são diagnósticos numéricos.
 
 \subsection{Roundtrip dos formatos de codificação}
 
 Os codificadores de \cref{artigo_2:subsec:coding-formats} e seus decodificadores foram
-executados em $4.096$ montagens racionais de teste. Em
+executados em $4096$ montagens racionais de teste. Em
 todos os casos, o fluxo atômico recuperou a assinatura linear por partes e os
 dois fluxos ReLU recuperaram exatamente cada \texttt{Fraction} da rede. Foram
 também verificadas, parâmetro a parâmetro, as cotas
@@ -5149,12 +5155,12 @@ comprimentos sem regressão nem ajuste assintótico. A
 \toprule
 $H$ & $L_{\rm atom}$ & $L_{\rm ReLU,str}$ & $L_{\rm ReLU,rat}$ & razão rat./str.\\
 \midrule
-4 & 29 & 31 & 35 & 1.129\\
-8 & 33 & 35 & 51 & 1.457\\
-16 & 37 & 39 & 83 & 2.128\\
-32 & 41 & 43 & 147 & 3.419\\
-64 & 45 & 47 & 275 & 5.851\\
-128 & 49 & 51 & 531 & 10.412\\
+4 & 29 & 31 & 35 & 1{,}129\\
+8 & 33 & 35 & 51 & 1{,}457\\
+16 & 37 & 39 & 83 & 2{,}128\\
+32 & 41 & 43 & 147 & 3{,}419\\
+64 & 45 & 47 & 275 & 5{,}851\\
+128 & 49 & 51 & 531 & 10{,}412\\
 \bottomrule
 \end{tabular}
 
@@ -5234,17 +5240,17 @@ $|\Library_H|$ e $n^\sharp$ e $8$ para $n$, como previsto.
 \toprule
 $H$ & $|\Library_H|$ & $|\Library_H|/(18H^6)$ & $\max n$ ($\Gamma$) & $\max n^\sharp=$ cota inf.\\
 \midrule
-2 & 252 & 0.2188 & 3231 & 251\\
-3 & 3150 & 0.2401 & 87127 & 3149\\
-4 & 14168 & 0.1922 & 519638 & 14167\\
-6 & 142692 & 0.1699 & 9515572 & 142691\\
-8 & 897840 & 0.1903 & 113062957 & 897839\\
-12 & 9192456 & 0.1710 & 2233224112 & 9192455\\
-16 & 50315232 & 0.1666 & 20668188575 & 50315231\\
-24 & 582320976 & 0.1693 & 534070940833 & 582320975\\
-32 & 3378271680 & 0.1748 & 5622328883731 & 3378271679\\
-48 & 36947682720 & 0.1678 & 131374552971847 & 36947682719\\
-64 & 206341325696 & 0.1668 & 1289353431661883 & 206341325695\\
+2 & 252 & 0{,}2188 & 3231 & 251\\
+3 & 3150 & 0{,}2401 & 87\,127 & 3149\\
+4 & 14\,168 & 0{,}1922 & 519\,638 & 14\,167\\
+6 & 142\,692 & 0{,}1699 & 9\,515\,572 & 142\,691\\
+8 & 897\,840 & 0{,}1903 & 113\,062\,957 & 897\,839\\
+12 & 9\,192\,456 & 0{,}1710 & 2\,233\,224\,112 & 9\,192\,455\\
+16 & 50\,315\,232 & 0{,}1666 & 20\,668\,188\,575 & 50\,315\,231\\
+24 & 582\,320\,976 & 0{,}1693 & 534\,070\,940\,833 & 582\,320\,975\\
+32 & 3\,378\,271\,680 & 0{,}1748 & 5\,622\,328\,883\,731 & 3\,378\,271\,679\\
+48 & 36\,947\,682\,720 & 0{,}1678 & 131\,374\,552\,971\,847 & 36\,947\,682\,719\\
+64 & 206\,341\,325\,696 & 0{,}1668 & 1\,289\,353\,431\,661\,883 & 206\,341\,325\,695\\
 \bottomrule
 \end{tabular}
 
@@ -5264,7 +5270,7 @@ gerador aritmético e da enumeração por cascas, sempre para o calibre
  \label{artigo_2:fig:enderecos-pt}
 \end{figure}
 
-Foi ainda verificada, para $0\le n^\sharp<20{,}000$, a bijetividade de
+Foi ainda verificada, para $0\le n^\sharp<20\,000$, a bijetividade de
 $\Gamma^\sharp$ nos dois sentidos e a coincidência dos conjuntos
 $\Gamma(\{0,\ldots,N\})$ e $\Gamma^\sharp(\{0,\ldots,N'\})$ quando restritos a
 uma mesma casca de altura.
@@ -5294,7 +5300,7 @@ Para a interpolação estritamente diádica, o erro normalizado admite o envelop
 \section{Introdução}
 Uma função linear por partes pode ter erro de aproximação nulo em todas as escalas posteriores e conservar quinas. Por isso, uma taxa rápida do melhor erro, tomada isoladamente, não caracteriza suavidade de ordem superior a um. Sob restrições aritméticas, soma-se outra questão: o catálogo de altura fixa não é invariante por multiplicação por escalares reais.
 
-Este artigo formula as classes de aproximação compatíveis com essa estrutura e estabelece suas relações com espaços de Besov. A biblioteca e os resultados de custo e seleção foram desenvolvidos nos dois primeiros artigos \citep{artigo_2-oliveiraI,artigo_2-oliveiraII}. A teoria de aproximação não linear e os teoremas diretos e inversos fornecem o contexto funcional \citep{artigo_1-devore1998,artigo_2-devorepopov1988,artigo_2-petrushev1988,artigo_2-devorelorentz1993}. Funcionais de realização relacionam aproximação restrita e módulos de suavidade \citep{artigo_2-hristovivanov1990}. As relações com redes ReLU e restrições de pesos são tratadas em \citet{artigo_2-devorehaninpetrova2021,artigo_1-daubechies2022,artigo_2-gribonval2022,artigo_2-grohs2023,artigo_1-guhring2021}.
+Este artigo formula as classes de aproximação compatíveis com essa estrutura e estabelece suas relações com espaços de Besov. A biblioteca e os resultados de custo e seleção foram desenvolvidos nos dois primeiros artigos \citep{artigo_2-oliveiraI,artigo_2-oliveiraII}. A teoria de aproximação não linear e os teoremas diretos e inversos fornecem o contexto funcional \citep{artigo_1-devore1998,artigo_2-devorepopov1988,artigo_2-petrushev1988,artigo_2-devorelorentz1993}. Funcionais de realização relacionam aproximação restrita e módulos de suavidade \citep{artigo_2-hristovivanov1990}. As relações com redes ReLU e restrições de pesos são tratadas em \citet{artigo_1-devore2021,artigo_1-daubechies2022,artigo_2-gribonval2022,artigo_2-grohs2023,artigo_1-guhring2021}.
 
 O primeiro resultado acompanha o denominador racional comum e fornece agendas suficientes de altura. O segundo relaciona erro bruto e crescimento das inclinações a uma regularidade inversa com perda. A agudeza na biblioteca original é demonstrada na faixa $0<\alpha\le\gamma$. A reversibilidade exata com redes rasas exige parâmetros racionais e quebras diádicas; a extensão marcada conserva explicitamente o suporte de peças constantes.
 
@@ -5917,17 +5923,17 @@ $N$ & $\height(y_0)$ & $\height(s)$ & $H_{\rm efetivo}$ & $4N^2$ & $N^3$\\
 4 & 64 & 25 & 64 & 64 & 64\\
 8 & 256 & 57 & 256 & 256 & 512\\
 16 & 1024 & 121 & 1024 & 1024 & 4096\\
-32 & 4096 & 249 & 4096 & 4096 & 32768\\
-64 & 16384 & 505 & 16384 & 16384 & 262144\\
-128 & 65536 & 1017 & 65536 & 65536 & 2097152\\
+32 & 4096 & 249 & 4096 & 4096 & 32\,768\\
+64 & 16\,384 & 505 & 16\,384 & 16\,384 & 262\,144\\
+128 & 65\,536 & 1017 & 65\,536 & 65\,536 & 2\,097\,152\\
 \bottomrule
 \end{tabular}
 
  \caption{Auditoria racional exata da agenda para $f_\star$. Em $N=32$ e
  $128$, recuperam-se respectivamente
- $(\height(y_0),\height(s))=(4096,249)$ e $(65536,1017)$. Os valores
+ $(\height(y_0),\height(s))=(4096,249)$ e $(65\,536,1017)$. Os valores
  tabulados são exatos; em
- \texttt{resultados\_espacos\_aproximacao.json}, somente os diagnósticos
+ \texttt{verificacao/resultados\_espacos\_aproximacao.json}, somente os diagnósticos
  logarítmicos auxiliares são armazenados em ponto flutuante e, por isso, não
  se exige identidade byte a byte desses campos entre plataformas.}
  \label{artigo_3:tab:height-audit}
@@ -5944,7 +5950,7 @@ $N$ & $\height(y_0)$ & $\height(s)$ & $H_{\rm efetivo}$ & $4N^2$ & $N^3$\\
 A \cref{artigo_3:fig:height-schedules} confirma, na construção quadrática auditada, a
 separação entre a agenda provada $N^2$ e a escala comparativa $N^3$.
 
-O programa \texttt{espacos\_aproximacao.py} usa
+O programa \path{verificacao/espacos_aproximacao.py} usa
 \texttt{fractions.Fraction} para reconstruir todos os valores nodais,
 parâmetros, alturas e erros quadráticos. Ele verifica ainda, por enumeração
 de $\mathcal Q_H$, a igualdade \eqref{artigo_3:eq:arithmetic-floor}; reproduz a
@@ -5959,7 +5965,7 @@ seções de programação dinâmica do segundo artigo \citep{artigo_2-oliveiraII
 
 Uma função linear por partes pode ser representada exatamente por uma rede ReLU
 rasa por meio de uma expansão em hinges
-\citep{artigo_2-devorehaninpetrova2021,artigo_1-daubechies2022}. Ela pode, portanto, ter poucas
+\citep{artigo_1-devore2021,artigo_1-daubechies2022}. Ela pode, portanto, ter poucas
 folhas e, por isso, ter erro bruto nulo em todas as escalas posteriores sem
 ganhar suavidade clássica. Essa barreira determina a forma dos teoremas
 inversos desta seção.
@@ -6369,12 +6375,12 @@ profundidade $L$ & blocos & regiões/folhas mín. & altura mín.\\
 \toprule
 $M$ & $\varepsilon$ & $D$ & folhas & cota de folhas & erro/$\varepsilon$\\
 \midrule
-1 & $1/32$ & 12 & 13 & 13 & 0.0099\\
-1 & $1/64$ & 13 & 14 & 14 & 0.0037\\
-1 & $1/128$ & 14 & 15 & 15 & 0.0131\\
-1 & $1/32$ & 11 & 12 & 12 & 0.0245\\
-1 & $1/64$ & 12 & 13 & 13 & 0.0099\\
-1 & $1/128$ & 13 & 14 & 14 & 0.0120\\
+1 & $1/32$ & 12 & 13 & 13 & 0{,}0099\\
+1 & $1/64$ & 13 & 14 & 14 & 0{,}0037\\
+1 & $1/128$ & 14 & 15 & 15 & 0{,}0131\\
+1 & $1/32$ & 11 & 12 & 12 & 0{,}0245\\
+1 & $1/64$ & 12 & 13 & 13 & 0{,}0099\\
+1 & $1/128$ & 13 & 14 & 14 & 0{,}0120\\
 \bottomrule
 \end{tabular}
 
@@ -6733,12 +6739,12 @@ um, em acordo com \eqref{artigo_3:eq:kink-besov-reverse}, e não infinita.
 \toprule
 $N$ & $e_N(\psi)$ & $\omega_2(\psi,N^{-1})$ & $N\omega_2$ & $N^{3/2}\omega_2$\\
 \midrule
-4 & 0 & $1/2$ & 2.000 & 4.000\\
-8 & 0 & $1/4$ & 2.000 & 5.657\\
-16 & 0 & $1/8$ & 2.000 & 8.000\\
-32 & 0 & $1/16$ & 2.000 & 11.314\\
-64 & 0 & $1/32$ & 2.000 & 16.000\\
-128 & 0 & $1/64$ & 2.000 & 22.627\\
+4 & 0 & $1/2$ & 2{,}000 & 4{,}000\\
+8 & 0 & $1/4$ & 2{,}000 & 5{,}657\\
+16 & 0 & $1/8$ & 2{,}000 & 8{,}000\\
+32 & 0 & $1/16$ & 2{,}000 & 11{,}314\\
+64 & 0 & $1/32$ & 2{,}000 & 16{,}000\\
+128 & 0 & $1/64$ & 2{,}000 & 22{,}627\\
 \bottomrule
 \end{tabular}
 
@@ -6839,7 +6845,7 @@ construção na biblioteca original do \cref{artigo_3:thm:critical-tent-comb}.
 
 \subsection{Validação executável}
 
-O programa \texttt{reversibilidade\_regularizada.py} executa uma auditoria
+O programa \path{verificacao/reversibilidade_regularizada.py} executa uma auditoria
 independente em aritmética \texttt{Fraction}. Ele:
 \begin{enumerate}[label=(\roman*),leftmargin=2.2em]
  \item executa $2952$ idas e voltas exatas entre formas hinge e árvores
@@ -7048,11 +7054,11 @@ As categorias abaixo reproduzem a matriz recebida. Correspondência inspecionada
 
 Todos os 42 casos do dossiê de pendências estão fechados: 41 por prova Lean compilada e auditada e III.12.3 por prova textual sincronizada. Permanecem como ressalvas: a reverificação da leitura de $g(t_0)$ em I.4.3 contra o enunciado Lean; o enunciado de IV.5.4, cuja cota impressa era falsa para $M=0$ (contraexemplo documentado e certificado separadamente) e foi corrigida no texto; os modelos de custo de III.9.1 (operações unitárias; o desempate por $\kappa$ não está no programa denso) e de III.9.3 (o custo da aritmética racional em bits é hipótese do modelo). Os demais estados e ressalvas constam das linhas abaixo. As correspondências herdadas não são promovidas a provas verificadas por esta revisão.
 
-Até 13/11/2026, 41 resultados antes pendentes passaram ao estado «Formalizado e compilado»: provas Lean compiladas com Lean/Mathlib 4.28.0 nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1} dos ambientes \texttt{artigo\_2} e \texttt{base\_integrada}, sem \texttt{sorry} e apenas com os axiomas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Os demais estados e ressalvas seguem descritos acima.
+Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado e compilado'': provas Lean compiladas com Lean/Mathlib 4.28.0 nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1} dos ambientes \texttt{artigo\_2} e \texttt{base\_integrada}, sem \texttt{sorry} e apenas com os axiomas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Os demais estados e ressalvas seguem descritos acima.
 
 \subsection*{Parte I}
 \small
-\begin{longtable}{@{}p{.13\linewidth}p{.12\linewidth}p{.23\linewidth}p{.42\linewidth}@{}}
+\begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
 \hyperref[map:artigo_1:2.1]{I.2.1} & 2.1 & \pageref{map:artigo_1:2.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:2.2]{I.2.2} & 2.2 & \pageref{map:artigo_1:2.2} & Correspondência inspecionada\\[4pt]
@@ -7065,174 +7071,174 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado «Formalizado 
 \hyperref[map:artigo_1:3.4]{I.3.4} & 3.4 & \pageref{map:artigo_1:3.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:3.5]{I.3.5} & 3.5 & \pageref{map:artigo_1:3.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:3.6]{I.3.6} & 3.6 & \pageref{map:artigo_1:3.6} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:4.1]{I.4.1} & 4.1 & \pageref{map:artigo_1:4.1} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
+\hyperref[map:artigo_1:4.1]{I.4.1} & 4.1 & \pageref{map:artigo_1:4.1} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
 \hyperref[map:artigo_1:4.2]{I.4.2} & 4.2 & \pageref{map:artigo_1:4.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:4.3]{I.4.3} & 4.3 & \pageref{map:artigo_1:4.3} & Divergência documentada. O operador de extensao normalizado foi integrado a classe concreta da Fase 2. O enunciado TeX deste volume le g(t0) como o valor em t0 da primeira peca (t0 pode estar fora de K); essa leitura nao foi reverificada contra o enunciado Lean.\\[4pt]
+\hyperref[map:artigo_1:4.3]{I.4.3} & 4.3 & \pageref{map:artigo_1:4.3} & Divergência documentada. O operador de extensão normalizado foi integrado à classe concreta da Fase 2. O enunciado TeX deste volume lê $g(t_0)$ como o valor em $t_0$ da primeira peça ($t_0$ pode estar fora de $K$); essa leitura não foi reverificada contra o enunciado Lean.\\[4pt]
 \hyperref[map:artigo_1:4.4]{I.4.4} & 4.4 & \pageref{map:artigo_1:4.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:4.5]{I.4.5} & 4.5 & \pageref{map:artigo_1:4.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:5.1]{I.5.1} & 5.1 & \pageref{map:artigo_1:5.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:5.2]{I.5.2} & 5.2 & \pageref{map:artigo_1:5.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.1]{I.6.1} & 7.1 & \pageref{map:artigo_1:6.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.2]{I.6.2} & 7.2 & \pageref{map:artigo_1:6.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Refinamento recursivo certificado sob hipoteses sobre os majorantes; composicao executavel com avaliacao intervalar e escolha racional ainda requer fechamento.\\[4pt]
-\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Termino e correcao sob os contratos formais; nao equivale a certificar uma implementacao completa ligada ao avaliador intervalar.\\[4pt]
+\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento.\\[4pt]
+\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar.\\[4pt]
 \hyperref[map:artigo_1:6.5]{I.6.5} & 7.5 & \pageref{map:artigo_1:6.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.6]{I.6.6} & 7.6 & \pageref{map:artigo_1:6.6} & Correspondência inspecionada\\[4pt]
 \bottomrule\end{longtable}\normalsize
 
 \subsection*{Parte II}
 \small
-\begin{longtable}{@{}p{.13\linewidth}p{.12\linewidth}p{.23\linewidth}p{.42\linewidth}@{}}
+\begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
-\hyperref[map:normalizacao:2.1]{II.2.1} & -- & \pageref{map:normalizacao:2.1} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:2.2]{II.2.2} & -- & \pageref{map:normalizacao:2.2} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:2.3]{II.2.3} & -- & \pageref{map:normalizacao:2.3} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:2.4]{II.2.4} & -- & \pageref{map:normalizacao:2.4} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:2.5]{II.2.5} & -- & \pageref{map:normalizacao:2.5} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:3.1]{II.3.1} & -- & \pageref{map:normalizacao:3.1} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:3.2]{II.3.2} & -- & \pageref{map:normalizacao:3.2} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:3.3]{II.3.3} & -- & \pageref{map:normalizacao:3.3} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:3.4]{II.3.4} & -- & \pageref{map:normalizacao:3.4} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:3.5]{II.3.5} & -- & \pageref{map:normalizacao:3.5} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:3.6]{II.3.6} & -- & \pageref{map:normalizacao:3.6} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:4.1]{II.4.1} & -- & \pageref{map:normalizacao:4.1} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:4.2]{II.4.2} & -- & \pageref{map:normalizacao:4.2} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:4.3]{II.4.3} & -- & \pageref{map:normalizacao:4.3} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:4.4]{II.4.4} & -- & \pageref{map:normalizacao:4.4} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:4.5]{II.4.5} & -- & \pageref{map:normalizacao:4.5} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:4.6]{II.4.6} & -- & \pageref{map:normalizacao:4.6} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:4.7]{II.4.7} & -- & \pageref{map:normalizacao:4.7} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:5.1]{II.5.1} & -- & \pageref{map:normalizacao:5.1} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:5.2]{II.5.2} & -- & \pageref{map:normalizacao:5.2} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:5.3]{II.5.3} & -- & \pageref{map:normalizacao:5.3} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:5.4]{II.5.4} & -- & \pageref{map:normalizacao:5.4} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:5.5]{II.5.5} & -- & \pageref{map:normalizacao:5.5} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:5.6]{II.5.6} & -- & \pageref{map:normalizacao:5.6} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:6.1]{II.6.1} & -- & \pageref{map:normalizacao:6.1} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:6.2]{II.6.2} & -- & \pageref{map:normalizacao:6.2} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:6.3]{II.6.3} & -- & \pageref{map:normalizacao:6.3} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:6.4]{II.6.4} & -- & \pageref{map:normalizacao:6.4} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:6.5]{II.6.5} & -- & \pageref{map:normalizacao:6.5} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:7.1]{II.7.1} & -- & \pageref{map:normalizacao:7.1} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:7.2]{II.7.2} & -- & \pageref{map:normalizacao:7.2} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:7.3]{II.7.3} & -- & \pageref{map:normalizacao:7.3} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:7.4]{II.7.4} & -- & \pageref{map:normalizacao:7.4} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:8.1]{II.8.1} & -- & \pageref{map:normalizacao:8.1} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:8.2]{II.8.2} & -- & \pageref{map:normalizacao:8.2} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:8.3]{II.8.3} & -- & \pageref{map:normalizacao:8.3} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:8.4]{II.8.4} & -- & \pageref{map:normalizacao:8.4} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:8.5]{II.8.5} & -- & \pageref{map:normalizacao:8.5} & Correspondência inspecionada. Resultado recebido preservado. A identificacao dos tipos de atomos, enderecos, classes e erros com a v2 esta provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
-\hyperref[map:normalizacao:8.6]{II.8.6} & -- & \pageref{map:normalizacao:8.6} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
-\hyperref[map:normalizacao:8.7]{II.8.7} & -- & \pageref{map:normalizacao:8.7} & Integrado à base. Identificacao com os tipos concretos da v2 provada nos modulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipoteses, dominio, funcao e orcamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:2.1]{II.2.1} & -- & \pageref{map:normalizacao:2.1} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:2.2]{II.2.2} & -- & \pageref{map:normalizacao:2.2} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:2.3]{II.2.3} & -- & \pageref{map:normalizacao:2.3} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:2.4]{II.2.4} & -- & \pageref{map:normalizacao:2.4} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:2.5]{II.2.5} & -- & \pageref{map:normalizacao:2.5} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:3.1]{II.3.1} & -- & \pageref{map:normalizacao:3.1} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:3.2]{II.3.2} & -- & \pageref{map:normalizacao:3.2} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:3.3]{II.3.3} & -- & \pageref{map:normalizacao:3.3} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:3.4]{II.3.4} & -- & \pageref{map:normalizacao:3.4} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:3.5]{II.3.5} & -- & \pageref{map:normalizacao:3.5} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:3.6]{II.3.6} & -- & \pageref{map:normalizacao:3.6} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:4.1]{II.4.1} & -- & \pageref{map:normalizacao:4.1} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:4.2]{II.4.2} & -- & \pageref{map:normalizacao:4.2} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:4.3]{II.4.3} & -- & \pageref{map:normalizacao:4.3} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:4.4]{II.4.4} & -- & \pageref{map:normalizacao:4.4} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:4.5]{II.4.5} & -- & \pageref{map:normalizacao:4.5} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:4.6]{II.4.6} & -- & \pageref{map:normalizacao:4.6} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:4.7]{II.4.7} & -- & \pageref{map:normalizacao:4.7} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:5.1]{II.5.1} & -- & \pageref{map:normalizacao:5.1} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:5.2]{II.5.2} & -- & \pageref{map:normalizacao:5.2} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:5.3]{II.5.3} & -- & \pageref{map:normalizacao:5.3} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:5.4]{II.5.4} & -- & \pageref{map:normalizacao:5.4} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:5.5]{II.5.5} & -- & \pageref{map:normalizacao:5.5} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:5.6]{II.5.6} & -- & \pageref{map:normalizacao:5.6} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:6.1]{II.6.1} & -- & \pageref{map:normalizacao:6.1} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:6.2]{II.6.2} & -- & \pageref{map:normalizacao:6.2} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:6.3]{II.6.3} & -- & \pageref{map:normalizacao:6.3} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:6.4]{II.6.4} & -- & \pageref{map:normalizacao:6.4} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:6.5]{II.6.5} & -- & \pageref{map:normalizacao:6.5} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:7.1]{II.7.1} & -- & \pageref{map:normalizacao:7.1} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:7.2]{II.7.2} & -- & \pageref{map:normalizacao:7.2} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:7.3]{II.7.3} & -- & \pageref{map:normalizacao:7.3} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:7.4]{II.7.4} & -- & \pageref{map:normalizacao:7.4} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:8.1]{II.8.1} & -- & \pageref{map:normalizacao:8.1} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:8.2]{II.8.2} & -- & \pageref{map:normalizacao:8.2} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:8.3]{II.8.3} & -- & \pageref{map:normalizacao:8.3} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:8.4]{II.8.4} & -- & \pageref{map:normalizacao:8.4} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:8.5]{II.8.5} & -- & \pageref{map:normalizacao:8.5} & Correspondência inspecionada. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO\_NORMALIZACAO.md.\\[4pt]
+\hyperref[map:normalizacao:8.6]{II.8.6} & -- & \pageref{map:normalizacao:8.6} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
+\hyperref[map:normalizacao:8.7]{II.8.7} & -- & \pageref{map:normalizacao:8.7} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
 \bottomrule\end{longtable}\normalsize
 
 \subsection*{Parte III}
 \small
-\begin{longtable}{@{}p{.13\linewidth}p{.12\linewidth}p{.23\linewidth}p{.42\linewidth}@{}}
+\begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
 \hyperref[map:artigo_2:2.1]{III.2.1} & -- & \pageref{map:artigo_2:2.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:2.2]{III.2.2} & -- & \pageref{map:artigo_2:2.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:2.3]{III.2.3} & -- & \pageref{map:artigo_2:2.3} & Formalizado e compilado. Cota de interpolação provada com \texttt{ContDiffOn} de ordem 2 em \texttt{Icc a b} e \texttt{derivWithin}, via extensão $C^2$ portada da Fase 3 (\texttt{Pendencias/Extensao.lean}); densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:2.3]{III.2.3} & -- & \pageref{map:artigo_2:2.3} & Formalizado e compilado. Cota de interpolação provada com \texttt{ContDiffOn} de ordem 2 em \texttt{Icc a b} e \texttt{derivWithin}, via extensão $C^2$ portada da Fase 3 (\texttt{Pendencias/Extensao.lean}); densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
 \hyperref[map:artigo_2:3.1]{III.3.1} & 8.1 & \pageref{map:artigo_2:3.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.2]{III.3.2} & 8.2 & \pageref{map:artigo_2:3.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.3]{III.3.3} & 8.3 & \pageref{map:artigo_2:3.3} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.4]{III.3.4} & 8.4 & \pageref{map:artigo_2:3.4} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.5]{III.3.5} & 8.5 & \pageref{map:artigo_2:3.5} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:3.5]{III.3.5} & 8.5 & \pageref{map:artigo_2:3.5} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.6]{III.3.6} & 8.6 & \pageref{map:artigo_2:3.6} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.7]{III.3.7} & 8.7 & \pageref{map:artigo_2:3.7} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.8]{III.3.8} & 8.8 & \pageref{map:artigo_2:3.8} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:3.8]{III.3.8} & 8.8 & \pageref{map:artigo_2:3.8} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.9]{III.3.9} & 8.9 & \pageref{map:artigo_2:3.9} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.10]{III.3.10} & 8.10 & \pageref{map:artigo_2:3.10} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:3.10]{III.3.10} & 8.10 & \pageref{map:artigo_2:3.10} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.11]{III.3.11} & 8.11 & \pageref{map:artigo_2:3.11} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.12]{III.3.12} & 8.12 & \pageref{map:artigo_2:3.12} & Formalizado e compilado. Provas: \code{Pendencias.coding_formats_comparison}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: coding\_gap\_family prova uma cadeia para todo N par. O enunciado deste volume usa N=2\textasciicircum{}r e raiz J(H-1-r,0); a arvore em raiz unica para N=2\textasciicircum{}r continua nao formalizada em Lean (H=N=6 produz suporte [0,3/16], que nao e uma celula diadica unica).\\[4pt]
+\hyperref[map:artigo_2:3.12]{III.3.12} & 8.12 & \pageref{map:artigo_2:3.12} & Formalizado e compilado. Provas: \code{Pendencias.coding_formats_comparison}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: coding\_gap\_family prova uma cadeia para todo $N$ par. O enunciado deste volume usa $N=2^r$ e raiz $J(H-1-r,0)$; a árvore em raiz única para $N=2^r$ continua não formalizada em Lean ($H=N=6$ produz suporte $[0,3/16]$, que não é uma célula diádica única).\\[4pt]
 \hyperref[map:artigo_2:3.13]{III.3.13} & 8.13 & \pageref{map:artigo_2:3.13} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.14]{III.3.14} & 8.14 & \pageref{map:artigo_2:3.14} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.15]{III.3.15} & 8.15 & \pageref{map:artigo_2:3.15} & Formalizado e compilado. Classe \texttt{FRMIcc R M} ($C^2$ apenas em $[0,1]$, $f''$ unilateral); $\mathrm{FRM}\subseteq\mathrm{FRMIcc}$ e \texttt{extF f 0 1} pertence a FRM e coincide com $f$ em $[0,1]$; $|f'|\le 4R+M/2$ com $f'$ unilateral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:3.16]{III.3.16} & 8.16 & \pageref{map:artigo_2:3.16} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; mesma árvore determinística \texttt{uniformTree (jvals f r)}, que só amostra $f$ em $[0,1]$, e consequência para todo $N\ge 2$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:3.17]{III.3.17} & 8.17 & \pageref{map:artigo_2:3.17} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; $n_\varepsilon$ e $H_\varepsilon$ inalterados; \texttt{jointErr}, \texttt{heightFor} e \texttt{supDist} só dependem de $f$ em $[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:3.18]{III.3.18} & 8.18 & \pageref{map:artigo_2:3.18} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; as coberturas de FRMIcc e FRM coincidem (\texttt{isCover\_iff}), logo as entropias coincidem; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:3.15]{III.3.15} & 8.15 & \pageref{map:artigo_2:3.15} & Formalizado e compilado. Classe \texttt{FRMIcc R M} ($C^2$ apenas em $[0,1]$, $f''$ unilateral); $\mathrm{FRM}\subseteq\mathrm{FRMIcc}$ e \texttt{extF f 0 1} pertence a FRM e coincide com $f$ em $[0,1]$; $|f'|\le 4R+M/2$ com $f'$ unilateral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:3.16]{III.3.16} & 8.16 & \pageref{map:artigo_2:3.16} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; mesma árvore determinística \texttt{uniformTree (jvals f r)}, que só amostra $f$ em $[0,1]$, e consequência para todo $N\ge 2$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:3.17]{III.3.17} & 8.17 & \pageref{map:artigo_2:3.17} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; $n_\varepsilon$ e $H_\varepsilon$ inalterados; \texttt{jointErr}, \texttt{heightFor} e \texttt{supDist} só dependem de $f$ em $[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:3.18]{III.3.18} & 8.18 & \pageref{map:artigo_2:3.18} & Formalizado e compilado. Classe \texttt{FRMIcc R M} como em III.3.15; as coberturas de FRMIcc e FRM coincidem (\texttt{isCover\_iff}), logo as entropias coincidem; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
 \hyperref[map:artigo_2:3.19]{III.3.19} & 8.19 & \pageref{map:artigo_2:3.19} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.20]{III.3.20} & 8.20 & \pageref{map:artigo_2:3.20} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.21]{III.3.21} & 8.21 & \pageref{map:artigo_2:3.21} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.22]{III.3.22} & 8.22 & \pageref{map:artigo_2:3.22} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.23]{III.3.23} & 8.23 & \pageref{map:artigo_2:3.23} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.24]{III.3.24} & 8.24 & \pageref{map:artigo_2:3.24} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.25]{III.3.25} & 8.25 & \pageref{map:artigo_2:3.25} & Formalizado e compilado. Provas: \code{Pendencias.gen_eq_RepCat, Pendencias.enumSelect_eq_canon}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata.\\[4pt]
+\hyperref[map:artigo_2:3.25]{III.3.25} & 8.25 & \pageref{map:artigo_2:3.25} & Formalizado e compilado. Provas: \code{Pendencias.gen_eq_RepCat, Pendencias.enumSelect_eq_canon}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata.\\[4pt]
 \hyperref[map:artigo_2:4.1]{III.4.1} & 9.1 & \pageref{map:artigo_2:4.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:4.2]{III.4.2} & 9.2 & \pageref{map:artigo_2:4.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:4.3]{III.4.3} & 9.3 & \pageref{map:artigo_2:4.3} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:4.4]{III.4.4} & 9.4 & \pageref{map:artigo_2:4.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:4.5]{III.4.5} & 9.5 & \pageref{map:artigo_2:4.5} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:4.6]{III.4.6} & 9.6 & \pageref{map:artigo_2:4.6} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:4.6]{III.4.6} & 9.6 & \pageref{map:artigo_2:4.6} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:5.1]{III.5.1} & 10.1 & \pageref{map:artigo_2:5.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:5.2]{III.5.2} & 10.2 & \pageref{map:artigo_2:5.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:6.1]{III.6.1} & 11.1 & \pageref{map:artigo_2:6.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:6.2]{III.6.2} & 11.2 & \pageref{map:artigo_2:6.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:6.3]{III.6.3} & 11.3 & \pageref{map:artigo_2:6.3} & Formalizado e compilado. Provas: \code{Pendencias.DPprog.fixTable_cost, Pendencias.DPprog.fixRoot_spec}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata.\\[4pt]
+\hyperref[map:artigo_2:6.3]{III.6.3} & 11.3 & \pageref{map:artigo_2:6.3} & Formalizado e compilado. Provas: \code{Pendencias.DPprog.fixTable_cost, Pendencias.DPprog.fixRoot_spec}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata.\\[4pt]
 \hyperref[map:artigo_2:7.1]{III.7.1} & 12.1 & \pageref{map:artigo_2:7.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:7.2]{III.7.2} & 12.2 & \pageref{map:artigo_2:7.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:7.3]{III.7.3} & 12.3 & \pageref{map:artigo_2:7.3} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:7.4]{III.7.4} & 12.4 & \pageref{map:artigo_2:7.4} & Formalizado e compilado. Provas: \code{Pendencias.DPprog.varTable_cost, Pendencias.DPprog.varRoot_spec}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrencia ou existencia matematica tem prova; falta implementar e certificar a execucao e a reconstrucao com comparacao exata.\\[4pt]
+\hyperref[map:artigo_2:7.4]{III.7.4} & 12.4 & \pageref{map:artigo_2:7.4} & Formalizado e compilado. Provas: \code{Pendencias.DPprog.varTable_cost, Pendencias.DPprog.varRoot_spec}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata.\\[4pt]
 \hyperref[map:artigo_2:8.1]{III.8.1} & 13.1 & \pageref{map:artigo_2:8.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:8.2]{III.8.2} & 13.2 & \pageref{map:artigo_2:8.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:8.3]{III.8.3} & 13.3 & \pageref{map:artigo_2:8.3} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:8.3]{III.8.3} & 13.3 & \pageref{map:artigo_2:8.3} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:8.4]{III.8.4} & 13.4 & \pageref{map:artigo_2:8.4} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:9.1]{III.9.1} & 14.1 & \pageref{map:artigo_2:9.1} & Formalizado e compilado. Complexidade em numero de estados: prova \code{DenseDP.state_complexity_dense}; modelo de custo unitario explicito (leitura/escrita da tabela, soma, comparacao); constantes 8 e 7. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.\\[4pt]
-\hyperref[map:artigo_2:9.2]{III.9.2} & 14.2 & \pageref{map:artigo_2:9.2} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
-\hyperref[map:artigo_2:9.3]{III.9.3} & 14.3 & \pageref{map:artigo_2:9.3} & Formalizado e compilado. Complexidade de bits: prova \code{DenseDP.bit_complexity_dense}; custo de operacao aritmetica em bits e hipotese do modelo (\code{BitModel}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: bit\_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.\\[4pt]
+\hyperref[map:artigo_2:9.1]{III.9.1} & 14.1 & \pageref{map:artigo_2:9.1} & Formalizado e compilado. Complexidade em número de estados: prova \code{DenseDP.state_complexity_dense}; modelo de custo unitário explícito (leitura/escrita da tabela, soma, comparação); constantes 8 e 7. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Prova cardinalidades das tabelas e transições; não certifica tempo e memória de um programa com execução ligada a essas cardinalidades.\\[4pt]
+\hyperref[map:artigo_2:9.2]{III.9.2} & 14.2 & \pageref{map:artigo_2:9.2} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
+\hyperref[map:artigo_2:9.3]{III.9.3} & 14.3 & \pageref{map:artigo_2:9.3} & Formalizado e compilado. Complexidade de bits: prova \code{DenseDP.bit_complexity_dense}; custo de operação aritmética em bits é hipótese do modelo (\code{BitModel}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: bit\_complexity limita o tamanho dos custos racionais. As cotas de tempo e memória em bits do artigo exigem semântica de execução e custo de operações/desempate.\\[4pt]
 \hyperref[map:artigo_2:9.4]{III.9.4} & 14.4 & \pageref{map:artigo_2:9.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:9.5]{III.9.5} & 14.5 & \pageref{map:artigo_2:9.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:11.1]{III.11.1} & 16.1 & \pageref{map:artigo_2:11.1} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:11.2]{III.11.2} & 16.2 & \pageref{map:artigo_2:11.2} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}; $e_f(J)$, $f''$ e $\omega_{f''}$ unilaterais em $K$, por \texttt{extF} e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:11.3]{III.11.3} & 16.3 & \pageref{map:artigo_2:11.3} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}, com \texttt{curvIOn} ($I(f)$ com $f''$ unilateral); as três formas (eventual, $\liminf/\limsup$, caso $I(f)=0$). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:12.1]{III.12.1} & 17.1 & \pageref{map:artigo_2:12.1} & Formalizado e compilado. Mesmas seis conclusões de \texttt{quadratic\_dyadic\_constant} com $q\in C^2(K)$ (\texttt{ContDiffOn}) e $q''\equiv\kappa$ unilateral em $K$; usa \texttt{extF} e lemas de congruência (\texttt{Edia\_congr}, \texttt{nThr\_congr}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensao Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipoteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:12.2]{III.12.2} & 17.2 & \pageref{map:artigo_2:12.2} & Generalização documentada. O Lean dispensa C1: a igualdade com quadraticas nas celulas fechadas conserva compatibilidade nos extremos. O texto mantem C1; nao foi modificado.\\[4pt]
-\hyperref[map:artigo_2:12.3]{III.12.3} & 17.3 & \pageref{map:artigo_2:12.3} & Prova textual sincronizada. Demonstracao textual sincronizada com \code{Artigo.synchronized_phases}; usa contagem exata e periodicidade, sem o envelope $C^2$ global.\\[4pt]
-\hyperref[map:artigo_2:12.4]{III.12.4} & 17.4 & \pageref{map:artigo_2:12.4} & Observação editorial. Observacao ou diagnostico do texto; nao e um teorema Lean autonomo.\\[4pt]
+\hyperref[map:artigo_2:11.2]{III.11.2} & 16.2 & \pageref{map:artigo_2:11.2} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}; $e_f(J)$, $f''$ e $\omega_{f''}$ unilaterais em $K$, por \texttt{extF} e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:11.3]{III.11.3} & 16.3 & \pageref{map:artigo_2:11.3} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}, com \texttt{curvIOn} ($I(f)$ com $f''$ unilateral); as três formas (eventual, $\liminf/\limsup$, caso $I(f)=0$). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:12.1]{III.12.1} & 17.1 & \pageref{map:artigo_2:12.1} & Formalizado e compilado. Mesmas seis conclusões de \texttt{quadratic\_dyadic\_constant} com $q\in C^2(K)$ (\texttt{ContDiffOn}) e $q''\equiv\kappa$ unilateral em $K$; usa \texttt{extF} e lemas de congruência (\texttt{Edia\_congr}, \texttt{nThr\_congr}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
+\hyperref[map:artigo_2:12.2]{III.12.2} & 17.2 & \pageref{map:artigo_2:12.2} & Generalização documentada. O Lean dispensa $C^1$: a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos. O texto mantém $C^1$; não foi modificado.\\[4pt]
+\hyperref[map:artigo_2:12.3]{III.12.3} & 17.3 & \pageref{map:artigo_2:12.3} & Prova textual sincronizada. Demonstração textual sincronizada com \code{Artigo.synchronized_phases}; usa contagem exata e periodicidade, sem o envelope $C^2$ global.\\[4pt]
+\hyperref[map:artigo_2:12.4]{III.12.4} & 17.4 & \pageref{map:artigo_2:12.4} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \bottomrule\end{longtable}\normalsize
 
 \subsection*{Parte IV}
 \small
-\begin{longtable}{@{}p{.13\linewidth}p{.12\linewidth}p{.23\linewidth}p{.42\linewidth}@{}}
+\begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
-\hyperref[map:artigo_3:3.1]{IV.3.1} & 18.1 & \pageref{map:artigo_3:3.1} & Formalizado e compilado. Definições \texttt{Sigma} e \texttt{pErr} sobre $K=[0,1]$ (domínio de \texttt{jointErr}); inclusão, monotonia, cota por $\|f\|$ e atingimento do ínfimo (catálogo finito), além da fórmula $\min\{\|f\|,E_{N,H(N)}\}$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:3.2]{IV.3.2} & 18.2 & \pageref{map:artigo_3:3.2} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.dyadic_reduction, Pendencias.Agenda.dyadic_reduction_inf}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:3.3]{IV.3.3} & 18.3 & \pageref{map:artigo_3:3.3} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.homogeneity_failure, Pendencias.Agenda.homogeneity_failure_inf}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:3.4]{IV.3.4} & 18.4 & \pageref{map:artigo_3:3.4} & Observação editorial. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:4.1]{IV.4.1} & 19.1 & \pageref{map:artigo_3:4.1} & Formalizado e compilado. Jackson racional em raiz diadica geral, constante absoluta 8 e versao uniforme sobre bolas; Whitney demonstrada, sem hipotese adicional nao provada. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:4.2]{IV.4.2} & 19.2 & \pageref{map:artigo_3:4.2} & Formalizado e compilado. Inclusoes diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diadica geral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:4.3]{IV.4.3} & 19.3 & \pageref{map:artigo_3:4.3} & Formalizado e compilado. Cotas quantitativas uniformes sobre bolas nos tres regimes, com constantes independentes da funcao e do raio. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:4.4]{IV.4.4} & 19.4 & \pageref{map:artigo_3:4.4} & Observação editorial. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:4.5]{IV.4.5} & 19.5 & \pageref{map:artigo_3:4.5} & Formalizado e compilado. Funcional \texttt{rateInf} ($\mathfrak{a}_{\alpha,\infty}$) e agenda \texttt{H2 R M N} $=\lceil C_H N^2\rceil$; supremo sobre \texttt{FRMIcc R M} de $\mathfrak{a}_{2,\infty}\le\max\{R,(M+4)/2\}$; para $N\ge 2$, montagem admissível com códigos $\le C_b N\log_2(2N)$. Base: \texttt{joint\_all\_N\_Icc}, \texttt{joint\_budget\_Icc}, \texttt{pErr\_eq\_min}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A estimativa C2 de base existe. Falta transporta-la para as definicoes de agenda, erro e classe do atual Artigo 3; nao contado como teorema integralmente formalizado.\\[4pt]
-\hyperref[map:artigo_3:4.6]{IV.4.6} & 19.6 & \pageref{map:artigo_3:4.6} & Formalizado e compilado. Piso $e_N\ge 1/(2H(N))$, $\mathrm{dist}(1/(2H),\mathcal{Q}_H)=1/(2H)$ e a consequência $H(N)\ge (2C)^{-1}N^s$ (para $N\ge 1$), sobre $K=[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.1]{IV.5.1} & 20.1 & \pageref{map:artigo_3:5.1} & Formalizado e compilado. Provas: \code{Pendencias.Marcada.marked_extends, Pendencias.Marcada.Atom.toM_injective}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.2]{IV.5.2} & 20.2 & \pageref{map:artigo_3:5.2} & Formalizado e compilado. Reversibilidade rasa completa para parametros reais: equivalencia aritmetica, arvore canonica unica (inclusive rotulos), cotas explicitas de folhas e condicao de inclinacoes nao nulas para a biblioteca original. Prova: \code{RealReLU.exact_shallow_reversal}; funcoes em $[0,1]$, incluindo $M=0$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.3]{IV.5.3} & 20.3 & \pageref{map:artigo_3:5.3} & Formalizado e compilado. Provas: \code{Pendencias.Marcada.RedReLU.Hcan, Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight, Pendencias.Marcada.canonShape_no_interior, Pendencias.Marcada.RedReLU.canon_leaves_free}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.4]{IV.5.4} & 20.4 & \pageref{map:artigo_3:5.4} & Formalizado e compilado. Formalizado nas duas direcoes; a cota inversa foi corrigida (fator $M+1$, constante $C=5$) porque a impressa e falsa para $M=0$. Provas: \code{Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound} e \code{Pendencias.Marcada.Ancorada.direct_part}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.5]{IV.5.5} & 20.5 & \pageref{map:artigo_3:5.5} & Formalizado e compilado. Reversao aproximada quantizada com C = 320. Prova: \code{QuantIV55.quantized_approximate_reverse}; erro em $[0,1]$, folhas da montagem e altura atomica maxima. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.6]{IV.5.6} & 20.6 & \pageref{map:artigo_3:5.6} & Formalizado e compilado. Corolario para redes profundas: prova em \code{DeepIV56.deep_functional_reverse}; $R(F)$ e o minimo de pecas afins de $[0,1]$, $B$ e $L_F$ medidos em $[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.7]{IV.5.7} & 20.7 & \pageref{map:artigo_3:5.7} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.inverse_modulus, Pendencias.Agenda.inverse_besov}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.8]{IV.5.8} & 20.8 & \pageref{map:artigo_3:5.8} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.raw_library_inverse_inf, Pendencias.Agenda.raw_library_inverse, Pendencias.Agenda.schedule_raw_inverse, Pendencias.Agenda.vartheta_eq}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.9]{IV.5.9} & 20.9 & \pageref{map:artigo_3:5.9} & Formalizado e compilado. Teorema formalizado na biblioteca original: continuidade, taxa para todo $N\ge1$ e nao pertencimento as classes Besov prescritas. Prova: \code{Pendencias.PenteGemini.critical_tent_comb}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.10]{IV.5.10} & 20.10 & \pageref{map:artigo_3:5.10} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.universal_inverse}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.11]{IV.5.11} & 20.11 & \pageref{map:artigo_3:5.11} & Observação editorial. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.12]{IV.5.12} & 20.12 & \pageref{map:artigo_3:5.12} & Formalizado e compilado. Jackson para o funcional de realizacao em [0,1], cota bilateral e versao uniforme; constantes universais explicitas. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.13]{IV.5.13} & 20.13 & \pageref{map:artigo_3:5.13} & Formalizado e compilado. Igualdades de classes de Besov e realizacao em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
-\hyperref[map:artigo_3:5.14]{IV.5.14} & 20.14 & \pageref{map:artigo_3:5.14} & Formalizado e compilado. Estabilidade das igualdades para familias aninhadas que contem zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:3.1]{IV.3.1} & 18.1 & \pageref{map:artigo_3:3.1} & Formalizado e compilado. Definições \texttt{Sigma} e \texttt{pErr} sobre $K=[0,1]$ (domínio de \texttt{jointErr}); inclusão, monotonia, cota por $\|f\|$ e atingimento do ínfimo (catálogo finito), além da fórmula $\min\{\|f\|,E_{N,H(N)}\}$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:3.2]{IV.3.2} & 18.2 & \pageref{map:artigo_3:3.2} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.dyadic_reduction, Pendencias.Agenda.dyadic_reduction_inf}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:3.3]{IV.3.3} & 18.3 & \pageref{map:artigo_3:3.3} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.homogeneity_failure, Pendencias.Agenda.homogeneity_failure_inf}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:3.4]{IV.3.4} & 18.4 & \pageref{map:artigo_3:3.4} & Observação editorial. Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:4.1]{IV.4.1} & 19.1 & \pageref{map:artigo_3:4.1} & Formalizado e compilado. Jackson racional em raiz diádica geral, constante absoluta 8 e versão uniforme sobre bolas; Whitney demonstrada, sem hipótese adicional não provada. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:4.2]{IV.4.2} & 19.2 & \pageref{map:artigo_3:4.2} & Formalizado e compilado. Inclusões diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diádica geral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:4.3]{IV.4.3} & 19.3 & \pageref{map:artigo_3:4.3} & Formalizado e compilado. Cotas quantitativas uniformes sobre bolas nos três regimes, com constantes independentes da função e do raio. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:4.4]{IV.4.4} & 19.4 & \pageref{map:artigo_3:4.4} & Observação editorial. Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:4.5]{IV.4.5} & 19.5 & \pageref{map:artigo_3:4.5} & Formalizado e compilado. Funcional \texttt{rateInf} ($\mathfrak{a}_{\alpha,\infty}$) e agenda \texttt{H2 R M N} $=\lceil C_H N^2\rceil$; supremo sobre \texttt{FRMIcc R M} de $\mathfrak{a}_{2,\infty}\le\max\{R,(M+4)/2\}$; para $N\ge 2$, montagem admissível com códigos $\le C_b N\log_2(2N)$. Base: \texttt{joint\_all\_N\_Icc}, \texttt{joint\_budget\_Icc}, \texttt{pErr\_eq\_min}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A estimativa $C^2$ de base existe. Falta transportá-la para as definições de agenda, erro e classe do atual Artigo 3; não contado como teorema integralmente formalizado.\\[4pt]
+\hyperref[map:artigo_3:4.6]{IV.4.6} & 19.6 & \pageref{map:artigo_3:4.6} & Formalizado e compilado. Piso $e_N\ge 1/(2H(N))$, $\mathrm{dist}(1/(2H),\mathcal{Q}_H)=1/(2H)$ e a consequência $H(N)\ge (2C)^{-1}N^s$ (para $N\ge 1$), sobre $K=[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.1]{IV.5.1} & 20.1 & \pageref{map:artigo_3:5.1} & Formalizado e compilado. Provas: \code{Pendencias.Marcada.marked_extends, Pendencias.Marcada.Atom.toM_injective}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.2]{IV.5.2} & 20.2 & \pageref{map:artigo_3:5.2} & Formalizado e compilado. Reversibilidade rasa completa para parâmetros reais: equivalência aritmética, árvore canônica única (inclusive rótulos), cotas explícitas de folhas e condição de inclinações não nulas para a biblioteca original. Prova: \code{RealReLU.exact_shallow_reversal}; funções em $[0,1]$, incluindo $M=0$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.3]{IV.5.3} & 20.3 & \pageref{map:artigo_3:5.3} & Formalizado e compilado. Provas: \code{Pendencias.Marcada.RedReLU.Hcan, Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight, Pendencias.Marcada.canonShape_no_interior, Pendencias.Marcada.RedReLU.canon_leaves_free}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.4]{IV.5.4} & 20.4 & \pageref{map:artigo_3:5.4} & Formalizado e compilado. Formalizado nas duas direções; a cota inversa foi corrigida (fator $M+1$, constante $C=5$) porque a impressa é falsa para $M=0$. Provas: \code{Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound} e \code{Pendencias.Marcada.Ancorada.direct_part}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.5]{IV.5.5} & 20.5 & \pageref{map:artigo_3:5.5} & Formalizado e compilado. Reversão aproximada quantizada com $C=320$. Prova: \code{QuantIV55.quantized_approximate_reverse}; erro em $[0,1]$, folhas da montagem e altura atômica máxima. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.6]{IV.5.6} & 20.6 & \pageref{map:artigo_3:5.6} & Formalizado e compilado. Corolário para redes profundas: prova em \code{DeepIV56.deep_functional_reverse}; $R(F)$ é o mínimo de peças afins de $[0,1]$, $B$ e $L_F$ medidos em $[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.7]{IV.5.7} & 20.7 & \pageref{map:artigo_3:5.7} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.inverse_modulus, Pendencias.Agenda.inverse_besov}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.8]{IV.5.8} & 20.8 & \pageref{map:artigo_3:5.8} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.raw_library_inverse_inf, Pendencias.Agenda.raw_library_inverse, Pendencias.Agenda.schedule_raw_inverse, Pendencias.Agenda.vartheta_eq}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.9]{IV.5.9} & 20.9 & \pageref{map:artigo_3:5.9} & Formalizado e compilado. Teorema formalizado na biblioteca original: continuidade, taxa para todo $N\ge1$ e não pertencimento às classes Besov prescritas. Prova: \code{Pendencias.PenteGemini.critical_tent_comb}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.10]{IV.5.10} & 20.10 & \pageref{map:artigo_3:5.10} & Formalizado e compilado. Provas: \code{Pendencias.Agenda.universal_inverse}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.11]{IV.5.11} & 20.11 & \pageref{map:artigo_3:5.11} & Observação editorial. Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.12]{IV.5.12} & 20.12 & \pageref{map:artigo_3:5.12} & Formalizado e compilado. Jackson para o funcional de realização em $[0,1]$, cota bilateral e versão uniforme; constantes universais explícitas. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.13]{IV.5.13} & 20.13 & \pageref{map:artigo_3:5.13} & Formalizado e compilado. Igualdades de classes de Besov e realização em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
+\hyperref[map:artigo_3:5.14]{IV.5.14} & 20.14 & \pageref{map:artigo_3:5.14} & Formalizado e compilado. Estabilidade das igualdades para famílias aninhadas que contêm zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Não foi localizado resultado Lean que certifique este enunciado. Fase3 é uma etapa da formalização do Artigo 1, não o atual Artigo 3.\\[4pt]
 \bottomrule\end{longtable}\normalsize
 
 \subsection*{Parte V}
 \small
-\begin{longtable}{@{}p{.13\linewidth}p{.12\linewidth}p{.23\linewidth}p{.42\linewidth}@{}}
+\begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
-\hyperref[map:complemento_original:6.1]{V.6.1} & 6.1 & \pageref{map:complemento_original:6.1} & Formalizado e compilado. Provas: \code{Pendencias.tree_rate_pow, Pendencias.tree_rate, Pendencias.tree_rationalization}. Ver declaracoes e contratos nos fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.\\[4pt]
-\hyperref[map:complemento_original:6.2]{V.6.2} & 6.2 & \pageref{map:complemento_original:6.2} & Formalizado e compilado. Cota assintotica com nos livres e derivadas unilaterais para funcoes C2 no intervalo fechado. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.\\[4pt]
-\hyperref[map:complemento_original:6.3]{V.6.3} & 6.3 & \pageref{map:complemento_original:6.3} & Formalizado e compilado. Estimativa direta em raiz diadica geral, constante de Whitney explicita e montagem racional com erro adicional arbitrario. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.\\[4pt]
-\hyperref[map:complemento_original:21.1]{V.21.1} & 21.1 & \pageref{map:complemento_original:21.1} & Formalizado e compilado. Provado; a forma \texttt{runge\_majorant} dispensa $J\subseteq[-1,1]$. Inclui \texttt{deriv2\_runge}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondencia editorial nao afirma prova Lean.\\[4pt]
+\hyperref[map:complemento_original:6.1]{V.6.1} & 6.1 & \pageref{map:complemento_original:6.1} & Formalizado e compilado. Provas: \code{Pendencias.tree_rate_pow, Pendencias.tree_rate, Pendencias.tree_rationalization}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondência editorial não afirma prova Lean.\\[4pt]
+\hyperref[map:complemento_original:6.2]{V.6.2} & 6.2 & \pageref{map:complemento_original:6.2} & Formalizado e compilado. Cota assintótica com nós livres e derivadas unilaterais para funções $C^2$ no intervalo fechado. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondência editorial não afirma prova Lean.\\[4pt]
+\hyperref[map:complemento_original:6.3]{V.6.3} & 6.3 & \pageref{map:complemento_original:6.3} & Formalizado e compilado. Estimativa direta em raiz diádica geral, constante de Whitney explícita e montagem racional com erro adicional arbitrário. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondência editorial não afirma prova Lean.\\[4pt]
+\hyperref[map:complemento_original:21.1]{V.21.1} & 21.1 & \pageref{map:complemento_original:21.1} & Formalizado e compilado. Provado; a forma \texttt{runge\_majorant} dispensa $J\subseteq[-1,1]$. Inclui \texttt{deriv2\_runge}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultado original integralmente preservado no complemento; a correspondência editorial não afirma prova Lean.\\[4pt]
 \bottomrule\end{longtable}\normalsize
 
 \clearpage
-\begin{thebibliography}{48}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -7251,37 +7257,37 @@ Richard Bellman.
 \newblock \emph{Communications of the ACM}, 4\penalty0 (6):\penalty0 284, 1961.
 \newblock \doi{10.1145/366573.366611}.
 
-\bibitem[Binev and DeVore(2004)]{artigo_1-binev2004}
-Peter Binev and Ronald~A. DeVore.
+\bibitem[Binev e DeVore(2004)]{artigo_1-binev2004}
+Peter Binev e Ronald~A. DeVore.
 \newblock Fast computation in adaptive tree approximation.
 \newblock \emph{Numerische Mathematik}, 97\penalty0 (2):\penalty0 193--217,
   2004.
 \newblock \doi{10.1007/s00211-003-0493-6}.
 
-\bibitem[Birman and Solomjak(1967)]{artigo_2-birman1967}
-M.~\v{S}. Birman and M.~Z. Solomjak.
+\bibitem[Birman e Solomjak(1967)]{artigo_2-birman1967}
+M.~\v{S}. Birman e M.~Z. Solomjak.
 \newblock Piecewise-polynomial approximations of functions of the classes
   $w_p^\alpha$.
 \newblock \emph{Matematicheski\u{\i} Sbornik}, 73(115)\penalty0 (3):\penalty0
   331--355, 1967.
 
-\bibitem[Blanchard et~al.(2007)Blanchard, Sch{\"a}fer, Rozenholc, and
+\bibitem[Blanchard et~al.(2007)Blanchard, Sch{\"a}fer, Rozenholc, e
   M{\"u}ller]{artigo_2-blanchard2007}
-Gilles Blanchard, Christin Sch{\"a}fer, Yves Rozenholc, and Klaus-Robert
+Gilles Blanchard, Christin Sch{\"a}fer, Yves Rozenholc e Klaus-Robert
   M{\"u}ller.
 \newblock Optimal dyadic decision trees.
 \newblock \emph{Machine Learning}, 66\penalty0 (2--3):\penalty0 209--241, 2007.
 \newblock \doi{10.1007/s10994-007-0717-6}.
 
-\bibitem[Bombieri and Gubler(2006)]{artigo_1-bombieri2006}
-Enrico Bombieri and Walter Gubler.
+\bibitem[Bombieri e Gubler(2006)]{artigo_1-bombieri2006}
+Enrico Bombieri e Walter Gubler.
 \newblock \emph{Heights in Diophantine Geometry}.
 \newblock Cambridge University Press, Cambridge, 2006.
 \newblock \doi{10.1017/CBO9780511542879}.
 
-\bibitem[Breiman et~al.(1984)Breiman, Friedman, Olshen, and
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Olshen, e
   Stone]{artigo_2-breiman1984}
-Leo Breiman, Jerome~H. Friedman, Richard~A. Olshen, and Charles~J. Stone.
+Leo Breiman, Jerome~H. Friedman, Richard~A. Olshen e Charles~J. Stone.
 \newblock \emph{Classification and Regression Trees}.
 \newblock Wadsworth, Belmont, 1984.
 
@@ -7291,16 +7297,16 @@ Hermann~G. Burchard.
 \newblock \emph{Applicable Analysis}, 3:\penalty0 309--319, 1974.
 \newblock \doi{10.1080/00036817408839073}.
 
-\bibitem[Bölcskei et~al.(2019)Bölcskei, Grohs, Kutyniok, and
+\bibitem[Bölcskei et~al.(2019)Bölcskei, Grohs, Kutyniok, e
   Petersen]{artigo_1-bolcskei2019}
-Helmut Bölcskei, Philipp Grohs, Gitta Kutyniok, and Philipp Petersen.
+Helmut Bölcskei, Philipp Grohs, Gitta Kutyniok e Philipp Petersen.
 \newblock Optimal approximation with sparsely connected deep neural networks.
 \newblock \emph{SIAM Journal on Mathematics of Data Science}, 1\penalty0
   (1):\penalty0 8--45, 2019.
 \newblock \doi{10.1137/18M118709X}.
 
-\bibitem[Calkin and Wilf(2000)]{artigo_1-calkin2000}
-Neil Calkin and Herbert~S. Wilf.
+\bibitem[Calkin e Wilf(2000)]{artigo_1-calkin2000}
+Neil Calkin e Herbert~S. Wilf.
 \newblock Recounting the rationals.
 \newblock \emph{The American Mathematical Monthly}, 107\penalty0 (4):\penalty0
   360--363, 2000.
@@ -7314,23 +7320,23 @@ Constantin Christof.
 \newblock \emph{Journal of Machine Learning Research}, 22\penalty0
   (263):\penalty0 1--77, 2021.
 
-\bibitem[Cohen et~al.(2001)Cohen, Dahmen, Daubechies, and
+\bibitem[Cohen et~al.(2001)Cohen, Dahmen, Daubechies, e
   DeVore]{artigo_1-cohen2001}
-Albert Cohen, Wolfgang Dahmen, Ingrid Daubechies, and Ronald~A. DeVore.
+Albert Cohen, Wolfgang Dahmen, Ingrid Daubechies e Ronald~A. DeVore.
 \newblock Tree approximation and optimal encoding.
 \newblock \emph{Applied and Computational Harmonic Analysis}, 11\penalty0
   (2):\penalty0 192--226, 2001.
 \newblock \doi{10.1006/acha.2001.0336}.
 
-\bibitem[Cover and Thomas(2006)]{artigo_1-cover2006}
-Thomas~M. Cover and Joy~A. Thomas.
+\bibitem[Cover e Thomas(2006)]{artigo_1-cover2006}
+Thomas~M. Cover e Joy~A. Thomas.
 \newblock \emph{Elements of Information Theory}.
-\newblock Wiley-Interscience, Hoboken, NJ, 2 edition, 2006.
+\newblock Wiley-Interscience, Hoboken, NJ, 2.ª ed., 2006.
 \newblock \doi{10.1002/047174882X}.
 
-\bibitem[Daubechies et~al.(2022)Daubechies, DeVore, Foucart, Hanin, and
+\bibitem[Daubechies et~al.(2022)Daubechies, DeVore, Foucart, Hanin, e
   Petrova]{artigo_1-daubechies2022}
-Ingrid Daubechies, Ronald DeVore, Simon Foucart, Boris Hanin, and Guergana
+Ingrid Daubechies, Ronald DeVore, Simon Foucart, Boris Hanin e Guergana
   Petrova.
 \newblock Nonlinear approximation and (deep) {ReLU} networks.
 \newblock \emph{Constructive Approximation}, 55\penalty0 (1):\penalty0
@@ -7340,15 +7346,15 @@ Ingrid Daubechies, Ronald DeVore, Simon Foucart, Boris Hanin, and Guergana
 \bibitem[de~Boor(1973)]{artigo_1-deboor1973}
 Carl de~Boor.
 \newblock Good approximation by splines with variable knots.
-\newblock In A.~Meir and A.~Sharma, editors, \emph{Spline Functions and
-  Approximation Theory}, volume~21 of \emph{International Series of Numerical
-  Mathematics}, pages 57--72. Birkhäuser, Basel, 1973.
+\newblock Em A.~Meir e A.~Sharma, orgs., \emph{Spline Functions and
+  Approximation Theory}, volume~21 de \emph{International Series of Numerical
+  Mathematics}, p. 57--72. Birkhäuser, Basel, 1973.
 
 \bibitem[de~Boor(2001)]{artigo_1-deboor2001}
 Carl de~Boor.
-\newblock \emph{A Practical Guide to Splines}, volume~27 of \emph{Applied
+\newblock \emph{A Practical Guide to Splines}, volume~27 de \emph{Applied
   Mathematical Sciences}.
-\newblock Springer, New York, revised edition, 2001.
+\newblock Springer, New York, ed. revista, 2001.
 \newblock \doi{10.1007/978-1-4612-6333-3}.
 
 \bibitem[de~Oliveira(2026{\natexlab{a}})]{artigo_2-oliveiraI}
@@ -7363,17 +7369,10 @@ Victor~Gabriel de~Oliveira.
   interpolação em árvores diádicas.
 \newblock Segundo artigo da série, manuscrito, 2026{\natexlab{b}}.
 
-\bibitem[DeVore et~al.(2021{\natexlab{a}})DeVore, Hanin, and
-  Petrova]{artigo_1-devore2021}
-Ronald DeVore, Boris Hanin, and Guergana Petrova.
+\bibitem[DeVore et~al.(2021)DeVore, Hanin, e Petrova]{artigo_1-devore2021}
+Ronald DeVore, Boris Hanin e Guergana Petrova.
 \newblock Neural network approximation.
-\newblock \emph{Acta Numerica}, 30:\penalty0 327--444, 2021{\natexlab{a}}.
-
-\bibitem[DeVore et~al.(2021{\natexlab{b}})DeVore, Hanin, and
-  Petrova]{artigo_2-devorehaninpetrova2021}
-Ronald DeVore, Boris Hanin, and Guergana Petrova.
-\newblock Neural network approximation.
-\newblock \emph{Acta Numerica}, 30:\penalty0 327--444, 2021{\natexlab{b}}.
+\newblock \emph{Acta Numerica}, 30:\penalty0 327--444, 2021.
 
 \bibitem[DeVore(1998)]{artigo_1-devore1998}
 Ronald~A. DeVore.
@@ -7381,15 +7380,15 @@ Ronald~A. DeVore.
 \newblock \emph{Acta Numerica}, 7:\penalty0 51--150, 1998.
 \newblock \doi{10.1017/S0962492900002816}.
 
-\bibitem[DeVore and Lorentz(1993)]{artigo_2-devorelorentz1993}
-Ronald~A. DeVore and George~G. Lorentz.
-\newblock \emph{Constructive Approximation}, volume 303 of \emph{Grundlehren
+\bibitem[DeVore e Lorentz(1993)]{artigo_2-devorelorentz1993}
+Ronald~A. DeVore e George~G. Lorentz.
+\newblock \emph{Constructive Approximation}, volume 303 de \emph{Grundlehren
   der mathematischen Wissenschaften}.
 \newblock Springer, Berlin, 1993.
 \newblock \doi{10.1007/978-3-662-02888-9}.
 
-\bibitem[DeVore and Popov(1988)]{artigo_2-devorepopov1988}
-Ronald~A. DeVore and Vasil~A. Popov.
+\bibitem[DeVore e Popov(1988)]{artigo_2-devorepopov1988}
+Ronald~A. DeVore e Vasil~A. Popov.
 \newblock Interpolation of {B}esov spaces.
 \newblock \emph{Transactions of the American Mathematical Society},
   305\penalty0 (1):\penalty0 397--414, 1988.
@@ -7401,9 +7400,9 @@ David~L. Donoho.
   1870--1911, 1997.
 \newblock \doi{10.1214/aos/1069362377}.
 
-\bibitem[Elbrächter et~al.(2021)Elbrächter, Perekrestenko, Grohs, and
+\bibitem[Elbrächter et~al.(2021)Elbrächter, Perekrestenko, Grohs, e
   Bölcskei]{artigo_1-elbrachter2021}
-Dennis Elbrächter, Dmytro Perekrestenko, Philipp Grohs, and Helmut Bölcskei.
+Dennis Elbrächter, Dmytro Perekrestenko, Philipp Grohs e Helmut Bölcskei.
 \newblock Deep neural network approximation theory.
 \newblock \emph{IEEE Transactions on Information Theory}, 67\penalty0
   (5):\penalty0 2581--2623, 2021.
@@ -7416,35 +7415,35 @@ Peter Elias.
   (2):\penalty0 194--203, 1975.
 \newblock \doi{10.1109/TIT.1975.1055349}.
 
-\bibitem[Gribonval et~al.(2022)Gribonval, Kutyniok, Nielsen, and
+\bibitem[Gribonval et~al.(2022)Gribonval, Kutyniok, Nielsen, e
   Voigtlaender]{artigo_2-gribonval2022}
-R{\'e}mi Gribonval, Gitta Kutyniok, Morten Nielsen, and Felix Voigtlaender.
+R{\'e}mi Gribonval, Gitta Kutyniok, Morten Nielsen e Felix Voigtlaender.
 \newblock Approximation spaces of deep neural networks.
 \newblock \emph{Constructive Approximation}, 55\penalty0 (1):\penalty0
   259--367, 2022.
 \newblock \doi{10.1007/s00365-021-09543-4}.
 
-\bibitem[Grohs and Voigtlaender(2023)]{artigo_2-grohs2023}
-Philipp Grohs and Felix Voigtlaender.
+\bibitem[Grohs e Voigtlaender(2023)]{artigo_2-grohs2023}
+Philipp Grohs e Felix Voigtlaender.
 \newblock Sobolev-type embeddings for neural network approximation spaces.
 \newblock \emph{Constructive Approximation}, 57\penalty0 (2):\penalty0
   579--599, 2023.
 \newblock \doi{10.1007/s00365-022-09598-x}.
 
-\bibitem[Gühring and Raslan(2021)]{artigo_1-guhring2021}
-Ingo Gühring and Mones Raslan.
+\bibitem[Gühring e Raslan(2021)]{artigo_1-guhring2021}
+Ingo Gühring e Mones Raslan.
 \newblock Approximation rates for neural networks with encodable weights in
   smoothness spaces.
 \newblock \emph{Neural Networks}, 134:\penalty0 107--130, 2021.
 \newblock \doi{10.1016/j.neunet.2020.11.010}.
 
-\bibitem[Hardy and Wright(2008)]{artigo_1-hardy2008}
-G.~H. Hardy and E.~M. Wright.
+\bibitem[Hardy e Wright(2008)]{artigo_1-hardy2008}
+G.~H. Hardy e E.~M. Wright.
 \newblock \emph{An Introduction to the Theory of Numbers}.
-\newblock Oxford University Press, Oxford, 6 edition, 2008.
+\newblock Oxford University Press, Oxford, 6.ª ed., 2008.
 
-\bibitem[Hristov and Ivanov(1990)]{artigo_2-hristovivanov1990}
-V.~H. Hristov and K.~G. Ivanov.
+\bibitem[Hristov e Ivanov(1990)]{artigo_2-hristovivanov1990}
+V.~H. Hristov e K.~G. Ivanov.
 \newblock Realization of {$K$}-functionals on subsets and constrained
   approximation.
 \newblock \emph{Mathematica Balkanica (New Series)}, 4\penalty0 (3):\penalty0
@@ -7452,29 +7451,29 @@ V.~H. Hristov and K.~G. Ivanov.
 \newblock URL
   \url{https://www.math.bas.bg/infres/MathBalk/MB-04/MB-04-236-257.pdf}.
 
-\bibitem[Kesseböhmer and Niemann(2025)]{artigo_1-kessebohmer2025}
-Marc Kesseböhmer and Aljoscha Niemann.
+\bibitem[Kesseböhmer e Niemann(2025)]{artigo_1-kessebohmer2025}
+Marc Kesseböhmer e Aljoscha Niemann.
 \newblock Exact asymptotic order for generalised adaptive approximations.
 \newblock \emph{Journal of Approximation Theory}, 310:\penalty0 106171, 2025.
 \newblock \doi{10.1016/j.jat.2025.106171}.
 
-\bibitem[Kolmogorov and Tikhomirov(1959)]{artigo_1-kolmogorov1959}
-A.~N. Kolmogorov and V.~M. Tikhomirov.
+\bibitem[Kolmogorov e Tikhomirov(1959)]{artigo_1-kolmogorov1959}
+A.~N. Kolmogorov e V.~M. Tikhomirov.
 \newblock $\varepsilon$-entropy and $\varepsilon$-capacity of sets in function
   spaces.
 \newblock \emph{Uspekhi Matematicheskikh Nauk}, 14\penalty0 (2):\penalty0
   3--86, 1959.
 
-\bibitem[Lorentz et~al.(1996)Lorentz, von Golitschek, and
+\bibitem[Lorentz et~al.(1996)Lorentz, von Golitschek, e
   Makovoz]{artigo_1-lorentz1996}
-George~G. Lorentz, Manfred von Golitschek, and Yuly Makovoz.
-\newblock \emph{Constructive Approximation: Advanced Problems}, volume 304 of
+George~G. Lorentz, Manfred von Golitschek e Yuly Makovoz.
+\newblock \emph{Constructive Approximation: Advanced Problems}, volume 304 de
   \emph{Grundlehren der mathematischen Wissenschaften}.
 \newblock Springer, Berlin, 1996.
 \newblock \doi{10.1007/978-3-642-60932-9}.
 
-\bibitem[Moore et~al.(2009)Moore, Kearfott, and Cloud]{artigo_1-moore2009}
-Ramon~E. Moore, R.~Baker Kearfott, and Michael~J. Cloud.
+\bibitem[Moore et~al.(2009)Moore, Kearfott, e Cloud]{artigo_1-moore2009}
+Ramon~E. Moore, R.~Baker Kearfott e Michael~J. Cloud.
 \newblock \emph{Introduction to Interval Analysis}.
 \newblock Society for Industrial and Applied Mathematics, Philadelphia, 2009.
 \newblock \doi{10.1137/1.9780898717716}.
@@ -7485,15 +7484,15 @@ Sam Northshield.
 \newblock \emph{The American Mathematical Monthly}, 117\penalty0 (7):\penalty0
   581--598, 2010.
 
-\bibitem[P{\'e}rez and Vidal(1994)]{artigo_2-perezvidal1994}
-Juan-Carlos P{\'e}rez and Enrique Vidal.
+\bibitem[P{\'e}rez e Vidal(1994)]{artigo_2-perezvidal1994}
+Juan-Carlos P{\'e}rez e Enrique Vidal.
 \newblock Optimum polygonal approximation of digitized curves.
 \newblock \emph{Pattern Recognition Letters}, 15\penalty0 (8):\penalty0
   743--750, 1994.
 \newblock \doi{10.1016/0167-8655(94)90002-7}.
 
-\bibitem[Petersen and Voigtlaender(2018)]{artigo_1-petersen2018}
-Philipp Petersen and Felix Voigtlaender.
+\bibitem[Petersen e Voigtlaender(2018)]{artigo_1-petersen2018}
+Philipp Petersen e Felix Voigtlaender.
 \newblock Optimal approximation of piecewise smooth functions using deep {ReLU}
   neural networks.
 \newblock \emph{Neural Networks}, 108:\penalty0 296--330, 2018.
@@ -7503,11 +7502,11 @@ Philipp Petersen and Felix Voigtlaender.
 P.~P. Petrushev.
 \newblock Direct and converse theorems for spline and rational approximation
   and {B}esov spaces.
-\newblock In \emph{Function Spaces and Applications}, volume 1302 of
-  \emph{Lecture Notes in Mathematics}, pages 363--377. Springer, Berlin, 1988.
+\newblock Em \emph{Function Spaces and Applications}, volume 1302 de
+  \emph{Lecture Notes in Mathematics}, p. 363--377. Springer, Berlin, 1988.
 
-\bibitem[Petrushev and Popov(1987)]{artigo_2-petrushevpopov1987}
-P.~P. Petrushev and V.~A. Popov.
+\bibitem[Petrushev e Popov(1987)]{artigo_2-petrushevpopov1987}
+P.~P. Petrushev e V.~A. Popov.
 \newblock \emph{Rational Approximation of Real Functions}.
 \newblock Cambridge University Press, Cambridge, 1987.
 
@@ -7519,17 +7518,17 @@ Michael J.~D. Powell.
 \bibitem[Schumaker(2007)]{artigo_1-schumaker2007}
 Larry~L. Schumaker.
 \newblock \emph{Spline Functions: Basic Theory}.
-\newblock Cambridge University Press, Cambridge, 3 edition, 2007.
+\newblock Cambridge University Press, Cambridge, 3.ª ed., 2007.
 
 \bibitem[Silva(2025)]{artigo_1-silva2025}
 Felipe Matheus~Oliveira Silva.
 \newblock Aproximação ótima utilizando aritmética intervalar.
-\newblock Master's thesis, Instituto de Matemática e Estatística,
+\newblock Dissertação de mestrado, Instituto de Matemática e Estatística,
   Universidade de São Paulo, São Paulo, 2025.
 
 \bibitem[Stern(1858)]{artigo_1-stern1858}
 Moritz~Abraham Stern.
-\newblock Über eine zahlentheoretische funktion.
+\newblock Über eine zahlentheoretische {F}unktion.
 \newblock \emph{Journal für die reine und angewandte Mathematik}, 55:\penalty0
   193--220, 1858.
 
@@ -7543,8 +7542,8 @@ Henry Stone.
 \bibitem[Telgarsky(2016)]{artigo_2-telgarsky2016}
 Matus Telgarsky.
 \newblock Benefits of depth in neural networks.
-\newblock In \emph{Proceedings of the 29th Conference on Learning Theory
-  (COLT)}, volume~49 of \emph{Proceedings of Machine Learning Research}, pages
+\newblock Em \emph{Proceedings of the 29th Conference on Learning Theory
+  (COLT)}, volume~49 de \emph{Proceedings of Machine Learning Research}, p.
   1517--1539, 2016.
 
 \bibitem[Whitney(1957)]{artigo_2-whitney1957}

@@ -9,7 +9,7 @@
 \section{Introdução}
 Uma função linear por partes pode ter erro de aproximação nulo em todas as escalas posteriores e conservar quinas. Por isso, uma taxa rápida do melhor erro, tomada isoladamente, não caracteriza suavidade de ordem superior a um. Sob restrições aritméticas, soma-se outra questão: o catálogo de altura fixa não é invariante por multiplicação por escalares reais.
 
-Este artigo formula as classes de aproximação compatíveis com essa estrutura e estabelece suas relações com espaços de Besov. A biblioteca e os resultados de custo e seleção foram desenvolvidos nos dois primeiros artigos \citep{artigo_2-oliveiraI,artigo_2-oliveiraII}. A teoria de aproximação não linear e os teoremas diretos e inversos fornecem o contexto funcional \citep{artigo_1-devore1998,artigo_2-devorepopov1988,artigo_2-petrushev1988,artigo_2-devorelorentz1993}. Funcionais de realização relacionam aproximação restrita e módulos de suavidade \citep{artigo_2-hristovivanov1990}. As relações com redes ReLU e restrições de pesos são tratadas em \citet{artigo_2-devorehaninpetrova2021,artigo_1-daubechies2022,artigo_2-gribonval2022,artigo_2-grohs2023,artigo_1-guhring2021}.
+Este artigo formula as classes de aproximação compatíveis com essa estrutura e estabelece suas relações com espaços de Besov. A biblioteca e os resultados de custo e seleção foram desenvolvidos nos dois primeiros artigos \citep{artigo_2-oliveiraI,artigo_2-oliveiraII}. A teoria de aproximação não linear e os teoremas diretos e inversos fornecem o contexto funcional \citep{artigo_1-devore1998,artigo_2-devorepopov1988,artigo_2-petrushev1988,artigo_2-devorelorentz1993}. Funcionais de realização relacionam aproximação restrita e módulos de suavidade \citep{artigo_2-hristovivanov1990}. As relações com redes ReLU e restrições de pesos são tratadas em \citet{artigo_1-devore2021,artigo_1-daubechies2022,artigo_2-gribonval2022,artigo_2-grohs2023,artigo_1-guhring2021}.
 
 O primeiro resultado acompanha o denominador racional comum e fornece agendas suficientes de altura. O segundo relaciona erro bruto e crescimento das inclinações a uma regularidade inversa com perda. A agudeza na biblioteca original é demonstrada na faixa $0<\alpha\le\gamma$. A reversibilidade exata com redes rasas exige parâmetros racionais e quebras diádicas; a extensão marcada conserva explicitamente o suporte de peças constantes.
 
@@ -632,17 +632,17 @@ $N$ & $\height(y_0)$ & $\height(s)$ & $H_{\rm efetivo}$ & $4N^2$ & $N^3$\\
 4 & 64 & 25 & 64 & 64 & 64\\
 8 & 256 & 57 & 256 & 256 & 512\\
 16 & 1024 & 121 & 1024 & 1024 & 4096\\
-32 & 4096 & 249 & 4096 & 4096 & 32768\\
-64 & 16384 & 505 & 16384 & 16384 & 262144\\
-128 & 65536 & 1017 & 65536 & 65536 & 2097152\\
+32 & 4096 & 249 & 4096 & 4096 & 32\,768\\
+64 & 16\,384 & 505 & 16\,384 & 16\,384 & 262\,144\\
+128 & 65\,536 & 1017 & 65\,536 & 65\,536 & 2\,097\,152\\
 \bottomrule
 \end{tabular}
 
  \caption{Auditoria racional exata da agenda para $f_\star$. Em $N=32$ e
  $128$, recuperam-se respectivamente
- $(\height(y_0),\height(s))=(4096,249)$ e $(65536,1017)$. Os valores
+ $(\height(y_0),\height(s))=(4096,249)$ e $(65\,536,1017)$. Os valores
  tabulados são exatos; em
- \texttt{resultados\_espacos\_aproximacao.json}, somente os diagnósticos
+ \texttt{verificacao/resultados\_espacos\_aproximacao.json}, somente os diagnósticos
  logarítmicos auxiliares são armazenados em ponto flutuante e, por isso, não
  se exige identidade byte a byte desses campos entre plataformas.}
  \label{artigo_3:tab:height-audit}
@@ -659,7 +659,7 @@ $N$ & $\height(y_0)$ & $\height(s)$ & $H_{\rm efetivo}$ & $4N^2$ & $N^3$\\
 A \cref{artigo_3:fig:height-schedules} confirma, na construção quadrática auditada, a
 separação entre a agenda provada $N^2$ e a escala comparativa $N^3$.
 
-O programa \texttt{espacos\_aproximacao.py} usa
+O programa \path{verificacao/espacos_aproximacao.py} usa
 \texttt{fractions.Fraction} para reconstruir todos os valores nodais,
 parâmetros, alturas e erros quadráticos. Ele verifica ainda, por enumeração
 de $\mathcal Q_H$, a igualdade \eqref{artigo_3:eq:arithmetic-floor}; reproduz a
@@ -674,7 +674,7 @@ seções de programação dinâmica do segundo artigo \citep{artigo_2-oliveiraII
 
 Uma função linear por partes pode ser representada exatamente por uma rede ReLU
 rasa por meio de uma expansão em hinges
-\citep{artigo_2-devorehaninpetrova2021,artigo_1-daubechies2022}. Ela pode, portanto, ter poucas
+\citep{artigo_1-devore2021,artigo_1-daubechies2022}. Ela pode, portanto, ter poucas
 folhas e, por isso, ter erro bruto nulo em todas as escalas posteriores sem
 ganhar suavidade clássica. Essa barreira determina a forma dos teoremas
 inversos desta seção.
@@ -1084,12 +1084,12 @@ profundidade $L$ & blocos & regiões/folhas mín. & altura mín.\\
 \toprule
 $M$ & $\varepsilon$ & $D$ & folhas & cota de folhas & erro/$\varepsilon$\\
 \midrule
-1 & $1/32$ & 12 & 13 & 13 & 0.0099\\
-1 & $1/64$ & 13 & 14 & 14 & 0.0037\\
-1 & $1/128$ & 14 & 15 & 15 & 0.0131\\
-1 & $1/32$ & 11 & 12 & 12 & 0.0245\\
-1 & $1/64$ & 12 & 13 & 13 & 0.0099\\
-1 & $1/128$ & 13 & 14 & 14 & 0.0120\\
+1 & $1/32$ & 12 & 13 & 13 & 0{,}0099\\
+1 & $1/64$ & 13 & 14 & 14 & 0{,}0037\\
+1 & $1/128$ & 14 & 15 & 15 & 0{,}0131\\
+1 & $1/32$ & 11 & 12 & 12 & 0{,}0245\\
+1 & $1/64$ & 12 & 13 & 13 & 0{,}0099\\
+1 & $1/128$ & 13 & 14 & 14 & 0{,}0120\\
 \bottomrule
 \end{tabular}
 
@@ -1448,12 +1448,12 @@ um, em acordo com \eqref{artigo_3:eq:kink-besov-reverse}, e não infinita.
 \toprule
 $N$ & $e_N(\psi)$ & $\omega_2(\psi,N^{-1})$ & $N\omega_2$ & $N^{3/2}\omega_2$\\
 \midrule
-4 & 0 & $1/2$ & 2.000 & 4.000\\
-8 & 0 & $1/4$ & 2.000 & 5.657\\
-16 & 0 & $1/8$ & 2.000 & 8.000\\
-32 & 0 & $1/16$ & 2.000 & 11.314\\
-64 & 0 & $1/32$ & 2.000 & 16.000\\
-128 & 0 & $1/64$ & 2.000 & 22.627\\
+4 & 0 & $1/2$ & 2{,}000 & 4{,}000\\
+8 & 0 & $1/4$ & 2{,}000 & 5{,}657\\
+16 & 0 & $1/8$ & 2{,}000 & 8{,}000\\
+32 & 0 & $1/16$ & 2{,}000 & 11{,}314\\
+64 & 0 & $1/32$ & 2{,}000 & 16{,}000\\
+128 & 0 & $1/64$ & 2{,}000 & 22{,}627\\
 \bottomrule
 \end{tabular}
 
@@ -1554,7 +1554,7 @@ construção na biblioteca original do \cref{artigo_3:thm:critical-tent-comb}.
 
 \subsection{Validação executável}
 
-O programa \texttt{reversibilidade\_regularizada.py} executa uma auditoria
+O programa \path{verificacao/reversibilidade_regularizada.py} executa uma auditoria
 independente em aritmética \texttt{Fraction}. Ele:
 \begin{enumerate}[label=(\roman*),leftmargin=2.2em]
  \item executa $2952$ idas e voltas exatas entre formas hinge e árvores

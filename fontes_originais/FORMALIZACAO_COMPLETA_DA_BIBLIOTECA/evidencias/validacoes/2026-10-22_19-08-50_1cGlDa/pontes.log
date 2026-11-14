@@ -1,2 +1,0 @@
-PASS: 8 semantic modules + entrypoint, references statically resolved; originals untouched
-NOTE: Lean proof validation requires `lake build SemanticAudit`.

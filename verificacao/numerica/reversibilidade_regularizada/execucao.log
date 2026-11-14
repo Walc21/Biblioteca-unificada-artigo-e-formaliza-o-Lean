@@ -1,8 +1,0 @@
-{
-  "exact_roundtrips": 2952,
-  "approximate_networks": 84,
-  "triangle_certificates": 1260,
-  "critical_comb_rows": 6,
-  "all_assertions_passed": true
-}
-

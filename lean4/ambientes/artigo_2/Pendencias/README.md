@@ -1,13 +1,4 @@
-> **Instruções atuais para Codex e Antigravity:** [../../../../AGENTS.md](../../../../AGENTS.md).
-> Registros anteriores de divisão de tarefas são históricos.
-
 # Pendencias — provas Lean que fecham lacunas do volume
-
-## Integração
-
-Codex ou Antigravity pode integrar provas concluídas, atualizar índices e executar
-os builds, seguindo as instruções consolidadas na raiz. Desenvolva arquivos
-incompletos fora dos globs de build. IV.5.9 já está integrado em artigo_2.
 
 Biblioteca `Pendencias` do ambiente `lean4/ambientes/artigo_2` (Lean/Mathlib 4.28.0), criada em 11/11/2026 (rodada 1: 12 itens; rodada 2: 12 itens aqui, mais I.6.3/I.6.4 em `base_integrada/PendenciasParte1/` e III.12.3 no TeX).
 Não altera nenhum arquivo de `RequestProject/`; só importa dele.
@@ -104,7 +95,7 @@ A cota impressa `log₂ H_can ≤ C[M log(2W)+D+log(M+1)]` é falsa (`R(x)=x`: `
 `log₂ H_can ≤ 5[(M+1)log₂(2W)+D+log₂(M+1)]` (`reverse_height_bit_bound`),
 sob as hipóteses do TeX (`Hip`: alturas `≤ W`, quebras diádicas em `(0,1)`, profundidade `≤ D`).
 `no_additive_constant_fix` mostra que nenhum termo aditivo conserta o enunciado antigo.
-Auditoria: `../../../../verificacao/IV_5_4/AuditoriaAlturaInversa.lean`.
+Auditoria de axiomas: `AuditoriaPendencias.lean` (em `lean4/ambientes/artigo_2`).
 
 **Ida (forma ancorada e comprimento).** `FormaAncorada.lean` prova `anchored_form`: toda
 `g ∈ MAsmNH N H` se escreve em `[0,1]` como `ys + s0 (x - xs) + ∑ a_j ρ(x - t_j)` com
@@ -116,8 +107,7 @@ com `k+1 ≤ H`, `|m|+1 ≤ H`. A base é a forma ReLU `eval_relu_form` sobre fo
 `CodigoAncorado.lean` define `anchoredCodec` (`γ(M+1)` + campos; `dyadCodec` para `xs` e `t_j`,
 `ratCodec` para os demais), prova decodificação exata `anchoredCodec_RT` (logo prefix-free,
 `anchored_prefix_free`) e `anchored_length`: `|C(A)| ≤ 40 · N · ⌊log₂ 2H⌋`. O teorema `direct_part`
-junta tudo (também com `logb`). Auditoria: `../../../../verificacao/IV_5_4/AuditoriaParteDireta.lean` e
-`auditoria_parte_direta_axiomas.log` (somente `propext`, `Classical.choice`, `Quot.sound`).
+junta tudo (também com `logb`). Auditoria de axiomas: `AuditoriaPendencias.lean` (somente `propext`, `Classical.choice`, `Quot.sound`).
 Ressalva: a "forma reduzida" é a estrutura `Anchored` (não o tipo `RealReLU`); não há ponte
 explícita `Anchored → RealReLU`.
 

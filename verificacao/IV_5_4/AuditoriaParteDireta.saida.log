@@ -1,7 +1,0 @@
-'Pendencias.Marcada.MTree.eval_relu_form' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.anchored_form' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.anchoredCodec_RT' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.anchored_length' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.anchored_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.direct_part' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.Ancorada.anchored_prefix_free' depends on axioms: [propext, Classical.choice, Quot.sound]

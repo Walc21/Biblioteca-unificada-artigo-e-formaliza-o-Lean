@@ -1,2 +1,0 @@
-PASS: 53 Lean modules (41 baseline unchanged), all local imports found, no sorry/admit/axiom in bridges.
-WARNING: static check only; kernel validation and axiom audit run on the user Lean installation.

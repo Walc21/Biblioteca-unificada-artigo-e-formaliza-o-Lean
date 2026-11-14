@@ -4,7 +4,7 @@
 
 ### Construção, seleção exata, aproximação e normalização — com formalização em Lean 4
 
-*Um volume de 122 páginas, 151 resultados matemáticos e mais de 40 mil linhas de Lean 4 verificadas pelo kernel.*
+*Um volume de 117 páginas, 151 resultados matemáticos e mais de 40 mil linhas de Lean 4 verificadas pelo kernel.*
 
 **Victor Gabriel de Oliveira** · edição consolidada de 13 de novembro de 2026
 
@@ -30,11 +30,11 @@ vem com uma formalização em Lean 4 que liga cada enunciado do texto a uma prov
 
 | | |
 |---|---|
-| Páginas do PDF | **122** |
+| Páginas do PDF | **117** |
 | Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **151** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
-| Referências bibliográficas | **49** |
+| Referências bibliográficas | **47** |
 | Código Lean 4 | **~40 mil linhas**, mais de 2 mil teoremas e lemas, em 3 ambientes |
 | Casos do dossiê de pendências fechados | **42 de 42** (41 provas Lean + 1 prova textual) |
 | Base de confiança do Lean | apenas `propext`, `Classical.choice`, `Quot.sound` |
@@ -115,13 +115,16 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada.pdf        # o artigo (122 páginas)
+├── Biblioteca_Unificada.pdf        # o artigo (117 páginas)
 ├── tex/                            # fontes LaTeX
 │   ├── principal.tex               #   documento principal (compilar com latexmk)
 │   ├── documento_completo.tex      #   versão em arquivo único, com bibliografia incorporada
 │   ├── partes/                     #   as cinco partes
 │   ├── figuras/                    #   17 figuras em PDF, PNG e SVG
-│   └── referencias.bib
+│   ├── referencias.bib
+│   └── plainnat-pt.bst             #   estilo bibliográfico em português (derivado de plainnat)
+├── verificacao/                    # programas Python da validação numérica exata (ver README da pasta) e o trecho corrigido de IV.5.4
+├── documentacao/INTEGRACAO_NORMALIZACAO.md   # integração da normalização (Parte II) com a base Lean
 ├── lean4/ambientes/
 │   ├── artigo_2/                   # Partes III–V: RequestProject/ e a biblioteca Pendencias/
 │   ├── base_integrada/             # Parte I e II: Unified/ e PendenciasParte1/
@@ -138,6 +141,9 @@ cd tex
 latexmk -pdf -interaction=nonstopmode principal.tex      # gera tex/principal.pdf
 ```
 
+**Validação numérica (Python).** Seis programas em `Fraction` geram as tabelas e figuras de verificação
+citadas no artigo; não fazem parte das demonstrações. Veja [`verificacao/README.md`](verificacao/README.md).
+
 **Formalização (Lean).** Instale o [`elan`](https://github.com/leanprover/elan); cada ambiente fixa a
 versão do Lean e do Mathlib (4.28.0). O cache do Mathlib não é versionado.
 
@@ -153,6 +159,9 @@ cd ../parte_1        && lake exe cache get && lake build
 
 Os ambientes `artigo_2`, `base_integrada` e `parte_1` compilam de forma independente. Em cada auditoria,
 todas as declarações dependem **somente** de `propext`, `Classical.choice` e `Quot.sound`, sem `sorry`.
+
+A recompilação completa de 13 e 14/11/2026, com as ressalvas, está em
+[`lean4/DECLARACAO_DE_COMPILACAO.md`](lean4/DECLARACAO_DE_COMPILACAO.md).
 
 ## Escopo e honestidade
 

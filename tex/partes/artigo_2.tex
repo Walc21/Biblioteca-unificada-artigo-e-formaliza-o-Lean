@@ -769,8 +769,8 @@ $N$ & $e_{\rm cert}$ & $e_{\rm exato}$ & $\height_{\max}$ & $H_N$ & $L_{\rm atom
 4 & $\frac{3}{32}$ & $\frac{49}{1024}$ & 64 & 288 & 195 & 115 & 89\\
 8 & $\frac{3}{128}$ & $\frac{49}{4096}$ & 256 & 1152 & 513 & 235 & 211\\
 16 & $\frac{3}{512}$ & $\frac{49}{16384}$ & 1024 & 4608 & 1243 & 495 & 497\\
-32 & $\frac{3}{2048}$ & $\frac{49}{65536}$ & 4096 & 18432 & 2921 & 1067 & 1159\\
-64 & $\frac{3}{8192}$ & $\frac{49}{262144}$ & 16384 & 73728 & 6731 & 2329 & 2669\\
+32 & $\frac{3}{2048}$ & $\frac{49}{65536}$ & 4096 & 18\,432 & 2921 & 1067 & 1159\\
+64 & $\frac{3}{8192}$ & $\frac{49}{262144}$ & 16\,384 & 73\,728 & 6731 & 2329 & 2669\\
 \bottomrule
 \end{tabular}
 }
@@ -2045,7 +2045,7 @@ Na instância principal da \cref{artigo_2:sec:numerical}, com
 $(D,H)=(3,4)$, o alfabeto efetivo tem $M=475$ elementos, contra
 $2S_Dq_H(q_H-1)=15\,180$ pela primeira cota de
 \eqref{artigo_2:eq:value-alphabet-bound} e $36H^6=147\,456$ pela segunda; e a tabela da
-raiz contém $3\,383$ estados realizáveis, contra $M^2=225\,625$ posições
+raiz contém $3383$ estados realizáveis, contra $M^2=225\,625$ posições
 densas, isto é, uma ocupação de $1{,}5\%$. Nas instâncias examinadas, a
 estrutura esparsa reduz substancialmente o trabalho em relação à cota densa de
 pior caso.
@@ -2232,7 +2232,7 @@ de treinamento por perda quadrática em esquemas não lineares
 \subsection{Implementação}
 
 O script
-\path{reproducibility/selecao/seletor_dinamico_exato.py}
+\path{verificacao/seletor_dinamico_exato.py}
 implementa os \cref{artigo_2:alg:fixed-tree,artigo_2:alg:variable-tree}. O domínio numérico é
 \texttt{Fraction}. As tabelas são dicionários esparsos indexados
 por pares de \texttt{Fraction}; a junção dos filhos usa igualdade racional
@@ -2399,17 +2399,17 @@ As rotas de controle são definidas sob o mesmo funcional:
  \centering
  \caption{Regressão sob o mesmo custo racional. Os decimais são
  apresentações dos valores exatos registrados em
- \texttt{resultados.json}.}
+ \texttt{verificacao/resultados.json}.}
  \label{artigo_2:tab:selector-comparison}
  \small
  \begin{tabular}{lrrrr}
 \toprule
 Método & folhas & erro quadrático & bits & objetivo \\
 \midrule
-Ótimo exato & 3 & 0.041497 & 84 & 0.229497 \\
-Malha uniforme & 4 & 0.116159 & 115 & 0.376159 \\
-Adaptativo certificado & 3 & 0.041497 & 84 & 0.229497 \\
-Heurística gulosa & 1 & 0.517803 & 24 & 0.565803 \\
+Ótimo exato & 3 & 0{,}041497 & 84 & 0{,}229497 \\
+Malha uniforme & 4 & 0{,}116159 & 115 & 0{,}376159 \\
+Adaptativo certificado & 3 & 0{,}041497 & 84 & 0{,}229497 \\
+Heurística gulosa & 1 & 0{,}517803 & 24 & 0{,}565803 \\
 \bottomrule
 \end{tabular}
 
@@ -2778,15 +2778,15 @@ constante, com a lei de refinamento certificado da descrição do refinamento ce
 \toprule
 $N$ & $\lfloor\log_2N\rfloor$ & $E_N^{\rm dia}(q)_\infty$ & $N^2E_N/A$ \\
 \midrule
-1 & 0 & $\frac{1}{4}$ & 1.000000 \\
-2 & 1 & $\frac{1}{16}$ & 1.000000 \\
-3 & 1 & $\frac{1}{16}$ & 2.250000 \\
-4 & 2 & $\frac{1}{64}$ & 1.000000 \\
-7 & 2 & $\frac{1}{64}$ & 3.062500 \\
-8 & 3 & $\frac{1}{256}$ & 1.000000 \\
-15 & 3 & $\frac{1}{256}$ & 3.515625 \\
-16 & 4 & $\frac{1}{1024}$ & 1.000000 \\
-31 & 4 & $\frac{1}{1024}$ & 3.753906 \\
+1 & 0 & $\frac{1}{4}$ & 1{,}000000 \\
+2 & 1 & $\frac{1}{16}$ & 1{,}000000 \\
+3 & 1 & $\frac{1}{16}$ & 2{,}250000 \\
+4 & 2 & $\frac{1}{64}$ & 1{,}000000 \\
+7 & 2 & $\frac{1}{64}$ & 3{,}062500 \\
+8 & 3 & $\frac{1}{256}$ & 1{,}000000 \\
+15 & 3 & $\frac{1}{256}$ & 3{,}515625 \\
+16 & 4 & $\frac{1}{1024}$ & 1{,}000000 \\
+31 & 4 & $\frac{1}{1024}$ & 3{,}753906 \\
 \bottomrule
 \end{tabular}
 
@@ -2940,7 +2940,7 @@ A sincronização e a defasagem previstas por
 
 \subsection{Implementação e auditorias independentes}
 
-O programa \texttt{constante\_diadica.py} implementa duas rotas que não
+O programa \path{verificacao/constante_diadica.py} implementa duas rotas que não
 reutilizam a mesma recorrência: a árvore menos refinada do
 \cref{artigo_2:thm:threshold-optimality} e uma programação dinâmica por número exato
 de folhas,
@@ -3015,8 +3015,8 @@ $[I(f)^2/8,\allowbreak I(f)^2/2]$ constitui o problema de fases para curvatura v
 \toprule
 função & $I(f)^2/8$ & faixa observada de $\varepsilon n_f(\varepsilon)^2$ & $I(f)^2/2$ \\
 \midrule
-$e^x$ & 0.210420 & [0.339008, 0.515293] & 0.841679 \\
-$(x-\frac{1}{2})^3$ & 0.166667 & [0.275877, 0.417099] & 0.666667 \\
+$e^x$ & 0{,}210420 & [0{,}339008; 0{,}515293] & 0{,}841679 \\
+$(x-\frac{1}{2})^3$ & 0{,}166667 & [0{,}275877; 0{,}417099] & 0{,}666667 \\
 \bottomrule
 \end{tabular}
 
@@ -3084,12 +3084,12 @@ erro racional com deslocamentos nodais são objetos distintos; a constante
 assintótica do segundo sob uma agenda fixa de altura permanece em aberto.
 \section{Verificações de codificação e entropia}
 \label{artigo_2:sec:coding-validation}
-Os registros desta seção acompanham os programas da construção original. As verificações usam aritmética racional para os formatos e parâmetros; as curvas e as sondas de distorção são diagnósticos numéricos.
+Os registros desta seção acompanham o programa \path{verificacao/reproduzir_curvas.py}. As verificações usam aritmética racional para os formatos e parâmetros; as curvas e as sondas de distorção são diagnósticos numéricos.
 
 \subsection{Roundtrip dos formatos de codificação}
 
 Os codificadores de \cref{artigo_2:subsec:coding-formats} e seus decodificadores foram
-executados em $4.096$ montagens racionais de teste. Em
+executados em $4096$ montagens racionais de teste. Em
 todos os casos, o fluxo atômico recuperou a assinatura linear por partes e os
 dois fluxos ReLU recuperaram exatamente cada \texttt{Fraction} da rede. Foram
 também verificadas, parâmetro a parâmetro, as cotas
@@ -3108,12 +3108,12 @@ comprimentos sem regressão nem ajuste assintótico. A
 \toprule
 $H$ & $L_{\rm atom}$ & $L_{\rm ReLU,str}$ & $L_{\rm ReLU,rat}$ & razão rat./str.\\
 \midrule
-4 & 29 & 31 & 35 & 1.129\\
-8 & 33 & 35 & 51 & 1.457\\
-16 & 37 & 39 & 83 & 2.128\\
-32 & 41 & 43 & 147 & 3.419\\
-64 & 45 & 47 & 275 & 5.851\\
-128 & 49 & 51 & 531 & 10.412\\
+4 & 29 & 31 & 35 & 1{,}129\\
+8 & 33 & 35 & 51 & 1{,}457\\
+16 & 37 & 39 & 83 & 2{,}128\\
+32 & 41 & 43 & 147 & 3{,}419\\
+64 & 45 & 47 & 275 & 5{,}851\\
+128 & 49 & 51 & 531 & 10{,}412\\
 \bottomrule
 \end{tabular}
 
@@ -3193,17 +3193,17 @@ $|\Library_H|$ e $n^\sharp$ e $8$ para $n$, como previsto.
 \toprule
 $H$ & $|\Library_H|$ & $|\Library_H|/(18H^6)$ & $\max n$ ($\Gamma$) & $\max n^\sharp=$ cota inf.\\
 \midrule
-2 & 252 & 0.2188 & 3231 & 251\\
-3 & 3150 & 0.2401 & 87127 & 3149\\
-4 & 14168 & 0.1922 & 519638 & 14167\\
-6 & 142692 & 0.1699 & 9515572 & 142691\\
-8 & 897840 & 0.1903 & 113062957 & 897839\\
-12 & 9192456 & 0.1710 & 2233224112 & 9192455\\
-16 & 50315232 & 0.1666 & 20668188575 & 50315231\\
-24 & 582320976 & 0.1693 & 534070940833 & 582320975\\
-32 & 3378271680 & 0.1748 & 5622328883731 & 3378271679\\
-48 & 36947682720 & 0.1678 & 131374552971847 & 36947682719\\
-64 & 206341325696 & 0.1668 & 1289353431661883 & 206341325695\\
+2 & 252 & 0{,}2188 & 3231 & 251\\
+3 & 3150 & 0{,}2401 & 87\,127 & 3149\\
+4 & 14\,168 & 0{,}1922 & 519\,638 & 14\,167\\
+6 & 142\,692 & 0{,}1699 & 9\,515\,572 & 142\,691\\
+8 & 897\,840 & 0{,}1903 & 113\,062\,957 & 897\,839\\
+12 & 9\,192\,456 & 0{,}1710 & 2\,233\,224\,112 & 9\,192\,455\\
+16 & 50\,315\,232 & 0{,}1666 & 20\,668\,188\,575 & 50\,315\,231\\
+24 & 582\,320\,976 & 0{,}1693 & 534\,070\,940\,833 & 582\,320\,975\\
+32 & 3\,378\,271\,680 & 0{,}1748 & 5\,622\,328\,883\,731 & 3\,378\,271\,679\\
+48 & 36\,947\,682\,720 & 0{,}1678 & 131\,374\,552\,971\,847 & 36\,947\,682\,719\\
+64 & 206\,341\,325\,696 & 0{,}1668 & 1\,289\,353\,431\,661\,883 & 206\,341\,325\,695\\
 \bottomrule
 \end{tabular}
 
@@ -3223,7 +3223,7 @@ gerador aritmético e da enumeração por cascas, sempre para o calibre
  \label{artigo_2:fig:enderecos-pt}
 \end{figure}
 
-Foi ainda verificada, para $0\le n^\sharp<20{,}000$, a bijetividade de
+Foi ainda verificada, para $0\le n^\sharp<20\,000$, a bijetividade de
 $\Gamma^\sharp$ nos dois sentidos e a coincidência dos conjuntos
 $\Gamma(\{0,\ldots,N\})$ e $\Gamma^\sharp(\{0,\ldots,N'\})$ quando restritos a
 uma mesma casca de altura.

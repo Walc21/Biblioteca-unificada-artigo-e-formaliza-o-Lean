@@ -1,0 +1,3 @@
+# Usados apenas para desenhar as figuras; a seleção e as verificações usam só fractions.Fraction.
+numpy
+matplotlib

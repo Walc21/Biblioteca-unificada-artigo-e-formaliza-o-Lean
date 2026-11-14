@@ -5,9 +5,9 @@
 
 ## Estado atual — 13/11/2026
 
-- Estado: **aberto; não há prova nova declarada**.
+- Estado: **formalizado (13/11/2026)** em `lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean`, teorema `DeepIV56.deep_functional_reverse`; compilado e auditado (propext, Classical.choice, Quot.sound).
 - Responsável: agente em execução.
-- Status no mapa atual: `nao_formalizado_no_acervo`.
+- Status no mapa atual: `formalizado_compilado`.
 - TeX atual: `tex/partes/artigo_3.tex`, rótulo `map:artigo_3:5.6`,
   linha 984, página 91 neste ponto de controle.
 

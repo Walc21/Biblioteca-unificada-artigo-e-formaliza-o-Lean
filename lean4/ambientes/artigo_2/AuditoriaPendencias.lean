@@ -92,3 +92,39 @@ import Pendencias
 #print axioms Pendencias.Marcada.RealReLU.exact_shallow_reversal
 #print axioms Pendencias.Marcada.MTree.eq_of_shape_eval
 #print axioms Pendencias.Marcada.RealReLU.canonicalTree_unique_least_labeled
+
+-- IV.5.5: reversao aproximada quantizada (teorema final e auxiliares principais).
+#print axioms Pendencias.Marcada.QuantIV55.quantized_approximate_reverse
+#print axioms Pendencias.Marcada.QuantIV55.construct
+#print axioms Pendencias.Marcada.QuantIV55.Hcan_leQ
+#print axioms Pendencias.Marcada.QuantIV55.exists_nonflat
+#print axioms Pendencias.Marcada.QuantIV55.Rq_err
+
+-- IV.5.6: redes profundas medidas pela funcao realizada.
+#print axioms Pendencias.Marcada.DeepIV56.deep_functional_reverse
+#print axioms Pendencias.Marcada.DeepIV56.IsReLUNetwork.isPL
+#print axioms Pendencias.Marcada.DeepIV56.IsPL.relu
+#print axioms Pendencias.Marcada.DeepIV56.reduced_of_PL
+#print axioms Pendencias.Marcada.DeepIV56.regionCount_eq
+#print axioms Pendencias.Marcada.DeepIV56.sigma_abs_le
+
+-- III.9.1: complexidade em numero de estados (implementacao densa com modelo de custo).
+#print axioms Pendencias.DenseDP.state_complexity_dense
+#print axioms Pendencias.DenseDP.dense_variable_complexity
+#print axioms Pendencias.DenseDP.dense_budget_complexity
+#print axioms Pendencias.DenseDP.dense_variable_init
+#print axioms Pendencias.DenseDP.dense_budget_init
+#print axioms Pendencias.DenseDP.runFrom_spec
+#print axioms Pendencias.DenseDP.specE_cost
+#print axioms Pendencias.DenseDP.specEB_cost
+#print axioms Pendencias.DenseDP.rebuild_spec
+#print axioms Pendencias.DenseDP.rebuildB_spec
+#print axioms Pendencias.DenseDP.leafInit_val
+
+-- III.9.3: cota grosseira de complexidade de bits da implementacao densa.
+#print axioms Pendencias.DenseDP.bit_complexity_dense
+#print axioms Pendencias.DenseDP.Cvar_bits
+#print axioms Pendencias.DenseDP.Cb_bits
+#print axioms Pendencias.DenseDP.candidate_bits
+#print axioms Pendencias.DenseDP.partial_loss_bits
+#print axioms Pendencias.DenseDP.lossTm_acc_bits

@@ -59,6 +59,10 @@ As declarações auditadas abaixo dependem apenas de `propext`, `Classical.choic
 | V.6.3 | `BesovDireta.lean` | `Jackson.besov_direct`, `Jackson.besov_direct_whitney` |
 | IV.5.4 (volta, enunciado corrigido) | `AlturaInversa.lean` | `AlturaInversa.Hcan_le`, `reverse_height_bit_bound`, `no_additive_constant_fix` |
 | IV.5.4 (ida) | `FormaAncorada.lean`, `CodigoAncorado.lean` | `Ancorada.anchored_form`, `anchoredCodec_RT`, `anchored_length`, `direct_part` |
+| IV.5.5 | `ReversaoQuantizada.lean` | `QuantIV55.quantized_approximate_reverse` (C = 320), `construct`, `Hcan_leQ`, `exists_nonflat`, `Rq_err` |
+| IV.5.6 | `ReversaoProfunda.lean` | `DeepIV56.deep_functional_reverse`, `IsReLUNetwork.isPL`, `IsPL.relu`, `reduced_of_PL`, `regionCount_eq`, `sigma_abs_le` |
+| III.9.1 | `ComplexidadeDensa.lean` | `DenseDP.state_complexity_dense`, `dense_variable_complexity`, `dense_budget_complexity`, `dense_variable_init`, `dense_budget_init`, `runFrom_spec`, `specE_cost`, `specEB_cost`, `rebuild_spec`, `rebuildB_spec` |
+| III.9.3 | `ComplexidadeBits.lean` | `DenseDP.bit_complexity_dense`, `Cvar_bits`, `Cb_bits`, `candidate_bits`, `partial_loss_bits`, `lossTm_acc_bits` (usa `Setup.bit_complexity`) |
 | IV.5.2 | `ReversaoOriginal.lean` | `Marcada.RealReLU.exact_shallow_reversal`, `original_realizable_iff` |
 | auxiliar de IV.5.2 | `Canonica.lean` | `Marcada.canonShape_least`, `canonShape_unique_least`, `canonShape_independent_depth`, `canonShape_min_leaves` |
 | auxiliar de IV.5.2 | `CanonicaContagem.lean` | `Marcada.canonShape_leaf_bounds` (cotas explicitas inferior e superior) |

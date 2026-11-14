@@ -5,9 +5,9 @@
 
 ## Estado atual — 13/11/2026
 
-- Estado: **aberto; não há prova nova declarada**.
+- Estado: **formalizado (13/11/2026)** em `lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean`, teorema `QuantIV55.quantized_approximate_reverse` (C = 320); compilado e auditado (propext, Classical.choice, Quot.sound). Revisão de fidelidade ao TeX: ver `mapas/formalizacoes_pendencias.json`.
 - Responsável: agente em execução.
-- Status no mapa atual: `nao_formalizado_no_acervo`.
+- Status no mapa atual: `formalizado_compilado`.
 - TeX atual: `tex/partes/artigo_3.tex`, rótulo `map:artigo_3:5.5`,
   linha 922, página 90 neste ponto de controle.
 

@@ -5,9 +5,9 @@
 
 ## Estado atual — 13/11/2026
 
-- Estado: **aberto; não há prova nova declarada**.
+- Estado: **formalizado (13/11/2026)** em `lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean`, teorema `DenseDP.bit_complexity_dense`; compilado e auditado (propext, Classical.choice, Quot.sound). Ressalva: custo de aritmética racional em bits é hipótese do modelo (`BitModel`).
 - Responsável: agente em execução.
-- Status no mapa atual: `cobertura_parcial`.
+- Status no mapa atual: `formalizado_compilado`.
 - TeX atual: `tex/partes/artigo_2.tex`, rótulo `map:artigo_2:9.3`,
   linha 2083, página 61 neste ponto de controle.
 

@@ -151,35 +151,42 @@ Original de 77 páginas: 20.4.
 
 Fonte editável: [tex/partes/artigo_3.tex:863](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.4`.
 
-Estado: **Não formalizado no acervo**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
+Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.4 fechado nas duas direcoes, com a cota inversa CORRIGIDA aprovada pelo usuário (a cota impressa e falsa: R(x)=x, M=0, D=0, W=1). Volta: H_can(R) <= 2^(D+1)(M+2)W^(M+3) e log2 H_can <= 5[(M+1)log2(2W)+D+log2(M+1)] (AlturaInversa.lean); no_additive_constant_fix mostra que nenhum termo aditivo conserta a versao antiga. Ida: forma ancorada reduzida e codigo prefix-free de comprimento <= 40 N floor(log2 2H) (FormaAncorada.lean, CodigoAncorado.lean). Ressalva: a forma reduzida e a estrutura Anchored, sem ponte explicita para RealReLU. Enunciado original preservado em verificacao/IV_5_4/IV_5_4_trecho_original.tex.
 
-Nenhuma declaração Lean associada na matriz recebida.
+- [`Pendencias.Marcada.AlturaInversa.Hcan_le`](../../../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 365.
+- [`Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound`](../../../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 376.
+- [`Pendencias.Marcada.AlturaInversa.no_additive_constant_fix`](../../../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 442.
+- [`Pendencias.Marcada.Ancorada.anchored_form`](../../../lean4/ambientes/artigo_2/Pendencias/FormaAncorada.lean) — linha 465.
+- [`Pendencias.Marcada.Ancorada.direct_part`](../../../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean) — linha 175.
 
 ## IV.5.5 — teorema reversão aproximada quantizada
 
 Original de 77 páginas: 20.5.
 
-Fonte editável: [tex/partes/artigo_3.tex:922](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.5`.
+Fonte editável: [tex/partes/artigo_3.tex:950](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.5`.
 
-Estado: **Não formalizado no acervo**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
+Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.5 formalizado: quantized_approximate_reverse com C universal = 320 (mesma constante em D_eps e na cota de altura). Para forma ReLU reduzida real com |c|,|q|,|a_j| <= W, W >= 1, e 0<eps<=1, existe montagem U da biblioteca original (LTree.WF, inclinacao nao nula) com erro uniforme <= eps em [0,1], numero de folhas <= 1+M*ceil(log2(C(M+1)(W+1)/eps)) e altura atomica maxima <= C(M+1)^3(W+1)^3/eps^2; vale com regioes planas. Prova: arredondamento de c,q,a_j a multiplos de 1/Q, quebras a j/2^D (1<=j<=2^D-1), perturbacao t/Q da inclinacao global com t em [1,M+2] escolhido por gavetas, montagem canonica de IV.5.2 transportada para LTree. A cota de altura e provada diretamente com denominador comum (Hcan_leQ); nao usa a cota impressa antiga de IV.5.4. Compilado e auditado (apenas propext, Classical.choice, Quot.sound). Ressalvas: D_eps usa Nat.ceil (o argumento do log e >= 1, logo coincide com o teto inteiro); a cota de folhas usa a profundidade de quantizacao D <= D_eps. A prova textual do TeX permanece como esboco (usa Q ~ delta^-1 com delta=eps/(16(M+1)(W+1)); a formalizacao usa Q = ceil(4(M+2)/eps) e 2^D >= 2(M+1)(W+1)/eps, que dao as mesmas ordens).
 
-Nenhuma declaração Lean associada na matriz recebida.
+- [`Pendencias.Marcada.QuantIV55.quantized_approximate_reverse`](../../../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 666.
+- [`Pendencias.Marcada.QuantIV55.construct`](../../../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 558.
+- [`Pendencias.Marcada.QuantIV55.Hcan_leQ`](../../../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 187.
 
 ## IV.5.6 — corolario redes profundas medidas pela função realizada
 
 Original de 77 páginas: 20.6.
 
-Fonte editável: [tex/partes/artigo_3.tex:984](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.6`.
+Fonte editável: [tex/partes/artigo_3.tex:1012](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.6`.
 
-Estado: **Não formalizado no acervo**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
+Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.6 formalizado: deep_functional_reverse. Redes ReLU univariadas feedforward arbitrarias (NetFun: camadas afins e ReLU alternadas, qualquer profundidade/largura) realizam funcoes contínuas lineares por partes (fecho por combinacoes afins e por max 0, via colagem e remocao da ultima quebra). Para F com norma uniforme <= B e Lipschitz <= L em [0,1], F coincide em [0,1] com uma forma ReLU reduzida real (quebras estritas em (0,1), saltos nao nulos) com M+1 = R(F) hinges+1, onde R(F) = regionCount F e o menor numero de pecas afins de [0,1] (regioes afins maximas); |c|<=B, |q|<=L, |a_j|<=2L, todos <= W = 2 max{1,B,L}; e IV.5.5 (quantized_approximate_reverse) vale com esses M e W. Compilado e auditado (propext, Classical.choice, Quot.sound). Escolhas de formalizacao: B e Lipschitz medidos em [0,1] (dominio do enunciado); R(F) definido como minimo de pecas afins, equivalente a regioes afins maximas para F continua (regionCount_eq prova R(F)=M+1 para a forma reduzida). A prova do TeX permanece valida; a formalizacao explicita a derivada via inclinacoes locais sigma_n.
 
-Nenhuma declaração Lean associada na matriz recebida.
+- [`Pendencias.Marcada.DeepIV56.deep_functional_reverse`](../../../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean) — linha 583.
+- [`Pendencias.Marcada.DeepIV56.regionCount_eq`](../../../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean) — linha 499.
 
 ## IV.5.7 — teorema imersão inversa sob crescimento de Lipschitz
 
 Original de 77 páginas: 20.7.
 
-Fonte editável: [tex/partes/artigo_3.tex:1087](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.7`.
+Fonte editável: [tex/partes/artigo_3.tex:1115](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.7`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [11/11/2026] ω₂ e Besov pela norma diádica do texto em [0,1]; C = 4 + 2^{γ+1}; hipótese A_α(f) ≤ A na forma e_N ≤ A N^{-α}; conclusões B^{θ*}_{∞,∞} e B^θ_{∞,p} (θ<θ*, 0<p<∞). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -190,7 +197,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.8.
 
-Fonte editável: [tex/partes/artigo_3.tex:1142](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.8`.
+Fonte editável: [tex/partes/artigo_3.tex:1170](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.8`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [11/11/2026] H(N) ≤ C N^γ ⟹ 𝒜^α_q ⊂ B^{α/(α+γ)}_{∞,∞} (q<∞ via IV.3.2 e q=∞); agendas `Hsk` = H_{s,κ} em [0,1] (C_K = 8): ϑ_s e ordens < ϑ_s com fator logarítmico. Montagens H(N)-Lipschitz (`Sigma_lipschitz`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -203,7 +210,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.9.
 
-Fonte editável: [tex/partes/artigo_3.tex:1178](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.9`.
+Fonte editável: [tex/partes/artigo_3.tex:1206](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.9`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] Teorema do pente de tendas IV.5.9 concluido em Pendencias.PenteGemini.critical_tent_comb: continuidade, aproximacao para todo N >= 1 na biblioteca original e nao pertencimento as classes Besov acima e no expoente critico para todo r finito. Build Pendencias e auditoria agregada passaram; axiomas permitidos.
 
@@ -213,7 +220,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.10.
 
-Fonte editável: [tex/partes/artigo_3.tex:1287](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.10`.
+Fonte editável: [tex/partes/artigo_3.tex:1315](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.10`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [11/11/2026] ω₂(f,1/N) ≤ 4 𝓡_N(f) para toda agenda, toda f e todo N (`realN`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -223,7 +230,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.11.
 
-Fonte editável: [tex/partes/artigo_3.tex:1308](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.11`.
+Fonte editável: [tex/partes/artigo_3.tex:1336](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.11`.
 
 Estado: **Observação editorial**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
 
@@ -233,7 +240,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 20.12.
 
-Fonte editável: [tex/partes/artigo_3.tex:1314](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.12`.
+Fonte editável: [tex/partes/artigo_3.tex:1342](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.12`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] Jackson para o funcional de realizacao em [0,1], cota bilateral e versao uniforme; constantes universais explicitas. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 
@@ -244,7 +251,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.13.
 
-Fonte editável: [tex/partes/artigo_3.tex:1362](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.13`.
+Fonte editável: [tex/partes/artigo_3.tex:1390](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.13`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] Igualdades de classes de Besov e realizacao em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 
@@ -254,7 +261,7 @@ Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certi
 
 Original de 77 páginas: 20.14.
 
-Fonte editável: [tex/partes/artigo_3.tex:1448](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.14`.
+Fonte editável: [tex/partes/artigo_3.tex:1476](../../../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.14`.
 
 Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] Estabilidade das igualdades para familias aninhadas que contem zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 

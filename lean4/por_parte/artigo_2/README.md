@@ -527,9 +527,14 @@ Original de 77 páginas: 14.1.
 
 Fonte editável: [tex/partes/artigo_2.tex:1996](../../../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
 
-Estado: **Cobertura parcial**. Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.
+Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades. [13/11/2026] III.9.1 formalizado com modelo de custo explicito: monad de contagem Tm, memoria densa Mem com dominio explicito e motor generico de preenchimento por niveis (runFrom_spec). Implementacao densa da recorrencia Cvar (denseRun: tabela (r,j,u,v) -> custo+apontador, niveis D..0, cada candidato w custa 2 leituras+1 soma+1 comparacao) e da recorrencia com orcamento Cb (denseRunB: chaves (r,j,u,v,n), pares (n_L,w)). Provado: (a) a tabela guarda exatamente Cvar/Cb (specE_cost, specEB_cost); (b) memoria exatamente S_D M^2 (resp. S_D N M^2) entradas; (c) operacoes <= 8 S_D M^3 (resp. <= 7 S_D N^2 M^3) com custos de folha pre-computados; (d) apontadores reconstroem uma representacao otima em Rset/RsetN (rebuild_spec, rebuildB_spec); (e) custo local calculado sobre P observacoes (leafInit, 4P+3 operacoes, valor exatamente Phi): inicializacao acrescenta 4 S_D P M^2 (variavel) e S_D M^2 (4P+3) (orcamento). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (1) a comparacao na tabela densa e feita sobre o custo; o desempate pela chave completa kappa (fluxo shortlex) nao esta no programa denso — o TeX conta comparacoes de chave como unitarias, de modo que a contagem coincide, e o seletor kappa-canonico continua sendo o de III.7.4 (varRoot_spec); a tabela densa devolve UMA representacao otima, nao necessariamente a kappa-minima; (2) o tempo de reconstrucao nao e contado (nao faz parte do enunciado); (3) modelo: leitura/escrita da tabela, soma e comparacao no corpo ordenado dos custos sao operacoes unitarias, conforme a secao do TeX; (4) as constantes explicitas 8 e 7 materializam O(.) para M>=1.
 
 - [`Artigo.Setup.state_complexity`](../../../lean4/ambientes/artigo_2/RequestProject/Complexity.lean) — linha 89.
+- [`Pendencias.DenseDP.state_complexity_dense`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1813.
+- [`Pendencias.DenseDP.dense_variable_complexity`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 866.
+- [`Pendencias.DenseDP.dense_budget_complexity`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1459.
+- [`Pendencias.DenseDP.dense_variable_init`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1614.
+- [`Pendencias.DenseDP.dense_budget_init`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1762.
 
 ## III.9.2 — observacao tabelas esparsas
 
@@ -547,9 +552,14 @@ Original de 77 páginas: 14.3.
 
 Fonte editável: [tex/partes/artigo_2.tex:2083](../../../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
 
-Estado: **Cobertura parcial**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.
+Estado: **Formalizado e compilado**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate. [13/11/2026] III.9.3 formalizado sobre a implementacao densa de III.9.1 (leafInit agora testa admissibilidade antes de somar a perda; estado nao admissivel cobra 4P+3 como cota superior sem aritmetica sobre os dados). Provado: (1) crescimento — todo custo finito Cvar/Cb da recorrencia (entradas da tabela), toda soma de candidatos c_L+c_R (<= 4 B_cost+5 bits), todo candidato com penalidade (<= 16 B_cost+25 bits) e todo acumulador parcial da perda local (lossTm) tem comprimento em bits <= B_cost = Bcost S B L, a cota explicita de Setup.bit_complexity (2(P(5B+6clog H+2(k0+D)+9)+2B+2clog L+2)+3); (2) tempo em bits — numero de operacoes de III.9.1 (S_D M^2 (4M+6)+4 S_D P M^2 sem orcamento; S_D M^2 (4P+3)+S_D M^2 N (4NM+2) com orcamento) multiplicado por opBits = arith(b)+L+entryBits, com opBits <= cA MZ(b) clog(2b)+2L+b+idx, b=16 B_cost+25; (3) memoria em bits — dom.card * (B_cost+L+idx) exatamente S_D M^2 (resp. S_D N M^2) vezes. Multiplicacao escolar: schoolModel (MZ b = b^2). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (a) o custo de uma soma/comparacao/reducao de fracoes com operandos de b bits, <= cA MZ(b) log(2b), e HIPOTESE do modelo (BitModel.arith_le), como no TeX ("algoritmos inteiros usuais"); nao ha modelo de maquina em Lean; (b) o tempo em bits e o numero de operacoes unitarias vezes o custo-limite de uma operacao (argumento do TeX), nao uma simulacao bit a bit; (c) BitHyp assume B (bl dos dados/penalidades) e L (comprimento de fluxo das representacoes do catalogo, eq. stream-length) como no teorema bit_complexity; (d) os indices (idxBits = clog(S_D M+1)) aparecem explicitamente em vez de absorvidos; (e) vale a ressalva de III.9.1 sobre o desempate kappa (comparacoes de chave unitarias; empate shortlex custa L).
 
 - [`Artigo.Setup.bit_complexity`](../../../lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean) — linha 266.
+- [`Pendencias.DenseDP.bit_complexity_dense`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 178.
+- [`Pendencias.DenseDP.Cvar_bits`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 60.
+- [`Pendencias.DenseDP.Cb_bits`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 68.
+- [`Pendencias.DenseDP.candidate_bits`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 86.
+- [`Pendencias.DenseDP.lossTm_acc_bits`](../../../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 124.
 
 ## III.9.4 — proposicao convergência dos mínimos penalizados
 

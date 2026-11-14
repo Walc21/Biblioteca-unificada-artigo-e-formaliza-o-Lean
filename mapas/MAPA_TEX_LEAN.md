@@ -1306,9 +1306,14 @@ Original de 77 páginas: 14.1.
 
 Fonte editável: [tex/partes/artigo_2.tex:1996](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
 
-Estado: **Cobertura parcial**. Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.
+Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades. [13/11/2026] III.9.1 formalizado com modelo de custo explicito: monad de contagem Tm, memoria densa Mem com dominio explicito e motor generico de preenchimento por niveis (runFrom_spec). Implementacao densa da recorrencia Cvar (denseRun: tabela (r,j,u,v) -> custo+apontador, niveis D..0, cada candidato w custa 2 leituras+1 soma+1 comparacao) e da recorrencia com orcamento Cb (denseRunB: chaves (r,j,u,v,n), pares (n_L,w)). Provado: (a) a tabela guarda exatamente Cvar/Cb (specE_cost, specEB_cost); (b) memoria exatamente S_D M^2 (resp. S_D N M^2) entradas; (c) operacoes <= 8 S_D M^3 (resp. <= 7 S_D N^2 M^3) com custos de folha pre-computados; (d) apontadores reconstroem uma representacao otima em Rset/RsetN (rebuild_spec, rebuildB_spec); (e) custo local calculado sobre P observacoes (leafInit, 4P+3 operacoes, valor exatamente Phi): inicializacao acrescenta 4 S_D P M^2 (variavel) e S_D M^2 (4P+3) (orcamento). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (1) a comparacao na tabela densa e feita sobre o custo; o desempate pela chave completa kappa (fluxo shortlex) nao esta no programa denso — o TeX conta comparacoes de chave como unitarias, de modo que a contagem coincide, e o seletor kappa-canonico continua sendo o de III.7.4 (varRoot_spec); a tabela densa devolve UMA representacao otima, nao necessariamente a kappa-minima; (2) o tempo de reconstrucao nao e contado (nao faz parte do enunciado); (3) modelo: leitura/escrita da tabela, soma e comparacao no corpo ordenado dos custos sao operacoes unitarias, conforme a secao do TeX; (4) as constantes explicitas 8 e 7 materializam O(.) para M>=1.
 
 - [`Artigo.Setup.state_complexity`](../lean4/ambientes/artigo_2/RequestProject/Complexity.lean) — linha 89.
+- [`Pendencias.DenseDP.state_complexity_dense`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1813.
+- [`Pendencias.DenseDP.dense_variable_complexity`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 866.
+- [`Pendencias.DenseDP.dense_budget_complexity`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1459.
+- [`Pendencias.DenseDP.dense_variable_init`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1614.
+- [`Pendencias.DenseDP.dense_budget_init`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1762.
 
 ## III.9.2 — observacao tabelas esparsas
 
@@ -1326,9 +1331,14 @@ Original de 77 páginas: 14.3.
 
 Fonte editável: [tex/partes/artigo_2.tex:2083](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
 
-Estado: **Cobertura parcial**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.
+Estado: **Formalizado e compilado**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate. [13/11/2026] III.9.3 formalizado sobre a implementacao densa de III.9.1 (leafInit agora testa admissibilidade antes de somar a perda; estado nao admissivel cobra 4P+3 como cota superior sem aritmetica sobre os dados). Provado: (1) crescimento — todo custo finito Cvar/Cb da recorrencia (entradas da tabela), toda soma de candidatos c_L+c_R (<= 4 B_cost+5 bits), todo candidato com penalidade (<= 16 B_cost+25 bits) e todo acumulador parcial da perda local (lossTm) tem comprimento em bits <= B_cost = Bcost S B L, a cota explicita de Setup.bit_complexity (2(P(5B+6clog H+2(k0+D)+9)+2B+2clog L+2)+3); (2) tempo em bits — numero de operacoes de III.9.1 (S_D M^2 (4M+6)+4 S_D P M^2 sem orcamento; S_D M^2 (4P+3)+S_D M^2 N (4NM+2) com orcamento) multiplicado por opBits = arith(b)+L+entryBits, com opBits <= cA MZ(b) clog(2b)+2L+b+idx, b=16 B_cost+25; (3) memoria em bits — dom.card * (B_cost+L+idx) exatamente S_D M^2 (resp. S_D N M^2) vezes. Multiplicacao escolar: schoolModel (MZ b = b^2). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (a) o custo de uma soma/comparacao/reducao de fracoes com operandos de b bits, <= cA MZ(b) log(2b), e HIPOTESE do modelo (BitModel.arith_le), como no TeX ("algoritmos inteiros usuais"); nao ha modelo de maquina em Lean; (b) o tempo em bits e o numero de operacoes unitarias vezes o custo-limite de uma operacao (argumento do TeX), nao uma simulacao bit a bit; (c) BitHyp assume B (bl dos dados/penalidades) e L (comprimento de fluxo das representacoes do catalogo, eq. stream-length) como no teorema bit_complexity; (d) os indices (idxBits = clog(S_D M+1)) aparecem explicitamente em vez de absorvidos; (e) vale a ressalva de III.9.1 sobre o desempate kappa (comparacoes de chave unitarias; empate shortlex custa L).
 
 - [`Artigo.Setup.bit_complexity`](../lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean) — linha 266.
+- [`Pendencias.DenseDP.bit_complexity_dense`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 178.
+- [`Pendencias.DenseDP.Cvar_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 60.
+- [`Pendencias.DenseDP.Cb_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 68.
+- [`Pendencias.DenseDP.candidate_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 86.
+- [`Pendencias.DenseDP.lossTm_acc_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 124.
 
 ## III.9.4 — proposicao convergência dos mínimos penalizados
 
@@ -1594,9 +1604,11 @@ Original de 77 páginas: 20.5.
 
 Fonte editável: [tex/partes/artigo_3.tex:950](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.5`.
 
-Estado: **Não formalizado no acervo**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
+Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.5 formalizado: quantized_approximate_reverse com C universal = 320 (mesma constante em D_eps e na cota de altura). Para forma ReLU reduzida real com |c|,|q|,|a_j| <= W, W >= 1, e 0<eps<=1, existe montagem U da biblioteca original (LTree.WF, inclinacao nao nula) com erro uniforme <= eps em [0,1], numero de folhas <= 1+M*ceil(log2(C(M+1)(W+1)/eps)) e altura atomica maxima <= C(M+1)^3(W+1)^3/eps^2; vale com regioes planas. Prova: arredondamento de c,q,a_j a multiplos de 1/Q, quebras a j/2^D (1<=j<=2^D-1), perturbacao t/Q da inclinacao global com t em [1,M+2] escolhido por gavetas, montagem canonica de IV.5.2 transportada para LTree. A cota de altura e provada diretamente com denominador comum (Hcan_leQ); nao usa a cota impressa antiga de IV.5.4. Compilado e auditado (apenas propext, Classical.choice, Quot.sound). Ressalvas: D_eps usa Nat.ceil (o argumento do log e >= 1, logo coincide com o teto inteiro); a cota de folhas usa a profundidade de quantizacao D <= D_eps. A prova textual do TeX permanece como esboco (usa Q ~ delta^-1 com delta=eps/(16(M+1)(W+1)); a formalizacao usa Q = ceil(4(M+2)/eps) e 2^D >= 2(M+1)(W+1)/eps, que dao as mesmas ordens).
 
-Nenhuma declaração Lean associada na matriz recebida.
+- [`Pendencias.Marcada.QuantIV55.quantized_approximate_reverse`](../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 666.
+- [`Pendencias.Marcada.QuantIV55.construct`](../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 558.
+- [`Pendencias.Marcada.QuantIV55.Hcan_leQ`](../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean) — linha 187.
 
 ## IV.5.6 — corolario redes profundas medidas pela função realizada
 
@@ -1604,9 +1616,10 @@ Original de 77 páginas: 20.6.
 
 Fonte editável: [tex/partes/artigo_3.tex:1012](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.6`.
 
-Estado: **Não formalizado no acervo**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.
+Estado: **Formalizado e compilado**. Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.6 formalizado: deep_functional_reverse. Redes ReLU univariadas feedforward arbitrarias (NetFun: camadas afins e ReLU alternadas, qualquer profundidade/largura) realizam funcoes contínuas lineares por partes (fecho por combinacoes afins e por max 0, via colagem e remocao da ultima quebra). Para F com norma uniforme <= B e Lipschitz <= L em [0,1], F coincide em [0,1] com uma forma ReLU reduzida real (quebras estritas em (0,1), saltos nao nulos) com M+1 = R(F) hinges+1, onde R(F) = regionCount F e o menor numero de pecas afins de [0,1] (regioes afins maximas); |c|<=B, |q|<=L, |a_j|<=2L, todos <= W = 2 max{1,B,L}; e IV.5.5 (quantized_approximate_reverse) vale com esses M e W. Compilado e auditado (propext, Classical.choice, Quot.sound). Escolhas de formalizacao: B e Lipschitz medidos em [0,1] (dominio do enunciado); R(F) definido como minimo de pecas afins, equivalente a regioes afins maximas para F continua (regionCount_eq prova R(F)=M+1 para a forma reduzida). A prova do TeX permanece valida; a formalizacao explicita a derivada via inclinacoes locais sigma_n.
 
-Nenhuma declaração Lean associada na matriz recebida.
+- [`Pendencias.Marcada.DeepIV56.deep_functional_reverse`](../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean) — linha 583.
+- [`Pendencias.Marcada.DeepIV56.regionCount_eq`](../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean) — linha 499.
 
 ## IV.5.7 — teorema imersão inversa sob crescimento de Lipschitz
 

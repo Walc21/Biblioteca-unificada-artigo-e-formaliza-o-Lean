@@ -5,9 +5,9 @@
 
 ## Estado atual — 13/11/2026
 
-- Estado: **em andamento, parcial: auxiliares compilam; falta execução densa memoizada e refinamento para `Cvar`**.
+- Estado: **formalizado (13/11/2026)** em `lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean`, teorema `DenseDP.state_complexity_dense` (e `dense_variable_complexity`, `dense_budget_complexity`, `dense_variable_init`, `dense_budget_init`); compilado e auditado (propext, Classical.choice, Quot.sound). Ressalva: desempate pela chave κ não está no programa denso (ver mapa).
 - Responsável: agente em execução.
-- Status no mapa atual: `cobertura_parcial`.
+- Status no mapa atual: `formalizado_compilado`.
 - TeX atual: `tex/partes/artigo_2.tex`, rótulo `map:artigo_2:9.1`,
   linha 1996, página 60 neste ponto de controle.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Debian) (preloaded format=pdflatex 2026.10.31)  13 NOV 2026 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Debian) (preloaded format=pdflatex 2026.10.31)  13 NOV 2026 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2541,8 +2541,24 @@ Underfull \hbox (badness 4846) in paragraph at lines 133--133
  []
 
 
+Underfull \hbox (badness 1077) in paragraph at lines 135--135
+\T1/lmr/m/n/10 (+20) em numero de estados: prova $\T1/lmtt/m/n/10 D e n s e D
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 135--135
+\T1/lmr/m/n/10 (+20) 8 e 7. Compilado com Lean/Mathlib
+ []
+
+
 Underfull \hbox (badness 4846) in paragraph at lines 136--136
 []|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 137--137
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
  []
 
 
@@ -2607,7 +2623,7 @@ Underfull \hbox (badness 4846) in paragraph at lines 146--146
 []|\T1/lmr/m/n/10 (+20) Observação editorial. Observacao ou
  []
 
-[108] [109] [110] [111]
+[108] [109] [110] [111] [112]
 Underfull \hbox (badness 1616) in paragraph at lines 153--153
 \T1/lmr/m/n/10 (+20) e \T1/lmtt/m/n/10 pErr \T1/lmr/m/n/10 (+20) sobre $\OML/lm
 m/m/it/10 K \OT1/lmr/m/n/10 (+20) = [0\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 
@@ -2795,6 +2811,34 @@ Underfull \hbox (badness 2903) in paragraph at lines 165--165
  []
 
 
+Underfull \hbox (badness 2903) in paragraph at lines 166--166
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 167--167
+[]|\T1/lmr/m/n/10 (+20) Formalizado e compilado. Reversao
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 167--167
+\T1/lmr/m/n/10 (+20) aproximada quantizada com C = 320.
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 167--167
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 168--168
+\T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
+0 propext\T1/lmr/m/n/10 (+20) ,
+ []
+
+
 Underfull \hbox (badness 2903) in paragraph at lines 169--169
 \T1/lmtt/m/n/10 build Pendencias\T1/lmr/m/n/10 (+20) ); axiomas: \T1/lmtt/m/n/1
 0 propext\T1/lmr/m/n/10 (+20) ,
@@ -2867,7 +2911,7 @@ Underfull \hbox (badness 4967) in paragraph at lines 176--176
 \T1/lmr/m/n/10 (+20) Ressalva anterior: Nao foi localizado
  []
 
-[112] [113] [114] [115] [116] [117]
+[113] [114] [115] [116] [117]
 Underfull \hbox (badness 8151) in paragraph at lines 183--183
 \T1/lmr/m/n/10 (+20) Ressalva anterior: Resultado original
  []
@@ -2979,13 +3023,13 @@ Package rerunfilecheck Info: File `principal.out' has not changed.
 (rerunfilecheck)             Checksum: ED578A08AEEEC51E3E54DA313B95D585;27319.
  ) 
 Here is how much of TeX's memory you used:
- 33426 strings out of 469171
- 657201 string characters out of 5453943
- 1142686 words of memory out of 5000000
+ 33424 strings out of 469171
+ 657183 string characters out of 5453943
+ 1146696 words of memory out of 5000000
  60561 multiletter control sequences out of 15000+600000
- 772172 words of font info for 397 fonts, out of 8000000 for 9000
+ 772089 words of font info for 396 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,14n,94p,1282b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,14n,94p,1192b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></home/victor/Proje
 tos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/
@@ -3026,16 +3070,14 @@ aidos_2026-11-13/tex-local/usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb></
 home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/victor/Projeto
 s/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msam7.pfb></home/victor/Projetos/Arquivos_Extraidos
-_2026-11-13/tex-local/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-loc
-al/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><
-/home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-local/usr/share/texlive
-/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on principal.pdf (122 pages, 1346745 bytes).
+pe1/public/amsfonts/symbols/msbm10.pfb></home/victor/Projetos/Arquivos_Extraido
+s_2026-11-13/tex-local/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm7.pfb></home/victor/Projetos/Arquivos_Extraidos_2026-11-13/tex-loc
+al/usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on principal.pdf (122 pages, 1338944 bytes).
 PDF statistics:
- 3270 PDF objects out of 3580 (max. 8388607)
- 2886 compressed objects within 29 object streams
+ 3265 PDF objects out of 3580 (max. 8388607)
+ 2883 compressed objects within 29 object streams
  780 named destinations out of 1000 (max. 500000)
  75197 words of extra memory for PDF output out of 89155 (max. 10000000)
 

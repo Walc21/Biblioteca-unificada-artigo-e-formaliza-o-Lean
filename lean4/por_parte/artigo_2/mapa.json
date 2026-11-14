@@ -2207,8 +2207,8 @@
     ],
     "enunciado_tex": "\\label{thm:state-complexity}\nSuponha os custos de folha pré-computados. Uma implementação densa do\n\\cref{alg:variable-tree} usa\n\\begin{equation}\n O(S_DM^3)\n \\label{eq:dense-time}\n\\end{equation}\noperações e\n\\begin{equation}\n O(S_DM^2)\n \\label{eq:dense-memory}\n\\end{equation}\nentradas de memória quando preserva todos os apontadores de reconstrução.\nA versão com orçamento de até $N$ folhas usa\n\\begin{equation}\n O(S_DN^2M^3)\n \\label{eq:budget-time}\n\\end{equation}\noperações e $O(S_DNM^2)$ entradas. Se cada custo local\n\\eqref{eq:local-loss} for calculado diretamente sobre $P$ observações, a\ninicialização densa acrescenta $O(S_DPM^2)$ operações.",
     "sha256_enunciado": "fa139ae7347b0c3c5577db67712b65635248003471185957800669d41148c5ab",
-    "status": "cobertura_parcial",
-    "observacao": "Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades.",
+    "status": "formalizado_compilado",
+    "observacao": "Prova cardinalidades das tabelas e transicoes; nao certifica tempo e memoria de um programa com execucao ligada a essas cardinalidades. [13/11/2026] III.9.1 formalizado com modelo de custo explicito: monad de contagem Tm, memoria densa Mem com dominio explicito e motor generico de preenchimento por niveis (runFrom_spec). Implementacao densa da recorrencia Cvar (denseRun: tabela (r,j,u,v) -> custo+apontador, niveis D..0, cada candidato w custa 2 leituras+1 soma+1 comparacao) e da recorrencia com orcamento Cb (denseRunB: chaves (r,j,u,v,n), pares (n_L,w)). Provado: (a) a tabela guarda exatamente Cvar/Cb (specE_cost, specEB_cost); (b) memoria exatamente S_D M^2 (resp. S_D N M^2) entradas; (c) operacoes <= 8 S_D M^3 (resp. <= 7 S_D N^2 M^3) com custos de folha pre-computados; (d) apontadores reconstroem uma representacao otima em Rset/RsetN (rebuild_spec, rebuildB_spec); (e) custo local calculado sobre P observacoes (leafInit, 4P+3 operacoes, valor exatamente Phi): inicializacao acrescenta 4 S_D P M^2 (variavel) e S_D M^2 (4P+3) (orcamento). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (1) a comparacao na tabela densa e feita sobre o custo; o desempate pela chave completa kappa (fluxo shortlex) nao esta no programa denso — o TeX conta comparacoes de chave como unitarias, de modo que a contagem coincide, e o seletor kappa-canonico continua sendo o de III.7.4 (varRoot_spec); a tabela densa devolve UMA representacao otima, nao necessariamente a kappa-minima; (2) o tempo de reconstrucao nao e contado (nao faz parte do enunciado); (3) modelo: leitura/escrita da tabela, soma e comparacao no corpo ordenado dos custos sao operacoes unitarias, conforme a secao do TeX; (4) as constantes explicitas 8 e 7 materializam O(.) para M>=1.",
     "destino_editorial": "artigo_2",
     "resultados_lean": [
       {
@@ -2218,6 +2218,46 @@
         "arquivo_lean": "entradas/artigo_2/RequestProject/Complexity.lean",
         "linha_lean": 89,
         "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/Complexity.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.state_complexity_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeDensa.lean",
+        "linha_lean": 1813,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.dense_variable_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeDensa.lean",
+        "linha_lean": 866,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.dense_budget_complexity",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeDensa.lean",
+        "linha_lean": 1459,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.dense_variable_init",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeDensa.lean",
+        "linha_lean": 1614,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.dense_budget_init",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeDensa.lean",
+        "linha_lean": 1762,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean"
       }
     ],
     "parte_volume": "III",
@@ -2277,8 +2317,8 @@
     ],
     "enunciado_tex": "\\label{thm:bit-complexity}\nTodos os custos racionais que aparecem na recorrência possuem numeradores e\ndenominadores de comprimento no máximo\n\\begin{equation}\n B_{\\rm cost}\n =O\\!\\left(\n P\\bigl(B_{\\mathcal Z}+D+|k_0|+\\log(2H)\\bigr)\n +B_{\\mathcal Z}+D+\\log(2L)\n \\right).\n \\label{eq:cost-bit-growth}\n\\end{equation}\nConsequentemente, a versão densa sem orçamento de folhas pode ser executada em\n\\begin{equation}\n O\\!\\left(\n (S_DM^3+S_DPM^2)\n \\bigl[\\mathsf M_{\\mathbb Z}(B_{\\rm cost})\n       \\log(2B_{\\rm cost})+L\\bigr]\n \\right)\n \\label{eq:dense-bit-time}\n\\end{equation}\noperações de bit e\n\\begin{equation}\n O\\!\\left(S_DM^2(B_{\\rm cost}+L)\\right)\n \\label{eq:dense-bit-memory}\n\\end{equation}\nbits de memória quando todos os estados e fluxos são armazenados. Na versão\ncom até $N$ folhas, substituem-se $S_DM^3$ e $S_DM^2$ por\n$S_DN^2M^3$ e $S_DNM^2$, respectivamente. Com multiplicação escolar,\n$\\mathsf M_{\\mathbb Z}(b)=O(b^2)$.",
     "sha256_enunciado": "def7169385bdaa70c999abd133a64c5eb72617a6192a60f912562244f72967af",
-    "status": "cobertura_parcial",
-    "observacao": "bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate.",
+    "status": "formalizado_compilado",
+    "observacao": "bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memoria em bits do artigo exigem semantica de execucao e custo de operacoes/desempate. [13/11/2026] III.9.3 formalizado sobre a implementacao densa de III.9.1 (leafInit agora testa admissibilidade antes de somar a perda; estado nao admissivel cobra 4P+3 como cota superior sem aritmetica sobre os dados). Provado: (1) crescimento — todo custo finito Cvar/Cb da recorrencia (entradas da tabela), toda soma de candidatos c_L+c_R (<= 4 B_cost+5 bits), todo candidato com penalidade (<= 16 B_cost+25 bits) e todo acumulador parcial da perda local (lossTm) tem comprimento em bits <= B_cost = Bcost S B L, a cota explicita de Setup.bit_complexity (2(P(5B+6clog H+2(k0+D)+9)+2B+2clog L+2)+3); (2) tempo em bits — numero de operacoes de III.9.1 (S_D M^2 (4M+6)+4 S_D P M^2 sem orcamento; S_D M^2 (4P+3)+S_D M^2 N (4NM+2) com orcamento) multiplicado por opBits = arith(b)+L+entryBits, com opBits <= cA MZ(b) clog(2b)+2L+b+idx, b=16 B_cost+25; (3) memoria em bits — dom.card * (B_cost+L+idx) exatamente S_D M^2 (resp. S_D N M^2) vezes. Multiplicacao escolar: schoolModel (MZ b = b^2). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (a) o custo de uma soma/comparacao/reducao de fracoes com operandos de b bits, <= cA MZ(b) log(2b), e HIPOTESE do modelo (BitModel.arith_le), como no TeX (\"algoritmos inteiros usuais\"); nao ha modelo de maquina em Lean; (b) o tempo em bits e o numero de operacoes unitarias vezes o custo-limite de uma operacao (argumento do TeX), nao uma simulacao bit a bit; (c) BitHyp assume B (bl dos dados/penalidades) e L (comprimento de fluxo das representacoes do catalogo, eq. stream-length) como no teorema bit_complexity; (d) os indices (idxBits = clog(S_D M+1)) aparecem explicitamente em vez de absorvidos; (e) vale a ressalva de III.9.1 sobre o desempate kappa (comparacoes de chave unitarias; empate shortlex custa L).",
     "destino_editorial": "artigo_2",
     "resultados_lean": [
       {
@@ -2288,6 +2328,46 @@
         "arquivo_lean": "entradas/artigo_2/RequestProject/BitComplexity.lean",
         "linha_lean": 266,
         "caminho_entrega": "lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.bit_complexity_dense",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeBits.lean",
+        "linha_lean": 178,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.Cvar_bits",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeBits.lean",
+        "linha_lean": 60,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.Cb_bits",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeBits.lean",
+        "linha_lean": 68,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.candidate_bits",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeBits.lean",
+        "linha_lean": 86,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.DenseDP.lossTm_acc_bits",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ComplexidadeBits.lean",
+        "linha_lean": 124,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean"
       }
     ],
     "parte_volume": "III",

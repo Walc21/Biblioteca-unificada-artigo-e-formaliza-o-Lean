@@ -692,10 +692,35 @@
     ],
     "enunciado_tex": "\\label{thm:quantized-approximate-reverse}\nSeja $R$ como em \\eqref{eq:reduced-relu-reverse}, agora com parâmetros reais,\ne suponha\n\\begin{equation}\n |c|,|q|,|a_1|,\\ldots,|a_M|\\le W,\n \\qquad W\\ge1.\n \\label{eq:real-network-weight-bound}\n\\end{equation}\nPara todo $0<\\varepsilon\\le1$, existe uma montagem da biblioteca original\n$g_\\varepsilon\\in\\Aclass([0,1])$ tal que\n\\begin{align}\n \\|R-g_\\varepsilon\\|_\\infty&\\le\\varepsilon,\n \\label{eq:approximate-reverse-error}\\\\\n |\\Lambda(g_\\varepsilon)|&\\le1+MD_\\varepsilon,\n \\qquad\n D_\\varepsilon=\n \\left\\lceil\\log_2\\frac{C(M+1)(W+1)}{\\varepsilon}\\right\\rceil,\n \\label{eq:approximate-reverse-leaves}\\\\\n \\height_{\\max}(g_\\varepsilon)\n &\\le\n C(M+1)^3(W+1)^3\\varepsilon^{-2},\n \\label{eq:approximate-reverse-height}\n\\end{align}\nonde $C$ é universal. A conclusão permanece válida quando $R$ possui regiões\nplanas.",
     "sha256_enunciado": "7157868b6c115ada8967d920041d857f8ca6481f13afbe94648e10ab14e840c9",
-    "status": "nao_formalizado_no_acervo",
-    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "status": "formalizado_compilado",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.5 formalizado: quantized_approximate_reverse com C universal = 320 (mesma constante em D_eps e na cota de altura). Para forma ReLU reduzida real com |c|,|q|,|a_j| <= W, W >= 1, e 0<eps<=1, existe montagem U da biblioteca original (LTree.WF, inclinacao nao nula) com erro uniforme <= eps em [0,1], numero de folhas <= 1+M*ceil(log2(C(M+1)(W+1)/eps)) e altura atomica maxima <= C(M+1)^3(W+1)^3/eps^2; vale com regioes planas. Prova: arredondamento de c,q,a_j a multiplos de 1/Q, quebras a j/2^D (1<=j<=2^D-1), perturbacao t/Q da inclinacao global com t em [1,M+2] escolhido por gavetas, montagem canonica de IV.5.2 transportada para LTree. A cota de altura e provada diretamente com denominador comum (Hcan_leQ); nao usa a cota impressa antiga de IV.5.4. Compilado e auditado (apenas propext, Classical.choice, Quot.sound). Ressalvas: D_eps usa Nat.ceil (o argumento do log e >= 1, logo coincide com o teto inteiro); a cota de folhas usa a profundidade de quantizacao D <= D_eps. A prova textual do TeX permanece como esboco (usa Q ~ delta^-1 com delta=eps/(16(M+1)(W+1)); a formalizacao usa Q = ceil(4(M+2)/eps) e 2^D >= 2(M+1)(W+1)/eps, que dao as mesmas ordens).",
     "destino_editorial": "artigo_3",
-    "resultados_lean": [],
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Marcada.QuantIV55.quantized_approximate_reverse",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ReversaoQuantizada.lean",
+        "linha_lean": 666,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Marcada.QuantIV55.construct",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ReversaoQuantizada.lean",
+        "linha_lean": 558,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Marcada.QuantIV55.Hcan_leQ",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ReversaoQuantizada.lean",
+        "linha_lean": 187,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean"
+      }
+    ],
     "parte_volume": "IV",
     "numero_volume": "IV.5.5",
     "originais_77": [
@@ -722,10 +747,27 @@
     ],
     "enunciado_tex": "\\label{cor:deep-functional-reverse}\nSe uma rede ReLU univariada arbitrária realiza uma função $F$ com $R(F)$\nregiões afins máximas, norma uniforme no máximo $B$ e constante de Lipschitz\nno máximo $L_F$, então o \\cref{thm:quantized-approximate-reverse} vale com\n\\begin{equation}\n M=R(F)-1,\n \\qquad\n W\\le2\\max\\{1,B,L_F\\}.\n \\label{eq:deep-realized-resources}\n\\end{equation}",
     "sha256_enunciado": "86f62574466e14f4542daa0d19e1b118cae7ec3724b028c309dd48c704dce11f",
-    "status": "nao_formalizado_no_acervo",
-    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3.",
+    "status": "formalizado_compilado",
+    "observacao": "Nao foi localizado resultado Lean que certifique este enunciado. Fase3 e uma etapa da formalizacao do Artigo 1, nao o atual Artigo 3. [13/11/2026] IV.5.6 formalizado: deep_functional_reverse. Redes ReLU univariadas feedforward arbitrarias (NetFun: camadas afins e ReLU alternadas, qualquer profundidade/largura) realizam funcoes contínuas lineares por partes (fecho por combinacoes afins e por max 0, via colagem e remocao da ultima quebra). Para F com norma uniforme <= B e Lipschitz <= L em [0,1], F coincide em [0,1] com uma forma ReLU reduzida real (quebras estritas em (0,1), saltos nao nulos) com M+1 = R(F) hinges+1, onde R(F) = regionCount F e o menor numero de pecas afins de [0,1] (regioes afins maximas); |c|<=B, |q|<=L, |a_j|<=2L, todos <= W = 2 max{1,B,L}; e IV.5.5 (quantized_approximate_reverse) vale com esses M e W. Compilado e auditado (propext, Classical.choice, Quot.sound). Escolhas de formalizacao: B e Lipschitz medidos em [0,1] (dominio do enunciado); R(F) definido como minimo de pecas afins, equivalente a regioes afins maximas para F continua (regionCount_eq prova R(F)=M+1 para a forma reduzida). A prova do TeX permanece valida; a formalizacao explicita a derivada via inclinacoes locais sigma_n.",
     "destino_editorial": "artigo_3",
-    "resultados_lean": [],
+    "resultados_lean": [
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Marcada.DeepIV56.deep_functional_reverse",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ReversaoProfunda.lean",
+        "linha_lean": 583,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean"
+      },
+      {
+        "pacote": "artigo_2",
+        "nome": "Pendencias.Marcada.DeepIV56.regionCount_eq",
+        "tipo": "theorem",
+        "arquivo_lean": "Pendencias/ReversaoProfunda.lean",
+        "linha_lean": 499,
+        "caminho_entrega": "lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean"
+      }
+    ],
     "parte_volume": "IV",
     "numero_volume": "IV.5.6",
     "originais_77": [

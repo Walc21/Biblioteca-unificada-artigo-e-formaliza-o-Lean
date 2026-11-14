@@ -34,7 +34,7 @@ def nota_mapa_tex():
     nota=('Até 13/11/2026, %d resultados antes pendentes passaram ao estado «Formalizado e compilado»: '
           'provas Lean compiladas com Lean/Mathlib 4.28.0 nas bibliotecas \\texttt{Pendencias} e \\texttt{PendenciasParte1} dos ambientes \\texttt{artigo\\_2} e \\texttt{base\\_integrada}, '
           'sem \\texttt{sorry} e apenas com os axiomas \\texttt{propext}, \\texttt{Classical.choice} e \\texttt{Quot.sound}. '
-          'Os demais casos pendentes seguem descritos acima e em \\texttt{pendencias\\_lean/}.\n\n')%n
+          'Os demais estados e ressalvas seguem descritos acima.\n\n')%n
     if 'Formalizado e compilado»' in t:return
     a='\\subsection*{Parte I}'
     assert t.count(a)==1

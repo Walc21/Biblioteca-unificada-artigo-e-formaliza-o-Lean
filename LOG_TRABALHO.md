@@ -201,3 +201,40 @@ Registro por ação relevante (data, o que foi feito, comando, resultado).
 - Auditorias separadas (código 0): `AuditoriaPendencias.lean` (82 declarações), `AuditoriaPendenciasParte1.lean` (2), `AuditoriaPacote.lean` em parte_1 (código 0, mas sem declarações impressas; o pacote foi validado pelo build).
 - PDF raiz = `tex/principal.pdf`, 122 páginas.
 - Depois: `_LIXO/` e a pasta antiga IV.5.4 foram enviadas à lixeira do sistema; adicionados README.md, .gitignore e repositório git (sem commit).
+
+## 13/11/2026 — IV.5.5 formalizado
+
+- Novo módulo `lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean`; teorema `Pendencias.Marcada.QuantIV55.quantized_approximate_reverse` (C = 320), com `construct`, `Hcan_leQ`, `exists_nonflat`, `Rq_err`.
+- Comandos: `lake build Pendencias.ReversaoQuantizada`, `lake build Pendencias`, `lake env lean AuditoriaPendencias.lean` (saída 0; as cinco declarações novas dependem só de propext, Classical.choice, Quot.sound; sem sorry).
+- Prova Lean nova (não correspondência herdada). Não rodados ainda: gate global `compilar_tudo.sh --axiomas`, reconstrução, PDF, manifesto. IV.5.6 (depende de IV.5.5) continua aberto.
+
+## 13/11/2026 — IV.5.6 formalizado
+
+- Novo módulo `lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean`; teorema `Pendencias.Marcada.DeepIV56.deep_functional_reverse` (usa `QuantIV55.quantized_approximate_reverse`).
+- Comandos: `lake build Pendencias`, `lake env lean AuditoriaPendencias.lean` (saída 0; seis declarações novas só com propext, Classical.choice, Quot.sound; sem sorry).
+- Prova Lean nova. Não rodados ainda: gate global, reconstrução, PDF, manifesto. Restam III.9.1 e III.9.3.
+
+## 13/11/2026 — III.9.1 formalizado
+
+- Novo módulo `lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean` (`Pendencias.DenseDP`): monad de contagem `Tm`, memória densa `Mem`, motor genérico `runFrom_spec`, implementação densa da recorrência `Cvar` e da recorrência com orçamento `Cb`, reconstrução por apontadores, inicialização direta sobre `P` observações.
+- Comandos: `lake build Pendencias`, `lake env lean AuditoriaPendencias.lean` (saída 0; 11 declarações novas só com propext, Classical.choice, Quot.sound; sem sorry).
+- Prova Lean nova. Ressalva registrada: o desempate por κ não está no programa denso. Restam III.9.3 (depende de III.9.1) e o gate global, reconstrução, PDF e manifesto.
+
+## 13/11/2026 — III.9.3 formalizado (e ajuste de leafInit em III.9.1)
+
+- Novo módulo `lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean`: crescimento em bits transportado a todos os operandos da execução densa (`Cvar_bits`, `Cb_bits`, `candidate_bits`, `lossTm_acc_bits`), modelo `BitModel`, tempo e memória em bits (`bit_complexity_dense`).
+- `leafInit` (III.9.1) agora testa a admissibilidade antes de somar a perda; ticks inalterados (`4P+3`), valor ainda igual a `Phi`.
+- Comandos: `lake build Pendencias`, `lake env lean AuditoriaPendencias.lean` (saída 0; seis declarações novas só com propext, Classical.choice, Quot.sound; sem sorry).
+- Todas as quatro pendências (III.9.1, III.9.3, IV.5.5, IV.5.6) têm prova Lean nova. Não rodados ainda: `compilar_tudo.sh --axiomas`, reconstrução, PDF, manifesto.
+
+## 13/11/2026 — Etapa final (reconstrução, PDF, gate, auditorias)
+
+- Backup: `/tmp/biblioteca_backup_20261113-213615-pendencias-completas.tar.gz` (gzip -t ok).
+- `python3 -I -B scripts/reconstruir.py` (duas vezes, a segunda após corrigir `linha_lean` de III.9.1); `lakefile.toml` de `base_integrada` restaurado com o bloco `PendenciasParte1` após cada reconstrução. A reconstrução reverteria a correção de IV.5.4 em `tex/partes/artigo_3.tex`; ela foi incorporada a `scripts/revisao_editorial.json` e o arquivo ficou idêntico ao commitado.
+- Texto editorial sincronizado com o estado real (41 provas Lean + 1 textual entre os 42 casos; IV.5.4 corrigido; ressalvas de III.9.1 e III.9.3).
+- `pdflatex` e `latexmk -pdf` em `tex/`: 122 páginas, sem Overfull/referências indefinidas. Figuras não alteradas (não reexportadas).
+- `preencher_linha_lean.py` (0 novas), `verificar_entrega.py` (`erros: []`), `finalizar.py`, nessa ordem, depois da última compilação.
+- Gate: `./compilar_pendencias/compilar_tudo.sh --axiomas`, código 0, logs `compilar_pendencias/logs/20261113-213826`. Recompilados: `Pendencias` (8089 jobs), `PendenciasParte1` (8037), `ValidationAll` em `parte_1` (8036); caches de Mathlib reutilizados.
+- Auditorias separadas (código 0 em todas): `AuditoriaPendencias.lean` 110 declarações; `AuditoriaPendenciasParte1.lean` 2; `AuditoriaPacote.lean` 509 declarações, `unexpected_axioms: []`; união de axiomas = `propext`, `Classical.choice`, `Quot.sound`; nenhum `sorryAx`.
+- `verificacao/auditar_pacote.py final`: `erros: []`; `tex/principal.pdf` idêntico a `Biblioteca_Unificada.pdf`.
+- Bloqueios: nenhum. Provas Lean novas: III.9.1, III.9.3, IV.5.5, IV.5.6 (e, antes, IV.5.4, IV.5.9). Correspondências herdadas permanecem distintas.

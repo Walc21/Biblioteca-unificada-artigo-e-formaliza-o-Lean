@@ -7,28 +7,34 @@
 integrar contribuições e rodar o gate global; veja `AGENTS.md` ou `gemini.md`.
 Os registros de divisão exclusiva abaixo são históricos.
 
-Atualizado em 13/11/2026: **IV.5.9 integrado e auditado; quatro provas continuam abertas**.
-O Antigravity foi iniciado com Gemini 4 Hydrogen High, seguindo somente `gemini.md`.
-O Gemini entregou IV.5.9; Codex revisou, integrou e recompilou os três ambientes.
-IV.5.4 foi integrado (enunciado inverso corrigido; ida e volta provadas em Lean, 11 declarações
-auditadas só com `propext`, `Classical.choice`, `Quot.sound`; `lake build Pendencias` código 0).
-O pacote tem 122 páginas e `auditar_pacote.py final` e `verificar_entrega.py` dão `erros: []`.
-O mapa registra 37 provas Lean, uma prova textual e 353 associações TeX–Lean; 38 dos 42
-casos foram tratados; restam III.9.1, III.9.3, IV.5.5 e IV.5.6. Gate global `--axiomas` reexecutado após a integração (logs `20261113-182058`): tudo OK.
+Atualizado em 13/11/2026: **as quatro pendências restantes (III.9.1, III.9.3, IV.5.5 e IV.5.6) foram formalizadas, integradas e auditadas; não há pendência aberta no mapa**.
+IV.5.9 e IV.5.4 já estavam integrados (IV.5.4 com o enunciado inverso corrigido; a cota impressa era falsa).
+O mapa registra 41 provas Lean e uma prova textual sincronizada (III.12.3) entre os 42 casos do dossiê;
+as 77 correspondências inspecionadas e as 20 integradas à base são correspondências herdadas, não
+novas provas auditadas semanticamente. 368 associações TeX–Lean. O pacote tem 122 páginas;
+`verificar_entrega.py` e `auditar_pacote.py final` dão `erros: []`.
+Gate global `./compilar_pendencias/compilar_tudo.sh --axiomas` (logs `20261113-213826`): tudo OK
+(`artigo_2` 8089 jobs, `base_integrada` 8037, `parte_1` 8036; sem sorry). Auditorias conferidas
+separadamente: `AuditoriaPendencias.lean` (110 declarações), `AuditoriaPendenciasParte1.lean`
+(2) e `AuditoriaPacote.lean` (509 declarações, `unexpected_axioms: []`), todas com código 0 e só
+`propext`, `Classical.choice`, `Quot.sound`.
+Ressalvas dos fechamentos novos: III.9.1 usa modelo de custo unitário explícito e a tabela densa não
+implementa o desempate por κ; III.9.3 toma o custo da aritmética racional em bits como hipótese do
+modelo (`BitModel`).
 
 ## 1. Estado das 15 pendências desta etapa
 
 | Item | Estado | Evidência / próximo trabalho |
 |---|---|---|
-| III.9.1 | em andamento, parcial | `III9_1.lean` (rascunho enviado à lixeira do sistema em 13/11/2026; recuperável de lá) compila lemas de valor, cardinalidade e cotas de custo. Ainda falta uma execução bottom-up realmente memoizada e a prova de refinamento para `Cvar`; o item continua aberto. |
-| III.9.3 | aberto | A cota do tamanho dos racionais já existe. Faltam custos certificados da aritmética racional, normalização por mdc e desempate/fluxos, e o transporte do tempo/memória da implementação de III.9.1. |
+| III.9.1 | **fechado (ressalvas)** | `Pendencias/ComplexidadeDensa.lean`: `DenseDP.state_complexity_dense`, `dense_variable_complexity`, `dense_budget_complexity`, `dense_variable_init`, `dense_budget_init`. Tabela densa memoizada com contagem de operações e de entradas; valores = `Cvar`/`Cb`; reconstrução por apontadores. Ressalva: desempate por κ fora do programa denso. |
+| III.9.3 | **fechado (ressalvas)** | `Pendencias/ComplexidadeBits.lean`: `DenseDP.bit_complexity_dense`, `Cvar_bits`, `Cb_bits`, `candidate_bits`, `lossTm_acc_bits`. Crescimento em bits de todos os operandos, tempo e memória em bits. Ressalva: custo da aritmética racional é hipótese do modelo. |
 | IV.4.1 | fechado | `Jackson.rational_jackson_height`, `rational_jackson_uniform` |
 | IV.4.2 | fechado | `Jackson.direct_besov_height` |
 | IV.4.3 | fechado | `Jackson.uniform_besov_ball` |
 | IV.5.2 | **fechado** | `ReversaoOriginal.lean`: `RealReLU.exact_shallow_reversal`, com todas as conclusões, parâmetros reais e M=0; construção, minimalidade e unicidade incluindo rótulos, duas cotas de folhas e equivalência com inclinações não nulas. Build 8079 jobs e auditoria de 74 declarações, apenas axiomas permitidos. Ver `verificacao/fidelidade_IV_5_2.md`. |
 | IV.5.4 | **fechado (enunciado inverso corrigido)** | `AlturaInversa.lean`, `FormaAncorada.lean`, `CodigoAncorado.lean`; evidências em `verificacao/IV_5_4/`. Cota impressa falsa; corrigida para fator `M+1`, `C=5`. Ressalva: sem ponte `Anchored → RealReLU`. |
-| IV.5.5 | aberto | Requer quantização conjunta dos parâmetros, controle de colisões, escolha de perturbação não plana e as cotas explícitas de folhas/altura. Não deve usar a cota impressa de IV.5.4 (falsa); pode usar a versão corrigida. |
-| IV.5.6 | aberto | Requer IV.5.5 e a decomposição em regiões afins máximas de uma função realizada por rede ReLU, com controle das inclinações. |
+| IV.5.5 | **fechado** | `Pendencias/ReversaoQuantizada.lean`: `QuantIV55.quantized_approximate_reverse` (C = 320). |
+| IV.5.6 | **fechado** | `Pendencias/ReversaoProfunda.lean`: `DeepIV56.deep_functional_reverse` (redes ReLU arbitrárias, `regionCount`, `W = 2 max{1,B,L}`). |
 | IV.5.9 | **fechado** | `Pendencias/Pente.lean`: `Pendencias.PenteGemini.critical_tent_comb`; entrega revisada, compilada e incluída na auditoria. Ver `REVISAO_IV_5_9.md` (na lixeira do sistema). |
 | IV.5.12 | fechado | `Jackson.regularized_jackson`, `regularized_jackson_uniform` |
 | IV.5.13 | fechado | `Jackson.complete_besov_reversibility` |

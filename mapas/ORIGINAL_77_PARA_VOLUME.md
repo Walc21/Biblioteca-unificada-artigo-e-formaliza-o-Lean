@@ -73,9 +73,9 @@
 | 13.2 | III.8.2 | Correspondência inspecionada |
 | 13.3 | III.8.3 | Observação editorial |
 | 13.4 | III.8.4 | Correspondência inspecionada |
-| 14.1 | III.9.1 | Cobertura parcial |
+| 14.1 | III.9.1 | Formalizado e compilado |
 | 14.2 | III.9.2 | Observação editorial |
-| 14.3 | III.9.3 | Cobertura parcial |
+| 14.3 | III.9.3 | Formalizado e compilado |
 | 14.4 | III.9.4 | Correspondência inspecionada |
 | 14.5 | III.9.5 | Correspondência inspecionada |
 | 16.1 | III.11.1 | Correspondência inspecionada |
@@ -98,9 +98,9 @@
 | 20.1 | IV.5.1 | Formalizado e compilado |
 | 20.2 | IV.5.2 | Formalizado e compilado |
 | 20.3 | IV.5.3 | Formalizado e compilado |
-| 20.4 | IV.5.4 | Não formalizado no acervo |
-| 20.5 | IV.5.5 | Não formalizado no acervo |
-| 20.6 | IV.5.6 | Não formalizado no acervo |
+| 20.4 | IV.5.4 | Formalizado e compilado |
+| 20.5 | IV.5.5 | Formalizado e compilado |
+| 20.6 | IV.5.6 | Formalizado e compilado |
 | 20.7 | IV.5.7 | Formalizado e compilado |
 | 20.8 | IV.5.8 | Formalizado e compilado |
 | 20.9 | IV.5.9 | Formalizado e compilado |

@@ -23,3 +23,7 @@ import Pendencias.ReversaoOriginal
 import Pendencias.AlturaInversa
 import Pendencias.FormaAncorada
 import Pendencias.CodigoAncorado
+import Pendencias.ReversaoQuantizada
+import Pendencias.ReversaoProfunda
+import Pendencias.ComplexidadeDensa
+import Pendencias.ComplexidadeBits

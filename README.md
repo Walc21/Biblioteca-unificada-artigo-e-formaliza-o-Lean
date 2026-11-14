@@ -170,5 +170,4 @@ Este repositório prefere afirmar menos a afirmar demais:
 
 ## Autor
 
-**Victor Gabriel de Oliveira.** A formalização em Lean 4 foi desenvolvida com assistência de
-ferramentas de IA e verificada pelo kernel do Lean.
+**Victor Gabriel de Oliveira.** A formalização em Lean 4 foi desenvolvida e verificada pelo kernel do Lean.

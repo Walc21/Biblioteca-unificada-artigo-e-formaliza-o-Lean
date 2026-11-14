@@ -160,6 +160,9 @@ cd ../parte_1        && lake exe cache get && lake build
 Os ambientes `artigo_2`, `base_integrada` e `parte_1` compilam de forma independente. Em cada auditoria,
 todas as declarações dependem **somente** de `propext`, `Classical.choice` e `Quot.sound`, sem `sorry`.
 
+A recompilação completa de 13 e 14/11/2026, com as ressalvas, está em
+[`lean4/DECLARACAO_DE_COMPILACAO.md`](lean4/DECLARACAO_DE_COMPILACAO.md).
+
 ## Escopo e honestidade
 
 Este repositório prefere afirmar menos a afirmar demais:

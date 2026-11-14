@@ -1,4 +1,0 @@
-'Pendencias.Marcada.AlturaInversa.Hcan_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.AlturaInversa.affineW_Hcan_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
-'Pendencias.Marcada.AlturaInversa.no_additive_constant_fix' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -8,11 +8,17 @@ __pycache__/
 .venv/
 .DS_Store
 *~
-# Arquivos temporários do LaTeX (o .log/.toc/.aux são mantidos: o auditor os lê)
-*.fdb_latexmk
-*.fls
-*.blg
-# Credenciais e configs locais dos agentes
+# Arquivos gerados pelo LaTeX (tex/principal.pdf é regenerável; o PDF final fica na raiz)
+tex/*.aux
+tex/*.log
+tex/*.out
+tex/*.toc
+tex/*.bbl
+tex/*.blg
+tex/*.fdb_latexmk
+tex/*.fls
+tex/principal.pdf
+# Configs locais de ferramentas
 .aws/
 .codex/
 .agents/

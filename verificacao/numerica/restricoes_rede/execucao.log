@@ -1,9 +1,0 @@
-Restrições ReLU: todas as auditorias passaram.
-{
-  "generic_relu_reverse_map": false,
-  "shallow_restricted_reverse_map": true,
-  "deep_complexity_equivalence": false,
-  "naive_besov_inverse_above_order_one": false,
-  "all_assertions_passed": true
-}
-

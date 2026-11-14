@@ -1,9 +1,0 @@
-⚠ [8035/8037] Replayed PendenciasParte1.Refinamento
-warning: PendenciasParte1/Refinamento.lean:164:17: This simp argument is unused:
-  reduceCtorEq
-
-Hint: Omit it from the simp argument list.
-  simp only [r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵ ̵false_iff, not_exists, not_and]
-
-Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-Build completed successfully (8037 jobs).

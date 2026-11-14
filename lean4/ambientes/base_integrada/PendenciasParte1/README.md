@@ -1,13 +1,4 @@
-> **Instruções atuais para Codex e Antigravity:** [../../../../AGENTS.md](../../../../AGENTS.md).
-> Registros anteriores de divisão de tarefas são históricos.
-
 # PendenciasParte1
-
-## Integração
-
-Codex ou Antigravity pode integrar provas concluídas, atualizar índices e executar
-os builds, seguindo as instruções consolidadas na raiz. Desenvolva arquivos
-incompletos fora dos globs de build. IV.5.9 já está integrado em artigo_2.
 
 Provas complementares da Parte I, com Lean/Mathlib 4.28.0. Compilar no ambiente
 `lean4/ambientes/base_integrada` com `lake build PendenciasParte1` e auditar com

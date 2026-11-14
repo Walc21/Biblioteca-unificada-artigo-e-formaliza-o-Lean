@@ -158,6 +158,8 @@
 % Ambientes sem numeração (acréscimos editoriais): não alteram contadores nem o mapa de 151 ambientes.
 \theoremstyle{preciso}
 \newtheorem*{proposicaoSN}{Proposição (ponte entre as Partes~I e~III)}
+\theoremstyle{preciso}
+\newtheorem*{lemaSN}{Lema (validade do certificado projetado)}
 \theoremstyle{definition}
 \newtheorem*{observacaoSN}{Observação}
 
@@ -630,39 +632,59 @@ A propagação registra a largura dos intervalos, o número de caixas e a profun
 
 % MAPA artigo_1:6.3 | fonte artigos/artigo_1/secoes/06_refinamento.tex:53
 \begin{algoritmo}[refinamento certificado]\label{map:artigo_1:6.3}
-Dados $f\in C^2[\alpha,\beta]$, tolerâncias $\varepsilon_I,\varepsilon_R>0$ e a extensão $F$ de \eqref{artigo_1:eq:30}, use, para toda célula $J$, um majorante validado
-\eqn{40}{\normK{F''}{J}\le M(J)\le M_*<\infty.}
-Quando $F$ é fornecida por uma expressão de $\EE$, tome $M(J)=M_{\rm int}(J)$ de \eqref{artigo_1:eq:39}; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \eqref{artigo_1:eq:40} é um contrato de entrada.
+Dados $f\in C^2[\alpha,\beta]$, tolerâncias $\varepsilon_I,\varepsilon_R>0$ e a extensão $F$ de \eqref{artigo_1:eq:30}, use, para toda célula $J$ consultada, um majorante validado
+\eqn{40}{\normK{F''}{J}\le M(J)\le M_*<\infty,\qquad M_*\ge0.}
+O contrato recai sobre toda a célula $J$, inclusive sua parte exterior a $[\alpha,\beta]$. Quando $F$ é fornecida por uma expressão de $\EE$, tome $M(J)=M_{\rm int}$ calculado na caixa racional $B_p(J)$ definida abaixo; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \eqref{artigo_1:eq:40} é um contrato de entrada.
 \begin{enumerate}[label=(\roman*),topsep=6pt,itemsep=3pt]
-\item Inicie com uma cobertura diádica finita de $[\alpha,\beta]$.
+\item Inicie com uma cobertura diádica finita de $[\alpha,\beta]$, cujas células podem ultrapassar $\alpha$ e $\beta$.
 \item Para cada folha $J$, calcule
 \eqn{41}{\eta_{\rm cert}(J)=\frac{|J|^2M(J)}8.}
 \item Enquanto existir folha com $\eta_{\rm cert}(J)>\varepsilon_I$, substitua-a por seus dois filhos.
 \item Nos nós finais, escolha racionais compartilhados $v_t$ com $|v_t-F(t)|<\varepsilon_R$ e valores adjacentes distintos.
 \item Emita, em cada folha, o endereço do átomo que interpola seus dois valores nodais.
 \end{enumerate}
+As escolhas dos passos (iv) e (v) são especificadas por existência e unicidade; o enunciado não pressupõe uma implementação de sua busca.
 \end{algoritmo}
+
+\paragraph{Certificados intervalares para a extensão.}
+Suponha que $f=E|_{[\alpha,\beta]}$ com $E\in\EE$. A rotina de \eqref{artigo_1:eq:36} não se aplica diretamente à parte de $J$ exterior a $[\alpha,\beta]$, onde a função usada é a extensão quadrática $F$. Seja $\Pi(x)=\max\{\alpha,\min\{x,\beta\}\}$. Como $F$ é quadrática fora de $[\alpha,\beta]$, com segunda derivada constante, vale
+\[
+F''(x)=f''(\Pi(x))\qquad(x\in\R).
+\]
+Fixe uma precisão $p\in\Nzero$ e, para $J=[a,b]$, ponha
+\[
+B_p(J)=\left[2^{-p}\lfloor2^p\Pi(a)\rfloor,\ 2^{-p}\lceil2^p\Pi(b)\rceil\right].
+\]
+Os extremos de $B_p(J)$ são racionais e $\Pi(J)\subseteq B_p(J)$. Execute a rotina de \eqref{artigo_1:eq:36} em $B_p(J)$ e, se ela devolver $[\underline m_J,\overline m_J]$, ponha $M(J)=\max\{|\underline m_J|,|\overline m_J|\}$; se devolver falha, aborte. A caixa pode conter pontos de fora de $[\alpha,\beta]$; essa sobrestimação pode causar falha, mas nunca produz um falso certificado.
+\begin{lemaSN}
+Se a avaliação intervalar em $B_p(J)$ tem sucesso, então $|F''(x)|\le M(J)$ para todo $x\in J$.
+\end{lemaSN}
+\begin{proof}
+Seja $J=[a,b]$. A projeção $\Pi$ é não decrescente, logo $\Pi(a)\le\Pi(x)\le\Pi(b)$ para $x\in J$, e o arredondamento exterior dá $\Pi(x)\in B_p(J)$. O sucesso da rotina em $B_p(J)$ garante que nenhum denominador contém zero, de modo que $E$ é definida e $C^2$ nessa caixa, e a proposição~\ref{map:artigo_1:6.2} dá $E''(\Pi(x))\in[\underline m_J,\overline m_J]$, isto é, $|E''(\Pi(x))|\le M(J)$. Como $\Pi(x)\in[\alpha,\beta]$, as derivadas de $E$ nesse ponto coincidem com as derivadas unilaterais de $f$, e a identidade $F''=f''\circ\Pi$ conclui.
+\end{proof}
 
 % MAPA artigo_1:6.4 | fonte artigos/artigo_1/secoes/06_refinamento.tex:67
 \begin{teorema}[correção, término e tamanho]\label{map:artigo_1:6.4}
-O algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
+Sob o contrato \eqref{artigo_1:eq:40}, o algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
 \eqn{42}{\norm{f-g}\le\varepsilon_I+\varepsilon_R.}
 Se a cobertura inicial tem $R_0$ raízes de largura máxima $h_0$ e $M_*>0$, nenhuma ramificação ultrapassa
 \eqn{43}{r_*=\max\left\{0,\left\lceil\frac12\log_2\left(\frac{h_0^2M_*}{8\varepsilon_I}\right)\right\rceil\right\}}
-níveis, e há no máximo $R_02^{r_*}$ folhas. Se $M_*=0$, pode-se tomar $r_*=0$.
+níveis, e há no máximo $R_02^{r_*}$ folhas. Se $M_*=0$, pode-se tomar $r_*=0$. Na versão intervalar, o algoritmo devolve falha se e somente se alguma caixa consultada não for certificada; se devolve uma lista de folhas, todas satisfazem $\eta_{\rm cert}(J)\le\varepsilon_I$, as cotas anteriores valem e qualquer escolha nodal do passo (iv) produz uma montagem que satisfaz \eqref{artigo_1:eq:42}, com átomos de endereço único.
 \end{teorema}
 \begin{proof}
 Após $r$ subdivisões, uma folha descendente de uma raiz tem $|J|\le h_02^{-r}$ e, por \eqref{artigo_1:eq:40},
 \[
 \eta_{\rm cert}(J)\le\frac{h_0^2M_*}8\,4^{-r}.
 \]
-O lado direito é no máximo $\varepsilon_I$ para $r\ge r_*$; logo nenhuma folha é subdividida além dessa profundidade. A árvore é finita e cada raiz gera no máximo $2^{r_*}$ folhas.
+O lado direito é no máximo $\varepsilon_I$ para $r\ge r_*$; logo nenhuma folha é subdividida além dessa profundidade. A árvore é finita e cada raiz gera no máximo $2^{r_*}$ folhas. Se $M_*=0$, todos os certificados são nulos e nenhuma subdivisão ocorre.
 
 Na partição final, \eqref{artigo_1:eq:34} e \eqref{artigo_1:eq:40} implicam
 \[
 \normK{F-P_\Lambda F}{J}\le\frac{|J|^2}8\normK{F''}{J}\le\eta_{\rm cert}(J)\le\varepsilon_I.
 \]
-A racionalização nodal produz, pelos teoremas~3.5 e 3.6, uma montagem de átomos de endereço único e com $\norm{P_\Lambda F-g}<\varepsilon_R$. Como $F=f$ no intervalo original, a desigualdade triangular prova \eqref{artigo_1:eq:42}.
+A racionalização nodal produz, pelos teoremas~3.5 e 3.6, uma montagem de átomos de endereço único e com $\norm{P_\Lambda F-g}<\varepsilon_R$. Como $F=f$ no intervalo original, a desigualdade triangular prova \eqref{artigo_1:eq:42}. O argumento usa a cobertura de $[\alpha,\beta]$ e não exige que as raízes estejam contidas nele.
+
+Na versão intervalar com sucesso, os certificados das raízes mostram que $E$ é $C^2$ em uma vizinhança de cada ponto de $[\alpha,\beta]$ e que $\normK{f''}{[\alpha,\beta]}\le M_*$; pela identidade $F''=f''\circ\Pi$, vale $\normK{F''}{\R}\le M_*$. Pelo lema acima, os certificados consultados limitam $F''$ em toda a célula correspondente. Nas células não consultadas, complete o majorante com o valor $M_*$. Esse majorante coincide com os certificados em todas as consultas da execução bem-sucedida, de modo que a lista de folhas não muda, e o contrato \eqref{artigo_1:eq:40} vale em toda célula. A definição do algoritmo rejeita exatamente as consultas sem certificado.
 \end{proof}
 \begin{figure}[H]\centering
 \includegraphics[width=.90\linewidth]{figuras/artigo_1/06_refinamento_certificado.pdf}
@@ -4042,7 +4064,7 @@ troca esse fator de memória por trabalho adicional na comparação.
 % MAPA artigo_2:9.1
 \begin{theorem}[complexidade em número de estados]\label{map:artigo_2:9.1}
 \label{artigo_2:thm:state-complexity}
-Suponha os custos de folha pré-computados. Uma implementação densa do
+Suponha os custos de folha pré-computados e, como modelo de custo, que ler ou escrever uma entrada da tabela, somar e comparar custos custam uma operação cada. Uma implementação densa do
 \cref{artigo_2:alg:variable-tree} usa
 \begin{equation}
  O(S_DM^3)
@@ -4139,7 +4161,7 @@ denominadores de comprimento no máximo
  \right).
  \label{artigo_2:eq:cost-bit-growth}
 \end{equation}
-Consequentemente, a versão densa sem orçamento de folhas pode ser executada em
+Consequentemente, no modelo em que somar, comparar ou reduzir frações de $b$ bits custa $O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit, a versão densa sem orçamento de folhas pode ser executada em
 \begin{equation}
  O\!\left(
  (S_DM^3+S_DPM^2)
@@ -4860,7 +4882,7 @@ produzida por regiões com curvaturas diferentes.
 \begin{theorem}[contagem exata em uma malha diádica base]\label{map:artigo_2:12.2}
 \label{artigo_2:thm:piecewise-quadratic-count}
 Seja $\mathcal Q_{q_0}$ a partição uniforme de $K=[0,1]$ em células
-$Q_i$ de comprimento $2^{-q_0}$. Suponha que $f\in C^1(K)$ seja quadrática
+$Q_i$ de comprimento $2^{-q_0}$. Suponha que $f\in C(K)$ seja quadrática
 em cada $Q_i$ e
 \[
  f''|_{\mathring Q_i}=\kappa_i\ne0,
@@ -7080,8 +7102,8 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_1:5.2]{I.5.2} & 5.2 & \pageref{map:artigo_1:5.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.1]{I.6.1} & 7.1 & \pageref{map:artigo_1:6.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.2]{I.6.2} & 7.2 & \pageref{map:artigo_1:6.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento.\\[4pt]
-\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar.\\[4pt]
+\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.certRefineProjected, CoberturaExterna.projected_certificate_sound}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: o refinamento é uma definição \texttt{noncomputable}, e as escolhas nodais e os endereços são dados por existência, como no texto.\\[4pt]
+\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.refinement_contract_external, CoberturaExterna.certified_refinement_external}, com o exemplo $[1/3,2/3]$ em \code{CoberturaExterna.thirds_success}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: término e correção sob o contrato de majorante (hipótese de entrada), sem certificar uma implementação executável ligada ao avaliador intervalar.\\[4pt]
 \hyperref[map:artigo_1:6.5]{I.6.5} & 7.5 & \pageref{map:artigo_1:6.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.6]{I.6.6} & 7.6 & \pageref{map:artigo_1:6.6} & Correspondência inspecionada\\[4pt]
 \bottomrule\end{longtable}\normalsize
@@ -7150,7 +7172,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_2:3.9]{III.3.9} & 8.9 & \pageref{map:artigo_2:3.9} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.10]{III.3.10} & 8.10 & \pageref{map:artigo_2:3.10} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.11]{III.3.11} & 8.11 & \pageref{map:artigo_2:3.11} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.12]{III.3.12} & 8.12 & \pageref{map:artigo_2:3.12} & Formalizado e compilado. Provas: \code{Pendencias.coding_formats_comparison}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: coding\_gap\_family prova uma cadeia para todo $N$ par. O enunciado deste volume usa $N=2^r$ e raiz $J(H-1-r,0)$; a árvore em raiz única para $N=2^r$ continua não formalizada em Lean ($H=N=6$ produz suporte $[0,3/16]$, que não é uma célula diádica única).\\[4pt]
+\hyperref[map:artigo_2:3.12]{III.3.12} & 8.12 & \pageref{map:artigo_2:3.12} & Formalizado e compilado. Provas: \code{Pendencias.coding_formats_comparison}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior, superada: \code{coding_gap_family} provava só a cadeia de átomos para $N$ par; a árvore de raiz única $J_{H-1-r,0}$, com $N=2^r$, é construída por \code{Pendencias.famTree} e tratada em \code{Pendencias.coding_formats_comparison}.\\[4pt]
 \hyperref[map:artigo_2:3.13]{III.3.13} & 8.13 & \pageref{map:artigo_2:3.13} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.14]{III.3.14} & 8.14 & \pageref{map:artigo_2:3.14} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.15]{III.3.15} & 8.15 & \pageref{map:artigo_2:3.15} & Formalizado e compilado. Classe \texttt{FRMIcc R M} ($C^2$ apenas em $[0,1]$, $f''$ unilateral); $\mathrm{FRM}\subseteq\mathrm{FRMIcc}$ e \texttt{extF f 0 1} pertence a FRM e coincide com $f$ em $[0,1]$; $|f'|\le 4R+M/2$ com $f'$ unilateral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
@@ -7192,7 +7214,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_2:11.2]{III.11.2} & 16.2 & \pageref{map:artigo_2:11.2} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}; $e_f(J)$, $f''$ e $\omega_{f''}$ unilaterais em $K$, por \texttt{extF} e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
 \hyperref[map:artigo_2:11.3]{III.11.3} & 16.3 & \pageref{map:artigo_2:11.3} & Formalizado e compilado. $f\in C^2(K)$ via \texttt{ContDiffOn}, com \texttt{curvIOn} ($I(f)$ com $f''$ unilateral); as três formas (eventual, $\liminf/\limsup$, caso $I(f)=0$). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
 \hyperref[map:artigo_2:12.1]{III.12.1} & 17.1 & \pageref{map:artigo_2:12.1} & Formalizado e compilado. Mesmas seis conclusões de \texttt{quadratic\_dyadic\_constant} com $q\in C^2(K)$ (\texttt{ContDiffOn}) e $q''\equiv\kappa$ unilateral em $K$; usa \texttt{extF} e lemas de congruência (\texttt{Edia\_congr}, \texttt{nThr\_congr}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
-\hyperref[map:artigo_2:12.2]{III.12.2} & 17.2 & \pageref{map:artigo_2:12.2} & Generalização documentada. O Lean dispensa $C^1$: a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos. O texto mantém $C^1$; não foi modificado.\\[4pt]
+\hyperref[map:artigo_2:12.2]{III.12.2} & 17.2 & \pageref{map:artigo_2:12.2} & Generalização documentada. A hipótese $C^1$ foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.\\[4pt]
 \hyperref[map:artigo_2:12.3]{III.12.3} & 17.3 & \pageref{map:artigo_2:12.3} & Prova textual sincronizada. Demonstração textual sincronizada com \code{Artigo.synchronized_phases}; usa contagem exata e periodicidade, sem o envelope $C^2$ global.\\[4pt]
 \hyperref[map:artigo_2:12.4]{III.12.4} & 17.4 & \pageref{map:artigo_2:12.4} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \bottomrule\end{longtable}\normalsize

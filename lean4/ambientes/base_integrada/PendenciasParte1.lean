@@ -1,1 +1,2 @@
 import PendenciasParte1.Refinamento
+import PendenciasParte1.RefinamentoCobertura

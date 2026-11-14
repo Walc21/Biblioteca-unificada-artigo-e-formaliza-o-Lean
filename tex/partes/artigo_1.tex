@@ -432,39 +432,59 @@ A propagação registra a largura dos intervalos, o número de caixas e a profun
 
 % MAPA artigo_1:6.3 | fonte artigos/artigo_1/secoes/06_refinamento.tex:53
 \begin{algoritmo}[refinamento certificado]\label{map:artigo_1:6.3}
-Dados $f\in C^2[\alpha,\beta]$, tolerâncias $\varepsilon_I,\varepsilon_R>0$ e a extensão $F$ de \eqref{artigo_1:eq:30}, use, para toda célula $J$, um majorante validado
-\eqn{40}{\normK{F''}{J}\le M(J)\le M_*<\infty.}
-Quando $F$ é fornecida por uma expressão de $\EE$, tome $M(J)=M_{\rm int}(J)$ de \eqref{artigo_1:eq:39}; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \eqref{artigo_1:eq:40} é um contrato de entrada.
+Dados $f\in C^2[\alpha,\beta]$, tolerâncias $\varepsilon_I,\varepsilon_R>0$ e a extensão $F$ de \eqref{artigo_1:eq:30}, use, para toda célula $J$ consultada, um majorante validado
+\eqn{40}{\normK{F''}{J}\le M(J)\le M_*<\infty,\qquad M_*\ge0.}
+O contrato recai sobre toda a célula $J$, inclusive sua parte exterior a $[\alpha,\beta]$. Quando $F$ é fornecida por uma expressão de $\EE$, tome $M(J)=M_{\rm int}$ calculado na caixa racional $B_p(J)$ definida abaixo; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \eqref{artigo_1:eq:40} é um contrato de entrada.
 \begin{enumerate}[label=(\roman*),topsep=6pt,itemsep=3pt]
-\item Inicie com uma cobertura diádica finita de $[\alpha,\beta]$.
+\item Inicie com uma cobertura diádica finita de $[\alpha,\beta]$, cujas células podem ultrapassar $\alpha$ e $\beta$.
 \item Para cada folha $J$, calcule
 \eqn{41}{\eta_{\rm cert}(J)=\frac{|J|^2M(J)}8.}
 \item Enquanto existir folha com $\eta_{\rm cert}(J)>\varepsilon_I$, substitua-a por seus dois filhos.
 \item Nos nós finais, escolha racionais compartilhados $v_t$ com $|v_t-F(t)|<\varepsilon_R$ e valores adjacentes distintos.
 \item Emita, em cada folha, o endereço do átomo que interpola seus dois valores nodais.
 \end{enumerate}
+As escolhas dos passos (iv) e (v) são especificadas por existência e unicidade; o enunciado não pressupõe uma implementação de sua busca.
 \end{algoritmo}
+
+\paragraph{Certificados intervalares para a extensão.}
+Suponha que $f=E|_{[\alpha,\beta]}$ com $E\in\EE$. A rotina de \eqref{artigo_1:eq:36} não se aplica diretamente à parte de $J$ exterior a $[\alpha,\beta]$, onde a função usada é a extensão quadrática $F$. Seja $\Pi(x)=\max\{\alpha,\min\{x,\beta\}\}$. Como $F$ é quadrática fora de $[\alpha,\beta]$, com segunda derivada constante, vale
+\[
+F''(x)=f''(\Pi(x))\qquad(x\in\R).
+\]
+Fixe uma precisão $p\in\Nzero$ e, para $J=[a,b]$, ponha
+\[
+B_p(J)=\left[2^{-p}\lfloor2^p\Pi(a)\rfloor,\ 2^{-p}\lceil2^p\Pi(b)\rceil\right].
+\]
+Os extremos de $B_p(J)$ são racionais e $\Pi(J)\subseteq B_p(J)$. Execute a rotina de \eqref{artigo_1:eq:36} em $B_p(J)$ e, se ela devolver $[\underline m_J,\overline m_J]$, ponha $M(J)=\max\{|\underline m_J|,|\overline m_J|\}$; se devolver falha, aborte. A caixa pode conter pontos de fora de $[\alpha,\beta]$; essa sobrestimação pode causar falha, mas nunca produz um falso certificado.
+\begin{lemaSN}
+Se a avaliação intervalar em $B_p(J)$ tem sucesso, então $|F''(x)|\le M(J)$ para todo $x\in J$.
+\end{lemaSN}
+\begin{proof}
+Seja $J=[a,b]$. A projeção $\Pi$ é não decrescente, logo $\Pi(a)\le\Pi(x)\le\Pi(b)$ para $x\in J$, e o arredondamento exterior dá $\Pi(x)\in B_p(J)$. O sucesso da rotina em $B_p(J)$ garante que nenhum denominador contém zero, de modo que $E$ é definida e $C^2$ nessa caixa, e a proposição~\ref{map:artigo_1:6.2} dá $E''(\Pi(x))\in[\underline m_J,\overline m_J]$, isto é, $|E''(\Pi(x))|\le M(J)$. Como $\Pi(x)\in[\alpha,\beta]$, as derivadas de $E$ nesse ponto coincidem com as derivadas unilaterais de $f$, e a identidade $F''=f''\circ\Pi$ conclui.
+\end{proof}
 
 % MAPA artigo_1:6.4 | fonte artigos/artigo_1/secoes/06_refinamento.tex:67
 \begin{teorema}[correção, término e tamanho]\label{map:artigo_1:6.4}
-O algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
+Sob o contrato \eqref{artigo_1:eq:40}, o algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
 \eqn{42}{\norm{f-g}\le\varepsilon_I+\varepsilon_R.}
 Se a cobertura inicial tem $R_0$ raízes de largura máxima $h_0$ e $M_*>0$, nenhuma ramificação ultrapassa
 \eqn{43}{r_*=\max\left\{0,\left\lceil\frac12\log_2\left(\frac{h_0^2M_*}{8\varepsilon_I}\right)\right\rceil\right\}}
-níveis, e há no máximo $R_02^{r_*}$ folhas. Se $M_*=0$, pode-se tomar $r_*=0$.
+níveis, e há no máximo $R_02^{r_*}$ folhas. Se $M_*=0$, pode-se tomar $r_*=0$. Na versão intervalar, o algoritmo devolve falha se e somente se alguma caixa consultada não for certificada; se devolve uma lista de folhas, todas satisfazem $\eta_{\rm cert}(J)\le\varepsilon_I$, as cotas anteriores valem e qualquer escolha nodal do passo (iv) produz uma montagem que satisfaz \eqref{artigo_1:eq:42}, com átomos de endereço único.
 \end{teorema}
 \begin{proof}
 Após $r$ subdivisões, uma folha descendente de uma raiz tem $|J|\le h_02^{-r}$ e, por \eqref{artigo_1:eq:40},
 \[
 \eta_{\rm cert}(J)\le\frac{h_0^2M_*}8\,4^{-r}.
 \]
-O lado direito é no máximo $\varepsilon_I$ para $r\ge r_*$; logo nenhuma folha é subdividida além dessa profundidade. A árvore é finita e cada raiz gera no máximo $2^{r_*}$ folhas.
+O lado direito é no máximo $\varepsilon_I$ para $r\ge r_*$; logo nenhuma folha é subdividida além dessa profundidade. A árvore é finita e cada raiz gera no máximo $2^{r_*}$ folhas. Se $M_*=0$, todos os certificados são nulos e nenhuma subdivisão ocorre.
 
 Na partição final, \eqref{artigo_1:eq:34} e \eqref{artigo_1:eq:40} implicam
 \[
 \normK{F-P_\Lambda F}{J}\le\frac{|J|^2}8\normK{F''}{J}\le\eta_{\rm cert}(J)\le\varepsilon_I.
 \]
-A racionalização nodal produz, pelos teoremas~3.5 e 3.6, uma montagem de átomos de endereço único e com $\norm{P_\Lambda F-g}<\varepsilon_R$. Como $F=f$ no intervalo original, a desigualdade triangular prova \eqref{artigo_1:eq:42}.
+A racionalização nodal produz, pelos teoremas~3.5 e 3.6, uma montagem de átomos de endereço único e com $\norm{P_\Lambda F-g}<\varepsilon_R$. Como $F=f$ no intervalo original, a desigualdade triangular prova \eqref{artigo_1:eq:42}. O argumento usa a cobertura de $[\alpha,\beta]$ e não exige que as raízes estejam contidas nele.
+
+Na versão intervalar com sucesso, os certificados das raízes mostram que $E$ é $C^2$ em uma vizinhança de cada ponto de $[\alpha,\beta]$ e que $\normK{f''}{[\alpha,\beta]}\le M_*$; pela identidade $F''=f''\circ\Pi$, vale $\normK{F''}{\R}\le M_*$. Pelo lema acima, os certificados consultados limitam $F''$ em toda a célula correspondente. Nas células não consultadas, complete o majorante com o valor $M_*$. Esse majorante coincide com os certificados em todas as consultas da execução bem-sucedida, de modo que a lista de folhas não muda, e o contrato \eqref{artigo_1:eq:40} vale em toda célula. A definição do algoritmo rejeita exatamente as consultas sem certificado.
 \end{proof}
 \begin{figure}[H]\centering
 \includegraphics[width=.90\linewidth]{figuras/artigo_1/06_refinamento_certificado.pdf}

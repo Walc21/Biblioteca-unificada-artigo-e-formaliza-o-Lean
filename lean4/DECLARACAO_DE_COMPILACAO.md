@@ -1,10 +1,10 @@
 # Declaração de compilação da formalização em Lean 4
 
-**Victor Gabriel de Oliveira** · recompilação de 13 e 14 de novembro de 2026
+**Victor Gabriel de Oliveira** · recompilação de 13 e 14 de novembro de 2026 (atualizada após a inclusão de `RefinamentoCobertura.lean`)
 
 Declaro que os três ambientes Lean deste repositório (`artigo_2`, `base_integrada` e `parte_1`) foram
-recompilados do zero com **Lean 4.28.0** e **Mathlib v4.28.0**, a partir dos fontes versionados na árvore
-`lean4/` do commit `bda95cf`, sem erros e sem `sorry`. As ressalvas abaixo fazem parte desta declaração e
+recompilados do zero com **Lean 4.28.0** e **Mathlib v4.28.0**, a partir dos fontes da árvore `lean4/` da
+branch `revisao-final-pdf-latex` (inclui `PendenciasParte1/RefinamentoCobertura.lean`), sem erros e sem `sorry`. As ressalvas abaixo fazem parte desta declaração e
 delimitam o que ela afirma.
 
 ## O que foi feito
@@ -16,11 +16,11 @@ foram compilados com `lake build`:
 | Ambiente | Alvos compilados | Tarefas | Resultado |
 |---|---|---|---|
 | `artigo_2` | `ValidationAll`, `Pendencias` | 8095 | sucesso, 0 erros |
-| `base_integrada` | `Unified`, `SemanticAudit`, `PendenciasParte1`, `RequestProject.Main` | 8093 e 8034 | sucesso, 0 erros |
+| `base_integrada` | `Unified`, `SemanticAudit`, `PendenciasParte1`, `RequestProject.Main` | 8095 | sucesso, 0 erros |
 | `parte_1` | `ValidationAll` | 8036 | sucesso, 0 erros |
 
-Nenhum log contém o aviso «declaration uses 'sorry'». Foram compilados 144 módulos e executados 9 scripts
-de auditoria, o que cobre os 153 arquivos `.lean` versionados.
+Nenhum log contém o aviso «declaration uses 'sorry'». Foram compilados 145 módulos e executados 9 scripts
+de auditoria, o que cobre os 154 arquivos `.lean` da árvore.
 
 ## Auditoria de axiomas
 
@@ -35,11 +35,11 @@ saída 0. Em nenhuma aparece `sorryAx`, e todas as declarações dependem soment
 | `base_integrada` | `AuditoriaIntegracao` | 3265 |
 | `base_integrada` | `AuditoriaAxiomasPontes` | 2755 (2196 teoremas) |
 | `base_integrada` | `AuditoriaAxiomas` | 2597 (2056 teoremas) |
-| `base_integrada` | `AuditoriaPendenciasParte1` | 2 |
+| `base_integrada` | `AuditoriaPendenciasParte1` | 6 |
 | `parte_1` | `AuditoriaPacote` | 509 |
 
 `CorrespondenciasAudit` (em `artigo_2` e em `parte_1`) confere que os nomes citados existem e têm o tipo
-esperado. Uma busca textual nos 153 arquivos, ignorando comentários, não encontrou `sorry`, `admit` nem
+esperado. Uma busca textual nos 154 arquivos, ignorando comentários, não encontrou `sorry`, `admit` nem
 declarações `axiom`. As contagens incluem declarações auxiliares geradas pelo Lean e não devem ser somadas
 entre auditorias, porque há sobreposição de módulos importados.
 
@@ -68,10 +68,14 @@ cd ../parte_1 && lake exe cache get && lake build ValidationAll
 3. **III.9.1** usa um modelo de custo unitário explícito e não implementa o desempate canônico por κ
    (formalizado no seletor funcional de III.7.4). **III.9.3** toma como hipótese do modelo (`BitModel`) o
    custo das operações aritméticas em bits; não há modelo de máquina em Lean.
-4. **IV.5.4** foi fechada com o enunciado **corrigido**: a cota impressa originalmente era falsa
+4. **I.6.3 e I.6.4** (refinamento certificado): `Refinamento.lean` exige as raízes contidas em `[α,β]`.
+   `RefinamentoCobertura.lean` remove essa hipótese (`certified_refinement_external`, com o exemplo
+   `[1/3, 2/3]` em `thirds_success`). O refinamento continua uma definição `noncomputable`, com escolhas nodais
+   e endereços dados por existência, e o contrato `M_int ≤ M*` é hipótese de entrada.
+5. **IV.5.4** foi fechada com o enunciado **corrigido**: a cota impressa originalmente era falsa
    (contraexemplo `R(x)=x`, provado em Lean). Na parte direta, a forma reduzida é a estrutura `Anchored`,
    sem ponte formal para `RealReLU`.
-5. **Os programas Python de `verificacao/` não fazem parte das provas** e não foram reexecutados
+6. **Os programas Python de `verificacao/` não fazem parte das provas** e não foram reexecutados
    integralmente nesta recompilação.
-6. **Documentos herdados.** `documentacao/INTEGRACAO_NORMALIZACAO.md` cita registros em `evidencias/` e um
+7. **Documentos herdados.** `documentacao/INTEGRACAO_NORMALIZACAO.md` cita registros em `evidencias/` e um
    `executar.sh` que não estão neste repositório.

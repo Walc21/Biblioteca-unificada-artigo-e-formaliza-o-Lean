@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Lei de fase da Parte III (III.12.7--III.12.8): testes em alta precisão e com aritmética exata.
 
-Requer mpmath (pip install mpmath). NÃO faz parte de reproduzir_tudo.py e não sustenta nenhuma prova.
+Requer mpmath >= 1.3 (pip install mpmath); a conversão Fraction -> mpf é feita por numerador e denominador. NÃO faz parte de reproduzir_tudo.py e não sustenta nenhuma prova.
   python3 lei_fase_exata.py precisao [Nmax]   e^x, ln(1+x), x^3+x^2 com 40 dígitos e Psi em forma fechada
   python3 lei_fase_exata.py atomo [Nmax]      C^2 com patamar f''=2 (átomo de mu_f), 40 dígitos
   python3 lei_fase_exata.py racional [Nmax]   quadráticas por partes com Fraction, sem tolerância
@@ -105,13 +105,19 @@ def report(name, fn, Psi, Nmax, I2):
     # janelas de N: [2^j,2^{j+1})
     lo = {}; hi = {}
     for th, nb, na in bp:
-        # x_N = N^2 th ; extremos em N=nb (min) e N=na-1 (max) dentro do salto
-        for N in (nb, na - 1):
-            j = N.bit_length() - 1; x = N * N * th
-            lo[j] = min(lo.get(j, x), x); hi[j] = max(hi.get(j, x), x)
+        # os N em [nb, na-1] têm E_N = th, logo x_N = N^2 th cresce com N: em cada janela
+        # [2^j, 2^{j+1}) que o salto cruza, os extremos estão nos N das pontas recortadas.
+        for j in range(nb.bit_length() - 1, (na - 1).bit_length()):
+            N0 = max(nb, 2 ** j); N1 = min(na - 1, 2 ** (j + 1) - 1)
+            if N0 > N1: continue
+            for N in (N0, N1):
+                x = N * N * th
+                lo[j] = min(lo.get(j, x), x); hi[j] = max(hi.get(j, x), x)
+    print("   janelas completas [2^j, 2^{j+1}) (as parciais, no fim, são omitidas)")
     print("   j   min x_N        max x_N       |min-m^2|     |max-M^2|")
     for j in sorted(lo):
-        if j >= 8: print(f"  {j:2d}  {float(lo[j]):.9f}  {float(hi[j]):.9f}  {float(abs(lo[j]-m*m)):.3e}  {float(abs(hi[j]-M*M)):.3e}")
+        if j >= 8 and 2 ** (j + 1) <= bp[-1][2]:
+            print(f"  {j:2d}  {float(lo[j]):.9f}  {float(hi[j]):.9f}  {float(abs(lo[j]-m*m)):.3e}  {float(abs(hi[j]-M*M)):.3e}")
     # sqrt(eps) n vs Psi em t = k+phase
     print("   max_t |sqrt(eps)n - Psi(t)| por janela t in [k,k+1):")
     nmax = bp[-1][1]
@@ -170,9 +176,12 @@ def run_racional(kappas, Nmax=2**19):
             if strict_below and F(4)**k==r: k+=1         # ε -> th^- : precisa 4^k>r
             s+=2**k
         return s
-    for th,nb,na in bpts[:200]+bpts[-50:]:
+    # limiares testados: os 200 primeiros e os 50 últimos, sem repetição
+    testados = {th: (nb, na) for th, nb, na in bpts[:200] + bpts[-50:]}
+    for th, (nb, na) in testados.items():
         assert closed(th)==nb and closed(th,True)==na,(th,nb,na,closed(th),closed(th,True))
-    # extremos exatos de x_N
+    fr=lambda x: mpf(x.numerator)/x.denominator          # Fraction -> mpf (compatível com mpmath 1.3)
+    # extremos exatos de x_N, para 2^10 <= N < (último N coberto pelas quebras)
     xs_lo=min(N*N*th for th,nb,na in bpts for N in (nb,na-1) if N>=2**10)
     xs_hi=max(N*N*th for th,nb,na in bpts for N in (nb,na-1) if N>=2**10)
     # Phi: kinks em s ≡ -a_i (mod 1); Phi esq.-contínua, Phi+ à direita
@@ -188,9 +197,10 @@ def run_racional(kappas, Nmax=2**19):
     # verificação adicional de que o extremo está nos kinks: varredura densa
     dens=[Phi(mpf(i)/3000) for i in range(3000)]
     assert min(dens)>=m-mpf(10)**-12 and max(dens)<=M+mpf(10)**-12
-    print(f"κ={kappas}  q0={q0}  folhas até {bpts[-1][2]}; contagem fechada == árvore exata: OK em {250} pontos de quebra")
+    print(f"κ={kappas}  q0={q0}  folhas até {bpts[-1][2]}; {len(bpts)} limiares distintos gerados;")
+    print(f"   contagem fechada == floresta simulada abaixo da malha base (identidade quadrática): OK em {len(testados)} limiares distintos, cada um em ε=θ e ε→θ⁻")
     print(f"   x_N: min={float(xs_lo):.9f} max={float(xs_hi):.9f} |  m^2={float(m*m):.9f} M^2={float(M*M):.9f} | I^2/8={float(sum(sqrt(8*mpf(x.numerator)/x.denominator) for x in A)**2/8):.6f}")
-    print(f"   |min x_N - m^2|={float(abs(xs_lo-m*m)):.2e}   |max x_N - M^2|={float(abs(xs_hi-M*M)):.2e}")
+    print(f"   |min x_N - m^2|={float(abs(fr(xs_lo)-m*m)):.2e}   |max x_N - M^2|={float(abs(fr(xs_hi)-M*M)):.2e}")
 
 def run_atomo(NMAX):
     bp=breakpoints(ATM,NMAX)
@@ -211,7 +221,7 @@ def run_atomo(NMAX):
         mx,c=gaps(bp,m*m,M*M,2**a,2**b)
         lo=min(N*N*th for th,nb,na in bp for N in range(max(nb,2**a),min(na,2**b)))
         hi=max(N*N*th for th,nb,na in bp for N in range(max(nb,2**a),min(na,2**b)))
-        print(f"N in [2^{a},2^{b}): min x={float(lo):.9f} (m^2 {float(m*m):.9f})  max x={float(hi):.9f} (M^2 {float(M*M):.9f})  maior lacuna entre valores x_N={float(mx):.2e}  (nº valores {c})")
+        print(f"N in [2^{a},2^{b}): min x={float(lo):.9f} (m^2 {float(m*m):.9f})  max x={float(hi):.9f} (M^2 {float(M*M):.9f})  maior lacuna na lista ordenada de valores x_N={float(mx):.2e}  (nº valores {c})")
 
 
 if __name__ == "__main__":

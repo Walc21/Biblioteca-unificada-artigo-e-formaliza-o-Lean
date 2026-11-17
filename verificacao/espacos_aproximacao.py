@@ -261,6 +261,7 @@ def main() -> None:
     root = args.output_root.resolve()
     repro = root / "reproducibility" / "selecao"
     sections = root / "artigo" / "secoes"
+    sections.mkdir(parents=True, exist_ok=True)
     figures = repro / "figures" / "pt"
     figures.mkdir(parents=True, exist_ok=True)
 

@@ -265,6 +265,7 @@ def save_figure(fig: plt.Figure, pt_pdf: Path, en_pdf: Path) -> None:
 
 def write_tex_tables(root: Path, results: dict) -> None:
     sections = root / "artigo" / "secoes"
+    sections.mkdir(parents=True, exist_ok=True)
     quadratic = results["quadratic"]
     rows = []
     for row in quadratic["samples"]:

@@ -304,6 +304,7 @@ def audit_bernstein() -> dict[str, int | bool]:
 
 
 def write_table(path: Path, rows: list[dict[str, int | bool]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
         r"\begin{tabular}{rrrr}",
         r"\toprule",

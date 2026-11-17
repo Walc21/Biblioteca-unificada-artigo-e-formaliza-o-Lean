@@ -4,9 +4,9 @@
 
 ### Construção, seleção exata, aproximação e normalização — com formalização em Lean 4
 
-*Um volume de 117 páginas, 151 resultados matemáticos e mais de 40 mil linhas de Lean 4 verificadas pelo kernel.*
+*Volume técnico com 151 ambientes matemáticos e fontes Lean 4; a correspondência formal é delimitada por resultado.*
 
-**Victor Gabriel de Oliveira** · edição consolidada de 13 de novembro de 2026
+**Victor Gabriel de Oliveira** · edição revisada de 17 de novembro de 2026
 
 [**📄 Ler o artigo (PDF)**](Biblioteca_Unificada.pdf) &nbsp;·&nbsp; [**🧮 Mapa TeX → Lean**](mapas/MAPA_TEX_LEAN.md) &nbsp;·&nbsp; [**⚙️ Fontes Lean 4**](lean4/ambientes) &nbsp;·&nbsp; [**✍️ Fontes LaTeX**](tex)
 
@@ -18,23 +18,26 @@
 
 ## A ideia em um parágrafo
 
-Como aproximar *qualquer* função contínua por pedaços de reta **de forma totalmente determinística,
-enumerável e sem nenhum número real escondido nos parâmetros**? Este trabalho constrói uma biblioteca
-de segmentos afins de inclinação racional ancorados em células diádicas, em que **cada endereço
-recupera exatamente a célula e a função**, e mostra que ela é, ao mesmo tempo, densa em $C(K)$,
-equivalente a redes ReLU rasas racionais, otimizável **exatamente** por programação dinâmica, e capaz
-de caracterizar espaços de Besov por taxas de aproximação com custo aritmético controlado. Tudo isso
-vem com uma formalização em Lean 4 que liga cada enunciado do texto a uma prova verificada por máquina.
+O trabalho estuda montagens contínuas de segmentos afins racionais em células diádicas, sob
+orçamentos de folhas, altura dos coeficientes e comprimento de descrição. Cada endereço recupera
+a célula e a função afim. As montagens são densas em $C(K)$; sua representação ReLU rasa tem
+quebras diádicas e inclinações locais não nulas. Em catálogos finitos, a programação dinâmica
+seleciona exatamente a árvore e os átomos. A caracterização de Besov usa um funcional que soma
+ao erro a segunda diferença do aproximante, sob agendas explícitas de altura.
+
+O mapa TeX → Lean identifica declarações relacionadas aos 151 ambientes e distingue provas
+compiladas, integrações e correspondências herdadas. As entradas incluem definições, algoritmos
+e observações; a cobertura semântica integral do volume permanece por verificar.
 
 ## O volume em números
 
 | | |
 |---|---|
-| Páginas do PDF | **117** |
+| Páginas do PDF | **118** |
 | Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **151** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
-| Referências bibliográficas | **47** |
+| Referências bibliográficas | **49** |
 | Código Lean 4 | **~40 mil linhas**, mais de 2 mil teoremas e lemas, em 3 ambientes |
 | Casos do dossiê de pendências fechados | **42 de 42** (41 provas Lean + 1 prova textual) |
 | Base de confiança do Lean | apenas `propext`, `Classical.choice`, `Quot.sound` |
@@ -138,11 +141,14 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```bash
 cd tex
-latexmk -pdf -interaction=nonstopmode principal.tex      # gera tex/principal.pdf
+latexmk -pdf -interaction=nonstopmode -halt-on-error principal.tex
+python3 gerar_fonte_unica.py                            # sincroniza documento_completo.tex
 ```
 
 **Validação numérica (Python).** Seis programas em `Fraction` geram as tabelas e figuras de verificação
-citadas no artigo; não fazem parte das demonstrações. Veja [`verificacao/README.md`](verificacao/README.md).
+citadas no artigo; não fazem parte das demonstrações. Execute `python3 verificacao/reproduzir_tudo.py --output-root /tmp/biblioteca-verificacao` na raiz
+do repositório para rodar os seis verificadores em pastas independentes. Veja
+[`verificacao/README.md`](verificacao/README.md).
 
 **Formalização (Lean).** Instale o [`elan`](https://github.com/leanprover/elan); cada ambiente fixa a
 versão do Lean e do Mathlib (4.28.0). O cache do Mathlib não é versionado.

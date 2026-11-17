@@ -19,13 +19,32 @@ flutuante, e por isso não se exige identidade byte a byte desses campos entre p
 ## Como executar
 
 ```bash
-pip install -r requirements.txt
-python3 seletor_dinamico_exato.py --output-root /tmp/saida
+python3 -m pip install -r verificacao/requirements.txt
+python3 verificacao/reproduzir_tudo.py --output-root /tmp/biblioteca-verificacao
 ```
 
-Passe sempre `--output-root` apontando para uma pasta de trabalho: os programas criam nela
-`reproducibility/selecao/` com os resultados e as figuras. No `seletor_dinamico_exato.py` o padrão é a
-pasta-pai deste diretório, isto é, a raiz do repositório. O `numpy` e o `matplotlib` só entram depois da
-seleção, para desenhar as figuras.
+Execute os comandos acima na raiz do repositório. O segundo comando executa os seis programas,
+com `assert` habilitado e backend gráfico `Agg`, cada um em uma subpasta própria. Interrompe no primeiro
+erro e registra os códigos de saída, os caminhos dos resultados e os logs em `resumo_execucao.json`.
+O estado `ok` indica que os seis processos terminaram sem erro e produziram JSON válido; os testes
+de cada programa verificam instâncias finitas, com os escopos descritos na tabela.
 
-O `reproduzir_curvas.py` grava `resultados.json` e as figuras em `--output-root`; aqui o registro foi guardado como `resultados_curvas.json`, para não colidir com o do seletor. Os resultados registrados foram gerados com Python 3.12.
+Para executar um programa isolado:
+
+```bash
+python3 verificacao/constante_diadica.py --output-root /tmp/constante-diadica
+```
+
+Todos os programas criam os diretórios necessários dentro de `--output-root`, que pode ser uma pasta
+nova. As tabelas TeX ficam em `artigo/secoes/`; cinco programas gravam resultados e figuras em
+`reproducibility/selecao/`. O `reproduzir_curvas.py` grava `resultados.json`, `figures/` e
+`artigo/secoes/` diretamente sob sua pasta de saída. Os nomes `artigo/secoes/` identificam as tabelas
+geradas e não pressupõem uma pasta existente nas fontes do manuscrito. A execução completa mantém
+saídas separadas para evitar colisões de nomes. No `seletor_dinamico_exato.py`, o padrão sem a opção é a
+raiz do repositório; prefira sempre fornecer uma pasta de trabalho.
+
+O registro de `reproduzir_curvas.py` foi versionado como `resultados_curvas.json`, para distingui-lo
+do registro do seletor. Os resultados da edição original foram gerados com Python 3.12. Nos programas
+que usam diagnósticos em ponto flutuante, diferenças nesses campos não implicam alteração das
+igualdades racionais verificadas. Não execute os verificadores individuais com `python -O`, pois essa
+opção desativa seus `assert`.

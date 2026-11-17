@@ -232,7 +232,7 @@ Original de 77 páginas: 7.3.
 
 Fonte editável: [tex/partes/artigo_1.tex:434](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
 
-Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto.
+Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto. [17/11/2026] O passo (i) e o teorema I.6.4 explicitam agora a hipótese `roots.Pairwise DisjInt` já presente nas declarações Lean; a prova textual registra sua preservação pelo refinamento.
 
 - [`Fase3.refineCell`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 29.
 - [`Fase3.refineAll`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 35.
@@ -246,9 +246,9 @@ Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipó
 
 Original de 77 páginas: 7.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:467](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
+Fonte editável: [tex/partes/artigo_1.tex:470](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
 
-Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para qualquer cobertura diádica de [α,β], inclusive externa, sem essa hipótese; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável.
+Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para coberturas diádicas de [α,β] com interiores dois a dois disjuntos, inclusive externas, sem a hipótese de contenção; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável. [17/11/2026] A hipótese de disjunção dos interiores das raízes foi sincronizada com o texto, sem alteração das declarações Lean.
 
 - [`Fase3.refine_terminates`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 222.
 - [`Fase3.refine_correct`](../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean) — linha 292.
@@ -261,7 +261,7 @@ Estado: **Formalizado e compilado**. Término e correção sob os contratos form
 
 Original de 77 páginas: 7.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:496](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
+Fonte editável: [tex/partes/artigo_1.tex:499](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -271,7 +271,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.6.
 
-Fonte editável: [tex/partes/artigo_1.tex:522](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
+Fonte editável: [tex/partes/artigo_1.tex:525](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -790,7 +790,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:26](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.1`.
+Fonte editável: [tex/partes/artigo_2.tex:46](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -806,7 +806,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:43](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.2`.
+Fonte editável: [tex/partes/artigo_2.tex:63](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -819,7 +819,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:54](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.3`.
+Fonte editável: [tex/partes/artigo_2.tex:74](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.3`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Cota de interpolação provada com `ContDiffOn ℝ 2 f (Icc a b)` e `derivWithin`, via extensão C² portada da Fase 3 (`Pendencias/Extensao.lean`). Densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -832,7 +832,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:97](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.1`.
+Fonte editável: [tex/partes/artigo_2.tex:117](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -842,7 +842,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:123](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.2`.
+Fonte editável: [tex/partes/artigo_2.tex:143](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -854,7 +854,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:175](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.3`.
+Fonte editável: [tex/partes/artigo_2.tex:195](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -865,7 +865,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:216](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.4`.
+Fonte editável: [tex/partes/artigo_2.tex:236](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -875,7 +875,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:245](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.5`.
+Fonte editável: [tex/partes/artigo_2.tex:265](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.5`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -885,7 +885,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 8.6.
 
-Fonte editável: [tex/partes/artigo_2.tex:252](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.6`.
+Fonte editável: [tex/partes/artigo_2.tex:272](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -896,7 +896,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.7.
 
-Fonte editável: [tex/partes/artigo_2.tex:257](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.7`.
+Fonte editável: [tex/partes/artigo_2.tex:277](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.7`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -906,7 +906,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.8.
 
-Fonte editável: [tex/partes/artigo_2.tex:279](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.8`.
+Fonte editável: [tex/partes/artigo_2.tex:299](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.8`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -916,7 +916,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 8.9.
 
-Fonte editável: [tex/partes/artigo_2.tex:306](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.9`.
+Fonte editável: [tex/partes/artigo_2.tex:326](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.9`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -927,7 +927,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.10.
 
-Fonte editável: [tex/partes/artigo_2.tex:341](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.10`.
+Fonte editável: [tex/partes/artigo_2.tex:361](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.10`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -937,7 +937,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 8.11.
 
-Fonte editável: [tex/partes/artigo_2.tex:379](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.11`.
+Fonte editável: [tex/partes/artigo_2.tex:399](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.11`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -947,7 +947,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.12.
 
-Fonte editável: [tex/partes/artigo_2.tex:436](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.12`.
+Fonte editável: [tex/partes/artigo_2.tex:456](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.12`.
 
 Estado: **Formalizado e compilado**. Ressalva anterior, superada: coding_gap_family provava só a cadeia de átomos para N par; a árvore de raiz única J(H-1-r,0), com N=2^r, é construída por famTree e tratada em coding_formats_comparison (ver abaixo). [11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -960,7 +960,7 @@ Estado: **Formalizado e compilado**. Ressalva anterior, superada: coding_gap_fam
 
 Original de 77 páginas: 8.13.
 
-Fonte editável: [tex/partes/artigo_2.tex:514](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.13`.
+Fonte editável: [tex/partes/artigo_2.tex:534](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.13`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -971,7 +971,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.14.
 
-Fonte editável: [tex/partes/artigo_2.tex:541](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.14`.
+Fonte editável: [tex/partes/artigo_2.tex:561](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.14`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -983,7 +983,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.15.
 
-Fonte editável: [tex/partes/artigo_2.tex:578](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.15`.
+Fonte editável: [tex/partes/artigo_2.tex:598](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.15`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; |f′| ≤ 4R+M/2 com f′ unilateral. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -996,7 +996,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.16.
 
-Fonte editável: [tex/partes/artigo_2.tex:600](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.16`.
+Fonte editável: [tex/partes/artigo_2.tex:620](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.16`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; mesma árvore determinística `uniformTree (jvals f r)` (só amostra f em [0,1]) e consequência para todo N ≥ 2. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1009,7 +1009,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.17.
 
-Fonte editável: [tex/partes/artigo_2.tex:715](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.17`.
+Fonte editável: [tex/partes/artigo_2.tex:735](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.17`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; n_ε, H_ε inalterados; `jointErr`, `heightFor` e `supDist` só dependem de f em [0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1020,7 +1020,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.18.
 
-Fonte editável: [tex/partes/artigo_2.tex:794](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.18`.
+Fonte editável: [tex/partes/artigo_2.tex:814](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.18`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; coberturas de FRMIcc e FRM coincidem (`isCover_iff`), logo `entropyH ε (FRMIcc R M) = entropyH ε (FRM R M)`; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1031,7 +1031,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.19.
 
-Fonte editável: [tex/partes/artigo_2.tex:905](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.19`.
+Fonte editável: [tex/partes/artigo_2.tex:925](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.19`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1044,7 +1044,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.20.
 
-Fonte editável: [tex/partes/artigo_2.tex:949](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.20`.
+Fonte editável: [tex/partes/artigo_2.tex:969](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.20`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1055,7 +1055,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.21.
 
-Fonte editável: [tex/partes/artigo_2.tex:1011](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.21`.
+Fonte editável: [tex/partes/artigo_2.tex:1031](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.21`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1065,7 +1065,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.22.
 
-Fonte editável: [tex/partes/artigo_2.tex:1040](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.22`.
+Fonte editável: [tex/partes/artigo_2.tex:1060](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.22`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1076,7 +1076,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.23.
 
-Fonte editável: [tex/partes/artigo_2.tex:1071](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.23`.
+Fonte editável: [tex/partes/artigo_2.tex:1091](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.23`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1086,7 +1086,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.24.
 
-Fonte editável: [tex/partes/artigo_2.tex:1113](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.24`.
+Fonte editável: [tex/partes/artigo_2.tex:1133](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.24`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1096,7 +1096,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.25.
 
-Fonte editável: [tex/partes/artigo_2.tex:1138](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.25`.
+Fonte editável: [tex/partes/artigo_2.tex:1158](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.25`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Programa computável `gen`/`select`/`enumSelect`; = `RepCat` e devolve `canon` quando J é avaliado exatamente em ℚ. Testado com `#eval` (|𝓛₂| = 252; 42 e 102 representações para D = 0, 1, H = 2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1108,7 +1108,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 9.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1241](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1261](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1119,7 +1119,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1254](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1274](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1129,7 +1129,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1296](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1316](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1139,7 +1139,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1308](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1328](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1149,7 +1149,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:1344](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.5`.
+Fonte editável: [tex/partes/artigo_2.tex:1364](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1159,7 +1159,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.6.
 
-Fonte editável: [tex/partes/artigo_2.tex:1395](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.6`.
+Fonte editável: [tex/partes/artigo_2.tex:1415](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.6`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1169,7 +1169,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 10.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1481](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1501](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1179,7 +1179,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 10.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1552](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1572](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1189,7 +1189,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1592](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1612](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1199,7 +1199,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1625](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1645](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1210,7 +1210,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1675](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1695](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.3`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela em pós-ordem com o κ-mínimo por estado (`fixTable`, colagem por w), custo = `Cfix`, raiz = rotulação κ-mínima de `fixed_global` (via Lema 5.2 `tie_concatenation`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1223,7 +1223,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 12.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1706](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1726](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1233,7 +1233,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1732](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1752](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1244,7 +1244,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1780](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1800](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1254,7 +1254,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1801](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1821](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.4`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela `varTable` (candidato folha + colagens, troca só se κ diminui), custo = `Cvar`, raiz = ótimo `Cstar` e representação κ-mínima de `variable_global`. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1267,7 +1267,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 13.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1835](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1855](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1278,7 +1278,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 13.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1895](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1915](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1289,7 +1289,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 13.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1929](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1949](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.3`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1299,7 +1299,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 13.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1944](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1964](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1309,7 +1309,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 14.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1996](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2016](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
 
 Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transições; não certifica tempo e memória de um programa com execução ligada a essas cardinalidades. [13/11/2026] III.9.1 formalizado com modelo de custo explícito: monad de contagem Tm, memória densa Mem com domínio explícito e motor genérico de preenchimento por níveis (runFrom_spec). Implementação densa da recorrência Cvar (denseRun: tabela (r,j,u,v) -> custo+apontador, níveis D..0, cada candidato w custa 2 leituras+1 soma+1 comparação) e da recorrência com orçamento Cb (denseRunB: chaves (r,j,u,v,n), pares (n_L,w)). Provado: (a) a tabela guarda exatamente Cvar/Cb (specE_cost, specEB_cost); (b) memória exatamente S_D M^2 (resp. S_D N M^2) entradas; (c) operações <= 8 S_D M^3 (resp. <= 7 S_D N^2 M^3) com custos de folha pre-computados; (d) apontadores reconstroem uma representação ótima em Rset/RsetN (rebuild_spec, rebuildB_spec); (e) custo local calculado sobre P observações (leafInit, 4P+3 operações, valor exatamente Phi): inicialização acrescenta 4 S_D P M^2 (variável) e S_D M^2 (4P+3) (orçamento). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (1) a comparação na tabela densa e feita sobre o custo; o desempate pela chave completa kappa (fluxo shortlex) não está no programa denso — o TeX conta comparações de chave como unitárias, de modo que a contagem coincide, e o seletor kappa-canônico continua sendo o de III.7.4 (varRoot_spec); a tabela densa devolve UMA representação ótima, não necessariamente a kappa-mínima; (2) o tempo de reconstrução não é contado (não faz parte do enunciado); (3) modelo: leitura/escrita da tabela, soma e comparação no corpo ordenado dos custos são operações unitárias, conforme a seção do TeX; (4) as constantes explícitas 8 e 7 materializam O(.) para M>=1.
 
@@ -1324,7 +1324,7 @@ Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transiç
 
 Original de 77 páginas: 14.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2033](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2053](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1334,7 +1334,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 14.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2083](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2103](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
 
 Estado: **Formalizado e compilado**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memória em bits do artigo exigem semântica de execução e custo de operações/desempate. [13/11/2026] III.9.3 formalizado sobre a implementação densa de III.9.1 (leafInit agora testa admissibilidade antes de somar a perda; estado não admissível cobra 4P+3 como cota superior sem aritmética sobre os dados). Provado: (1) crescimento — todo custo finito Cvar/Cb da recorrência (entradas da tabela), toda soma de candidatos c_L+c_R (<= 4 B_cost+5 bits), todo candidato com penalidade (<= 16 B_cost+25 bits) e todo acumulador parcial da perda local (lossTm) tem comprimento em bits <= B_cost = Bcost S B L, a cota explícita de Setup.bit_complexity (2(P(5B+6clog H+2(k0+D)+9)+2B+2clog L+2)+3); (2) tempo em bits — número de operações de III.9.1 (S_D M^2 (4M+6)+4 S_D P M^2 sem orçamento; S_D M^2 (4P+3)+S_D M^2 N (4NM+2) com orçamento) multiplicado por opBits = arith(b)+L+entryBits, com opBits <= cA MZ(b) clog(2b)+2L+b+idx, b=16 B_cost+25; (3) memória em bits — dom.card * (B_cost+L+idx) exatamente S_D M^2 (resp. S_D N M^2) vezes. Multiplicação escolar: schoolModel (MZ b = b^2). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (a) o custo de uma soma/comparação/redução de frações com operandos de b bits, <= cA MZ(b) log(2b), e Hipótese do modelo (BitModel.arith_le), como no TeX ("algoritmos inteiros usuais"); não ha modelo de maquina em Lean; (b) o tempo em bits é o número de operações unitárias vezes o custo-limite de uma operação (argumento do TeX), não uma simulação bit a bit; (c) BitHyp assume B (bl dos dados/penalidades) e L (comprimento de fluxo das representações do catalogo, eq. stream-length) como no teorema bit_complexity; (d) os índices (idxBits = clog(S_D M+1)) aparecem explicitamente em vez de absorvidos; (e) vale a ressalva de III.9.1 sobre o desempate kappa (comparações de chave unitárias; empate shortlex custa L).
 
@@ -1349,7 +1349,7 @@ Estado: **Formalizado e compilado**. bit_complexity limita o tamanho dos custos 
 
 Original de 77 páginas: 14.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:2160](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
+Fonte editável: [tex/partes/artigo_2.tex:2180](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1359,7 +1359,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 14.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:2195](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
+Fonte editável: [tex/partes/artigo_2.tex:2215](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1369,7 +1369,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2521](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2541](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1380,7 +1380,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2581](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2601](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1391,7 +1391,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 16.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2608](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2628](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1406,7 +1406,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2705](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2725](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1417,7 +1417,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2813](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2833](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
 
 Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.
 
@@ -1427,7 +1427,7 @@ Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no text
 
 Original de 77 páginas: 17.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2860](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2880](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
 
 Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o envelope C2 global a uma função quadrática por partes que pode não ser C2. Manter o enunciado e atualizar a demonstração textual em etapa posterior. [13/11/2026] Demonstração textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a função quadrática por partes. PDF recompilado nesta rodada.
 
@@ -1437,7 +1437,7 @@ Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o en
 
 Original de 77 páginas: 17.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:2967](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
+Fonte editável: [tex/partes/artigo_2.tex:2987](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 

@@ -15,6 +15,26 @@ O desenvolvimento liga três problemas. A contagem por altura determina o custo 
 
 As provas de seleção exata pressupõem avaliação e comparação exatas dos custos locais. Os experimentos registrados verificam instâncias finitas dessas identidades. Os teoremas de interpolação usam valores nodais reais; sua realização racional depende também da altura. A teoria de taxas e a reversibilidade são desenvolvidas no terceiro artigo da série.
 
+\paragraph{Relação com ajuste contínuo linear por partes.}
+O algoritmo CPOP de \citet{artigo_2-fearnhead2019} minimiza uma perda quadrática com penalização de mudanças de inclinação, conservando o valor ajustado na fronteira como estado contínuo e usando poda funcional. O método slopeOP de \citet{artigo_2-runge2022} restringe esses valores a um alfabeto finito e obtém uma recorrência de programação dinâmica. Assim, conservar valores de fronteira para impor continuidade já integra a literatura de segmentação.
+
+O problema aqui fixa uma raiz e subdivisões estritamente diádicas. O alfabeto $\Values_{D,H}(K)$ é derivado dos átomos de altura no máximo $H$, e a admissibilidade de uma folha depende conjuntamente de sua célula, valor central e inclinação. A recorrência seleciona a árvore e seus rótulos sob esses contratos, com comprimento de descrição e desempate canônico. A \cref{artigo_2:tab:comparacao-segmentacao} explicita os diferentes domínios de otimização. As cotas de tempo pertencem a esses domínios; os experimentos deste volume não estabelecem uma comparação de desempenho com CPOP ou slopeOP.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Domínios de seleção em métodos de ajuste contínuo linear por partes.}
+\label{artigo_2:tab:comparacao-segmentacao}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.14\linewidth}*{3}{>{\raggedright\arraybackslash}X}@{}}
+\toprule
+Método & Partição e estado & Critério & Restrição considerada\\
+\midrule
+CPOP & Mudanças em uma grade de posições; valor contínuo na fronteira & Perda quadrática e penalização de mudanças & Continuidade entre segmentos\\[4pt]
+slopeOP & Posições discretas; valores de fronteira em conjunto finito & Perda quadrática e penalização de mudanças & Continuidade e restrições de forma\\[4pt]
+Este trabalho & Árvore diádica; par de fronteiras em $\Values_{D,H}(K)^2$ & Perda local, bits e subdivisões, ou orçamento de folhas & Altura atômica, suporte diádico e desempate canônico\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Biblioteca racional e preliminares}
 \label{artigo_2:sec:indexing}\label{artigo_2:sec:generator}\label{artigo_2:sec:assemblies}
 Fixamos as convenções do primeiro artigo \citep{artigo_2-oliveiraI}. Para uma fração reduzida $p/q$, $q>0$, escreva $\height(p/q)=\max\{|p|,q\}$. A enumeração $Q:\Nzero\to\mathbb Q$ ordena as frações por altura, depois por denominador e numerador; $Q^*:\Nzero\to\Qstar$ omite $0$.

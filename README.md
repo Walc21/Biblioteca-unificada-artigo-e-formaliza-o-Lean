@@ -33,7 +33,7 @@ e observações; a cobertura semântica integral do volume permanece por verific
 
 | | |
 |---|---|
-| Páginas do PDF | **123** |
+| Páginas do PDF | **124** |
 | Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **156** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
@@ -118,7 +118,7 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada.pdf        # o artigo (123 páginas)
+├── Biblioteca_Unificada.pdf        # o artigo (124 páginas)
 ├── tex/                            # fontes LaTeX
 │   ├── principal.tex               #   documento principal (compilar com latexmk)
 │   ├── documento_completo.tex      #   versão em arquivo único, com bibliografia incorporada

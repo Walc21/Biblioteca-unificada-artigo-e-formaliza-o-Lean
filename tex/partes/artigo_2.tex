@@ -3479,7 +3479,24 @@ $e^x$, e os mesmos testes (com $1500\le N\le12000$) com $x^3+x^2$, $x^4$, $\sin2
 uma função afim em $[0,\tfrac12]$ e uma função com patamar $f''\equiv2$ concordam
 com $[m_f^2,M_f^2]$ calculado de $\Psi_f$, com erro relativo inferior a $0{,}5\%$.
 O programa é \path{verificacao/lei_fase_experimento.py}, que não integra os
-verificadores reprodutíveis do volume. Os resultados desta
+verificadores reprodutíveis do volume.
+
+Para $e^x$, $\ln(1+x)$, $x^3+x^2$ e uma função $C^2$ com patamar $f''\equiv2$
+em $[0,\tfrac12]$ (átomo de $\mu_f$), o teste foi repetido com $40$ dígitos
+(mpmath), com o erro local em forma fechada, $\Psi_f$ em forma fechada e
+$N$ até $3\cdot10^5$. Em cada caso, $\min x_N$ e $\max x_N$, onde
+$x_N=N^2E_N^{\rm dia}$, aproximam $m_f^2$ e $M_f^2$ com erro que cai
+pela metade a cada duplicação de $N$. Para $e^x$, $\Psi_f(\tfrac12)^2=\tfrac12$ por
+cálculo direto, e o programa dá $m_f^2=0{,}33978523\ldots$ e $M_f^2=\tfrac12$.
+No patamar, $\sqrt\varepsilon\,n_f(\varepsilon)=0{,}75=\Psi_f(\tau)$ exatamente na
+fase do átomo e fica a menos de $2\cdot10^{-4}$ de $\Psi_f$ ($=\Psi_f^+$) em fases próximas.
+Os valores $x_N$ cobrem $[m_f^2,M_f^2]$, inclusive o salto do átomo,
+com maior lacuna $O(1/N)$. Para quadráticas por partes (curvaturas
+$(2,2,8,5)$, $(1,4,16,64)$ e $(1,2,3,5,7,11,13,17)$), a árvore de limiar
+simulada com \texttt{Fraction}, sem tolerância, coincide com a contagem fechada do
+\cref{artigo_2:thm:piecewise-quadratic-count} em $250$ tolerâncias de quebra, e
+$\min x_N=m_f^2$ exatamente; no caso sincronizado ambos coincidem com
+$I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os resultados desta
 subseção \emph{não foram formalizados em Lean}.
 \end{remark}
 

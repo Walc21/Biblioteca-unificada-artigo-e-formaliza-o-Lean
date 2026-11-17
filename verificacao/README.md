@@ -1,6 +1,6 @@
-# Verificação numérica (aritmética racional exata)
+# Verificação numérica
 
-Seis programas em Python que acompanham o artigo. Eles **não fazem parte das demonstrações**: nenhum
+Seis programas em Python, listados na tabela abaixo, acompanham o artigo e são executados por `reproduzir_tudo.py`. Eles **não fazem parte das demonstrações**: nenhum
 teorema, lema ou proposição do volume depende deles. Registram verificações de **instâncias finitas** em
 aritmética exata (`fractions.Fraction`) e geram tabelas e figuras. A prova formal está em [`lean4/`](../lean4).
 
@@ -12,6 +12,24 @@ aritmética exata (`fractions.Fraction`) e geram tabelas e figuras. A prova form
 | `espacos_aproximacao.py` | Parte IV, auditoria racional das alturas (tabela de alturas e figura das agendas) | `resultados_espacos_aproximacao.json` |
 | `reversibilidade_regularizada.py` | Parte IV, «Validação executável» (2952 idas e voltas, 84 redes quantizadas, 1260 instâncias) | `resultados_reversibilidade.json` |
 | `restricoes_rede.py` | Parte IV, figura de restrições de rede | `resultados_restricoes_rede.json` |
+
+## Verificações complementares (fora de `reproduzir_tudo.py`)
+
+Dois programas testam a lei de fase da Parte III (III.12.5–III.12.9). **Não são verificadores exatos no mesmo
+sentido** dos seis acima e não sustentam nenhuma prova; ficam fora de `reproduzir_tudo.py` e não têm `.json`
+registrado.
+
+| Programa | O que faz | Aritmética |
+|---|---|---|
+| `lei_fase_experimento.py` | Compara $\sqrt\varepsilon\,n_f(\varepsilon)$ com $\Psi_f$ e o intervalo de $N^2E_N$ com $[m_f^2,M_f^2]$ para nove funções $C^2$, incluindo zeros e mudança de sinal de $f''$, uma função afim em um intervalo e um patamar | ponto flutuante (`float`) |
+| `lei_fase_exata.py` | Mesma comparação para $e^x$, $\ln(1+x)$, $x^3+x^2$ e um patamar $C^2$, com 40 dígitos e $\Psi_f$ em forma fechada; e quadráticas por partes com a árvore de limiar em `Fraction`, sem tolerância | `mpmath` (40 dígitos) e `Fraction` |
+
+```bash
+python3 verificacao/lei_fase_experimento.py 6000
+python3 verificacao/lei_fase_exata.py              # precisao, atomo e racional; aceita um subcomando e Nmax
+```
+
+O segundo exige `mpmath` (já em `requirements.txt`) e leva cerca de 40 s.
 
 Os `.json` são as saídas registradas na edição do artigo. Nos diagnósticos logarítmicos auxiliares há ponto
 flutuante, e por isso não se exige identidade byte a byte desses campos entre plataformas.

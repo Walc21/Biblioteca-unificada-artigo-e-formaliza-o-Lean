@@ -2,9 +2,9 @@
 
 
 \renewcommand{\abstractname}{Resumo}
-\begin{abstract}Estudamos os custos aritméticos, a seleção exata e os limites de interpolação de montagens racionais em árvores diádicas. Sob um calibre explícito, a biblioteca contém $\Theta(H^6)$ átomos; o gerador aritmético tem pior índice $\Theta(H^8)$ e a enumeração por altura realiza o mínimo exato do maior índice. Três formatos prefix-free distinguem endereços, estrutura ReLU e expansão racional. Em classes limitadas de $C^2$, a restrição de curvatura fornece um codebook com entropia de ordem $\varepsilon^{-1/2}$. Pares racionais de fronteira são estados suficientes para selecionar simultaneamente árvore e átomos, com penalidades de descrição ou orçamentos de folhas. Demonstramos as recorrências, a compatibilidade do desempate e cotas de complexidade, incluindo crescimento dos operandos. Para interpolação real em árvores estritamente diádicas, obtemos o envelope assintótico $[I(f)^2/8,\allowbreak I(f)^2/2]$. A curvatura constante realiza o intervalo completo de acumulação, e quadráticas por partes admitem uma lei periódica de fases.\end{abstract}
+\begin{abstract}Estudamos os custos aritméticos, a seleção exata e os limites de interpolação de montagens racionais em árvores diádicas. Sob um calibre explícito, a biblioteca contém $\Theta(H^6)$ átomos; o gerador aritmético tem pior índice $\Theta(H^8)$ e a enumeração por altura realiza o mínimo exato do maior índice. Três formatos prefix-free distinguem endereços, estrutura ReLU e expansão racional. Em classes limitadas de $C^2$, a restrição de curvatura fornece um codebook com entropia de ordem $\varepsilon^{-1/2}$. Pares racionais de fronteira são estados suficientes para selecionar simultaneamente árvore e átomos, com penalidades de descrição ou orçamentos de folhas. Demonstramos as recorrências, a compatibilidade do desempate e cotas de complexidade, incluindo crescimento dos operandos. Para interpolação real em árvores estritamente diádicas, obtemos o envelope assintótico $[I(f)^2/8,\allowbreak I(f)^2/2]$. A curvatura constante realiza o intervalo completo de acumulação, quadráticas por partes admitem uma lei periódica de fases e, para $f\in C^2$ geral, uma função de fase determina o conjunto de acumulação e o critério de existência do limite.\end{abstract}
 \renewcommand{\abstractname}{Abstract}
-\begin{abstract}We study arithmetic costs, exact selection, and interpolation limits for rational assemblies on dyadic trees. Under an explicit height gauge, the library contains $\Theta(H^6)$ atoms. The arithmetic generator has worst index $\Theta(H^8)$, whereas height ordering attains the exact minimum worst index. Three prefix-free formats distinguish addresses, ReLU structure, and expanded rational coefficients. Curvature constraints yield a codebook with entropy of order $\varepsilon^{-1/2}$ on bounded $C^2$ classes. Rational boundary pairs provide sufficient states for joint tree and atom selection under description penalties or leaf budgets. We prove the recurrences, canonical tie-breaking, and complexity bounds, including operand growth. For real interpolation on strictly dyadic trees, we obtain the asymptotic envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Constant curvature attains the full cluster interval, and piecewise quadratics admit a periodic phase law.\end{abstract}
+\begin{abstract}We study arithmetic costs, exact selection, and interpolation limits for rational assemblies on dyadic trees. Under an explicit height gauge, the library contains $\Theta(H^6)$ atoms. The arithmetic generator has worst index $\Theta(H^8)$, whereas height ordering attains the exact minimum worst index. Three prefix-free formats distinguish addresses, ReLU structure, and expanded rational coefficients. Curvature constraints yield a codebook with entropy of order $\varepsilon^{-1/2}$ on bounded $C^2$ classes. Rational boundary pairs provide sufficient states for joint tree and atom selection under description penalties or leaf budgets. We prove the recurrences, canonical tie-breaking, and complexity bounds, including operand growth. For real interpolation on strictly dyadic trees, we obtain the asymptotic envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Constant curvature attains the full cluster interval, piecewise quadratics admit a periodic phase law, and for general $C^2$ functions a phase function determines the cluster set and the criterion for the existence of the limit.\end{abstract}
 \renewcommand{\abstractname}{Resumo}
 \section{Introdução}
 A aproximação por segmentos racionais envolve erro, número de folhas, altura dos coeficientes e comprimento da descrição. A seleção de uma montagem acrescenta um problema de otimização: valores em fronteiras compartilhadas acoplam decisões locais. Este artigo reúne a contagem desses recursos e as recorrências que realizam o mínimo em catálogos finitos.
@@ -152,7 +152,7 @@ que, para todo $H\ge H_1$,
  |\Library_H|\ge c_\Library H^6.
  \label{artigo_2:eq:atom-count}
 \end{equation}
-Em particular, $|\Library_H|=\Theta(H^6)$.
+Em particular, $|\Library_H|=\Theta(H^6)$. Mais precisamente, $|\Library_H|\sim(288/\pi^4)H^6\approx2{,}957\,H^6$.
 \end{lemma}
 
 \begin{proof}
@@ -167,7 +167,7 @@ com $\mathcal{Q}_H$ como no \cref{artigo_2:lem:rational-count}. O primeiro fator
 \[
  |\Library_H|\ge H\cdot H\cdot c_1H^2\cdot\bigl(c_1H^2-1\bigr)\ \ge\ \frac{c_1^2}{2}H^6
 \]
-para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$.
+para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$. Para a assintótica exata, seja $\Phi(H)=\sum_{n\le H}\varphi(n)$, que satisfaz $\Phi(H)=3H^2/\pi^2+O(H\log H)$. Os pares coprimos $(p,q)\in[1,H]^2$ são $2\Phi(H)-1$ (os com $p\le q$ são $\Phi(H)$, os com $q\le p$ também, e $(1,1)$ é contado duas vezes); os racionais reduzidos de altura no máximo $H$ são $0$ e os positivos e negativos associados a esses pares, de modo que $|\mathcal Q_H|=4\Phi(H)-1=(12/\pi^2)H^2+O(H\log H)$. Como $H(2H-1)=2H^2(1+O(1/H))$ e $|\mathcal Q_H|(|\mathcal Q_H|-1)=|\mathcal Q_H|^2(1+O(H^{-2}))$, $|\Library_H|=2H^2\cdot(144/\pi^4)H^4(1+O(\tfrac{\log H}{H}))=(288/\pi^4)H^6(1+o(1))$. (Conferência numérica da razão $|\Library_H|/H^6$: $3{,}034$ em $H=50$; $2{,}961$ em $H=800$; $2{,}957$ em $H=12800$; limite $2{,}9566$.)
 \end{proof}
 
 \paragraph{Dependência do expoente no calibre.}
@@ -3022,7 +3022,9 @@ específica da curvatura quadrática por partes. A
 $10^{-3}$ e $10^{-10}$, os dois exemplos suaves permanecem estritamente no
 interior. A caracterização, para $f$ dada, do conjunto exato de acumulação de
 $N^2E_N^{\rm dia}(f)_\infty$ dentro de
-$[I(f)^2/8,\allowbreak I(f)^2/2]$ constitui o problema de fases para curvatura variável.
+$[I(f)^2/8,\allowbreak I(f)^2/2]$ é o problema de fases para curvatura
+variável; ele é resolvido na \cref{artigo_2:sec:phase-law}: o conjunto é o
+intervalo $[m_f^2,M_f^2]$ da \cref{artigo_2:cor:phase-accumulation}.
 \end{remark}
 
 \begin{table}[t]
@@ -3102,6 +3104,385 @@ interpolantes pertencem, portanto, à aderência quando a altura cresce. O
 problema interpolatório \eqref{artigo_2:eq:optimal-dyadic-interpolation} e o melhor
 erro racional com deslocamentos nodais são objetos distintos; a constante
 assintótica do segundo sob uma agenda fixa de altura permanece em aberto.
+\subsection{Lei de fase para curvatura variável}
+\label{artigo_2:sec:phase-law}
+
+As quadráticas por partes do \cref{artigo_2:thm:piecewise-quadratic-count} mostram que
+$n_f(\varepsilon)$ depende da fase de $-\log_4\varepsilon$. Esta subseção prova que
+o mesmo mecanismo governa toda $f\in C^2(K)$ e determina, para cada $f$, o
+conjunto exato de valores de acumulação de $N^2E_N^{\rm dia}(f)_\infty$.
+Ponha $L=|K|$, $c=|f''|$, $Z=\{x\in K:c(x)=0\}$ e, para $x\in K\setminus Z$,
+\begin{equation}
+ a(x)=\log_4\frac{L^2c(x)}{8},
+ \qquad
+ g(u)=2^{\lceil u\rceil-u},
+ \qquad
+ g^{+}(u)=2^{\lfloor u\rfloor+1-u}.
+ \label{artigo_2:eq:phase-kernels}
+\end{equation}
+As funções $g,g^+$ são $1$-periódicas e satisfazem $1\le g\le g^+\le2$.
+A função $g$ é contínua à esquerda, $g^+(u)=\lim_{v\downarrow u}g(v)$ e
+$g^+-g=\mathbf 1_{\mathbb Z}$: elas coincidem fora de $\mathbb Z$, e em
+$u\in\mathbb Z$ valem $g(u)=1$, $g^+(u)=2$. Seja $\mathbb T=\mathbb R/\mathbb Z$
+e $\mu_f$ a medida de Borel finita em $\mathbb T$ dada por
+\[
+ \mu_f(B)=\int_{\{x\in K\setminus Z:\ a(x)\bmod1\in B\}}\sqrt{c(x)}\,\dd x,
+\]
+isto é, a imagem de $\sqrt{|f''|}\,\dd x$ por $a$ módulo $1$; sua massa
+total é $I(f)$. A \emph{função de fase} e sua versão à direita são
+\begin{equation}
+ \Psi_f(t)=\int_{K\setminus Z}\sqrt{\frac{c(x)}8}\;g\bigl(t+a(x)\bigr)\dd x,
+ \qquad
+ \Psi_f^{+}(t)=\int_{K\setminus Z}\sqrt{\frac{c(x)}8}\;g^{+}\bigl(t+a(x)\bigr)\dd x.
+ \label{artigo_2:eq:phase-function}
+\end{equation}
+Para quadráticas por partes, $\Psi_f$ é a função $\Phi$ de
+\eqref{artigo_2:eq:piecewise-phase-law}. Dizemos que $\theta\in\mathbb T$ é um
+\emph{átomo} de $\mu_f$ se $\mu_f(\{\theta\})>0$, isto é, se $a(x)\equiv\theta$
+módulo $1$ em um conjunto de medida positiva; $\mu_f$ é \emph{uniforme} se
+$\mu_f=I(f)\lambda$, com $\lambda$ a medida de Lebesgue de massa $1$ em $\mathbb T$.
+
+% MAPA artigo_2:12.5
+\begin{lemma}[propriedades da função de fase]\label{map:artigo_2:12.5}
+\label{artigo_2:lem:phase-function-properties}
+Seja $f\in C^2(K)$ com $I(f)>0$.
+\begin{enumerate}[label=(\roman*)]
+\item $\Psi_f$ e $\Psi_f^+$ são $1$-periódicas e
+ $I(f)/\sqrt8\le\Psi_f\le\Psi_f^+\le I(f)/\sqrt2$. Além disso
+ $\Psi_f(t)=8^{-1/2}\int_{\mathbb T}g(t+\theta)\,\dd\mu_f(\theta)$ e
+ $\Psi_f^+(t)-\Psi_f(t)=8^{-1/2}\mu_f(\{-t\})$.
+\item $\Psi_f$ é contínua à esquerda, $\Psi_f^+$ é contínua à direita,
+ $\Psi_f^+(t)=\lim_{r\downarrow t}\Psi_f(r)$ e $\lim_{r\uparrow t}\Psi_f^+(r)=\Psi_f(t)$.
+ Logo $\Psi_f$ é semicontínua inferiormente, $\Psi_f^+$ é semicontínua
+ superiormente, e existem
+ \[
+  m_f=\min_{t}\Psi_f(t),\qquad M_f=\max_t\Psi_f^+(t)=\sup_t\Psi_f(t),
+ \]
+ com $I(f)/\sqrt8\le m_f\le M_f\le I(f)/\sqrt2$.
+ $\Psi_f$ é contínua em $t$ se, e somente se, $-t$ não é átomo de $\mu_f$.
+\item Para $m\in\mathbb Z$,
+ \[
+  \int_0^1\Psi_f(t)e^{-2\pi imt}\dd t
+  =\frac{1}{\sqrt8\,(\ln2+2\pi im)}\int_{\mathbb T}e^{2\pi im\theta}\dd\mu_f(\theta).
+ \]
+ Em particular $\int_0^1\Psi_f=I(f)/(\sqrt8\ln2)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Como $1\le g\le g^+\le2$ e $\int_{K\setminus Z}\sqrt{c/8}=I(f)/\sqrt8$, valem as
+desigualdades. A fórmula com $\mu_f$ é a mudança de variável pela imagem, e
+$g^+-g=\mathbf 1_{\mathbb Z}$ dá a diferença: $g^+(t+\theta)\ne g(t+\theta)$
+se, e somente se, $\theta\equiv-t$.
+
+(ii) O integrando é limitado por $2\sqrt{c/8}\in L^1$. Quando $r\uparrow t$,
+$g(r+a)\to g(t+a)$ pontualmente, pela continuidade à esquerda; quando
+$r\downarrow t$, $g(r+a)\to g^+(t+a)$. O mesmo vale para $g^+$, que é
+contínua à direita com limite à esquerda $g$. O teorema da convergência
+dominada dá as quatro afirmações de limite. Como $\Psi_f\le\Psi_f^+$, o limite à
+esquerda de $\Psi_f$ em $t$ vale $\Psi_f(t)$ e o limite à direita vale
+$\Psi_f^+(t)\ge\Psi_f(t)$, de modo que $\liminf_{r\to t}\Psi_f(r)=\Psi_f(t)$;
+analogamente $\limsup_{r\to t}\Psi_f^+(r)=\Psi_f^+(t)$. Funções
+semicontínuas e periódicas atingem extremos. Por fim, $\sup\Psi_f\le\max\Psi_f^+$
+pois $\Psi_f\le\Psi_f^+$, e $\Psi_f^+(t)=\lim_{r\downarrow t}\Psi_f(r)\le\sup\Psi_f$.
+A caracterização da continuidade segue de (i) e da continuidade à esquerda.
+
+(iii) Por Fubini e periodicidade,
+$\int_0^1g(t+\theta)e^{-2\pi imt}\dd t=e^{2\pi im\theta}\hat g(m)$, onde
+\[
+ \hat g(m)=\int_0^12^{1-u}e^{-2\pi imu}\dd u
+ =\frac{2(1-e^{-\ln2-2\pi im})}{\ln2+2\pi im}=\frac1{\ln2+2\pi im},
+\]
+pois $e^{-2\pi im}=1$. Para $m=0$ obtém-se $\int_0^1\Psi_f=8^{-1/2}I(f)/\ln2$.
+\end{proof}
+
+% MAPA artigo_2:12.6
+\begin{lemma}[contagem por células]\label{map:artigo_2:12.6}
+\label{artigo_2:lem:phase-cell-counts}
+Sejam $f\in C^2(K)$, $q\ge0$, $\mathcal Q_q$ a partição uniforme de $K$ em
+$2^q$ células $Q$ de comprimento $\ell_Q=L2^{-q}$, e
+$m_Q=\min_Qc$, $M_Q=\max_Qc$. Para $\varepsilon>0$ ponha $t=-\log_4\varepsilon$.
+Então:
+\begin{enumerate}[label=(\alph*)]
+\item para todo $\varepsilon>0$,
+ \[
+  \sqrt\varepsilon\,n_f(\varepsilon)\le2^q\sqrt\varepsilon
+  +\sum_{Q:\,M_Q>0}\ell_Q\sqrt{\frac{M_Q}{8}}\;g\Bigl(t+\log_4\frac{L^2M_Q}{8}\Bigr);
+ \]
+\item existe $\varepsilon_q>0$ tal que, para $0<\varepsilon<\varepsilon_q$,
+ \[
+  \sqrt\varepsilon\,n_f(\varepsilon)\ge
+  \sum_{Q:\,m_Q>0}\ell_Q\sqrt{\frac{m_Q}{8}}\;g\Bigl(t+\log_4\frac{L^2m_Q}{8}\Bigr).
+ \]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Se $\kappa>0$ e $u=t+\log_4(L^2\kappa/8)$, então, como $\ell_Q^2=L^24^{-q}$,
+\begin{equation}
+ \sqrt\varepsilon\,2^{\lceil\log_4(\kappa\ell_Q^2/(8\varepsilon))\rceil}
+ =2^{-t}2^{\lceil u\rceil-q}=2^{-t}2^{u-q}g(u)=\ell_Q\sqrt{\kappa/8}\;g(u).
+ \label{artigo_2:eq:phase-cell-identity}
+\end{equation}
+
+(a) Seja $\Lambda$ o conjunto de folhas de $T_\varepsilon(f)$. Uma folha
+$J$ com $|J|\ge\ell_Q$ contém alguma célula de $\mathcal Q_q$; atribua $J$
+à mais à esquerda delas. Uma folha com $|J|<\ell_Q$ está contida em uma única
+célula. Assim cada $Q$ recebe uma folha maior, e nenhuma menor, ou recebe
+apenas folhas contidas nela; no primeiro caso, conta-se $1$. No segundo caso
+$Q$ é um nó de $T_\varepsilon(f)$ e as folhas contidas em $Q$ são as folhas
+de uma árvore binária cheia de raiz $Q$. Se $J\subseteq Q$ é uma delas, com
+$|J|=\ell_Q2^{-j}$ e $j\ge1$, o pai $P\subseteq Q$ de $J$ satisfaz
+$e_f(P)>\varepsilon$; por \eqref{artigo_2:eq:local-upper-basic},
+$e_f(P)\le M_Q\ell_Q^24^{-(j-1)}/8$, logo $M_Q>0$ e
+$j-1<\log_4(M_Q\ell_Q^2/(8\varepsilon))$, isto é,
+$j\le r_Q:=\lceil\log_4(M_Q\ell_Q^2/(8\varepsilon))\rceil$. Uma árvore binária cheia
+cujas folhas têm profundidade no máximo $\max\{0,r_Q\}$ tem no máximo
+$2^{\max\{0,r_Q\}}\le1+2^{r_Q}$ folhas. Somando em $Q$ (com contribuição $1$
+quando $M_Q=0$) e multiplicando por $\sqrt\varepsilon$,
+\eqref{artigo_2:eq:phase-cell-identity} dá (a).
+
+(b) Seja $S=\{Q:m_Q>0\}$ e $\varepsilon_q$ o mínimo dos erros $e_f(A)$ sobre
+os ancestrais diádicos próprios $A$ de células de $S$ ($\varepsilon_q=+\infty$ se
+$S=\varnothing$). Cada $A$ contém uma célula onde $f''\ne0$; logo $f$ não é afim em $A$
+e $e_f(A)>0$, pois $e_f(A)=0$ significa $f=P_Af$. Como há um número finito de
+ancestrais, $\varepsilon_q>0$. Se $\varepsilon<\varepsilon_q$ e $Q\in S$, todos os
+ancestrais próprios de $Q$ são subdivididos e $Q$ é nó de $T_\varepsilon(f)$.
+
+Seja $J\subseteq Q$ uma folha, com $|J|=\ell_Q2^{-j}$. Pela fórmula do resto
+de Lagrange aplicada a $f-P_Jf$ no ponto médio de $J$, existe $\eta\in J$
+tal que
+$e_f(J)\ge|(f-P_Jf)(\text{ponto médio})|=c(\eta)|J|^2/8\ge m_Q|J|^2/8$.
+Como $e_f(J)\le\varepsilon$, resulta $j\ge s_Q:=\lceil\log_4(m_Q\ell_Q^2/(8\varepsilon))\rceil$.
+Se $s_Q\le0$, $Q$ contém ao menos uma folha. Se $s_Q>0$, nenhum nó de $Q$ de
+profundidade relativa $<s_Q$ é folha, logo todos são internos e há $2^{s_Q}$
+nós de profundidade $s_Q$ em $Q$, cada um contendo uma folha. Em ambos os casos
+$Q$ contém pelo menos $2^{s_Q}$ folhas. Células distintas contêm folhas
+distintas; somar e usar \eqref{artigo_2:eq:phase-cell-identity} prova (b).
+\end{proof}
+
+% MAPA artigo_2:12.7
+\begin{theorem}[lei de fase para curvatura variável]\label{map:artigo_2:12.7}
+\label{artigo_2:thm:phase-law}
+Seja $f\in C^2(K)$ com $I(f)>0$ e sejam $\varepsilon_j\downarrow0$ tais que
+$-\log_4\varepsilon_j$ módulo $1$ converge em $\mathbb T$ para $\tau$. Então
+\begin{equation}
+ \Psi_f(\tau)\le\liminf_{j\to\infty}\sqrt{\varepsilon_j}\,n_f(\varepsilon_j)
+ \le\limsup_{j\to\infty}\sqrt{\varepsilon_j}\,n_f(\varepsilon_j)\le\Psi_f^+(\tau).
+ \label{artigo_2:eq:phase-law}
+\end{equation}
+Em consequência:
+\begin{enumerate}[label=(\roman*)]
+\item se $-\tau$ não é átomo de $\mu_f$, então
+ $\sqrt{\varepsilon_j}\,n_f(\varepsilon_j)\to\Psi_f(\tau)$;
+\item se $\mu_f$ não tem átomos, $\Psi_f$ é contínua e
+ \[
+  \sqrt\varepsilon\,n_f(\varepsilon)-\Psi_f(-\log_4\varepsilon)\to0
+  \qquad(\varepsilon\downarrow0);
+ \]
+\item $\liminf_{\varepsilon\downarrow0}\sqrt\varepsilon\,n_f(\varepsilon)=m_f$ e
+ $\limsup_{\varepsilon\downarrow0}\sqrt\varepsilon\,n_f(\varepsilon)=M_f$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Escreva $s_j=\sqrt{\varepsilon_j}\,n_f(\varepsilon_j)$, $t_j=-\log_4\varepsilon_j$ e
+$\omega_q=\omega_{f''}(L2^{-q})$, que tende a $0$ por continuidade uniforme de
+$f''$. Fixe uma célula $Q\in\mathcal Q_q$ e $x\in Q$ interior. Então
+$|M_Q-c(x)|\le\omega_q$, $|m_Q-c(x)|\le\omega_q$ e
+$|\sqrt{M_Q}-\sqrt{c(x)}|\le\sqrt{\omega_q}$. Para $x$ interior a uma célula
+$Q=Q_q(x)$ ponha
+\[
+ w^M_q(x)=\sqrt{M_Q/8},\quad \alpha^M_q(x)=\log_4(L^2M_Q/8),
+\]
+e $w^m_q,\alpha^m_q$ analogamente com $m_Q$ (com $w=0$ se o mínimo/máximo é nulo).
+Sejam $w(x)=\sqrt{c(x)/8}$ e $\alpha=a$. Então:
+$w^M_q\to w$ uniformemente e $w^M_q\le w+\sqrt{\omega_q/8}$;
+$w^m_q\to w$ pontualmente; e, em $K\setminus Z$, $\alpha^M_q(x)\to a(x)$ e
+$\alpha^m_q(x)\to a(x)$. Em $Z$, $w^m_q=0$ e $w^M_q\le\sqrt{\omega_q/8}\to0$.
+Pelo \cref{artigo_2:lem:phase-cell-counts},
+\begin{equation}
+ \int_Kw^m_q\,g(t+\alpha^m_q)\dd x\le s(t)\le2^q\sqrt\varepsilon
+ +\int_Kw^M_q\,g(t+\alpha^M_q)\dd x,
+ \label{artigo_2:eq:phase-sandwich}
+\end{equation}
+onde $s(t)=\sqrt\varepsilon n_f(\varepsilon)$, a segunda desigualdade vale para
+todo $\varepsilon$ e a primeira para $\varepsilon<\varepsilon_q$.
+
+\emph{Cota inferior.} Escolha uma subsequência que realize o $\liminf$ e, para
+cada índice $j$ dela, o maior $q_j\le j$ com $\varepsilon_j<\varepsilon_{q_j}$;
+como para cada $q$ fixo a condição vale para $j$ grande, $q_j\to\infty$.
+Ponha $u_j(x)=t_j+\alpha^m_{q_j}(x)$. Para $x\in K\setminus Z$ (fora das fronteiras
+das células), $u_j(x)$ módulo $1$ converge para $u_*=\tau+a(x)$. Se
+$u_*\notin\mathbb Z$, $g(u_j)\to g(u_*)$ por continuidade de $g$ em $u_*$. Se
+$u_*\in\mathbb Z$, $\liminf g(u_j)\ge1=g(u_*)$. Portanto
+$\liminf_jw^m_{q_j}g(u_j)\ge w\,g(\tau+a)$ em $K\setminus Z$, e em $Z$ o integrando é
+não negativo. O lema de Fatou e \eqref{artigo_2:eq:phase-sandwich} dão
+$\liminf s_j\ge\Psi_f(\tau)$.
+
+\emph{Cota superior.} Escolha uma subsequência que realize o $\limsup$ e, para
+cada índice $j$ dela, o maior $q_j\le j$ com $2^{q_j}\sqrt{\varepsilon_j}\le1/q_j$;
+de novo $q_j\to\infty$. Ponha $v_j(x)=t_j+\alpha^M_{q_j}(x)$ e
+$h_j=w^M_{q_j}\,g(v_j)\le2w^M_{q_j}$. Em $K\setminus Z$, $v_j(x)$ módulo $1$
+converge para $u_*=\tau+a(x)$; se $u_*\notin\mathbb Z$, $g(v_j)\to g(u_*)=g^+(u_*)$ e,
+se $u_*\in\mathbb Z$, $g(v_j)\le2=g^+(u_*)$. Logo
+$\limsup_jh_j\le w\,g^+(\tau+a)$ em $K\setminus Z$, e em $Z$, $h_j\le2w^M_{q_j}\to0$.
+Como $2w^M_{q_j}\to2w$ em $L^1$, o lema de Fatou aplicado a
+$2w^M_{q_j}-h_j\ge0$ dá $\limsup_j\int_Kh_j\le\Psi_f^+(\tau)$. Com
+\eqref{artigo_2:eq:phase-sandwich} e $2^{q_j}\sqrt{\varepsilon_j}\to0$ obtém-se
+$\limsup s_j\le\Psi_f^+(\tau)$. Isso prova \eqref{artigo_2:eq:phase-law}.
+
+(i) e (ii) Se $-\tau$ não é átomo, $\Psi_f^+(\tau)=\Psi_f(\tau)$ pelo
+\cref{artigo_2:lem:phase-function-properties}. Se não há átomos, $\Psi_f$ é contínua e
+periódica, logo uniformemente contínua. Se (ii) falhasse, haveria $\eta>0$ e
+$\varepsilon_j\downarrow0$ com $|s_j-\Psi_f(t_j)|\ge\eta$ e, passando a uma
+subsequência, $t_j\to\tau$ módulo $1$; mas $\Psi_f(t_j)\to\Psi_f(\tau)$ e $s_j\to\Psi_f(\tau)$
+por (i), contradição.
+
+(iii) Para qualquer sequência $\varepsilon_j\downarrow0$ a compacidade de
+$\mathbb T$ e \eqref{artigo_2:eq:phase-law} dão, ao longo de uma subsequência,
+$m_f\le\Psi_f(\tau)\le\liminf s_j$ e $\limsup s_j\le\Psi_f^+(\tau)\le M_f$.
+Para ver que os extremos são atingidos, seja $\tau_0$ com $\Psi_f(\tau_0)=m_f$.
+Como $\Psi_f$ é contínua à esquerda e $\mu_f$ tem no máximo uma quantidade
+enumerável de átomos, existe $r<\tau_0$, arbitrariamente próximo, que não é
+fase atômica ($-r$ não é átomo) com $\Psi_f(r)<m_f+\eta$; tomando
+$\varepsilon_k=4^{-(k+r)}$, (i) dá $s_k\to\Psi_f(r)$. Logo
+$\liminf s\le m_f$. Analogamente, seja $\tau_1$ com $\Psi_f^+(\tau_1)=M_f$; como
+$\Psi_f^+(\tau_1)=\lim_{r\downarrow\tau_1}\Psi_f(r)$, existe uma fase não
+atômica $r>\tau_1$ com $\Psi_f(r)>M_f-\eta$, e o mesmo argumento dá
+$\limsup s\ge M_f$.
+\end{proof}
+
+% MAPA artigo_2:12.8
+\begin{corollary}[acumulação, critério de uniformidade e limite]\label{map:artigo_2:12.8}
+\label{artigo_2:cor:phase-accumulation}
+Seja $f\in C^2(K)$ com $I(f)>0$.
+\begin{enumerate}[label=(\alph*)]
+\item O conjunto dos valores de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o
+ intervalo $[m_f^2,M_f^2]\subseteq[I(f)^2/8,I(f)^2/2]$; em particular
+ $\liminf N^2E_N^{\rm dia}=m_f^2$ e $\limsup N^2E_N^{\rm dia}=M_f^2$.
+\item O limite $\lim_{N\to\infty}N^2E_N^{\rm dia}(f)_\infty$ existe se, e somente
+ se, $\Psi_f$ é constante, e isso ocorre se, e somente se, $\mu_f$ é uniforme.
+ Nesse caso $\Psi_f\equiv I(f)/(\sqrt8\ln2)$,
+ \[
+  \lim_{N\to\infty}N^2E_N^{\rm dia}(f)_\infty=\frac{I(f)^2}{8\ln^22},
+  \qquad
+  \lim_{\varepsilon\downarrow0}\sqrt\varepsilon\,n_f(\varepsilon)=\frac{I(f)}{\sqrt8\ln2}.
+ \]
+\item (média universal) Para toda $f$,
+ $\displaystyle\lim_{T\to\infty}\int_T^{T+1}2^{-t}n_f(4^{-t})\dd t=\frac{I(f)}{\sqrt8\ln2}$.
+\item $m_f=I(f)/\sqrt8$ ocorre se, e somente se, $\mu_f$ é uma massa pontual
+ (isto é, $|f''|\in c_04^{\mathbb Z}$ quase sempre em $\{f''\ne0\}$, para
+ algum $c_0>0$), e o mesmo vale para $M_f=I(f)/\sqrt2$. Nesse caso ambos os
+ extremos são atingidos, em acordo com o \cref{artigo_2:cor:synchronized-phases}.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Escreva $x_N=N^2E_N^{\rm dia}(f)_\infty$ e $\varepsilon_N=E_N^{\rm dia}(f)_\infty$.
+Se $\varepsilon_N=0$ existiria uma partição finita em células nas quais $f$ é afim,
+impossível pois $I(f)>0$. Logo $\varepsilon_N>0$; e a malha uniforme de $2^{\lfloor\log_2N\rfloor}$ células com
+\eqref{artigo_2:eq:local-upper-basic} dá
+$\varepsilon_N\le\|f''\|_\infty L^24^{-\lfloor\log_2N\rfloor}/8\to0$.
+Pela inversão do \cref{artigo_2:thm:threshold-optimality},
+$n_f(\varepsilon)\le N\iff\varepsilon\ge\varepsilon_N$; em particular
+$n_f(\varepsilon_N)\le N$ e $n_f(\varepsilon)>N$ para $\varepsilon<\varepsilon_N$.
+Seja $s(\varepsilon)=\sqrt\varepsilon\,n_f(\varepsilon)$.
+
+(a) \emph{Inclusão.} De $N\ge n_f(\varepsilon_N)$ segue $x_N\ge s(\varepsilon_N)^2$, e
+o \cref{artigo_2:thm:phase-law}(iii) dá $\liminf x_N\ge m_f^2$. Tomando
+$\varepsilon=(1-1/N)\varepsilon_N<\varepsilon_N$ tem-se $n_f(\varepsilon)>N$, logo
+$x_N(1-1/N)<s(\varepsilon)^2$ e $\limsup x_N\le M_f^2$.
+
+\emph{Os extremos são valores de acumulação.} Pelo
+\cref{artigo_2:thm:phase-law}(iii), dado $\eta>0$ há $\varepsilon\downarrow0$
+arbitrariamente pequenos com $s(\varepsilon)<m_f+\eta$; para $N=n_f(\varepsilon)$ vale
+$\varepsilon_N\le\varepsilon$, logo $x_N\le N^2\varepsilon=s(\varepsilon)^2$.
+Assim $\liminf x_N\le m_f^2$. Do mesmo modo há $\varepsilon\downarrow0$ com
+$s(\varepsilon)>M_f-\eta$; para $N=n_f(\varepsilon)-1$ tem-se $n_f(\varepsilon)>N$,
+logo $\varepsilon_N\ge\varepsilon$ e $x_N\ge(n_f(\varepsilon)-1)^2\varepsilon=(s(\varepsilon)-\sqrt\varepsilon)^2$,
+de onde $\limsup x_N\ge M_f^2$. Como $n_f(\varepsilon)\to\infty$, os índices $N$
+correspondentes tendem a infinito.
+
+\emph{Valores intermediários.} Como $\varepsilon_{N+1}\le\varepsilon_N$,
+\[
+ x_{N+1}=(N+1)^2\varepsilon_{N+1}\le\Bigl(1+\frac1N\Bigr)^2x_N,
+\]
+isto é, $x_N$ só pode aumentar por passos $O(1/N)$ (os decréscimos podem ser
+grandes: ver o \cref{artigo_2:thm:quadratic-dyadic-constant}). Seja
+$m_f^2<v<M_f^2$. Há infinitos índices $i$ com $x_i<v$ e, para cada um, um
+índice $j>i$ com $x_j>v$. Seja $k>i$ o menor índice com $x_k\ge v$; então
+$x_{k-1}<v$ e $v\le x_k<(1+1/(k-1))^2v$. Fazendo $i\to\infty$, $v$ é valor de
+acumulação. As inclusões em $[I(f)^2/8,I(f)^2/2]$ vêm de
+$I(f)/\sqrt8\le m_f$ e $M_f\le I(f)/\sqrt2$ no
+\cref{artigo_2:lem:phase-function-properties}.
+
+(b) Por (a) o limite existe se, e somente se, $m_f=M_f$. Como
+$m_f\le\Psi_f\le\Psi_f^+\le M_f$, isso equivale a $\Psi_f\equiv\Psi_f^+\equiv$
+constante. Reciprocamente, se $\Psi_f$ é constante então $\Psi_f^+=\lim\Psi_f$ também,
+e $m_f=M_f$. Se $\Psi_f$ é constante, os coeficientes de Fourier não nulos
+são nulos e, pelo \cref{artigo_2:lem:phase-function-properties}(iii) e
+$\ln2+2\pi im\ne0$, $\int_{\mathbb T}e^{2\pi im\theta}\dd\mu_f=0$ para $m\ne0$; a
+unicidade dos coeficientes de Fourier de medidas finitas em $\mathbb T$ dá
+$\mu_f=I(f)\lambda$. Reciprocamente, se $\mu_f=I(f)\lambda$, então
+$\Psi_f(t)=8^{-1/2}I(f)\int_0^1g=I(f)/(\sqrt8\ln2)$, pois
+$\int_0^12^{1-u}\dd u=1/\ln2$. O valor do limite de $N^2E_N$ é o quadrado desta
+constante, e o do limite de $s$ vem do \cref{artigo_2:thm:phase-law}(ii).
+
+(c) Basta mostrar que toda sequência $T_i\to\infty$ admite subsequência ao longo
+da qual o limite vale $I(f)/(\sqrt8\ln2)$. Passe a uma subsequência com $T_i$
+módulo $1$ convergente a $\sigma$ e escreva a integral como
+$\int_0^1s(4^{-T_i-\theta})\dd\theta$. Para cada $\theta$ tal que
+$-(\sigma+\theta)$ não é átomo, o \cref{artigo_2:thm:phase-law}(i) dá
+$s(4^{-T_i-\theta})\to\Psi_f(\sigma+\theta)$; isso vale para todo $\theta$ exceto
+uma quantidade enumerável. O integrando é uniformemente limitado para $i$
+grande, pelo \cref{artigo_2:thm:phase-law}(iii). Por convergência dominada o limite é
+$\int_0^1\Psi_f(\sigma+\theta)\dd\theta=\int_0^1\Psi_f=I(f)/(\sqrt8\ln2)$, pela
+periodicidade e pelo \cref{artigo_2:lem:phase-function-properties}(iii).
+
+(d) $m_f=I(f)/\sqrt8$ se, e somente se, existe $t$ com $g(t+a(x))=1$ para quase
+todo $x\in K\setminus Z$ (pois $g\ge1$), isto é, $a(x)\equiv-t$ módulo $1$ quase
+sempre, ou seja, $\mu_f$ é massa pontual em $-t$. Do mesmo modo,
+$M_f=I(f)/\sqrt2$ se, e somente se, existe $t$ com $g^+(t+a(x))=2$ quase
+sempre, isto é, $t+a(x)\in\mathbb Z$ q.s., a mesma condição. Se $\mu_f$ é uma massa
+pontual em $\theta_0$, $\Psi_f(-\theta_0)=I(f)/\sqrt8$ e
+$\Psi_f^+(-\theta_0)=I(f)/\sqrt2$.
+\end{proof}
+
+% MAPA artigo_2:12.9
+\begin{remark}[exemplos, o que está provado e o que não está]\label{map:artigo_2:12.9}
+\label{artigo_2:rem:phase-examples}
+\emph{O exemplo $\ln(1+x)$.} Em $K=[0,1]$, $f(x)=\ln(1+x)$ tem
+$c(x)=(1+x)^{-2}$, $I(f)=\ln2$ e $a(x)=-\log_2(1+x)-\tfrac32$. Com
+$\ell=\log_2(1+x)\in[0,1]$, $\sqrt{c}\,\dd x=\dd x/(1+x)=\ln2\,\dd\ell$:
+$\mu_f$ é a medida de Lebesgue de massa $\ln2$ percorrida exatamente uma vez,
+ou seja, é uniforme. Pelo \cref{artigo_2:cor:phase-accumulation}(b),
+\[
+ \sqrt\varepsilon\,n_f(\varepsilon)\to\frac1{\sqrt8}\approx0{,}353553,
+ \qquad
+ N^2E_N^{\rm dia}(f)_\infty\to\frac18 .
+\]
+Em contraste, para $e^x$ em $[0,1]$ o suporte de $\mu_f$ é um arco de
+comprimento $1/\ln4\approx0{,}72<1$; $\mu_f$ não é uniforme e o conjunto de
+acumulação é um intervalo não degenerado $[m_f^2,M_f^2]$ ($\approx[0{,}3403;0{,}5000]$,
+calculado por quadratura de $\Psi_f$), no interior de $[0{,}2104;0{,}8417]$.
+Para $f=x^2$, $\mu_f$ é uma massa pontual e recupera-se o intervalo $[1/4,1]$ do
+\cref{artigo_2:thm:quadratic-dyadic-constant}.
+
+\emph{Classificação.} Estão \emph{demonstrados} neste texto: a lei de fase
+\eqref{artigo_2:eq:phase-law}, o caráter intervalar do conjunto de acumulação, o
+critério de uniformidade e o valor $I(f)^2/(8\ln^22)$. Estão apenas
+\emph{testados numericamente} (em ponto flutuante, sem papel nas provas) os
+valores finitos citados: para $2000\le N\le20000$, $N^2E_N^{\rm dia}(f)_\infty$
+percorre $[0{,}12494;0{,}12499]$ para $\ln(1+x)$ e $[0{,}3397;0{,}4999]$ para
+$e^x$, e os mesmos testes (com $1500\le N\le12000$) com $x^3+x^2$, $x^4$, $\sin2\pi x$, $(x-\tfrac13)^4/12$,
+uma função afim em $[0,\tfrac12]$ e uma função com patamar $f''\equiv2$ concordam
+com $[m_f^2,M_f^2]$ calculado de $\Psi_f$, com erro relativo inferior a $0{,}5\%$.
+O programa é \path{verificacao/lei_fase_experimento.py}, que não integra os
+verificadores reprodutíveis do volume. Os resultados desta
+subseção \emph{não foram formalizados em Lean}.
+\end{remark}
+
 \section{Verificações de codificação e entropia}
 \label{artigo_2:sec:coding-validation}
 Os registros desta seção acompanham o programa \path{verificacao/reproduzir_curvas.py}. As verificações usam aritmética racional para os formatos e parâmetros; as curvas e as sondas de distorção são diagnósticos numéricos.
@@ -3255,6 +3636,6 @@ O calibre adotado produz $\Theta(H^6)$ átomos e uma enumeração por altura que
 
 Na seleção, os valores racionais de fronteira fornecem estados suficientes para preservar continuidade e admissibilidade. As recorrências calculam o mínimo do catálogo, com desempate canônico e custos separados em operações e bits. A estabilização sob truncagem exige que o mínimo global seja atingido; a seleção exata pode ser descontínua em empates.
 
-Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. A caracterização das fases para curvatura variável e o efeito de uma agenda fixa sobre o melhor erro racional permanecem questões distintas dos resultados interpolatórios demonstrados.
+Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. Para curvatura variável, a função de fase $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ a menos de $o(1)$ nas fases em que $\mu_f$ não tem átomo, e o conjunto de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o intervalo $[m_f^2,M_f^2]$; o limite existe se, e somente se, $\mu_f$ é uniforme, e então vale $I(f)^2/(8\ln^22)$, como em $f=\ln(1+x)$. Esses resultados de fase não foram formalizados em Lean. O efeito de uma agenda fixa sobre o melhor erro racional permanece uma questão distinta dos resultados interpolatórios demonstrados.
 
 

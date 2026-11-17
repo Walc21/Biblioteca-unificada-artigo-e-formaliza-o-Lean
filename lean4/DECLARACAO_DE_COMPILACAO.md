@@ -63,8 +63,10 @@ cd ../parte_1 && lake exe cache get && lake build ValidationAll
 1. **O Mathlib não foi recompilado.** Foi usado o cache já compilado na máquina de trabalho.
 2. **Compilar não é o mesmo que corresponder ao artigo.** A compilação mostra que cada teorema vale como
    está enunciado em Lean. Ela não mostra que o enunciado em Lean diz o mesmo que o teorema do texto.
-   Das 151 correspondências do mapa, 77 foram apenas *inspecionadas* e 20 *integradas à base*; elas não
-   foram reauditadas semanticamente uma a uma. Não se afirma formalização integral do artigo.
+   Das 156 correspondências do mapa, 77 foram apenas *inspecionadas* e 20 *integradas à base*; elas não
+   foram reauditadas semanticamente uma a uma. Dos 156, os cinco ambientes III.12.5–III.12.9 (lei de fase
+   para curvatura variável) foram acrescentados depois da recompilação de 13 e 14 de novembro, têm apenas prova
+   textual e não foram formalizados em Lean; nada em `lean4/` mudou. Não se afirma formalização integral do artigo.
 3. **III.9.1** usa um modelo de custo unitário explícito e não implementa o desempate canônico por κ
    (formalizado no seletor funcional de III.7.4). **III.9.3** toma como hipótese do modelo (`BitModel`) o
    custo das operações aritméticas em bits; não há modelo de máquina em Lean.

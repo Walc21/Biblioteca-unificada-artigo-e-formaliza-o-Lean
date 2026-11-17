@@ -132,7 +132,7 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 │   ├── referencias.bib
 │   └── plainnat-pt.bst             #   estilo bibliográfico em português (derivado de plainnat)
 ├── verificacao/                    # programas Python da validação numérica exata (ver README da pasta) e o trecho corrigido de IV.5.4
-├── documentacao/INTEGRACAO_NORMALIZACAO.md   # integração da normalização (Parte II) com a base Lean
+├── documentacao/                   # INTEGRACAO_NORMALIZACAO.md (Parte II ↔ base Lean) e dossie_verificacao_III11_III12/ (fonte do dossiê de revisão)
 ├── lean4/ambientes/
 │   ├── artigo_2/                   # Partes III–V: RequestProject/ e a biblioteca Pendencias/
 │   ├── base_integrada/             # Parte I e II: Unified/ e PendenciasParte1/

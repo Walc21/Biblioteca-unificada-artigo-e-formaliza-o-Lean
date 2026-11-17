@@ -1444,6 +1444,56 @@ Estado: **Observação editorial**. Observação ou diagnostico do texto; não �
 Nenhuma declaração Lean associada na matriz recebida.
 
 
+## III.12.5 — lema propriedades da função de fase
+
+Original de 77 páginas: —.
+
+Fonte editável: [tex/partes/artigo_2.tex:3146](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
+
+Estado: **Prova textual nova**. Sem formalização Lean.
+
+Nenhuma declaração Lean associada.
+
+## III.12.6 — lema contagem por células
+
+Original de 77 páginas: —.
+
+Fonte editável: [tex/partes/artigo_2.tex:3200](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
+
+Estado: **Prova textual nova**. Sem formalização Lean; usa III.11.1 (minimalidade do limiar) e a cota local de III.11.2.
+
+Nenhuma declaração Lean associada.
+
+## III.12.7 — teorema lei de fase para curvatura variável
+
+Original de 77 páginas: —.
+
+Fonte editável: [tex/partes/artigo_2.tex:3265](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
+
+Estado: **Prova textual nova**. Sem formalização Lean. Verificado apenas por experimentos numéricos em ponto flutuante (ver III.12.9).
+
+Nenhuma declaração Lean associada.
+
+## III.12.8 — corolário acumulação, critério de uniformidade e limite
+
+Original de 77 páginas: —.
+
+Fonte editável: [tex/partes/artigo_2.tex:3357](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
+
+Estado: **Prova textual nova**. Sem formalização Lean.
+
+Nenhuma declaração Lean associada.
+
+## III.12.9 — observação exemplos, o que está provado e o que não está
+
+Original de 77 páginas: —.
+
+Fonte editável: [tex/partes/artigo_2.tex:3453](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
+
+Estado: **Observação editorial**. Não é um teorema Lean autônomo.
+
+Nenhuma declaração Lean associada.
+
 ## Parte IV
 
 ## IV.3.1 — proposição aninhamento da agenda

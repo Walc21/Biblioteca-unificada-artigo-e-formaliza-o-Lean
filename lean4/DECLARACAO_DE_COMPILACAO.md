@@ -43,6 +43,35 @@ esperado. Uma busca textual nos 154 arquivos, ignorando comentários, não encon
 declarações `axiom`. As contagens incluem declarações auxiliares geradas pelo Lean e não devem ser somadas
 entre auditorias, porque há sobreposição de módulos importados.
 
+## Reconfirmação de 17/11/2026
+
+Os alvos e as auditorias acima foram executados de novo em 17/11/2026, em um contêiner Linux x86_64
+(sessão na nuvem), com Lean 4.28.0 obtido pelo `elan` e Mathlib v4.28.0 baixado por `lake exe cache get`
+(o Mathlib **não** foi recompilado). Os manifestos dos três ambientes não foram alterados. Cada alvo foi
+compilado separadamente:
+
+| Ambiente | Alvo | Tarefas | Resultado |
+|---|---|---|---|
+| `parte_1` | `ValidationAll` | 8036 | sucesso |
+| `artigo_2` | `ValidationAll` | 8058 | sucesso |
+| `artigo_2` | `Pendencias` | 8089 | sucesso |
+| `base_integrada` | `Unified` | 8088 | sucesso |
+| `base_integrada` | `SemanticAudit` | 8089 | sucesso |
+| `base_integrada` | `PendenciasParte1` | 8038 | sucesso |
+| `base_integrada` | `RequestProject.Main` | 8034 | sucesso |
+
+As nove auditorias terminaram com código de saída 0, sem `sorryAx`, e as contagens coincidem com as da
+tabela da seção anterior (2199, 110, 3265, 2755, 2597, 6 e 509; `CorrespondenciasAudit` sem erro nos dois
+ambientes). Os logs de compilação não contêm «declaration uses 'sorry'»; contêm apenas avisos de linter
+(variáveis não usadas, `simpa` substituível por `simp` e uma depreciação de
+`Finset.filter_card_add_filter_neg_card_eq_card`). A busca textual nos 154 arquivos `.lean`, sem excluir
+comentários, não encontrou `sorry`, `admit` nem `axiom`. Como os alvos foram compilados separadamente, os
+números de tarefas desta tabela não somam o total da tabela da primeira compilação.
+
+Esta reconfirmação não altera as ressalvas abaixo. Os resultados III.12.5–III.12.9 (lei de fase para
+curvatura variável) foram acrescentados ao texto depois de 13 e 14/11, têm apenas prova textual e não
+estão em `lean4/`.
+
 ## Como reproduzir
 
 ```bash

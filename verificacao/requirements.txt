@@ -1,3 +1,4 @@
 # Usados apenas para desenhar as figuras; a seleção e as verificações usam só fractions.Fraction.
 numpy
 matplotlib
+mpmath  # apenas para lei_fase_exata.py (fora de reproduzir_tudo.py)

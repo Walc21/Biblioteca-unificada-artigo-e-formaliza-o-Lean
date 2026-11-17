@@ -1,5 +1,5 @@
-% Fonte única completa. Compilar nesta pasta com pdflatex duas vezes.
-% Figuras externas: figuras/<parte>/<nome>.pdf; bibliografia incorporada.
+% Gerado por gerar_fonte_unica.py; editar principal.tex e seus arquivos incluídos.
+% Bibliografia incorporada; figuras externas relativas a esta pasta.
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=24mm,headheight=14pt]{geometry}
 \usepackage[T1]{fontenc}
@@ -140,6 +140,14 @@
 \crefname{definition}{definição}{definições}
 \crefname{algorithm}{algoritmo}{algoritmos}
 \crefname{remark}{observação}{observações}
+\crefname{teorema}{teorema}{teoremas}
+\Crefname{teorema}{Teorema}{Teoremas}
+\crefname{lema}{lema}{lemas}
+\crefname{proposicao}{proposição}{proposições}
+\crefname{corolario}{corolário}{corolários}
+\crefname{definicao}{definição}{definições}
+\crefname{algoritmo}{algoritmo}{algoritmos}
+\crefname{observacao}{observação}{observações}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \theoremstyle{preciso}
 \newtheorem{theorem}[teorema]{Teorema}
@@ -184,12 +192,20 @@
 \hypersetup{pdftitle={Biblioteca determinística: volume unificado e correspondência Lean 4},pdfauthor={Victor Gabriel de Oliveira}}
 \title{\bfseries Biblioteca determinística de segmentos afins racionais\\[8pt]\Large Construção, seleção, aproximação e normalização\\[8pt]\large Volume unificado com correspondência Lean 4}
 \author{Victor Gabriel de Oliveira}
-\date{Edição consolidada de 13 de novembro de 2026}
+\date{Edição revisada de 17 de novembro de 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-Este volume reúne a construção da biblioteca racional em células diádicas, a normalização das montagens, os custos aritméticos e a seleção exata, a teoria direta--inversa e os complementos do manuscrito de 77 páginas. Os enunciados e as demonstrações disponíveis são preservados em cinco partes. A correspondência final relaciona os 151 ambientes da edição atual às fontes Lean existentes e aos 108 ambientes do manuscrito original. As diferenças semânticas e os resultados ainda sem formalização localizada permanecem identificados.
+Estudamos aproximação contínua linear por partes sob restrições simultâneas de geometria diádica, altura racional e comprimento de descrição. Construímos uma biblioteca enumerável com recuperação exata do suporte, montagens densas em $C(K)$ e representação por redes ReLU rasas racionais com inclinações locais não nulas. Sob um calibre explícito, a biblioteca truncada contém $\Theta(H^6)$ átomos; pares de valores de fronteira permitem selecionar exatamente árvore e rótulos em catálogos finitos, com penalização de descrição ou orçamento de folhas. Para interpolação real de funções $C^2$ em uma raiz diádica, estabelecemos o envelope assintótico $[I(f)^2/8,I(f)^2/2]$, onde $I(f)=\int_K\sqrt{|f''|}$, e leis exatas para curvatura quadrática por partes. Construímos ainda aproximações com altura controlada e caracterizações de Besov por um funcional que combina erro e segunda diferença. Os resultados são acompanhados de verificações numéricas e de uma correspondência com declarações Lean cujo alcance é especificado por resultado.
 \end{abstract}
+\section*{Problema, resultados e organização}
+O problema é controlar, na mesma representação, erro de aproximação, número de folhas, altura dos coeficientes racionais e comprimento binário. A aproximação por splines, a adaptação em árvores e as redes ReLU fornecem os fundamentos analíticos \citep{artigo_1-deboor2001,artigo_1-devore1998,artigo_1-cohen2001,artigo_1-daubechies2022}. A aproximação com pesos codificáveis fornece o contexto para medir recursos aritméticos \citep{artigo_1-bolcskei2019,artigo_1-guhring2021}. Para seleção contínua linear por partes, CPOP e slopeOP já conservam valores de fronteira nas recorrências \citep{artigo_2-fearnhead2019,artigo_2-runge2022}.
+
+Este desenvolvimento acompanha o calibre racional dos átomos e sua interação com o suporte diádico. Os resultados quantitativos são: a contagem por altura e os custos de descrição; a seleção exata no catálogo admissível; o envelope e as fases da interpolação diádica; e as agendas aritméticas suficientes para aproximação em classes de Besov. A densidade, a forma ReLU e as estimativas clássicas de interpolação sustentam essas construções. A comparação com CPOP e slopeOP é feita na introdução da Parte~III.
+
+Os resultados têm contratos distintos. O refinamento certificado recebe majorantes validados de $|f''|$ e uma cobertura inicial com interiores disjuntos. A seleção exata opera em catálogos finitos e pressupõe comparação exata dos custos locais; sua cota é pseudo-polinomial nos orçamentos numéricos. O envelope assintótico refere-se à interpolação com valores nodais reais. Nas montagens racionais, a mesma realização depende adicionalmente da altura disponível. As igualdades de Besov usam o funcional regularizado pela segunda diferença, com as agendas declaradas na Parte~IV.
+
+As Partes~I e II fixam biblioteca e normalização; a Parte~III trata recursos, seleção e interpolação; a Parte~IV desenvolve as agendas de altura e os resultados diretos e inversos. A Parte~V reúne resultados auxiliares. O aparato final registra a correspondência com Lean e distingue provas compiladas de correspondências herdadas.
 \section*{Convenções desta edição}
 A numeração tem a forma parte.seção.resultado. As remissões numéricas textuais herdadas dos artigos usam a numeração local da própria parte, salvo indicação explícita de outro artigo. A Parte I corresponde ao Artigo 1; a Parte II contém a normalização auxiliar; as Partes III e IV correspondem aos Artigos 2 e 3; a Parte V conserva os complementos das seções 6 e 21 originais. A correspondência documental reúne os destinos do original sem duplicar seu bloco de custo aritmético.
 
@@ -636,7 +652,7 @@ Dados $f\in C^2[\alpha,\beta]$, tolerâncias $\varepsilon_I,\varepsilon_R>0$ e a
 \eqn{40}{\normK{F''}{J}\le M(J)\le M_*<\infty,\qquad M_*\ge0.}
 O contrato recai sobre toda a célula $J$, inclusive sua parte exterior a $[\alpha,\beta]$. Quando $F$ é fornecida por uma expressão de $\EE$, tome $M(J)=M_{\rm int}$ calculado na caixa racional $B_p(J)$ definida abaixo; se a certificação falhar, aborte sem emitir uma montagem garantida. Para uma função $C^2$ fora dessa interface, \eqref{artigo_1:eq:40} é um contrato de entrada.
 \begin{enumerate}[label=(\roman*),topsep=6pt,itemsep=3pt]
-\item Inicie com uma cobertura diádica finita de $[\alpha,\beta]$, cujas células podem ultrapassar $\alpha$ e $\beta$.
+\item Inicie com uma família finita $\Lambda_0$ de células diádicas distintas, com interiores dois a dois disjuntos e união contendo $[\alpha,\beta]$. As células podem ultrapassar $\alpha$ e $\beta$.
 \item Para cada folha $J$, calcule
 \eqn{41}{\eta_{\rm cert}(J)=\frac{|J|^2M(J)}8.}
 \item Enquanto existir folha com $\eta_{\rm cert}(J)>\varepsilon_I$, substitua-a por seus dois filhos.
@@ -644,6 +660,9 @@ O contrato recai sobre toda a célula $J$, inclusive sua parte exterior a $[\alp
 \item Emita, em cada folha, o endereço do átomo que interpola seus dois valores nodais.
 \end{enumerate}
 As escolhas dos passos (iv) e (v) são especificadas por existência e unicidade; o enunciado não pressupõe uma implementação de sua busca.
+
+\paragraph{Condição sobre as raízes.}
+A disjunção dos interiores faz de $\Lambda_0$ uma floresta de raízes compatíveis. Ela é preservada ao substituir uma célula por seus dois filhos e garante que as peças finais só se encontram em fronteiras. A condição é necessária: para $f(x)=x^2$ em $[0,1]$, as células sobrepostas $[0,1]$ e $[0,1/2]$ têm certificados $1/4$ e $1/16$. Com $\varepsilon_I=3/10$, ambas seriam mantidas. A escolha nodal exata, admissível para qualquer $\varepsilon_R>0$, produziria as retas $x$ e $x/2$, que discordam no interior da sobreposição. Essa família não define uma montagem.
 \end{algoritmo}
 
 \paragraph{Certificados intervalares para a extensão.}
@@ -665,7 +684,7 @@ Seja $J=[a,b]$. A projeção $\Pi$ é não decrescente, logo $\Pi(a)\le\Pi(x)\le
 
 % MAPA artigo_1:6.4 | fonte artigos/artigo_1/secoes/06_refinamento.tex:67
 \begin{teorema}[correção, término e tamanho]\label{map:artigo_1:6.4}
-Sob o contrato \eqref{artigo_1:eq:40}, o algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
+Sob o contrato \eqref{artigo_1:eq:40} e com as raízes de interiores dois a dois disjuntos especificadas no passo (i), o algoritmo~6.3 termina e produz $g\in\Asm([\alpha,\beta])$ com
 \eqn{42}{\norm{f-g}\le\varepsilon_I+\varepsilon_R.}
 Se a cobertura inicial tem $R_0$ raízes de largura máxima $h_0$ e $M_*>0$, nenhuma ramificação ultrapassa
 \eqn{43}{r_*=\max\left\{0,\left\lceil\frac12\log_2\left(\frac{h_0^2M_*}{8\varepsilon_I}\right)\right\rceil\right\}}
@@ -678,7 +697,7 @@ Após $r$ subdivisões, uma folha descendente de uma raiz tem $|J|\le h_02^{-r}$
 \]
 O lado direito é no máximo $\varepsilon_I$ para $r\ge r_*$; logo nenhuma folha é subdividida além dessa profundidade. A árvore é finita e cada raiz gera no máximo $2^{r_*}$ folhas. Se $M_*=0$, todos os certificados são nulos e nenhuma subdivisão ocorre.
 
-Na partição final, \eqref{artigo_1:eq:34} e \eqref{artigo_1:eq:40} implicam
+Cada subdivisão preserva a união da cobertura e a disjunção dos interiores. As folhas finais formam, portanto, uma partição da união das raízes, com valores compartilhados nos nós. Nessa partição, \eqref{artigo_1:eq:34} e \eqref{artigo_1:eq:40} implicam
 \[
 \normK{F-P_\Lambda F}{J}\le\frac{|J|^2}8\normK{F''}{J}\le\eta_{\rm cert}(J)\le\varepsilon_I.
 \]
@@ -2084,6 +2103,26 @@ O desenvolvimento liga três problemas. A contagem por altura determina o custo 
 
 As provas de seleção exata pressupõem avaliação e comparação exatas dos custos locais. Os experimentos registrados verificam instâncias finitas dessas identidades. Os teoremas de interpolação usam valores nodais reais; sua realização racional depende também da altura. A teoria de taxas e a reversibilidade são desenvolvidas no terceiro artigo da série.
 
+\paragraph{Relação com ajuste contínuo linear por partes.}
+O algoritmo CPOP de \citet{artigo_2-fearnhead2019} minimiza uma perda quadrática com penalização de mudanças de inclinação, conservando o valor ajustado na fronteira como estado contínuo e usando poda funcional. O método slopeOP de \citet{artigo_2-runge2022} restringe esses valores a um alfabeto finito e obtém uma recorrência de programação dinâmica. Assim, conservar valores de fronteira para impor continuidade já integra a literatura de segmentação.
+
+O problema aqui fixa uma raiz e subdivisões estritamente diádicas. O alfabeto $\Values_{D,H}(K)$ é derivado dos átomos de altura no máximo $H$, e a admissibilidade de uma folha depende conjuntamente de sua célula, valor central e inclinação. A recorrência seleciona a árvore e seus rótulos sob esses contratos, com comprimento de descrição e desempate canônico. A \cref{artigo_2:tab:comparacao-segmentacao} explicita os diferentes domínios de otimização. As cotas de tempo pertencem a esses domínios; os experimentos deste volume não estabelecem uma comparação de desempenho com CPOP ou slopeOP.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Domínios de seleção em métodos de ajuste contínuo linear por partes.}
+\label{artigo_2:tab:comparacao-segmentacao}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.14\linewidth}*{3}{>{\raggedright\arraybackslash}X}@{}}
+\toprule
+Método & Partição e estado & Critério & Restrição considerada\\
+\midrule
+CPOP & Mudanças em uma grade de posições; valor contínuo na fronteira & Perda quadrática e penalização de mudanças & Continuidade entre segmentos\\[4pt]
+slopeOP & Posições discretas; valores de fronteira em conjunto finito & Perda quadrática e penalização de mudanças & Continuidade e restrições de forma\\[4pt]
+Este trabalho & Árvore diádica; par de fronteiras em $\Values_{D,H}(K)^2$ & Perda local, bits e subdivisões, ou orçamento de folhas & Altura atômica, suporte diádico e desempate canônico\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Biblioteca racional e preliminares}
 \label{artigo_2:sec:indexing}\label{artigo_2:sec:generator}\label{artigo_2:sec:assemblies}
 Fixamos as convenções do primeiro artigo \citep{artigo_2-oliveiraI}. Para uma fração reduzida $p/q$, $q>0$, escreva $\height(p/q)=\max\{|p|,q\}$. A enumeração $Q:\Nzero\to\mathbb Q$ ordena as frações por altura, depois por denominador e numerador; $Q^*:\Nzero\to\Qstar$ omite $0$.
@@ -2205,7 +2244,7 @@ Em particular, $|\Library_H|=\Theta(H^6)$.
 \end{lemma}
 
 \begin{proof}
-Pelo \cref{artigo_2:thm:dictionary}, um átomo é determinado bijetivamente pela quádrupla $(k,m,y_0,s)\in\Nzero\times\mathbb{Z}\times\mathbb{Q}\times\Qstar$, e a altura \eqref{artigo_2:eq:atom-height} limita cada coordenada separadamente. Assim
+Pela \cref{artigo_2:thm:dictionary}, um átomo é determinado bijetivamente pela quádrupla $(k,m,y_0,s)\in\Nzero\times\mathbb{Z}\times\mathbb{Q}\times\Qstar$, e a altura \eqref{artigo_2:eq:atom-height} limita cada coordenada separadamente. Assim
 \[
  |\Library_H|=\#\{k\le H-1\}\cdot\#\{|m|\le H-1\}\cdot|\mathcal{Q}_H|\cdot|\mathcal{Q}_H\setminus\{0\}|,
 \]
@@ -2227,7 +2266,7 @@ biblioteca sem calibre. De fato, se os quatro orçamentos forem desacoplados,
  :=\{(k,m,y_0,s):k\le K_0,\ |m|\le M_0,
        \ \height(y_0)\le Y,\ \height(s)\le S\},
 \]
-então a bijeção do \cref{artigo_2:thm:dictionary} dá exatamente
+então a bijeção da \cref{artigo_2:thm:dictionary} dá exatamente
 \[
  |\Library_{K_0,M_0,Y,S}|
  =(K_0+1)(2M_0+1)|\mathcal Q_Y|
@@ -2712,7 +2751,7 @@ Escolha $v_j\in G_j^{(n)}$ mais próximo de $f(t_j)$; no empate, escolha o
 ponto menor. Então $|v_j-f(t_j)|\le\Delta/2$, e grades consecutivas são
 disjuntas, de modo que $v_{j+1}\ne v_j$. O interpolante $g_n$ desses dados
 tem, portanto, $n$ peças com inclinações racionais não nulas; cada peça é um
-átomo pelo \cref{artigo_2:thm:dictionary}. A estimativa de interpolação e a
+átomo pela \cref{artigo_2:thm:dictionary}. A estimativa de interpolação e a
 estabilidade convexa nos valores nodais dão
 \[
  \|f-g_n\|_\infty
@@ -6823,7 +6862,7 @@ A desigualdade inversa
 \]
 vale para toda função contínua $R$, independentemente da arquitetura. Essa é
 a inclusão do estrato neural no Besov. Na direção direta, realize na família
-neural o aproximante racional da
+neural o aproximante racional do
 \cref{artigo_3:thm:regularized-jackson-bernstein}. Ponha
 $d=2^{\lceil\log_2c\rceil}$. Para todo orçamento diádico $M=2^r\ge d$, o
 número $n=M/d$ é também uma potência de dois e
@@ -6844,7 +6883,7 @@ na escala fornece
 \end{align*}
 Como $M=dn$, multiplicar por $M^s$ introduz apenas o fator fixo $d^s$, e a
 passagem de $M$ a $n$ desloca por $\log_2d$ índices as sequências diádicas.
-As mesmas estimativas de $\ell^q$ da
+As mesmas estimativas de $\ell^q$ do
 \cref{artigo_3:thm:complete-besov-reversibility} concluem a direção direta. Um número
 finito de escalas $M<d$ não afeta o estrato.
 \end{proof}
@@ -7102,8 +7141,8 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_1:5.2]{I.5.2} & 5.2 & \pageref{map:artigo_1:5.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.1]{I.6.1} & 7.1 & \pageref{map:artigo_1:6.1} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.2]{I.6.2} & 7.2 & \pageref{map:artigo_1:6.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.certRefineProjected, CoberturaExterna.projected_certificate_sound}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: o refinamento é uma definição \texttt{noncomputable}, e as escolhas nodais e os endereços são dados por existência, como no texto.\\[4pt]
-\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.refinement_contract_external, CoberturaExterna.certified_refinement_external}, com o exemplo $[1/3,2/3]$ em \code{CoberturaExterna.thirds_success}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: término e correção sob o contrato de majorante (hipótese de entrada), sem certificar uma implementação executável ligada ao avaliador intervalar.\\[4pt]
+\hyperref[map:artigo_1:6.3]{I.6.3} & 7.3 & \pageref{map:artigo_1:6.3} & Formalizado e compilado. Provas: \code{PendenciasParte1.certRefine, PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.certRefineProjected, CoberturaExterna.projected_certificate_sound}. A cobertura inicial tem interiores dois a dois disjuntos, como exige \code{roots.Pairwise DisjInt}; essa hipótese foi explicitada no texto em 17/11/2026. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: o refinamento é uma definição \texttt{noncomputable}, e as escolhas nodais e os endereços são dados por existência, como no texto.\\[4pt]
+\hyperref[map:artigo_1:6.4]{I.6.4} & 7.4 & \pageref{map:artigo_1:6.4} & Formalizado e compilado. Provas: \code{PendenciasParte1.certified_refinement} (raízes contidas em $[\alpha,\beta]$) e, para coberturas diádicas externas, \code{CoberturaExterna.refinement_contract_external, CoberturaExterna.certified_refinement_external}, com o exemplo $[1/3,2/3]$ em \code{CoberturaExterna.thirds_success}. A cobertura inicial tem interiores dois a dois disjuntos, como exige \code{roots.Pairwise DisjInt}; essa hipótese foi explicitada no texto em 17/11/2026. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build PendenciasParte1}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva: término e correção sob o contrato de majorante (hipótese de entrada), sem certificar uma implementação executável ligada ao avaliador intervalar.\\[4pt]
 \hyperref[map:artigo_1:6.5]{I.6.5} & 7.5 & \pageref{map:artigo_1:6.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:6.6]{I.6.6} & 7.6 & \pageref{map:artigo_1:6.6} & Correspondência inspecionada\\[4pt]
 \bottomrule\end{longtable}\normalsize
@@ -7260,7 +7299,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \bottomrule\end{longtable}\normalsize
 
 \clearpage
-\begin{thebibliography}{47}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -7437,6 +7476,14 @@ Peter Elias.
   (2):\penalty0 194--203, 1975.
 \newblock \doi{10.1109/TIT.1975.1055349}.
 
+\bibitem[Fearnhead et~al.(2019)Fearnhead, Maidstone, e
+  Letchford]{artigo_2-fearnhead2019}
+Paul Fearnhead, Robert Maidstone e Adam Letchford.
+\newblock Detecting changes in slope with an {$L_0$} penalty.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 28\penalty0
+  (2):\penalty0 265--275, 2019.
+\newblock \doi{10.1080/10618600.2018.1512868}.
+
 \bibitem[Gribonval et~al.(2022)Gribonval, Kutyniok, Nielsen, e
   Voigtlaender]{artigo_2-gribonval2022}
 R{\'e}mi Gribonval, Gitta Kutyniok, Morten Nielsen e Felix Voigtlaender.
@@ -7536,6 +7583,14 @@ P.~P. Petrushev e V.~A. Popov.
 Michael J.~D. Powell.
 \newblock \emph{Approximation Theory and Methods}.
 \newblock Cambridge University Press, Cambridge, 1981.
+
+\bibitem[Runge et~al.(2022)Runge, Pascucci, e Deschamps~de
+  Boishebert]{artigo_2-runge2022}
+Vincent Runge, Marco Pascucci e Nicolas Deschamps~de Boishebert.
+\newblock Change-in-slope optimal partitioning algorithm in a finite-size
+  parameter space.
+\newblock Preprint, arXiv:2012.11573v2, 2022.
+\newblock URL \url{https://arxiv.org/abs/2012.11573v2}.
 
 \bibitem[Schumaker(2007)]{artigo_1-schumaker2007}
 Larry~L. Schumaker.

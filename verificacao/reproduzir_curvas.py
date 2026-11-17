@@ -2758,7 +2758,7 @@ def main() -> None:
         figure_coding_formats(coding_verdicts, lang, formats, figure_output)
         exp_table = current_exp if exp_table is None else exp_table
         adaptive_table = current_adaptive if adaptive_table is None else adaptive_table
-    sections_dir = args.output_root.parents[1] / "artigo" / "secoes"
+    sections_dir = args.output_root / "artigo" / "secoes"
     write_address_table(address_rows, sections_dir / "tab_enderecos.tex")
     assert adaptive_table is not None
     write_adaptive_table(

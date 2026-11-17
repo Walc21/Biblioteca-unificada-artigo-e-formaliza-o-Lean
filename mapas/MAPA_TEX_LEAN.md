@@ -1468,7 +1468,7 @@ Nenhuma declaração Lean associada.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3265](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
+Fonte editável: [tex/partes/artigo_2.tex:3271](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
 
 Estado: **Prova textual nova**. Sem formalização Lean. Verificado apenas por experimentos numéricos em ponto flutuante (ver III.12.9).
 
@@ -1478,7 +1478,7 @@ Nenhuma declaração Lean associada.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3357](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
+Fonte editável: [tex/partes/artigo_2.tex:3366](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
 
 Estado: **Prova textual nova**. Sem formalização Lean.
 
@@ -1488,7 +1488,7 @@ Nenhuma declaração Lean associada.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3453](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
+Fonte editável: [tex/partes/artigo_2.tex:3462](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
 
 Estado: **Observação editorial**. Não é um teorema Lean autônomo.
 

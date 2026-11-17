@@ -3228,23 +3228,29 @@ Se $\kappa>0$ e $u=t+\log_4(L^2\kappa/8)$, então, como $\ell_Q^2=L^24^{-q}$,
 (a) Seja $\Lambda$ o conjunto de folhas de $T_\varepsilon(f)$. Uma folha
 $J$ com $|J|\ge\ell_Q$ contém alguma célula de $\mathcal Q_q$; atribua $J$
 à mais à esquerda delas. Uma folha com $|J|<\ell_Q$ está contida em uma única
-célula. Assim cada $Q$ recebe uma folha maior, e nenhuma menor, ou recebe
-apenas folhas contidas nela; no primeiro caso, conta-se $1$. No segundo caso
-$Q$ é um nó de $T_\varepsilon(f)$ e as folhas contidas em $Q$ são as folhas
-de uma árvore binária cheia de raiz $Q$. Se $J\subseteq Q$ é uma delas, com
+célula. Assim há três casos para cada $Q$: (i) $Q$ recebe uma folha $J$ com
+$|J|\ge\ell_Q$ (e nenhuma folha menor está em $Q$); conta-se $1$; (ii) $Q$ está
+contida em uma folha maior atribuída a outra célula; então $Q$ não recebe folha,
+não precisa ser nó de $T_\varepsilon(f)$ e a contribuição é $0$; (iii) $Q$ não
+está contida em nenhuma folha maior e não é ela própria folha; então
+todos os seus ancestrais próprios são subdivididos, $Q$ é um nó de
+$T_\varepsilon(f)$ e as folhas contidas em $Q$ são as folhas
+de uma árvore binária cheia de raiz $Q$. Em (iii), se $J\subseteq Q$ é uma delas, com
 $|J|=\ell_Q2^{-j}$ e $j\ge1$, o pai $P\subseteq Q$ de $J$ satisfaz
 $e_f(P)>\varepsilon$; por \eqref{artigo_2:eq:local-upper-basic},
 $e_f(P)\le M_Q\ell_Q^24^{-(j-1)}/8$, logo $M_Q>0$ e
 $j-1<\log_4(M_Q\ell_Q^2/(8\varepsilon))$, isto é,
 $j\le r_Q:=\lceil\log_4(M_Q\ell_Q^2/(8\varepsilon))\rceil$. Uma árvore binária cheia
 cujas folhas têm profundidade no máximo $\max\{0,r_Q\}$ tem no máximo
-$2^{\max\{0,r_Q\}}\le1+2^{r_Q}$ folhas. Somando em $Q$ (com contribuição $1$
-quando $M_Q=0$) e multiplicando por $\sqrt\varepsilon$,
+$2^{\max\{0,r_Q\}}\le1+2^{r_Q}$ folhas. Em (i) e (ii) a contribuição é no máximo
+$1$, e em (iii) com $M_Q=0$ também. Somando em $Q$
+e multiplicando por $\sqrt\varepsilon$,
 \eqref{artigo_2:eq:phase-cell-identity} dá (a).
 
 (b) Seja $S=\{Q:m_Q>0\}$ e $\varepsilon_q$ o mínimo dos erros $e_f(A)$ sobre
 os ancestrais diádicos próprios $A$ de células de $S$ ($\varepsilon_q=+\infty$ se
-$S=\varnothing$). Cada $A$ contém uma célula onde $f''\ne0$; logo $f$ não é afim em $A$
+esse conjunto de ancestrais é vazio, o que ocorre se $S=\varnothing$ e também se
+$q=0$, pois então a única célula é a raiz). Cada $A$ contém uma célula onde $f''\ne0$; logo $f$ não é afim em $A$
 e $e_f(A)>0$, pois $e_f(A)=0$ significa $f=P_Af$. Como há um número finito de
 ancestrais, $\varepsilon_q>0$. Se $\varepsilon<\varepsilon_q$ e $Q\in S$, todos os
 ancestrais próprios de $Q$ são subdivididos e $Q$ é nó de $T_\varepsilon(f)$.
@@ -3295,7 +3301,9 @@ $Q=Q_q(x)$ ponha
 \[
  w^M_q(x)=\sqrt{M_Q/8},\quad \alpha^M_q(x)=\log_4(L^2M_Q/8),
 \]
-e $w^m_q,\alpha^m_q$ analogamente com $m_Q$ (com $w=0$ se o mínimo/máximo é nulo).
+e $w^m_q,\alpha^m_q$ analogamente com $m_Q$. Nas células em que o máximo (ou
+o mínimo) é nulo ponha $w=0$ e $\alpha=0$; o integrando $w\,g(t+\alpha)$ vale
+então $0$ e não envolve o logaritmo de $0$.
 Sejam $w(x)=\sqrt{c(x)/8}$ e $\alpha=a$. Então:
 $w^M_q\to w$ uniformemente e $w^M_q\le w+\sqrt{\omega_q/8}$;
 $w^m_q\to w$ pontualmente; e, em $K\setminus Z$, $\alpha^M_q(x)\to a(x)$ e
@@ -3310,7 +3318,8 @@ onde $s(t)=\sqrt\varepsilon n_f(\varepsilon)$, a segunda desigualdade vale para
 todo $\varepsilon$ e a primeira para $\varepsilon<\varepsilon_q$.
 
 \emph{Cota inferior.} Escolha uma subsequência que realize o $\liminf$ e, para
-cada índice $j$ dela, o maior $q_j\le j$ com $\varepsilon_j<\varepsilon_{q_j}$;
+cada índice $j$ dela, o maior $q_j\in\{1,\dots,j\}$ com $\varepsilon_j<\varepsilon_{q_j}$
+(o conjunto é vazio para os primeiros índices, que se descartam);
 como para cada $q$ fixo a condição vale para $j$ grande, $q_j\to\infty$.
 Ponha $u_j(x)=t_j+\alpha^m_{q_j}(x)$. Para $x\in K\setminus Z$ (fora das fronteiras
 das células), $u_j(x)$ módulo $1$ converge para $u_*=\tau+a(x)$. Se
@@ -3321,8 +3330,8 @@ não negativo. O lema de Fatou e \eqref{artigo_2:eq:phase-sandwich} dão
 $\liminf s_j\ge\Psi_f(\tau)$.
 
 \emph{Cota superior.} Escolha uma subsequência que realize o $\limsup$ e, para
-cada índice $j$ dela, o maior $q_j\le j$ com $2^{q_j}\sqrt{\varepsilon_j}\le1/q_j$;
-de novo $q_j\to\infty$. Ponha $v_j(x)=t_j+\alpha^M_{q_j}(x)$ e
+cada índice $j$ dela, o maior $q_j\in\{1,\dots,j\}$ com $2^{q_j}\sqrt{\varepsilon_j}\le1/q_j$
+(de novo, descartando os primeiros índices); $q_j\to\infty$. Ponha $v_j(x)=t_j+\alpha^M_{q_j}(x)$ e
 $h_j=w^M_{q_j}\,g(v_j)\le2w^M_{q_j}$. Em $K\setminus Z$, $v_j(x)$ módulo $1$
 converge para $u_*=\tau+a(x)$; se $u_*\notin\mathbb Z$, $g(v_j)\to g(u_*)=g^+(u_*)$ e,
 se $u_*\in\mathbb Z$, $g(v_j)\le2=g^+(u_*)$. Logo
@@ -3464,8 +3473,12 @@ ou seja, é uniforme. Pelo \cref{artigo_2:cor:phase-accumulation}(b),
 \]
 Em contraste, para $e^x$ em $[0,1]$ o suporte de $\mu_f$ é um arco de
 comprimento $1/\ln4\approx0{,}72<1$; $\mu_f$ não é uniforme e o conjunto de
-acumulação é um intervalo não degenerado $[m_f^2,M_f^2]$ ($\approx[0{,}3403;0{,}5000]$,
-calculado por quadratura de $\Psi_f$), no interior de $[0{,}2104;0{,}8417]$.
+acumulação é o intervalo não degenerado $[m_f^2,M_f^2]=[e/8,\,1/2]\approx[0{,}33978523;\,0{,}50000000]$,
+no interior de $[0{,}2104;0{,}8417]$. De fato, aqui $a(x)=x/\ln4-3/2$ e, com
+$b=1/\ln4$ e $t_*=\tfrac32-b$, um período de $\Psi_f$ é
+$\Psi_f(t)=2^{-t}$ em $[\tfrac12,t_*]$ e
+$\Psi_f(t)=2^{-t}\bigl[2-(\tfrac32-t)\ln4\bigr]$ em $[t_*,\tfrac32]$; assim
+$\Psi_f(t_*)^2=2^{-3+2/\ln4}=e/8$ e $\Psi_f(\tfrac12)^2=\tfrac12$, pois $2^{1/\ln2}=e$.
 Para $f=x^2$, $\mu_f$ é uma massa pontual e recupera-se o intervalo $[1/4,1]$ do
 \cref{artigo_2:thm:quadratic-dyadic-constant}.
 
@@ -3473,25 +3486,31 @@ Para $f=x^2$, $\mu_f$ é uma massa pontual e recupera-se o intervalo $[1/4,1]$ d
 \eqref{artigo_2:eq:phase-law}, o caráter intervalar do conjunto de acumulação, o
 critério de uniformidade e o valor $I(f)^2/(8\ln^22)$. Estão apenas
 \emph{testados numericamente} (em ponto flutuante, sem papel nas provas) os
-valores finitos citados: para $2000\le N\le20000$, $N^2E_N^{\rm dia}(f)_\infty$
-percorre $[0{,}12494;0{,}12499]$ para $\ln(1+x)$ e $[0{,}3397;0{,}4999]$ para
-$e^x$, e os mesmos testes (com $1500\le N\le12000$) com $x^3+x^2$, $x^4$, $\sin2\pi x$, $(x-\tfrac13)^4/12$,
-uma função afim em $[0,\tfrac12]$ e uma função com patamar $f''\equiv2$ concordam
+valores finitos citados: sobre todos os inteiros $N$ com $2000\le N\le20000$,
+$N^2E_N^{\rm dia}(f)_\infty$ percorre $[0{,}12494;0{,}12499]$ para $\ln(1+x)$ e
+$[0{,}33970;0{,}49997]$ para $e^x$ (arredondados a cinco casas), e os mesmos testes (com $1500\le N\le12000$) com $x^3+x^2$, $x^4$, $\sin2\pi x$, $(x-\tfrac13)^4/12$,
+uma função afim em $[0,\tfrac12]$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$,
+que tem $f''\equiv2$ em $[0,\tfrac12]$ e $f''(x)=12x-4$ em $[\tfrac12,1]$, concordam
 com $[m_f^2,M_f^2]$ calculado de $\Psi_f$, com erro relativo inferior a $0{,}5\%$.
 O programa é \path{verificacao/lei_fase_experimento.py}, que não integra os
 verificadores reprodutíveis do volume.
 
-Para $e^x$, $\ln(1+x)$, $x^3+x^2$ e uma função $C^2$ com patamar $f''\equiv2$
-em $[0,\tfrac12]$ (átomo de $\mu_f$), o teste foi repetido com $40$ dígitos
+Para $e^x$, $\ln(1+x)$, $x^3+x^2$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$
+acima (átomo de $\mu_f$ em $a\equiv-1$), o teste foi repetido com $40$ dígitos
 (mpmath), com o erro local em forma fechada, $\Psi_f$ em forma fechada e
-$N$ até $3\cdot10^5$. Em cada caso, $\min x_N$ e $\max x_N$, onde
-$x_N=N^2E_N^{\rm dia}$, aproximam $m_f^2$ e $M_f^2$ com erro que cai
-pela metade a cada duplicação de $N$. Para $e^x$, $\Psi_f(\tfrac12)^2=\tfrac12$ por
+$N$ até $3\cdot10^5$. Seja $x_N=N^2E_N^{\rm dia}(f)_\infty$ e, para cada $j$, sejam
+$\underline x_j=\min_{2^j\le N<2^{j+1}}x_N$ e $\overline x_j=\max_{2^j\le N<2^{j+1}}x_N$
+(janelas completas de $N$). Observou-se que $|\underline x_j-m_f^2|$ e $|\overline x_j-M_f^2|$
+caem pela metade a cada incremento de $j$; é uma observação numérica, sem
+demonstração quantitativa. Mínimos e máximos acumulados sobre $1\le N\le N_0$
+não têm essa propriedade, pois retêm os primeiros valores (por exemplo,
+$x_1\approx0{,}0597$ para $\ln(1+x)$, cujo limite é $1/8$). Para $e^x$, $\Psi_f(\tfrac12)^2=\tfrac12$ por
 cálculo direto, e o programa dá $m_f^2=0{,}33978523\ldots$ e $M_f^2=\tfrac12$.
 No patamar, $\sqrt\varepsilon\,n_f(\varepsilon)=0{,}75=\Psi_f(\tau)$ exatamente na
 fase do átomo e fica a menos de $2\cdot10^{-4}$ de $\Psi_f$ ($=\Psi_f^+$) em fases próximas.
-Os valores $x_N$ cobrem $[m_f^2,M_f^2]$, inclusive o salto do átomo,
-com maior lacuna $O(1/N)$. Para quadráticas por partes (curvaturas
+Em cada janela $[2^j,2^{j+1})$, os valores $x_N$ cobrem $[m_f^2,M_f^2]$, inclusive o
+salto do átomo, e a maior lacuna entre valores consecutivos também cai pela
+metade a cada incremento de $j$ (observação numérica). Para quadráticas por partes (curvaturas
 $(2,2,8,5)$, $(1,4,16,64)$ e $(1,2,3,5,7,11,13,17)$), a árvore de limiar
 simulada com \texttt{Fraction}, sem tolerância, coincide com a contagem fechada do
 \cref{artigo_2:thm:piecewise-quadratic-count} em $250$ tolerâncias de quebra, e

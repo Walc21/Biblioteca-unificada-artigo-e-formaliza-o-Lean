@@ -4,7 +4,7 @@
 
 ### Construção, seleção exata, aproximação e normalização — com formalização em Lean 4
 
-*Volume técnico com 151 ambientes matemáticos e fontes Lean 4; a correspondência formal é delimitada por resultado.*
+*Volume técnico com 156 ambientes matemáticos e fontes Lean 4; a correspondência formal é delimitada por resultado.*
 
 **Victor Gabriel de Oliveira** · edição revisada de 17 de novembro de 2026
 
@@ -25,7 +25,7 @@ quebras diádicas e inclinações locais não nulas. Em catálogos finitos, a pr
 seleciona exatamente a árvore e os átomos. A caracterização de Besov usa um funcional que soma
 ao erro a segunda diferença do aproximante, sob agendas explícitas de altura.
 
-O mapa TeX → Lean identifica declarações relacionadas aos 151 ambientes e distingue provas
+O mapa TeX → Lean identifica declarações relacionadas aos 156 ambientes e distingue provas
 compiladas, integrações e correspondências herdadas. As entradas incluem definições, algoritmos
 e observações; a cobertura semântica integral do volume permanece por verificar.
 
@@ -34,7 +34,7 @@ e observações; a cobertura semântica integral do volume permanece por verific
 | | |
 |---|---|
 | Páginas do PDF | **123** |
-| Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **151** |
+| Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **156** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
 | Referências bibliográficas | **49** |
@@ -95,7 +95,7 @@ comparação com nós livres), conservando a numeração original para cruzament
 | **Complexidade densa em número de estados (III.9.1)** | `DenseDP.state_complexity_dense` | `artigo_2/Pendencias/ComplexidadeDensa.lean` |
 | **Complexidade de bits (III.9.3)** | `DenseDP.bit_complexity_dense` | `artigo_2/Pendencias/ComplexidadeBits.lean` |
 
-A tabela completa — cada um dos 151 ambientes do PDF com o rótulo no TeX, a linha e a(s) declaração(ões) Lean —
+A tabela completa — cada um dos 156 ambientes do PDF com o rótulo no TeX, a linha e a(s) declaração(ões) Lean —
 está em [`mapas/MAPA_TEX_LEAN.md`](mapas/MAPA_TEX_LEAN.md).
 
 ### Um destaque honesto: a formalização corrigiu o artigo
@@ -173,10 +173,11 @@ A recompilação completa de 13 e 14/11/2026, com as ressalvas, está em
 
 Este repositório prefere afirmar menos a afirmar demais:
 
-- **Prova compilada ≠ correspondência herdada.** Dos 151 ambientes, os 42 casos do dossiê de pendências
+- **Prova compilada ≠ correspondência herdada.** Dos 156 ambientes, os 42 casos do dossiê de pendências
   têm prova Lean nova (41) ou prova textual sincronizada (1). Outras 77 correspondências foram *inspecionadas*
   e 20 *integradas à base* a partir de formalizações anteriores; elas apontam declarações Lean relevantes,
-  mas **não** foram reauditadas semanticamente uma a uma. Não se afirma formalização integral.
+  mas **não** foram reauditadas semanticamente uma a uma. Os 5 ambientes III.12.5–III.12.9 (lei de fase
+  para curvatura variável) têm apenas prova textual e **não** foram formalizados em Lean. Não se afirma formalização integral.
 - **III.9.1** usa um modelo de custo unitário explícito; a tabela densa compara custos e **não** implementa o
   desempate canônico por $\kappa$ (que está formalizado no seletor funcional de III.7.4).
 - **III.9.3** toma como *hipótese do modelo* (`BitModel`) que somar, comparar e reduzir frações de $b$ bits

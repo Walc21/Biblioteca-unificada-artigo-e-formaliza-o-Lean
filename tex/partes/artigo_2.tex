@@ -2600,7 +2600,7 @@ Escreva
 % MAPA artigo_2:11.2
 \begin{lemma}[expansão local uniforme]\label{map:artigo_2:11.2}
 \label{artigo_2:lem:local-asymptotic-error}
-Para toda célula $J\subseteq K$ e todo $x\in J$,
+Se $f\in C^2(K)$, então, para toda célula $J\subseteq K$ e todo $x\in J$,
 \begin{equation}
  \left|e_f(J)-\frac{|f''(x)|}{8}|J|^2\right|
  \le \frac{\omega_{f''}(|J|)}{8}|J|^2.
@@ -3508,12 +3508,18 @@ $x_1\approx0{,}0597$ para $\ln(1+x)$, cujo limite é $1/8$). Para $e^x$, $\Psi_f
 cálculo direto, e o programa dá $m_f^2=0{,}33978523\ldots$ e $M_f^2=\tfrac12$.
 No patamar, $\sqrt\varepsilon\,n_f(\varepsilon)=0{,}75=\Psi_f(\tau)$ exatamente na
 fase do átomo e fica a menos de $2\cdot10^{-4}$ de $\Psi_f$ ($=\Psi_f^+$) em fases próximas.
-Em cada janela $[2^j,2^{j+1})$, os valores $x_N$ cobrem $[m_f^2,M_f^2]$, inclusive o
-salto do átomo, e a maior lacuna entre valores consecutivos também cai pela
-metade a cada incremento de $j$ (observação numérica). Para quadráticas por partes (curvaturas
-$(2,2,8,5)$, $(1,4,16,64)$ e $(1,2,3,5,7,11,13,17)$), a árvore de limiar
-simulada com \texttt{Fraction}, sem tolerância, coincide com a contagem fechada do
-\cref{artigo_2:thm:piecewise-quadratic-count} em $250$ tolerâncias de quebra, e
+Em cada janela $[2^j,2^{j+1})$, os valores $x_N$ \emph{aproximam}
+$[m_f^2,M_f^2]$, inclusive através do salto do átomo, e a maior lacuna na lista
+ordenada desses valores também cai pela metade a cada incremento de $j$
+(observação numérica; um conjunto finito não contém um intervalo).
+Para quadráticas por partes (curvaturas
+$(2,2,8,5)$, $(1,4,16,64)$ e $(1,2,3,5,7,11,13,17)$), a floresta de limiar
+abaixo da malha base, simulada com \texttt{Fraction} sem tolerância e usando a
+identidade local quadrática, coincide com a contagem fechada do
+\cref{artigo_2:thm:piecewise-quadratic-count} em todos os limiares distintos
+testados ($33$, $18$ e $119$ nas três famílias, cada um comparado em $\varepsilon=\theta$
+e imediatamente abaixo). Esse teste não reconstrói a árvore desde a raiz, o que
+é feito por \path{verificacao/constante_diadica.py}. Além disso,
 $\min x_N=m_f^2$ exatamente; no caso sincronizado ambos coincidem com
 $I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os resultados desta
 subseção \emph{não foram formalizados em Lean}.

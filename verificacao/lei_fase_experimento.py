@@ -70,7 +70,7 @@ def psi_range(fpp, M=6000, P=400):
 def run(name,f,fp,fpp,Nmax,Nmin):
     err=make_err(f,fp); bp=breakpoints(err,Nmax)
     lo,hi=psi_range(fpp)
-    xs=[N*N*th for th,nb,na in bp for N in range(nb,na) if N>=Nmin]
+    xs=[N*N*th for th,nb,na in bp for N in range(nb,na) if Nmin<=N<=Nmax]
     sn=[]; 
     for s in [8+i/8 for i in range(16)]:
         eps=4.0**(-s)

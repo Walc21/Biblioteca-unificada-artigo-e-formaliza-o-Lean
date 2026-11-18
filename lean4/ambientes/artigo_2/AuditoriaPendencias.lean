@@ -170,3 +170,5 @@ import Pendencias
 #print axioms Pendencias.isAtomPhase_iff_gap
 #print axioms Pendencias.continuousAt_psiF_iff
 #print axioms Pendencias.continuousAt_psiFOn_iff
+#print axioms Pendencias.integral_gC_eF
+#print axioms Pendencias.fourier_psiF

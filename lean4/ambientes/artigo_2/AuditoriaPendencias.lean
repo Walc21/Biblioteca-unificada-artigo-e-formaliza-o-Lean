@@ -172,3 +172,5 @@ import Pendencias
 #print axioms Pendencias.continuousAt_psiFOn_iff
 #print axioms Pendencias.integral_gC_eF
 #print axioms Pendencias.fourier_psiF
+#print axioms Pendencias.upper_count_pow_on
+#print axioms Pendencias.lower_count_pow_on

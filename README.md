@@ -6,9 +6,9 @@
 
 *Volume técnico com 156 ambientes matemáticos e fontes Lean 4; a correspondência formal é delimitada por resultado.*
 
-**Victor Gabriel de Oliveira** · edição revisada de 17 de novembro de 2026
+**Victor Gabriel de Oliveira** · edição com formatação ABNT de 18 de novembro de 2026
 
-[**📄 Ler o artigo (PDF)**](Biblioteca_Unificada.pdf) &nbsp;·&nbsp; [**🧮 Mapa TeX → Lean**](mapas/MAPA_TEX_LEAN.md) &nbsp;·&nbsp; [**⚙️ Fontes Lean 4**](lean4/ambientes) &nbsp;·&nbsp; [**✍️ Fontes LaTeX**](tex)
+[**📄 Ler o artigo (PDF, edição ABNT)**](Biblioteca_Unificada_ABNT.pdf) &nbsp;·&nbsp; [**🧮 Mapa TeX → Lean**](mapas/MAPA_TEX_LEAN.md) &nbsp;·&nbsp; [**⚙️ Fontes Lean 4**](lean4/ambientes) &nbsp;·&nbsp; [**✍️ Fontes LaTeX**](tex_abnt)
 
 `Lean 4.28.0` · `Mathlib 4.28.0` · `axiomas: propext, Classical.choice, Quot.sound` · `0 sorry`
 
@@ -33,7 +33,7 @@ e observações; a cobertura semântica integral do volume permanece por verific
 
 | | |
 |---|---|
-| Páginas do PDF | **124** |
+| Páginas do PDF da edição ABNT | **159** |
 | Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **156** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
@@ -103,7 +103,8 @@ comparação com nós livres), conservando a numeração original para cruzament
 | **Complexidade de bits (III.9.3)** | `DenseDP.bit_complexity_dense` | `artigo_2/Pendencias/ComplexidadeBits.lean` |
 
 A tabela completa — cada um dos 156 ambientes do PDF com o rótulo no TeX, a linha e a(s) declaração(ões) Lean —
-está em [`mapas/MAPA_TEX_LEAN.md`](mapas/MAPA_TEX_LEAN.md).
+está em [`mapas/MAPA_TEX_LEAN.md`](mapas/MAPA_TEX_LEAN.md). As linhas do mapa remetem às fontes em `tex/`.
+Na edição ABNT, o mapa ao final do PDF traz as páginas correspondentes e links para os resultados.
 
 ### Um destaque honesto: a formalização corrigiu o artigo
 
@@ -125,8 +126,16 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada.pdf        # PDF do artigo
-├── tex/                            # fontes LaTeX
+├── Biblioteca_Unificada_ABNT.pdf   # PDF da edição ABNT (159 páginas)
+├── tex_abnt/                       # fontes LaTeX da edição ABNT
+│   ├── principal.tex               # documento principal
+│   ├── documento_completo.tex      # fonte consolidada com bibliografia incorporada
+│   ├── partes/                     # as cinco partes
+│   ├── mapa_formal.tex
+│   ├── citacoes_abnt.tex
+│   └── referencias_abnt.tex
+├── Biblioteca_Unificada.pdf        # PDF da edição anterior (124 páginas)
+├── tex/                            # fontes LaTeX da edição anterior e figuras compartilhadas
 │   ├── principal.tex               #   documento principal (compilar com latexmk)
 │   ├── documento_completo.tex      #   fonte consolidado com bibliografia incorporada
 │   ├── partes/                     #   as cinco partes
@@ -144,7 +153,21 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ## Como reproduzir
 
-**Artigo (LaTeX).**
+**Artigo (LaTeX, edição ABNT).**
+
+```bash
+cd tex_abnt
+latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error principal.tex
+python3 gerar_fonte_unica.py
+cp principal.pdf ../Biblioteca_Unificada_ABNT.pdf
+```
+
+A edição reúne 49 referências em `referencias_abnt.tex` e usa as figuras de `../tex/figuras/`.
+A partir de `tex_abnt/`, a fonte consolidada também compila com
+`latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error documento_completo.tex`.
+
+**Edição anterior (LaTeX).** O [PDF de 124 páginas](Biblioteca_Unificada.pdf) pode ser
+recompilado com os comandos abaixo a partir da raiz do repositório.
 
 ```bash
 cd tex
@@ -153,8 +176,8 @@ python3 gerar_fonte_unica.py
 cp principal.pdf ../Biblioteca_Unificada.pdf
 ```
 
-A opção `-Werror` faz o `latexmk` falhar se restarem referências ou citações indefinidas.
-A versão consolidada também compila a partir de `tex/` com
+Em ambas as edições, `-Werror` faz o `latexmk` falhar se restarem referências ou citações indefinidas.
+A fonte consolidada da edição anterior também compila a partir de `tex/` com
 `latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error documento_completo.tex`.
 Ela incorpora a bibliografia e usa os arquivos de `figuras/`.
 

@@ -19,6 +19,15 @@ tex/*.fdb_latexmk
 tex/*.fls
 tex/principal.pdf
 tex/documento_completo.pdf
+# Arquivos gerados pela edição ABNT
+tex_abnt/*.aux
+tex_abnt/*.log
+tex_abnt/*.out
+tex_abnt/*.toc
+tex_abnt/*.fdb_latexmk
+tex_abnt/*.fls
+tex_abnt/principal.pdf
+tex_abnt/documento_completo.pdf
 # Configs locais de ferramentas
 .aws/
 .codex/

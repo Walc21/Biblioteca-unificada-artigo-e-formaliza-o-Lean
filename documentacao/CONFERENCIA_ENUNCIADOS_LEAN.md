@@ -70,7 +70,7 @@ completa, com diferença de forma ou de hipótese que deve ser explicitada), **D
   ínfimo `Edia_eq_sInf_nThr` tem `hN : 1 ≤ N` explícito). Ressalva de redação: o texto deve dizer
   a faixa de `N` em que vale a equivalência.
 
-**Edição proposta (não aplicada).** No enunciado, acrescentar «para todo inteiro `N ≥ 1`» antes
+**Edição (aprovada e aplicada em `tex/partes/artigo_2.tex`).** No enunciado, acrescentar «para todo inteiro `N ≥ 1`» antes
 de `E_N^{dia}(f)_∞ ≤ ε`, e «(para `N ≥ 1`)» antes da identidade do ínfimo.
 
 ---
@@ -131,7 +131,7 @@ Se `I(f) = 0`, então `f` é afim e os dois erros são identicamente nulos.
 - O Lean exige `1 ≤ N` para `Edia`, como em III.11.1.
 
 **Edições propostas (não aplicadas).**
-1. No enunciado, acrescentar: «Se `I(f) = 0`, então `f` é afim em `K`, `n_f(ε) = 1` para todo
+1. (aplicada) No enunciado, acrescentar: «Se `I(f) = 0`, então `f` é afim em `K`, `n_f(ε) = 1` para todo
    `ε > 0` e `E_N^{dia}(f)_∞ = 0` para todo `N ≥ 1`.»
 2. Trocar «os dois erros são identicamente nulos» por essa lista, e explicitar `N ≥ 1` nas
    igualdades com `E_N`.
@@ -280,8 +280,17 @@ do texto está nos módulos `FaseLei2` (`upper_integral_bound`, `lower_integral_
 `FaseLei3` (`phase_lower`, `phase_upper`); **esta correspondência não foi reconferida linha a
 linha nesta rodada**.
 
-**Status: Fiel com ressalva** (**provado**; a ponte para a forma com `g(t+α)` está em
-`FaseLei2`/`FaseLei3`, sem reconferência completa).
+**Status: Fiel com ressalva** (**provado**). A ponte para a forma com `g(t+α)` foi verificada, mas
+só na forma de passo com `η`, não na forma literal do texto.
+
+**Verificação da ponte.** As somas de (a) e (b) não são formalizadas literalmente. O Lean usa `Gl`/`Gu`
+(`FaseLei2.lean:109-115`): `Gl(n,ε,j) = sLow_j/√8 · gC(−log₄ε + log₄((2^{k₀})⁻² sLow_j²/8))`, análogo a `Gu`
+com `sUp_j`. É a parcela `w·g(t+log₄(L²M/8))` do texto com `M` trocado por `sLow²` (ou `sUp²`), onde
+`sLow/sUp = sqrt(|f''|) ∓ η_n` nas células de nível `k₀+d_n`. A soma vira `∫_K Gl(cidx x) dx`
+(`lower_integral_bound`; `upper_integral_bound` para a cota superior), e `η_n → 0` é feito por Fatou em
+`FaseLei3` (`phase_lower`, `phase_upper`). O conteúdo está provado, mas com `η_n` e profundidade `d_n`
+escolhidas por oscilação; (a) e (b) com `M_Q`, `m_Q` e `ε_q` literais **não** aparecem como enunciados Lean.
+Ressalva mantida.
 
 **Divergências e ressalvas.**
 - A versão `C²(K)` do texto estava pendente (ressalva do mapa, agora resolvida).
@@ -310,12 +319,16 @@ linha nesta rodada**.
 - Versões `C²(K)`: `phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`,
   `phase_limsup_le_on` (`Pendencias/FaseOn.lean`).
 
-**Status: Fiel com ressalva.** **provado** para (i) e (iii); (ii) com ressalva (convergência
-uniforme não reconferida).
+**Status: Fiel.** **provado** em (i), (ii) e (iii).
+
+**Verificação de (ii).** `phase_law_uniform` (`FaseLei4.lean:69`) afirma
+`∀ δ>0, ∀ᶠ ε in 𝓝[>]0, |√ε·n_f(ε) − Ψ_f(−log₄ε)| < δ`, a convergência uniforme do texto, sob
+`∀ t, ¬IsAtomPhase`. Prova por contradição com extração de subsequência (`exists_phase_subseq`), usando (i) e a
+continuidade de `Ψ_f` nas fases não atômicas. Compilada, sem `sorry`, axiomas padrão.
 
 **Divergências e ressalvas.**
 - `τ` é tratado por sequências de inteiros `z_j`, o que é a forma `mod 1` do texto.
-- Para (ii), conferir se o Lean cobre a convergência uniforme no enunciado.
+- (ii) verificado: a convergência uniforme está no enunciado Lean.
 
 ---
 
@@ -340,8 +353,8 @@ para `M_f = I/√2`.
 - (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`
   (`FaseExtremos.lean:183`, `:191`, `:199`), e as versões `_on`.
 
-**Status: Fiel com ressalva** (**provado** em (a), (c), (d); (b) completa com as formas
-`_muCirc`). A ressalva que restava (equivalência com `μ_f` uniforme) está resolvida.
+**Status: Fiel** (**provado**; (b) completa com as formas `_muCirc`). A ressalva que restava
+(equivalência com `μ_f` uniforme) está resolvida.
 
 **Divergências e ressalvas.**
 1. **Resolvida:** a equivalência `Ψ_f constante ⇔ μ_f uniforme` (b). Prova: unicidade de
@@ -368,9 +381,7 @@ com a nota de que a prova formal está em `FaseMedida.lean`.
 | III.12.6 só tinha versão `C²(ℝ)` | **Resolvida**: `upper_count_pow_on`, `lower_count_pow_on` |
 | III.12.8(b) sem equivalência com `μ_f` uniforme | **Resolvida**: `psi_const_iff_muCirc` e `limit_iff_muCirc_on` |
 
-## Observações de redação (propostas, não aplicadas)
+## Observações de redação (aprovadas e aplicadas)
 
-1. III.11.1: explicitar `N ≥ 1` na equivalência `E_N ≤ ε ⇔ n_f(ε) ≤ N` e na identidade `E_N = inf{…}`.
-2. III.11.3: tratar o caso `I(f) = 0` com as três conclusões (afim em `K`, `n_f = 1`, `E_N = 0`).
-
-Essas edições serão aplicadas apenas após aprovação.
+1. III.11.1: `N ≥ 1` explicitado na equivalência e na identidade do ínfimo.
+2. III.11.3: caso `I(f) = 0` com as três conclusões.

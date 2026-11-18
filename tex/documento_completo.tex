@@ -1,6 +1,6 @@
 % Gerado por gerar_fonte_unica.py; editar principal.tex e seus arquivos incluídos.
-% Bibliografia incorporada; figuras compartilhadas de ../tex/figuras/.
-% Edição com formatação baseada em normas da ABNT. As figuras são compartilhadas com a edição em ../tex/.
+% Bibliografia incorporada; figuras em figuras/.
+% Fonte única do volume, na formatação baseada em normas da ABNT. Figuras em figuras/; compilar a partir de tex/.
 \documentclass[12pt,a4paper]{article}
 % NBR 14724: margens esquerda/superior 3 cm, direita/inferior 2 cm.
 \usepackage[a4paper,left=3cm,top=3cm,right=2cm,bottom=2cm,headheight=15pt,headsep=12pt]{geometry}
@@ -14,7 +14,6 @@
 
 \PassOptionsToPackage{obeyspaces,spaces}{url}% preserva os espaços em \code{...} (identificadores Lean)
 \usepackage{microtype,graphicx,xcolor,booktabs,longtable,array,float,tabularx,multicol,placeins,mathrsfs,xurl}
-\graphicspath{{../tex/}}
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc,fit}
@@ -7845,7 +7844,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:complemento_original:21.1]{V.21.1} & 21.1 & \pageref{map:complemento_original:21.1} & Formalizado e compilado (fidelidade não reauditada). Provado; a forma \texttt{runge\_majorant} dispensa $J\subseteq[-1,1]$. Inclui \texttt{deriv2\_runge}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Resultado original preservado no complemento. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \bottomrule\end{longtable}\normalsize
 \end{singlespace}
-% Referências da edição ABNT, derivadas de ../tex/referencias.bib.
+% Referências do volume (formato ABNT), derivadas de referencias.bib.
 \begin{referenciasabnt}
 \abntref{artigo_2-bellman1957}{\MakeUppercase{Bellman}, R. \textbf{Dynamic Programming}. Princeton: Princeton University Press, 1957.}
 \abntref{artigo_2-bellman1961}{\MakeUppercase{Bellman}, R. On the approximation of curves by line segments using dynamic programming. \textbf{Communications of the ACM}, v. 4, n. 6, p. 284, 1961. DOI: 10.1145/366573.366611.}

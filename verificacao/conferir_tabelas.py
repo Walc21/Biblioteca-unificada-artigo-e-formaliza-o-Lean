@@ -54,7 +54,7 @@ def main() -> None:
     parser.add_argument("--output-root", type=Path, required=True, help="saída de reproduzir_tudo.py")
     args = parser.parse_args()
     success = True
-    for name in ("tex", "tex_abnt"):
+    for name in ("tex",):
         edition = REPO / name
         published = published_tables(edition)
         for label, (program, table) in TABLES.items():
@@ -70,7 +70,7 @@ def main() -> None:
                 success = False
     if not success:
         raise SystemExit(1)
-    print(f"{len(TABLES)} tabelas conferidas em cada edição.")
+    print(f"{len(TABLES)} tabelas do volume conferidas com a reprodução.")
 
 
 if __name__ == "__main__":

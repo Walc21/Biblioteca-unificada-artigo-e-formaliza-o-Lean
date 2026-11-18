@@ -28,7 +28,7 @@ def main() -> None:
     destino = ROOT / "documento_completo.tex"
     destino.write_text(
         "% Gerado por gerar_fonte_unica.py; editar principal.tex e seus arquivos incluídos.\n"
-        "% Bibliografia incorporada; figuras compartilhadas de ../tex/figuras/.\n" + texto,
+        "% Bibliografia incorporada; figuras em figuras/.\n" + texto,
         encoding="utf-8",
     )
     print(destino)

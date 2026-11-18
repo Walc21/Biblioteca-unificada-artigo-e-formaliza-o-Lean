@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera documento_completo.tex a partir de principal.tex e principal.bbl."""
+"""Gera documento_completo.tex expandindo as inclusões de principal.tex."""
 
 from pathlib import Path
 import re
@@ -24,22 +24,11 @@ def expandir(path: Path, pilha: tuple[Path, ...] = ()) -> str:
 
 
 def main() -> None:
-    bbl = ROOT / "principal.bbl"
-    if not bbl.is_file():
-        raise SystemExit("Compile principal.tex com latexmk antes de gerar a fonte única.")
     texto = expandir(ROOT / "principal.tex")
-    texto = re.sub(r"\\bibliographystyle\{[^}]+\}", "", texto)
-    texto, substituicoes = re.subn(
-        r"\\bibliography\{[^}]+\}",
-        lambda _: bbl.read_text(encoding="utf-8"),
-        texto,
-    )
-    if substituicoes != 1:
-        raise ValueError("Era esperada exatamente uma bibliografia.")
     destino = ROOT / "documento_completo.tex"
     destino.write_text(
         "% Gerado por gerar_fonte_unica.py; editar principal.tex e seus arquivos incluídos.\n"
-        "% Bibliografia incorporada; figuras externas relativas a esta pasta.\n" + texto,
+        "% Bibliografia incorporada; figuras compartilhadas de ../tex/figuras/.\n" + texto,
         encoding="utf-8",
     )
     print(destino)

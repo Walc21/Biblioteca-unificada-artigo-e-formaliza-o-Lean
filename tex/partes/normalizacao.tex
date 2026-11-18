@@ -4,14 +4,14 @@
 
 \renewcommand{\abstractname}{Resumo}
 \begin{abstract}
-Fixamos os tipos e as dependências de todas as construções usadas na
-normalização de montagens diádicas. Definimos as representações por
-átomos e por células endereçadas, suas conversões, as classes de funções,
-os orçamentos e os erros em um reticulado completo. Demonstramos a
-normalização por células ativas e a equivalência entre as três
-formulações com os mesmos limites de folhas e altura. A ordenação finita,
-a cadeia de nós e a extensão ReLU recebem construções explícitas. As
-operações recursivas incluem medidas de término e casos iniciais.
+Fixam-se os tipos e as dependências de todas as construções empregadas na
+normalização de montagens diádicas. Definem-se as representações por
+átomos e por células endereçadas, as conversões entre elas, as classes de
+funções, os orçamentos e os erros em um reticulado completo. Demonstram-se
+a normalização por células ativas e a equivalência entre as três
+formulações, com os mesmos limites de folhas e de altura. A ordenação
+finita, a cadeia de nós e a extensão ReLU recebem construções explícitas.
+As operações recursivas incluem medidas de término e casos iniciais.
 \end{abstract}
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
@@ -23,69 +23,70 @@ We fix the types and dependencies of all constructions used in the normalization
 \label{normalizacao:sec:base}
 
 \paragraph{Primitivos.}
-Usamos os tipos padrão $\N=\{0,1,\ldots\}$, $\Z$, $\Q$ e $\R$,
-as inclusões canônicas entre eles, conjuntos, subtipos, funções,
-produtos, listas e conjuntos finitos. Em Lean, correspondem aos tipos
-padrão e às estruturas de \code{Mathlib}. A ordem e a topologia de $\R$
+Utilizam-se os tipos usuais $\N=\{0,1,\ldots\}$, $\Z$, $\Q$ e $\R$,
+as inclusões canônicas entre eles, bem como conjuntos, subtipos, funções,
+produtos, listas e conjuntos finitos. Em Lean, esses objetos correspondem
+aos tipos e às estruturas de \code{Mathlib}. A ordem e a topologia de $\R$
 são as usuais. Soma, produto, potência natural, mínimo, máximo,
-continuidade, fecho, interior e cardinalidade finita têm suas definições
-padrão nessa biblioteca. Os objetos próprios deste desenvolvimento são
-definidos abaixo em ordem de dependência.
+continuidade, fecho, interior e cardinalidade finita possuem, nessa
+biblioteca, as suas definições padrão. Os objetos próprios deste
+desenvolvimento são definidos a seguir, em ordem de dependência.
 
 \paragraph{Subtipos e igualdade.}
 Para $P:X\to\mathrm{Prop}$, o subtipo
-$\{x:X\mid P(x)\}$ contém pares $\langle x,h\rangle$, com $h:P(x)$.
-Sua projeção é $\langle x,h\rangle\mapsto x$. Dois elementos desse subtipo
-são iguais quando suas projeções são iguais; as provas não constituem
+$\{x:X\mid P(x)\}$ é constituído pelos pares $\langle x,h\rangle$, com $h:P(x)$.
+A sua projeção é $\langle x,h\rangle\mapsto x$. Dois elementos desse subtipo
+são iguais quando as suas projeções o são; as provas não constituem
 dados adicionais de comparação. A igualdade de funções é extensional.
 
 \paragraph{Conjuntos finitos.}
-$\FS(X)$ é o tipo dos conjuntos finitos de elementos de $X$, sem
-multiplicidades. Para $F:\FS(X)$, escrevemos $x\in F$ para pertinência e
-$|F|:=\card F\in\N$. Fixamos as operações
+$\FS(X)$ denota o tipo dos conjuntos finitos de elementos de $X$, sem
+multiplicidades. Para $F:\FS(X)$, escreve-se $x\in F$ para a pertinência e
+$|F|:=\card F\in\N$ para a cardinalidade. Fixam-se as operações
 \begin{align*}
  \operatorname{filter}(P,F)&=\{x\in F:P(x)\},\\
  \operatorname{image}(u,F)&=\{u(x):x\in F\},\\
  \operatorname{erase}(F,x)&=F\setminus\{x\}.
 \end{align*}
-São caracterizadas por essas equivalências de pertinência. Em particular,
-filtrar produz um subconjunto, e a imagem por uma função injetiva em $F$
-preserva $|F|$. Escrever $\bigcup_{x\in F}S_x$ significa o conjunto
-$\{z:\exists x\in F,\ z\in S_x\}$. A finitude é mantida como dado, e
-não como uma hipótese implícita sobre um conjunto arbitrário.
+Elas são caracterizadas por essas equivalências de pertinência. Em
+particular, a filtragem produz um subconjunto, e a imagem por uma função
+injetiva em $F$ preserva $|F|$. A notação $\bigcup_{x\in F}S_x$ designa o
+conjunto $\{z:\exists x\in F,\ z\in S_x\}$. A finitude é mantida como dado,
+e não como hipótese implícita sobre um conjunto arbitrário.
 O conjunto subjacente a $F$ é $\{x:X:x\in F\}$.
 Se $S\subseteq X$ é um conjunto finito com esse mesmo conjunto
-subjacente, sua cardinalidade natural $S.\operatorname{ncard}$ é $|F|$.
-Isso identifica contagens por conjuntos finitos e por \code{Finset}
-quando as implementações dos postos usam representações diferentes.
+subjacente, a sua cardinalidade natural $S.\operatorname{ncard}$ é $|F|$.
+Isso identifica as contagens por conjuntos finitos e por \code{Finset}
+quando as implementações dos postos empregam representações diferentes.
 
 \paragraph{Índices finitos.}
-$\Fin(n):=\{j:\N\mid j<n\}$. Quando escrevemos $a_j$ para
-$a:\Fin(n)\to X$, a desigualdade $j<n$ faz parte do índice.
-Denote por $\operatorname{univ}_n:\FS(\Fin(n))$ o conjunto de todos
+Define-se $\Fin(n):=\{j:\N\mid j<n\}$. Ao escrever $a_j$ para
+$a:\Fin(n)\to X$, a desigualdade $j<n$ passa a integrar o índice.
+Denota-se por $\operatorname{univ}_n:\FS(\Fin(n))$ o conjunto de todos
 os elementos de $\Fin(n)$. Uma soma $\sum_{1\le j<M}$ percorre o conjunto finito
-$\{j:\N:1\le j<M\}$; nela, $j$ e $j-1$ são índices válidos de
-$\Fin(M)$. Se $M=1$, esse conjunto é vazio e a soma vale zero.
+$\{j:\N:1\le j<M\}$; nesse conjunto, $j$ e $j-1$ são índices válidos de
+$\Fin(M)$. Se $M=1$, o conjunto é vazio e a soma vale zero.
 
 \paragraph{Domínio.}
-Fixe $\alpha,\beta:\R$ e uma hipótese $h_K:\alpha<\beta$.
-Defina separadamente o conjunto e o subtipo
-\[
- K:=\{x:\R:\alpha\le x\le\beta\},\qquad
- |K|_{\rm type}:=\{x:\R\mid x\in K\},\qquad
- \iota_K:|K|_{\rm type}\to\R,\quad\iota_K(z)=z.1.
-\]
-Usamos $K$ também para o subtipo quando o tipo de uma função o explicita.
+Fixem-se $\alpha,\beta:\R$ e uma hipótese $h_K:\alpha<\beta$.
+Definem-se separadamente o conjunto e o subtipo
+\begin{align*}
+ K &:= \{x:\R:\alpha\le x\le\beta\}, &
+ |K|_{\rm type} &:= \{x:\R\mid x\in K\},\\
+ \iota_K &\colon |K|_{\rm type}\to\R, &
+ \iota_K(z) &= z.1.
+\end{align*}
+Emprega-se $K$ também para o subtipo, quando o tipo de uma função o explicita.
 O intervalo aberto é $K^\circ=(\alpha,\beta)$.
-Defina
+Define-se
 \[
  \CK:=\{g:K\to\R\mid g\text{ é contínua na topologia de subtipo}\}.
 \]
-Para espaços topológicos $X,Y$, $C(X,Y)$ denota funções contínuas
-com domínio $X$ e codomínio $Y$, acompanhadas da prova de continuidade.
-Assim $\CK=C(K,\R)$ é o tipo
+Para espaços topológicos $X,Y$, $C(X,Y)$ denota as funções contínuas
+de domínio $X$ e contradomínio $Y$, acompanhadas da prova de continuidade.
+Assim, $\CK=C(K,\R)$ é o tipo
 \code{ContinuousMap (Set.Icc alpha beta) Real}. Para $g:\CK$ e $x\in K$, a expressão $g(x)$ abrevia
-$g(\langle x,h_x\rangle)$; seu valor independe da prova $h_x$.
+$g(\langle x,h_x\rangle)$; o seu valor independe da prova $h_x$.
 O domínio é não vazio, compacto e igual a $\cls(K^\circ)$.
 
 \section{Racionais, células e átomos}
@@ -143,12 +144,12 @@ vazio e $L(c)<X(c)<R(c)$. Os três valores pertencem a $\D$.
 Além disso, $J(c)=J(d)$ implica $c=d$.
 \end{lema}
 \begin{proof}
-As duas identidades seguem da aritmética racional e $2^k>0$.
-Para o centro, use o índice $(k+1,2m+1)$ na definição de $\D$.
-Se os suportes são iguais, seus mínimos e máximos são iguais.
-As larguras dão $2^{-k}=2^{-k'}$, logo $k=k'$, pela estrita
+As duas identidades decorrem da aritmética racional e de $2^k>0$.
+Para o centro, emprega-se o índice $(k+1,2m+1)$ na definição de $\D$.
+Se os suportes são iguais, os seus mínimos e máximos também o são.
+As larguras fornecem $2^{-k}=2^{-k'}$ e, portanto, $k=k'$, pela estrita
 monotonicidade das potências de dois. A igualdade dos extremos
-esquerdos dá então $m=m'$.
+esquerdos fornece então $m=m'$.
 \end{proof}
 
 % MAPA normalizacao:2.4
@@ -184,10 +185,10 @@ Se $C(a)=C(a')$, $a.y=a'.y$ e $a.s=a'.s$, então
 $a=a'$, $J_a=J_{a'}$ e $\ell_a=\ell_{a'}$ como funções globais.
 \end{lema}
 \begin{proof}
-Expanda os produtos, usando que a inclusão $\Q\to\R$ preserva soma
+Expandem-se os produtos, utilizando que a inclusão $\Q\to\R$ preserva soma
 e produto. A continuidade é a de uma função afim. A inclusão é
-injetiva, logo $h_s$ também garante a inclinação real não nula.
-As igualdades finais seguem da igualdade dos campos da estrutura.
+injetiva; logo, $h_s$ também garante a inclinação real não nula.
+As igualdades finais decorrem da igualdade dos campos da estrutura.
 \end{proof}
 
 \section{Predicados de representação e normalização}
@@ -220,15 +221,15 @@ Defina os predicados, todos com valores em $\mathrm{Prop}$,
  \Str^G_K(G,\Lambda)&:=\Loc^G_K(G,\Lambda)\land\Agree(\Lambda).
 \end{align*}
 Finalmente, como subconjuntos do mesmo tipo $\CK$,
-\[
- \Aloc(K):=\{g:\CK:\exists\Lambda,\ \Loc_K(g,\Lambda)\},\qquad
- \Astr(K):=\{g:\CK:\exists\Lambda,\ \Str_K(g,\Lambda)\}.
-\]
+\begin{align*}
+ \Aloc(K)&:=\{g:\CK:\exists\Lambda,\ \Loc_K(g,\Lambda)\},\\
+ \Astr(K)&:=\{g:\CK:\exists\Lambda,\ \Str_K(g,\Lambda)\}.
+\end{align*}
 \end{definicao}
 
 A igualdade das retas em $J_a\cap J_b\cap K$ é consequência de
-$\Match$: ambas têm o valor $g(x)$. A cláusula $\Agree$ exige
-igualdade também nos encontros fora de $K$.
+$\Match$: ambas assumem o valor $g(x)$. A cláusula $\Agree$ exige
+igualdade também nos encontros exteriores a $K$.
 
 % MAPA normalizacao:3.2
 \begin{definicao}[atividade e filtro]\label{map:normalizacao:3.2}\label{normalizacao:def:norm}
@@ -252,15 +253,15 @@ Para todo $a:\Atoms$,
 \end{lema}
 \begin{proof}
 Um ponto da interseção implica as duas desigualdades. Reciprocamente,
-ponha $v=\max\{L_a,\alpha\}$ e $w=\min\{R_a,\beta\}$. De
+sejam $v=\max\{L_a,\alpha\}$ e $w=\min\{R_a,\beta\}$. De
 $L_a<R_a$, $\alpha<\beta$ e das duas desigualdades segue $v<w$.
 O ponto $(v+w)/2$ pertence a ambos os intervalos abertos.
 \end{proof}
 
 \paragraph{Decidibilidade.}
-Para $\alpha,\beta\in\R$, o filtro é definido em Lean usando
-\code{Classical.propDecidable}; isso é uma escolha lógica de
-instâncias, não uma rotina efetiva de comparação de reais.
+Para $\alpha,\beta\in\R$, o filtro é definido em Lean por meio de
+\code{Classical.propDecidable}; trata-se de uma escolha lógica de
+instâncias, e não de uma rotina efetiva de comparação de reais.
 Se os extremos são racionais, o lema~\ref{normalizacao:lem:active} fornece um filtro
 executável por comparações racionais exatas.
 
@@ -271,9 +272,9 @@ $v\le p$ ou $q\le u$. Se $[u,v]\cap[p,q]$ é não vazio, ele é
 uma única extremidade comum.
 \end{lema}
 \begin{proof}
-A negação das duas desigualdades dá
-$\max\{u,p\}<\min\{v,q\}$. Seu ponto médio contradiz a
-disjunção. No caso $v\le p$, uma interseção implica $v=p$ e
+A negação das duas desigualdades fornece
+$\max\{u,p\}<\min\{v,q\}$. O ponto médio desse intervalo contradiz a
+disjunção. No caso $v\le p$, uma interseção implica $v=p$, e
 ela é $\{v\}$. O outro caso é simétrico.
 \end{proof}
 
@@ -294,25 +295,25 @@ $\Loc^G_K(G,\Lambda)$; nesse caso a função $G$ inteira é preservada.
 A inclusão e a cota de cardinalidade são propriedades de filtro.
 Se $x\in K^\circ$ e $x\in J_a$ com $a\in\Lambda$, então
 $L_a\le x<\beta$ e $\alpha<x\le R_a$. O
-lema~\ref{normalizacao:lem:active} implica $\Act_K(a)$. Logo
+lema~\ref{normalizacao:lem:active} implica $\Act_K(a)$. Logo,
 $K^\circ\subseteq U:=\bigcup_{a\in\Lambda'}J_a$.
-$U$ é uma união finita de fechados e, portanto, é fechado.
-Assim $K=\cls(K^\circ)\subseteq U$. Como $\alpha\in K$,
-a família $\Lambda'$ não é vazia.
+Como $U$ é uma união finita de fechados, é fechado.
+Assim, $K=\cls(K^\circ)\subseteq U$. Como $\alpha\in K$,
+a família $\Lambda'$ é não vazia.
 
 Para $a\ne b$ retidos, o lema~\ref{normalizacao:lem:separated} mostra que
 uma interseção não vazia é $\{z\}$, com
-$R_a=z=L_b$ após eventual troca dos nomes. Escolha pontos ativos
-$u\in O_a\cap K^\circ$ e $v\in O_b\cap K^\circ$. Então
-$\alpha<u<z<v<\beta$, provando a terceira conclusão.
+$R_a=z=L_b$, após eventual troca dos nomes. Escolhem-se pontos ativos
+$u\in O_a\cap K^\circ$ e $v\in O_b\cap K^\circ$. Então,
+$\alpha<u<z<v<\beta$, o que prova a terceira conclusão.
 
-Disjunção dos interiores e coincidência com $g$ são herdadas da
+A disjunção dos interiores e a coincidência com $g$ são herdadas da
 família original. Em cada interseção entre átomos distintos retidos,
 a terceira conclusão permite escrever
 $\ell_a(z)=g(z)=\ell_b(z)$. Para átomos iguais, a igualdade é
-reflexiva. Obtemos $\Agree(\Lambda')$ e, portanto, $\Str$.
-A idempotência segue da equivalência de pertinência do filtro:
-$P\land P\Longleftrightarrow P$. O argumento global usa
+reflexiva. Obtém-se $\Agree(\Lambda')$ e, portanto, $\Str$.
+A idempotência decorre da equivalência de pertinência do filtro:
+$P\land P\Longleftrightarrow P$. O argumento global emprega
 $G(z)$ no lugar de $g(z)$ e não altera $G$ em nenhum ponto.
 \end{proof}
 
@@ -321,14 +322,14 @@ $G(z)$ no lugar de $g(z)$ e não altera $G$ em nenhum ponto.
 $\Aloc(K)=\Astr(K)$ como subconjuntos de $\CK$.
 \end{corolario}
 \begin{proof}
-Esquecer $\Agree$ dá uma inclusão. Aplicar o
-teorema~\ref{normalizacao:thm:norm} a uma testemunha local dá a outra.
+O esquecimento de $\Agree$ fornece uma inclusão. A aplicação do
+teorema~\ref{normalizacao:thm:norm} a uma testemunha local fornece a outra.
 \end{proof}
 
 \section{Enumerações fixadas por fórmulas}
 \label{normalizacao:sec:enumeration}
 
-As enumerações usadas nesta seção são determinadas pelas fórmulas do
+As enumerações utilizadas nesta seção são determinadas pelas fórmulas do
 pacote examinado. Uma sobrejeção abstrata não substitui esses dados.
 
 % MAPA normalizacao:4.1
@@ -372,16 +373,16 @@ são inversas. A expressão de $w$ usada no código é
 com raiz quadrada inteira \code{Nat.sqrt} e divisão natural.
 \end{lema}
 \begin{proof}
-A recorrência dá $T(j+1)-T(j)=j+1>0$ e $T(j)\ge j$.
+A recorrência fornece $T(j+1)-T(j)=j+1>0$ e $T(j)\ge j$.
 A definição de máximo fornece a primeira desigualdade. Se
-$T(w+1)\le n$, então $w+1\le n$, contradizendo a maximalidade;
-logo vale a segunda. Portanto $0\le n-T(w)<w+1$ e $v\le w$.
-Como $u+v=w$, temos $\pi(u,v)=T(w)+v=n$.
+$T(w+1)\le n$, então $w+1\le n$, o que contradiz a maximalidade;
+logo, vale a segunda. Portanto, $0\le n-T(w)<w+1$ e $v\le w$.
+Como $u+v=w$, tem-se $\pi(u,v)=T(w)+v=n$.
 Para um par dado, $T(u+v)\le\pi(u,v)<T(u+v+1)$ determina
-unicamente a diagonal e, nela, $v$. Isso prova as duas identidades.
-As inversas dos mapas em quatro coordenadas seguem por três aplicações.
-Por fim, $8T(w)+1=(2w+1)^2$; as desigualdades da diagonal dão
-$2w+1\le\sqrt{8n+1}<2w+3$, que implica a fórmula inteira.
+univocamente a diagonal e, nela, $v$. Isso prova as duas identidades.
+As inversas dos mapas em quatro coordenadas decorrem de três aplicações.
+Por fim, $8T(w)+1=(2w+1)^2$; as desigualdades da diagonal fornecem
+$2w+1\le\sqrt{8n+1}<2w+3$, o que implica a fórmula inteira.
 \end{proof}
 
 % MAPA normalizacao:4.3
@@ -447,27 +448,27 @@ $Q_i^*(\rankq_i^*(s))=s$.
 \end{lema}
 \begin{proof}
 Para altura $H\ge1$, a parte da chave $\kappa$ posterior a $4H^3$
-está entre zero e $2H^2+3H$, que é menor que
-$4(H+1)^3-4H^3$. Logo alturas diferentes são comparadas primeiro
-pela altura. A altura fixa, aumentar o denominador em um aumenta
-a chave em pelo menos $(2H+1)-2H=1$, e a denominador fixo o
-numerador decide a ordem. Assim $\prec_{\rm c}$ é precisamente a
+situa-se entre zero e $2H^2+3H$, valor menor que
+$4(H+1)^3-4H^3$. Logo, alturas diferentes são comparadas primeiro
+pela altura. Fixada a altura, o aumento do denominador em uma unidade eleva
+a chave em pelo menos $(2H+1)-2H=1$ e, fixado o denominador, o
+numerador decide a ordem. Assim, $\prec_{\rm c}$ é precisamente a
 ordem lexicográfica. Qualquer predecessor de $r$ tem altura no
-máximo $\htq(r)$, justificando os filtros finitos.
+máximo $\htq(r)$, o que justifica os filtros finitos.
 
 Em qualquer ordem linear infinita com conjuntos finitos de
-predecessores, o posto dado por sua cardinalidade é estritamente
+predecessores, o posto dado pela sua cardinalidade é estritamente
 crescente: se $a\prec b$, os predecessores de $a$ estão entre os de
-$b$, e $a$ pertence somente ao segundo conjunto. Logo o posto é
-injetivo. Sua imagem é infinita, portanto não limitada em $\N$.
-Dado $n$, escolha $b$ com posto pelo menos $n$. O conjunto finito
-ordenado $\pred(b)\cup\{b\}$ tem um elemento na posição $n$,
-contando a partir de zero. Todos os predecessores desse elemento
-pertencem a esse conjunto, e são exatamente os $n$ elementos
-anteriores; seu posto é $n$. Isso prova sobrejetividade.
+$b$, e $a$ pertence somente ao segundo conjunto. Logo, o posto é
+injetivo. A sua imagem é infinita e, portanto, não limitada em $\N$.
+Dado $n$, escolhe-se $b$ com posto no mínimo igual a $n$. O conjunto finito
+ordenado $\pred(b)\cup\{b\}$ possui um elemento na posição $n$,
+contada a partir de zero. Todos os predecessores desse elemento
+pertencem a esse conjunto e são exatamente os $n$ elementos
+anteriores; o seu posto é $n$. Isso prova a sobrejetividade.
 A ordem de $\Q$ é infinita pela inclusão de $\Z$; a ordem restrita a
 $\qstar$ é infinita pela inclusão dos inteiros positivos.
-As identidades das inversas decorrem de existência e unicidade.
+As identidades das inversas decorrem da existência e da unicidade.
 \end{proof}
 
 % MAPA normalizacao:4.6
@@ -512,7 +513,7 @@ $\tau_{i\to j}:=\enc_j\circ\dec_i:\N\to\N$. Ela satisfaz
 As duas primeiras identidades resultam das inversas de
 $\operatorname{pack}$, $Z$ e dos postos racionais, coordenada a
 coordenada. A identidade de retas é o lema~\ref{normalizacao:lem:line}.
-Substituir $a=\dec_i(n)$ na primeira identidade prova todas as
+A substituição de $a=\dec_i(n)$ na primeira identidade prova todas as
 propriedades de $\tau$.
 \end{proof}
 
@@ -585,24 +586,24 @@ As funções de conversão são as seguintes.
 \end{lema}
 \begin{proof}
 \emph{Células para átomos.} Dada $(F,e)$ válida para a fase $i$,
-defina
+define-se
 \[
  T_i(F,e):=\operatorname{image}
              (c\mapsto\dec_i(e(c)),F):\FS(\Atoms).
 \]
 A compatibilidade $C_i(e(c))=c$ mostra que esse mapa é injetivo em
 $F$: a igualdade dos átomos implica a igualdade das células.
-Logo $|T_i(F,e)|=|F|$. As cláusulas de disjunção, cobertura e
+Logo, $|T_i(F,e)|=|F|$. As cláusulas de disjunção, cobertura e
 coincidência com $g$ são transportadas pelo lema~\ref{normalizacao:lem:codec}.
 
-\emph{Átomos para células.} Suponha $\Sep(\Lambda)$. O mapa
+\emph{Átomos para células.} Suponha-se $\Sep(\Lambda)$. O mapa
 $C$ é injetivo em $\Lambda$. De fato, se $a\ne b$ tivessem a
-mesma célula, então $O_a=O_b\ne\varnothing$, contradizendo
-$\Sep$. Defina
+mesma célula, então $O_a=O_b\ne\varnothing$, o que contradiria
+$\Sep$. Define-se
 \[
  I(\Lambda):=\operatorname{image}(C,\Lambda):\FS(\Cell).
 \]
-Para todo $c:\Cell$, defina a função total
+Para todo $c:\Cell$, define-se a função total
 \[
  \sigma_\Lambda(c)=
  \begin{cases}
@@ -612,9 +613,9 @@ Para todo $c:\Cell$, defina a função total
  \end{cases}
 \]
 A unicidade foi provada, e a existência é a equivalência de
-pertinência da imagem. Em Lean, essa é uma descrição única sob
+pertinência da imagem. Em Lean, trata-se de uma descrição única sob
 \code{Classical}; nenhum átomo novo é introduzido na família.
-Defina a função de endereçamento total
+Define-se a função de endereçamento total
 \[
  e_{i,\Lambda}:\Cell\to\N,\qquad
  e_{i,\Lambda}(c):=\enc_i(\sigma_\Lambda(c)).
@@ -628,7 +629,7 @@ $|I(\Lambda)|=|\Lambda|$ e
 \]
 Na direção oposta, $I(T_i(F,e))=F$, e o endereçamento reconstruído
 coincide com $e$ em $F$, pela identidade $\enc_i\circ\dec_i=\mathrm{id}$.
-As mesmas construções e provas usam $\Match^G$ para funções globais.
+As mesmas construções e provas valem com $\Match^G$ para funções globais.
 \end{proof}
 
 % MAPA normalizacao:5.5
@@ -660,19 +661,19 @@ $\mathcal B_3(K)=\mathcal B_{\rm con}(K)$.
 \begin{proof}
 O lema~\ref{normalizacao:lem:witnesses} identifica $\mathcal B_2(K)$ com
 $\Aloc(K)$ e traduz as testemunhas globais da Fase 3 para
-$\Loc^G$. A restrição de cada função global com continuidade em
+$\Loc^G$. A restrição de cada função global contínua em
 $K$ produz um elemento de $\CK$ com a mesma representação.
 Reciprocamente, $E_0(g)$ é uma função global contínua com a mesma
 coincidência com as peças em $K$. Isso prova as duas igualdades
 de imagens de restrição. O corolário~\ref{normalizacao:cor:classes} identifica
 as classes local e consolidada no tipo $\CK$.
 
-Para a igualdade no tipo global, converta uma testemunha de
-$\mathcal B_3(K)$ em átomos e aplique a versão global do
-teorema~\ref{normalizacao:thm:norm}. A função global $G$ não muda. Na outra
-direção, esqueça $\Agree$ e converta os átomos para células da
+Para a igualdade no tipo global, converte-se uma testemunha de
+$\mathcal B_3(K)$ em átomos e aplica-se a versão global do
+teorema~\ref{normalizacao:thm:norm}. A função global $G$ permanece inalterada. Na outra
+direção, esquece-se $\Agree$ e convertem-se os átomos em células da
 Fase 3 pelo lema~\ref{normalizacao:lem:witnesses}. A continuidade em $K$ é
-preservada nas duas direções.
+preservada nos dois sentidos.
 \end{proof}
 
 \section{Orçamentos e erro com codomínio completo}
@@ -701,9 +702,9 @@ Para todos $N,H:\N$ com $H\ge2$,
 $\Aloc_{N,H}(K)=\Astr_{N,H}(K)$.
 \end{teorema}
 \begin{proof}
-A normalização produz um subconjunto da testemunha original, logo
+A normalização produz um subconjunto da testemunha original e, portanto,
 preserva o limite de cardinalidade e cada cota $h(a)\le H$.
-Isso dá a inclusão local para consolidada. A inclusão inversa usa
+Isso fornece a inclusão da classe local na consolidada. A inclusão inversa utiliza
 a própria testemunha consolidada e esquece $\Agree$.
 \end{proof}
 
@@ -747,7 +748,7 @@ naturais coincidem.
 \begin{proof}
 O teorema~\ref{normalizacao:thm:budget} identifica exatamente os conjuntos sobre
 os quais os ínfimos são tomados. A igualdade dos conjuntos de alturas
-segue substituindo esses valores iguais; um subconjunto não vazio
+decorre da substituição desses valores iguais; todo subconjunto não vazio
 de $\N$ possui um único menor elemento.
 \end{proof}
 
@@ -758,15 +759,15 @@ $\Norm_K(\Lambda)=\Lambda$. Em particular, isso vale se
 $J_a\subseteq K$ para todo $a\in\Lambda$.
 \end{proposicao}
 \begin{proof}
-A primeira afirmação é a regra de pertinência do filtro. Para a
-segunda, $\alpha\le L_a<X_a<R_a\le\beta$, logo
+A primeira afirmação é a regra de pertinência do filtro. Quanto à
+segunda, $\alpha\le L_a<X_a<R_a\le\beta$ e, portanto,
 $X_a\in O_a\cap K^\circ$.
 \end{proof}
 
-Assim, nas testemunhas cujas células já estão dentro de $K$, a
-normalização mantém cada rótulo e a própria família, além das
-cotas de recursos. Para as demais testemunhas, a igualdade de classes
-é obtida removendo somente átomos inativos.
+Assim, nas testemunhas cujas células já estão contidas em $K$, a
+normalização preserva cada rótulo e a própria família, bem como as
+cotas de recursos. Nas demais testemunhas, a igualdade de classes
+é obtida pela remoção exclusiva de átomos inativos.
 
 \section{Ordenação finita e cadeia normalizada}
 \label{normalizacao:sec:chain}
@@ -810,16 +811,16 @@ em $\triangleleft$. Se $\Sep(F)$, seus extremos esquerdos são
 estritamente crescentes.
 \end{lema}
 \begin{proof}
-As quatro primeiras propriedades seguem por indução em $|F|$:
+As quatro primeiras propriedades decorrem de indução em $|F|$:
 o caso vazio é imediato; no passo, o mínimo pertence a $F$, é
 removido antes da chamada recursiva e precede estritamente todos
-os elementos restantes. A fórmula do comprimento dá $|F|$.
+os elementos restantes. A fórmula do comprimento fornece $|F|$.
 
 Sob $\Sep(F)$, dois átomos distintos não podem ter o mesmo
 extremo esquerdo. Se $L_a=L_b=L$, o intervalo
-$(L,\min\{R_a,R_b\})$ é não vazio e está em $O_a\cap O_b$.
+$(L,\min\{R_a,R_b\})$ é não vazio e está contido em $O_a\cap O_b$.
 Como a primeira coordenada de $\zeta$ é $L_\Q$, a ordem da lista
-é então estrita também nessa coordenada.
+é, então, estrita também nessa coordenada.
 \end{proof}
 
 % MAPA normalizacao:7.3
@@ -859,23 +860,23 @@ $\operatorname{NormChain}_K(\Lambda)$ pela seguinte construção:
 Não há escolhas de enumeração adicionais nessa construção.
 \end{teorema}
 \begin{proof}
-O teorema~\ref{normalizacao:thm:norm} dá $F\ne\varnothing$, logo $M\ge1$
+O teorema~\ref{normalizacao:thm:norm} fornece $F\ne\varnothing$; logo, $M\ge1$
 e o índice zero de $a$ existe. O lema~\ref{normalizacao:lem:sort} garante
 que $a$ enumera $F$ bijetivamente e que $L_{a_j}<L_{a_{j+1}}$.
-Para quaisquer $i<j$, o lema~\ref{normalizacao:lem:separated} dá
-$R_{a_i}\le L_{a_j}$: a outra ordenação contradiz a ordem
+Para quaisquer $i<j$, o lema~\ref{normalizacao:lem:separated} fornece
+$R_{a_i}\le L_{a_j}$: a ordenação contrária contradiria a ordem
 estrita dos extremos esquerdos.
 
-Para índices consecutivos, suponha
-$R_{a_j}<L_{a_{j+1}}$. Seja
-$z=(R_{a_j}+L_{a_{j+1}})/2$. Escolha pontos ativos
+Para índices consecutivos, suponha-se
+$R_{a_j}<L_{a_{j+1}}$ e seja
+$z=(R_{a_j}+L_{a_{j+1}})/2$. Escolhem-se pontos ativos
 $u\in O_{a_j}\cap K^\circ$ e
-$v\in O_{a_{j+1}}\cap K^\circ$. Temos
-$\alpha<u<z<v<\beta$, logo $z\in K$.
+$v\in O_{a_{j+1}}\cap K^\circ$. Tem-se
+$\alpha<u<z<v<\beta$ e, portanto, $z\in K$.
 Para $i\le j$, a ordenação fornece $R_{a_i}\le R_{a_j}<z$;
-para $i\ge j+1$, temos $z<L_{a_{j+1}}\le L_{a_i}$.
-Assim nenhuma célula de $F$ contém $z$, contrariando sua cobertura.
-Concluímos
+para $i\ge j+1$, tem-se $z<L_{a_{j+1}}\le L_{a_i}$.
+Assim, nenhuma célula de $F$ contém $z$, o que contraria a sua cobertura.
+Conclui-se
 \[
  R_{a_j}=L_{a_{j+1}}\qquad(0\le j<M-1).
 \]
@@ -883,10 +884,10 @@ Isso prova a terceira cláusula da cadeia e, como cada largura é
 positiva, também a segunda. A cobertura de $\alpha$ e de $\beta$
 fornece $L_{a_0}\le\alpha$ e $\beta\le R_{a_{M-1}}$.
 Cada nó interno é a interseção de duas células distintas de $F$;
-o teorema~\ref{normalizacao:thm:norm} o situa em $K^\circ$.
-Todos os nós são racionais por sua fórmula e diádicos pelo
+o teorema~\ref{normalizacao:thm:norm} situa-o em $K^\circ$.
+Todos os nós são racionais pela sua fórmula e diádicos pelo
 lema~\ref{normalizacao:lem:geometry}. Cada campo de
-$\operatorname{NormChain}$ foi assim construído e justificado.
+$\operatorname{NormChain}$ foi, assim, construído e justificado.
 \end{proof}
 
 \section{Extensão ReLU por recursão finita}
@@ -941,13 +942,13 @@ Em particular,
 Se $M=1$, $R(q)=\ell_{a_0}$ em toda a reta.
 \end{lema}
 \begin{proof}
-A primeira identidade é indução em $r$: a soma inicial é vazia,
+A primeira identidade resulta de indução em $r$: a soma inicial é vazia,
 e a cláusula sucessora acrescenta exatamente o termo $j=r+1$.
-Tome $r=M-1$ para obter \eqref{normalizacao:eq:relu_sum}. Pelo
+Toma-se $r=M-1$ para obter \eqref{normalizacao:eq:relu_sum}. Pelo
 lema~\ref{normalizacao:lem:line},
 $\ell_{a_0}(\uparrow t_0)=\uparrow c_0+\uparrow s_0\,\uparrow t_0$,
-que dá \eqref{normalizacao:eq:relu_anchor}. Para $M=1$, não existe termo de
-correção e a função inicial é a primeira reta.
+o que fornece \eqref{normalizacao:eq:relu_anchor}. Para $M=1$, não existe termo de
+correção, e a função inicial é a primeira reta.
 \end{proof}
 
 % MAPA normalizacao:8.3
@@ -961,10 +962,10 @@ $\ell_{a_{j+1}}(\uparrow t_{j+1})=
 \]
 \end{lema}
 \begin{proof}
-Escreva as duas retas como intercepto mais inclinação vezes $x$.
+Escrevem-se as duas retas como intercepto mais inclinação vezes $x$.
 A igualdade em $\uparrow t_{j+1}$ determina a diferença dos
 interceptos como $-\uparrow(s_{j+1}-s_j)\uparrow t_{j+1}$.
-Substituir essa diferença e fatorar prova a identidade.
+A substituição dessa diferença e a fatoração provam a identidade.
 \end{proof}
 
 % MAPA normalizacao:8.4
@@ -993,25 +994,25 @@ Por indução, para $r<M$,
  F_r(x)=\ell_{a_r}(x)\quad\text{se }x\ge\uparrow t_r.
 \]
 O caso $r=0$ decorre da forma global da primeira reta.
-No passo, $x\ge\uparrow t_{r+1}>\uparrow t_r$ permite usar a
+No passo, $x\ge\uparrow t_{r+1}>\uparrow t_r$ permite empregar a
 hipótese de indução, e
 $\rho(x-\uparrow t_{r+1})=x-\uparrow t_{r+1}$. A identidade
 de retas incidentes produz precisamente $\ell_{a_{r+1}}(x)$.
 
 Se $x\in[\uparrow t_j,\uparrow t_{j+1}]$, a identidade anterior
 vale para $F_j(x)$. Todos os termos posteriores têm nós
-$\uparrow t_r\ge\uparrow t_{j+1}$ e, portanto, são zero nesse
-ponto. Segue a primeira conclusão. A cobertura por essas células
-e $\Match_K(g,\Norm_K(\Lambda))$ dão a segunda.
-À esquerda de $\uparrow t_0$, todas as correções são zero; quando
+$\uparrow t_r\ge\uparrow t_{j+1}$ e, portanto, anulam-se nesse
+ponto, o que fornece a primeira conclusão. A cobertura por essas células
+e $\Match_K(g,\Norm_K(\Lambda))$ fornecem a segunda.
+À esquerda de $\uparrow t_0$, todas as correções são nulas; quando
 $M>1$, o mesmo vale até $\uparrow t_1$. À direita de
-$\uparrow t_{M-1}$, a identidade indutiva para $F_{M-1}$ dá a
+$\uparrow t_{M-1}$, a identidade indutiva para $F_{M-1}$ fornece a
 última reta. O caso $M=1$ é o lema~\ref{normalizacao:lem:sum}.
 
 Cada $F_r$ é contínua por indução: a inicial é afim, $\rho$ é
-contínua como máximo de funções contínuas, e soma, translação e
-produto por constante preservam continuidade. A racionalidade
-vem dos tipos de $c_0,s_0,w_j,t_j$. A localização e a diadicidade
+contínua como máximo de funções contínuas, e a soma, a translação e o
+produto por constante preservam a continuidade. A racionalidade
+decorre dos tipos de $c_0,s_0,w_j,t_j$. A localização e a diadicidade
 dos nós foram provadas no teorema~\ref{normalizacao:thm:chain}.
 \end{proof}
 
@@ -1021,9 +1022,9 @@ Se duas funções afins coincidem em dois pontos distintos, coincidem
 em toda a reta.
 \end{lema}
 \begin{proof}
-Subtraia as duas igualdades de valores. O resultado é
+Subtraem-se as duas igualdades de valores, o que resulta em
 $(s-s')(x_2-x_1)=0$. Como $x_1\ne x_2$, as inclinações são
-iguais; qualquer uma das igualdades originais dá a igualdade dos
+iguais; qualquer uma das igualdades originais fornece a igualdade dos
 interceptos.
 \end{proof}
 
@@ -1036,7 +1037,7 @@ $R(q)=R(q')$ como funções $\R\to\R$.
 \end{teorema}
 \begin{proof}
 As extensões coincidem em $K$ pelo teorema~\ref{normalizacao:thm:extension}.
-Para cada cadeia, defina o número positivo
+Para cada cadeia, define-se o número positivo
 \[
  \eta_L(q)=\begin{cases}
  \uparrow t_1-\alpha,&M>1,\\
@@ -1044,21 +1045,21 @@ Para cada cadeia, defina o número positivo
  \end{cases}
 \]
 A positividade decorre da localização dos nós internos e de $h_K$.
-Ponha
+Seja
 $\delta_L=\tfrac12\min\{\beta-\alpha,\eta_L(q),\eta_L(q')\}>0$.
-As duas extensões são suas respectivas primeiras retas em
-$(-\infty,\alpha+\delta_L]$. Elas coincidem em
+As duas extensões coincidem com as respectivas primeiras retas em
+$(-\infty,\alpha+\delta_L]$ e coincidem entre si em
 $x_1=\alpha+\delta_L/3$ e
 $x_2=\alpha+2\delta_L/3$, dois pontos distintos de $K$.
 O lema~\ref{normalizacao:lem:two_points} identifica as primeiras retas
-em toda a reta, logo as extensões coincidem para $x\le\alpha$.
+em toda a reta; logo, as extensões coincidem para $x\le\alpha$.
 
-À direita, use
+À direita, emprega-se
 $\eta_R(q)=\beta-\uparrow t_{M-1}$ se $M>1$, e
-$\eta_R(q)=\beta-\alpha$ se $M=1$; defina $\delta_R$
-pelo mesmo mínimo e use os pontos
+$\eta_R(q)=\beta-\alpha$ se $M=1$; define-se $\delta_R$
+pelo mesmo mínimo e utilizam-se os pontos
 $\beta-\delta_R/3$ e $\beta-2\delta_R/3$.
-As últimas retas coincidem, logo as extensões coincidem para
+As últimas retas coincidem; logo, as extensões coincidem para
 $x\ge\beta$. Esses dois conjuntos e $K$ cobrem $\R$.
 \end{proof}
 
@@ -1077,20 +1078,20 @@ $\Res_K(\mathcal E_K(g))=g$.
 \end{definicao}
 
 Em \eqref{normalizacao:eq:relu_anchor}, o valor inicial é
-$\ell_{a_0}(\uparrow t_0)$, definido em toda a reta. Também é
+$\ell_{a_0}(\uparrow t_0)$, definido em toda a reta, e coincide com
 $\mathcal E_K(g)(\uparrow t_0)$. A avaliação direta de $g(t_0)$
-só é uma expressão bem tipada quando $\uparrow t_0\in K$.
+constitui uma expressão bem tipada apenas quando $\uparrow t_0\in K$.
 
 \clearpage
 \setcounter{section}{0}\renewcommand{\thesection}{II.\Alph{section}}
 \section{Vinculação às definições Lean existentes}
 \label{normalizacao:sec:adapters}
 
-A correspondência abaixo fixa o significado dos nomes do pacote
-\code{Biblioteca_Lean_Equivalencias_v2_COMPLETO.zip}. Ela é uma
+A correspondência a seguir fixa o significado dos nomes do pacote
+\code{Biblioteca_Lean_Equivalencias_v2_COMPLETO.zip}. Trata-se de uma
 especificação de integração: os lemas de identificação devem ser
-provados ao reutilizar as definições existentes. A definição matemática
-não fica a cargo de uma nova escolha do formalizador.
+provados mediante a reutilização das definições existentes. A definição
+matemática não fica a cargo de uma nova escolha do formalizador.
 
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
 \toprule
@@ -1145,7 +1146,7 @@ Conversão local para consolidada sob esse critério &
 \end{longtable}
 
 \paragraph{Predicados auxiliares importados.}
-Para tornar explícitas as duas linhas auxiliares da tabela, defina
+Para explicitar as duas linhas auxiliares da tabela, define-se
 \begin{align*}
  \operatorname{InnerAgree}_K(\Lambda)
  &:\Longleftrightarrow
@@ -1155,19 +1156,19 @@ Para tornar explícitas as duas linhas auxiliares da tabela, defina
  &:\Longleftrightarrow
  \forall a,b\in\Lambda,\ a\ne b\Rightarrow J_a\cap J_b\subseteq K.
 \end{align*}
-O predicado importado \code{IsAssemblyRepOn K G Lambda} é
-$\Loc^G_K(G,\Lambda)\land\operatorname{InnerAgree}_K(\Lambda)$,
+O predicado importado \code{IsAssemblyRepOn K G Lambda} equivale à conjunção
+de $\Loc^G_K(G,\Lambda)$ e $\operatorname{InnerAgree}_K(\Lambda)$,
 com a associação de conjunções expandida na sua definição original.
 A concordância interna deriva de $\Match^G$. Sob
 $\operatorname{IntersectionsInside}_K(\Lambda)$, ela implica
-$\Agree(\Lambda)$, pois encontros de átomos iguais têm igualdade
-reflexiva e encontros de átomos distintos estão em $K$.
+$\Agree(\Lambda)$, pois os encontros de átomos iguais têm igualdade
+reflexiva e os encontros de átomos distintos situam-se em $K$.
 
 \paragraph{Identidades obrigatórias dos adaptadores.}
 Se o tipo existente de átomos é importado, $\Atoms$ deve ser um
 alias desse tipo, com as projeções indicadas na tabela.
 As duas construções \code{ofFase2} e \code{ofFase3} são fixadas
-por seus quatro campos de dados. As identidades de integração
+pelos seus quatro campos de dados. As identidades de integração
 requeridas são
 \[
  \begin{aligned}
@@ -1180,11 +1181,11 @@ Para $i=2,3$, devem ser transportadas também as identidades
  J_{\dec_i(n)}=J(C_i(n)),\qquad
  \ell_{\dec_i(n)}=\lambda_i(n,\cdot).
 \]
-As primeiras duas igualdades seguem expandindo pareamento, enumeração dos
-inteiros e inversas dos postos definidos na
-seção~\ref{normalizacao:sec:enumeration}. As identidades de suporte e reta seguem das
+As duas primeiras igualdades decorrem da expansão do pareamento, da
+enumeração dos inteiros e das inversas dos postos definidos na
+seção~\ref{normalizacao:sec:enumeration}. As identidades de suporte e de reta decorrem das
 seções~\ref{normalizacao:sec:objects} e \ref{normalizacao:sec:enumeration}.
-A equivalência dos predicados é então provada campo a campo,
+A equivalência dos predicados é, então, provada campo a campo,
 incluindo as coerções entre $x:\R$ com prova $x\in K$ e $z:K$.
 
 O enunciado final no tipo global é
@@ -1237,12 +1238,10 @@ coincidência em $K$ e independência da testemunha.\\
 \end{longtable}
 
 A normalização e as igualdades das classes encerram-se nas etapas 4 e 6.
-A extensão ReLU depende dessas etapas e pode ser formalizada depois,
+A extensão ReLU depende dessas etapas e pode ser formalizada posteriormente,
 em lemas separados.
 
 As inversas únicas e as decisões clássicas sobre reais podem ser definidas
-com \code{noncomputable}. A marca não comprova seus contratos:
-decodificação, suporte, cobertura e igualdade de funções continuam
+com \code{noncomputable}. Essa marca não comprova os respectivos contratos:
+a decodificação, o suporte, a cobertura e a igualdade de funções continuam
 exigindo provas. As equivalências não exigem computabilidade.
-
-

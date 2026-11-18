@@ -4630,14 +4630,14 @@ certificado da descrição do refinamento certificado em \citet{artigo_2-oliveir
 \label{artigo_2:thm:threshold-optimality}
 Se $f\in C(K)$, então $T_\varepsilon(f)$ é finita e é a única árvore
 menos refinada (\emph{coarsest}) cuja interpolação tem erro no máximo $\varepsilon$. Em particular,
-ela possui o menor número de folhas entre todas as árvores viáveis e
+ela possui o menor número de folhas entre todas as árvores viáveis e, para todo inteiro $N\ge1$,
 \begin{equation}
  E_N^{\rm dia}(f)_\infty\le\varepsilon
  \quad\Longleftrightarrow\quad
  n_f(\varepsilon)\le N,
  \qquad
  E_N^{\rm dia}(f)_\infty
- =\inf\{\varepsilon>0:n_f(\varepsilon)\le N\}.
+ =\inf\{\varepsilon>0:n_f(\varepsilon)\le N\}\quad(N\ge1).
  \label{artigo_2:eq:threshold-inversion}
 \end{equation}
 \end{theorem}
@@ -4731,7 +4731,8 @@ Se $f\in C^2(K)$ e $I(f)>0$, então
  \label{artigo_2:eq:budget-envelope}
 \end{align}
 As afirmações continuam válidas se $f''$ possui zeros ou muda de sinal. Se
-$I(f)=0$, então $f$ é afim e ambos os erros são identicamente zero.
+$I(f)=0$, então $f$ é afim em $K$, $n_f(\varepsilon)=1$ para todo $\varepsilon>0$ e
+$E_N^{\rm dia}(f)_\infty=0$ para todo inteiro $N\ge1$.
 \end{theorem}
 
 \begin{proof}

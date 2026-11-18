@@ -132,3 +132,33 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 ## Efeito sobre o mapa
 
 O mapa mantém o estado original de cada entrada; esta reauditoria acrescenta o veredito acima. Ela **não** muda o número de provas formais nem fecha as ressalvas listadas.
+
+## Atualização: lacunas fechadas e lacunas abertas
+
+Esta seção registra a rodada posterior. Os vereditos da tabela acima valem para a data da reauditoria; onde esta seção diverge, vale esta.
+
+**Fechadas por Lean (cláusula de forma acrescentada e conferida pelo Lean):**
+
+| Item | Declaração acrescentada | Arquivo |
+|---|---|---|
+| I.2.1 | `Fase3.cunpair_eq_floor` (inversa com `w`, `v = n - T_w`, `u = w - v`) | `base_integrada/Unified/Fase3/Indexing.lean` |
+| I.2.2 | `Fase3.zEnum_formula`, `Fase3.zInv_formula` (duas ramas de `Z` e `Z⁻¹`) | idem |
+| I.3.3 | `Fase3.library_nondegenerate` (não degenerescência de `[c_n, d_n]` para toda a biblioteca) | `base_integrada/Unified/Fase3/Cells.lean` |
+| I.4.2 | `Fase3.isAssembly_pieces_nonzero_slope` (peças são átomos com inclinação não nula) | `base_integrada/Unified/Fase3/Assembly.lean` |
+| II.7.1 | `Montagens.zeta_injective` (injetividade da chave lexicográfica; já existia, agora citada no mapa) | `parte_1/RequestProject/Chain.lean` |
+
+**Fechada por leitura do texto:** III.12.5–III.12.8, ressalva «massa pontual». O próprio artigo define «massa pontual» como `|f''| ∈ c₀4^ℤ` quase sempre em `{f'' ≠ 0}` (`tex/partes/artigo_2.tex`, corolário de III.12.8), que é exatamente `FourPowers`. Não há divergência entre o enunciado Lean e o texto.
+
+**Referências Lean agora conferidas pelo verificador:** III.12.3, III.12.5–III.12.8 citavam declarações Lean só na prosa, e por isso não eram verificadas. Os 66 nomes citados foram registrados como referências estruturadas, e o Lean confirma todos (`mapas/verificar_mapa.py`).
+
+**Abertas (não formalizadas nesta rodada):**
+
+- **III.3.2** (assintótica `288/π⁴`). O Mathlib tem `ζ(2) = π²/6`, mas não a assintótica de `∑_{q≤H} φ(q)` necessária para contar os pares coprimos. Falta formalizar essa soma, por exemplo por inversão de Möbius com a hipérbole de Dirichlet. É um projeto à parte.
+- **III.3.7** (`Computable` de `GammaSharp` e `nSharp`). As funções são executáveis e testadas para n < 40, mas a prova de computabilidade não foi feita.
+- **III.9.1** (desempate canônico por κ na tabela densa). Não implementado; é mudança de algoritmo, não só de enunciado.
+- **III.9.3** (custo de bits). O modelo `BitModel` é uma hipótese declarada; não há modelo de máquina em Lean. Este limite permanece e está explicitado no README.
+- **Invariante `ℓ ≥ H − O(1)` (III.3.20)**. Não formalizado nesta rodada.
+- **III.3.4** (pigeonhole exato `max A ≥ |Library_H| − 1`) e **II.2.5** (unicidade por dados `(C,y,s)`). Não formalizados nesta rodada.
+- **III.2.2** (convenção semiaberta de posse e endereço explícito). Não formalizados nesta rodada.
+
+**Observações editoriais (11) e provas textuais.** Nenhuma observação editorial foi formalizada. Elas são declaradas fora do escopo formal, com o estado «Observação editorial» no mapa, que já diz que não são teoremas Lean. As provas textuais de III.12.3, III.12.5–III.12.8 agora têm referências Lean conferidas; não há prova textual sem referência Lean no mapa.

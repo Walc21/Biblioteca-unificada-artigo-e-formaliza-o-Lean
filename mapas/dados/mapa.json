@@ -403,7 +403,7 @@
    "rotulo": "map:artigo_1:4.2",
    "arquivo_tex": "artigo_1.tex",
    "estado": "Correspondência confirmada",
-   "estado_sufixo": ". As peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.",
+   "estado_sufixo": ". Com cobertura de `[α,β]` por células de interiores disjuntos, as peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.",
    "corpo": [],
    "lean": [
     {
@@ -416,7 +416,7 @@
     {
      "nome": "Fase3.isAssembly_pieces_nonzero_slope",
      "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean",
-     "linha": 429,
+     "linha": 431,
      "nota": "",
      "quebra_antes": false
     }

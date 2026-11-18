@@ -144,7 +144,7 @@ Esta seção registra a rodada posterior. Os vereditos da tabela acima valem par
 | I.2.1 | `Fase3.cunpair_eq_floor` (inversa com `w`, `v = n - T_w`, `u = w - v`) | `base_integrada/Unified/Fase3/Indexing.lean` |
 | I.2.2 | `Fase3.zEnum_formula`, `Fase3.zInv_formula` (duas ramas de `Z` e `Z⁻¹`) | idem |
 | I.3.3 | `Fase3.library_nondegenerate` (não degenerescência de `[c_n, d_n]` para toda a biblioteca) | `base_integrada/Unified/Fase3/Cells.lean` |
-| I.4.2 | `Fase3.isAssembly_pieces_nonzero_slope` (peças são átomos com inclinação não nula) | `base_integrada/Unified/Fase3/Assembly.lean` |
+| I.4.2 | `Fase3.isAssembly_pieces_nonzero_slope` (cobertura por células de interiores disjuntos, e peças são átomos com inclinação não nula; a versão sem cobertura foi corrigida após revisão) | `base_integrada/Unified/Fase3/Assembly.lean` |
 | II.7.1 | `Montagens.zeta_injective` (injetividade da chave lexicográfica; já existia, agora citada no mapa) | `parte_1/RequestProject/Chain.lean` |
 
 **Fechada por leitura do texto:** III.12.5–III.12.8, ressalva «massa pontual». O próprio artigo define «massa pontual» como `|f''| ∈ c₀4^ℤ` quase sempre em `{f'' ≠ 0}` (`tex/partes/artigo_2.tex`, corolário de III.12.8), que é exatamente `FourPowers`. Não há divergência entre o enunciado Lean e o texto.

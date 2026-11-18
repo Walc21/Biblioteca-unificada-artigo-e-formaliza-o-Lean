@@ -151,10 +151,10 @@ Original de 77 páginas: 4.2.
 
 Fonte editável: [tex/partes/artigo_1.tex:229](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.2`.
 
-Estado: **Correspondência confirmada**. As peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.
+Estado: **Correspondência confirmada**. Com cobertura de `[α,β]` por células de interiores disjuntos, as peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.
 
 - [`Fase3.assembly_dense`](../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean) — linha 386.
-- [`Fase3.isAssembly_pieces_nonzero_slope`](../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean) — linha 429.
+- [`Fase3.isAssembly_pieces_nonzero_slope`](../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean) — linha 431.
 
 ## I.4.3 — teorema equivalência montagem--ReLU racional
 

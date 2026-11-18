@@ -8,7 +8,7 @@
 
 **Victor Gabriel de Oliveira** · edição com formatação ABNT de 18 de novembro de 2026
 
-[**📄 Ler o artigo (PDF, edição ABNT)**](Biblioteca_Unificada_ABNT.pdf) &nbsp;·&nbsp; [**🧮 Mapa TeX → Lean**](mapas/MAPA_TEX_LEAN.md) &nbsp;·&nbsp; [**⚙️ Fontes Lean 4**](lean4/ambientes) &nbsp;·&nbsp; [**✍️ Fontes LaTeX**](tex_abnt)
+[**📄 Ler o artigo (PDF, edição ABNT)**](Biblioteca_Unificada_ABNT.pdf) &nbsp;·&nbsp; [**🧮 Mapa TeX → Lean**](mapas/MAPA_TEX_LEAN.md) &nbsp;·&nbsp; [**⚙️ Fontes Lean 4**](lean4/ambientes) &nbsp;·&nbsp; [**✍️ Fontes LaTeX**](tex)
 
 `Lean 4.28.0` · `Mathlib 4.28.0` · `axiomas: propext, Classical.choice, Quot.sound` · `0 sorry`
 
@@ -127,20 +127,15 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada_ABNT.pdf   # PDF da edição ABNT (158 páginas)
-├── tex_abnt/                       # fontes LaTeX da edição ABNT
-│   ├── principal.tex               # documento principal
-│   ├── documento_completo.tex      # fonte consolidada com bibliografia incorporada
-│   ├── partes/                     # as cinco partes
-│   ├── mapa_formal.tex
-│   ├── citacoes_abnt.tex
-│   └── referencias_abnt.tex
-├── Biblioteca_Unificada.pdf        # PDF da edição anterior (124 páginas)
-├── tex/                            # fontes LaTeX da edição anterior e figuras compartilhadas
-│   ├── principal.tex               #   documento principal (compilar com latexmk)
-│   ├── documento_completo.tex      #   fonte consolidado com bibliografia incorporada
+├── Biblioteca_Unificada_ABNT.pdf   # PDF do volume, edição ABNT (158 páginas)
+├── Biblioteca_Unificada.pdf        # PDF da edição anterior (124 páginas), mantido como publicado
+├── tex/                            # fonte única do volume: compilar a partir daqui
+│   ├── principal.tex               #   documento principal
 │   ├── partes/                     #   as cinco partes
-│   ├── figuras/                    #   17 figuras em PDF, PNG e SVG
+│   ├── figuras/                    #   17 figuras em PDF, PNG e SVG (fonte única)
+│   ├── documento_completo.tex      #   gerado por gerar_fonte_unica.py (bibliografia incorporada)
+│   ├── gerar_fonte_unica.py
+│   ├── citacoes_abnt.tex, referencias_abnt.tex, mapa_formal.tex
 │   ├── referencias.bib
 │   └── plainnat-pt.bst             #   estilo bibliográfico em português (derivado de plainnat)
 ├── verificacao/                    # programas Python da validação numérica exata (ver README da pasta) e o trecho corrigido de IV.5.4
@@ -149,38 +144,47 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 │   ├── artigo_2/                   # Partes III–V: RequestProject/ e a biblioteca Pendencias/
 │   ├── base_integrada/             # Parte I e II: Unified/ e PendenciasParte1/
 │   └── parte_1/                    # núcleo da Parte I (RequestProject/) e auditorias
-└── mapas/MAPA_TEX_LEAN.md          # correspondência enunciado TeX ↔ declaração Lean
+├── mapas/
+│   ├── dados/mapa.json             # fonte da correspondência enunciado TeX ↔ declaração Lean
+│   ├── gerar_mapa.py               # gera MAPA_TEX_LEAN.md a partir do JSON
+│   ├── verificar_mapa.py           # confere rótulos, linhas e existência dos nomes no Lean
+│   └── MAPA_TEX_LEAN.md            # gerado: não editar à mão
+├── .github/workflows/verificacao.yml  # CI: Lean, mapa, LaTeX e validação numérica
+├── LICENSE                         # código (Apache 2.0)
+├── LICENSE-TEXTO.md                # texto, figuras e dados (CC BY 4.0)
+└── CITATION.cff                    # como citar o trabalho
 ```
 
 ## Como reproduzir
 
-**Artigo (LaTeX, edição ABNT).**
-
-```bash
-cd tex_abnt
-latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error principal.tex
-python3 gerar_fonte_unica.py
-cp principal.pdf ../Biblioteca_Unificada_ABNT.pdf
-```
-
-A edição reúne 49 referências em `referencias_abnt.tex` e usa as figuras de `../tex/figuras/`.
-A partir de `tex_abnt/`, a fonte consolidada também compila com
-`latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error documento_completo.tex`.
-
-**Edição anterior (LaTeX).** O [PDF de 124 páginas](Biblioteca_Unificada.pdf) pode ser
-recompilado com os comandos abaixo a partir da raiz do repositório.
+**Volume (LaTeX).** Há uma única fonte, em `tex/`. O comando abaixo gera o PDF de 158 páginas:
 
 ```bash
 cd tex
 latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error principal.tex
-python3 gerar_fonte_unica.py
-cp principal.pdf ../Biblioteca_Unificada.pdf
+cp principal.pdf ../Biblioteca_Unificada_ABNT.pdf
 ```
 
-Em ambas as edições, `-Werror` faz o `latexmk` falhar se restarem referências ou citações indefinidas.
-A fonte consolidada da edição anterior também compila a partir de `tex/` com
-`latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error documento_completo.tex`.
-Ela incorpora a bibliografia e usa os arquivos de `figuras/`.
+`-Werror` faz o `latexmk` falhar se restarem referências ou citações indefinidas.
+`documento_completo.tex` (bibliografia incorporada) é gerado a partir de `principal.tex` com
+`python3 gerar_fonte_unica.py`; o CI confere que ele está atualizado.
+
+**Edição anterior (124 páginas).** A fonte anterior à unificação não está mais em `tex/`. Ela
+está preservada na tag `edicao-anterior-124p`, e o PDF publicado continua na raiz:
+
+```bash
+git worktree add ../edicao-anterior edicao-anterior-124p
+cd ../edicao-anterior/tex
+latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error principal.tex
+```
+
+**Mapa TeX → Lean.** A correspondência é mantida em `mapas/dados/mapa.json`. O Markdown é gerado
+e verificado com:
+
+```bash
+python3 mapas/gerar_mapa.py
+python3 mapas/verificar_mapa.py   # confere rótulos, linhas e nomes Lean; exige os ambientes compilados
+```
 
 **Validação numérica (Python).** Seis programas em `Fraction` geram as tabelas e figuras de verificação
 citadas no artigo. Na raiz do repositório, instale as dependências com
@@ -223,6 +227,12 @@ Este repositório prefere afirmar menos a afirmar demais:
 - **III.9.3** toma como *hipótese do modelo* (`BitModel`) que somar, comparar e reduzir frações de $b$ bits
   custa $O(\mathsf M_{\mathbb Z}(b)\log 2b)$, como no texto — não há modelo de máquina em Lean.
 - **IV.5.4** foi fechado com o enunciado corrigido (ver acima).
+
+## Licença e citação
+
+- Código-fonte (Lean 4, Python, scripts e workflows): [Apache 2.0](LICENSE).
+- Texto, figuras, mapa e documentação: [CC BY 4.0](LICENSE-TEXTO.md).
+- Para citar, use o arquivo [`CITATION.cff`](CITATION.cff) (o GitHub também gera a citação a partir dele).
 
 ## Autor
 

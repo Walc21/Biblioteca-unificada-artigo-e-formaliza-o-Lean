@@ -20,7 +20,7 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 
 ## Ressalvas que valem para o artigo
 
-- **III.3.2:** a assintótica `|Library_H| ∼ (288/π⁴)H⁶` **não está formalizada** em nenhum lugar do repositório; só as cotas `Θ(H⁶)`.
+- **III.3.2:** a constante `288/π⁴` foi **verificada numericamente**: `|Library_H|/H⁶` converge para `288/π⁴ ≈ 2,9566` (razão 1,0033 em H = 512; script `verificacao/constante_iii32.py`), e a contagem bate com o Lean para H = 2..5. A **prova formal** da assintótica (que exige a contagem de pares coprimos) **não foi feita**.
 - **III.3.7:** as funções `GammaSharp` e `nSharp` são executáveis (compiladas sem `noncomputable`; testadas para n < 40, com `nSharp(GammaSharp n) = n`), mas a prova formal de `Computable` nos dois sentidos **não foi feita**.
 - **I.6.1:** formalizado depois (`lemma61_exp_rational`, `lemma61_enclosures`): as rotinas racionais de exp, sin e cos contêm as funções, com as cotas (37) e (38).
 - **I.6.2:** a regra de falha foi formalizada depois (`boundSecondDerivative_fail_iff`): a rotina devolve `none` exatamente quando algum pedaço após `d` bissecções tem um denominador cujo intervalo contém 0.

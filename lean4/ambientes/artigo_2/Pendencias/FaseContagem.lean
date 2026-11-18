@@ -70,7 +70,6 @@ lemma upper_count_pow {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m�
 
 /-- **III.12.6(b)**: cota inferior com tetos -/
 lemma lower_count_pow {f : ℝ → ℝ} (hf : ContDiff ℝ 2 f) {k₀ : ℕ} {m₀ : ℤ} {d : ℕ} {μ : ℤ → ℝ}
-    (hμ0 : ∀ j, 0 ≤ μ j)
     (hμ : ∀ j : ℤ, j / 2 ^ d = m₀ → ∀ y ∈ cellIcc (k₀ + d) j, μ j ≤ |deriv (deriv f) y|)
     {ε : ℝ} (hε : 0 < ε)
     (hanc : ∀ k' : ℕ, k₀ ≤ k' → k' < k₀ + d → ∀ i : ℕ, i < 2 ^ d → 0 < μ (m₀ * 2 ^ d + i) →

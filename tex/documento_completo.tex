@@ -163,7 +163,7 @@
 \newtheorem{algorithm}[teorema]{Algoritmo}
 \theoremstyle{definition}
 \newtheorem{remark}[teorema]{Observação}
-% Ambientes sem numeração (acréscimos editoriais): não alteram contadores nem o mapa de 151 ambientes.
+% Ambiente sem numeração não altera os contadores nem o mapa.
 \theoremstyle{preciso}
 \newtheorem*{proposicaoSN}{Proposição (ponte entre as Partes~I e~III)}
 \theoremstyle{preciso}
@@ -172,7 +172,7 @@
 \newtheorem*{observacaoSN}{Observação}
 
 \renewcommand{\partname}{Parte}
-\renewcommand{\contentsname}{Sumário}
+\addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
 \renewcommand{\refname}{Referências}
 \renewcommand{\thesection}{\Roman{part}.\arabic{section}}
 \renewcommand{\thefigure}{\Roman{part}.\arabic{figure}}
@@ -7537,7 +7537,7 @@ cujos únicos zeros são $0$ e $\pm0{,}2$. Um máximo interior não nulo de $|f'
 \section*{Estado da correspondência}
 As categorias abaixo reproduzem a matriz recebida. Correspondência inspecionada identifica declarações relevantes; integração à base exige as pontes documentadas. Contratos abstratos, cobertura parcial e pendências conservam seu alcance. O arquivo \texttt{mapas/MAPA\_TEX\_LEAN.md} reúne os nomes Lean, os caminhos e as posições de cada resultado.
 
-O mapa tem 156 entradas; as cinco últimas da Parte III (III.12.5 a III.12.9, lei de fase para curvatura variável) têm prova textual; III.12.5 a III.12.8 foram além disso formalizadas em Lean (módulos \texttt{Pendencias/Fase*.lean}, com as ressalvas das linhas abaixo) e III.12.9 é observação editorial. Todos os 42 casos do dossiê de pendências estão fechados: 41 por prova Lean compilada e auditada e III.12.3 por prova textual sincronizada. Permanecem como ressalvas: a reverificação da leitura de $g(t_0)$ em I.4.3 contra o enunciado Lean; o enunciado de IV.5.4, cuja cota impressa era falsa para $M=0$ (contraexemplo documentado e certificado separadamente) e foi corrigida no texto; os modelos de custo de III.9.1 (operações unitárias; o desempate por $\kappa$ não está no programa denso) e de III.9.3 (o custo da aritmética racional em bits é hipótese do modelo). Os demais estados e ressalvas constam das linhas abaixo. As correspondências herdadas não são promovidas a provas verificadas por esta revisão.
+O mapa tem 156 entradas; III.12.5 a III.12.8 (lei de fase para curvatura variável) têm prova textual e formalização em Lean (módulos \texttt{Pendencias/Fase*.lean}, com as ressalvas das linhas abaixo) e III.12.9 é observação editorial. Todos os 42 casos do dossiê de pendências estão fechados: 41 por prova Lean compilada e auditada e III.12.3 por prova textual sincronizada. Permanecem como ressalvas: a reverificação da leitura de $g(t_0)$ em I.4.3 contra o enunciado Lean; o enunciado de IV.5.4, cuja cota impressa era falsa para $M=0$ (contraexemplo documentado e certificado separadamente) e foi corrigida no texto; os modelos de custo de III.9.1 (operações unitárias; o desempate por $\kappa$ não está no programa denso) e de III.9.3 (o custo da aritmética racional em bits é hipótese do modelo). Os demais estados e ressalvas constam das linhas abaixo. As correspondências herdadas não são promovidas a provas verificadas por esta revisão.
 
 Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado e compilado'': provas Lean compiladas com Lean/Mathlib 4.28.0 nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1} dos ambientes \texttt{artigo\_2} e \texttt{base\_integrada}, sem \texttt{sorry} e apenas com os axiomas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Os demais estados e ressalvas seguem descritos acima.
 

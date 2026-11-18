@@ -925,8 +925,8 @@
    "original": "sem correspondência direta; desenvolvimento da edição atual",
    "rotulo": "map:normalizacao:2.5",
    "arquivo_tex": "normalizacao.tex",
-   "estado": "Integrado à base",
-   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". A unicidade por dados `(C, y, s)` está enunciada como `line_eq_of_fields`: mesma célula, mesmo `y` e mesmo `s` dão o mesmo átomo, o mesmo `J_a` e a mesma reta.",
    "corpo": [],
    "lean": [
     {
@@ -940,6 +940,13 @@
      "nome": "SemanticBridge.normalization_atom_line",
      "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationAtoms.lean",
      "linha": 37,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.line_eq_of_fields",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 178,
      "nota": "",
      "quebra_antes": false
     }
@@ -2351,8 +2358,8 @@
    "original": "sem correspondência direta; desenvolvimento da edição atual",
    "rotulo": "map:artigo_2:2.2",
    "arquivo_tex": "artigo_2.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". O endereço explícito é `Artigo.Atom.addr`, e a interface é `Artigo.Atom.interface`. A convenção de posse semiaberta está enunciada como `Artigo.LTree.leaves_ownership_partition`: cada ponto de `J_{k,m}`, exceto o extremo direito, é possuído por exatamente uma folha, com `[L(c), R(c))`.",
    "corpo": [],
    "lean": [
     {
@@ -2380,6 +2387,27 @@
      "nome": "Artigo.LTree.WF",
      "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Trees.lean",
      "linha": 98,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Atom.addr",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 48,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Atom.interface",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 51,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.LTree.leaves_ownership_partition",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Trees.lean",
+     "linha": 486,
      "nota": "",
      "quebra_antes": false
     }
@@ -2522,13 +2550,20 @@
    "rotulo": "map:artigo_2:3.4",
    "arquivo_tex": "artigo_2.tex",
    "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado_sufixo": ".  O pigeonhole exato, `max A ≥ |𝓛_H| − 1`, está enunciado como `address_pigeonhole` (o Lean não exige `H ≥ 2`, então é mais geral).",
    "corpo": [],
    "lean": [
     {
      "nome": "Artigo.address_lower",
      "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
      "linha": 203,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.address_pigeonhole",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 192,
      "nota": "",
      "quebra_antes": false
     }
@@ -2956,8 +2991,8 @@
    "original": "8.20",
    "rotulo": "map:artigo_2:3.20",
    "arquivo_tex": "artigo_2.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". A forma invariante `ℓ ≥ 𝓗_ε(F) − |h|` está enunciada como `description_lower_invariant`, para codecs cujas palavras são `h ++ v` com cabeçalho fixo `h`.",
    "corpo": [],
    "lean": [
     {
@@ -2971,6 +3006,13 @@
      "nome": "Artigo.complexity_chain",
      "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
      "linha": 180,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.description_lower_invariant",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 194,
      "nota": "",
      "quebra_antes": false
     }

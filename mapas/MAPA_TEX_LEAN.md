@@ -343,10 +343,11 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/normalizacao.tex:177](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.5`.
 
-Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
+Estado: **Correspondência confirmada**. A unicidade por dados `(C, y, s)` está enunciada como `line_eq_of_fields`: mesma célula, mesmo `y` e mesmo `s` dão o mesmo átomo, o mesmo `J_a` e a mesma reta.
 
 - [`Montagens.line_forms`](../lean4/ambientes/parte_1/RequestProject/Basic.lean) — linha 168.
 - [`SemanticBridge.normalization_atom_line`](../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationAtoms.lean) — linha 37.
+- [`Montagens.line_eq_of_fields`](../lean4/ambientes/parte_1/RequestProject/Basic.lean) — linha 178.
 
 ## II.3.1 — definição campos dos contratos
 
@@ -814,12 +815,15 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/artigo_2.tex:63](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:2.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. O endereço explícito é `Artigo.Atom.addr`, e a interface é `Artigo.Atom.interface`. A convenção de posse semiaberta está enunciada como `Artigo.LTree.leaves_ownership_partition`: cada ponto de `J_{k,m}`, exceto o extremo direito, é possuído por exatamente uma folha, com `[L(c), R(c))`.
 
 - [`Artigo.Atom`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 17.
 - [`Artigo.Atom.interface_injective`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 115.
 - [`Artigo.Atom.addr_injective`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 178.
 - [`Artigo.LTree.WF`](../lean4/ambientes/artigo_2/RequestProject/Trees.lean) — linha 98.
+- [`Artigo.Atom.addr`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 48.
+- [`Artigo.Atom.interface`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 51.
+- [`Artigo.LTree.leaves_ownership_partition`](../lean4/ambientes/artigo_2/RequestProject/Trees.lean) — linha 486.
 
 ## III.2.3 — proposição densidade, interpolação e forma ReLU
 
@@ -874,9 +878,10 @@ Original de 77 páginas: 8.4.
 
 Fonte editável: [tex/partes/artigo_2.tex:236](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.4`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência inspecionada**.  O pigeonhole exato, `max A ≥ |𝓛_H| − 1`, está enunciado como `address_pigeonhole` (o Lean não exige `H ≥ 2`, então é mais geral).
 
 - [`Artigo.address_lower`](../lean4/ambientes/artigo_2/RequestProject/Addresses.lean) — linha 203.
+- [`Artigo.address_pigeonhole`](../lean4/ambientes/artigo_2/RequestProject/Addresses.lean) — linha 192.
 
 ## III.3.5 — observação
 
@@ -1053,10 +1058,11 @@ Original de 77 páginas: 8.20.
 
 Fonte editável: [tex/partes/artigo_2.tex:968](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.20`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. A forma invariante `ℓ ≥ 𝓗_ε(F) − |h|` está enunciada como `description_lower_invariant`, para codecs cujas palavras são `h ++ v` com cabeçalho fixo `h`.
 
 - [`Artigo.description_lower`](../lean4/ambientes/artigo_2/RequestProject/Codecs.lean) — linha 118.
 - [`Artigo.complexity_chain`](../lean4/ambientes/artigo_2/RequestProject/Codecs.lean) — linha 180.
+- [`Artigo.description_lower_invariant`](../lean4/ambientes/artigo_2/RequestProject/Codecs.lean) — linha 194.
 
 ## III.3.21 — proposição
 

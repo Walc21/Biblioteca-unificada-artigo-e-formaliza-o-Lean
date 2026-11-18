@@ -125,10 +125,10 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada.pdf        # o artigo (125 páginas)
+├── Biblioteca_Unificada.pdf        # PDF do artigo
 ├── tex/                            # fontes LaTeX
 │   ├── principal.tex               #   documento principal (compilar com latexmk)
-│   ├── documento_completo.tex      #   versão em arquivo único, com bibliografia incorporada
+│   ├── documento_completo.tex      #   fonte consolidado com bibliografia incorporada
 │   ├── partes/                     #   as cinco partes
 │   ├── figuras/                    #   17 figuras em PDF, PNG e SVG
 │   ├── referencias.bib
@@ -148,32 +148,39 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```bash
 cd tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error principal.tex
-python3 gerar_fonte_unica.py                            # sincroniza documento_completo.tex
+latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error principal.tex
+python3 gerar_fonte_unica.py
+cp principal.pdf ../Biblioteca_Unificada.pdf
 ```
 
+A opção `-Werror` faz o `latexmk` falhar se restarem referências ou citações indefinidas.
+A versão consolidada também compila a partir de `tex/` com
+`latexmk -pdf -Werror -interaction=nonstopmode -halt-on-error documento_completo.tex`.
+Ela incorpora a bibliografia e usa os arquivos de `figuras/`.
+
 **Validação numérica (Python).** Seis programas em `Fraction` geram as tabelas e figuras de verificação
-citadas no artigo; não fazem parte das demonstrações. Execute `python3 verificacao/reproduzir_tudo.py --output-root /tmp/biblioteca-verificacao` na raiz
-do repositório para rodar os seis verificadores em pastas independentes. Veja
+citadas no artigo. Na raiz do repositório, instale as dependências com
+`python3 -m pip install -r verificacao/requirements.txt` e execute
+`python3 verificacao/reproduzir_tudo.py --output-root /tmp/biblioteca-verificacao`. Veja
 [`verificacao/README.md`](verificacao/README.md).
 
 **Formalização (Lean).** Instale o [`elan`](https://github.com/leanprover/elan); cada ambiente fixa a
 versão do Lean e do Mathlib (4.28.0). O cache do Mathlib não é versionado.
 
-```bash
-cd lean4/ambientes/artigo_2
-lake exe cache get          # baixa o Mathlib já compilado
-lake build Pendencias       # provas das Partes III–V
-lake env lean AuditoriaPendencias.lean     # imprime os axiomas de cada resultado
+Execute o bloco abaixo na raiz do repositório.
 
-cd ../base_integrada && lake exe cache get && lake build PendenciasParte1
-cd ../parte_1        && lake exe cache get && lake build
+```bash
+for ambiente in artigo_2 base_integrada parte_1; do
+  (cd "lean4/ambientes/$ambiente" && lake exe cache get) || exit 1
+done
+bash lean4/verificar.sh
 ```
 
-Os ambientes `artigo_2`, `base_integrada` e `parte_1` compilam de forma independente. Em cada auditoria,
-todas as declarações dependem **somente** de `propext`, `Classical.choice` e `Quot.sound`, sem `sorry`.
+O script compila os três ambientes e executa as nove auditorias. Qualquer erro de compilação ou
+auditoria retorna um código de saída diferente de zero. As dependências axiomáticas admitidas são
+`propext`, `Classical.choice` e `Quot.sound`.
 
-A recompilação completa de 13 e 14/11/2026, com as ressalvas, está em
+O registro das recompilações e suas ressalvas está em
 [`lean4/DECLARACAO_DE_COMPILACAO.md`](lean4/DECLARACAO_DE_COMPILACAO.md).
 
 ## Escopo e honestidade
@@ -182,8 +189,10 @@ Este repositório prefere afirmar menos a afirmar demais:
 
 - **Prova compilada ≠ correspondência herdada.** Dos 156 ambientes, os 42 casos do dossiê de pendências
   têm prova Lean nova (41) ou prova textual sincronizada (1). Outras 77 correspondências foram *inspecionadas*
-  e 20 *integradas à base* a partir de formalizações anteriores; elas apontam declarações Lean relevantes,
-  mas **não** foram reauditadas semanticamente uma a uma. Dos 5 ambientes III.12.5–III.12.9 (lei de fase
+  e 20 *integradas à base* a partir de formalizações anteriores. Uma reauditoria comparou os enunciados
+  dessas 97 correspondências e registrou as ressalvas em
+  [Reauditoria semântica das correspondências herdadas](documentacao/REAUDITORIA_CORRESPONDENCIAS.md).
+  Dos cinco ambientes III.12.5–III.12.9 (lei de fase
   para curvatura variável), III.12.5–III.12.8 têm prova Lean nova (a equivalência «$\Psi_f$ constante ⇔ $\mu_f$ uniforme» está formalizada; ressalva: «massa pontual» é a condição `FourPowers`, ver o mapa) e III.12.9 é observação editorial; estes não entram nas contagens acima. Não se afirma formalização integral.
 - **III.9.1** usa um modelo de custo unitário explícito; a tabela densa compara custos e **não** implementa o
   desempate canônico por $\kappa$ (que está formalizado no seletor funcional de III.7.4).

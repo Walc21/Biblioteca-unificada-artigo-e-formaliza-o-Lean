@@ -3,9 +3,9 @@
 **Victor Gabriel de Oliveira** · recompilação de 13 e 14 de novembro de 2026 (atualizada após a inclusão de `RefinamentoCobertura.lean`)
 
 Declaro que os três ambientes Lean deste repositório (`artigo_2`, `base_integrada` e `parte_1`) foram
-recompilados do zero com **Lean 4.28.0** e **Mathlib v4.28.0**, a partir dos fontes da árvore `lean4/` da
-branch `revisao-final-pdf-latex` (inclui `PendenciasParte1/RefinamentoCobertura.lean`), sem erros e sem `sorry`. As ressalvas abaixo fazem parte desta declaração e
-delimitam o que ela afirma.
+recompilados do zero com **Lean 4.28.0** e **Mathlib v4.28.0**, a partir da revisão da árvore `lean4/` que inclui
+`PendenciasParte1/RefinamentoCobertura.lean`, sem erros e sem `sorry`. As ressalvas abaixo delimitam
+o alcance dessa compilação.
 
 ## O que foi feito
 
@@ -74,26 +74,20 @@ Lean depois dessa data (ver o adendo «Lei de fase» no fim deste arquivo), e es
 
 ## Como reproduzir
 
-```bash
-cd lean4/ambientes/artigo_2
-lake exe cache get
-lake build ValidationAll Pendencias
-lake env lean AuditoriaPendencias.lean
-
-cd ../base_integrada && lake exe cache get
-lake build Unified SemanticAudit PendenciasParte1 RequestProject.Main
-lake env lean AuditoriaIntegracao.lean
-
-cd ../parte_1 && lake exe cache get && lake build ValidationAll
-```
+Na raiz do repositório, siga a [preparação do cache](../README.md#como-reproduzir) e execute
+`bash lean4/verificar.sh`. Isso compila os alvos e roda as nove auditorias para a revisão atual.
+Nas auditorias com `#print axioms`, o script também verifica as dependências impressas.
 
 ## Ressalvas
 
 1. **O Mathlib não foi recompilado.** Foi usado o cache já compilado na máquina de trabalho.
 2. **Compilar não é o mesmo que corresponder ao artigo.** A compilação mostra que cada teorema vale como
    está enunciado em Lean. Ela não mostra que o enunciado em Lean diz o mesmo que o teorema do texto.
-   Das 156 correspondências do mapa, 77 foram apenas *inspecionadas* e 20 *integradas à base*; elas não
-   foram reauditadas semanticamente uma a uma. Dos 156, os cinco ambientes III.12.5–III.12.9 (lei de fase
+   Das 156 entradas do mapa, 77 correspondências foram *inspecionadas* e 20 *integradas à base*
+   na revisão original. Uma reauditoria posterior comparou os enunciados dessas 97 correspondências
+   e registrou as ressalvas em
+   [Reauditoria semântica das correspondências herdadas](../documentacao/REAUDITORIA_CORRESPONDENCIAS.md).
+   Dos 156, os cinco ambientes III.12.5–III.12.9 (lei de fase
    para curvatura variável) foram acrescentados depois da recompilação de 13 e 14 de novembro; III.12.5–III.12.8
    foram formalizados em Lean depois dela (adendo no fim deste arquivo), com ressalvas; III.12.9 é observação editorial. Não se afirma formalização integral do artigo.
 3. **III.9.1** usa um modelo de custo unitário explícito e não implementa o desempate canônico por κ

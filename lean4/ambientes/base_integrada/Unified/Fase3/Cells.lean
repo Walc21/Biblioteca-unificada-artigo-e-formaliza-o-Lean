@@ -344,4 +344,10 @@ theorem exists_atom (k : ℕ) (m : ℤ) (y s : ℚ) (hs : s ≠ 0) :
   obtain ⟨n, hk, hm, hy, hsn⟩ := exists_jet k m y s hs
   exact ⟨n, hk, hm, fun x => by rw [atomLine_eq, hy, hsn, x0, hk, hm]⟩
 
+/-- **Definition 3.3 (non-degeneracy).** Every generator of the library has a non-degenerate
+interval `[c_n, d_n]`, that is, its second coordinate is strictly below its last. -/
+theorem library_nondegenerate : ∀ x ∈ library, x.2.2.1 < x.2.2.2 := by
+  rintro x ⟨n, rfl⟩
+  exact cLo_lt_dHi n
+
 end Fase3

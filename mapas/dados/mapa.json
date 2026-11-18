@@ -15,8 +15,8 @@
    "original": "2.1",
    "rotulo": "map:artigo_1:2.1",
    "arquivo_tex": "artigo_1.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". Forma explícita da inversa, com `w = ⌊(√(8n+1)-1)/2⌋`, `v = n - T_w` e `u = w - v`, acrescentada como `cunpair_eq_floor`.",
    "corpo": [],
    "lean": [
     {
@@ -39,6 +39,13 @@
      "linha": 126,
      "nota": "",
      "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cunpair_eq_floor",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 157,
+     "nota": "",
+     "quebra_antes": false
     }
    ]
   },
@@ -49,8 +56,8 @@
    "original": "2.2",
    "rotulo": "map:artigo_1:2.2",
    "arquivo_tex": "artigo_1.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". Forma explícita de `Z` e de `Z⁻¹` acrescentada como `zEnum_formula` e `zInv_formula`.",
    "corpo": [],
    "lean": [
     {
@@ -64,6 +71,20 @@
      "nome": "Fase3.zInv_le",
      "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
      "linha": 151,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.zEnum_formula",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 167,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.zInv_formula",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 170,
      "nota": "",
      "quebra_antes": false
     }
@@ -232,8 +253,8 @@
    "original": "3.3",
    "rotulo": "map:artigo_1:3.3",
    "arquivo_tex": "artigo_1.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". A não degenerescência de `[c_n, d_n]` passa a constar do enunciado da biblioteca, como `library_nondegenerate`.",
    "corpo": [],
    "lean": [
     {
@@ -247,6 +268,13 @@
      "nome": "Fase3.library",
      "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
      "linha": 215,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.library_nondegenerate",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 349,
      "nota": "",
      "quebra_antes": false
     }
@@ -374,14 +402,21 @@
    "original": "4.2",
    "rotulo": "map:artigo_1:4.2",
    "arquivo_tex": "artigo_1.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". ",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". Com cobertura de `[α,β]` por células de interiores disjuntos, as peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.",
    "corpo": [],
    "lean": [
     {
      "nome": "Fase3.assembly_dense",
      "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean",
      "linha": 386,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.isAssembly_pieces_nonzero_slope",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean",
+     "linha": 431,
      "nota": "",
      "quebra_antes": false
     }
@@ -1950,8 +1985,8 @@
    "original": "sem correspondência direta; desenvolvimento da edição atual",
    "rotulo": "map:normalizacao:7.1",
    "arquivo_tex": "normalizacao.tex",
-   "estado": "Correspondência inspecionada",
-   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". A injetividade da chave lexicográfica, antes implícita, está enunciada como `zeta_injective`.",
    "corpo": [],
    "lean": [
     {
@@ -1965,6 +2000,13 @@
      "nome": "Montagens.sortAtoms",
      "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
      "linha": 40,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.zeta_injective",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 28,
      "nota": "",
      "quebra_antes": false
     }
@@ -3885,6 +3927,209 @@
      "linha": 227,
      "nota": "",
      "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.gC_lsc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseNucleo.lean",
+     "linha": 107,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.gP_usc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseNucleo.lean",
+     "linha": 126,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_periodic",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 157,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_periodic",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 162,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_ge",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 186,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_le_psiP",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 195,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_le",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 203,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_tendsto_left",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 130,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_tendsto_right",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 137,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_tendsto_left",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 147,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_tendsto_right",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 142,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiF_lsc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 273,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_usc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 279,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.exists_min_psiF",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 285,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.exists_max_psiP",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 290,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_eq_sup",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 295,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.countable_atomPhase",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean",
+     "linha": 325,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiP_sub_psiF",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean",
+     "linha": 32,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.isAtomPhase_iff_gap",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.continuousAt_psiF_iff",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean",
+     "linha": 83,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.integral_psiF",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedia.lean",
+     "linha": 50,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.fourier_psiF",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseFourier.lean",
+     "linha": 117,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiFOn_ge",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 71,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiPOn_le",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 81,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.exists_min_psiFOn",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 94,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.integral_psiFOn",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 135,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.continuousAt_psiFOn_iff",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean",
+     "linha": 107,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 138,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.PsiF_eq_circ",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 189,
+     "nota": "",
+     "quebra_antes": false
     }
    ]
   },
@@ -3898,7 +4143,43 @@
    "estado": "Prova textual nova e formalização Lean",
    "estado_sufixo": ". Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\\lceil\\log_4(\\cdot)\\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).",
    "corpo": [],
-   "lean": []
+   "lean": [
+    {
+     "nome": "Pendencias.upper_count_pow",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseContagem.lean",
+     "linha": 31,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.lower_count_pow",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseContagem.lean",
+     "linha": 72,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.threshold_optimality",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Dyadic.lean",
+     "linha": 337,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.upper_count_pow_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 277,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.lower_count_pow_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 291,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
   },
   {
    "id": "III.12.7",
@@ -3910,7 +4191,92 @@
    "estado": "Prova textual nova e formalização Lean",
    "estado_sufixo": ". Declarações: `Pendencias.phase_lower`, `phase_upper` (cotas por fases convergentes), `phase_law_nonatom` (i), `phase_law_uniform` (ii), `phase_liminf_ge`, `phase_limsup_le`, `phase_seq_min`, `phase_seq_max` (iii) e as versões `_on` (`phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`, `phase_limsup_le_on`). Também testado numericamente (III.12.9).",
    "corpo": [],
-   "lean": []
+   "lean": [
+    {
+     "nome": "Pendencias.phase_lower",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei3.lean",
+     "linha": 57,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_upper",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei3.lean",
+     "linha": 92,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_law_nonatom",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_law_uniform",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean",
+     "linha": 69,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_liminf_ge",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean",
+     "linha": 94,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_limsup_le",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean",
+     "linha": 107,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_seq_min",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean",
+     "linha": 20,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_seq_max",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean",
+     "linha": 34,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_law_nonatom_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 141,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_law_uniform_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 150,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_liminf_ge_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 158,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_limsup_le_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 166,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
   },
   {
    "id": "III.12.8",
@@ -3922,7 +4288,127 @@
    "estado": "Prova textual nova e formalização Lean",
    "estado_sufixo": "; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\\in c_04^{\\mathbb Z}$ q.t.p. em $\\{f''\\ne0\\}$ (`FourPowers`), que é a definição parentética do próprio texto.",
    "corpo": [],
-   "lean": []
+   "lean": [
+    {
+     "nome": "Pendencias.phase_cluster_set",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean",
+     "linha": 289,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_iff_const",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseCoro.lean",
+     "linha": 74,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_of_const",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseCoro.lean",
+     "linha": 44,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_average",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMediaFase.lean",
+     "linha": 77,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.min_attained_iff_fourPowers",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean",
+     "linha": 183,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.max_attained_iff_fourPowers",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean",
+     "linha": 191,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.extremes_iff_fourPowers",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean",
+     "linha": 199,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_cluster_set_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 174,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_iff_const_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 185,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_of_const_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 192,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.phase_average_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 206,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.extremes_iff_fourPowers_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean",
+     "linha": 232,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psi_const_iff_muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 264,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiOn_const_iff_muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 307,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_iff_muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 327,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.limit_iff_muCirc_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 319,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.circ_fourier_uniqueness",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 97,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
   },
   {
    "id": "III.12.9",

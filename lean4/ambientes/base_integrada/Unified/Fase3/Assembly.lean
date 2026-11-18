@@ -424,4 +424,15 @@ theorem assembly_dense {α β : ℝ} (hαβ : α < β) {f : ℝ → ℝ} (hf : C
     _ ≤ |f x - cellInterp Λ F x| + |g x - cellInterp Λ F x| := abs_sub _ _
     _ ≤ 3 * ε / 4 := by linarith
 
+/-- **Theorem 4.2 (pieces).** Every continuous assembly on `[α, β]` comes with a finite family
+of cells with disjoint interiors that covers `[α, β]`, and on each cell its graph is an atom of
+the library with nonzero slope. The covering and disjointness are part of the conclusion, so the
+statement is not satisfiable by the empty family. -/
+theorem isAssembly_pieces_nonzero_slope {α β : ℝ} {g : ℝ → ℝ} (h : IsAssembly α β g) :
+    ∃ Λ : Finset (ℕ × ℤ), ∃ addr : ℕ × ℤ → ℕ,
+      DisjointInteriors Λ ∧ Icc α β ⊆ (⋃ J ∈ Λ, cC J) ∧
+      ∀ J ∈ Λ, (∀ x ∈ cC J ∩ Icc α β, g x = atomLine (addr J) x) ∧ slope (addr J) ≠ 0 := by
+  obtain ⟨_, Λ, hd, hcov, addr, hadr⟩ := h
+  refine ⟨Λ, addr, hd, hcov, fun J hJ => ⟨(hadr J hJ).2.2, slope_ne_zero _⟩⟩
+
 end Fase3

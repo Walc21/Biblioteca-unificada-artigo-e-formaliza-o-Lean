@@ -152,4 +152,22 @@ theorem zInv_le (m : ℤ) : (zInv m : ℤ) ≤ 2 * |m| + 1 := by
   unfold zInv
   split_ifs <;> rcases abs_cases m with h | h <;> omega
 
+/-- **Lemma 2.1 (explicit inverse, in the form of the text).** With
+`w = ⌊(√(8n+1) - 1)/2⌋`, the inverse of the pairing is `v = n - T_w` and `u = w - v`. -/
+theorem cunpair_eq_floor (n : ℕ) :
+    (cunpair n).2 = n - tri (⌊(Real.sqrt (8 * (n : ℝ) + 1) - 1) / 2⌋).toNat ∧
+    (cunpair n).1 = (⌊(Real.sqrt (8 * (n : ℝ) + 1) - 1) / 2⌋).toNat - (cunpair n).2 := by
+  have hw : (⌊(Real.sqrt (8 * (n : ℝ) + 1) - 1) / 2⌋).toNat = cdiag n := by
+    rw [← cdiag_eq_floor n]; simp
+  rw [hw]
+  exact ⟨rfl, rfl⟩
+
+/-- **Lemma 2.2 (explicit forms).** The two branches of `Z` and of its inverse, as written
+in equation (03). -/
+theorem zEnum_formula (t : ℕ) :
+    zEnum t = if t % 2 = 0 then ((t / 2 : ℕ) : ℤ) else -(((t + 1) / 2 : ℕ) : ℤ) := rfl
+
+theorem zInv_formula (m : ℤ) :
+    zInv m = if 0 ≤ m then (2 * m).toNat else (-2 * m - 1).toNat := rfl
+
 end Fase3

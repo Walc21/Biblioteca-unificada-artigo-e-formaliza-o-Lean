@@ -21,7 +21,7 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 ## Ressalvas que valem para o artigo
 
 - **III.3.2:** a assintótica `|Library_H| ∼ (288/π⁴)H⁶` **não está formalizada** em nenhum lugar do repositório; só as cotas `Θ(H⁶)`.
-- **III.3.7:** a computabilidade de `Γ♯` nos dois sentidos **não está formalizada** (não há `Computable`/`Primrec` nos arquivos).
+- **III.3.7:** as funções `GammaSharp` e `nSharp` são executáveis (compiladas sem `noncomputable`; testadas para n < 40, com `nSharp(GammaSharp n) = n`), mas a prova formal de `Computable` nos dois sentidos **não foi feita**.
 - **I.6.1:** formalizado depois (`lemma61_exp_rational`, `lemma61_enclosures`): as rotinas racionais de exp, sin e cos contêm as funções, com as cotas (37) e (38).
 - **I.6.2:** a regra de falha foi formalizada depois (`boundSecondDerivative_fail_iff`): a rotina devolve `none` exatamente quando algum pedaço após `d` bissecções tem um denominador cujo intervalo contém 0.
 - **Cláusulas de forma** (I.2.1, I.2.2, I.3.3, I.4.1, I.4.2, II.2.5, II.7.1, III.2.2, III.3.4, III.3.20): são formulações equivalentes ou mais gerais, mas algumas cláusulas do texto (inversas explícitas, não degenerescência do intervalo, injetividade de uma chave, invariante `ℓ ≥ H − O(1)`) não aparecem como teoremas separados.

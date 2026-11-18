@@ -221,7 +221,7 @@ Original de 77 páginas: 7.2.
 
 Fonte editável: [tex/partes/artigo_1.tex:422](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.boundSecondDerivative_fail_iff` (`base_integrada/Unified/Fase3/IntervalFailure.lean`).
 
 - [`Fase3.boundSecondDerivative_correct`](../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean) — linha 619.
 - [`Fase3.Mint_ge_supNorm`](../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean) — linha 629.

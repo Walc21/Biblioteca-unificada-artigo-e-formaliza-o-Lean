@@ -13,8 +13,8 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 
 ## Resumo
 
-- Fiel: **82**
-- Fiel com ressalva: **15**
+- Fiel: **83**
+- Fiel com ressalva: **14**
 - Divergência: **0**
 - Total: **97** (77 inspecionadas + 20 integradas)
 
@@ -22,7 +22,8 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 
 - **III.3.2:** a assintótica `|Library_H| ∼ (288/π⁴)H⁶` **não está formalizada** em nenhum lugar do repositório; só as cotas `Θ(H⁶)`.
 - **III.3.7:** a computabilidade de `Γ♯` nos dois sentidos **não está formalizada** (não há `Computable`/`Primrec` nos arquivos).
-- **I.6.1 e I.6.2:** a parte algorítmica (rotinas que produzem intervalos racionais) e o caso de falha do intervalo com denominador contendo zero não estão formalizados; só as cotas e o caso de sucesso.
+- **I.6.1:** a parte algorítmica (rotinas que produzem intervalos racionais para exp, sin e cos) não está formalizada; só as cotas (37)–(38).
+- **I.6.2:** a regra de falha foi formalizada depois (`boundSecondDerivative_fail_iff`): a rotina devolve `none` exatamente quando algum pedaço após `d` bissecções tem um denominador cujo intervalo contém 0.
 - **Cláusulas de forma** (I.2.1, I.2.2, I.3.3, I.4.1, I.4.2, II.2.5, II.7.1, III.2.2, III.3.4, III.3.20): são formulações equivalentes ou mais gerais, mas algumas cláusulas do texto (inversas explícitas, não degenerescência do intervalo, injetividade de uma chave, invariante `ℓ ≥ H − O(1)`) não aparecem como teoremas separados.
 - **Hipóteses mais gerais no Lean** (por exemplo, `H ≥ 2` não exigido em II.6.2; `m₀ ∈ ℕ` em vez de `m₀ ≥ 0` em III.4.5; `∀ (u,v) ∈ ℚ²` em III.7.2): implicam o enunciado do texto.
 
@@ -48,7 +49,7 @@ Escopo: as 97 entradas do mapa `mapas/MAPA_TEX_LEAN.md` marcadas como **Correspo
 | I.5.1 | teorema cota aguda e limite | inspecionado | Fiel | `Fase3.errP_le`, `Fase3.tendsto_errP`, `Fase3.exists_assembly_rate` | errP_le, tendsto_errP, exists_assembly_rate |
 | I.5.2 | corolário preservação da constante | inspecionado | Fiel | `Fase3.exists_assembly_seq_constant` | exists_assembly_seq_constant |
 | I.6.1 | lema restos transcendentais com extremos racionais | inspecionado | Fiel com ressalva | `Fase3.exp_sub_expPoly_bounds`, `Fase3.sin_cos_lagrange` | cotas (37),(38) formalizadas; a parte algorítmica (rotinas que produzem intervalos racionais) não |
-| I.6.2 | proposição correção do majorante intervalar | inspecionado | Fiel com ressalva | `Fase3.boundSecondDerivative_correct`, `Fase3.Mint_ge_supNorm` | boundSecondDerivative_correct e Mint_ge_supNorm sob sucesso; o caso de falha (denominador com zero) não formalizado |
+| I.6.2 | proposição correção do majorante intervalar | inspecionado | Fiel | `Fase3.boundSecondDerivative_correct`, `Fase3.Mint_ge_supNorm`, `Fase3.boundSecondDerivative_fail_iff` | correção sob sucesso e regra de falha exata (`Unified/Fase3/IntervalFailure.lean`, acrescentada nesta rodada) |
 | I.6.5 | proposição calibração exata para curvatura constante | inspecionado | Fiel | `Fase3.calibration` | calibration: N=2^{rcal}, patamar, liminf 1/√8 e limsup 1/√2 (rcal = max(0,⌈log₄(A/ε)⌉)) |
 | I.6.6 | observação diferença segunda e erro no centro | inspecionado | Fiel | `Fase3.center_error_eq`, `Fase3.cube_example` | center_error_eq e cube_example (P_J x^3 = x, norma 2/(3√3)) |
 | II.2.1 | definição racional reduzido e altura | inspecionado | Fiel | `Montagens.ht`, `Montagens.ht_props` | ht = max(|num|,den) e ht_props |

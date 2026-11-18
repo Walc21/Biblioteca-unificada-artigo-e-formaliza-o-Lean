@@ -187,4 +187,20 @@ theorem complexity_chain (R M : ℝ) (hR : 0 < R) (hM : 0 < M) :
   obtain ⟨-, -, CB, hWF, hcov, hlog⟩ := hmain ε hε hε0
   exact ⟨CB, hWF, hcov, (description_lower ε (FRM R M)).2.2, Ldec_le_Lglobal CB hcov hε.le, hlog⟩
 
+/-- **Proposition 3.16 (forma invariante).** If every word of an `ε`-codec is `h ++ v` for a
+fixed header `h` and a payload `v` of length `ℓ`, then `ℓ ≥ 𝓗_ε(F) - |h|`. Hence, under a
+convention that adds or removes a fixed header of length `|h|`, the bound reads
+`ℓ ≥ 𝓗_ε(F) - O(1)`, with the constant `|h|`. -/
+theorem description_lower_invariant (ε : ℝ) (F : Set (ℝ → ℝ)) (c : EpsCodec ε F)
+    (h : List Bool) (ℓ : ℕ) (hw : ∀ w ∈ c.W, ∃ v : List Bool, w = h ++ v ∧ v.length = ℓ) :
+    entropyH ε F ≤ (ℓ : ℝ) + h.length := by
+  have h1 := (description_lower ε F).1 c (ℓ + h.length) (by
+    intro w hwm
+    obtain ⟨v, rfl, hv⟩ := hw w hwm
+    simp [hv, add_comm])
+  have h2 : entropyH ε F ≤ (⌈entropyH ε F⌉ : ℝ) := Int.le_ceil _
+  have h3 : (⌈entropyH ε F⌉ : ℝ) ≤ ((ℓ + h.length : ℕ) : ℤ) := by exact_mod_cast h1
+  push_cast at h3
+  linarith
+
 end Artigo

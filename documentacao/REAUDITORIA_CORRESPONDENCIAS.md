@@ -162,3 +162,24 @@ Esta seção registra a rodada posterior. Os vereditos da tabela acima valem par
 - **III.2.2** (convenção semiaberta de posse e endereço explícito). Não formalizados nesta rodada.
 
 **Observações editoriais (11) e provas textuais.** Nenhuma observação editorial foi formalizada. Elas são declaradas fora do escopo formal, com o estado «Observação editorial» no mapa, que já diz que não são teoremas Lean. As provas textuais de III.12.3, III.12.5–III.12.8 agora têm referências Lean conferidas; não há prova textual sem referência Lean no mapa.
+
+## Atualização 2: itens restantes das cláusulas de forma
+
+**Fechados nesta rodada:**
+
+| Item | Declaração | Arquivo |
+|---|---|---|
+| II.2.5 (unicidade por dados `(C,y,s)`) | `Montagens.line_eq_of_fields` (já existia; agora citada) | `parte_1/RequestProject/Basic.lean` |
+| III.3.4 (pigeonhole exato `max A ≥ \|𝓛_H\| − 1`) | `Artigo.address_pigeonhole` (já existia; agora citada) | `artigo_2/RequestProject/Addresses.lean` |
+| III.2.2 (endereço explícito e interface) | `Artigo.Atom.addr`, `Artigo.Atom.interface` (definições que seguem o texto) | `artigo_2/RequestProject/Atoms.lean` |
+| III.2.2 (convenção de posse semiaberta) | `Artigo.LTree.leaves_ownership_partition`, com existência e unicidade do dono | `artigo_2/RequestProject/Trees.lean` |
+| III.3.20 (forma invariante `ℓ ≥ 𝓗_ε(F) − \|h\|`) | `Artigo.description_lower_invariant` | `artigo_2/RequestProject/Codecs.lean` |
+
+No caso de III.3.20, a forma invariante está enunciada para codecs cujas palavras são `h ++ v`, com cabeçalho fixo `h` e payload de comprimento `ℓ`. O constante do `O(1)` é `|h|`.
+
+**Ainda abertos:**
+
+- **III.3.7** (`Computable` de `GammaSharp` e `nSharp`). Exige provar que as enumerações por altura são primitivas recursivas ou computáveis no sentido do Mathlib. É uma formalização de vários módulos, não um lema pontual.
+- **III.9.1** (desempate canônico por κ na tabela densa). Exige implementar o desempate na tabela e provar que ela escolhe o mesmo representante do seletor de III.7.4.
+- **III.3.2** (assintótica `288/π⁴`) e **III.9.3** (`BitModel`), pelas razões já registradas acima.
+- **Observações editoriais** (11), declaradas fora do escopo formal.

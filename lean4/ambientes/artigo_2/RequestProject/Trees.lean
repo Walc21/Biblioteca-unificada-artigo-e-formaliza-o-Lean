@@ -409,6 +409,87 @@ theorem eval_relu_form {k : ℕ} {m : ℤ} {T : LTree} (h : WF k m T) :
 /-- the class `𝒜(K)` of assemblies on the root `K = J_{k₀,m₀}` -/
 def Assemblies (k₀ : ℕ) (m₀ : ℤ) : Set (ℝ → ℝ) := {g | ∃ T, WF k₀ m₀ T ∧ g = T.eval k₀ m₀}
 
+/-! ### Convenção de posse semiaberta (partição pelas folhas) -/
+
+/-- Existência de dono: todo ponto da raiz, exceto o extremo direito, é possuído por uma folha
+com a convenção semiaberta `[L(c), R(c))`. -/
+lemma leaves_owner_exists : ∀ {k : ℕ} {m : ℤ} {T : LTree}, WF k m T → ∀ x ∈ cellIcc k m,
+    x ≠ cR k m → ∃ a ∈ T.leaves, x ∈ Set.Ico (cL a.k a.m) (cR a.k a.m) := by
+  intro k m T
+  induction T generalizing k m with
+  | leaf c =>
+    intro h x hx hne
+    refine ⟨c, by simp [leaves], ?_⟩
+    rw [h.1, h.2]
+    rw [cellIcc_eq] at hx
+    exact ⟨hx.1, lt_of_le_of_ne hx.2 hne⟩
+  | node l r ihl ihr =>
+    intro h x hx hne
+    rw [cellIcc_eq] at hx
+    by_cases hlt : x < cL (k + 1) (2 * m + 1)
+    · have hxl : x ∈ cellIcc (k + 1) (2 * m) := by
+        rw [cellIcc_eq, cL_child_left, cR_child_left]
+        exact ⟨hx.1, hlt.le⟩
+      have hne' : x ≠ cR (k + 1) (2 * m) := by
+        rw [cR_child_left]; exact ne_of_lt hlt
+      obtain ⟨a, ha, hxa⟩ := ihl h.1 x hxl hne'
+      exact ⟨a, by simp [leaves, ha], hxa⟩
+    · have hge : cL (k + 1) (2 * m + 1) ≤ x := not_lt.mp hlt
+      have hxr : x ∈ cellIcc (k + 1) (2 * m + 1) := by
+        rw [cellIcc_eq, cR_child_right]
+        exact ⟨hge, hx.2⟩
+      have hne' : x ≠ cR (k + 1) (2 * m + 1) := by
+        rw [cR_child_right]; exact hne
+      obtain ⟨a, ha, hxa⟩ := ihr h.2.1 x hxr hne'
+      exact ⟨a, by simp [leaves, ha], hxa⟩
+
+/-- Unicidade de dono: duas folhas que possuem o mesmo ponto têm a mesma célula. -/
+lemma leaves_owner_unique : ∀ {k : ℕ} {m : ℤ} {T : LTree}, WF k m T → ∀ a ∈ T.leaves,
+    ∀ b ∈ T.leaves, ∀ x : ℝ, x ∈ Set.Ico (cL a.k a.m) (cR a.k a.m) →
+    x ∈ Set.Ico (cL b.k b.m) (cR b.k b.m) → a.k = b.k ∧ a.m = b.m := by
+  intro k m T
+  induction T generalizing k m with
+  | leaf c =>
+    intro _ a ha b hb _ _ _
+    simp only [leaves, List.mem_singleton] at ha hb
+    subst ha; subst hb; exact ⟨rfl, rfl⟩
+  | node l r ihl ihr =>
+    intro h a ha b hb x hxa hxb
+    simp only [leaves, List.mem_append] at ha hb
+    rcases ha with ha | ha <;> rcases hb with hb | hb
+    · exact ihl h.1 a ha b hb x hxa hxb
+    · exfalso
+      have e1 : cR a.k a.m ∈ cellIcc (k + 1) (2 * m) :=
+        (leaves_cell_sub h.1 a ha) (by rw [cellIcc_eq]; exact ⟨(cL_lt_cR _ _).le, le_rfl⟩)
+      have e2 : cL b.k b.m ∈ cellIcc (k + 1) (2 * m + 1) :=
+        (leaves_cell_sub h.2.1 b hb) (by rw [cellIcc_eq]; exact ⟨le_rfl, (cL_lt_cR _ _).le⟩)
+      rw [cellIcc_eq] at e1 e2
+      have h1 := e1.2
+      have h2 := e2.1
+      rw [cR_child_left] at h1
+      linarith [hxa.2, hxb.1]
+    · exfalso
+      have e1 : cR b.k b.m ∈ cellIcc (k + 1) (2 * m) :=
+        (leaves_cell_sub h.1 b hb) (by rw [cellIcc_eq]; exact ⟨(cL_lt_cR _ _).le, le_rfl⟩)
+      have e2 : cL a.k a.m ∈ cellIcc (k + 1) (2 * m + 1) :=
+        (leaves_cell_sub h.2.1 a ha) (by rw [cellIcc_eq]; exact ⟨le_rfl, (cL_lt_cR _ _).le⟩)
+      rw [cellIcc_eq] at e1 e2
+      have h1 := e1.2
+      have h2 := e2.1
+      rw [cR_child_left] at h1
+      linarith [hxb.2, hxa.1]
+    · exact ihr h.2.1 a ha b hb x hxa hxb
+
+/-- **Convenção de posse (Definição 2.2).** Se `T` é bem formada sobre `J_{k,m}`, cada ponto de
+`J_{k,m}` diferente do extremo direito pertence à posse `[L(c), R(c))` de exatamente uma folha `c`
+(a uma só célula). -/
+theorem leaves_ownership_partition {k : ℕ} {m : ℤ} {T : LTree} (h : WF k m T) (x : ℝ)
+    (hx : x ∈ cellIcc k m) (hne : x ≠ cR k m) :
+    ∃ a ∈ T.leaves, x ∈ Set.Ico (cL a.k a.m) (cR a.k a.m) ∧
+      ∀ b ∈ T.leaves, x ∈ Set.Ico (cL b.k b.m) (cR b.k b.m) → b.k = a.k ∧ b.m = a.m := by
+  obtain ⟨a, ha, hxa⟩ := leaves_owner_exists h x hx hne
+  exact ⟨a, ha, hxa, fun b hb hxb => leaves_owner_unique h b hb a ha x hxb hxa⟩
+
 end LTree
 
 end Artigo

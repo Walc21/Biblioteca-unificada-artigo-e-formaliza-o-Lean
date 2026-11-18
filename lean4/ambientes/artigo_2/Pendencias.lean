@@ -42,3 +42,4 @@ import Pendencias.FaseCoro
 import Pendencias.FaseMediaFase
 import Pendencias.FaseExtremos
 import Pendencias.FaseOn
+import Pendencias.FaseSalto

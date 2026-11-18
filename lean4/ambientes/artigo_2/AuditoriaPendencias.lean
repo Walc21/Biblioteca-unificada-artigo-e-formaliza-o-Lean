@@ -166,3 +166,7 @@ import Pendencias
 #print axioms Pendencias.limit_of_const_on
 #print axioms Pendencias.phase_average_on
 #print axioms Pendencias.extremes_iff_fourPowers_on
+#print axioms Pendencias.psiP_sub_psiF
+#print axioms Pendencias.isAtomPhase_iff_gap
+#print axioms Pendencias.continuousAt_psiF_iff
+#print axioms Pendencias.continuousAt_psiFOn_iff

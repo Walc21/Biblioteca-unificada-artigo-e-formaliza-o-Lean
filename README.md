@@ -33,7 +33,7 @@ e observações; a cobertura semântica integral do volume permanece por verific
 
 | | |
 |---|---|
-| Páginas do PDF da edição ABNT | **159** |
+| Páginas do PDF da edição ABNT | **158** |
 | Ambientes matemáticos (teoremas, lemas, definições, algoritmos…) | **156** |
 | Ambientes do manuscrito original de 77 páginas cobertos | **108** |
 | Figuras (PDF, PNG e SVG) | **17** |
@@ -105,6 +105,7 @@ comparação com nós livres), conservando a numeração original para cruzament
 A tabela completa — cada um dos 156 ambientes do PDF com o rótulo no TeX, a linha e a(s) declaração(ões) Lean —
 está em [`mapas/MAPA_TEX_LEAN.md`](mapas/MAPA_TEX_LEAN.md). As linhas do mapa remetem às fontes em `tex/`.
 Na edição ABNT, o mapa ao final do PDF traz as páginas correspondentes e links para os resultados.
+Os resultados da revisão dos enunciados e da reprodução estão na [auditoria PDF–Lean](documentacao/AUDITORIA_PDF_LEAN.md).
 
 ### Um destaque honesto: a formalização corrigiu o artigo
 
@@ -126,7 +127,7 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada_ABNT.pdf   # PDF da edição ABNT (159 páginas)
+├── Biblioteca_Unificada_ABNT.pdf   # PDF da edição ABNT (158 páginas)
 ├── tex_abnt/                       # fontes LaTeX da edição ABNT
 │   ├── principal.tex               # documento principal
 │   ├── documento_completo.tex      # fonte consolidada com bibliografia incorporada

@@ -92,14 +92,15 @@ Nas auditorias com `#print axioms`, o script também verifica as dependências i
    foram formalizados em Lean depois dela (adendo no fim deste arquivo), com ressalvas; III.12.9 é observação editorial. Não se afirma formalização integral do artigo.
 3. **III.9.1** usa um modelo de custo unitário explícito e não implementa o desempate canônico por κ
    (formalizado no seletor funcional de III.7.4). **III.9.3** toma como hipótese do modelo (`BitModel`) o
-   custo das operações aritméticas em bits; não há modelo de máquina em Lean.
+   custo das operações aritméticas. A largura no caso com orçamento inclui
+   `Nat.clog 2 (N + 1)` bits para a coordenada extra. A cota formal é do modelo instrumentado.
 4. **I.6.3 e I.6.4** (refinamento certificado): `Refinamento.lean` exige as raízes contidas em `[α,β]`.
    `RefinamentoCobertura.lean` remove essa hipótese (`certified_refinement_external`, com o exemplo
    `[1/3, 2/3]` em `thirds_success`). O refinamento continua uma definição `noncomputable`, com escolhas nodais
    e endereços dados por existência, e o contrato `M_int ≤ M*` é hipótese de entrada.
 5. **IV.5.4** foi fechada com o enunciado **corrigido**: a cota impressa originalmente era falsa
-   (contraexemplo `R(x)=x`, provado em Lean). Na parte direta, a forma reduzida é a estrutura `Anchored`,
-   sem ponte formal para `RealReLU`.
+   (contraexemplo `R(x)=x`, provado em Lean). Na parte direta, `Anchored.toRealReLU_eval` prova a
+   igualdade de avaliação e `Anchored.toRealReLU_reduced` prova que a forma produzida é reduzida.
 6. **Os programas Python de `verificacao/` não fazem parte das provas** e não foram reexecutados
    integralmente nesta recompilação.
 7. **Documentos herdados.** `documentacao/INTEGRACAO_NORMALIZACAO.md` cita registros em `evidencias/` e um

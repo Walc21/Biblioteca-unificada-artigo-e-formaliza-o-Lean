@@ -478,7 +478,8 @@ com nós distintos. Suponha que $K$ admita uma cobertura por células diádicas 
 seja não nula. Então $R|_K\in\Asm(K)$. Uma malha diádica uniforme que refine todos os $\tau_j$ fornece essa montagem explicitamente.
 \end{teorema}
 \begin{proof}
-Na primeira folha, o lado direito de \eqref{artigo_1:eq:24} tem valor $g(t_0)$ em $t_0$ e inclinação $s_0$. Ao atravessar $t_j$, a derivada ganha exatamente $s_j-s_{j-1}$; por indução, sua inclinação na folha $j$ é $s_j$. Como ambos os lados são contínuos e coincidem no primeiro nó, coincidem em todo $K$. Cada $s_j$ é racional. Os nós internos são fronteiras de células diádicas, e o intercepto do primeiro átomo é racional por \eqref{artigo_1:eq:15}; logo a forma expandida tem somente parâmetros racionais.
+Na primeira folha, o lado direito de \eqref{artigo_1:eq:24} tem valor $g(t_0)$ em $t_0$ e inclinação $s_0$. Ao atravessar $t_j$, a derivada ganha exatamente $s_j-s_{j-1}$; por indução, sua inclinação na folha $j$ é $s_j$. Os átomos concordam nas fronteiras, inclusive fora de $K$. Assim a identidade vale
+em toda a união das folhas para a função colada a partir dos átomos e, em particular, em $K$. Cada $s_j$ é racional. Os nós internos são fronteiras de células diádicas, e o intercepto do primeiro átomo é racional por \eqref{artigo_1:eq:15}; logo a forma expandida tem somente parâmetros racionais.
 
 Para a recíproca, refine uma grade diádica até que cada $\tau_j$ seja uma fronteira. Em qualquer célula aberta da grade, \eqref{artigo_1:eq:25} é afim, com inclinação \eqref{artigo_1:eq:26}. O valor no centro da célula é racional, pois o centro, os nós e todos os coeficientes são racionais. A hipótese de inclinação não nula permite aplicar o teorema~3.6, que fornece um único átomo da biblioteca nessa célula. A continuidade de $R$ faz os valores coincidirem nas fronteiras. A união das peças é, portanto, uma montagem no sentido da definição~4.1.
 \end{proof}
@@ -578,6 +579,7 @@ Com $N_k$ de \eqref{artigo_1:eq:23}, $h=(\beta-\alpha)N_k^{-1}(1+O(N_k^{-1}))$ e
 Quando os extremos já são nós da malha, o termo de borda desaparece.
 \begin{table}[!htbp]\centering
 \caption{Erro exato do interpolante de $e^x$ em $[0,1]$.}
+\label{artigo_1:tab:interpolante-exp}
 \begin{tabular}{rrrr}\toprule
 $k$&erro exato&$2^{-2k}e/8$&razão\\\midrule
 2&$1{,}8774\times10^{-2}$&$2{,}1237\times10^{-2}$&$0{,}8840$\\
@@ -2255,7 +2257,7 @@ com $\mathcal{Q}_H$ como no \cref{artigo_2:lem:rational-count}. O primeiro fator
 \[
  |\Library_H|\ge H\cdot H\cdot c_1H^2\cdot\bigl(c_1H^2-1\bigr)\ \ge\ \frac{c_1^2}{2}H^6
 \]
-para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$. Para a assintótica exata, seja $\Phi(H)=\sum_{n\le H}\varphi(n)$, que satisfaz $\Phi(H)=3H^2/\pi^2+O(H\log H)$. Os pares coprimos $(p,q)\in[1,H]^2$ são $2\Phi(H)-1$ (os com $p\le q$ são $\Phi(H)$, os com $q\le p$ também, e $(1,1)$ é contado duas vezes); os racionais reduzidos de altura no máximo $H$ são $0$ e os positivos e negativos associados a esses pares, de modo que $|\mathcal Q_H|=4\Phi(H)-1=(12/\pi^2)H^2+O(H\log H)$. Como $H(2H-1)=2H^2(1+O(1/H))$ e $|\mathcal Q_H|(|\mathcal Q_H|-1)=|\mathcal Q_H|^2(1+O(H^{-2}))$, $|\Library_H|=2H^2\cdot(144/\pi^4)H^4(1+O(\tfrac{\log H}{H}))=(288/\pi^4)H^6(1+o(1))$. (Conferência numérica da razão $|\Library_H|/H^6$: $3{,}034$ em $H=50$; $2{,}961$ em $H=800$; $2{,}957$ em $H=12800$; limite $2{,}9566$.)
+para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$. Para a assintótica exata, seja $\Phi(H)=\sum_{n\le H}\varphi(n)$, que satisfaz $\Phi(H)=3H^2/\pi^2+O(H\log H)$. Os pares coprimos $(p,q)\in[1,H]^2$ são $2\Phi(H)-1$ (os com $p\le q$ são $\Phi(H)$, os com $q\le p$ também, e $(1,1)$ é contado duas vezes); os racionais reduzidos de altura no máximo $H$ são $0$ e os positivos e negativos associados a esses pares, de modo que $|\mathcal Q_H|=4\Phi(H)-1=(12/\pi^2)H^2+O(H\log H)$. Como $H(2H-1)=2H^2(1+O(1/H))$ e $|\mathcal Q_H|(|\mathcal Q_H|-1)=|\mathcal Q_H|^2(1+O(H^{-2}))$, $|\Library_H|=2H^2\cdot(144/\pi^4)H^4(1+O(\tfrac{\log H}{H}))=(288/\pi^4)H^6(1+o(1))$. (Conferência numérica da razão $|\Library_H|/H^6$: $3{,}034$ em $H=50$; $2{,}961$ em $H=800$; $2{,}957$ em $H=12800$; limite $2{,}9566$, reproduzido por \path{verificacao/constante_iii32.py}.)
 \end{proof}
 
 \paragraph{Dependência do expoente no calibre.}
@@ -4103,8 +4105,12 @@ troca esse fator de memória por trabalho adicional na comparação.
 % MAPA artigo_2:9.1
 \begin{theorem}[complexidade em número de estados]\label{map:artigo_2:9.1}
 \label{artigo_2:thm:state-complexity}
-Suponha os custos de folha pré-computados e, como modelo de custo, que ler ou escrever uma entrada da tabela, somar e comparar custos custam uma operação cada. Uma implementação densa do
-\cref{artigo_2:alg:variable-tree} usa
+Suponha os custos de folha pré-computados. Uma tabela densa para as
+recorrências de custo, com apontadores para reconstruir um minimizador,
+usa as cotas abaixo quando ler ou escrever uma entrada, somar e comparar
+custos custam uma operação cada. Para manter também o desempate canônico do
+\cref{artigo_2:alg:variable-tree}, as mesmas ordens contam construção e
+comparação de chaves completas como operações unitárias. Sem orçamento de folhas, usam-se
 \begin{equation}
  O(S_DM^3)
  \label{artigo_2:eq:dense-time}
@@ -4136,6 +4142,11 @@ $n\le N$, as decomposições positivas $n_L+n_R=n$, obtêm-se $O(N^2)$ pares de
 orçamentos por tripla $(u,w,v)$. Isso prova \eqref{artigo_2:eq:budget-time} e a cota de
 memória. A última afirmação vem de somar até $P$ termos em cada custo local.
 \end{proof}
+
+A formalização de custo instrumenta a tabela que guarda custos e
+apontadores para um minimizador. O desempate da chave completa é
+certificado separadamente na correção do
+\cref{artigo_2:alg:variable-tree}.
 
 % MAPA artigo_2:9.2
 \begin{remark}[tabelas esparsas]\label{map:artigo_2:9.2}
@@ -4200,23 +4211,29 @@ denominadores de comprimento no máximo
  \right).
  \label{artigo_2:eq:cost-bit-growth}
 \end{equation}
-Consequentemente, no modelo em que somar, comparar ou reduzir frações de $b$ bits custa $O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit, a versão densa sem orçamento de folhas pode ser executada em
+Ponha $b=16B_{\rm cost}+25$ para incluir as somas intermediárias e
+$B_{\rm idx}=\lceil\log_2(S_DM+1)\rceil$. No modelo em que
+somar, comparar ou reduzir frações com operandos de $b$ bits custa
+$O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit e acessar uma entrada
+custa no máximo sua largura em bits, a versão densa sem orçamento de folhas usa
 \begin{equation}
  O\!\left(
  (S_DM^3+S_DPM^2)
- \bigl[\mathsf M_{\mathbb Z}(B_{\rm cost})
-       \log(2B_{\rm cost})+L\bigr]
+ \bigl[\mathsf M_{\mathbb Z}(b)
+       \log(2b)+b+L+B_{\rm idx}\bigr]
  \right)
  \label{artigo_2:eq:dense-bit-time}
 \end{equation}
 operações de bit e
 \begin{equation}
- O\!\left(S_DM^2(B_{\rm cost}+L)\right)
+ O\!\left(S_DM^2(B_{\rm cost}+L+B_{\rm idx})\right)
  \label{artigo_2:eq:dense-bit-memory}
 \end{equation}
-bits de memória quando todos os estados e fluxos são armazenados. Na versão
-com até $N$ folhas, substituem-se $S_DM^3$ e $S_DM^2$ por
-$S_DN^2M^3$ e $S_DNM^2$, respectivamente. Com multiplicação escolar,
+bits de memória. A variante que armazena e compara fluxos completos tem
+a mesma cota no modelo em que copiar ou comparar um fluxo custa $O(L)$.
+Na versão com até $N$ folhas, substituem-se $S_DM^3$ e o fator $S_DM^2$
+da memória por $S_DN^2M^3$ e $S_DNM^2$, respectivamente, e soma-se
+$\lceil\log_2(N+1)\rceil$ a $B_{\rm idx}$. Com multiplicação escolar,
 $\mathsf M_{\mathbb Z}(b)=O(b^2)$.
 \end{theorem}
 
@@ -4237,22 +4254,22 @@ de penalização acrescentam $O(B_{\mathcal Z}+D+\log(2L))$ bits. Isso prova
 \eqref{artigo_2:eq:cost-bit-growth}; cancelamentos por máximo divisor comum só podem
 reduzir os operandos.
 
-Uma soma, comparação ou redução de frações com operandos de comprimento
-$B_{\rm cost}$ custa
-$O(\mathsf M_{\mathbb Z}(B_{\rm cost})\log(2B_{\rm cost}))$ operações de bit
-por algoritmos inteiros usuais. Quando custos e número de folhas empatam, a
-comparação shortlex lê no máximo $L$ bits. Multiplicar esse custo pelo número
-de transições e inicializações do \cref{artigo_2:thm:state-complexity} dá
-\eqref{artigo_2:eq:dense-bit-time}. Cada estado guarda um custo, um fluxo ou apontador
-de reconstrução e índices de $O(\log(S_DM))$ bits, absorvidos pela cota exibida;
-isso prova \eqref{artigo_2:eq:dense-bit-memory}. O argumento com a coordenada de
-orçamento é idêntico.
+As somas e penalidades de um candidato intermediário usam no máximo
+$b$ bits. Quando custos e número de folhas empatam, a comparação shortlex
+lê no máximo $L$ bits. Cada entrada guarda um custo, um fluxo ou apontador
+e índices. As coordenadas espaciais e de fronteira custam
+$O(B_{\rm idx})$ bits. A coordenada de orçamento e o orçamento do filho
+num apontador acrescentam $O(\log(N+1))$ bits. Multiplicar a cota de custo de
+uma operação pela contagem de transições e inicializações do
+\cref{artigo_2:thm:state-complexity} dá \eqref{artigo_2:eq:dense-bit-time}.
+Multiplicar a largura por entrada pelo total de entradas dá
+\eqref{artigo_2:eq:dense-bit-memory}.
 \end{proof}
 
-A cota é propositalmente conservadora: ela não explora cancelamentos nem
-denominadores compartilhados. Ainda assim, fecha o modelo de Turing e torna
-explícito o ponto essencial. Como $M\le36H^6$ e $S_D=2^{D+1}-1$, a
-dependência continua pseudo-polinomial nos valores numéricos de $H$ e $2^D$,
+O Lean prova a cota no modelo de custo declarado para a execução instrumentada
+que compara custos. A comparação shortlex faz parte do argumento textual
+para a variante com desempate. Como $M\le36H^6$ e $S_D=2^{D+1}-1$,
+a dependência continua pseudopolinomial nos valores numéricos de $H$ e $2^D$,
 mesmo após contabilizar o crescimento dos racionais.
 
 \subsection{Valores sob truncagem}
@@ -5581,7 +5598,7 @@ $[0{,}33970;0{,}49997]$ para $e^x$ (arredondados a cinco casas), e os mesmos tes
 uma função afim em $[0,\tfrac12]$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$,
 que tem $f''\equiv2$ em $[0,\tfrac12]$ e $f''(x)=12x-4$ em $[\tfrac12,1]$, concordam
 com $[m_f^2,M_f^2]$ calculado de $\Psi_f$, com erro relativo inferior a $0{,}5\%$.
-O programa é \path{verificacao/lei_fase_experimento.py}, que não integra os
+O programa é \path{verificacao/lei_fase_experimento.py} (opção \texttt{--published}), que não integra os
 verificadores reprodutíveis do volume.
 
 Para $e^x$, $\ln(1+x)$, $x^3+x^2$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$
@@ -5610,8 +5627,13 @@ testados ($33$, $18$ e $119$ nas três famílias, cada um comparado em $\varepsi
 e imediatamente abaixo). Esse teste não reconstrói a árvore desde a raiz, o que
 é feito por \path{verificacao/constante_diadica.py}. Além disso,
 $\min x_N=m_f^2$ exatamente; no caso sincronizado ambos coincidem com
-$I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os resultados numéricos
-desta observação \emph{não foram formalizados em Lean}; trata-se de verificação numérica ou em aritmética racional, e não de prova formal. Os enunciados \cref{map:artigo_2:12.5} a \cref{map:artigo_2:12.8} foram, por outro lado, formalizados em Lean nos módulos \path{lean4/ambientes/artigo_2/Pendencias/Fase*.lean}, com as ressalvas registradas no mapa (a medida $\mu_f$ não é construída em $\mathbb T$, e a equivalência entre $\Psi_f$ constante e $\mu_f$ uniforme não foi formalizada).
+$I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os
+experimentos desta observação são verificações numéricas ou em aritmética
+racional. As formalizações de III.12.5 a III.12.8 estão nos módulos
+\path{lean4/ambientes/artigo_2/Pendencias/Fase*.lean}. Em particular, o Lean
+constrói a medida $\tilde\mu_f=\mu_f/\sqrt8$ no círculo, identifica seu valor no
+singleton $\{-t\}$ com o salto $\Psi_f^+(t)-\Psi_f(t)$ e prova o critério
+de uniformidade.
 \end{remark}
 
 \section{Verificações de codificação e entropia}
@@ -5678,7 +5700,7 @@ de $\varepsilon$.
 
 \begin{table}[t]
 \centering
-\caption{Sucessores admissíveis por nó e comprimento do índice global reescalado.}
+\caption{Sucessores observados nas sondas, distorção amostrada e estimativas do comprimento global reescalado.}
 \label{artigo_2:tab:codebook-pt}
 \small
 \begin{tabular}{rrrrrr}
@@ -5767,7 +5789,7 @@ O calibre adotado produz $\Theta(H^6)$ átomos e uma enumeração por altura que
 
 Na seleção, os valores racionais de fronteira fornecem estados suficientes para preservar continuidade e admissibilidade. As recorrências calculam o mínimo do catálogo, com desempate canônico e custos separados em operações e bits. A estabilização sob truncagem exige que o mínimo global seja atingido; a seleção exata pode ser descontínua em empates.
 
-Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. Para curvatura variável, a função de fase $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ a menos de $o(1)$ nas fases em que $\mu_f$ não tem átomo, e o conjunto de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o intervalo $[m_f^2,M_f^2]$; o limite existe se, e somente se, $\mu_f$ é uniforme, e então vale $I(f)^2/(8\ln^22)$, como em $f=\ln(1+x)$. Esses resultados de fase não foram formalizados em Lean. O efeito de uma agenda fixa sobre o melhor erro racional permanece uma questão distinta dos resultados interpolatórios demonstrados.
+Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. Para curvatura variável, a função de fase $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ a menos de $o(1)$ nas fases em que $\mu_f$ não tem átomo, e o conjunto de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o intervalo $[m_f^2,M_f^2]$; o limite existe se, e somente se, $\mu_f$ é uniforme, e então vale $I(f)^2/(8\ln^22)$, como em $f=\ln(1+x)$. Os resultados III.12.5 a III.12.8 foram formalizados em Lean com as ressalvas indicadas no mapa. O efeito de uma agenda fixa sobre o melhor erro racional permanece uma questão distinta dos resultados interpolatórios demonstrados.
 
 
 
@@ -5941,7 +5963,7 @@ tomar o supremo nos mesmos blocos.
 % MAPA artigo_3:3.3
 \begin{proposition}[falha exata de homogeneidade]\label{map:artigo_3:3.3}
 \label{artigo_3:prop:nonhomogeneous-functional}
-Suponha $K=[0,1]$ e $H(1)\ge2$. O funcional
+Suponha $K=[0,1]$, $H$ não decrescente e $H(1)\ge2$. O funcional
 $\|f\|_\infty+\mathfrak a_{\alpha,q}^{\Library,H}(f)$ não é homogêneo sobre
 $C(K)$ e, portanto, não é uma quase-norma. Mais precisamente, para
 $f(x)=x$ e $c=\sqrt2$,
@@ -6330,27 +6352,27 @@ $\mathcal Q_H=\{p/q\in\mathbb Q:\height(p/q)\le H\}$.
 % MAPA artigo_3:4.6
 \begin{proposition}[piso aritmético uniforme]\label{map:artigo_3:4.6}
 \label{artigo_3:prop:arithmetic-floor}
-Para cada $H\ge2$, seja $a_H=1/(2H)$ e $f_H\equiv a_H$ em $K$. Então, para
-todo $N$,
+Para uma agenda $H$ e um orçamento $N$ com $h=H(N)\ge2$,
+ponha $a_h=1/(2h)$ e $f_h\equiv a_h$ em $K$. Então
 \begin{equation}
- e_N^{\Library,H}(f_H)
- \ge\operatorname{dist}(a_H,\mathcal Q_H)
- =\frac1{2H}.
+ e_N^{\Library,H}(f_h)
+ \ge\operatorname{dist}(a_h,\mathcal Q_h)
+ =\frac1{2h}.
  \label{artigo_3:eq:arithmetic-floor}
 \end{equation}
 Consequentemente, se uma classe contém todas as constantes
 $f\equiv a$, $|a|\le1/4$, e satisfaz
 $\sup_f e_N^{\Library,H}(f)\le C N^{-s}$, então
-$H(N)\ge(2C)^{-1}N^s$ para todo $N$ com $H(N)\ge2$.
+$H(N)\ge(2C)^{-1}N^s$ para todo $N\ge1$ com $H(N)\ge2$.
 \end{proposition}
 
 \begin{proof}
 No centro de qualquer folha, uma montagem não nula assume o valor central
-$y_0\in\mathcal Q_H$ do átomo; a função nula assume o valor $0$, que também
-pertence a $\mathcal Q_H$. Não existe racional de altura no máximo $H$
-estritamente entre $0$ e $1/H$: todo racional positivo nessa faixa teria
-numerador pelo menos $1$ e denominador maior que $H$. Portanto
-$a_H$ está a distância $1/(2H)$ de $\mathcal Q_H$. Avaliar o erro em um
+$y_0\in\mathcal Q_h$ do átomo; a função nula assume o valor $0$, que também
+pertence a $\mathcal Q_h$. Não existe racional de altura no máximo $h$
+estritamente entre $0$ e $1/h$: todo racional positivo nessa faixa teria
+numerador pelo menos $1$ e denominador maior que $h$. Portanto
+$a_h$ está a distância $1/(2h)$ de $\mathcal Q_h$. Avaliar o erro em um
 centro de folha prova a cota. Como $a_{H(N)}\le1/4$, a hipótese uniforme
 aplicada a essa constante dá
 $1/(2H(N))\le CN^{-s}$, que é a última afirmação.
@@ -7558,7 +7580,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_1:3.6]{I.3.6} & 3.6 & \pageref{map:artigo_1:3.6} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:4.1]{I.4.1} & 4.1 & \pageref{map:artigo_1:4.1} & Integrado à base. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.\\[4pt]
 \hyperref[map:artigo_1:4.2]{I.4.2} & 4.2 & \pageref{map:artigo_1:4.2} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_1:4.3]{I.4.3} & 4.3 & \pageref{map:artigo_1:4.3} & Divergência documentada. O operador de extensão normalizado foi integrado à classe concreta da Fase 2. O enunciado TeX deste volume lê $g(t_0)$ como o valor em $t_0$ da primeira peça ($t_0$ pode estar fora de $K$); essa leitura não foi reverificada contra o enunciado Lean.\\[4pt]
+\hyperref[map:artigo_1:4.3]{I.4.3} & 4.3 & \pageref{map:artigo_1:4.3} & Correspondência confirmada. A forma Lean usa a reta do primeiro átomo avaliada em $t_0$ e exige acordo das retas nos nós compartilhados. Na volta, as inclinações dos trechos de $K$ são não nulas.\\[4pt]
 \hyperref[map:artigo_1:4.4]{I.4.4} & 4.4 & \pageref{map:artigo_1:4.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:4.5]{I.4.5} & 4.5 & \pageref{map:artigo_1:4.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_1:5.1]{I.5.1} & 5.1 & \pageref{map:artigo_1:5.1} & Correspondência inspecionada\\[4pt]
@@ -7625,12 +7647,12 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_2:2.2]{III.2.2} & -- & \pageref{map:artigo_2:2.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:2.3]{III.2.3} & -- & \pageref{map:artigo_2:2.3} & Formalizado e compilado. Cota de interpolação provada com \texttt{ContDiffOn} de ordem 2 em \texttt{Icc a b} e \texttt{derivWithin}, via extensão $C^2$ portada da Fase 3 (\texttt{Pendencias/Extensao.lean}); densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Resultados globais ou classe FRM usam regularidade $C^2$ na reta. O artigo admite $C^2$ no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados.\\[4pt]
 \hyperref[map:artigo_2:3.1]{III.3.1} & 8.1 & \pageref{map:artigo_2:3.1} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.2]{III.3.2} & 8.2 & \pageref{map:artigo_2:3.2} & Correspondência inspecionada\\[4pt]
+\hyperref[map:artigo_2:3.2]{III.3.2} & 8.2 & \pageref{map:artigo_2:3.2} & Correspondência parcial. A contagem exata e a ordem $\Theta(H^6)$ estão no Lean. A constante $288/\pi^4$ é obtida na prova textual.\\[4pt]
 \hyperref[map:artigo_2:3.3]{III.3.3} & 8.3 & \pageref{map:artigo_2:3.3} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.4]{III.3.4} & 8.4 & \pageref{map:artigo_2:3.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.5]{III.3.5} & 8.5 & \pageref{map:artigo_2:3.5} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.6]{III.3.6} & 8.6 & \pageref{map:artigo_2:3.6} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:3.7]{III.3.7} & 8.7 & \pageref{map:artigo_2:3.7} & Correspondência inspecionada\\[4pt]
+\hyperref[map:artigo_2:3.7]{III.3.7} & 8.7 & \pageref{map:artigo_2:3.7} & Bijeção e cotas minimax provadas em Lean. As funções são executáveis, com computabilidade indicada na prova textual.\\[4pt]
 \hyperref[map:artigo_2:3.8]{III.3.8} & 8.8 & \pageref{map:artigo_2:3.8} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:3.9]{III.3.9} & 8.9 & \pageref{map:artigo_2:3.9} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:3.10]{III.3.10} & 8.10 & \pageref{map:artigo_2:3.10} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
@@ -7668,9 +7690,9 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_2:8.2]{III.8.2} & 13.2 & \pageref{map:artigo_2:8.2} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:8.3]{III.8.3} & 13.3 & \pageref{map:artigo_2:8.3} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
 \hyperref[map:artigo_2:8.4]{III.8.4} & 13.4 & \pageref{map:artigo_2:8.4} & Correspondência inspecionada\\[4pt]
-\hyperref[map:artigo_2:9.1]{III.9.1} & 14.1 & \pageref{map:artigo_2:9.1} & Formalizado e compilado. Complexidade em número de estados: prova \code{DenseDP.state_complexity_dense}; modelo de custo unitário explícito (leitura/escrita da tabela, soma, comparação); constantes 8 e 7. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: Prova cardinalidades das tabelas e transições; não certifica tempo e memória de um programa com execução ligada a essas cardinalidades.\\[4pt]
+\hyperref[map:artigo_2:9.1]{III.9.1} & 14.1 & \pageref{map:artigo_2:9.1} & Formalizado para a tabela de custos com apontadores para um minimizador (\code{DenseDP.state_complexity_dense}). O desempate canônico é certificado separadamente em III.7.4.\\[4pt]
 \hyperref[map:artigo_2:9.2]{III.9.2} & 14.2 & \pageref{map:artigo_2:9.2} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
-\hyperref[map:artigo_2:9.3]{III.9.3} & 14.3 & \pageref{map:artigo_2:9.3} & Formalizado e compilado. Complexidade de bits: prova \code{DenseDP.bit_complexity_dense}; custo de operação aritmética em bits é hipótese do modelo (\code{BitModel}). Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: bit\_complexity limita o tamanho dos custos racionais. As cotas de tempo e memória em bits do artigo exigem semântica de execução e custo de operações/desempate.\\[4pt]
+\hyperref[map:artigo_2:9.3]{III.9.3} & 14.3 & \pageref{map:artigo_2:9.3} & Formalizado para a tabela de custos no modelo \code{BitModel} (\code{DenseDP.bit_complexity_dense}). A largura inclui índices e a coordenada de orçamento. A cota shortlex da variante canônica usa o argumento textual.\\[4pt]
 \hyperref[map:artigo_2:9.4]{III.9.4} & 14.4 & \pageref{map:artigo_2:9.4} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:9.5]{III.9.5} & 14.5 & \pageref{map:artigo_2:9.5} & Correspondência inspecionada\\[4pt]
 \hyperref[map:artigo_2:11.1]{III.11.1} & 16.1 & \pageref{map:artigo_2:11.1} & Correspondência inspecionada\\[4pt]
@@ -7680,7 +7702,7 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \hyperref[map:artigo_2:12.2]{III.12.2} & 17.2 & \pageref{map:artigo_2:12.2} & Generalização documentada. A hipótese $C^1$ foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.\\[4pt]
 \hyperref[map:artigo_2:12.3]{III.12.3} & 17.3 & \pageref{map:artigo_2:12.3} & Prova textual sincronizada. Demonstração textual sincronizada com \code{Artigo.synchronized_phases}; usa contagem exata e periodicidade, sem o envelope $C^2$ global.\\[4pt]
 \hyperref[map:artigo_2:12.4]{III.12.4} & 17.4 & \pageref{map:artigo_2:12.4} & Observação editorial. Observação ou diagnóstico do texto; não é um teorema Lean autônomo.\\[4pt]
-\hyperref[map:artigo_2:12.5]{III.12.5} & --- & \pageref{map:artigo_2:12.5} & Prova textual nova e formalização Lean (\texttt{Pendencias.psiF\_lsc}, \texttt{psiP\_usc}, \texttt{exists\_min\_psiF}, \texttt{psiP\_sub\_psiF}, \texttt{continuousAt\_psiF\_iff}, \texttt{integral\_psiF}, \texttt{fourier\_psiF} e versões \texttt{\_on} para $C^2(K)$). Ressalva resolvida nesta rodada: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (\texttt{Pendencias.muCirc}, com $\mu_f=\sqrt8\,\tilde\mu_f$), e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ (\texttt{PsiF\_eq\_circ}).\\[4pt]
+\hyperref[map:artigo_2:12.5]{III.12.5} & --- & \pageref{map:artigo_2:12.5} & Prova textual nova e formalização Lean (\texttt{Pendencias.psiF\_lsc}, \texttt{psiP\_usc}, \texttt{exists\_min\_psiF}, \texttt{psiP\_sub\_psiF}, \texttt{continuousAt\_psiF\_iff}, \texttt{integral\_psiF}, \texttt{fourier\_psiF} e versões \texttt{\_on} para $C^2(K)$). Ressalva resolvida nesta rodada: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (\texttt{Pendencias.muCirc}, com $\mu_f=\sqrt8\,\tilde\mu_f$), e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ (\texttt{PsiF\_eq\_circ}). O salto iguala $\tilde\mu_f(\{-t\})$ (\code{psiOn_gap_eq_muCirc}).\\[4pt]
 \hyperref[map:artigo_2:12.6]{III.12.6} & --- & \pageref{map:artigo_2:12.6} & Prova textual nova e formalização Lean (\texttt{Pendencias.upper\_count\_pow}, \texttt{lower\_count\_pow}), apoiada em III.11.1 e na cota local \eqref{artigo_2:eq:local-upper-basic}. Versões $C^2(K)$ acrescentadas (\texttt{upper\_count\_pow\_on}, \texttt{lower\_count\_pow\_on}).\\[4pt]
 \hyperref[map:artigo_2:12.7]{III.12.7} & --- & \pageref{map:artigo_2:12.7} & Prova textual nova e formalização Lean (\texttt{Pendencias.phase\_lower}, \texttt{phase\_upper}, \texttt{phase\_law\_nonatom}, \texttt{phase\_law\_uniform}, \texttt{phase\_liminf\_ge}, \texttt{phase\_limsup\_le} e versões \texttt{\_on}). Lei de fase para $f\in C^2$; testada também numericamente (ver III.12.9).\\[4pt]
 \hyperref[map:artigo_2:12.8]{III.12.8} & --- & \pageref{map:artigo_2:12.8} & Prova textual nova e formalização Lean: (a) \texttt{phase\_cluster\_set}; (b) \texttt{limit\_iff\_const}, \texttt{limit\_of\_const}; (c) \texttt{phase\_average}; (d) \texttt{extremes\_iff\_fourPowers} (e versões \texttt{\_on}). Em (b), a equivalência «limite existe $\Leftrightarrow$ $\Psi_f$ constante $\Leftrightarrow$ $\mu_f$ uniforme» está formalizada (\texttt{limit\_iff\_muCirc}, \texttt{limit\_iff\_muCirc\_on}, \texttt{FaseMedida}). Em (d) o ``massa pontual'' é enunciado como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$.\\[4pt]
@@ -7691,20 +7713,20 @@ Até 13/11/2026, 41 resultados antes pendentes passaram ao estado ``Formalizado 
 \small
 \begin{longtable}{@{}p{.11\linewidth}p{.09\linewidth}p{.09\linewidth}p{.59\linewidth}@{}}
 \toprule Resultado & Original & Página & Estado e ressalva\\\midrule\endhead
-\hyperref[map:artigo_3:3.1]{IV.3.1} & 18.1 & \pageref{map:artigo_3:3.1} & Formalizado e compilado (fidelidade não reauditada). Definições \texttt{Sigma} e \texttt{pErr} sobre $K=[0,1]$ (domínio de \texttt{jointErr}); inclusão, monotonia, cota por $\|f\|$ e atingimento do ínfimo (catálogo finito), além da fórmula $\min\{\|f\|,E_{N,H(N)}\}$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
-\hyperref[map:artigo_3:3.2]{IV.3.2} & 18.2 & \pageref{map:artigo_3:3.2} & Formalizado e compilado (fidelidade não reauditada). Provas: \code{Pendencias.Agenda.dyadic_reduction, Pendencias.Agenda.dyadic_reduction_inf}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
+\hyperref[map:artigo_3:3.1]{IV.3.1} & 18.1 & \pageref{map:artigo_3:3.1} & Formalizado para raiz diádica arbitrária (\code{schedule_nesting_K}), incluindo o atingimento do ínfimo no catálogo apontado finito.\\[4pt]
+\hyperref[map:artigo_3:3.2]{IV.3.2} & 18.2 & \pageref{map:artigo_3:3.2} & Formalizado para raiz diádica arbitrária na soma ponderada e no supremo (\code{dyadic_reduction_K}, \code{dyadic_reduction_inf_K}).\\[4pt]
 \hyperref[map:artigo_3:3.3]{IV.3.3} & 18.3 & \pageref{map:artigo_3:3.3} & Formalizado e compilado (fidelidade não reauditada). Provas: \code{Pendencias.Agenda.homogeneity_failure, Pendencias.Agenda.homogeneity_failure_inf}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:3.4]{IV.3.4} & 18.4 & \pageref{map:artigo_3:3.4} & Observação editorial. Sem declaração Lean associada; é observação, não teorema.\\[4pt]
 \hyperref[map:artigo_3:4.1]{IV.4.1} & 19.1 & \pageref{map:artigo_3:4.1} & Formalizado e compilado (fidelidade não reauditada). Jackson racional em raiz diádica geral, constante absoluta 8 e versão uniforme sobre bolas; Whitney demonstrada, sem hipótese adicional não provada. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:4.2]{IV.4.2} & 19.2 & \pageref{map:artigo_3:4.2} & Formalizado e compilado (fidelidade não reauditada). Inclusões diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diádica geral. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:4.3]{IV.4.3} & 19.3 & \pageref{map:artigo_3:4.3} & Formalizado e compilado (fidelidade não reauditada). Cotas quantitativas uniformes sobre bolas nos três regimes, com constantes independentes da função e do raio. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:4.4]{IV.4.4} & 19.4 & \pageref{map:artigo_3:4.4} & Observação editorial. Sem declaração Lean associada; é observação, não teorema.\\[4pt]
-\hyperref[map:artigo_3:4.5]{IV.4.5} & 19.5 & \pageref{map:artigo_3:4.5} & Formalizado e compilado (fidelidade não reauditada). Funcional \texttt{rateInf} ($\mathfrak{a}_{\alpha,\infty}$) e agenda \texttt{H2 R M N} $=\lceil C_H N^2\rceil$; supremo sobre \texttt{FRMIcc R M} de $\mathfrak{a}_{2,\infty}\le\max\{R,(M+4)/2\}$; para $N\ge 2$, montagem admissível com códigos $\le C_b N\log_2(2N)$. Base: \texttt{joint\_all\_N\_Icc}, \texttt{joint\_budget\_Icc}, \texttt{pErr\_eq\_min}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Ressalva anterior: A estimativa $C^2$ de base existe. Falta transportá-la para as definições de agenda, erro e classe do atual Artigo 3; não contado como teorema integralmente formalizado.\\[4pt]
-\hyperref[map:artigo_3:4.6]{IV.4.6} & 19.6 & \pageref{map:artigo_3:4.6} & Formalizado e compilado (fidelidade não reauditada). Piso $e_N\ge 1/(2H(N))$, $\mathrm{dist}(1/(2H),\mathcal{Q}_H)=1/(2H)$ e a consequência $H(N)\ge (2C)^{-1}N^s$ (para $N\ge 1$), sobre $K=[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
+\hyperref[map:artigo_3:4.5]{IV.4.5} & 19.5 & \pageref{map:artigo_3:4.5} & Correspondência confirmada em $[0,1]$. As declarações \code{c2_endpoint} e \code{c2_endpoint_bits} usam a agenda $H_2$ e cobrem a taxa e os três códigos.\\[4pt]
+\hyperref[map:artigo_3:4.6]{IV.4.6} & 19.6 & \pageref{map:artigo_3:4.6} & Formalizado para raiz diádica arbitrária (\code{arithmetic_floor_K}, \code{height_lower_bound_K}). A distância a $\mathcal Q_h$ é dada por \code{infDist_QH}.\\[4pt]
 \hyperref[map:artigo_3:5.1]{IV.5.1} & 20.1 & \pageref{map:artigo_3:5.1} & Formalizado e compilado (fidelidade não reauditada). Provas: \code{Pendencias.Marcada.marked_extends, Pendencias.Marcada.Atom.toM_injective}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:5.2]{IV.5.2} & 20.2 & \pageref{map:artigo_3:5.2} & Formalizado e compilado (fidelidade não reauditada). Reversibilidade rasa completa para parâmetros reais: equivalência aritmética, árvore canônica única (inclusive rótulos), cotas explícitas de folhas e condição de inclinações não nulas para a biblioteca original. Prova: \code{RealReLU.exact_shallow_reversal}; funções em $[0,1]$, incluindo $M=0$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:5.3]{IV.5.3} & 20.3 & \pageref{map:artigo_3:5.3} & Formalizado e compilado (fidelidade não reauditada). Provas: \code{Pendencias.Marcada.RedReLU.Hcan, Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight, Pendencias.Marcada.canonShape_no_interior, Pendencias.Marcada.RedReLU.canon_leaves_free}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
-\hyperref[map:artigo_3:5.4]{IV.5.4} & 20.4 & \pageref{map:artigo_3:5.4} & Formalizado e compilado (fidelidade não reauditada). Formalizado nas duas direções; a cota inversa foi corrigida (fator $M+1$, constante $C=5$) porque a impressa é falsa para $M=0$. Provas: \code{Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound} e \code{Pendencias.Marcada.Ancorada.direct_part}. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
+\hyperref[map:artigo_3:5.4]{IV.5.4} & 20.4 & \pageref{map:artigo_3:5.4} & Correspondência confirmada. A forma ancorada gera uma \code{RealReLU.Reduced} de mesma avaliação. O código prefix-free e a cota inversa corrigida da edição atual foram provados em Lean.\\[4pt]
 \hyperref[map:artigo_3:5.5]{IV.5.5} & 20.5 & \pageref{map:artigo_3:5.5} & Formalizado e compilado (fidelidade não reauditada). Reversão aproximada quantizada com $C=320$. Prova: \code{QuantIV55.quantized_approximate_reverse}; erro em $[0,1]$, folhas da montagem e altura atômica máxima. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:5.6]{IV.5.6} & 20.6 & \pageref{map:artigo_3:5.6} & Formalizado e compilado (fidelidade não reauditada). Corolário para redes profundas: prova em \code{DeepIV56.deep_functional_reverse}; $R(F)$ é o mínimo de peças afins de $[0,1]$, $B$ e $L_F$ medidos em $[0,1]$. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]
 \hyperref[map:artigo_3:5.7]{IV.5.7} & 20.7 & \pageref{map:artigo_3:5.7} & Formalizado e compilado (fidelidade não reauditada). Provas: \code{Pendencias.Agenda.inverse_modulus, Pendencias.Agenda.inverse_besov}. Ver declarações e contratos nas fontes Lean. Compilado com Lean/Mathlib 4.28.0 (\texttt{lake build Pendencias}); axiomas: \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}. Fidelidade do enunciado não reauditada; existência e compilação das declarações citadas verificadas.\\[4pt]

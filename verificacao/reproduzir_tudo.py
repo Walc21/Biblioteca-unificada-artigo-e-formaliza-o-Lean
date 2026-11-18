@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Executa os seis verificadores em diretórios de saída independentes."""
+"""Executa os verificadores e geradores em diretórios de saída independentes."""
 
 from __future__ import annotations
 
@@ -13,6 +13,7 @@ import sys
 
 PROGRAMAS = (
     ("reproduzir_curvas", "resultados.json"),
+    ("figuras_parte_1", "dados/refinamento.json"),
     ("seletor_dinamico_exato", "reproducibility/selecao/resultados.json"),
     ("constante_diadica", "reproducibility/selecao/resultados_constante_diadica.json"),
     ("espacos_aproximacao", "reproducibility/selecao/resultados_espacos_aproximacao.json"),

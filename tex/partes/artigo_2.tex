@@ -167,7 +167,7 @@ com $\mathcal{Q}_H$ como no \cref{artigo_2:lem:rational-count}. O primeiro fator
 \[
  |\Library_H|\ge H\cdot H\cdot c_1H^2\cdot\bigl(c_1H^2-1\bigr)\ \ge\ \frac{c_1^2}{2}H^6
 \]
-para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$. Para a assintótica exata, seja $\Phi(H)=\sum_{n\le H}\varphi(n)$, que satisfaz $\Phi(H)=3H^2/\pi^2+O(H\log H)$. Os pares coprimos $(p,q)\in[1,H]^2$ são $2\Phi(H)-1$ (os com $p\le q$ são $\Phi(H)$, os com $q\le p$ também, e $(1,1)$ é contado duas vezes); os racionais reduzidos de altura no máximo $H$ são $0$ e os positivos e negativos associados a esses pares, de modo que $|\mathcal Q_H|=4\Phi(H)-1=(12/\pi^2)H^2+O(H\log H)$. Como $H(2H-1)=2H^2(1+O(1/H))$ e $|\mathcal Q_H|(|\mathcal Q_H|-1)=|\mathcal Q_H|^2(1+O(H^{-2}))$, $|\Library_H|=2H^2\cdot(144/\pi^4)H^4(1+O(\tfrac{\log H}{H}))=(288/\pi^4)H^6(1+o(1))$. (Conferência numérica da razão $|\Library_H|/H^6$: $3{,}034$ em $H=50$; $2{,}961$ em $H=800$; $2{,}957$ em $H=12800$; limite $2{,}9566$.)
+para todo $H$ suficientemente grande. Tome $c_\Library=c_1^2/2$. Para a assintótica exata, seja $\Phi(H)=\sum_{n\le H}\varphi(n)$, que satisfaz $\Phi(H)=3H^2/\pi^2+O(H\log H)$. Os pares coprimos $(p,q)\in[1,H]^2$ são $2\Phi(H)-1$ (os com $p\le q$ são $\Phi(H)$, os com $q\le p$ também, e $(1,1)$ é contado duas vezes); os racionais reduzidos de altura no máximo $H$ são $0$ e os positivos e negativos associados a esses pares, de modo que $|\mathcal Q_H|=4\Phi(H)-1=(12/\pi^2)H^2+O(H\log H)$. Como $H(2H-1)=2H^2(1+O(1/H))$ e $|\mathcal Q_H|(|\mathcal Q_H|-1)=|\mathcal Q_H|^2(1+O(H^{-2}))$, $|\Library_H|=2H^2\cdot(144/\pi^4)H^4(1+O(\tfrac{\log H}{H}))=(288/\pi^4)H^6(1+o(1))$. (Conferência numérica da razão $|\Library_H|/H^6$: $3{,}034$ em $H=50$; $2{,}961$ em $H=800$; $2{,}957$ em $H=12800$; limite $2{,}9566$, reproduzido por \path{verificacao/constante_iii32.py}.)
 \end{proof}
 
 \paragraph{Dependência do expoente no calibre.}
@@ -2015,8 +2015,12 @@ troca esse fator de memória por trabalho adicional na comparação.
 % MAPA artigo_2:9.1
 \begin{theorem}[complexidade em número de estados]\label{map:artigo_2:9.1}
 \label{artigo_2:thm:state-complexity}
-Suponha os custos de folha pré-computados e, como modelo de custo, que ler ou escrever uma entrada da tabela, somar e comparar custos custam uma operação cada. Uma implementação densa do
-\cref{artigo_2:alg:variable-tree} usa
+Suponha os custos de folha pré-computados. Uma tabela densa para as
+recorrências de custo, com apontadores para reconstruir um minimizador,
+usa as cotas abaixo quando ler ou escrever uma entrada, somar e comparar
+custos custam uma operação cada. Para manter também o desempate canônico do
+\cref{artigo_2:alg:variable-tree}, as mesmas ordens contam construção e
+comparação de chaves completas como operações unitárias. Sem orçamento de folhas, usam-se
 \begin{equation}
  O(S_DM^3)
  \label{artigo_2:eq:dense-time}
@@ -2048,6 +2052,11 @@ $n\le N$, as decomposições positivas $n_L+n_R=n$, obtêm-se $O(N^2)$ pares de
 orçamentos por tripla $(u,w,v)$. Isso prova \eqref{artigo_2:eq:budget-time} e a cota de
 memória. A última afirmação vem de somar até $P$ termos em cada custo local.
 \end{proof}
+
+A formalização de custo instrumenta a tabela que guarda custos e
+apontadores para um minimizador. O desempate da chave completa é
+certificado separadamente na correção do
+\cref{artigo_2:alg:variable-tree}.
 
 % MAPA artigo_2:9.2
 \begin{remark}[tabelas esparsas]\label{map:artigo_2:9.2}
@@ -2112,23 +2121,29 @@ denominadores de comprimento no máximo
  \right).
  \label{artigo_2:eq:cost-bit-growth}
 \end{equation}
-Consequentemente, no modelo em que somar, comparar ou reduzir frações de $b$ bits custa $O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit, a versão densa sem orçamento de folhas pode ser executada em
+Ponha $b=16B_{\rm cost}+25$ para incluir as somas intermediárias e
+$B_{\rm idx}=\lceil\log_2(S_DM+1)\rceil$. No modelo em que
+somar, comparar ou reduzir frações com operandos de $b$ bits custa
+$O(\mathsf M_{\mathbb Z}(b)\log(2b))$ operações de bit e acessar uma entrada
+custa no máximo sua largura em bits, a versão densa sem orçamento de folhas usa
 \begin{equation}
  O\!\left(
  (S_DM^3+S_DPM^2)
- \bigl[\mathsf M_{\mathbb Z}(B_{\rm cost})
-       \log(2B_{\rm cost})+L\bigr]
+ \bigl[\mathsf M_{\mathbb Z}(b)
+       \log(2b)+b+L+B_{\rm idx}\bigr]
  \right)
  \label{artigo_2:eq:dense-bit-time}
 \end{equation}
 operações de bit e
 \begin{equation}
- O\!\left(S_DM^2(B_{\rm cost}+L)\right)
+ O\!\left(S_DM^2(B_{\rm cost}+L+B_{\rm idx})\right)
  \label{artigo_2:eq:dense-bit-memory}
 \end{equation}
-bits de memória quando todos os estados e fluxos são armazenados. Na versão
-com até $N$ folhas, substituem-se $S_DM^3$ e $S_DM^2$ por
-$S_DN^2M^3$ e $S_DNM^2$, respectivamente. Com multiplicação escolar,
+bits de memória. A variante que armazena e compara fluxos completos tem
+a mesma cota no modelo em que copiar ou comparar um fluxo custa $O(L)$.
+Na versão com até $N$ folhas, substituem-se $S_DM^3$ e o fator $S_DM^2$
+da memória por $S_DN^2M^3$ e $S_DNM^2$, respectivamente, e soma-se
+$\lceil\log_2(N+1)\rceil$ a $B_{\rm idx}$. Com multiplicação escolar,
 $\mathsf M_{\mathbb Z}(b)=O(b^2)$.
 \end{theorem}
 
@@ -2149,22 +2164,22 @@ de penalização acrescentam $O(B_{\mathcal Z}+D+\log(2L))$ bits. Isso prova
 \eqref{artigo_2:eq:cost-bit-growth}; cancelamentos por máximo divisor comum só podem
 reduzir os operandos.
 
-Uma soma, comparação ou redução de frações com operandos de comprimento
-$B_{\rm cost}$ custa
-$O(\mathsf M_{\mathbb Z}(B_{\rm cost})\log(2B_{\rm cost}))$ operações de bit
-por algoritmos inteiros usuais. Quando custos e número de folhas empatam, a
-comparação shortlex lê no máximo $L$ bits. Multiplicar esse custo pelo número
-de transições e inicializações do \cref{artigo_2:thm:state-complexity} dá
-\eqref{artigo_2:eq:dense-bit-time}. Cada estado guarda um custo, um fluxo ou apontador
-de reconstrução e índices de $O(\log(S_DM))$ bits, absorvidos pela cota exibida;
-isso prova \eqref{artigo_2:eq:dense-bit-memory}. O argumento com a coordenada de
-orçamento é idêntico.
+As somas e penalidades de um candidato intermediário usam no máximo
+$b$ bits. Quando custos e número de folhas empatam, a comparação shortlex
+lê no máximo $L$ bits. Cada entrada guarda um custo, um fluxo ou apontador
+e índices. As coordenadas espaciais e de fronteira custam
+$O(B_{\rm idx})$ bits. A coordenada de orçamento e o orçamento do filho
+num apontador acrescentam $O(\log(N+1))$ bits. Multiplicar a cota de custo de
+uma operação pela contagem de transições e inicializações do
+\cref{artigo_2:thm:state-complexity} dá \eqref{artigo_2:eq:dense-bit-time}.
+Multiplicar a largura por entrada pelo total de entradas dá
+\eqref{artigo_2:eq:dense-bit-memory}.
 \end{proof}
 
-A cota é propositalmente conservadora: ela não explora cancelamentos nem
-denominadores compartilhados. Ainda assim, fecha o modelo de Turing e torna
-explícito o ponto essencial. Como $M\le36H^6$ e $S_D=2^{D+1}-1$, a
-dependência continua pseudo-polinomial nos valores numéricos de $H$ e $2^D$,
+O Lean prova a cota no modelo de custo declarado para a execução instrumentada
+que compara custos. A comparação shortlex faz parte do argumento textual
+para a variante com desempate. Como $M\le36H^6$ e $S_D=2^{D+1}-1$,
+a dependência continua pseudopolinomial nos valores numéricos de $H$ e $2^D$,
 mesmo após contabilizar o crescimento dos racionais.
 
 \subsection{Valores sob truncagem}
@@ -3493,7 +3508,7 @@ $[0{,}33970;0{,}49997]$ para $e^x$ (arredondados a cinco casas), e os mesmos tes
 uma função afim em $[0,\tfrac12]$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$,
 que tem $f''\equiv2$ em $[0,\tfrac12]$ e $f''(x)=12x-4$ em $[\tfrac12,1]$, concordam
 com $[m_f^2,M_f^2]$ calculado de $\Psi_f$, com erro relativo inferior a $0{,}5\%$.
-O programa é \path{verificacao/lei_fase_experimento.py}, que não integra os
+O programa é \path{verificacao/lei_fase_experimento.py} (opção \texttt{--published}), que não integra os
 verificadores reprodutíveis do volume.
 
 Para $e^x$, $\ln(1+x)$, $x^3+x^2$ e o patamar $f(x)=x^2+2\,(x-\tfrac12)_+^3$
@@ -3522,8 +3537,13 @@ testados ($33$, $18$ e $119$ nas três famílias, cada um comparado em $\varepsi
 e imediatamente abaixo). Esse teste não reconstrói a árvore desde a raiz, o que
 é feito por \path{verificacao/constante_diadica.py}. Além disso,
 $\min x_N=m_f^2$ exatamente; no caso sincronizado ambos coincidem com
-$I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os resultados numéricos
-desta observação \emph{não foram formalizados em Lean}; trata-se de verificação numérica ou em aritmética racional, e não de prova formal. Os enunciados \cref{map:artigo_2:12.5} a \cref{map:artigo_2:12.8} foram, por outro lado, formalizados em Lean nos módulos \path{lean4/ambientes/artigo_2/Pendencias/Fase*.lean}, com as ressalvas registradas no mapa (a medida $\mu_f$ não é construída em $\mathbb T$, e a equivalência entre $\Psi_f$ constante e $\mu_f$ uniforme não foi formalizada).
+$I(f)^2/8$. O programa é \path{verificacao/lei_fase_exata.py}. Os
+experimentos desta observação são verificações numéricas ou em aritmética
+racional. As formalizações de III.12.5 a III.12.8 estão nos módulos
+\path{lean4/ambientes/artigo_2/Pendencias/Fase*.lean}. Em particular, o Lean
+constrói a medida $\tilde\mu_f=\mu_f/\sqrt8$ no círculo, identifica seu valor no
+singleton $\{-t\}$ com o salto $\Psi_f^+(t)-\Psi_f(t)$ e prova o critério
+de uniformidade.
 \end{remark}
 
 \section{Verificações de codificação e entropia}
@@ -3590,7 +3610,7 @@ de $\varepsilon$.
 
 \begin{table}[t]
 \centering
-\caption{Sucessores admissíveis por nó e comprimento do índice global reescalado.}
+\caption{Sucessores observados nas sondas, distorção amostrada e estimativas do comprimento global reescalado.}
 \label{artigo_2:tab:codebook-pt}
 \small
 \begin{tabular}{rrrrrr}
@@ -3679,6 +3699,6 @@ O calibre adotado produz $\Theta(H^6)$ átomos e uma enumeração por altura que
 
 Na seleção, os valores racionais de fronteira fornecem estados suficientes para preservar continuidade e admissibilidade. As recorrências calculam o mínimo do catálogo, com desempate canônico e custos separados em operações e bits. A estabilização sob truncagem exige que o mínimo global seja atingido; a seleção exata pode ser descontínua em empates.
 
-Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. Para curvatura variável, a função de fase $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ a menos de $o(1)$ nas fases em que $\mu_f$ não tem átomo, e o conjunto de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o intervalo $[m_f^2,M_f^2]$; o limite existe se, e somente se, $\mu_f$ é uniforme, e então vale $I(f)^2/(8\ln^22)$, como em $f=\ln(1+x)$. Esses resultados de fase não foram formalizados em Lean. O efeito de uma agenda fixa sobre o melhor erro racional permanece uma questão distinta dos resultados interpolatórios demonstrados.
+Para a interpolação estritamente diádica, o erro normalizado admite o envelope $[I(f)^2/8,\allowbreak I(f)^2/2]$. Curvatura constante e quadráticas por partes explicitam as fases responsáveis pela oscilação. Para curvatura variável, a função de fase $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ a menos de $o(1)$ nas fases em que $\mu_f$ não tem átomo, e o conjunto de acumulação de $N^2E_N^{\rm dia}(f)_\infty$ é o intervalo $[m_f^2,M_f^2]$; o limite existe se, e somente se, $\mu_f$ é uniforme, e então vale $I(f)^2/(8\ln^22)$, como em $f=\ln(1+x)$. Os resultados III.12.5 a III.12.8 foram formalizados em Lean com as ressalvas indicadas no mapa. O efeito de uma agenda fixa sobre o melhor erro racional permanece uma questão distinta dos resultados interpolatórios demonstrados.
 
 

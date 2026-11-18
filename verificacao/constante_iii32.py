@@ -1,21 +1,47 @@
-"""Verificacao numerica da constante de III.3.2: |Library_H| ~ (288/pi^4) H^6.
+#!/usr/bin/env python3
+"""Reproduz a contagem exata e a razão numérica da proposição III.3.2."""
 
-|Library_H| = H (2H-1) q_H (q_H - 1), onde q_H = #{r in Q : ht(r) <= H} (forma reduzida,
-ht = max(|p|, q), 0 incluido). A contagem de q_H e a do Lean (RequestProject/Indexing.lean,
-QH), conferida para H = 2..5: 252, 3150, 14168, 66690 atomos.
-"""
+import argparse
 import math
 
-def q_H(H):
-    return sum(1 for q in range(1, H + 1) for p in range(-H, H + 1) if math.gcd(abs(p), q) == 1)
 
-def library_H(H):
-    q = q_H(H)
-    return H * (2 * H - 1) * q * (q - 1)
+def q_H(height: int) -> int:
+    """Conta racionais reduzidos de altura até H usando a soma de totientes."""
+    if height < 1:
+        return 0
+    phi = list(range(height + 1))
+    for prime in range(2, height + 1):
+        if phi[prime] == prime:
+            for multiple in range(prime, height + 1, prime):
+                phi[multiple] -= phi[multiple] // prime
+    # A diagonal contém apenas (1, 1); cada par positivo dá dois sinais, mais zero.
+    return 4 * sum(phi[1:]) - 1
+
+
+def library_H(height: int) -> int:
+    if height < 2:
+        return 0
+    rationals = q_H(height)
+    return height * (2 * height - 1) * rationals * (rationals - 1)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("heights", nargs="*", type=int, help="alturas inteiras positivas")
+    modes.add_argument("--published", action="store_true", help="alturas impressas em III.3.2")
+    args = parser.parse_args()
+    if any(height < 1 for height in args.heights):
+        parser.error("as alturas devem ser inteiras positivas")
+    heights = (50, 800, 12800) if args.published else (args.heights or [2**i for i in range(1, 10)])
+
+    constant = 288 / math.pi**4
+    print(f"288/pi^4 = {constant:.10f}")
+    for height in heights:
+        count = library_H(height)
+        quotient = count / height**6
+        print(f"H={height:5d}  |L_H|={count}  |L_H|/H^6={quotient:.6f}  razao={quotient / constant:.6f}")
+
 
 if __name__ == "__main__":
-    K = 288 / math.pi ** 4
-    print(f"288/pi^4 = {K:.10f}")
-    for H in [2, 4, 8, 16, 32, 64, 128, 256, 512]:
-        L = library_H(H)
-        print(f"H={H:4d}  |L_H|={L}  |L_H|/H^6={L / H**6:.6f}  razao={(L / H**6) / K:.6f}")
+    main()

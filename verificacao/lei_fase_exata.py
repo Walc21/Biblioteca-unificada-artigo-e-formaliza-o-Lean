@@ -180,27 +180,27 @@ def run_racional(kappas, Nmax=2**19):
     testados = {th: (nb, na) for th, nb, na in bpts[:200] + bpts[-50:]}
     for th, (nb, na) in testados.items():
         assert closed(th)==nb and closed(th,True)==na,(th,nb,na,closed(th),closed(th,True))
-    fr=lambda x: mpf(x.numerator)/x.denominator          # Fraction -> mpf (compatível com mpmath 1.3)
     # extremos exatos de x_N, para 2^10 <= N < (último N coberto pelas quebras)
-    xs_lo=min(N*N*th for th,nb,na in bpts for N in (nb,na-1) if N>=2**10)
-    xs_hi=max(N*N*th for th,nb,na in bpts for N in (nb,na-1) if N>=2**10)
-    # Phi: kinks em s ≡ -a_i (mod 1); Phi esq.-contínua, Phi+ à direita
-    a=[log(mpf(x.numerator)/x.denominator,4) for x in A]
-    def Phi(s,plus=False):
-        t=mpf(0)
-        for ai,x in zip(a,A):
-            u=s+ai; cu=floor(u)+1 if plus else ceil(u)
-            t+=sqrt(mpf(x.numerator)/x.denominator)*mpf(2)**(cu-u)
-        return t
-    ks=[(-ai)%1 for ai in a]
-    m=min(Phi(k) for k in ks); M=max(Phi(k,True) for k in ks)
-    # verificação adicional de que o extremo está nos kinks: varredura densa
-    dens=[Phi(mpf(i)/3000) for i in range(3000)]
-    assert min(dens)>=m-mpf(10)**-12 and max(dens)<=M+mpf(10)**-12
+    first = min(2**10, bpts[-1][2] - 1)
+    xs_lo = min(max(nb, first)**2 * th for th, nb, na in bpts if na > first)
+    xs_hi = max((na - 1)**2 * th for th, _, na in bpts if na > first)
+    # Os extremos de fase ocorrem nos limiares A_i/4^j. Escolha um representante
+    # de cada fase abaixo de min(A) para que o teto já esteja na faixa periódica.
+    thresholds = set()
+    for threshold in A:
+        while threshold >= min(A):
+            threshold /= 4
+        thresholds.add(threshold)
+    m2 = min(threshold * closed(threshold)**2 for threshold in thresholds)
+    M2 = max(threshold * closed(threshold, True)**2 for threshold in thresholds)
+    if Nmax >= 2**18:
+        assert xs_lo == m2 and xs_hi <= M2
+    I2_over_8 = sum(sqrt(mpf(x.numerator) / x.denominator) for x in A)**2
     print(f"κ={kappas}  q0={q0}  folhas até {bpts[-1][2]}; {len(bpts)} limiares distintos gerados;")
     print(f"   contagem fechada == floresta simulada abaixo da malha base (identidade quadrática): OK em {len(testados)} limiares distintos, cada um em ε=θ e ε→θ⁻")
-    print(f"   x_N: min={float(xs_lo):.9f} max={float(xs_hi):.9f} |  m^2={float(m*m):.9f} M^2={float(M*M):.9f} | I^2/8={float(sum(sqrt(8*mpf(x.numerator)/x.denominator) for x in A)**2/8):.6f}")
-    print(f"   |min x_N - m^2|={float(abs(fr(xs_lo)-m*m)):.2e}   |max x_N - M^2|={float(abs(fr(xs_hi)-M*M)):.2e}")
+    print(f"   x_N: min={float(xs_lo):.9f} max={float(xs_hi):.9f} | "
+          f"m^2={float(m2):.9f} M^2={float(M2):.9f} | I^2/8={float(I2_over_8):.6f}")
+    print(f"   |min x_N - m^2|={abs(xs_lo - m2)}   |max x_N - M^2|={abs(xs_hi - M2)}")
 
 def run_atomo(NMAX):
     bp=breakpoints(ATM,NMAX)

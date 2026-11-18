@@ -201,6 +201,35 @@ lemma PsiF_eq_circ (hf : ContDiff ℝ 2 f) (t : ℝ) :
   simp only [smul_eq_mul]
   congr 1
 
+/-- The jump at phase `t` is the mass of the singleton `{-t}` for the normalized measure. -/
+theorem psi_gap_eq_muCirc (hf : ContDiff ℝ 2 f) (t : ℝ) :
+    PsiP f k₀ m₀ t - PsiF f k₀ m₀ t =
+      (muCirc f k₀ m₀).real {-(t : AddCircle (1 : ℝ))} := by
+  classical
+  let s : Set (AddCircle (1 : ℝ)) := {-(t : AddCircle (1 : ℝ))}
+  have hs : MeasurableSet s := measurableSet_singleton _
+  have h := muCirc_integral k₀ m₀ hf (s.indicator (1 : AddCircle (1 : ℝ) → ℝ))
+    (measurable_const.indicator hs)
+  rw [integral_indicator_one hs] at h
+  rw [psiP_sub_psiF hf k₀ m₀, h]
+  refine setIntegral_congr_fun measurableSet_Ioc fun x _ ↦ ?_
+  have hm : (aPh f k₀ m₀ x : AddCircle (1 : ℝ)) ∈ s ↔ x ∈ Sphase f k₀ m₀ t := by
+    change (aPh f k₀ m₀ x : AddCircle (1 : ℝ)) = -(t : AddCircle (1 : ℝ)) ↔
+      ∃ z : ℤ, t + aPh f k₀ m₀ x = z
+    rw [← add_eq_zero_iff_eq_neg', ← AddCircle.coe_add, AddCircle.coe_eq_zero_iff]
+    simpa [zsmul_one] using
+      (exists_congr fun z : ℤ ↦ eq_comm (a := (z : ℝ)) (b := t + aPh f k₀ m₀ x))
+  by_cases hx : x ∈ Sphase f k₀ m₀ t
+  · simp [Set.indicator_of_mem hx, Set.indicator_of_mem (hm.mpr hx)]
+  · simp [Set.indicator_of_notMem hx, Set.indicator_of_notMem (mt hm.mp hx)]
+
+/-- The singleton-mass identity for functions of class `C²(K)`. -/
+theorem psiOn_gap_eq_muCirc (hf : ContDiffOn ℝ 2 f (cellIcc k₀ m₀)) (t : ℝ) :
+    PsiPOn f k₀ m₀ t - PsiFOn f k₀ m₀ t =
+      (muCirc (extF f (cL k₀ m₀) (cR k₀ m₀)) k₀ m₀).real {-(t : AddCircle (1 : ℝ))} := by
+  rw [← psiPOn_eq hf, ← psiFOn_eq hf]
+  exact psi_gap_eq_muCirc k₀ m₀ (extF_cell_contDiff hf) t
+
 /-- coeficientes de Fourier de `μ̃_f`: `∫ e_m dμ̃_f = ∫_K √(|f''|/8) e^{2πi m a}` -/
 lemma fourier_muCirc (hf : ContDiff ℝ 2 f) (m : ℤ) :
     ∫ θ, fourier (T := (1:ℝ)) m θ ∂(muCirc f k₀ m₀) =

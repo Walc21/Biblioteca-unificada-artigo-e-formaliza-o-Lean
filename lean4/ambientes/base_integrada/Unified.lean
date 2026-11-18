@@ -15,6 +15,7 @@ public import Unified.Fase3.Heights
 public import Unified.Fase3.Indexing
 public import Unified.Fase3.IntervalArith
 public import Unified.Fase3.IntervalFailure
+public import Unified.Fase3.Lemma61
 public import Unified.Fase3.Observation
 public import Unified.Fase3.Rates
 public import Unified.Fase3.Refinement

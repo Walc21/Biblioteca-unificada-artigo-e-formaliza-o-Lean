@@ -10,11 +10,12 @@ Original de 77 páginas: 2.1.
 
 Fonte editável: [tex/partes/artigo_1.tex:40](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:2.1`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. Forma explícita da inversa, com `w = ⌊(√(8n+1)-1)/2⌋`, `v = n - T_w` e `u = w - v`, acrescentada como `cunpair_eq_floor`.
 
 - [`Fase3.cpair_bijective`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 93.
 - [`Fase3.cdiag_eq_floor`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 103.
 - [`Fase3.cpair_le`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 126.
+- [`Fase3.cunpair_eq_floor`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 157.
 
 ## I.2.2 — lema
 
@@ -22,10 +23,12 @@ Original de 77 páginas: 2.2.
 
 Fonte editável: [tex/partes/artigo_1.tex:53](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:2.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. Forma explícita de `Z` e de `Z⁻¹` acrescentada como `zEnum_formula` e `zInv_formula`.
 
 - [`Fase3.zEnum_bijective`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 148.
 - [`Fase3.zInv_le`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 151.
+- [`Fase3.zEnum_formula`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 167.
+- [`Fase3.zInv_formula`](../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean) — linha 170.
 
 ## I.2.3 — lema contagem por altura
 
@@ -91,10 +94,11 @@ Original de 77 páginas: 3.3.
 
 Fonte editável: [tex/partes/artigo_1.tex:164](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.3`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. A não degenerescência de `[c_n, d_n]` passa a constar do enunciado da biblioteca, como `library_nondegenerate`.
 
 - [`Fase3.gen`](../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean) — linha 212.
 - [`Fase3.library`](../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean) — linha 215.
+- [`Fase3.library_nondegenerate`](../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean) — linha 349.
 
 ## I.3.4 — lema validade espacial exata
 
@@ -147,9 +151,10 @@ Original de 77 páginas: 4.2.
 
 Fonte editável: [tex/partes/artigo_1.tex:229](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência confirmada**. As peças de uma montagem contínua são átomos com inclinação não nula, como `isAssembly_pieces_nonzero_slope`.
 
 - [`Fase3.assembly_dense`](../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean) — linha 386.
+- [`Fase3.isAssembly_pieces_nonzero_slope`](../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean) — linha 429.
 
 ## I.4.3 — teorema equivalência montagem--ReLU racional
 
@@ -668,10 +673,11 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/normalizacao.tex:776](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.1`.
 
-Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
+Estado: **Correspondência confirmada**. A injetividade da chave lexicográfica, antes implícita, está enunciada como `zeta_injective`.
 
 - [`Montagens.zeta`](../lean4/ambientes/parte_1/RequestProject/Chain.lean) — linha 25.
 - [`Montagens.sortAtoms`](../lean4/ambientes/parte_1/RequestProject/Chain.lean) — linha 40.
+- [`Montagens.zeta_injective`](../lean4/ambientes/parte_1/RequestProject/Chain.lean) — linha 28.
 
 ## II.7.2 — lema propriedades da lista ordenada
 
@@ -1456,6 +1462,35 @@ Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*
 
 - [`Pendencias.psi_gap_eq_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 205.
 - [`Pendencias.psiOn_gap_eq_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 227.
+- [`Pendencias.gC_lsc`](../lean4/ambientes/artigo_2/Pendencias/FaseNucleo.lean) — linha 107.
+- [`Pendencias.gP_usc`](../lean4/ambientes/artigo_2/Pendencias/FaseNucleo.lean) — linha 126.
+- [`Pendencias.psiF_periodic`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 157.
+- [`Pendencias.psiP_periodic`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 162.
+- [`Pendencias.psiF_ge`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 186.
+- [`Pendencias.psiF_le_psiP`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 195.
+- [`Pendencias.psiP_le`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 203.
+- [`Pendencias.psiF_tendsto_left`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 130.
+- [`Pendencias.psiF_tendsto_right`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 137.
+- [`Pendencias.psiP_tendsto_left`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 147.
+- [`Pendencias.psiP_tendsto_right`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 142.
+- [`Pendencias.psiF_lsc`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 273.
+- [`Pendencias.psiP_usc`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 279.
+- [`Pendencias.exists_min_psiF`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 285.
+- [`Pendencias.exists_max_psiP`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 290.
+- [`Pendencias.psiP_eq_sup`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 295.
+- [`Pendencias.countable_atomPhase`](../lean4/ambientes/artigo_2/Pendencias/FaseFuncao.lean) — linha 325.
+- [`Pendencias.psiP_sub_psiF`](../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean) — linha 32.
+- [`Pendencias.isAtomPhase_iff_gap`](../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean) — linha 54.
+- [`Pendencias.continuousAt_psiF_iff`](../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean) — linha 83.
+- [`Pendencias.integral_psiF`](../lean4/ambientes/artigo_2/Pendencias/FaseMedia.lean) — linha 50.
+- [`Pendencias.fourier_psiF`](../lean4/ambientes/artigo_2/Pendencias/FaseFourier.lean) — linha 117.
+- [`Pendencias.psiFOn_ge`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 71.
+- [`Pendencias.psiPOn_le`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 81.
+- [`Pendencias.exists_min_psiFOn`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 94.
+- [`Pendencias.integral_psiFOn`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 135.
+- [`Pendencias.continuousAt_psiFOn_iff`](../lean4/ambientes/artigo_2/Pendencias/FaseSalto.lean) — linha 107.
+- [`Pendencias.muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 138.
+- [`Pendencias.PsiF_eq_circ`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 189.
 
 ## III.12.6 — lema contagem por células
 
@@ -1465,6 +1500,12 @@ Fonte editável: [tex/partes/artigo_2.tex:3210](../tex/partes/artigo_2.tex); ró
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\lceil\log_4(\cdot)\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).
 
+- [`Pendencias.upper_count_pow`](../lean4/ambientes/artigo_2/Pendencias/FaseContagem.lean) — linha 31.
+- [`Pendencias.lower_count_pow`](../lean4/ambientes/artigo_2/Pendencias/FaseContagem.lean) — linha 72.
+- [`Artigo.threshold_optimality`](../lean4/ambientes/artigo_2/RequestProject/Dyadic.lean) — linha 337.
+- [`Pendencias.upper_count_pow_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 277.
+- [`Pendencias.lower_count_pow_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 291.
+
 ## III.12.7 — teorema lei de fase para curvatura variável
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
@@ -1473,6 +1514,19 @@ Fonte editável: [tex/partes/artigo_2.tex:3281](../tex/partes/artigo_2.tex); ró
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.phase_lower`, `phase_upper` (cotas por fases convergentes), `phase_law_nonatom` (i), `phase_law_uniform` (ii), `phase_liminf_ge`, `phase_limsup_le`, `phase_seq_min`, `phase_seq_max` (iii) e as versões `_on` (`phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`, `phase_limsup_le_on`). Também testado numericamente (III.12.9).
 
+- [`Pendencias.phase_lower`](../lean4/ambientes/artigo_2/Pendencias/FaseLei3.lean) — linha 57.
+- [`Pendencias.phase_upper`](../lean4/ambientes/artigo_2/Pendencias/FaseLei3.lean) — linha 92.
+- [`Pendencias.phase_law_nonatom`](../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean) — linha 54.
+- [`Pendencias.phase_law_uniform`](../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean) — linha 69.
+- [`Pendencias.phase_liminf_ge`](../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean) — linha 94.
+- [`Pendencias.phase_limsup_le`](../lean4/ambientes/artigo_2/Pendencias/FaseLei4.lean) — linha 107.
+- [`Pendencias.phase_seq_min`](../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean) — linha 20.
+- [`Pendencias.phase_seq_max`](../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean) — linha 34.
+- [`Pendencias.phase_law_nonatom_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 141.
+- [`Pendencias.phase_law_uniform_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 150.
+- [`Pendencias.phase_liminf_ge_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 158.
+- [`Pendencias.phase_limsup_le_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 166.
+
 ## III.12.8 — corolário acumulação, critério de uniformidade e limite
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
@@ -1480,6 +1534,24 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 Fonte editável: [tex/partes/artigo_2.tex:3376](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
 
 Estado: **Prova textual nova e formalização Lean**; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$ (`FourPowers`), que é a definição parentética do próprio texto.
+
+- [`Pendencias.phase_cluster_set`](../lean4/ambientes/artigo_2/Pendencias/FaseLei5.lean) — linha 289.
+- [`Pendencias.limit_iff_const`](../lean4/ambientes/artigo_2/Pendencias/FaseCoro.lean) — linha 74.
+- [`Pendencias.limit_of_const`](../lean4/ambientes/artigo_2/Pendencias/FaseCoro.lean) — linha 44.
+- [`Pendencias.phase_average`](../lean4/ambientes/artigo_2/Pendencias/FaseMediaFase.lean) — linha 77.
+- [`Pendencias.min_attained_iff_fourPowers`](../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean) — linha 183.
+- [`Pendencias.max_attained_iff_fourPowers`](../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean) — linha 191.
+- [`Pendencias.extremes_iff_fourPowers`](../lean4/ambientes/artigo_2/Pendencias/FaseExtremos.lean) — linha 199.
+- [`Pendencias.phase_cluster_set_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 174.
+- [`Pendencias.limit_iff_const_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 185.
+- [`Pendencias.limit_of_const_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 192.
+- [`Pendencias.phase_average_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 206.
+- [`Pendencias.extremes_iff_fourPowers_on`](../lean4/ambientes/artigo_2/Pendencias/FaseOn.lean) — linha 232.
+- [`Pendencias.psi_const_iff_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 264.
+- [`Pendencias.psiOn_const_iff_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 307.
+- [`Pendencias.limit_iff_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 327.
+- [`Pendencias.limit_iff_muCirc_on`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 319.
+- [`Pendencias.circ_fourier_uniqueness`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 97.
 
 ## III.12.9 — observação exemplos, o que está provado e o que não está
 

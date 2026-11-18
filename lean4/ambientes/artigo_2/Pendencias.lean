@@ -44,3 +44,4 @@ import Pendencias.FaseExtremos
 import Pendencias.FaseOn
 import Pendencias.FaseSalto
 import Pendencias.FaseFourier
+import Pendencias.FaseMedida

@@ -116,13 +116,18 @@ cd ../parte_1 && lake exe cache get && lake build ValidationAll
 Formalizada depois da recompilação de 13 e 14/11, em dezessete módulos novos de
 `lean4/ambientes/artigo_2/Pendencias/` (`FaseNucleo`, `FaseFuncao`, `FaseContagem`, `FaseFatou`,
 `FasePontual`, `FaseLei`, `FaseLei2`–`FaseLei5`, `FaseMedia`, `FaseCoro`, `FaseMediaFase`,
-`FaseExtremos`, `FaseOn`, `FaseSalto`, `FaseFourier`), importados por `Pendencias.lean`.
-`lake build Pendencias` conclui sem erros. Os 42 teoremas principais foram adicionados a
+`FaseExtremos`, `FaseOn`, `FaseSalto`, `FaseFourier`, `FaseMedida`), importados por `Pendencias.lean`.
+`lake build Pendencias` conclui sem erros. Os teoremas principais foram adicionados a
 `AuditoriaPendencias.lean`; nenhum depende de axiomas além de `propext`, `Classical.choice` e
 `Quot.sound`, e a busca textual nos módulos `Fase*.lean` não encontra `sorry`.
 
-Ressalvas: (i) a medida $\mu_f$ não é construída em $\mathbb T$; os enunciados usam integrais sobre $K$ e átomos
-como conjuntos de medida de Lebesgue positiva; (ii) em III.12.8(b) a equivalência «$\Psi_f$ constante $\Leftrightarrow$
-$\mu_f$ uniforme» não foi formalizada; (iii) III.12.6 está enunciada para $f\in C^2(\mathbb R)$ (sem versão `_on`);
-(iv) a fidelidade dos enunciados Lean ao texto foi conferida por mim, sem revisão humana.
+Nesta rodada: III.12.6 ganhou as versões `C²(K)` (`upper_count_pow_on`, `lower_count_pow_on`, em `FaseOn.lean`);
+III.12.8(b) ganhou a equivalência «$\Psi_f$ constante $\Leftrightarrow$ $\mu_f$ uniforme», provada em
+`FaseMedida.lean` pela unicidade de Fourier para medidas finitas no círculo (`circ_fourier_uniqueness`), com a
+medida $\tilde\mu_f$ construída em `AddCircle 1` (`muCirc`, com $\mu_f=\sqrt8\,\tilde\mu_f$).
+
+Ressalvas remanescentes: (i) «massa pontual» é a condição `FourPowers` sobre $|f''|$, que é a definição
+parentética do próprio texto, não um átomo formal de $\mathbb T$; (ii) em III.12.7(ii), a parte de convergência
+uniforme não foi reconferida linha a linha; (iii) a fidelidade dos enunciados Lean ao texto foi conferida por mim,
+sem revisão externa (folha `documentacao/CONFERENCIA_ENUNCIADOS_LEAN.md`, branch `conferencia-enunciados-lean`).
 

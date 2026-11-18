@@ -46,3 +46,8 @@ open Lean Meta
     throwError "Nenhuma declaracao do projeto foi encontrada: auditoria invalida."
   if irregularidades > 0 then
     throwError "Auditoria encontrou axiomas fora da lista permitida."
+
+-- Proposicao 6.2: regra de falha de BoundSecondDerivative (IntervalFailure.lean)
+#print axioms Fase3.boundSecondDerivative_fail_iff
+#print axioms Fase3.ivJet_of_bad
+#print axioms Fase3.bsdAux_none_iff

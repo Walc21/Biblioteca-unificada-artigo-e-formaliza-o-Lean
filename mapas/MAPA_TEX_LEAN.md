@@ -210,7 +210,7 @@ Original de 77 páginas: 7.1.
 
 Fonte editável: [tex/partes/artigo_1.tex:401](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.1`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência inspecionada**. Forma racional de (37) e inclusão das rotinas: `Fase3.lemma61_exp_rational`, `Fase3.lemma61_enclosures` (`base_integrada/Unified/Fase3/Lemma61.lean`). 
 
 - [`Fase3.exp_sub_expPoly_bounds`](../lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean) — linha 61.
 - [`Fase3.sin_cos_lagrange`](../lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean) — linha 225.
@@ -221,7 +221,7 @@ Original de 77 páginas: 7.2.
 
 Fonte editável: [tex/partes/artigo_1.tex:422](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.boundSecondDerivative_fail_iff` (`base_integrada/Unified/Fase3/IntervalFailure.lean`).
 
 - [`Fase3.boundSecondDerivative_correct`](../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean) — linha 619.
 - [`Fase3.Mint_ge_supNorm`](../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean) — linha 629.

@@ -262,7 +262,8 @@ com nós distintos. Suponha que $K$ admita uma cobertura por células diádicas 
 seja não nula. Então $R|_K\in\Asm(K)$. Uma malha diádica uniforme que refine todos os $\tau_j$ fornece essa montagem explicitamente.
 \end{teorema}
 \begin{proof}
-Na primeira folha, o lado direito de \eqref{artigo_1:eq:24} tem valor $g(t_0)$ em $t_0$ e inclinação $s_0$. Ao atravessar $t_j$, a derivada ganha exatamente $s_j-s_{j-1}$; por indução, sua inclinação na folha $j$ é $s_j$. Como ambos os lados são contínuos e coincidem no primeiro nó, coincidem em todo $K$. Cada $s_j$ é racional. Os nós internos são fronteiras de células diádicas, e o intercepto do primeiro átomo é racional por \eqref{artigo_1:eq:15}; logo a forma expandida tem somente parâmetros racionais.
+Na primeira folha, o lado direito de \eqref{artigo_1:eq:24} tem valor $g(t_0)$ em $t_0$ e inclinação $s_0$. Ao atravessar $t_j$, a derivada ganha exatamente $s_j-s_{j-1}$; por indução, sua inclinação na folha $j$ é $s_j$. Os átomos concordam nas fronteiras, inclusive fora de $K$. Assim a identidade vale
+em toda a união das folhas para a função colada a partir dos átomos e, em particular, em $K$. Cada $s_j$ é racional. Os nós internos são fronteiras de células diádicas, e o intercepto do primeiro átomo é racional por \eqref{artigo_1:eq:15}; logo a forma expandida tem somente parâmetros racionais.
 
 Para a recíproca, refine uma grade diádica até que cada $\tau_j$ seja uma fronteira. Em qualquer célula aberta da grade, \eqref{artigo_1:eq:25} é afim, com inclinação \eqref{artigo_1:eq:26}. O valor no centro da célula é racional, pois o centro, os nós e todos os coeficientes são racionais. A hipótese de inclinação não nula permite aplicar o teorema~3.6, que fornece um único átomo da biblioteca nessa célula. A continuidade de $R$ faz os valores coincidirem nas fronteiras. A união das peças é, portanto, uma montagem no sentido da definição~4.1.
 \end{proof}
@@ -362,6 +363,7 @@ Com $N_k$ de \eqref{artigo_1:eq:23}, $h=(\beta-\alpha)N_k^{-1}(1+O(N_k^{-1}))$ e
 Quando os extremos já são nós da malha, o termo de borda desaparece.
 \begin{table}[!htbp]\centering
 \caption{Erro exato do interpolante de $e^x$ em $[0,1]$.}
+\label{artigo_1:tab:interpolante-exp}
 \begin{tabular}{rrrr}\toprule
 $k$&erro exato&$2^{-2k}e/8$&razão\\\midrule
 2&$1{,}8774\times10^{-2}$&$2{,}1237\times10^{-2}$&$0{,}8840$\\

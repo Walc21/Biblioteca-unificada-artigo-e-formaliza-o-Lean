@@ -15,6 +15,7 @@ import Pendencias.Arvores
 import Pendencias.ProgDin
 import Pendencias.Jackson
 import Pendencias.Direta
+import Pendencias.AgendaRaiz
 import Pendencias.Realizacao
 import Pendencias.BesovDireta
 import Pendencias.NosLivres

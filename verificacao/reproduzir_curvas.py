@@ -2626,6 +2626,43 @@ def _latex_scientific(value: float, digits: int = 3) -> str:
     return rf"{mantissa}\,10^{{{int(exponent)}}}"
 
 
+def write_exp_table(rows: list[dict[str, float]], destination: Path) -> None:
+    lines = [
+        r"\begin{tabular}{rrrr}",
+        r"\toprule",
+        r"$k$ & erro exato & $2^{-2k}e/8$ & razão\\",
+        r"\midrule",
+    ]
+    for row in rows:
+        error = _latex_scientific(row["error"], 4).replace(r"\,", r"\times")
+        bound = _latex_scientific(row["bound"], 4).replace(r"\,", r"\times")
+        values = f'${error}$ & ${bound}$ & ${row["ratio"]:.4f}$'.replace(".", "{,}")
+        lines.append(rf'{row["k"]} & {values}\\')
+    lines += [r"\bottomrule", r"\end{tabular}", ""]
+    destination.write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_codebook_table(checks: dict[str, object], destination: Path) -> None:
+    lines = [
+        r"\begin{tabular}{rrrrrr}",
+        r"\toprule",
+        r"$\varepsilon$ & $N$ & sucessores & distorção & "
+        r"$L_\varepsilon^{\mathrm{global}}\sqrt{\varepsilon}$ & antigo $\cdot\sqrt{\varepsilon}$\\",
+        r"\midrule",
+    ]
+    for row in checks["rows"]:
+        tolerance = _latex_scientific(row["tolerance"])
+        distortion = _latex_scientific(row["worst_distortion"], 2)
+        formatted = (
+            f'${tolerance}$ & {row["cells"]} & {row["worst_admissible_successors"]} & '
+            f'${distortion}$ & ${row["log_free_bits_times_sqrt_tolerance"]:.2f}$ & '
+            f'${row["logarithmic_bits_times_sqrt_tolerance"]:.2f}$'
+        ).replace(".", "{,}")
+        lines.append(formatted + r"\\")
+    lines += [r"\bottomrule", r"\end{tabular}", ""]
+    destination.write_text("\n".join(lines), encoding="utf-8")
+
+
 def write_adaptive_table(rows: list[dict[str, object]], destination: Path) -> None:
     lines = [
         r"\begin{tabular}{rrrrrrr}",
@@ -2760,6 +2797,8 @@ def main() -> None:
         adaptive_table = current_adaptive if adaptive_table is None else adaptive_table
     sections_dir = args.output_root / "artigo" / "secoes"
     write_address_table(address_rows, sections_dir / "tab_enderecos.tex")
+    assert exp_table is not None
+    write_exp_table(exp_table, sections_dir / "tab_interpolante_exp.tex")
     assert adaptive_table is not None
     write_adaptive_table(
         adaptive_table,
@@ -2799,6 +2838,7 @@ def main() -> None:
     assert codebook_verdicts["every_piece_is_an_atom_everywhere"]
     assert codebook_verdicts["log_free_scaled_bits_bounded"]
     assert codebook_verdicts["logarithmic_scaled_bits_grow"]
+    write_codebook_table(codebook_verdicts, sections_dir / "tab_codebook.tex")
 
     relu_verdicts = relu_equivalence_checks()
     assert relu_verdicts["assembly_to_relu_exact"]

@@ -177,6 +177,15 @@ import Pendencias
 #print axioms Pendencias.circ_fourier_uniqueness
 #print axioms Pendencias.muCirc_mass
 #print axioms Pendencias.PsiF_eq_circ
+#print axioms Pendencias.psi_gap_eq_muCirc
+#print axioms Pendencias.psiOn_gap_eq_muCirc
+#print axioms Pendencias.Jackson.schedule_nesting_K
+#print axioms Pendencias.Jackson.dyadic_reduction_K
+#print axioms Pendencias.Jackson.dyadic_reduction_inf_K
+#print axioms Pendencias.Jackson.arithmetic_floor_K
+#print axioms Pendencias.Jackson.height_lower_bound_K
+#print axioms Pendencias.Marcada.Ancorada.Anchored.toRealReLU_eval
+#print axioms Pendencias.Marcada.Ancorada.Anchored.toRealReLU_reduced
 #print axioms Pendencias.psi_const_iff_muCirc
 #print axioms Pendencias.psiOn_const_iff_muCirc
 #print axioms Pendencias.limit_iff_muCirc_on

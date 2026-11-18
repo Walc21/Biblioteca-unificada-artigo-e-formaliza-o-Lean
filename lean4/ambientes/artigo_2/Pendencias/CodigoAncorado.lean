@@ -1,4 +1,5 @@
 import Pendencias.FormaAncorada
+import Pendencias.ReLUReal
 import RequestProject.Coding
 
 /-!
@@ -15,6 +16,45 @@ namespace Pendencias.Marcada
 open Artigo
 
 namespace Ancorada
+
+/-- Expand the affine term and keep exactly the original hinges in their original order. -/
+def Anchored.toRealReLU (A : Anchored) : RealReLU A.hinges.length where
+  c := ((A.ys - A.s0 * A.xs : ℚ) : ℝ)
+  q := A.s0
+  a i := A.hinges[i.val].2
+  τ i := A.hinges[i.val].1
+
+theorem Anchored.toRealReLU_eval (A : Anchored) (x : ℝ) :
+    A.toRealReLU.eval x = A.eval x := by
+  let hinge (p : ℚ × ℚ) : ℝ := p.2 * max 0 (x - p.1)
+  have hs : (∑ i : Fin A.hinges.length, hinge A.hinges[i.val]) = (A.hinges.map hinge).sum := by
+    rw [← List.sum_ofFn]
+    exact congrArg List.sum (List.ofFn_getElem_eq_map A.hinges hinge)
+  simp only [RealReLU.eval, Anchored.toRealReLU, Anchored.eval, redSum, MTree.relu]
+  change _ + (∑ i : Fin A.hinges.length, hinge A.hinges[i.val]) = _ + (A.hinges.map hinge).sum
+  rw [hs]
+  push_cast
+  ring
+
+theorem Anchored.toRealReLU_reduced {N H : ℕ} {g : ℝ → ℝ} {A : Anchored}
+    (h : AnchoredSpec N H g A) : A.toRealReLU.Reduced := by
+  obtain ⟨_, _, _, _, hsorted, hhinges, _⟩ := h
+  refine ⟨?_, ?_, ?_⟩
+  · intro i j hij
+    have hi : i.val < (A.hinges.map Prod.fst).length := by simpa only [List.length_map] using i.isLt
+    have hj : j.val < (A.hinges.map Prod.fst).length := by simpa only [List.length_map] using j.isLt
+    have hlt := List.pairwise_iff_getElem.mp hsorted i.val j.val hi hj hij
+    simp only [List.getElem_map] at hlt
+    change (A.hinges[i.val].1 : ℝ) < (A.hinges[j.val].1 : ℝ)
+    exact_mod_cast hlt
+  · intro i
+    have hi := hhinges _ (List.getElem_mem (l := A.hinges) i.isLt)
+    change 0 < (A.hinges[i.val].1 : ℝ) ∧ (A.hinges[i.val].1 : ℝ) < 1
+    exact ⟨by exact_mod_cast hi.1, by exact_mod_cast hi.2.1⟩
+  · intro i
+    have hi := hhinges _ (List.getElem_mem (l := A.hinges) i.isLt)
+    change (A.hinges[i.val].2 : ℝ) ≠ 0
+    exact_mod_cast hi.2.2
 
 lemma gamma_length (n : ℕ) : (gamma n).length = 2 * Nat.log 2 n + 1 := by
   simp [gamma, toBits]; ring

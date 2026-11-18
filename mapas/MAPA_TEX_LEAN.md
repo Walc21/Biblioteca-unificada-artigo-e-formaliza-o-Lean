@@ -157,7 +157,7 @@ Original de 77 páginas: 4.3.
 
 Fonte editável: [tex/partes/artigo_1.tex:253](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.3`.
 
-Estado: **Divergência documentada**. O operador de extensão normalizado foi integrado à classe concreta da Fase 2. O enunciado TeX deste volume le g(t0) como o valor em t0 da primeira peça (t0 pode estar fora de K); essa leitura não foi reverificada contra o enunciado Lean.
+Estado: **Correspondência confirmada**. A ida usa o valor da reta do primeiro átomo em $t_0$, inclusive quando $t_0\notin K$, e exige acordo das retas nos nós compartilhados. A volta exige inclinações não nulas nos trechos que intersectam o interior de $K$. Os valores nodais são racionais por construção.
 
 - [`Dyadic.Lib.assembly_eq_relu`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean) — linha 92.
 - [`Dyadic.Lib.relu_mem_Asm`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean) — linha 183.
@@ -166,7 +166,7 @@ Estado: **Divergência documentada**. O operador de extensão normalizado foi in
 
 Original de 77 páginas: 4.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:272](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.4`.
+Fonte editável: [tex/partes/artigo_1.tex:273](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -176,7 +176,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 4.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:294](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.5`.
+Fonte editável: [tex/partes/artigo_1.tex:295](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -186,7 +186,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 5.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:320](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.1`.
+Fonte editável: [tex/partes/artigo_1.tex:321](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -198,7 +198,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 5.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:347](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.2`.
+Fonte editável: [tex/partes/artigo_1.tex:348](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -208,7 +208,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:401](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.1`.
+Fonte editável: [tex/partes/artigo_1.tex:403](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.1`.
 
 Estado: **Correspondência inspecionada**. Forma racional de (37) e inclusão das rotinas: `Fase3.lemma61_exp_rational`, `Fase3.lemma61_enclosures` (`base_integrada/Unified/Fase3/Lemma61.lean`). 
 
@@ -219,7 +219,7 @@ Estado: **Correspondência inspecionada**. Forma racional de (37) e inclusão da
 
 Original de 77 páginas: 7.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:422](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
+Fonte editável: [tex/partes/artigo_1.tex:424](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
 
 Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.boundSecondDerivative_fail_iff` (`base_integrada/Unified/Fase3/IntervalFailure.lean`).
 
@@ -230,7 +230,7 @@ Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.bo
 
 Original de 77 páginas: 7.3.
 
-Fonte editável: [tex/partes/artigo_1.tex:434](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
+Fonte editável: [tex/partes/artigo_1.tex:436](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
 
 Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto. [17/11/2026] O passo (i) e o teorema I.6.4 explicitam agora a hipótese `roots.Pairwise DisjInt` já presente nas declarações Lean; a prova textual registra sua preservação pelo refinamento.
 
@@ -246,7 +246,7 @@ Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipó
 
 Original de 77 páginas: 7.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:470](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
+Fonte editável: [tex/partes/artigo_1.tex:472](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
 
 Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para coberturas diádicas de [α,β] com interiores dois a dois disjuntos, inclusive externas, sem a hipótese de contenção; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável. [17/11/2026] A hipótese de disjunção dos interiores das raízes foi sincronizada com o texto, sem alteração das declarações Lean.
 
@@ -261,7 +261,7 @@ Estado: **Formalizado e compilado**. Término e correção sob os contratos form
 
 Original de 77 páginas: 7.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:499](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
+Fonte editável: [tex/partes/artigo_1.tex:501](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -271,7 +271,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.6.
 
-Fonte editável: [tex/partes/artigo_1.tex:525](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
+Fonte editável: [tex/partes/artigo_1.tex:527](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -844,11 +844,12 @@ Original de 77 páginas: 8.2.
 
 Fonte editável: [tex/partes/artigo_2.tex:143](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.2`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência parcial**. O Lean prova a contagem exata e a ordem $\Theta(H^6)$. A constante $288/\pi^4$ usa a assintótica da soma dos totientes na prova textual. O script `verificacao/constante_iii32.py --published` reproduz os valores finitos.
 
 - [`Artigo.card_LH_le`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 239.
 - [`Artigo.card_LH_ge`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 264.
 - [`Artigo.card_LH_theta`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 272.
+- [`Artigo.card_LH`](../lean4/ambientes/artigo_2/RequestProject/Atoms.lean) — linha 216.
 
 ## III.3.3 — proposição ordem exata do pior endereço aritmético
 
@@ -898,7 +899,7 @@ Original de 77 páginas: 8.7.
 
 Fonte editável: [tex/partes/artigo_2.tex:277](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.7`.
 
-Estado: **Correspondência inspecionada**. 
+Estado: **Correspondência inspecionada com ressalva**. A bijeção e as cotas minimax foram provadas. Os dois sentidos são executáveis. A afirmação de computabilidade não foi expressa por um teorema `Computable`.
 
 - [`Artigo.sharp_optimal`](../lean4/ambientes/artigo_2/RequestProject/Addresses.lean) — linha 293.
 
@@ -1311,7 +1312,7 @@ Original de 77 páginas: 14.1.
 
 Fonte editável: [tex/partes/artigo_2.tex:2016](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
 
-Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transições; não certifica tempo e memória de um programa com execução ligada a essas cardinalidades. [13/11/2026] III.9.1 formalizado com modelo de custo explícito: monad de contagem Tm, memória densa Mem com domínio explícito e motor genérico de preenchimento por níveis (runFrom_spec). Implementação densa da recorrência Cvar (denseRun: tabela (r,j,u,v) -> custo+apontador, níveis D..0, cada candidato w custa 2 leituras+1 soma+1 comparação) e da recorrência com orçamento Cb (denseRunB: chaves (r,j,u,v,n), pares (n_L,w)). Provado: (a) a tabela guarda exatamente Cvar/Cb (specE_cost, specEB_cost); (b) memória exatamente S_D M^2 (resp. S_D N M^2) entradas; (c) operações <= 8 S_D M^3 (resp. <= 7 S_D N^2 M^3) com custos de folha pre-computados; (d) apontadores reconstroem uma representação ótima em Rset/RsetN (rebuild_spec, rebuildB_spec); (e) custo local calculado sobre P observações (leafInit, 4P+3 operações, valor exatamente Phi): inicialização acrescenta 4 S_D P M^2 (variável) e S_D M^2 (4P+3) (orçamento). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (1) a comparação na tabela densa e feita sobre o custo; o desempate pela chave completa kappa (fluxo shortlex) não está no programa denso — o TeX conta comparações de chave como unitárias, de modo que a contagem coincide, e o seletor kappa-canônico continua sendo o de III.7.4 (varRoot_spec); a tabela densa devolve UMA representação ótima, não necessariamente a kappa-mínima; (2) o tempo de reconstrução não é contado (não faz parte do enunciado); (3) modelo: leitura/escrita da tabela, soma e comparação no corpo ordenado dos custos são operações unitárias, conforme a seção do TeX; (4) as constantes explícitas 8 e 7 materializam O(.) para M>=1.
+Estado: **Formalizado no modelo de custo explícito**. As tabelas densas guardam `Cvar`/`Cb`, e seus apontadores recuperam um minimizador. O custo de leitura e escrita, soma e comparação de custos é unitário. A inicialização, a contagem de operações e a cardinalidade da memória têm cotas explícitas. O desempate canônico de III.7.4 é provado para o seletor funcional, sem cota formal do custo do desempate na tabela densa. O argumento textual para a variante canônica conta operações sobre a chave completa como unitárias.
 
 - [`Artigo.Setup.state_complexity`](../lean4/ambientes/artigo_2/RequestProject/Complexity.lean) — linha 89.
 - [`Pendencias.DenseDP.state_complexity_dense`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean) — linha 1813.
@@ -1324,7 +1325,7 @@ Estado: **Formalizado e compilado**. Prova cardinalidades das tabelas e transiç
 
 Original de 77 páginas: 14.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2053](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2062](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1334,22 +1335,24 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 14.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2103](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2112](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
 
-Estado: **Formalizado e compilado**. bit_complexity limita o tamanho dos custos racionais. As cotas de tempo e memória em bits do artigo exigem semântica de execução e custo de operações/desempate. [13/11/2026] III.9.3 formalizado sobre a implementação densa de III.9.1 (leafInit agora testa admissibilidade antes de somar a perda; estado não admissível cobra 4P+3 como cota superior sem aritmética sobre os dados). Provado: (1) crescimento — todo custo finito Cvar/Cb da recorrência (entradas da tabela), toda soma de candidatos c_L+c_R (<= 4 B_cost+5 bits), todo candidato com penalidade (<= 16 B_cost+25 bits) e todo acumulador parcial da perda local (lossTm) tem comprimento em bits <= B_cost = Bcost S B L, a cota explícita de Setup.bit_complexity (2(P(5B+6clog H+2(k0+D)+9)+2B+2clog L+2)+3); (2) tempo em bits — número de operações de III.9.1 (S_D M^2 (4M+6)+4 S_D P M^2 sem orçamento; S_D M^2 (4P+3)+S_D M^2 N (4NM+2) com orçamento) multiplicado por opBits = arith(b)+L+entryBits, com opBits <= cA MZ(b) clog(2b)+2L+b+idx, b=16 B_cost+25; (3) memória em bits — dom.card * (B_cost+L+idx) exatamente S_D M^2 (resp. S_D N M^2) vezes. Multiplicação escolar: schoolModel (MZ b = b^2). Compilado e auditado (propext, Classical.choice, Quot.sound). Ressalvas: (a) o custo de uma soma/comparação/redução de frações com operandos de b bits, <= cA MZ(b) log(2b), e Hipótese do modelo (BitModel.arith_le), como no TeX ("algoritmos inteiros usuais"); não ha modelo de maquina em Lean; (b) o tempo em bits é o número de operações unitárias vezes o custo-limite de uma operação (argumento do TeX), não uma simulação bit a bit; (c) BitHyp assume B (bl dos dados/penalidades) e L (comprimento de fluxo das representações do catalogo, eq. stream-length) como no teorema bit_complexity; (d) os índices (idxBits = clog(S_D M+1)) aparecem explicitamente em vez de absorvidos; (e) vale a ressalva de III.9.1 sobre o desempate kappa (comparações de chave unitárias; empate shortlex custa L).
+Estado: **Formalizado no modelo `BitModel`**. As hipóteses limitam bits dos dados e fluxos. O Lean limita também os operandos intermediários. O custo em bits é o número de operações instrumentadas de III.9.1 multiplicado pela cota por operação, incluindo índices. `budgetIdxBits` acrescenta $\lceil\log_2(N+1)\rceil$ à largura do índice da tabela com orçamento. A desigualdade é condicional ao modelo para a aritmética racional e o acesso à tabela. O argumento shortlex da versão canônica continua textual.
 
 - [`Artigo.Setup.bit_complexity`](../lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean) — linha 266.
-- [`Pendencias.DenseDP.bit_complexity_dense`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 178.
+- [`Pendencias.DenseDP.bit_complexity_dense`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 181.
 - [`Pendencias.DenseDP.Cvar_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 60.
 - [`Pendencias.DenseDP.Cb_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 68.
 - [`Pendencias.DenseDP.candidate_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 86.
 - [`Pendencias.DenseDP.lossTm_acc_bits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 124.
 
+- [`Pendencias.DenseDP.budgetIdxBits`](../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean) — linha 169.
+
 ## III.9.4 — proposição convergência dos mínimos penalizados
 
 Original de 77 páginas: 14.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:2180](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
+Fonte editável: [tex/partes/artigo_2.tex:2195](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1359,7 +1362,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 14.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:2215](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
+Fonte editável: [tex/partes/artigo_2.tex:2230](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1369,7 +1372,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2541](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2556](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1380,7 +1383,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2601](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2616](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1391,7 +1394,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 16.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2628](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2643](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1406,7 +1409,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2725](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2741](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1417,7 +1420,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2833](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2849](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
 
 Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.
 
@@ -1427,7 +1430,7 @@ Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no text
 
 Original de 77 páginas: 17.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2880](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2896](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
 
 Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o envelope C2 global a uma função quadrática por partes que pode não ser C2. Manter o enunciado e atualizar a demonstração textual em etapa posterior. [13/11/2026] Demonstração textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a função quadrática por partes. PDF recompilado nesta rodada.
 
@@ -1437,7 +1440,7 @@ Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o en
 
 Original de 77 páginas: 17.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:2987](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
+Fonte editável: [tex/partes/artigo_2.tex:3003](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1448,16 +1451,18 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3146](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
+Fonte editável: [tex/partes/artigo_2.tex:3162](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
 
-Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Atualização: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (`Pendencias.muCirc`, com $\mu_f=\sqrt8\,\tilde\mu_f$) e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ em `Pendencias.PsiF_eq_circ`. A ressalva anterior está resolvida.
+Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Atualização: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (`Pendencias.muCirc`, com $\mu_f=\sqrt8\,\tilde\mu_f$) e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ em `Pendencias.PsiF_eq_circ`. A identidade $\Psi_f^+(t)-\Psi_f(t)=\tilde\mu_f(\{-t\})$ está em `psi_gap_eq_muCirc` e `psiOn_gap_eq_muCirc`.
 
+- [`Pendencias.psi_gap_eq_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 205.
+- [`Pendencias.psiOn_gap_eq_muCirc`](../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean) — linha 227.
 
 ## III.12.6 — lema contagem por células
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3200](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
+Fonte editável: [tex/partes/artigo_2.tex:3216](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\lceil\log_4(\cdot)\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).
 
@@ -1466,7 +1471,7 @@ Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3271](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
+Fonte editável: [tex/partes/artigo_2.tex:3287](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.phase_lower`, `phase_upper` (cotas por fases convergentes), `phase_law_nonatom` (i), `phase_law_uniform` (ii), `phase_liminf_ge`, `phase_limsup_le`, `phase_seq_min`, `phase_seq_max` (iii) e as versões `_on` (`phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`, `phase_limsup_le_on`). Também testado numericamente (III.12.9).
 
@@ -1475,7 +1480,7 @@ Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3366](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
+Fonte editável: [tex/partes/artigo_2.tex:3382](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
 
 Estado: **Prova textual nova e formalização Lean**; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$ (`FourPowers`), que é a definição parentética do próprio texto.
 
@@ -1484,7 +1489,7 @@ Estado: **Prova textual nova e formalização Lean**; (b) está completa após `
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3462](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
+Fonte editável: [tex/partes/artigo_2.tex:3478](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
 
 Estado: **Observação editorial**. Não é um teorema Lean autônomo.
 
@@ -1498,10 +1503,11 @@ Original de 77 páginas: 18.1.
 
 Fonte editável: [tex/partes/artigo_3.tex:81](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:3.1`.
 
-Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Definições `Sigma`, `pErr` formalizadas sobre K=[0,1] (domínio de `jointErr`); inclusão, monotonia, cota por ‖f‖ e atingimento do ínfimo (catálogo finito), além da fórmula min{‖f‖, E_{N,H(N)}}. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
+Estado: Formalizado para raiz diádica arbitrária. `schedule_nesting_K` prova inclusão, monotonicidade do erro, cota pela norma de $f$ e atingimento no catálogo apontado finito.
 
 - [`Pendencias.Agenda.schedule_nesting`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 67.
 - [`Pendencias.Agenda.pErr_eq_min`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 44.
+- [`Pendencias.Jackson.schedule_nesting_K`](../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean) — linha 23.
 
 ## IV.3.2 — teorema redução exata às escalas diádicas
 
@@ -1509,10 +1515,12 @@ Original de 77 páginas: 18.2.
 
 Fonte editável: [tex/partes/artigo_3.tex:133](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:3.2`.
 
-Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Funcional `rateQ` (q<∞) e `rateInf` (q=∞); constantes `C = 2^α` e `K = (1+2·(2^α)^q)^{1/q}` só dependem de α, q. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
+Estado: Formalizado para raiz diádica arbitrária, em ambas as direções. As constantes dependem apenas de $\alpha$ e $q$. As versões anteriores para $[0,1]$ continuam disponíveis.
 
-- [`Pendencias.Agenda.dyadic_reduction`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 142.
-- [`Pendencias.Agenda.dyadic_reduction_inf`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 181.
+- [`Pendencias.Agenda.dyadic_reduction`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 182.
+- [`Pendencias.Agenda.dyadic_reduction_inf`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 206.
+- [`Pendencias.Jackson.dyadic_reduction_K`](../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean) — linha 35.
+- [`Pendencias.Jackson.dyadic_reduction_inf_K`](../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean) — linha 45.
 
 ## IV.3.3 — proposição falha exata de homogeneidade
 
@@ -1522,8 +1530,8 @@ Fonte editável: [tex/partes/artigo_3.tex:166](../tex/partes/artigo_3.tex); rót
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Com H(1) ≥ 2: 𝔞(x) = 0 e 𝔞(√2 x) > 0, para 0<q<∞ e q=∞ (irracionalidade de √2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
-- [`Pendencias.Agenda.homogeneity_failure`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 253.
-- [`Pendencias.Agenda.homogeneity_failure_inf`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 269.
+- [`Pendencias.Agenda.homogeneity_failure`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 278.
+- [`Pendencias.Agenda.homogeneity_failure_inf`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 294.
 
 ## IV.3.4 — observação estrutura aritmética do funcional
 
@@ -1582,7 +1590,7 @@ Original de 77 páginas: 19.5.
 
 Fonte editável: [tex/partes/artigo_3.tex:518](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:4.5`.
 
-Estado: **Formalizado e compilado** (fidelidade não reauditada). A estimativa C2 de base existe. Falta transportá-la para as definições de agenda, erro e classe do atual Artigo 3; não contado como teorema integralmente formalizado. [11/11/2026] Funcional `rateInf` (𝔞_{α,∞}) e agenda `H2 R M N = ⌈C_H N²⌉` definidos; sup sobre `FRMIcc R M` (C² só em [0,1]) de 𝔞_{2,∞} ≤ max{R,(M+4)/2}; para N ≥ 2, montagem admissível com códigos ≤ C_b N log₂(2N). Base: `joint_all_N_Icc`, `joint_budget_Icc`, `pErr_eq_min`. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
+Estado: Correspondência confirmada. Em $[0,1]$, `c2_endpoint` prova a cota do funcional de taxa na agenda `H2`, e `c2_endpoint_bits` fornece a montagem admissível com cotas para os três formatos.
 
 - [`Dyadic.Lib.simultaneous_control`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Simultaneous.lean) — linha 477.
 - [`Dyadic.Lib.precision_height`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Precision.lean) — linha 71.
@@ -1595,11 +1603,13 @@ Original de 77 páginas: 19.6.
 
 Fonte editável: [tex/partes/artigo_3.tex:555](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:4.6`.
 
-Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Piso e_N ≥ 1/(2H(N)), dist(1/(2H), 𝒬_H) = 1/(2H) e a consequência H(N) ≥ (2C)⁻¹N^s (para N ≥ 1), sobre K=[0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
+Estado: Formalizado para raiz diádica arbitrária. O piso usa $h=H(N)$ e o centro de uma folha real da raiz escolhida. A segunda conclusão força a agenda de altura nos orçamentos positivos com $h\ge2$.
 
 - [`Pendencias.Agenda.arithmetic_floor`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 125.
 - [`Pendencias.Agenda.infDist_QH`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 111.
 - [`Pendencias.Agenda.height_lower_bound`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 160.
+- [`Pendencias.Jackson.arithmetic_floor_K`](../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean) — linha 56.
+- [`Pendencias.Jackson.height_lower_bound_K`](../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean) — linha 89.
 
 ## IV.5.1 — definição biblioteca marcada completa
 
@@ -1641,13 +1651,16 @@ Original de 77 páginas: 20.4.
 
 Fonte editável: [tex/partes/artigo_3.tex:863](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.4`.
 
-Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] IV.5.4 fechado nas duas direções, com a cota inversa CORRIGIDA aprovada pelo usuário (a cota impressa é falsa: R(x)=x, M=0, D=0, W=1). Volta: H_can(R) <= 2^(D+1)(M+2)W^(M+3) e log2 H_can <= 5[(M+1)log2(2W)+D+log2(M+1)] (AlturaInversa.lean); no_additive_constant_fix mostra que nenhum termo aditivo conserta a versão antiga. Ida: forma ancorada reduzida e código prefix-free de comprimento <= 40 N floor(log2 2H) (FormaAncorada.lean, CodigoAncorado.lean). Ressalva: a forma reduzida é a estrutura Anchored, sem ponte explícita para RealReLU. Enunciado corrigido e formalizado (sem sorry) em verificacao/IV_5_4/IV_5_4_trecho_corrigido.tex.
+Estado: **Correspondência confirmada**. `direct_part` prova a forma ancorada, o round-trip do código e a cota $40N\lfloor\log_2(2H)\rfloor$. A conversão `Anchored.toRealReLU` expande o termo afim, preserva a avaliação e satisfaz `RealReLU.Reduced`. A cota inversa impressa nesta edição é a fórmula corrigida provada por `Hcan_le` e `reverse_height_bit_bound`. `no_additive_constant_fix` refuta a fórmula original.
 
 - [`Pendencias.Marcada.AlturaInversa.Hcan_le`](../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 365.
 - [`Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound`](../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 376.
 - [`Pendencias.Marcada.AlturaInversa.no_additive_constant_fix`](../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean) — linha 442.
 - [`Pendencias.Marcada.Ancorada.anchored_form`](../lean4/ambientes/artigo_2/Pendencias/FormaAncorada.lean) — linha 465.
-- [`Pendencias.Marcada.Ancorada.direct_part`](../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean) — linha 175.
+- [`Pendencias.Marcada.Ancorada.direct_part`](../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean) — linha 215.
+
+- [`Pendencias.Marcada.Ancorada.Anchored.toRealReLU_eval`](../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean) — linha 27.
+- [`Pendencias.Marcada.Ancorada.Anchored.toRealReLU_reduced`](../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean) — linha 39.
 
 ## IV.5.5 — teorema reversão aproximada quantizada
 

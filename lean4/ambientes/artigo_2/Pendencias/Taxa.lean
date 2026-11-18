@@ -72,6 +72,73 @@ lemma tsum_blocks (u : ℕ → ENNReal) (hu : u 0 = 0) :
 lemma two_pow_rpow_succ (α : ℝ) (r : ℕ) : ((2 : ℝ) ^ (r + 1)) ^ α = 2 ^ α * ((2 : ℝ) ^ r) ^ α := by
   rw [pow_succ, Real.mul_rpow (by positivity) (by norm_num), mul_comm]
 
+private noncomputable def rtermOf (α q : ℝ) (e : ℕ → ENNReal) (n : ℕ) : ENNReal :=
+  (ENNReal.ofReal ((n : ℝ) ^ α) * e n) ^ q * (n : ENNReal)⁻¹
+
+private noncomputable def dtermOf (α q : ℝ) (e : ℕ → ENNReal) (r : ℕ) : ENNReal :=
+  (ENNReal.ofReal (((2 : ℝ) ^ r) ^ α) * e (2 ^ r)) ^ q
+
+private lemma dterm_succ_le_of_antitone {α q : ℝ} (hα : 0 < α) (hq : 0 < q)
+    {e : ℕ → ENNReal} (he : Antitone e) (r : ℕ) :
+    dtermOf α q e (r + 1) ≤
+      2 * ENNReal.ofReal (2 ^ α) ^ q * ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rtermOf α q e n := by
+  set Y := (ENNReal.ofReal (((2 : ℝ) ^ r) ^ α) * e (2 ^ (r + 1))) ^ q
+  have hd : dtermOf α q e (r + 1) = ENNReal.ofReal (2 ^ α) ^ q * Y := by
+    unfold dtermOf
+    rw [two_pow_rpow_succ α r, ENNReal.ofReal_mul (by positivity), mul_assoc,
+      ENNReal.mul_rpow_of_nonneg _ _ hq.le]
+  have hterm : ∀ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), Y * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹ ≤
+      rtermOf α q e n := by
+    intro n hn
+    rw [Finset.mem_Ico] at hn
+    have hn1 : ((2 : ℝ) ^ r) ≤ n := by exact_mod_cast hn.1
+    exact mul_le_mul' (ENNReal.rpow_le_rpow (mul_le_mul'
+      (ENNReal.ofReal_le_ofReal (Real.rpow_le_rpow (by positivity) hn1 hα.le))
+      (he hn.2.le)) hq.le) (ENNReal.inv_le_inv.mpr (by exact_mod_cast hn.2.le))
+  have hsum := Finset.card_nsmul_le_sum _ _ _ hterm
+  rw [card_Ico_pow, nsmul_eq_mul] at hsum
+  -- `2^r · (2^{r+1})⁻¹ = 2⁻¹`
+  have h2 : ((2 ^ r : ℕ) : ENNReal) * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹ = 2⁻¹ := by
+    rw [pow_succ, Nat.cast_mul, ENNReal.mul_inv (by simp) (by simp), ← mul_assoc,
+      ENNReal.mul_inv_cancel (by simp) (by simp), one_mul]
+    norm_num
+  have hY : Y ≤ 2 * ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rtermOf α q e n := by
+    have hid : 2 * (((2 ^ r : ℕ) : ENNReal) * (Y * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹)) = Y := by
+      calc _ = 2 * (((2 ^ r : ℕ) : ENNReal) * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹) * Y := by ring
+        _ = Y := by rw [h2, ENNReal.mul_inv_cancel (by norm_num) (by norm_num), one_mul]
+    calc Y = _ := hid.symm
+      _ ≤ _ := mul_le_mul_left' hsum 2
+  rw [hd, mul_comm 2, mul_assoc]
+  exact mul_le_mul_left' hY _
+
+/-- Lower bound for weighted rates on a nonincreasing sequence, independent of the domain. -/
+theorem dyadic_sequence_le_weighted {α q : ℝ} (hα : 0 < α) (hq : 0 < q)
+    {e : ℕ → ENNReal} (he : Antitone e) :
+    (∑' r : ℕ, (ENNReal.ofReal (((2 : ℝ) ^ r) ^ α) * e (2 ^ r)) ^ q) ^ (1 / q) ≤
+      (1 + 2 * ENNReal.ofReal (2 ^ α) ^ q) ^ (1 / q) *
+        (∑' N : ℕ, (ENNReal.ofReal ((N : ℝ) ^ α) * e N) ^ q * (N : ENNReal)⁻¹) ^ (1 / q) := by
+  set A := ENNReal.ofReal (2 ^ α)
+  set S := ∑' N : ℕ, rtermOf α q e N
+  set T := ∑' r : ℕ, dtermOf α q e r
+  change T ^ (1 / q) ≤ (1 + 2 * A ^ q) ^ (1 / q) * S ^ (1 / q)
+  have hz : rtermOf α q e 0 = 0 := by
+    simp [rtermOf, Real.zero_rpow hα.ne', ENNReal.zero_rpow_of_pos hq]
+  have ht0 : dtermOf α q e 0 ≤ S := by
+    have h : dtermOf α q e 0 = rtermOf α q e 1 := by simp [dtermOf, rtermOf]
+    rw [h]
+    exact ENNReal.le_tsum 1
+  have htail : ∑' r, dtermOf α q e (r + 1) ≤ 2 * A ^ q * S := by
+    rw [show S = ∑' r, ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rtermOf α q e n from
+        (tsum_blocks _ hz).symm, ← ENNReal.tsum_mul_left]
+    exact ENNReal.tsum_le_tsum fun r ↦ dterm_succ_le_of_antitone hα hq he r
+  have h2 : T ≤ (1 + 2 * A ^ q) * S := by
+    rw [show T = dtermOf α q e 0 + ∑' r, dtermOf α q e (r + 1) from
+      tsum_eq_zero_add' ENNReal.summable, add_mul, one_mul]
+    exact add_le_add ht0 htail
+  calc T ^ (1 / q) ≤ ((1 + 2 * A ^ q) * S) ^ (1 / q) :=
+        ENNReal.rpow_le_rpow h2 (by positivity)
+    _ = _ := ENNReal.mul_rpow_of_nonneg _ _ (by positivity)
+
 section bounds
 
 variable {α q : ℝ} (hα : 0 < α) (hq : 0 < q) {H : ℕ → ℕ} (hH : Monotone H) (f : ℝ → ℝ)
@@ -103,35 +170,8 @@ lemma block_le (r : ℕ) :
 /-- bloco `r`: `dterm (r+1) ≤ 2 (2^α)^q · ∑_{2^r ≤ N < 2^{r+1}} rterm N` -/
 lemma dterm_succ_le (r : ℕ) :
     dterm α q H f (r + 1) ≤
-      2 * ENNReal.ofReal (2 ^ α) ^ q * ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rterm α q H f n := by
-  set Y := (ENNReal.ofReal (((2 : ℝ) ^ r) ^ α) * pErr H (2 ^ (r + 1)) f) ^ q
-  have hd : dterm α q H f (r + 1) = ENNReal.ofReal (2 ^ α) ^ q * Y := by
-    unfold dterm
-    rw [two_pow_rpow_succ α r, ENNReal.ofReal_mul (by positivity), mul_assoc,
-      ENNReal.mul_rpow_of_nonneg _ _ hq.le]
-  have hterm : ∀ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), Y * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹ ≤
-      rterm α q H f n := by
-    intro n hn
-    rw [Finset.mem_Ico] at hn
-    have hn1 : ((2 : ℝ) ^ r) ≤ n := by exact_mod_cast hn.1
-    exact mul_le_mul' (ENNReal.rpow_le_rpow (mul_le_mul'
-      (ENNReal.ofReal_le_ofReal (Real.rpow_le_rpow (by positivity) hn1 hα.le))
-      (pErr_antitone hH f hn.2.le)) hq.le) (ENNReal.inv_le_inv.mpr (by exact_mod_cast hn.2.le))
-  have hsum := Finset.card_nsmul_le_sum _ _ _ hterm
-  rw [card_Ico_pow, nsmul_eq_mul] at hsum
-  -- `2^r · (2^{r+1})⁻¹ = 2⁻¹`
-  have h2 : ((2 ^ r : ℕ) : ENNReal) * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹ = 2⁻¹ := by
-    rw [pow_succ, Nat.cast_mul, ENNReal.mul_inv (by simp) (by simp), ← mul_assoc,
-      ENNReal.mul_inv_cancel (by simp) (by simp), one_mul]
-    norm_num
-  have hY : Y ≤ 2 * ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rterm α q H f n := by
-    have e : 2 * (((2 ^ r : ℕ) : ENNReal) * (Y * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹)) = Y := by
-      calc _ = 2 * (((2 ^ r : ℕ) : ENNReal) * ((2 ^ (r + 1) : ℕ) : ENNReal)⁻¹) * Y := by ring
-        _ = Y := by rw [h2, ENNReal.mul_inv_cancel (by norm_num) (by norm_num), one_mul]
-    calc Y = _ := e.symm
-      _ ≤ _ := mul_le_mul_left' hsum 2
-  rw [hd, mul_comm 2, mul_assoc]
-  exact mul_le_mul_left' hY _
+      2 * ENNReal.ofReal (2 ^ α) ^ q * ∑ n ∈ Finset.Ico (2 ^ r) (2 ^ (r + 1)), rterm α q H f n :=
+  dterm_succ_le_of_antitone hα hq (pErr_antitone hH f) r
 
 end bounds
 
@@ -160,22 +200,7 @@ theorem dyadic_reduction {α q : ℝ} (hα : 0 < α) (hq : 0 < q) {H : ℕ → �
           rw [ENNReal.mul_rpow_of_nonneg _ _ hq', ← ENNReal.rpow_mul, mul_one_div_cancel hq.ne',
             ENNReal.rpow_one]
           rfl
-  · -- `T ≤ (1 + 2 A^q) S`
-    have ht0 : dterm α q H f 0 ≤ S := by
-      have : dterm α q H f 0 = rterm α q H f 1 := by simp [dterm, rterm]
-      rw [this]
-      exact ENNReal.le_tsum 1
-    have htail : ∑' r, dterm α q H f (r + 1) ≤ 2 * A ^ q * S := by
-      rw [hS, ← ENNReal.tsum_mul_left]
-      exact ENNReal.tsum_le_tsum fun r => dterm_succ_le hα hq hH f r
-    have h2 : T ≤ (1 + 2 * A ^ q) * S := by
-      rw [show T = dterm α q H f 0 + ∑' r, dterm α q H f (r + 1) from
-        tsum_eq_zero_add' ENNReal.summable]
-      rw [add_mul, one_mul]
-      exact add_le_add ht0 htail
-    calc dyadQ α q H f = T ^ (1 / q) := rfl
-      _ ≤ ((1 + 2 * A ^ q) * S) ^ (1 / q) := ENNReal.rpow_le_rpow h2 hq'
-      _ = (1 + 2 * A ^ q) ^ (1 / q) * rateQ α q H f := ENNReal.mul_rpow_of_nonneg _ _ hq'
+  · exact dyadic_sequence_le_weighted hα hq (pErr_antitone hH f)
 
 /-- **Teorema IV.3.2**, `q = ∞`: `‖(2^{rα}e_{2^r})‖_{ℓ^∞} ≤ 𝔞_{α,∞}(f) ≤ 2^α ‖(2^{rα}e_{2^r})‖_{ℓ^∞}`. -/
 theorem dyadic_reduction_inf {α : ℝ} (hα : 0 < α) {H : ℕ → ℕ} (hH : Monotone H) (f : ℝ → ℝ) :

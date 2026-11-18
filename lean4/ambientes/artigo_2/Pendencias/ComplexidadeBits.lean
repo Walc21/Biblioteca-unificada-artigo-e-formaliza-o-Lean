@@ -165,6 +165,9 @@ def schoolModel (cA : ℕ) : BitModel :=
 /-- índices de uma posição: `⌈log₂(S_D M + 1)⌉` bits -/
 noncomputable def idxBits (S : Setup) : ℕ := Nat.clog 2 ((2 ^ (S.D + 1) - 1) * S.V.card + 1)
 
+/-- Include the budget coordinate of a dense entry or a reconstruction pointer. -/
+noncomputable def budgetIdxBits (S : Setup) (N : ℕ) : ℕ := idxBits S + Nat.clog 2 (N + 1)
+
 /-- **Teorema III.9.3 (cota grosseira de complexidade de bits)** — enunciado formal reunido.
 Seja `B_cost = Bcost S B L` e `b = 16 B_cost + 25` (cota de todos os operandos: entradas,
 somas de candidatos, candidatos com penalidade e somas parciais da perda).
@@ -189,18 +192,19 @@ theorem bit_complexity_dense (hH : 2 ≤ S.H) {B L : ℕ} (hb : BitHyp S B L) (b
       ((2 ^ (S.D + 1) - 1) * S.V.card ^ 2 * (4 * S.V.card + 6) +
         4 * ((2 ^ (S.D + 1) - 1) * S.data.length * S.V.card ^ 2)) *
         opBits bm (16 * Bcost S B L + 25) L (idxBits S)) ∧
-    ((denseRunB S N (leafInit S)).ticks * opBits bm (16 * Bcost S B L + 25) L (idxBits S) ≤
+    ((denseRunB S N (leafInit S)).ticks *
+        opBits bm (16 * Bcost S B L + 25) L (budgetIdxBits S N) ≤
       ((2 ^ (S.D + 1) - 1) * ((4 * S.data.length + 3) * S.V.card ^ 2) +
         (2 ^ (S.D + 1) - 1) * (S.V.card ^ 2 * N * (4 * (N * S.V.card) + 2))) *
-        opBits bm (16 * Bcost S B L + 25) L (idxBits S)) ∧
+        opBits bm (16 * Bcost S B L + 25) L (budgetIdxBits S N)) ∧
     (opBits bm (16 * Bcost S B L + 25) L (idxBits S) ≤
       bm.cA * (bm.MZ (16 * Bcost S B L + 25) * Nat.clog 2 (2 * (16 * Bcost S B L + 25))) +
         2 * L + (16 * Bcost S B L + 25) + idxBits S) ∧
     -- 3. memória em bits
     ((denseRun S (leafInit S)).val.dom.card * entryBits (Bcost S B L) L (idxBits S) =
       (2 ^ (S.D + 1) - 1) * S.V.card ^ 2 * (Bcost S B L + L + idxBits S)) ∧
-    ((denseRunB S N (leafInit S)).val.dom.card * entryBits (Bcost S B L) L (idxBits S) =
-      (2 ^ (S.D + 1) - 1) * N * S.V.card ^ 2 * (Bcost S B L + L + idxBits S)) := by
+    ((denseRunB S N (leafInit S)).val.dom.card * entryBits (Bcost S B L) L (budgetIdxBits S N) =
+      (2 ^ (S.D + 1) - 1) * N * S.V.card ^ 2 * (Bcost S B L + L + budgetIdxBits S N)) := by
   obtain ⟨a1, a2, a3, -⟩ := dense_variable_init S hH
   obtain ⟨b1, b2, b3, -⟩ := dense_budget_init S hH N
   refine ⟨?_, ?_, Nat.mul_le_mul_right _ a3, Nat.mul_le_mul_right _ b3, opBits_le _ _ _ _, ?_, ?_⟩

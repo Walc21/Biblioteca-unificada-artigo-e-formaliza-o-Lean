@@ -165,7 +165,7 @@ tomar o supremo nos mesmos blocos.
 % MAPA artigo_3:3.3
 \begin{proposition}[falha exata de homogeneidade]\label{map:artigo_3:3.3}
 \label{artigo_3:prop:nonhomogeneous-functional}
-Suponha $K=[0,1]$ e $H(1)\ge2$. O funcional
+Suponha $K=[0,1]$, $H$ não decrescente e $H(1)\ge2$. O funcional
 $\|f\|_\infty+\mathfrak a_{\alpha,q}^{\Library,H}(f)$ não é homogêneo sobre
 $C(K)$ e, portanto, não é uma quase-norma. Mais precisamente, para
 $f(x)=x$ e $c=\sqrt2$,
@@ -554,27 +554,27 @@ $\mathcal Q_H=\{p/q\in\mathbb Q:\height(p/q)\le H\}$.
 % MAPA artigo_3:4.6
 \begin{proposition}[piso aritmético uniforme]\label{map:artigo_3:4.6}
 \label{artigo_3:prop:arithmetic-floor}
-Para cada $H\ge2$, seja $a_H=1/(2H)$ e $f_H\equiv a_H$ em $K$. Então, para
-todo $N$,
+Para uma agenda $H$ e um orçamento $N$ com $h=H(N)\ge2$,
+ponha $a_h=1/(2h)$ e $f_h\equiv a_h$ em $K$. Então
 \begin{equation}
- e_N^{\Library,H}(f_H)
- \ge\operatorname{dist}(a_H,\mathcal Q_H)
- =\frac1{2H}.
+ e_N^{\Library,H}(f_h)
+ \ge\operatorname{dist}(a_h,\mathcal Q_h)
+ =\frac1{2h}.
  \label{artigo_3:eq:arithmetic-floor}
 \end{equation}
 Consequentemente, se uma classe contém todas as constantes
 $f\equiv a$, $|a|\le1/4$, e satisfaz
 $\sup_f e_N^{\Library,H}(f)\le C N^{-s}$, então
-$H(N)\ge(2C)^{-1}N^s$ para todo $N$ com $H(N)\ge2$.
+$H(N)\ge(2C)^{-1}N^s$ para todo $N\ge1$ com $H(N)\ge2$.
 \end{proposition}
 
 \begin{proof}
 No centro de qualquer folha, uma montagem não nula assume o valor central
-$y_0\in\mathcal Q_H$ do átomo; a função nula assume o valor $0$, que também
-pertence a $\mathcal Q_H$. Não existe racional de altura no máximo $H$
-estritamente entre $0$ e $1/H$: todo racional positivo nessa faixa teria
-numerador no mínimo igual a $1$ e denominador maior que $H$. Portanto,
-$a_H$ está a distância $1/(2H)$ de $\mathcal Q_H$. A avaliação do erro em um
+$y_0\in\mathcal Q_h$ do átomo; a função nula assume o valor $0$, que também
+pertence a $\mathcal Q_h$. Não existe racional de altura no máximo $h$
+estritamente entre $0$ e $1/h$: todo racional positivo nessa faixa teria
+numerador no mínimo igual a $1$ e denominador maior que $h$. Portanto,
+$a_h$ está a distância $1/(2h)$ de $\mathcal Q_h$. A avaliação do erro em um
 centro de folha prova a cota. Como $a_{H(N)}\le1/4$, a hipótese uniforme
 aplicada a essa constante fornece
 $1/(2H(N))\le CN^{-s}$, que é a última afirmação.

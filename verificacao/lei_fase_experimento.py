@@ -6,7 +6,7 @@ algumas funções C^2, (i) sqrt(eps)*n_f(eps) com a função de fase Psi_f e
 (ii) o intervalo de valores de N^2 E_N^dia com [min Psi^2, max Psi+^2].
 Uso: python3 lei_fase_experimento.py [Nmax]
 """
-import sys
+import argparse
 import math, heapq
 LN4=math.log(4)
 def make_err(f,fp,K=24):
@@ -68,7 +68,8 @@ def psi_range(fpp, M=6000, P=400):
     return min(vals), max(vals+valsp)
 
 def run(name,f,fp,fpp,Nmax,Nmin):
-    err=make_err(f,fp); bp=breakpoints(err,Nmax)
+    # Um limiar registra E_N para nb <= N < na, inclusive Nmax só se na > Nmax.
+    err=make_err(f,fp); bp=breakpoints(err,Nmax + 1)
     lo,hi=psi_range(fpp)
     xs=[N*N*th for th,nb,na in bp for N in range(nb,na) if Nmin<=N<=Nmax]
     sn=[]; 
@@ -76,14 +77,26 @@ def run(name,f,fp,fpp,Nmax,Nmin):
         eps=4.0**(-s)
         if n_at(bp,eps)>0.9*Nmax: break
         sn.append(abs(math.sqrt(eps)*n_at(bp,eps)-Psi(fpp,s,8000)))
-    print(f"{name:26s} I={Ivalue(fpp):.4f} max|sqrt(eps)n-Psi|={max(sn) if sn else float('nan'):.4f} "
+    print(f"{name:26s} N={Nmin}..{Nmax} I={Ivalue(fpp):.4f} max|sqrt(eps)n-Psi|={max(sn) if sn else float('nan'):.4f} "
           f"N^2E_N in [{min(xs):.5f},{max(xs):.5f}]  Psi^2 range [{lo*lo:.5f},{hi*hi:.5f}]")
 
 if __name__=='__main__':
-    Nmax=int(sys.argv[1]) if len(sys.argv)>1 else 8000; Nmin=Nmax//8
+    parser = argparse.ArgumentParser(description=__doc__)
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("Nmax", nargs="?", type=int, help="último N para todas as sondas")
+    modes.add_argument("--published", action="store_true", help="janelas da observação III.12.9")
+    args = parser.parse_args()
+    if args.Nmax is not None and args.Nmax < 1:
+        parser.error("Nmax deve ser positivo")
+    Nmax = args.Nmax or 8000
+    Nmin = max(1, Nmax // 8)
+    if args.published:
+        Nmin, Nmax = 2000, 20000
     pi=math.pi
     run('ln(1+x)',lambda x:math.log(1+x),lambda x:1/(1+x),lambda x:-1/(1+x)**2,Nmax,Nmin)
     run('e^x',math.exp,math.exp,math.exp,Nmax,Nmin)
+    if args.published:
+        Nmin, Nmax = 1500, 12000
     run('x^3+x^2',lambda x:x**3+x*x,lambda x:3*x*x+2*x,lambda x:6*x+2,Nmax,Nmin)
     run('x^2',lambda x:x*x,lambda x:2*x,lambda x:2.0,Nmax,Nmin)
     run('x^4',lambda x:x**4,lambda x:4*x**3,lambda x:12*x*x,Nmax,Nmin)

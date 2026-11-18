@@ -249,8 +249,8 @@ resolvidas nesta rodada (ver abaixo).
 1. **Resolvida:** `μ_f` não era construída como medida em `𝕋`. Agora `muCirc f k₀ m₀` é a
    imagem de `√(|f''|/8) dx` em `K` pela fase `x ↦ a(x) mod 1`; por `PsiF_eq_circ`,
    `Ψ_f(t) = ∫ gCirc(t+θ) dμ̃_f(θ)`, e `μ_f = √8 μ̃_f` (a massa total é `I/√8`).
-   A identidade de (i) com `μ_f({−t})` vale com `μ̃_f({−t}) = ∫ 1_{S(t)} w_f`, e a versão
-   formal é a integral de `psiP_sub_psiF`, não uma igualdade de medidas.
+   A identidade `Ψ_f⁺(t) − Ψ_f(t) = μ̃_f({−t})` está em `psi_gap_eq_muCirc` e
+   `psiOn_gap_eq_muCirc`. Ela conecta a integral de `psiP_sub_psiF` ao singleton no círculo.
 2. **Resolvida em `C²(K)` e `ℝ`:** o cálculo de (iii) está formalizado; `fourier_muCirc` dá
    `∫ e_m dμ̃_f = ∫_K w_f e^{2πima}`, e `fourier_psiF` a relação com `Ψ_f`.
 3. Tipo de `μ_f` no texto versus `μ̃_f`: o texto usa `μ_f`; o Lean usa `μ̃_f`. Relação

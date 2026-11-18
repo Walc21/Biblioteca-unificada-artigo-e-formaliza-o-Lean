@@ -14,17 +14,30 @@ auditar() {
       / depends on axioms: \[/ {
         axiomas = $0
         sub(/^.* depends on axioms: \[/, "", axiomas)
+        coletando = 1
+      }
+      coletando && !/ depends on axioms: \[/ { axiomas = axiomas " " $0 }
+      coletando && /\][[:space:]]*$/ {
+        coletando = 0
         sub(/\][[:space:]]*$/, "", axiomas)
-        total = split(axiomas, nomes, /,[[:space:]]*/)
+        gsub(/[[:space:]]/, "", axiomas)
+        total = split(axiomas, nomes, ",")
         for (i = 1; i <= total; i++) {
           if (nomes[i] != "propext" && nomes[i] != "Classical.choice" &&
               nomes[i] != "Quot.sound") {
+            fflush()
             printf "Axioma fora da lista permitida: %s\n", nomes[i] > "/dev/stderr"
             falhou = 1
           }
         }
       }
-      END { exit falhou }
+      END {
+        if (coletando) {
+          fflush()
+          print "Lista de axiomas incompleta." > "/dev/stderr"
+        }
+        exit (falhou || coletando)
+      }
     '
   done
 }

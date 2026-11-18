@@ -1,8 +1,11 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=24mm,headheight=14pt]{geometry}
+% Fonte única do volume, na formatação baseada em normas da ABNT. Figuras em figuras/; compilar a partir de tex/.
+\documentclass[12pt,a4paper]{article}
+% NBR 14724: margens esquerda/superior 3 cm, direita/inferior 2 cm.
+\usepackage[a4paper,left=3cm,top=3cm,right=2cm,bottom=2cm,headheight=15pt,headsep=12pt]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern,amssymb}
+\usepackage{tgtermes}% texto em Times (fonte romana); a matemática permanece em Latin Modern
 \usepackage{babel}
 \babelprovide[import,main]{portuguese}
 \usepackage{amsmath,amsthm,mathtools}
@@ -12,29 +15,47 @@
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc,fit}
-\usepackage[round,authoryear]{natbib}
+\usepackage{setspace,indentfirst,titlesec,etoolbox}
 \usepackage{caption}
-\captionsetup{font=small,labelfont=bf,skip=7pt}
+% NBR 14724: legendas em corpo menor, espaçamento simples; rótulo separado do título por travessão.
+\captionsetup{font={footnotesize,singlespacing},labelsep=endash,skip=6pt,justification=centering,singlelinecheck=true}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage[nameinlink,noabbrev]{cleveref}
 \definecolor{ink}{HTML}{172C3C}
 \definecolor{accent}{HTML}{166F80}
-\hypersetup{colorlinks=true,linkcolor=ink,citecolor=ink,urlcolor=accent,
+\hypersetup{hidelinks,
  pdftitle={Biblioteca determinística de segmentos afins racionais em células diádicas: endereçamento, aproximação e refinamento certificado},
  pdfauthor={Victor Gabriel de Oliveira},
  pdfsubject={Construção racional, aproximação certificada e descrição aritmética}}
+% NBR 14724: numeração das páginas no canto superior direito; entrelinha de 1,5; recuo de parágrafo de 1,25 cm.
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\itshape Biblioteca determinística de segmentos afins racionais}
-\fancyfoot[C]{\small\thepage}
+\fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\setlength{\parindent}{1.25em}
-\setlength{\parskip}{2pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[R]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
 \setlength{\textfloatsep}{15pt plus 3pt minus 3pt}
 \setlength{\intextsep}{14pt plus 3pt minus 3pt}
 \setlist{nosep,leftmargin=2em}
+\AtBeginEnvironment{table}{\singlespacing}
+\AtBeginEnvironment{figure}{\singlespacing}
+% NBR 14724: a fonte é indicada abaixo da ilustração ou tabela (legenda acima).
+\AtEndEnvironment{figure}{\par\vspace{3pt}{\footnotesize\noindent Fonte: Elaborada pelo autor.\par}}
+\AtEndEnvironment{table}{\par\vspace{3pt}{\footnotesize\noindent Fonte: Elaborada pelo autor.\par}}
+% NBR 6024: numeração progressiva; seção primária em caixa-alta e negrito, secundária em negrito, terciária sem destaque.
+\titleformat{\part}[display]{\centering\normalfont\bfseries}{\MakeUppercase{\partname}~\thepart}{6pt}{\MakeUppercase}
+\titlespacing*{\part}{0pt}{0pt}{24pt}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{0.75em}{\MakeUppercase}
+\titleformat{name=\section,numberless}[block]{\normalfont\bfseries\centering}{}{0pt}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.75em}{}
+\titleformat{\subsubsection}{\normalfont}{\thesubsubsection}{0.75em}{}
+\titlespacing*{\section}{0pt}{18pt plus 2pt}{12pt plus 2pt}
+\titlespacing*{\subsection}{0pt}{14pt plus 2pt}{9pt plus 2pt}
+\titlespacing*{\subsubsection}{0pt}{12pt plus 2pt}{8pt plus 2pt}
 \newtheoremstyle{preciso}{8pt}{5pt}{\itshape}{}{\bfseries}{.}{.5em}{}
 \theoremstyle{preciso}
 \newtheorem{teorema}{Teorema}[section]
@@ -65,8 +86,8 @@
 \newcommand{\normK}[2]{\left\|#1\right\|_{\infty,#2}}
 \newcommand{\eqn}[2]{\begin{equation}\label{eq:#1}#2\end{equation}}
 \newcommand{\figura}[4]{\begin{figure}[!htbp]\centering
- \includegraphics[width=#2\linewidth]{figuras/#1.pdf}
- \caption{#3}\label{fig:#4}\end{figure}}
+ \caption{#3}\label{fig:#4}
+ \includegraphics[width=#2\linewidth]{figuras/#1.pdf}\end{figure}}
 
 \newcommand{\Atoms}{\mathsf{Atom}}
 \newcommand{\Cell}{\mathsf{Cell}}
@@ -161,7 +182,7 @@
 \newtheorem{algorithm}[teorema]{Algoritmo}
 \theoremstyle{definition}
 \newtheorem{remark}[teorema]{Observação}
-% Ambiente sem numeração não altera os contadores nem o mapa.
+% Ambientes sem numeração preservam os contadores e o mapa.
 \theoremstyle{preciso}
 \newtheorem*{proposicaoSN}{Proposição (ponte entre as Partes~I e~III)}
 \theoremstyle{preciso}
@@ -170,7 +191,7 @@
 \newtheorem*{observacaoSN}{Observação}
 
 \renewcommand{\partname}{Parte}
-\addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
+\renewcommand{\contentsname}{Sumário}
 \renewcommand{\refname}{Referências}
 \renewcommand{\thesection}{\Roman{part}.\arabic{section}}
 \renewcommand{\thefigure}{\Roman{part}.\arabic{figure}}
@@ -180,35 +201,82 @@
 \renewcommand{\theHfigure}{\arabic{part}.\arabic{figure}}
 \renewcommand{\theHtable}{\arabic{part}.\arabic{table}}
 \renewcommand{\theHequation}{\arabic{part}.\arabic{equation}}
-\newcommand{\volumeparte}[1]{\clearpage\part{#1}\setcounter{section}{0}\setcounter{figure}{0}\setcounter{table}{0}\setcounter{equation}{0}\renewcommand{\thesection}{\Roman{part}.\arabic{section}}}
+\newcommand{\volumeparte}[1]{\clearpage\part{#1}\setcounter{section}{0}\setcounter{figure}{0}\setcounter{table}{0}\setcounter{equation}{0}\setcounter{absc}{0}\renewcommand{\thesection}{\Roman{part}.\arabic{section}}}
 \makeatletter
 \renewcommand*{\l@section}{\@dottedtocline{1}{1.5em}{4em}}
 \renewcommand*{\l@subsection}{\@dottedtocline{2}{4em}{5em}}
 \renewcommand*{\l@subsubsection}{\@dottedtocline{3}{8em}{6em}}
 \makeatother
-\fancyhead[L]{\small\itshape Biblioteca determinística: volume unificado}
-\hypersetup{pdftitle={Biblioteca determinística: volume unificado e correspondência Lean 4},pdfauthor={Victor Gabriel de Oliveira}}
-\title{\bfseries Biblioteca determinística de segmentos afins racionais\\[8pt]\Large Construção, seleção, aproximação e normalização\\[8pt]\large Volume unificado com correspondência Lean 4}
-\author{Victor Gabriel de Oliveira}
-\date{Edição revisada de 17 de novembro de 2026}
+
+% ---- resumos (NBR 6028): o ambiente alterna RESUMO/ABSTRACT (1.º = português, 2.º = inglês) ----
+\newcounter{absc}
+\renewenvironment{abstract}{\par\stepcounter{absc}\ifodd\value{absc}\def\abstractname{RESUMO}\else\def\abstractname{ABSTRACT}\fi
+ \begin{singlespace}\begin{center}\bfseries\abstractname\end{center}\noindent\ignorespaces}{\par\end{singlespace}\par\bigskip}
+% ---- seção primária sem número, alinhada à esquerda, incluída no sumário ----
+\newcommand{\secaosn}[1]{\par\phantomsection\addcontentsline{toc}{section}{#1}\vspace{18pt plus 2pt}\noindent{\normalfont\bfseries\MakeUppercase{#1}}\par\nobreak\vspace{12pt plus 2pt}\noindent\ignorespaces}
+% ---- sumário (NBR 6027) ----
+\addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}\renewcommand{\abstractname}{Resumo}}
+\makeatletter
+\renewcommand*\l@part[2]{\ifnum\c@tocdepth>-2\relax\addpenalty{-\@highpenalty}\addvspace{1.0em \@plus\p@}\setlength\@tempdima{3em}\begingroup\parindent\z@\rightskip\@pnumwidth\parfillskip-\@pnumwidth{\leavevmode\bfseries\MakeUppercase{#1}\hfil\hb@xt@\@pnumwidth{\hss #2}}\par\nobreak\endgroup\fi}
+\makeatother
+% ---- citações autor-data (NBR 10520) e lista de referências (NBR 6023) ----
+\newcommand{\abntentry}[4]{\expandafter\gdef\csname abU@#1\endcsname{#2}\expandafter\gdef\csname abN@#1\endcsname{#3}\expandafter\gdef\csname abY@#1\endcsname{#4}}
+\input{citacoes_abnt}
+\newcommand{\abntlookup}[2]{\ifcsname ab#1@#2\endcsname\csname ab#1@#2\endcsname\else\textbf{??}\PackageWarning{abnt}{Citacao indefinida: #2}\fi}
+\newcommand{\abntpar}[1]{\hyperlink{bib:#1}{\abntlookup{U}{#1}, \abntlookup{Y}{#1}}}
+\newcommand{\abntsep}{}
+\newcommand{\abntpitem}[1]{\abntsep\renewcommand{\abntsep}{; }\abntpar{#1}}
+\newcommand{\citep}[2][]{\begingroup\renewcommand{\abntsep}{}(\forcsvlist{\abntpitem}{#2}\ifblank{#1}{}{, #1})\endgroup}
+\newcount\abntn \newcount\abnti
+\newcommand{\abntcnt}[1]{\advance\abntn by 1 }
+\newcommand{\abnttitem}[1]{\advance\abnti by 1 \ifnum\abnti>1 \ifnum\abnti=\abntn{} e \else, \fi\fi
+ \hyperlink{bib:#1}{\abntlookup{N}{#1}} (\hyperlink{bib:#1}{\abntlookup{Y}{#1}}\ifnum\abnti=\abntn\abntoptc\fi)}
+\newcommand{\citet}[2][]{\begingroup\ifblank{#1}{\def\abntoptc{}}{\def\abntoptc{, #1}}\abntn=0 \forcsvlist{\abntcnt}{#2}\abnti=0 \forcsvlist{\abnttitem}{#2}\endgroup}
+\newcommand{\abntref}[2]{\par\begingroup\interlinepenalty=10000\relax\hypertarget{bib:#1}{}#2\par\endgroup}
+\newenvironment{referenciasabnt}{\clearpage\phantomsection\section*{Referências}\addcontentsline{toc}{section}{Referências}%
+ \begin{singlespace}\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{12pt plus 1pt}}{\end{singlespace}}
+
 \begin{document}
-\maketitle
-\begin{abstract}
-Estudamos aproximação contínua linear por partes sob restrições simultâneas de geometria diádica, altura racional e comprimento de descrição. Construímos uma biblioteca enumerável com recuperação exata do suporte, montagens densas em $C(K)$ e representação por redes ReLU rasas racionais com inclinações locais não nulas. Sob um calibre explícito, a biblioteca truncada contém $\Theta(H^6)$ átomos; pares de valores de fronteira permitem selecionar exatamente árvore e rótulos em catálogos finitos, com penalização de descrição ou orçamento de folhas. Para interpolação real de funções $C^2$ em uma raiz diádica, estabelecemos o envelope assintótico $[I(f)^2/8,I(f)^2/2]$, onde $I(f)=\int_K\sqrt{|f''|}$, e leis exatas para curvatura quadrática por partes. Construímos ainda aproximações com altura controlada e caracterizações de Besov por um funcional que combina erro e segunda diferença. Os resultados são acompanhados de verificações numéricas e de uma correspondência com declarações Lean cujo alcance é especificado por resultado.
-\end{abstract}
-\section*{Problema, resultados e organização}
-O problema é controlar, na mesma representação, erro de aproximação, número de folhas, altura dos coeficientes racionais e comprimento binário. A aproximação por splines, a adaptação em árvores e as redes ReLU fornecem os fundamentos analíticos \citep{artigo_1-deboor2001,artigo_1-devore1998,artigo_1-cohen2001,artigo_1-daubechies2022}. A aproximação com pesos codificáveis fornece o contexto para medir recursos aritméticos \citep{artigo_1-bolcskei2019,artigo_1-guhring2021}. Para seleção contínua linear por partes, CPOP e slopeOP já conservam valores de fronteira nas recorrências \citep{artigo_2-fearnhead2019,artigo_2-runge2022}.
+\thispagestyle{empty}
+\begin{center}
+{\bfseries\fontsize{14}{17}\selectfont BIBLIOTECA DETERMINÍSTICA DE SEGMENTOS AFINS RACIONAIS: construção, seleção, aproximação e normalização\par}
+\vspace{8pt}
+{\bfseries Volume unificado com correspondência Lean 4\par}
+\end{center}
+\vspace{6pt}
+\begin{flushright}
+\singlespacing
+Victor Gabriel de Oliveira\footnote{Pesquisador independente.}\\
+Edição revisada de 18 de novembro de 2026
+\end{flushright}
+\vspace{12pt}
+\begin{singlespace}
+\begin{center}\bfseries RESUMO\end{center}
+\noindent Este trabalho investiga a aproximação contínua linear por partes sob restrições simultâneas de geometria diádica, altura racional e comprimento de descrição. Constrói-se uma biblioteca enumerável de segmentos afins, com recuperação exata do suporte, cujas montagens finitas são densas em $C(K)$ e admitem representação por redes ReLU rasas racionais com inclinações locais não nulas. Sob um calibre explícito, a biblioteca truncada contém $\Theta(H^6)$ átomos; os pares de valores de fronteira permitem selecionar exatamente a árvore e os rótulos em catálogos finitos, com penalização de descrição ou orçamento de folhas. Para a interpolação real de funções $C^2$ em uma raiz diádica, estabelece-se o envelope assintótico $[I(f)^2/8,I(f)^2/2]$, em que $I(f)=\int_K\sqrt{|f''|}$, além de leis exatas para curvatura quadrática por partes. Obtêm-se, ainda, aproximações com altura controlada e caracterizações de Besov por meio de um funcional que combina o erro e a segunda diferença. Os resultados são acompanhados de verificações numéricas e de uma correspondência com declarações em Lean, cujo alcance é especificado para cada resultado.
 
-Este desenvolvimento acompanha o calibre racional dos átomos e sua interação com o suporte diádico. Os resultados quantitativos são: a contagem por altura e os custos de descrição; a seleção exata no catálogo admissível; o envelope e as fases da interpolação diádica; e as agendas aritméticas suficientes para aproximação em classes de Besov. A densidade, a forma ReLU e as estimativas clássicas de interpolação sustentam essas construções. A comparação com CPOP e slopeOP é feita na introdução da Parte~III.
+\medskip\noindent\textbf{Palavras-chave:} aproximação linear por partes; células diádicas; altura aritmética; refinamento certificado; redes ReLU.
 
-Os resultados têm contratos distintos. O refinamento certificado recebe majorantes validados de $|f''|$ e uma cobertura inicial com interiores disjuntos. A seleção exata opera em catálogos finitos e pressupõe comparação exata dos custos locais; sua cota é pseudo-polinomial nos orçamentos numéricos. O envelope assintótico refere-se à interpolação com valores nodais reais. Nas montagens racionais, a mesma realização depende adicionalmente da altura disponível. As igualdades de Besov usam o funcional regularizado pela segunda diferença, com as agendas declaradas na Parte~IV.
+\bigskip
+\begin{center}\bfseries ABSTRACT\end{center}
+\noindent This work investigates continuous piecewise-linear approximation under simultaneous constraints of dyadic geometry, rational height and description length. An enumerable library of affine segments with exact support recovery is constructed; its finite assemblies are dense in $C(K)$ and admit representations as shallow rational ReLU networks with nonzero local slopes. Under an explicit gauge, the truncated library contains $\Theta(H^6)$ atoms; pairs of boundary values allow the tree and the labels to be selected exactly in finite catalogs, subject to a description penalty or a leaf budget. For real interpolation of $C^2$ functions at a dyadic root, the asymptotic envelope $[I(f)^2/8,I(f)^2/2]$ is established, where $I(f)=\int_K\sqrt{|f''|}$, together with exact laws for piecewise quadratic curvature. Approximations with controlled height are also obtained, as are Besov characterizations by means of a functional that combines the error and the second difference. The results are accompanied by numerical verifications and by a correspondence with Lean statements whose scope is specified for each result.
 
-As Partes~I e II fixam biblioteca e normalização; a Parte~III trata recursos, seleção e interpolação; a Parte~IV desenvolve as agendas de altura e os resultados diretos e inversos. A Parte~V reúne resultados auxiliares. O aparato final registra a correspondência com Lean e distingue provas compiladas de correspondências herdadas.
-\section*{Convenções desta edição}
-A numeração tem a forma parte.seção.resultado. As remissões numéricas textuais herdadas dos artigos usam a numeração local da própria parte, salvo indicação explícita de outro artigo. A Parte I corresponde ao Artigo 1; a Parte II contém a normalização auxiliar; as Partes III e IV correspondem aos Artigos 2 e 3; a Parte V conserva os complementos das seções 6 e 21 originais. A correspondência documental reúne os destinos do original sem duplicar seu bloco de custo aritmético.
+\medskip\noindent\textbf{Keywords:} piecewise-linear approximation; dyadic cells; arithmetic height; certified refinement; ReLU networks.
+\end{singlespace}
 
-As fontes Lean recebidas permanecem inalteradas; as novas provas ficam nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1}. Em 13 de novembro de 2026, os três ambientes foram recompilados e as auditorias dessas bibliotecas encontraram apenas \texttt{propext}, \texttt{Classical.choice} e \texttt{Quot.sound}. Correspondência herdada e prova compilada permanecem categorias distintas. A pasta \texttt{Fase3} pertence à base do Artigo 1. Dos 42 casos do dossiê original, 41 têm prova Lean compilada e auditada (III.9.1 e III.9.3 sob modelos de custo explícitos, descritos no aparato de correspondência) e um (III.12.3) tem prova textual sincronizada; o enunciado de IV.5.4 foi corrigido porque a cota impressa era falsa. As 77 correspondências inspecionadas herdadas não são promovidas a novas provas; não se afirma formalização integral.
-\tableofcontents
+\clearpage
+\begin{singlespace}\tableofcontents\end{singlespace}
+\clearpage
+\secaosn{Introdução}
+O problema central é controlar, em uma única representação, o erro de aproximação, o número de folhas, a altura dos coeficientes racionais e o comprimento da descrição. Os fundamentos provêm da teoria de aproximação por \emph{splines}, da adaptação em árvores e das redes ReLU \citep{artigo_1-deboor2001,artigo_1-devore1998,artigo_1-cohen2001,artigo_1-daubechies2022}. A aproximação com pesos codificáveis oferece um contexto para medir os recursos aritméticos \citep{artigo_1-bolcskei2019,artigo_1-guhring2021}. A Parte~III compara a seleção diádica com CPOP e slopeOP, cujas recorrências também preservam valores de fronteira \citep{artigo_2-fearnhead2019,artigo_2-runge2022}.
+
+O refinamento certificado requer majorantes validados de $|f''|$ e uma cobertura inicial com interiores disjuntos. A seleção em catálogos finitos pressupõe a comparação exata dos custos locais e tem complexidade pseudo-polinomial nos orçamentos numéricos. O envelope assintótico refere-se à interpolação com valores nodais reais. Nas montagens racionais, a realização depende também da altura disponível. As igualdades de Besov usam um funcional regularizado pela segunda diferença, sob as agendas da Parte~IV.
+
+\secaosn{Convenções desta edição}
+As Partes~I, III e IV correspondem aos Artigos~1, 2 e 3. A Parte~II reúne a normalização, e a Parte~V conserva os resultados auxiliares das seções 6 e 21 do manuscrito original. Os resultados seguem a numeração parte.seção.resultado. As remissões textuais herdadas usam a numeração local, salvo indicação de outra parte.
+
+O mapa ao final do volume indica o alcance de cada correspondência com Lean. Dos 42 casos do dossiê original, 41 têm prova Lean compilada e auditada, e III.12.3 tem prova textual sincronizada. Os modelos de custo de III.9.1 e III.9.3 estão descritos no mapa. A cota de IV.5.4 foi corrigida. A pasta \texttt{Fase3} pertence à base do Artigo~1.
+
+A declaração de compilação do repositório documenta os três ambientes e as auditorias. As novas provas encontram-se nas bibliotecas \texttt{Pendencias} e \texttt{PendenciasParte1}. A cobertura formal está delimitada no mapa, que também registra as 77 correspondências herdadas inspecionadas.
 
 % I | fonte original: artigos/artigo_1/artigo.tex
 \volumeparte{Biblioteca, endereçamento e refinamento}
@@ -230,8 +298,7 @@ As fontes Lean recebidas permanecem inalteradas; as novas provas ficam nas bibli
 \volumeparte{Complementos do manuscrito original}
 \input{partes/complemento_original}
 
-\clearpage\part*{Correspondência documental e formal}\addcontentsline{toc}{part}{Correspondência documental e formal}
-\input{mapa_formal}
-\clearpage\bibliographystyle{plainnat-pt}
-\bibliography{referencias}
+\clearpage\part*{Correspondência documental e formal}
+\begin{singlespace}\input{mapa_formal}\end{singlespace}
+\input{referencias_abnt}
 \end{document}

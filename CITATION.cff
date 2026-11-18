@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Se você usar este trabalho, cite-o como indicado abaixo."
+type: software
+title: "Biblioteca determinística de segmentos afins racionais"
+abstract: >-
+  Volume técnico sobre montagens contínuas de segmentos afins racionais em células
+  diádicas, com endereçamento, seleção exata, aproximação, normalização e
+  formalização em Lean 4 (Mathlib 4.28.0) de seus resultados principais.
+authors:
+  - family-names: Oliveira
+    given-names: Victor Gabriel de
+keywords:
+  - aproximação linear por partes
+  - células diádicas
+  - altura aritmética
+  - redes ReLU
+  - Lean 4
+  - Mathlib
+license: Apache-2.0
+license-url: https://github.com/Walc21/Biblioteca-unificada-artigo-e-formaliza-o-Lean/blob/main/LICENSE
+version: "2026.11"
+date-released: 2026-11-18
+repository-code: "https://github.com/Walc21/Biblioteca-unificada-artigo-e-formaliza-o-Lean"
+url: "https://github.com/Walc21/Biblioteca-unificada-artigo-e-formaliza-o-Lean"

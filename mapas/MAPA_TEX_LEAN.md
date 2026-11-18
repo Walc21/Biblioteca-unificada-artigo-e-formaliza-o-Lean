@@ -1,6 +1,6 @@
 # Correspondência do volume com Lean 4
 
-As ligações abaixo são derivadas da matriz recebida, com caminhos locais conferidos. A compilação histórica não é uma nova validação semântica.
+Gerado por `mapas/gerar_mapa.py` a partir de `mapas/dados/mapa.json`; não editar à mão. `mapas/verificar_mapa.py` confere, a cada execução do CI, que os rótulos existem no TeX, que as linhas indicadas batem com o código e que cada nome Lean existe (`#check` pelo próprio Lean). Não verifica a fidelidade semântica dos enunciados nem o conteúdo das provas: esse ponto é a reauditoria registrada em [documentacao/REAUDITORIA_CORRESPONDENCIAS.md](../documentacao/REAUDITORIA_CORRESPONDENCIAS.md).
 
 ## Parte I
 
@@ -65,7 +65,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:125](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.1`.
+Fonte editável: [tex/partes/artigo_1.tex:126](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -79,7 +79,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:145](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.2`.
+Fonte editável: [tex/partes/artigo_1.tex:147](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -89,7 +89,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.3.
 
-Fonte editável: [tex/partes/artigo_1.tex:162](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.3`.
+Fonte editável: [tex/partes/artigo_1.tex:164](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -100,7 +100,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:175](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.4`.
+Fonte editável: [tex/partes/artigo_1.tex:177](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -110,7 +110,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:185](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.5`.
+Fonte editável: [tex/partes/artigo_1.tex:187](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -120,7 +120,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 3.6.
 
-Fonte editável: [tex/partes/artigo_1.tex:195](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.6`.
+Fonte editável: [tex/partes/artigo_1.tex:197](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:3.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -131,7 +131,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 4.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:213](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.1`.
+Fonte editável: [tex/partes/artigo_1.tex:215](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.1`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -145,7 +145,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: 4.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:226](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.2`.
+Fonte editável: [tex/partes/artigo_1.tex:229](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -155,7 +155,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 4.3.
 
-Fonte editável: [tex/partes/artigo_1.tex:253](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.3`.
+Fonte editável: [tex/partes/artigo_1.tex:256](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.3`.
 
 Estado: **Correspondência confirmada**. A ida usa o valor da reta do primeiro átomo em $t_0$, inclusive quando $t_0\notin K$, e exige acordo das retas nos nós compartilhados. A volta exige inclinações não nulas nos trechos que intersectam o interior de $K$. Os valores nodais são racionais por construção.
 
@@ -166,7 +166,7 @@ Estado: **Correspondência confirmada**. A ida usa o valor da reta do primeiro �
 
 Original de 77 páginas: 4.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:273](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.4`.
+Fonte editável: [tex/partes/artigo_1.tex:276](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -176,7 +176,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 4.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:295](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.5`.
+Fonte editável: [tex/partes/artigo_1.tex:299](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:4.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -186,7 +186,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 5.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:321](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.1`.
+Fonte editável: [tex/partes/artigo_1.tex:325](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -198,7 +198,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 5.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:348](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.2`.
+Fonte editável: [tex/partes/artigo_1.tex:352](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:5.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -208,7 +208,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.1.
 
-Fonte editável: [tex/partes/artigo_1.tex:403](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.1`.
+Fonte editável: [tex/partes/artigo_1.tex:408](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.1`.
 
 Estado: **Correspondência inspecionada**. Forma racional de (37) e inclusão das rotinas: `Fase3.lemma61_exp_rational`, `Fase3.lemma61_enclosures` (`base_integrada/Unified/Fase3/Lemma61.lean`). 
 
@@ -219,7 +219,7 @@ Estado: **Correspondência inspecionada**. Forma racional de (37) e inclusão da
 
 Original de 77 páginas: 7.2.
 
-Fonte editável: [tex/partes/artigo_1.tex:424](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
+Fonte editável: [tex/partes/artigo_1.tex:429](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.2`.
 
 Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.boundSecondDerivative_fail_iff` (`base_integrada/Unified/Fase3/IntervalFailure.lean`).
 
@@ -230,7 +230,7 @@ Estado: **Correspondência inspecionada**. Regra de falha formalizada: `Fase3.bo
 
 Original de 77 páginas: 7.3.
 
-Fonte editável: [tex/partes/artigo_1.tex:436](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
+Fonte editável: [tex/partes/artigo_1.tex:441](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.3`.
 
 Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto. [17/11/2026] O passo (i) e o teorema I.6.4 explicitam agora a hipótese `roots.Pairwise DisjInt` já presente nas declarações Lean; a prova textual registra sua preservação pelo refinamento.
 
@@ -246,7 +246,7 @@ Estado: **Formalizado e compilado**. Refinamento recursivo certificado sob hipó
 
 Original de 77 páginas: 7.4.
 
-Fonte editável: [tex/partes/artigo_1.tex:472](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
+Fonte editável: [tex/partes/artigo_1.tex:477](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.4`.
 
 Estado: **Formalizado e compilado**. Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para coberturas diádicas de [α,β] com interiores dois a dois disjuntos, inclusive externas, sem a hipótese de contenção; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável. [17/11/2026] A hipótese de disjunção dos interiores das raízes foi sincronizada com o texto, sem alteração das declarações Lean.
 
@@ -261,7 +261,7 @@ Estado: **Formalizado e compilado**. Término e correção sob os contratos form
 
 Original de 77 páginas: 7.5.
 
-Fonte editável: [tex/partes/artigo_1.tex:501](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
+Fonte editável: [tex/partes/artigo_1.tex:505](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -271,7 +271,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 7.6.
 
-Fonte editável: [tex/partes/artigo_1.tex:527](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
+Fonte editável: [tex/partes/artigo_1.tex:531](../tex/partes/artigo_1.tex); rótulo `map:artigo_1:6.6`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -285,7 +285,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:95](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.1`.
+Fonte editável: [tex/partes/normalizacao.tex:96](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -296,7 +296,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:112](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.2`.
+Fonte editável: [tex/partes/normalizacao.tex:113](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -313,7 +313,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:135](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.3`.
+Fonte editável: [tex/partes/normalizacao.tex:136](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -323,7 +323,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:155](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.4`.
+Fonte editável: [tex/partes/normalizacao.tex:156](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -336,7 +336,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:176](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.5`.
+Fonte editável: [tex/partes/normalizacao.tex:177](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:2.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -347,7 +347,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:197](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.1`.
+Fonte editável: [tex/partes/normalizacao.tex:198](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.1`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -364,7 +364,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:234](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.2`.
+Fonte editável: [tex/partes/normalizacao.tex:235](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -375,7 +375,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:247](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.3`.
+Fonte editável: [tex/partes/normalizacao.tex:248](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -385,7 +385,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:268](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.4`.
+Fonte editável: [tex/partes/normalizacao.tex:269](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -396,7 +396,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:281](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.5`.
+Fonte editável: [tex/partes/normalizacao.tex:282](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -411,7 +411,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:320](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.6`.
+Fonte editável: [tex/partes/normalizacao.tex:321](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:3.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -422,7 +422,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:335](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.1`.
+Fonte editável: [tex/partes/normalizacao.tex:336](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -436,7 +436,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:360](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.2`.
+Fonte editável: [tex/partes/normalizacao.tex:361](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -449,7 +449,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:388](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.3`.
+Fonte editável: [tex/partes/normalizacao.tex:389](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -464,7 +464,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:399](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.4`.
+Fonte editável: [tex/partes/normalizacao.tex:400](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -478,7 +478,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:436](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.5`.
+Fonte editável: [tex/partes/normalizacao.tex:437](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.5`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -496,7 +496,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:474](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.6`.
+Fonte editável: [tex/partes/normalizacao.tex:475](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.6`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -508,7 +508,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:497](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.7`.
+Fonte editável: [tex/partes/normalizacao.tex:498](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:4.7`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -525,7 +525,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:523](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.1`.
+Fonte editável: [tex/partes/normalizacao.tex:524](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -536,7 +536,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:543](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.2`.
+Fonte editável: [tex/partes/normalizacao.tex:544](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -549,7 +549,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:564](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.3`.
+Fonte editável: [tex/partes/normalizacao.tex:565](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -564,7 +564,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:581](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.4`.
+Fonte editável: [tex/partes/normalizacao.tex:582](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -577,7 +577,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:635](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.5`.
+Fonte editável: [tex/partes/normalizacao.tex:636](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -589,7 +589,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:650](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.6`.
+Fonte editável: [tex/partes/normalizacao.tex:651](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:5.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -602,7 +602,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:682](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.1`.
+Fonte editável: [tex/partes/normalizacao.tex:683](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.1`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -615,7 +615,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:699](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.2`.
+Fonte editável: [tex/partes/normalizacao.tex:700](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.2`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -627,7 +627,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:711](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.3`.
+Fonte editável: [tex/partes/normalizacao.tex:712](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.3`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -641,7 +641,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:737](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.4`.
+Fonte editável: [tex/partes/normalizacao.tex:738](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -655,7 +655,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:755](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.5`.
+Fonte editável: [tex/partes/normalizacao.tex:756](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:6.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -666,7 +666,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:775](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.1`.
+Fonte editável: [tex/partes/normalizacao.tex:776](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -677,7 +677,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:806](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.2`.
+Fonte editável: [tex/partes/normalizacao.tex:807](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -687,7 +687,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:826](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.3`.
+Fonte editável: [tex/partes/normalizacao.tex:827](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -697,7 +697,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:850](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.4`.
+Fonte editável: [tex/partes/normalizacao.tex:851](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:7.4`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -708,7 +708,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:896](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.1`.
+Fonte editável: [tex/partes/normalizacao.tex:897](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.1`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -719,7 +719,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:926](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.2`.
+Fonte editável: [tex/partes/normalizacao.tex:927](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.2`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -731,7 +731,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:954](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.3`.
+Fonte editável: [tex/partes/normalizacao.tex:955](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.3`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -741,7 +741,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:971](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.4`.
+Fonte editável: [tex/partes/normalizacao.tex:972](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.4`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -753,7 +753,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1019](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.5`.
+Fonte editável: [tex/partes/normalizacao.tex:1020](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.5`.
 
 Estado: **Correspondência inspecionada**. Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.
 
@@ -763,7 +763,7 @@ Estado: **Correspondência inspecionada**. Resultado recebido preservado. A iden
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1031](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.6`.
+Fonte editável: [tex/partes/normalizacao.tex:1032](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.6`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -774,7 +774,7 @@ Estado: **Integrado à base**. Identificação com os tipos concretos da v2 prov
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/normalizacao.tex:1066](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.7`.
+Fonte editável: [tex/partes/normalizacao.tex:1067](../tex/partes/normalizacao.tex); rótulo `map:normalizacao:8.7`.
 
 Estado: **Integrado à base**. Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.
 
@@ -1021,7 +1021,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.18.
 
-Fonte editável: [tex/partes/artigo_2.tex:814](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.18`.
+Fonte editável: [tex/partes/artigo_2.tex:813](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.18`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; coberturas de FRMIcc e FRM coincidem (`isCover_iff`), logo `entropyH ε (FRMIcc R M) = entropyH ε (FRM R M)`; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1032,7 +1032,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 8.19.
 
-Fonte editável: [tex/partes/artigo_2.tex:925](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.19`.
+Fonte editável: [tex/partes/artigo_2.tex:924](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.19`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1045,7 +1045,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.20.
 
-Fonte editável: [tex/partes/artigo_2.tex:969](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.20`.
+Fonte editável: [tex/partes/artigo_2.tex:968](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.20`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1056,7 +1056,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.21.
 
-Fonte editável: [tex/partes/artigo_2.tex:1031](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.21`.
+Fonte editável: [tex/partes/artigo_2.tex:1030](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.21`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1066,7 +1066,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.22.
 
-Fonte editável: [tex/partes/artigo_2.tex:1060](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.22`.
+Fonte editável: [tex/partes/artigo_2.tex:1059](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.22`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1077,7 +1077,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.23.
 
-Fonte editável: [tex/partes/artigo_2.tex:1091](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.23`.
+Fonte editável: [tex/partes/artigo_2.tex:1090](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.23`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1087,7 +1087,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.24.
 
-Fonte editável: [tex/partes/artigo_2.tex:1133](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.24`.
+Fonte editável: [tex/partes/artigo_2.tex:1132](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.24`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1097,7 +1097,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 8.25.
 
-Fonte editável: [tex/partes/artigo_2.tex:1158](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.25`.
+Fonte editável: [tex/partes/artigo_2.tex:1157](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:3.25`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Programa computável `gen`/`select`/`enumSelect`; = `RepCat` e devolve `canon` quando J é avaliado exatamente em ℚ. Testado com `#eval` (|𝓛₂| = 252; 42 e 102 representações para D = 0, 1, H = 2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1109,7 +1109,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 9.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1261](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1260](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1120,7 +1120,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1274](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1273](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1130,7 +1130,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1316](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1315](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1140,7 +1140,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1328](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1327](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1150,7 +1150,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:1364](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.5`.
+Fonte editável: [tex/partes/artigo_2.tex:1363](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1160,7 +1160,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 9.6.
 
-Fonte editável: [tex/partes/artigo_2.tex:1415](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.6`.
+Fonte editável: [tex/partes/artigo_2.tex:1414](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:4.6`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1170,7 +1170,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 10.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1501](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1500](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1180,7 +1180,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 10.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1572](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1571](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:5.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1190,7 +1190,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1612](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1611](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1200,7 +1200,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1645](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1643](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1211,7 +1211,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 11.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1695](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1693](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:6.3`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela em pós-ordem com o κ-mínimo por estado (`fixTable`, colagem por w), custo = `Cfix`, raiz = rotulação κ-mínima de `fixed_global` (via Lema 5.2 `tie_concatenation`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1224,7 +1224,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 12.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1726](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1724](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1234,7 +1234,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1752](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1750](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1245,7 +1245,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1800](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1798](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.3`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1255,7 +1255,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 12.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1821](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1819](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:7.4`.
 
 Estado: **Formalizado e compilado**. A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela `varTable` (candidato folha + colagens, troca só se κ diminui), custo = `Cvar`, raiz = ótimo `Cstar` e representação κ-mínima de `variable_global`. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1268,7 +1268,7 @@ Estado: **Formalizado e compilado**. A recorrência ou existência matemática t
 
 Original de 77 páginas: 13.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:1855](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.1`.
+Fonte editável: [tex/partes/artigo_2.tex:1853](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1279,7 +1279,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 13.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:1915](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.2`.
+Fonte editável: [tex/partes/artigo_2.tex:1913](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.2`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1290,7 +1290,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 13.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:1949](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.3`.
+Fonte editável: [tex/partes/artigo_2.tex:1947](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.3`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1300,7 +1300,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 13.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:1964](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.4`.
+Fonte editável: [tex/partes/artigo_2.tex:1962](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:8.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1310,7 +1310,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 14.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2016](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2014](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.1`.
 
 Estado: **Formalizado no modelo de custo explícito**. As tabelas densas guardam `Cvar`/`Cb`, e seus apontadores recuperam um minimizador. O custo de leitura e escrita, soma e comparação de custos é unitário. A inicialização, a contagem de operações e a cardinalidade da memória têm cotas explícitas. O desempate canônico de III.7.4 é provado para o seletor funcional, sem cota formal do custo do desempate na tabela densa. O argumento textual para a variante canônica conta operações sobre a chave completa como unitárias.
 
@@ -1325,7 +1325,7 @@ Estado: **Formalizado no modelo de custo explícito**. As tabelas densas guardam
 
 Original de 77 páginas: 14.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2062](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2060](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.2`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
@@ -1335,7 +1335,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 14.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2112](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2110](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.3`.
 
 Estado: **Formalizado no modelo `BitModel`**. As hipóteses limitam bits dos dados e fluxos. O Lean limita também os operandos intermediários. O custo em bits é o número de operações instrumentadas de III.9.1 multiplicado pela cota por operação, incluindo índices. `budgetIdxBits` acrescenta $\lceil\log_2(N+1)\rceil$ à largura do índice da tabela com orçamento. A desigualdade é condicional ao modelo para a aritmética racional e o acesso à tabela. O argumento shortlex da versão canônica continua textual.
 
@@ -1352,7 +1352,7 @@ Estado: **Formalizado no modelo `BitModel`**. As hipóteses limitam bits dos dad
 
 Original de 77 páginas: 14.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:2195](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
+Fonte editável: [tex/partes/artigo_2.tex:2193](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.4`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1362,7 +1362,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 14.5.
 
-Fonte editável: [tex/partes/artigo_2.tex:2230](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
+Fonte editável: [tex/partes/artigo_2.tex:2228](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:9.5`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1372,7 +1372,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2556](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2553](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.1`.
 
 Estado: **Correspondência inspecionada**. 
 
@@ -1383,7 +1383,7 @@ Estado: **Correspondência inspecionada**.
 
 Original de 77 páginas: 16.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2616](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2613](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.2`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1394,7 +1394,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 16.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2643](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2640](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:11.3`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1409,7 +1409,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.1.
 
-Fonte editável: [tex/partes/artigo_2.tex:2741](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
+Fonte editável: [tex/partes/artigo_2.tex:2738](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.1`.
 
 Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1420,7 +1420,7 @@ Estado: **Formalizado e compilado**. Resultados globais ou classe FRM usam regul
 
 Original de 77 páginas: 17.2.
 
-Fonte editável: [tex/partes/artigo_2.tex:2849](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
+Fonte editável: [tex/partes/artigo_2.tex:2845](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.2`.
 
 Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.
 
@@ -1430,7 +1430,7 @@ Estado: **Generalização documentada**. A hipótese C1 foi enfraquecida no text
 
 Original de 77 páginas: 17.3.
 
-Fonte editável: [tex/partes/artigo_2.tex:2896](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
+Fonte editável: [tex/partes/artigo_2.tex:2892](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.3`.
 
 Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o envelope C2 global a uma função quadrática por partes que pode não ser C2. Manter o enunciado e atualizar a demonstração textual em etapa posterior. [13/11/2026] Demonstração textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a função quadrática por partes. PDF recompilado nesta rodada.
 
@@ -1440,18 +1440,17 @@ Estado: **Prova textual sincronizada**. A demonstração Lean evita aplicar o en
 
 Original de 77 páginas: 17.4.
 
-Fonte editável: [tex/partes/artigo_2.tex:3003](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
+Fonte editável: [tex/partes/artigo_2.tex:2998](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.4`.
 
 Estado: **Observação editorial**. Observação ou diagnostico do texto; não é um teorema Lean autônomo.
 
 Nenhuma declaração Lean associada na matriz recebida.
 
-
 ## III.12.5 — lema propriedades da função de fase
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3162](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
+Fonte editável: [tex/partes/artigo_2.tex:3156](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
 
 Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Atualização: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (`Pendencias.muCirc`, com $\mu_f=\sqrt8\,\tilde\mu_f$) e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ em `Pendencias.PsiF_eq_circ`. A identidade $\Psi_f^+(t)-\Psi_f(t)=\tilde\mu_f(\{-t\})$ está em `psi_gap_eq_muCirc` e `psiOn_gap_eq_muCirc`.
 
@@ -1462,38 +1461,36 @@ Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3216](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
+Fonte editável: [tex/partes/artigo_2.tex:3210](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\lceil\log_4(\cdot)\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).
-
 
 ## III.12.7 — teorema lei de fase para curvatura variável
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3287](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
+Fonte editável: [tex/partes/artigo_2.tex:3281](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.7`.
 
 Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.phase_lower`, `phase_upper` (cotas por fases convergentes), `phase_law_nonatom` (i), `phase_law_uniform` (ii), `phase_liminf_ge`, `phase_limsup_le`, `phase_seq_min`, `phase_seq_max` (iii) e as versões `_on` (`phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`, `phase_limsup_le_on`). Também testado numericamente (III.12.9).
-
 
 ## III.12.8 — corolário acumulação, critério de uniformidade e limite
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3382](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
+Fonte editável: [tex/partes/artigo_2.tex:3376](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
 
 Estado: **Prova textual nova e formalização Lean**; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$ (`FourPowers`), que é a definição parentética do próprio texto.
-
 
 ## III.12.9 — observação exemplos, o que está provado e o que não está
 
 Original de 77 páginas: sem correspondência direta; desenvolvimento da edição atual.
 
-Fonte editável: [tex/partes/artigo_2.tex:3478](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
+Fonte editável: [tex/partes/artigo_2.tex:3472](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.9`.
 
 Estado: **Observação editorial**. Não é um teorema Lean autônomo.
 
 Nenhuma declaração Lean associada.
+
 
 ## Parte IV
 
@@ -1503,7 +1500,7 @@ Original de 77 páginas: 18.1.
 
 Fonte editável: [tex/partes/artigo_3.tex:81](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:3.1`.
 
-Estado: Formalizado para raiz diádica arbitrária. `schedule_nesting_K` prova inclusão, monotonicidade do erro, cota pela norma de $f$ e atingimento no catálogo apontado finito.
+Estado: **Formalizado e compilado**. `schedule_nesting_K` prova inclusão, monotonicidade do erro, cota pela norma de $f$ e atingimento no catálogo apontado finito.
 
 - [`Pendencias.Agenda.schedule_nesting`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 67.
 - [`Pendencias.Agenda.pErr_eq_min`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 44.
@@ -1515,7 +1512,7 @@ Original de 77 páginas: 18.2.
 
 Fonte editável: [tex/partes/artigo_3.tex:133](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:3.2`.
 
-Estado: Formalizado para raiz diádica arbitrária, em ambas as direções. As constantes dependem apenas de $\alpha$ e $q$. As versões anteriores para $[0,1]$ continuam disponíveis.
+Estado: **Formalizado e compilado**, em ambas as direções. As constantes dependem apenas de $\alpha$ e $q$. As versões anteriores para $[0,1]$ continuam disponíveis.
 
 - [`Pendencias.Agenda.dyadic_reduction`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 182.
 - [`Pendencias.Agenda.dyadic_reduction_inf`](../lean4/ambientes/artigo_2/Pendencias/Taxa.lean) — linha 206.
@@ -1590,7 +1587,7 @@ Original de 77 páginas: 19.5.
 
 Fonte editável: [tex/partes/artigo_3.tex:518](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:4.5`.
 
-Estado: Correspondência confirmada. Em $[0,1]$, `c2_endpoint` prova a cota do funcional de taxa na agenda `H2`, e `c2_endpoint_bits` fornece a montagem admissível com cotas para os três formatos.
+Estado: **Correspondência confirmada**. Em $[0,1]$, `c2_endpoint` prova a cota do funcional de taxa na agenda `H2`, e `c2_endpoint_bits` fornece a montagem admissível com cotas para os três formatos.
 
 - [`Dyadic.Lib.simultaneous_control`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Simultaneous.lean) — linha 477.
 - [`Dyadic.Lib.precision_height`](../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Precision.lean) — linha 71.
@@ -1603,7 +1600,7 @@ Original de 77 páginas: 19.6.
 
 Fonte editável: [tex/partes/artigo_3.tex:555](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:4.6`.
 
-Estado: Formalizado para raiz diádica arbitrária. O piso usa $h=H(N)$ e o centro de uma folha real da raiz escolhida. A segunda conclusão força a agenda de altura nos orçamentos positivos com $h\ge2$.
+Estado: **Formalizado e compilado**. O piso usa $h=H(N)$ e o centro de uma folha real da raiz escolhida. A segunda conclusão força a agenda de altura nos orçamentos positivos com $h\ge2$.
 
 - [`Pendencias.Agenda.arithmetic_floor`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 125.
 - [`Pendencias.Agenda.infDist_QH`](../lean4/ambientes/artigo_2/Pendencias/Agenda.lean) — linha 111.
@@ -1615,7 +1612,7 @@ Estado: Formalizado para raiz diádica arbitrária. O piso usa $h=H(N)$ e o cent
 
 Original de 77 páginas: 20.1.
 
-Fonte editável: [tex/partes/artigo_3.tex:756](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.1`.
+Fonte editável: [tex/partes/artigo_3.tex:752](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.1`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Definições `MAtom` (s ∈ ℚ qualquer), `MTree`, `MWF`, `MAsm`, `MAsmNH`; inclusões 𝓛 ⊂ 𝓛^□, 𝒜 ⊂ 𝒜^□, 𝒜_{N,H} ⊂ 𝒜^□_{N,H}. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1626,7 +1623,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.2.
 
-Fonte editável: [tex/partes/artigo_3.tex:793](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.2`.
+Fonte editável: [tex/partes/artigo_3.tex:789](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.2`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Teorema completo exact_shallow_reversal para parâmetros reais: equivalência marcada e aritmética, construção canônica, minimalidade e unicidade inclusive dos rótulos atômicos, M+1 <= N_can <= 1+sum d_j e equivalência com a biblioteca original quando todas as inclinações são não nulas. Igualdade de funções em [0,1], como no TeX; inclui M=0. Build Pendencias e auditoria de axiomas aprovados, apenas propext, Classical.choice, Quot.sound.
 
@@ -1636,7 +1633,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.3.
 
-Fonte editável: [tex/partes/artigo_3.tex:845](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.3`.
+Fonte editável: [tex/partes/artigo_3.tex:841](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.3`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Definições `canonShape` (𝒯(S)), `RedReLU`, `Hcan`; H_can = maior altura dos átomos da montagem canônica; folhas de 𝒯(S) sem quebras no interior. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1649,7 +1646,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.4.
 
-Fonte editável: [tex/partes/artigo_3.tex:863](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.4`.
+Fonte editável: [tex/partes/artigo_3.tex:859](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.4`.
 
 Estado: **Correspondência confirmada**. `direct_part` prova a forma ancorada, o round-trip do código e a cota $40N\lfloor\log_2(2H)\rfloor$. A conversão `Anchored.toRealReLU` expande o termo afim, preserva a avaliação e satisfaz `RealReLU.Reduced`. A cota inversa impressa nesta edição é a fórmula corrigida provada por `Hcan_le` e `reverse_height_bit_bound`. `no_additive_constant_fix` refuta a fórmula original.
 
@@ -1666,7 +1663,7 @@ Estado: **Correspondência confirmada**. `direct_part` prova a forma ancorada, o
 
 Original de 77 páginas: 20.5.
 
-Fonte editável: [tex/partes/artigo_3.tex:950](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.5`.
+Fonte editável: [tex/partes/artigo_3.tex:947](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.5`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] IV.5.5 formalizado: quantized_approximate_reverse com C universal = 320 (mesma constante em D_eps e na cota de altura). Para forma ReLU reduzida real com |c|,|q|,|a_j| <= W, W >= 1, e 0<eps<=1, existe montagem U da biblioteca original (LTree.WF, inclinação não nula) com erro uniforme <= eps em [0,1], número de folhas <= 1+M*ceil(log2(C(M+1)(W+1)/eps)) e altura atômica máxima <= C(M+1)^3(W+1)^3/eps^2; vale com regiões planas. Prova: arredondamento de c,q,a_j a múltiplos de 1/Q, quebras a j/2^D (1<=j<=2^D-1), perturbação t/Q da inclinação global com t em [1,M+2] escolhido por gavetas, montagem canônica de IV.5.2 transportada para LTree. A cota de altura e provada diretamente com denominador comum (Hcan_leQ); não usa a cota impressa antiga de IV.5.4. Compilado e auditado (apenas propext, Classical.choice, Quot.sound). Ressalvas: D_eps usa Nat.ceil (o argumento do log e >= 1, logo coincide com o teto inteiro); a cota de folhas usa a profundidade de quantização D <= D_eps. A prova textual do TeX permanece como esboço (usa Q ~ delta^-1 com delta=eps/(16(M+1)(W+1)); a formalização usa Q = ceil(4(M+2)/eps) e 2^D >= 2(M+1)(W+1)/eps, que dão as mesmas ordens).
 
@@ -1678,7 +1675,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.6.
 
-Fonte editável: [tex/partes/artigo_3.tex:1012](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.6`.
+Fonte editável: [tex/partes/artigo_3.tex:1009](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.6`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] IV.5.6 formalizado: deep_functional_reverse. Redes ReLU univariadas feedforward arbitrarias (NetFun: camadas afins e ReLU alternadas, qualquer profundidade/largura) realizam funções contínuas lineares por partes (fecho por combinações afins e por max 0, via colagem e remoção da ultima quebra). Para F com norma uniforme <= B e Lipschitz <= L em [0,1], F coincide em [0,1] com uma forma ReLU reduzida real (quebras estritas em (0,1), saltos não nulos) com M+1 = R(F) hinges+1, onde R(F) = regionCount F é o menor número de peças afins de [0,1] (regiões afins máximas); |c|<=B, |q|<=L, |a_j|<=2L, todos <= W = 2 max{1,B,L}; e IV.5.5 (quantized_approximate_reverse) vale com esses M e W. Compilado e auditado (propext, Classical.choice, Quot.sound). Escolhas de formalização: B e Lipschitz medidos em [0,1] (domínio do enunciado); R(F) definido como mínimo de peças afins, equivalente a regiões afins máximas para F continua (regionCount_eq prova R(F)=M+1 para a forma reduzida). A prova do TeX permanece valida; a formalização explícita a derivada via inclinações locais sigma_n.
 
@@ -1689,7 +1686,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.7.
 
-Fonte editável: [tex/partes/artigo_3.tex:1115](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.7`.
+Fonte editável: [tex/partes/artigo_3.tex:1107](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.7`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] ω₂ e Besov pela norma diádica do texto em [0,1]; C = 4 + 2^{γ+1}; hipótese A_α(f) ≤ A na forma e_N ≤ A N^{-α}; conclusões B^{θ*}_{∞,∞} e B^θ_{∞,p} (θ<θ*, 0<p<∞). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1700,7 +1697,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.8.
 
-Fonte editável: [tex/partes/artigo_3.tex:1170](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.8`.
+Fonte editável: [tex/partes/artigo_3.tex:1162](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.8`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] H(N) ≤ C N^γ ⟹ 𝒜^α_q ⊂ B^{α/(α+γ)}_{∞,∞} (q<∞ via IV.3.2 e q=∞); agendas `Hsk` = H_{s,κ} em [0,1] (C_K = 8): ϑ_s e ordens < ϑ_s com fator logarítmico. Montagens H(N)-Lipschitz (`Sigma_lipschitz`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1713,7 +1710,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.9.
 
-Fonte editável: [tex/partes/artigo_3.tex:1206](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.9`.
+Fonte editável: [tex/partes/artigo_3.tex:1198](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.9`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Teorema do pente de tendas IV.5.9 concluído em Pendencias.PenteGemini.critical_tent_comb: continuidade, aproximação para todo N >= 1 na biblioteca original e não pertencimento às classes Besov acima e no expoente critico para todo r finito. Build Pendencias e auditoria agregada passaram; axiomas permitidos.
 
@@ -1723,7 +1720,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.10.
 
-Fonte editável: [tex/partes/artigo_3.tex:1315](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.10`.
+Fonte editável: [tex/partes/artigo_3.tex:1307](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.10`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] ω₂(f,1/N) ≤ 4 𝓡_N(f) para toda agenda, toda f e todo N (`realN`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -1733,7 +1730,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.11.
 
-Fonte editável: [tex/partes/artigo_3.tex:1336](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.11`.
+Fonte editável: [tex/partes/artigo_3.tex:1328](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.11`.
 
 Estado: **Observação editorial**. Sem declaração Lean associada; é observação, não teorema.
 
@@ -1743,7 +1740,7 @@ Nenhuma declaração Lean associada na matriz recebida.
 
 Original de 77 páginas: 20.12.
 
-Fonte editável: [tex/partes/artigo_3.tex:1342](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.12`.
+Fonte editável: [tex/partes/artigo_3.tex:1334](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.12`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Jackson para o funcional de realização em [0,1], cota bilateral e versão uniforme; constantes universais explícitas. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1754,7 +1751,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.13.
 
-Fonte editável: [tex/partes/artigo_3.tex:1390](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.13`.
+Fonte editável: [tex/partes/artigo_3.tex:1382](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.13`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Igualdades de classes de Besov e realização em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1764,7 +1761,7 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração L
 
 Original de 77 páginas: 20.14.
 
-Fonte editável: [tex/partes/artigo_3.tex:1476](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.14`.
+Fonte editável: [tex/partes/artigo_3.tex:1466](../tex/partes/artigo_3.tex); rótulo `map:artigo_3:5.14`.
 
 Estado: **Formalizado e compilado** (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Estabilidade das igualdades para famílias aninhadas que contêm zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.
 
@@ -1816,5 +1813,3 @@ Estado: **Formalizado e compilado** (fidelidade não reauditada). Resultado orig
 
 - [`Pendencias.Runge.runge_majorant_sub`](../lean4/ambientes/artigo_2/Pendencias/Runge.lean) — linha 118.
 - [`Pendencias.Runge.runge_majorant`](../lean4/ambientes/artigo_2/Pendencias/Runge.lean) — linha 84.
-
-

@@ -1,0 +1,4736 @@
+{
+ "cabecalho": "# Correspondência do volume com Lean 4\n\nGerado por `mapas/gerar_mapa.py` a partir de `mapas/dados/mapa.json`; não editar à mão. `mapas/verificar_mapa.py` confere, a cada execução do CI, que os rótulos existem no TeX, que as linhas indicadas batem com o código e que cada nome Lean existe (`#check` pelo próprio Lean). Não verifica a fidelidade semântica dos enunciados nem o conteúdo das provas: esse ponto é a reauditoria registrada em [documentacao/REAUDITORIA_CORRESPONDENCIAS.md](../documentacao/REAUDITORIA_CORRESPONDENCIAS.md).\n",
+ "partes": [
+  "I",
+  "II",
+  "III",
+  "IV",
+  "V"
+ ],
+ "entradas": [
+  {
+   "id": "I.2.1",
+   "parte": "I",
+   "titulo": "lema pareamento e cota",
+   "original": "2.1",
+   "rotulo": "map:artigo_1:2.1",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.cpair_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 93,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cdiag_eq_floor",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 103,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cpair_le",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 126,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.2.2",
+   "parte": "I",
+   "titulo": "lema",
+   "original": "2.2",
+   "rotulo": "map:artigo_1:2.2",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.zEnum_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 148,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.zInv_le",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Indexing.lean",
+     "linha": 151,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.2.3",
+   "parte": "I",
+   "titulo": "lema contagem por altura",
+   "original": "2.3",
+   "rotulo": "map:artigo_1:2.3",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.card_QH_le",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 44,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.card_QH_ge",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 118,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.2.4",
+   "parte": "I",
+   "titulo": "lema posto por altura",
+   "original": "2.4",
+   "rotulo": "map:artigo_1:2.4",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.Qenum_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 254,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.QstarEnum_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 257,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.rankQ_lt",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 268,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.rankQstar_lt",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 282,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.2.5",
+   "parte": "I",
+   "titulo": "lema",
+   "original": "2.5",
+   "rotulo": "map:artigo_1:2.5",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.calkinWilf_two_pow",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Heights.lean",
+     "linha": 333,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.1",
+   "parte": "I",
+   "titulo": "lema estrutura diádica",
+   "original": "3.1",
+   "rotulo": "map:artigo_1:3.1",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.cellOwn_partition",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 58,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cell_refine",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 62,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cell_length",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 76,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.center_bijOn",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 134,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.dyadicMid_dense",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 140,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.2",
+   "parte": "I",
+   "titulo": "lema",
+   "original": "3.2",
+   "rotulo": "map:artigo_1:3.2",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.decode4_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 169,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.3",
+   "parte": "I",
+   "titulo": "definição gerador e biblioteca",
+   "original": "3.3",
+   "rotulo": "map:artigo_1:3.3",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.gen",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 212,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.library",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 215,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.4",
+   "parte": "I",
+   "titulo": "lema validade espacial exata",
+   "original": "3.4",
+   "rotulo": "map:artigo_1:3.4",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.preimageInterval_eq",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 237,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.5",
+   "parte": "I",
+   "titulo": "teorema unicidade do endereço",
+   "original": "3.5",
+   "rotulo": "map:artigo_1:3.5",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.gen_injective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 320,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.3.6",
+   "parte": "I",
+   "titulo": "teorema dicionário de jatos racionais",
+   "original": "3.6",
+   "rotulo": "map:artigo_1:3.6",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.jet_bijective",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 292,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.jet_dense",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Cells.lean",
+     "linha": 303,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.4.1",
+   "parte": "I",
+   "titulo": "definição montagem contínua",
+   "original": "4.1",
+   "rotulo": "map:artigo_1:4.1",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.IsAssembly",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean",
+     "linha": 53,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Dyadic.Lib.IsAssemblyRep",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Lib/Assembly.lean",
+     "linha": 19,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Dyadic.Lib.Asm",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Lib/Assembly.lean",
+     "linha": 26,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase3_assembly_iff_consolidated",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 105,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_restriction_eq_consolidated",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 142,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.4.2",
+   "parte": "I",
+   "titulo": "teorema densidade das montagens",
+   "original": "4.2",
+   "rotulo": "map:artigo_1:4.2",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.assembly_dense",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Assembly.lean",
+     "linha": 386,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.4.3",
+   "parte": "I",
+   "titulo": "teorema equivalência montagem--ReLU racional",
+   "original": "4.3",
+   "rotulo": "map:artigo_1:4.3",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". A ida usa o valor da reta do primeiro átomo em $t_0$, inclusive quando $t_0\\notin K$, e exige acordo das retas nos nós compartilhados. A volta exige inclinações não nulas nos trechos que intersectam o interior de $K$. Os valores nodais são racionais por construção.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Dyadic.Lib.assembly_eq_relu",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean",
+     "linha": 92,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Dyadic.Lib.relu_mem_Asm",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean",
+     "linha": 183,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.4.4",
+   "parte": "I",
+   "titulo": "proposição parâmetros e altura",
+   "original": "4.4",
+   "rotulo": "map:artigo_1:4.4",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Dyadic.Lib.relu_parameters_height",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/ReLU.lean",
+     "linha": 360,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.4.5",
+   "parte": "I",
+   "titulo": "proposição pertencimento e aderência",
+   "original": "4.5",
+   "rotulo": "map:artigo_1:4.5",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Dyadic.Lib.taylor_jet",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec4/Taylor.lean",
+     "linha": 55,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.5.1",
+   "parte": "I",
+   "titulo": "teorema cota aguda e limite",
+   "original": "5.1",
+   "rotulo": "map:artigo_1:5.1",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.errP_le",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean",
+     "linha": 148,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.tendsto_errP",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean",
+     "linha": 269,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.exists_assembly_rate",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean",
+     "linha": 304,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.5.2",
+   "parte": "I",
+   "titulo": "corolário preservação da constante",
+   "original": "5.2",
+   "rotulo": "map:artigo_1:5.2",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.exists_assembly_seq_constant",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Rates.lean",
+     "linha": 319,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.1",
+   "parte": "I",
+   "titulo": "lema restos transcendentais com extremos racionais",
+   "original": "7.1",
+   "rotulo": "map:artigo_1:6.1",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Forma racional de (37) e inclusão das rotinas: `Fase3.lemma61_exp_rational`, `Fase3.lemma61_enclosures` (`base_integrada/Unified/Fase3/Lemma61.lean`). ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.exp_sub_expPoly_bounds",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean",
+     "linha": 61,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.sin_cos_lagrange",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Transcendental.lean",
+     "linha": 225,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.2",
+   "parte": "I",
+   "titulo": "proposição correção do majorante intervalar",
+   "original": "7.2",
+   "rotulo": "map:artigo_1:6.2",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Regra de falha formalizada: `Fase3.boundSecondDerivative_fail_iff` (`base_integrada/Unified/Fase3/IntervalFailure.lean`).",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.boundSecondDerivative_correct",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean",
+     "linha": 619,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.Mint_ge_supNorm",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/IntervalArith.lean",
+     "linha": 629,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.3",
+   "parte": "I",
+   "titulo": "algoritmo refinamento certificado",
+   "original": "7.3",
+   "rotulo": "map:artigo_1:6.3",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Refinamento recursivo certificado sob hipóteses sobre os majorantes; composição executável com avaliação intervalar e escolha racional ainda requer fechamento. [11/11/2026] Algoritmo `certRefine` com M(J) = M_int(J) de `boundSecondDerivative`; devolve `none` (aborta) exatamente quando alguma célula consultada falha. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certRefine` exige as raízes contidas em [α,β]; `certRefineProjected` (RefinamentoCobertura.lean) remove essa hipótese: o certificado de cada célula é calculado numa caixa racional que envolve a projeção da célula sobre [α,β], e `projected_certificate_sound` prova que ele limita F'' em toda a célula. Ressalva: o refinamento continua `noncomputable`, com escolhas nodais e endereços dados por existência, como no texto. [17/11/2026] O passo (i) e o teorema I.6.4 explicitam agora a hipótese `roots.Pairwise DisjInt` já presente nas declarações Lean; a prova textual registra sua preservação pelo refinamento.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.refineCell",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean",
+     "linha": 29,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.refineAll",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean",
+     "linha": 35,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.rStar",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean",
+     "linha": 39,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.certRefine",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean",
+     "linha": 55,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.certified_refinement",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean",
+     "linha": 135,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.CoberturaExterna.certRefineProjected",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean",
+     "linha": 69,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.CoberturaExterna.projected_certificate_sound",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean",
+     "linha": 78,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.4",
+   "parte": "I",
+   "titulo": "teorema correção, término e tamanho",
+   "original": "7.4",
+   "rotulo": "map:artigo_1:6.4",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Término e correção sob os contratos formais; não equivale a certificar uma implementação completa ligada ao avaliador intervalar. [11/11/2026] Em caso de sucesso: f = E é C² em [α,β], η_cert ≤ ε_I, profundidade ≤ r*, ≤ R₀2^{r*} folhas e ‖f−g‖ ≤ ε_I+ε_R (instancia `refine_terminates`/`refine_correct`); contrato M_int ≤ M* nas células certificadas. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`. [14/11/2026] `certified_refinement` exige as raízes contidas em [α,β], o que exclui intervalos como [1/3, 2/3]. `certified_refinement_external` vale para coberturas diádicas de [α,β] com interiores dois a dois disjuntos, inclusive externas, sem a hipótese de contenção; `refinement_contract_external` é o caso contratual e `thirds_success` instancia o teorema em [1/3, 2/3]. Ressalva: o contrato M_int ≤ M* continua sendo hipótese de entrada, e não há certificação de uma implementação executável. [17/11/2026] A hipótese de disjunção dos interiores das raízes foi sincronizada com o texto, sem alteração das declarações Lean.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.refine_terminates",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean",
+     "linha": 222,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.refine_correct",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Refinement.lean",
+     "linha": 292,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.certified_refinement",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/Refinamento.lean",
+     "linha": 135,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.CoberturaExterna.refinement_contract_external",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean",
+     "linha": 91,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.CoberturaExterna.certified_refinement_external",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean",
+     "linha": 126,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "PendenciasParte1.CoberturaExterna.thirds_success",
+     "arquivo": "../lean4/ambientes/base_integrada/PendenciasParte1/RefinamentoCobertura.lean",
+     "linha": 250,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.5",
+   "parte": "I",
+   "titulo": "proposição calibração exata para curvatura constante",
+   "original": "7.5",
+   "rotulo": "map:artigo_1:6.5",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.calibration",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Calibration.lean",
+     "linha": 94,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "I.6.6",
+   "parte": "I",
+   "titulo": "observação diferença segunda e erro no centro",
+   "original": "7.6",
+   "rotulo": "map:artigo_1:6.6",
+   "arquivo_tex": "artigo_1.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Fase3.center_error_eq",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Observation.lean",
+     "linha": 16,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Fase3.cube_example",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Fase3/Observation.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.2.1",
+   "parte": "II",
+   "titulo": "definição racional reduzido e altura",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:2.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.ht",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 39,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.ht_props",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 44,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.2.2",
+   "parte": "II",
+   "titulo": "definição célula e funções de seus extremos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:2.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Cell",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 51,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.LQ",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.RQ",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 56,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.XQ",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 58,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.J",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 68,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.O",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 70,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.P",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 72,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Dy",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 75,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.2.3",
+   "parte": "II",
+   "titulo": "lema geometria elementar",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:2.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.geometry",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 81,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.2.4",
+   "parte": "II",
+   "titulo": "definição átomo e suas projeções",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:2.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Atom",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 131,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Atom.height",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 159,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalizationAtomEquiv",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationAtoms.lean",
+     "linha": 22,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_atom_height",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationAtoms.lean",
+     "linha": 40,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.2.5",
+   "parte": "II",
+   "titulo": "lema formas da reta",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:2.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.line_forms",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Basic.lean",
+     "linha": 168,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_atom_line",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationAtoms.lean",
+     "linha": 37,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.1",
+   "parte": "II",
+   "titulo": "definição campos dos contratos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Sep",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 25,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Cover",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 29,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.MatchK",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 33,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Agree",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 41,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.LocalRep",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 45,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.StrongRep",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 49,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_local_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 17,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_strong_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 29,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.2",
+   "parte": "II",
+   "titulo": "definição atividade e filtro",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Active",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 69,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.NormK",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 72,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.3",
+   "parte": "II",
+   "titulo": "lema critério exato de atividade",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.active_iff",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 78,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.4",
+   "parte": "II",
+   "titulo": "lema intervalos separados",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.separated_of_disjoint",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 92,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.separated_inter",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 103,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.5",
+   "parte": "II",
+   "titulo": "teorema normalização",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.normalization",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 176,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.normalizationG",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 198,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalizeAtoms_strong",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 79,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalizeAtoms_subset",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 64,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalizeAtoms_card_le",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 70,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalizeAtoms_idem",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 74,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.3.6",
+   "parte": "II",
+   "titulo": "corolário equivalência local e consolidada",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:3.6",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Aloc_eq_Astr",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Normalization.lean",
+     "linha": 219,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.local_asm_eq_strong",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 87,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.1",
+   "parte": "II",
+   "titulo": "definição pareamento e descompactação",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.T",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 23,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.pair",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 28,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.unpair",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 45,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.pack",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 48,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.unpack",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 53,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.2",
+   "parte": "II",
+   "titulo": "lema inversas do pareamento",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.pair_props",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 92,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_pair",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 22,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_unpack2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 37,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_unpack3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 34,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.3",
+   "parte": "II",
+   "titulo": "definição enumeração dos inteiros",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Zenc",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 136,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Zinv",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 139,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Zenc_Zinv",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 153,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Zinv_Zenc",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 160,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Z2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 50,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Z3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 41,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.4",
+   "parte": "II",
+   "titulo": "definição ordens e postos dos racionais",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.QH",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 169,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.prec",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 222,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Pred",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 228,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.rank",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 231,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.rankStar",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 238,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.5",
+   "parte": "II",
+   "titulo": "lema postos e enumerações inversas",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.prec_coincide",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 291,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.rank_bijective",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 372,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.rankStar_bijective",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 376,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_rank2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 82,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_rank3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Q2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 101,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Q3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 69,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Qstar2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 107,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Qstar3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 75,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.6",
+   "parte": "II",
+   "titulo": "definição codificadores concretos de átomos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.6",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.enc",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 401,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.dec",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 406,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.tau",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 420,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.4.7",
+   "parte": "II",
+   "titulo": "lema contrato completo de endereçamento",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:4.7",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.codec",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 430,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.tau_props",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Enumeration.lean",
+     "linha": 449,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_ofFase2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 129,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_ofFase3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationEnumerations.lean",
+     "linha": 115,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_C2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 40,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_C3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 35,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_lam2",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 59,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_lam3",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 53,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.1",
+   "parte": "II",
+   "titulo": "definição testemunha por células endereçadas",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.CellRep",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 26,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.CellRepG",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 33,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.2",
+   "parte": "II",
+   "titulo": "definição continuidade no domínio e restrição",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.ContOn",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 42,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Res",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 55,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.ResImage",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 59,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_contOn_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 66,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.3",
+   "parte": "II",
+   "titulo": "definição as três classes tipadas",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.B2",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 65,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.B3",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 69,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Bcon",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 73,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_B2_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 109,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_B3_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 83,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Bcon_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 93,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.4",
+   "parte": "II",
+   "titulo": "lema conversões explícitas das testemunhas",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.cellsToAtoms_spec",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 176,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.cellsToAtoms_specG",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 189,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.atomsToCells_spec",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 202,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.atomsToCells_specG",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 216,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.5",
+   "parte": "II",
+   "titulo": "definição extensão contínua por projeção",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.projK",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 232,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.E0",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 239,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Res_E0",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 260,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.5.6",
+   "parte": "II",
+   "titulo": "teorema equivalência extensional tipada",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:5.6",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.bridge",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 318,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.B3_eq_Bcon",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Bridge.lean",
+     "linha": 309,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase3_assembly_iff_consolidated",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 105,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_restriction_eq_consolidated",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationClasses.lean",
+     "linha": 142,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.6.1",
+   "parte": "II",
+   "titulo": "definição orçamento da testemunha",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:6.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Budget",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 23,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.AlocNH",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.AstrNH",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 31,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_budget_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 37,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.6.2",
+   "parte": "II",
+   "titulo": "teorema igualdade sob os mesmos recursos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:6.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.AlocNH_eq_AstrNH",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 37,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.local_budgeted_eq_strong",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 103,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_typed_budget_iff",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationErrors.lean",
+     "linha": 17,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.6.3",
+   "parte": "II",
+   "titulo": "definição distância uniforme e ínfimo",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:6.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.dK",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 46,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Err",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 65,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.dK_isMax",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 49,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Err_empty",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 74,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_distance",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationErrors.lean",
+     "linha": 35,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.6.4",
+   "parte": "II",
+   "titulo": "corolário igualdade dos erros e de suas condições de altura",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:6.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.errors_eq",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 78,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.heights_eq",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 82,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Econ_eq_jointError",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationErrors.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.normalization_Eloc_eq_jointError",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationErrors.lean",
+     "linha": 86,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.local_height_conditions_eq",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationContracts.lean",
+     "linha": 125,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.6.5",
+   "parte": "II",
+   "titulo": "proposição testemunhas já ativas",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:6.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.norm_fixed_of_active",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 91,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.norm_fixed_of_subset",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Error.lean",
+     "linha": 95,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.7.1",
+   "parte": "II",
+   "titulo": "definição ordem auxiliar total dos átomos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:7.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.zeta",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 25,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.sortAtoms",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 40,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.7.2",
+   "parte": "II",
+   "titulo": "lema propriedades da lista ordenada",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:7.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.sortAtoms_props",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 55,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.7.3",
+   "parte": "II",
+   "titulo": "definição tipo dos dados de cadeia",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:7.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.NormChain",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 110,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.7.4",
+   "parte": "II",
+   "titulo": "teorema construção determinada da cadeia",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:7.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.chainOf",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 344,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.chainOf_nodes_dyadic",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/Chain.lean",
+     "linha": 360,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.1",
+   "parte": "II",
+   "titulo": "definição parâmetros e funções parciais",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.1",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.NormChain.Fpart",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 52,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.NormChain.Rext",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 59,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.2",
+   "parte": "II",
+   "titulo": "lema expansão da recursão",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.2",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.NormChain.Rext_sum",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 88,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.NormChain.Rext_anchor",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 103,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.NormChain.Rext_of_M_eq_one",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 111,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.3",
+   "parte": "II",
+   "titulo": "lema identidade de duas retas incidentes",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.3",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.NormChain.incident",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 120,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.4",
+   "parte": "II",
+   "titulo": "teorema correção da extensão",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.4",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.NormChain.extension",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 211,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_relu_extension_agrees",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationReLU.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_relu_extension_is_consolidated",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationReLU.lean",
+     "linha": 34,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.5",
+   "parte": "II",
+   "titulo": "lema unicidade de uma reta a partir de dois pontos",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.5",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". Resultado recebido preservado. A identificação dos tipos de átomos, endereços, classes e erros com a v2 está provada nas pontes Normalization; consultar INTEGRACAO_NORMALIZACAO.md.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.affine_eq_of_two_points",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 283,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.6",
+   "parte": "II",
+   "titulo": "teorema independência da testemunha",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.6",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.Rext_unique",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 331,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_relu_extension_eq",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationReLU.lean",
+     "linha": 47,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "II.8.7",
+   "parte": "II",
+   "titulo": "definição operador de extensão das montagens",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:normalizacao:8.7",
+   "arquivo_tex": "normalizacao.tex",
+   "estado": "Integrado à base",
+   "estado_sufixo": ". Identificação com os tipos concretos da v2 provada nos módulos NormalizationAtoms, Contracts, Enumerations, Classes, Errors e ReLU. Hipóteses, domínio, função e orçamentos preservados.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Montagens.extOp",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 359,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Montagens.Res_extOp",
+     "arquivo": "../lean4/ambientes/parte_1/RequestProject/ReLU.lean",
+     "linha": 370,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2ReLUExtension",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationReLU.lean",
+     "linha": 23,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "SemanticBridge.fase2_relu_extension_agrees",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/SemanticBridge/NormalizationReLU.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.2.1",
+   "parte": "III",
+   "titulo": "lema indexação elementar",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:2.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.cantorPair_bijective",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 77,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.cantorPair_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 81,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Zenum_bijective",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 111,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Zinv_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 118,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.card_QH_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 191,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.card_QH_ge",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 320,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.rank_lt_three_sq",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Indexing.lean",
+     "linha": 536,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.2.2",
+   "parte": "III",
+   "titulo": "definição átomos e montagens",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:2.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Atom",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 17,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Atom.interface_injective",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 115,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Atom.addr_injective",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 178,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.LTree.WF",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Trees.lean",
+     "linha": 98,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.2.3",
+   "parte": "III",
+   "titulo": "proposição densidade, interpolação e forma ReLU",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:2.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Cota de interpolação provada com `ContDiffOn ℝ 2 f (Icc a b)` e `derivWithin`, via extensão C² portada da Fase 3 (`Pendencias/Extensao.lean`). Densidade e forma ReLU já batiam. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.assemblies_dense",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Uniform.lean",
+     "linha": 231,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.interp_remainder_C2",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interp.lean",
+     "linha": 126,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.LTree.eval_relu_form",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Trees.lean",
+     "linha": 392,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.interp_remainder_C2On",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Interpolacao.lean",
+     "linha": 20,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.1",
+   "parte": "III",
+   "titulo": "teorema cota polinomial do endereço",
+   "original": "8.1",
+   "rotulo": "map:artigo_2:3.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.index_bound",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 48,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.2",
+   "parte": "III",
+   "titulo": "lema cardinalidade das cascas de altura",
+   "original": "8.2",
+   "rotulo": "map:artigo_2:3.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência parcial",
+   "estado_sufixo": ". O Lean prova a contagem exata e a ordem $\\Theta(H^6)$. A constante $288/\\pi^4$ usa a assintótica da soma dos totientes na prova textual. O script `verificacao/constante_iii32.py --published` reproduz os valores finitos.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.card_LH_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 239,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.card_LH_ge",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 264,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.card_LH_theta",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 272,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.card_LH",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Atoms.lean",
+     "linha": 216,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.3",
+   "parte": "III",
+   "titulo": "proposição ordem exata do pior endereço aritmético",
+   "original": "8.3",
+   "rotulo": "map:artigo_2:3.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.MGamma_theta",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 137,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.MGamma_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 148,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.4",
+   "parte": "III",
+   "titulo": "teorema cota minimax relativa ao calibre",
+   "original": "8.4",
+   "rotulo": "map:artigo_2:3.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.address_lower",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 203,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.5",
+   "parte": "III",
+   "titulo": "observação",
+   "original": "8.5",
+   "rotulo": "map:artigo_2:3.5",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.3.6",
+   "parte": "III",
+   "titulo": "definição enumeração por altura da biblioteca",
+   "original": "8.6",
+   "rotulo": "map:artigo_2:3.6",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.nSharp",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 245,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.GammaSharp",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 279,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.7",
+   "parte": "III",
+   "titulo": "teorema endereço minimax exato para a exaustão",
+   "original": "8.7",
+   "rotulo": "map:artigo_2:3.7",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada com ressalva",
+   "estado_sufixo": ". A bijeção e as cotas minimax foram provadas. Os dois sentidos são executáveis. A afirmação de computabilidade não foi expressa por um teorema `Computable`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.sharp_optimal",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Addresses.lean",
+     "linha": 293,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.8",
+   "parte": "III",
+   "titulo": "observação qual endereço usar",
+   "original": "8.8",
+   "rotulo": "map:artigo_2:3.8",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.3.9",
+   "parte": "III",
+   "titulo": "teorema serialização condicionada de montagens",
+   "original": "8.9",
+   "rotulo": "map:artigo_2:3.9",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.assembly_serialization",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Serialization.lean",
+     "linha": 184,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.assembly_serialization_Gamma",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Serialization.lean",
+     "linha": 207,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.10",
+   "parte": "III",
+   "titulo": "observação",
+   "original": "8.10",
+   "rotulo": "map:artigo_2:3.10",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.3.11",
+   "parte": "III",
+   "titulo": "lema cálculo elementar de alturas",
+   "original": "8.11",
+   "rotulo": "map:artigo_2:3.11",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.assembly_height_arith",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Formats.lean",
+     "linha": 160,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.12",
+   "parte": "III",
+   "titulo": "teorema comparação rigorosa dos formatos",
+   "original": "8.12",
+   "rotulo": "map:artigo_2:3.12",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Ressalva anterior, superada: coding_gap_family provava só a cadeia de átomos para N par; a árvore de raiz única J(H-1-r,0), com N=2^r, é construída por famTree e tratada em coding_formats_comparison (ver abaixo). [11/11/2026] Montagem cheia `famTree` em J_{H-1-r,0} (WF, folhas J_{H-1,j}, altura H), N = 2^r; caso geral com N′ = 2^{⌊log₂N⌋}: NH ≤ 4 L_rat; inclui decodificadores e ordens. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.coding_formats_decoders",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Formats.lean",
+     "linha": 270,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.coding_format_orders",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Formats.lean",
+     "linha": 421,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.coding_gap_family",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Formats.lean",
+     "linha": 526,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.coding_formats_comparison",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Formatos.lean",
+     "linha": 71,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.13",
+   "parte": "III",
+   "titulo": "definição erro conjunto número--altura",
+   "original": "8.13",
+   "rotulo": "map:artigo_2:3.13",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.jointErr",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 30,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.heightFor",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 38,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.14",
+   "parte": "III",
+   "titulo": "proposição monotonicidade dos dois orçamentos",
+   "original": "8.14",
+   "rotulo": "map:artigo_2:3.14",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.jointErr_succ_N_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 55,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.jointErr_succ_H_le",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 59,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.jointErr_tendsto",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 72,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.15",
+   "parte": "III",
+   "titulo": "lema controle uniforme da primeira derivada",
+   "original": "8.15",
+   "rotulo": "map:artigo_2:3.15",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; |f′| ≤ 4R+M/2 com f′ unilateral. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.derivative_control",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interp.lean",
+     "linha": 231,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.derivative_control_Icc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 129,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.FRM_subset_FRMIcc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 56,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.extF_mem_FRM",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 59,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.16",
+   "parte": "III",
+   "titulo": "teorema controle simultâneo de erro, folhas, altura e bits",
+   "original": "8.16",
+   "rotulo": "map:artigo_2:3.16",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; mesma árvore determinística `uniformTree (jvals f r)` (só amostra f em [0,1]) e consequência para todo N ≥ 2. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.joint_budget",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 424,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.joint_all_N",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 509,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.joint_budget_Icc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 137,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.joint_all_N_Icc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 153,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.17",
+   "parte": "III",
+   "titulo": "corolário altura suficiente para precisão prescrita",
+   "original": "8.17",
+   "rotulo": "map:artigo_2:3.17",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; n_ε, H_ε inalterados; `jointErr`, `heightFor` e `supDist` só dependem de f em [0,1]. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.height_for_epsilon",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/JointBudget.lean",
+     "linha": 663,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.height_for_epsilon_Icc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 159,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.18",
+   "parte": "III",
+   "titulo": "teorema entropia e codebook explícito",
+   "original": "8.18",
+   "rotulo": "map:artigo_2:3.18",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Classe do texto `FRMIcc R M` (`ContDiffOn ℝ 2 f [0,1]`, f″ unilateral); `FRM ⊆ FRMIcc` e `extF f 0 1 ∈ FRM` coincide com f em [0,1]; coberturas de FRMIcc e FRM coincidem (`isCover_iff`), logo `entropyH ε (FRMIcc R M) = entropyH ε (FRM R M)`; codebook transportado. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.entropy_codebook",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Entropy.lean",
+     "linha": 46,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.entropy_codebook_Icc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 178,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.19",
+   "parte": "III",
+   "titulo": "definição recursos de um codec",
+   "original": "8.19",
+   "rotulo": "map:artigo_2:3.19",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.EpsCodec",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 21,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Ldec",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 35,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Lglobal",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 39,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Lfolhas",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 43,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.20",
+   "parte": "III",
+   "titulo": "proposição limite informacional para representação decodificável",
+   "original": "8.20",
+   "rotulo": "map:artigo_2:3.20",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.description_lower",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 118,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.complexity_chain",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Codecs.lean",
+     "linha": 180,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.21",
+   "parte": "III",
+   "titulo": "proposição",
+   "original": "8.21",
+   "rotulo": "map:artigo_2:3.21",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.no_minimizer",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 22,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.22",
+   "parte": "III",
+   "titulo": "definição catálogo truncado",
+   "original": "8.22",
+   "rotulo": "map:artigo_2:3.22",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.RepCat",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 92,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.SigmaCat",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 107,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.23",
+   "parte": "III",
+   "titulo": "teorema finitude, existência e desempate canônico",
+   "original": "8.23",
+   "rotulo": "map:artigo_2:3.23",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.finite_catalog_minimizer",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 329,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.24",
+   "parte": "III",
+   "titulo": "proposição consistência sob truncagem",
+   "original": "8.24",
+   "rotulo": "map:artigo_2:3.24",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.catalog_consistency",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 360,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.3.25",
+   "parte": "III",
+   "titulo": "algoritmo enumeração exata do catálogo",
+   "original": "8.25",
+   "rotulo": "map:artigo_2:3.25",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Programa computável `gen`/`select`/`enumSelect`; = `RepCat` e devolve `canon` quando J é avaliado exatamente em ℚ. Testado com `#eval` (|𝓛₂| = 252; 42 e 102 representações para D = 0, 1, H = 2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.finite_catalog_minimizer",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Catalog.lean",
+     "linha": 329,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.gen_eq_RepCat",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Enumeracao.lean",
+     "linha": 56,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.enumSelect_eq_canon",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Enumeracao.lean",
+     "linha": 136,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.1",
+   "parte": "III",
+   "titulo": "definição pares de fronteira admissíveis",
+   "original": "9.1",
+   "rotulo": "map:artigo_2:4.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.IsAdmPair",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 19,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.PH",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.2",
+   "parte": "III",
+   "titulo": "proposição dicionário exato de fronteiras",
+   "original": "9.2",
+   "rotulo": "map:artigo_2:4.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.endpoint_dictionary",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 63,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.3",
+   "parte": "III",
+   "titulo": "definição alfabeto de fronteira",
+   "original": "9.3",
+   "rotulo": "map:artigo_2:4.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Valphabet",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 102,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.4",
+   "parte": "III",
+   "titulo": "lema finitude e suficiência",
+   "original": "9.4",
+   "rotulo": "map:artigo_2:4.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.value_alphabet",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 122,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.5",
+   "parte": "III",
+   "titulo": "proposição células vazias e refinamento uniforme máximo",
+   "original": "9.5",
+   "rotulo": "map:artigo_2:4.5",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.translation_obstruction",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Interface.lean",
+     "linha": 230,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.4.6",
+   "parte": "III",
+   "titulo": "observação assimetria espacial do catálogo",
+   "original": "9.6",
+   "rotulo": "map:artigo_2:4.6",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.5.1",
+   "parte": "III",
+   "titulo": "lema decodificação e aditividade",
+   "original": "10.1",
+   "rotulo": "map:artigo_2:5.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.recursive_stream",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Functional.lean",
+     "linha": 57,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.5.2",
+   "parte": "III",
+   "titulo": "lema compatibilidade do desempate com a colagem",
+   "original": "10.2",
+   "rotulo": "map:artigo_2:5.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.tie_concatenation",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Functional.lean",
+     "linha": 178,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.6.1",
+   "parte": "III",
+   "titulo": "definição recorrência para árvore fixa",
+   "original": "11.1",
+   "rotulo": "map:artigo_2:6.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.Cfix",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 114,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.6.2",
+   "parte": "III",
+   "titulo": "teorema correção para árvore fixa",
+   "original": "11.2",
+   "rotulo": "map:artigo_2:6.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.fixed_correctness",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 164,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.fixed_global",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 189,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.6.3",
+   "parte": "III",
+   "titulo": "algoritmo rotulação exata de uma árvore fixa",
+   "original": "11.3",
+   "rotulo": "map:artigo_2:6.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela em pós-ordem com o κ-mínimo por estado (`fixTable`, colagem por w), custo = `Cfix`, raiz = rotulação κ-mínima de `fixed_global` (via Lema 5.2 `tie_concatenation`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.fixed_correctness",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 164,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.fixed_global",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 189,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DPprog.fixTable_cost",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ProgDin.lean",
+     "linha": 190,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DPprog.fixRoot_spec",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ProgDin.lean",
+     "linha": 244,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.7.1",
+   "parte": "III",
+   "titulo": "definição recorrência de Bellman com árvore variável",
+   "original": "12.1",
+   "rotulo": "map:artigo_2:7.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.Cvar",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 24,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.7.2",
+   "parte": "III",
+   "titulo": "teorema exatidão, existência e determinismo",
+   "original": "12.2",
+   "rotulo": "map:artigo_2:7.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.variable_correctness",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 43,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.variable_global",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 67,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.7.3",
+   "parte": "III",
+   "titulo": "corolário compatibilidade com a enumeração de formas",
+   "original": "12.3",
+   "rotulo": "map:artigo_2:7.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.shape_enumeration",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 235,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.7.4",
+   "parte": "III",
+   "titulo": "algoritmo seletor exato por programação dinâmica",
+   "original": "12.4",
+   "rotulo": "map:artigo_2:7.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". A recorrência ou existência matemática tem prova; falta implementar e certificar a execução e a reconstrução com comparação exata. [11/11/2026] Tabela `varTable` (candidato folha + colagens, troca só se κ diminui), custo = `Cvar`, raiz = ótimo `Cstar` e representação κ-mínima de `variable_global`. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.variable_correctness",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 43,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.variable_global",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DP.lean",
+     "linha": 67,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DPprog.varTable_cost",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ProgDin.lean",
+     "linha": 316,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DPprog.varRoot_spec",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ProgDin.lean",
+     "linha": 339,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.8.1",
+   "parte": "III",
+   "titulo": "teorema correção sob orçamento de folhas",
+   "original": "13.1",
+   "rotulo": "map:artigo_2:8.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.leaf_budget",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Budgets.lean",
+     "linha": 181,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.leaf_budget_atMost",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Budgets.lean",
+     "linha": 208,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.8.2",
+   "parte": "III",
+   "titulo": "teorema cálculo exato do melhor erro truncado",
+   "original": "13.2",
+   "rotulo": "map:artigo_2:8.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.bottleneck_correctness",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Budgets.lean",
+     "linha": 327,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Setup.bottleneck",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Budgets.lean",
+     "linha": 361,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.8.3",
+   "parte": "III",
+   "titulo": "observação interação entre profundidade e translação",
+   "original": "13.3",
+   "rotulo": "map:artigo_2:8.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.8.4",
+   "parte": "III",
+   "titulo": "corolário convergência para funções contínuas",
+   "original": "13.4",
+   "rotulo": "map:artigo_2:8.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.uniform_convergence",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Budgets.lean",
+     "linha": 387,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.9.1",
+   "parte": "III",
+   "titulo": "teorema complexidade em número de estados",
+   "original": "14.1",
+   "rotulo": "map:artigo_2:9.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado no modelo de custo explícito",
+   "estado_sufixo": ". As tabelas densas guardam `Cvar`/`Cb`, e seus apontadores recuperam um minimizador. O custo de leitura e escrita, soma e comparação de custos é unitário. A inicialização, a contagem de operações e a cardinalidade da memória têm cotas explícitas. O desempate canônico de III.7.4 é provado para o seletor funcional, sem cota formal do custo do desempate na tabela densa. O argumento textual para a variante canônica conta operações sobre a chave completa como unitárias.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.state_complexity",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Complexity.lean",
+     "linha": 89,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.state_complexity_dense",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean",
+     "linha": 1813,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.dense_variable_complexity",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean",
+     "linha": 866,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.dense_budget_complexity",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean",
+     "linha": 1459,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.dense_variable_init",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean",
+     "linha": 1614,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.dense_budget_init",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeDensa.lean",
+     "linha": 1762,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.9.2",
+   "parte": "III",
+   "titulo": "observação tabelas esparsas",
+   "original": "14.2",
+   "rotulo": "map:artigo_2:9.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.9.3",
+   "parte": "III",
+   "titulo": "teorema cota grosseira de complexidade de bits",
+   "original": "14.3",
+   "rotulo": "map:artigo_2:9.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado no modelo `BitModel`",
+   "estado_sufixo": ". As hipóteses limitam bits dos dados e fluxos. O Lean limita também os operandos intermediários. O custo em bits é o número de operações instrumentadas de III.9.1 multiplicado pela cota por operação, incluindo índices. `budgetIdxBits` acrescenta $\\lceil\\log_2(N+1)\\rceil$ à largura do índice da tabela com orçamento. A desigualdade é condicional ao modelo para a aritmética racional e o acesso à tabela. O argumento shortlex da versão canônica continua textual.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.bit_complexity",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/BitComplexity.lean",
+     "linha": 266,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.bit_complexity_dense",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 181,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.Cvar_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 60,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.Cb_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 68,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.candidate_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 86,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.lossTm_acc_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 124,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.DenseDP.budgetIdxBits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ComplexidadeBits.lean",
+     "linha": 169,
+     "nota": "",
+     "quebra_antes": true
+    }
+   ]
+  },
+  {
+   "id": "III.9.4",
+   "parte": "III",
+   "titulo": "proposição convergência dos mínimos penalizados",
+   "original": "14.4",
+   "rotulo": "map:artigo_2:9.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.Setup.truncation_convergence",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Complexity.lean",
+     "linha": 200,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.9.5",
+   "parte": "III",
+   "titulo": "proposição um seletor exato pode ser descontínuo",
+   "original": "14.5",
+   "rotulo": "map:artigo_2:9.5",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.instability",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Complexity.lean",
+     "linha": 288,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.11.1",
+   "parte": "III",
+   "titulo": "teorema minimalidade exata do limiar",
+   "original": "16.1",
+   "rotulo": "map:artigo_2:11.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Correspondência inspecionada",
+   "estado_sufixo": ". ",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.threshold_optimality",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Dyadic.lean",
+     "linha": 337,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.Edia_eq_sInf_nThr",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Dyadic.lean",
+     "linha": 363,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.11.2",
+   "parte": "III",
+   "titulo": "lema expansão local uniforme",
+   "original": "16.2",
+   "rotulo": "map:artigo_2:11.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`; e_f(J), f″ e ω_{f″} unilaterais em K, por `extF` e lemas de congruência. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.local_asymptotic_error",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/Dyadic.lean",
+     "linha": 455,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.local_asymptotic_error_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 229,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.11.3",
+   "parte": "III",
+   "titulo": "teorema envelope diádico universal e agudo",
+   "original": "16.3",
+   "rotulo": "map:artigo_2:11.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] f ∈ C²(K) via `ContDiffOn`, com `curvIOn` (I(f) com f″ unilateral); as três formas (eventual, liminf/limsup, caso I(f)=0). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.general_dyadic_envelope",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean",
+     "linha": 519,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.general_dyadic_envelope_zero",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean",
+     "linha": 544,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Artigo.general_dyadic_envelope_liminf",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicEnvelope.lean",
+     "linha": 597,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.general_dyadic_envelope_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 240,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.general_dyadic_envelope_liminf_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 255,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.general_dyadic_envelope_zero_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Ponte.lean",
+     "linha": 270,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.12.1",
+   "parte": "III",
+   "titulo": "teorema lei exata e intervalo de acumulação",
+   "original": "17.1",
+   "rotulo": "map:artigo_2:12.1",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". Resultados globais ou classe FRM usam regularidade C2 na reta. O artigo admite C2 no intervalo; transportar a extensão Fase3.extF e preservar valores, erros e curvatura. Conferir individualmente as hipóteses dos componentes citados. [11/11/2026] Mesmas seis conclusões de `quadratic_dyadic_constant` com `q ∈ C²(K)` (`ContDiffOn`) e `q″ ≡ κ` unilateral em K; usa `extF` e lemas de congruência (`Edia_congr`, `nThr_congr`). Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.quadratic_dyadic_constant",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicExact.lean",
+     "linha": 58,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.quadratic_dyadic_constant_on",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/LeiExata.lean",
+     "linha": 74,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.12.2",
+   "parte": "III",
+   "titulo": "teorema contagem exata em uma malha diádica base",
+   "original": "17.2",
+   "rotulo": "map:artigo_2:12.2",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Generalização documentada",
+   "estado_sufixo": ". A hipótese C1 foi enfraquecida no texto para continuidade, que é o que a prova usa; o Lean tem essa mesma hipótese, pois a igualdade com quadráticas nas células fechadas conserva compatibilidade nos extremos.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.piecewise_quadratic_count",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicPhase.lean",
+     "linha": 238,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.12.3",
+   "parte": "III",
+   "titulo": "corolário fases sincronizadas",
+   "original": "17.3",
+   "rotulo": "map:artigo_2:12.3",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Prova textual sincronizada",
+   "estado_sufixo": ". A demonstração Lean evita aplicar o envelope C2 global a uma função quadrática por partes que pode não ser C2. Manter o enunciado e atualizar a demonstração textual em etapa posterior. [13/11/2026] Demonstração textual sincronizada com Artigo.synchronized_phases, preservando o enunciado e sem invocar o envelope C2 global para a função quadrática por partes. PDF recompilado nesta rodada.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Artigo.synchronized_phases",
+     "arquivo": "../lean4/ambientes/artigo_2/RequestProject/DyadicSync.lean",
+     "linha": 99,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.12.4",
+   "parte": "III",
+   "titulo": "observação agudeza uniforme e comportamento pontual",
+   "original": "17.4",
+   "rotulo": "map:artigo_2:12.4",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Observação ou diagnostico do texto; não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "III.12.5",
+   "parte": "III",
+   "titulo": "lema propriedades da função de fase",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:12.5",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Prova textual nova e formalização Lean",
+   "estado_sufixo": " (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Atualização: $\\mu_f$ é construída como $\\tilde\\mu_f$ em $\\mathbb T$ (`Pendencias.muCirc`, com $\\mu_f=\\sqrt8\\,\\tilde\\mu_f$) e $\\Psi_f=\\int g(t+\\theta)\\,d\\tilde\\mu_f$ em `Pendencias.PsiF_eq_circ`. A identidade $\\Psi_f^+(t)-\\Psi_f(t)=\\tilde\\mu_f(\\{-t\\})$ está em `psi_gap_eq_muCirc` e `psiOn_gap_eq_muCirc`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.psi_gap_eq_muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 205,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.psiOn_gap_eq_muCirc",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FaseMedida.lean",
+     "linha": 227,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "III.12.6",
+   "parte": "III",
+   "titulo": "lema contagem por células",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:12.6",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Prova textual nova e formalização Lean",
+   "estado_sufixo": ". Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\\lceil\\log_4(\\cdot)\\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).",
+   "corpo": [],
+   "lean": []
+  },
+  {
+   "id": "III.12.7",
+   "parte": "III",
+   "titulo": "teorema lei de fase para curvatura variável",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:12.7",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Prova textual nova e formalização Lean",
+   "estado_sufixo": ". Declarações: `Pendencias.phase_lower`, `phase_upper` (cotas por fases convergentes), `phase_law_nonatom` (i), `phase_law_uniform` (ii), `phase_liminf_ge`, `phase_limsup_le`, `phase_seq_min`, `phase_seq_max` (iii) e as versões `_on` (`phase_law_nonatom_on`, `phase_law_uniform_on`, `phase_liminf_ge_on`, `phase_limsup_le_on`). Também testado numericamente (III.12.9).",
+   "corpo": [],
+   "lean": []
+  },
+  {
+   "id": "III.12.8",
+   "parte": "III",
+   "titulo": "corolário acumulação, critério de uniformidade e limite",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:12.8",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Prova textual nova e formalização Lean",
+   "estado_sufixo": "; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\\in c_04^{\\mathbb Z}$ q.t.p. em $\\{f''\\ne0\\}$ (`FourPowers`), que é a definição parentética do próprio texto.",
+   "corpo": [],
+   "lean": []
+  },
+  {
+   "id": "III.12.9",
+   "parte": "III",
+   "titulo": "observação exemplos, o que está provado e o que não está",
+   "original": "sem correspondência direta; desenvolvimento da edição atual",
+   "rotulo": "map:artigo_2:12.9",
+   "arquivo_tex": "artigo_2.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Não é um teorema Lean autônomo.",
+   "corpo": [
+    "Nenhuma declaração Lean associada."
+   ],
+   "lean": []
+  },
+  {
+   "id": "IV.3.1",
+   "parte": "IV",
+   "titulo": "proposição aninhamento da agenda",
+   "original": "18.1",
+   "rotulo": "map:artigo_3:3.1",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". `schedule_nesting_K` prova inclusão, monotonicidade do erro, cota pela norma de $f$ e atingimento no catálogo apontado finito.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.schedule_nesting",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Agenda.lean",
+     "linha": 67,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.pErr_eq_min",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Agenda.lean",
+     "linha": 44,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.schedule_nesting_K",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean",
+     "linha": 23,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.3.2",
+   "parte": "IV",
+   "titulo": "teorema redução exata às escalas diádicas",
+   "original": "18.2",
+   "rotulo": "map:artigo_3:3.2",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ", em ambas as direções. As constantes dependem apenas de $\\alpha$ e $q$. As versões anteriores para $[0,1]$ continuam disponíveis.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.dyadic_reduction",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Taxa.lean",
+     "linha": 182,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.dyadic_reduction_inf",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Taxa.lean",
+     "linha": 206,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.dyadic_reduction_K",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean",
+     "linha": 35,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.dyadic_reduction_inf_K",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean",
+     "linha": 45,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.3.3",
+   "parte": "IV",
+   "titulo": "proposição falha exata de homogeneidade",
+   "original": "18.3",
+   "rotulo": "map:artigo_3:3.3",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Com H(1) ≥ 2: 𝔞(x) = 0 e 𝔞(√2 x) > 0, para 0<q<∞ e q=∞ (irracionalidade de √2). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.homogeneity_failure",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Taxa.lean",
+     "linha": 278,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.homogeneity_failure_inf",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Taxa.lean",
+     "linha": 294,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.3.4",
+   "parte": "IV",
+   "titulo": "observação estrutura aritmética do funcional",
+   "original": "18.4",
+   "rotulo": "map:artigo_3:3.4",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Sem declaração Lean associada; é observação, não teorema.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "IV.4.1",
+   "parte": "IV",
+   "titulo": "lema Jackson racional com altura explícita",
+   "original": "19.1",
+   "rotulo": "map:artigo_3:4.1",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Jackson racional em raiz diádica geral, constante absoluta 8 e versão uniforme sobre bolas; Whitney demonstrada, sem hipótese adicional não provada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.rational_jackson_height",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Jackson.lean",
+     "linha": 508,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.rational_jackson_uniform",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Jackson.lean",
+     "linha": 678,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.4.2",
+   "parte": "IV",
+   "titulo": "teorema direção direta com altura aritmética",
+   "original": "19.2",
+   "rotulo": "map:artigo_3:4.2",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Inclusões diretas de Besov para os regimes do enunciado, inclusive agenda com folga polinomial, em raiz diádica geral. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.direct_besov_height",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Direta.lean",
+     "linha": 594,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.4.3",
+   "parte": "IV",
+   "titulo": "corolário imersões quantitativas uniformes sobre bolas",
+   "original": "19.3",
+   "rotulo": "map:artigo_3:4.3",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Cotas quantitativas uniformes sobre bolas nos três regimes, com constantes independentes da função e do raio. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.uniform_besov_ball",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Direta.lean",
+     "linha": 718,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.4.4",
+   "parte": "IV",
+   "titulo": "observação o papel do índice $q$",
+   "original": "19.4",
+   "rotulo": "map:artigo_3:4.4",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Sem declaração Lean associada; é observação, não teorema.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "IV.4.5",
+   "parte": "IV",
+   "titulo": "corolário endpoint $C^2$",
+   "original": "19.5",
+   "rotulo": "map:artigo_3:4.5",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". Em $[0,1]$, `c2_endpoint` prova a cota do funcional de taxa na agenda `H2`, e `c2_endpoint_bits` fornece a montagem admissível com cotas para os três formatos.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Dyadic.Lib.simultaneous_control",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Simultaneous.lean",
+     "linha": 477,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Dyadic.Lib.precision_height",
+     "arquivo": "../lean4/ambientes/base_integrada/Unified/Consolidado/Sec7/Precision.lean",
+     "linha": 71,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.c2_endpoint",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Endpoint.lean",
+     "linha": 31,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.c2_endpoint_bits",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Endpoint.lean",
+     "linha": 56,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.4.6",
+   "parte": "IV",
+   "titulo": "proposição piso aritmético uniforme",
+   "original": "19.6",
+   "rotulo": "map:artigo_3:4.6",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": ". O piso usa $h=H(N)$ e o centro de uma folha real da raiz escolhida. A segunda conclusão força a agenda de altura nos orçamentos positivos com $h\\ge2$.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.arithmetic_floor",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Agenda.lean",
+     "linha": 125,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.infDist_QH",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Agenda.lean",
+     "linha": 111,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.height_lower_bound",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Agenda.lean",
+     "linha": 160,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.arithmetic_floor_K",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean",
+     "linha": 56,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.height_lower_bound_K",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AgendaRaiz.lean",
+     "linha": 89,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.1",
+   "parte": "IV",
+   "titulo": "definição biblioteca marcada completa",
+   "original": "20.1",
+   "rotulo": "map:artigo_3:5.1",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Definições `MAtom` (s ∈ ℚ qualquer), `MTree`, `MWF`, `MAsm`, `MAsmNH`; inclusões 𝓛 ⊂ 𝓛^□, 𝒜 ⊂ 𝒜^□, 𝒜_{N,H} ⊂ 𝒜^□_{N,H}. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.marked_extends",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 157,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.Atom.toM_injective",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 52,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.2",
+   "parte": "IV",
+   "titulo": "teorema reversibilidade rasa exata",
+   "original": "20.2",
+   "rotulo": "map:artigo_3:5.2",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Teorema completo exact_shallow_reversal para parâmetros reais: equivalência marcada e aritmética, construção canônica, minimalidade e unicidade inclusive dos rótulos atômicos, M+1 <= N_can <= 1+sum d_j e equivalência com a biblioteca original quando todas as inclinações são não nulas. Igualdade de funções em [0,1], como no TeX; inclui M=0. Build Pendencias e auditoria de axiomas aprovados, apenas propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.RealReLU.exact_shallow_reversal",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoOriginal.lean",
+     "linha": 219,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.3",
+   "parte": "IV",
+   "titulo": "definição altura canônica de rede",
+   "original": "20.3",
+   "rotulo": "map:artigo_3:5.3",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Definições `canonShape` (𝒯(S)), `RedReLU`, `Hcan`; H_can = maior altura dos átomos da montagem canônica; folhas de 𝒯(S) sem quebras no interior. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.RedReLU.Hcan",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 265,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.RedReLU.Hcan_eq_maxHeight",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 274,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.canonShape_no_interior",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 203,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.RedReLU.canon_leaves_free",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Marcada.lean",
+     "linha": 280,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.4",
+   "parte": "IV",
+   "titulo": "proposição forma ancorada e comprimento estrutural",
+   "original": "20.4",
+   "rotulo": "map:artigo_3:5.4",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Correspondência confirmada",
+   "estado_sufixo": ". `direct_part` prova a forma ancorada, o round-trip do código e a cota $40N\\lfloor\\log_2(2H)\\rfloor$. A conversão `Anchored.toRealReLU` expande o termo afim, preserva a avaliação e satisfaz `RealReLU.Reduced`. A cota inversa impressa nesta edição é a fórmula corrigida provada por `Hcan_le` e `reverse_height_bit_bound`. `no_additive_constant_fix` refuta a fórmula original.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.AlturaInversa.Hcan_le",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean",
+     "linha": 365,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.AlturaInversa.reverse_height_bit_bound",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean",
+     "linha": 376,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.AlturaInversa.no_additive_constant_fix",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/AlturaInversa.lean",
+     "linha": 442,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.Ancorada.anchored_form",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/FormaAncorada.lean",
+     "linha": 465,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.Ancorada.direct_part",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean",
+     "linha": 215,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.Ancorada.Anchored.toRealReLU_eval",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean",
+     "linha": 27,
+     "nota": "",
+     "quebra_antes": true
+    },
+    {
+     "nome": "Pendencias.Marcada.Ancorada.Anchored.toRealReLU_reduced",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/CodigoAncorado.lean",
+     "linha": 39,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.5",
+   "parte": "IV",
+   "titulo": "teorema reversão aproximada quantizada",
+   "original": "20.5",
+   "rotulo": "map:artigo_3:5.5",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] IV.5.5 formalizado: quantized_approximate_reverse com C universal = 320 (mesma constante em D_eps e na cota de altura). Para forma ReLU reduzida real com |c|,|q|,|a_j| <= W, W >= 1, e 0<eps<=1, existe montagem U da biblioteca original (LTree.WF, inclinação não nula) com erro uniforme <= eps em [0,1], número de folhas <= 1+M*ceil(log2(C(M+1)(W+1)/eps)) e altura atômica máxima <= C(M+1)^3(W+1)^3/eps^2; vale com regiões planas. Prova: arredondamento de c,q,a_j a múltiplos de 1/Q, quebras a j/2^D (1<=j<=2^D-1), perturbação t/Q da inclinação global com t em [1,M+2] escolhido por gavetas, montagem canônica de IV.5.2 transportada para LTree. A cota de altura e provada diretamente com denominador comum (Hcan_leQ); não usa a cota impressa antiga de IV.5.4. Compilado e auditado (apenas propext, Classical.choice, Quot.sound). Ressalvas: D_eps usa Nat.ceil (o argumento do log e >= 1, logo coincide com o teto inteiro); a cota de folhas usa a profundidade de quantização D <= D_eps. A prova textual do TeX permanece como esboço (usa Q ~ delta^-1 com delta=eps/(16(M+1)(W+1)); a formalização usa Q = ceil(4(M+2)/eps) e 2^D >= 2(M+1)(W+1)/eps, que dão as mesmas ordens).",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.QuantIV55.quantized_approximate_reverse",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean",
+     "linha": 666,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.QuantIV55.construct",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean",
+     "linha": 558,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.QuantIV55.Hcan_leQ",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoQuantizada.lean",
+     "linha": 187,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.6",
+   "parte": "IV",
+   "titulo": "corolário redes profundas medidas pela função realizada",
+   "original": "20.6",
+   "rotulo": "map:artigo_3:5.6",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] IV.5.6 formalizado: deep_functional_reverse. Redes ReLU univariadas feedforward arbitrarias (NetFun: camadas afins e ReLU alternadas, qualquer profundidade/largura) realizam funções contínuas lineares por partes (fecho por combinações afins e por max 0, via colagem e remoção da ultima quebra). Para F com norma uniforme <= B e Lipschitz <= L em [0,1], F coincide em [0,1] com uma forma ReLU reduzida real (quebras estritas em (0,1), saltos não nulos) com M+1 = R(F) hinges+1, onde R(F) = regionCount F é o menor número de peças afins de [0,1] (regiões afins máximas); |c|<=B, |q|<=L, |a_j|<=2L, todos <= W = 2 max{1,B,L}; e IV.5.5 (quantized_approximate_reverse) vale com esses M e W. Compilado e auditado (propext, Classical.choice, Quot.sound). Escolhas de formalização: B e Lipschitz medidos em [0,1] (domínio do enunciado); R(F) definido como mínimo de peças afins, equivalente a regiões afins máximas para F continua (regionCount_eq prova R(F)=M+1 para a forma reduzida). A prova do TeX permanece valida; a formalização explícita a derivada via inclinações locais sigma_n.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Marcada.DeepIV56.deep_functional_reverse",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean",
+     "linha": 583,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Marcada.DeepIV56.regionCount_eq",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/ReversaoProfunda.lean",
+     "linha": 499,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.7",
+   "parte": "IV",
+   "titulo": "teorema imersão inversa sob crescimento de Lipschitz",
+   "original": "20.7",
+   "rotulo": "map:artigo_3:5.7",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] ω₂ e Besov pela norma diádica do texto em [0,1]; C = 4 + 2^{γ+1}; hipótese A_α(f) ≤ A na forma e_N ≤ A N^{-α}; conclusões B^{θ*}_{∞,∞} e B^θ_{∞,p} (θ<θ*, 0<p<∞). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.inverse_modulus",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 167,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.inverse_besov",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 262,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.8",
+   "parte": "IV",
+   "titulo": "corolário aplicação às agendas diretas",
+   "original": "20.8",
+   "rotulo": "map:artigo_3:5.8",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] H(N) ≤ C N^γ ⟹ 𝒜^α_q ⊂ B^{α/(α+γ)}_{∞,∞} (q<∞ via IV.3.2 e q=∞); agendas `Hsk` = H_{s,κ} em [0,1] (C_K = 8): ϑ_s e ordens < ϑ_s com fator logarítmico. Montagens H(N)-Lipschitz (`Sigma_lipschitz`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.raw_library_inverse_inf",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 419,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.raw_library_inverse",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 430,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.schedule_raw_inverse",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 536,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Agenda.vartheta_eq",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 526,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.9",
+   "parte": "IV",
+   "titulo": "teorema agudeza por um pente de tendas",
+   "original": "20.9",
+   "rotulo": "map:artigo_3:5.9",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Teorema do pente de tendas IV.5.9 concluído em Pendencias.PenteGemini.critical_tent_comb: continuidade, aproximação para todo N >= 1 na biblioteca original e não pertencimento às classes Besov acima e no expoente critico para todo r finito. Build Pendencias e auditoria agregada passaram; axiomas permitidos.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.PenteGemini.critical_tent_comb",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Pente.lean",
+     "linha": 1194,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.10",
+   "parte": "IV",
+   "titulo": "lema desigualdade inversa universal",
+   "original": "20.10",
+   "rotulo": "map:artigo_3:5.10",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] ω₂(f,1/N) ≤ 4 𝓡_N(f) para toda agenda, toda f e todo N (`realN`). Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Agenda.universal_inverse",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Inversa.lean",
+     "linha": 109,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.11",
+   "parte": "IV",
+   "titulo": "observação o que o funcional mede",
+   "original": "20.11",
+   "rotulo": "map:artigo_3:5.11",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Observação editorial",
+   "estado_sufixo": ". Sem declaração Lean associada; é observação, não teorema.",
+   "corpo": [
+    "Nenhuma declaração Lean associada na matriz recebida."
+   ],
+   "lean": []
+  },
+  {
+   "id": "IV.5.12",
+   "parte": "IV",
+   "titulo": "teorema Jackson racional para o funcional de realização",
+   "original": "20.12",
+   "rotulo": "map:artigo_3:5.12",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Jackson para o funcional de realização em [0,1], cota bilateral e versão uniforme; constantes universais explícitas. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.regularized_jackson",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Realizacao.lean",
+     "linha": 87,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.regularized_jackson_uniform",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Realizacao.lean",
+     "linha": 119,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.13",
+   "parte": "IV",
+   "titulo": "teorema caracterização pelo funcional de realização",
+   "original": "20.13",
+   "rotulo": "map:artigo_3:5.13",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Igualdades de classes de Besov e realização em todos os regimes declarados, incluindo folga polinomial. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.complete_besov_reversibility",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Realizacao.lean",
+     "linha": 393,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "IV.5.14",
+   "parte": "IV",
+   "titulo": "teorema reversibilidade estável por inclusão de redes",
+   "original": "20.14",
+   "rotulo": "map:artigo_3:5.14",
+   "arquivo_tex": "artigo_3.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Estabilidade das igualdades para famílias aninhadas que contêm zero e as montagens na escala linear declarada. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.architecture_stable_reversibility",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Realizacao.lean",
+     "linha": 448,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "V.6.1",
+   "parte": "V",
+   "titulo": "teorema taxa garantida em árvores",
+   "original": "6.1",
+   "rotulo": "map:complemento_original:6.1",
+   "arquivo_tex": "complemento_original.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Resultado original preservado no complemento. Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] σ_N^dia = `Edia`; f ∈ C²(K) via `ContDiffOn`; taxas M L²/(8N²) (N = 2^r) e M L²/(2N²); montagem racional na mesma árvore (qualquer `DShape`) com erro < ‖f − P_Λ f‖ + δ. Compilado com Lean/Mathlib 4.28.0; `#print axioms`: só `propext`, `Classical.choice`, `Quot.sound`.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.tree_rate_pow",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Arvores.lean",
+     "linha": 54,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.tree_rate",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Arvores.lean",
+     "linha": 62,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.tree_rationalization",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Arvores.lean",
+     "linha": 255,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "V.6.2",
+   "parte": "V",
+   "titulo": "teorema cota assintótica com nós livres",
+   "original": "6.2",
+   "rotulo": "map:complemento_original:6.2",
+   "arquivo_tex": "complemento_original.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Resultado original preservado no complemento. Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Cota assintótica com nós livres e derivadas unilaterais para funções C2 no intervalo fechado. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.NosLivres.free_knots",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/NosLivres.lean",
+     "linha": 123,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "V.6.3",
+   "parte": "V",
+   "titulo": "teorema estimativa direta",
+   "original": "6.3",
+   "rotulo": "map:complemento_original:6.3",
+   "arquivo_tex": "complemento_original.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Resultado original preservado no complemento. Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [13/11/2026] Estimativa direta em raiz diádica geral, constante de Whitney explícita e montagem racional com erro adicional arbitrário. Compilado com Lean/Mathlib 4.28.0; axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Jackson.besov_direct",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/BesovDireta.lean",
+     "linha": 129,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Jackson.besov_direct_whitney",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/BesovDireta.lean",
+     "linha": 109,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  },
+  {
+   "id": "V.21.1",
+   "parte": "V",
+   "titulo": "lema majorante local da função de Runge",
+   "original": "21.1",
+   "rotulo": "map:complemento_original:21.1",
+   "arquivo_tex": "complemento_original.tex",
+   "estado": "Formalizado e compilado",
+   "estado_sufixo": " (fidelidade não reauditada). Resultado original preservado no complemento. Declaração Lean citada abaixo: existência e compilação verificadas; fidelidade do enunciado não reauditada. [11/11/2026] Provado; a forma `runge_majorant` dispensa J ⊆ [-1,1]. Inclui `deriv2_runge`. Compilado com Lean/Mathlib 4.28.0 (lake build Pendencias); axiomas: propext, Classical.choice, Quot.sound.",
+   "corpo": [],
+   "lean": [
+    {
+     "nome": "Pendencias.Runge.runge_majorant_sub",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Runge.lean",
+     "linha": 118,
+     "nota": "",
+     "quebra_antes": false
+    },
+    {
+     "nome": "Pendencias.Runge.runge_majorant",
+     "arquivo": "../lean4/ambientes/artigo_2/Pendencias/Runge.lean",
+     "linha": 84,
+     "nota": "",
+     "quebra_antes": false
+    }
+   ]
+  }
+ ]
+}

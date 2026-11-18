@@ -68,8 +68,11 @@ conversões entre elas e a equivalência das classes de funções que definem.
 - **Lei de fase para curvatura variável** (III.12.5–III.12.9): para $f\in C^2$ geral, uma função de fase
   $\Psi_f$ determina $\sqrt\varepsilon\,n_f(\varepsilon)$ módulo a fase de $-\log_4\varepsilon$; o conjunto de
   acumulação de $N^2E_N^{\rm dia}$ é o intervalo $[m_f^2,M_f^2]$, o limite existe se, e somente se, a medida de
-  curvatura é uniforme, e então vale $I(f)^2/(8\ln^22)$ (por exemplo, $1/8$ para $\ln(1+x)$). Prova **textual**;
-  não formalizada em Lean e testada numericamente em `verificacao/lei_fase_*.py`.
+  curvatura é uniforme, e então vale $I(f)^2/(8\ln^22)$ (por exemplo, $1/8$ para $\ln(1+x)$). Prova textual,
+  **formalizada em Lean** para III.12.5–III.12.8 (módulos `lean4/ambientes/artigo_2/Pendencias/Fase*.lean`, sem `sorry`,
+  só `propext`/`Classical.choice`/`Quot.sound`), com uma ressalva: a equivalência «Ψ_f constante ⇔ μ_f uniforme» não
+  foi formalizada (foi formalizado «limite existe ⇔ Ψ_f constante», os valores do limite e a identidade de Fourier);
+  também testada numericamente em `verificacao/lei_fase_*.py`.
 
 ### Parte IV — Agendas de altura e teoria direta–inversa
 - O funcional de melhor erro define estratos, mas **falha em ser homogêneo** por escalares reais.
@@ -123,7 +126,7 @@ tempo é $\le 8\,S_D M^3$ (resp. $\le 7\,S_D N^2 M^3$) e que os apontadores reco
 
 ```
 .
-├── Biblioteca_Unificada.pdf        # o artigo (124 páginas)
+├── Biblioteca_Unificada.pdf        # o artigo (125 páginas)
 ├── tex/                            # fontes LaTeX
 │   ├── principal.tex               #   documento principal (compilar com latexmk)
 │   ├── documento_completo.tex      #   versão em arquivo único, com bibliografia incorporada
@@ -181,8 +184,9 @@ Este repositório prefere afirmar menos a afirmar demais:
 - **Prova compilada ≠ correspondência herdada.** Dos 156 ambientes, os 42 casos do dossiê de pendências
   têm prova Lean nova (41) ou prova textual sincronizada (1). Outras 77 correspondências foram *inspecionadas*
   e 20 *integradas à base* a partir de formalizações anteriores; elas apontam declarações Lean relevantes,
-  mas **não** foram reauditadas semanticamente uma a uma. Os 5 ambientes III.12.5–III.12.9 (lei de fase
-  para curvatura variável) têm apenas prova textual e **não** foram formalizados em Lean. Não se afirma formalização integral.
+  mas **não** foram reauditadas semanticamente uma a uma. Dos 5 ambientes III.12.5–III.12.9 (lei de fase
+  para curvatura variável), III.12.5–III.12.8 têm prova Lean nova (com a ressalva de III.12.8(b) e de $\mu_f$ não
+  ser construída em $\mathbb T$, ver o mapa) e III.12.9 é observação editorial; estes não entram nas contagens acima. Não se afirma formalização integral.
 - **III.9.1** usa um modelo de custo unitário explícito; a tabela densa compara custos e **não** implementa o
   desempate canônico por $\kappa$ (que está formalizado no seletor funcional de III.7.4).
 - **III.9.3** toma como *hipótese do modelo* (`BitModel`) que somar, comparar e reduzir frações de $b$ bits

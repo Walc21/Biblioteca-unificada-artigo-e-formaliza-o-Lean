@@ -69,8 +69,8 @@ comentários, não encontrou `sorry`, `admit` nem `axiom`. Como os alvos foram c
 números de tarefas desta tabela não somam o total da tabela da primeira compilação.
 
 Esta reconfirmação não altera as ressalvas abaixo. Os resultados III.12.5–III.12.9 (lei de fase para
-curvatura variável) foram acrescentados ao texto depois de 13 e 14/11, têm apenas prova textual e não
-estão em `lean4/`.
+curvatura variável) foram acrescentados ao texto depois de 13 e 14/11; III.12.5–III.12.8 foram formalizados em
+Lean depois dessa data (ver o adendo «Lei de fase» no fim deste arquivo), e esta reconfirmação não os cobre.
 
 ## Como reproduzir
 
@@ -94,8 +94,8 @@ cd ../parte_1 && lake exe cache get && lake build ValidationAll
    está enunciado em Lean. Ela não mostra que o enunciado em Lean diz o mesmo que o teorema do texto.
    Das 156 correspondências do mapa, 77 foram apenas *inspecionadas* e 20 *integradas à base*; elas não
    foram reauditadas semanticamente uma a uma. Dos 156, os cinco ambientes III.12.5–III.12.9 (lei de fase
-   para curvatura variável) foram acrescentados depois da recompilação de 13 e 14 de novembro, têm apenas prova
-   textual e não foram formalizados em Lean; nada em `lean4/` mudou. Não se afirma formalização integral do artigo.
+   para curvatura variável) foram acrescentados depois da recompilação de 13 e 14 de novembro; III.12.5–III.12.8
+   foram formalizados em Lean depois dela (adendo no fim deste arquivo), com ressalvas; III.12.9 é observação editorial. Não se afirma formalização integral do artigo.
 3. **III.9.1** usa um modelo de custo unitário explícito e não implementa o desempate canônico por κ
    (formalizado no seletor funcional de III.7.4). **III.9.3** toma como hipótese do modelo (`BitModel`) o
    custo das operações aritméticas em bits; não há modelo de máquina em Lean.
@@ -110,3 +110,19 @@ cd ../parte_1 && lake exe cache get && lake build ValidationAll
    integralmente nesta recompilação.
 7. **Documentos herdados.** `documentacao/INTEGRACAO_NORMALIZACAO.md` cita registros em `evidencias/` e um
    `executar.sh` que não estão neste repositório.
+
+## Adendo — Lei de fase (III.12.5–III.12.8)
+
+Formalizada depois da recompilação de 13 e 14/11, em dezessete módulos novos de
+`lean4/ambientes/artigo_2/Pendencias/` (`FaseNucleo`, `FaseFuncao`, `FaseContagem`, `FaseFatou`,
+`FasePontual`, `FaseLei`, `FaseLei2`–`FaseLei5`, `FaseMedia`, `FaseCoro`, `FaseMediaFase`,
+`FaseExtremos`, `FaseOn`, `FaseSalto`, `FaseFourier`), importados por `Pendencias.lean`.
+`lake build Pendencias` conclui sem erros. Os 42 teoremas principais foram adicionados a
+`AuditoriaPendencias.lean`; nenhum depende de axiomas além de `propext`, `Classical.choice` e
+`Quot.sound`, e a busca textual nos módulos `Fase*.lean` não encontra `sorry`.
+
+Ressalvas: (i) a medida $\mu_f$ não é construída em $\mathbb T$; os enunciados usam integrais sobre $K$ e átomos
+como conjuntos de medida de Lebesgue positiva; (ii) em III.12.8(b) a equivalência «$\Psi_f$ constante $\Leftrightarrow$
+$\mu_f$ uniforme» não foi formalizada; (iii) III.12.6 está enunciada para $f\in C^2(\mathbb R)$ (sem versão `_on`);
+(iv) a fidelidade dos enunciados Lean ao texto foi conferida por mim, sem revisão humana.
+

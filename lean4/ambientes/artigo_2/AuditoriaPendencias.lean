@@ -172,3 +172,14 @@ import Pendencias
 #print axioms Pendencias.continuousAt_psiFOn_iff
 #print axioms Pendencias.integral_gC_eF
 #print axioms Pendencias.fourier_psiF
+#print axioms Pendencias.upper_count_pow_on
+#print axioms Pendencias.lower_count_pow_on
+#print axioms Pendencias.circ_fourier_uniqueness
+#print axioms Pendencias.muCirc_mass
+#print axioms Pendencias.PsiF_eq_circ
+#print axioms Pendencias.psi_const_iff_muCirc
+#print axioms Pendencias.psiOn_const_iff_muCirc
+#print axioms Pendencias.limit_iff_muCirc_on
+#print axioms Pendencias.limit_iff_muCirc
+#print axioms Pendencias.fourier_muCirc
+#print axioms Pendencias.integral_eF_eq_zero

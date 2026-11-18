@@ -70,9 +70,8 @@ conversões entre elas e a equivalência das classes de funções que definem.
   acumulação de $N^2E_N^{\rm dia}$ é o intervalo $[m_f^2,M_f^2]$, o limite existe se, e somente se, a medida de
   curvatura é uniforme, e então vale $I(f)^2/(8\ln^22)$ (por exemplo, $1/8$ para $\ln(1+x)$). Prova textual,
   **formalizada em Lean** para III.12.5–III.12.8 (módulos `lean4/ambientes/artigo_2/Pendencias/Fase*.lean`, sem `sorry`,
-  só `propext`/`Classical.choice`/`Quot.sound`), com uma ressalva: a equivalência «Ψ_f constante ⇔ μ_f uniforme» não
-  foi formalizada (foi formalizado «limite existe ⇔ Ψ_f constante», os valores do limite e a identidade de Fourier);
-  também testada numericamente em `verificacao/lei_fase_*.py`.
+  só `propext`/`Classical.choice`/`Quot.sound`), inclusive a equivalência «Ψ_f constante ⇔ μ_f uniforme» (`FaseMedida.lean`).
+  Ressalva: «massa pontual» é formalizada como a condição `FourPowers` sobre $|f''|$; também testada numericamente em `verificacao/lei_fase_*.py`.
 
 ### Parte IV — Agendas de altura e teoria direta–inversa
 - O funcional de melhor erro define estratos, mas **falha em ser homogêneo** por escalares reais.
@@ -185,8 +184,7 @@ Este repositório prefere afirmar menos a afirmar demais:
   têm prova Lean nova (41) ou prova textual sincronizada (1). Outras 77 correspondências foram *inspecionadas*
   e 20 *integradas à base* a partir de formalizações anteriores; elas apontam declarações Lean relevantes,
   mas **não** foram reauditadas semanticamente uma a uma. Dos 5 ambientes III.12.5–III.12.9 (lei de fase
-  para curvatura variável), III.12.5–III.12.8 têm prova Lean nova (com a ressalva de III.12.8(b) e de $\mu_f$ não
-  ser construída em $\mathbb T$, ver o mapa) e III.12.9 é observação editorial; estes não entram nas contagens acima. Não se afirma formalização integral.
+  para curvatura variável), III.12.5–III.12.8 têm prova Lean nova (a equivalência «$\Psi_f$ constante ⇔ $\mu_f$ uniforme» está formalizada; ressalva: «massa pontual» é a condição `FourPowers`, ver o mapa) e III.12.9 é observação editorial; estes não entram nas contagens acima. Não se afirma formalização integral.
 - **III.9.1** usa um modelo de custo unitário explícito; a tabela densa compara custos e **não** implementa o
   desempate canônico por $\kappa$ (que está formalizado no seletor funcional de III.7.4).
 - **III.9.3** toma como *hipótese do modelo* (`BitModel`) que somar, comparar e reduzir frações de $b$ bits

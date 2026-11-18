@@ -1450,7 +1450,7 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/artigo_2.tex:3146](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.5`.
 
-Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Ressalva: $\mu_f$ não é construída como medida em $\mathbb T$; as fórmulas (i)–(iii) são enunciadas como integrais sobre $K$ de $\sqrt{|f''|/8}$ contra $g(t+a(x))$ (o que equivale à definição por mudança de variável), e os átomos como conjuntos $\{x: t+a(x)\in\mathbb Z,\ f''\ne0\}$ de medida de Lebesgue positiva.
+Estado: **Prova textual nova e formalização Lean** (módulos `Pendencias/Fase*.lean`). Declarações: `Pendencias.gC_lsc`, `gP_usc`, `psiF_periodic`, `psiP_periodic`, `psiF_ge`, `psiF_le_psiP`, `psiP_le`, `psiF_tendsto_left`/`right`, `psiP_tendsto_left`/`right`, `psiF_lsc`, `psiP_usc`, `exists_min_psiF`, `exists_max_psiP`, `psiP_eq_sup`, `countable_atomPhase`, `psiP_sub_psiF`, `isAtomPhase_iff_gap`, `continuousAt_psiF_iff`, `integral_psiF`, `fourier_psiF` e as versões `_on` para $C^2(K)$ (`psiFOn_ge`, `psiPOn_le`, `exists_min_psiFOn`, `integral_psiFOn`, `continuousAt_psiFOn_iff`, ...). Atualização: $\mu_f$ é construída como $\tilde\mu_f$ em $\mathbb T$ (`Pendencias.muCirc`, com $\mu_f=\sqrt8\,\tilde\mu_f$) e $\Psi_f=\int g(t+\theta)\,d\tilde\mu_f$ em `Pendencias.PsiF_eq_circ`. A ressalva anterior está resolvida.
 
 
 ## III.12.6 — lema contagem por células
@@ -1459,7 +1459,7 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/artigo_2.tex:3200](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.6`.
 
-Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\lceil\log_4(\cdot)\rceil$; usam III.11.1 (`threshold_optimality`). Ressalva: enunciadas para $f\in C^2(\mathbb R)$; a versão $C^2(K)$ segue por extensão, mas não foi acrescentada.
+Estado: **Prova textual nova e formalização Lean**. Declarações: `Pendencias.upper_count_pow` (a) e `Pendencias.lower_count_pow` (b), com os tetos $\lceil\log_4(\cdot)\rceil$; usam III.11.1 (`threshold_optimality`). Versões $C^2(K)$ acrescentadas: `Pendencias.upper_count_pow_on` e `Pendencias.lower_count_pow_on` (`Pendencias/FaseOn.lean`).
 
 
 ## III.12.7 — teorema lei de fase para curvatura variável
@@ -1477,7 +1477,7 @@ Original de 77 páginas: sem correspondência direta; desenvolvimento da ediçã
 
 Fonte editável: [tex/partes/artigo_2.tex:3366](../tex/partes/artigo_2.tex); rótulo `map:artigo_2:12.8`.
 
-Estado: **Prova textual nova e formalização Lean**, com uma ressalva em (b). Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. Ressalva: em (b) foi formalizado que o limite de $N^2E_N^{\rm dia}$ existe se, e somente se, $\Psi_f$ é constante, com os valores $I(f)/(\sqrt8\ln2)$ e $I(f)^2/(8\ln^22)$; a equivalência `Ψ_f constante ⇔ μ_f uniforme` **não** foi formalizada (a ponte `fourier_psiF` está provada; falta a unicidade de Fourier para medidas no círculo). Em (d), ``massa pontual'' é enunciada como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$ (`FourPowers`).
+Estado: **Prova textual nova e formalização Lean**; (b) está completa após `FaseMedida.lean`. Declarações: (a) `Pendencias.phase_cluster_set`; (b) `limit_iff_const`, `limit_of_const`; (c) `phase_average`; (d) `min_attained_iff_fourPowers`, `max_attained_iff_fourPowers`, `extremes_iff_fourPowers`; versões `_on`: `phase_cluster_set_on`, `limit_iff_const_on`, `limit_of_const_on`, `phase_average_on`, `extremes_iff_fourPowers_on`. (b) acrescentada nesta rodada: `psi_const_iff_muCirc`, `psiOn_const_iff_muCirc`, `limit_iff_muCirc`, `limit_iff_muCirc_on` (`Pendencias/FaseMedida.lean`), com a unicidade de Fourier no círculo (`circ_fourier_uniqueness`). Equivalência «Ψ_f constante ⇔ μ_f uniforme» formalizada. Em (d), ``massa pontual'' é enunciada como $|f''|\in c_04^{\mathbb Z}$ q.t.p. em $\{f''\ne0\}$ (`FourPowers`), que é a definição parentética do próprio texto.
 
 
 ## III.12.9 — observação exemplos, o que está provado e o que não está

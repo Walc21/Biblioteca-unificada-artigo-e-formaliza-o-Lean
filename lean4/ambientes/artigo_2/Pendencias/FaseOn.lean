@@ -1,5 +1,6 @@
 import Pendencias.FaseExtremos
 import Pendencias.Ponte
+import Pendencias.FaseContagem
 
 /-!
 # III.12.5–12.8 com `f ∈ C²(K)` (`ContDiffOn`), derivadas unilaterais em `K`
@@ -239,5 +240,82 @@ theorem extremes_iff_fourPowers_on (hf : ContDiffOn ℝ 2 f (cellIcc k₀ m₀))
   simpa only [curvI_extF hf, psiFOn_eq hf, psiPOn_eq hf, fourPowers_iff_on hf] using this
 
 end on
+
+/-- sub-células: `J_{k',m'} ⊆ J_{k,m}` quando `m' / 2^(k'-k) = m` -/
+lemma cellIcc_sub_of_div {k k' : ℕ} {m m' : ℤ} (hkk : k ≤ k') (h : m' / 2 ^ (k' - k) = m) :
+    cellIcc k' m' ⊆ cellIcc k m := by
+  obtain ⟨n, rfl⟩ := Nat.exists_eq_add_of_le hkk
+  rw [Nat.add_sub_cancel_left] at h
+  have h1 : m * 2 ^ n ≤ m' := by
+    have := Int.ediv_mul_le m' (pow_ne_zero n (by norm_num : (2:ℤ) ≠ 0))
+    rw [h] at this; exact this
+  have h2 : m' < (m + 1) * 2 ^ n := by
+    have := Int.lt_ediv_add_one_mul_self m' (pow_pos (by norm_num : (0:ℤ) < 2) n)
+    rw [h] at this; linarith
+  have hR1 : (m : ℝ) * 2 ^ n ≤ m' := by exact_mod_cast h1
+  have hR2 : (m' : ℝ) + 1 ≤ ((m : ℝ) + 1) * 2 ^ n := by
+    have : m' + 1 ≤ (m + 1) * 2 ^ n := h2
+    exact_mod_cast this
+  have hk : (0 : ℝ) < 2 ^ k := by positivity
+  have hn : (0 : ℝ) < 2 ^ n := by positivity
+  rintro x ⟨hx1, hx2⟩
+  unfold cellIcc at *
+  rw [Set.mem_Icc]
+  constructor
+  · refine le_trans ?_ hx1
+    rw [div_le_div_iff₀ hk (by positivity), pow_add]
+    nlinarith [mul_le_mul_of_nonneg_right hR1 hk.le]
+  · refine le_trans hx2 ?_
+    rw [div_le_div_iff₀ (by positivity) hk, pow_add]
+    nlinarith [mul_le_mul_of_nonneg_right hR2 hk.le]
+
+section countOn
+
+variable {f : ℝ → ℝ} {k₀ : ℕ} {m₀ : ℤ}
+
+/-- **III.12.6(a), `C²(K)`**: cota superior com tetos -/
+theorem upper_count_pow_on (hf : ContDiffOn ℝ 2 f (cellIcc k₀ m₀)) {d : ℕ}
+    {Mv : ℤ → ℝ} (hM0 : ∀ j, 0 ≤ Mv j)
+    (hM : ∀ j : ℤ, j / 2 ^ d = m₀ → ∀ y ∈ cellIcc (k₀ + d) j, |d2On f k₀ m₀ y| ≤ Mv j)
+    {ε : ℝ} (hε : 0 < ε) :
+    (nThr f ε k₀ m₀ : ℝ) ≤ ∑ i ∈ Finset.range (2 ^ d),
+      (2 : ℝ) ^ thrDepth (Mv (m₀ * 2 ^ d + i) * ((2 : ℝ) ^ (k₀ + d))⁻¹ ^ 2 / 8) ε := by
+  have hsub : ∀ j : ℤ, j / 2 ^ d = m₀ → cellIcc (k₀ + d) j ⊆ cellIcc k₀ m₀ := fun j hj =>
+    cellIcc_sub_of_div (Nat.le_add_right k₀ d) (by rwa [Nat.add_sub_cancel_left])
+  have hup := upper_count_pow (extF_cell_contDiff hf) hM0 (fun j hj y hy => by
+    rw [d2On_eq hf (hsub j hj hy)]; exact hM j hj y hy) hε
+  rw [nThr_congr (eqOn_cell f k₀ m₀) ε] at hup
+  exact hup
+
+/-- **III.12.6(b), `C²(K)`**: cota inferior com tetos -/
+theorem lower_count_pow_on (hf : ContDiffOn ℝ 2 f (cellIcc k₀ m₀)) {d : ℕ} {μ : ℤ → ℝ}
+    (hμ : ∀ j : ℤ, j / 2 ^ d = m₀ → ∀ y ∈ cellIcc (k₀ + d) j, μ j ≤ |d2On f k₀ m₀ y|)
+    {ε : ℝ} (hε : 0 < ε)
+    (hanc : ∀ k' : ℕ, k₀ ≤ k' → k' < k₀ + d → ∀ i : ℕ, i < 2 ^ d → 0 < μ (m₀ * 2 ^ d + i) →
+      ε < locErr f k' ((m₀ * 2 ^ d + i) / 2 ^ (k₀ + d - k')))
+    {T : DShape} (hT : T.treeErr f k₀ m₀ ≤ ε) :
+    ∑ i ∈ Finset.range (2 ^ d), (if 0 < μ (m₀ * 2 ^ d + i) then
+        (2 : ℝ) ^ (⌈Real.logb 4 (μ (m₀ * 2 ^ d + i) * ((2 : ℝ) ^ (k₀ + d))⁻¹ ^ 2 / 8 / ε)⌉)
+      else 0) ≤ T.numLeaves := by
+  have hsub : ∀ j : ℤ, j / 2 ^ d = m₀ → cellIcc (k₀ + d) j ⊆ cellIcc k₀ m₀ := fun j hj =>
+    cellIcc_sub_of_div (Nat.le_add_right k₀ d) (by rwa [Nat.add_sub_cancel_left])
+  have hanc' : ∀ k' : ℕ, k₀ ≤ k' → k' < k₀ + d → ∀ i : ℕ, i < 2 ^ d → 0 < μ (m₀ * 2 ^ d + i) →
+      ε < locErr (extF f (cL k₀ m₀) (cR k₀ m₀)) k' ((m₀ * 2 ^ d + i) / 2 ^ (k₀ + d - k')) := by
+    intro k' h1 h2 i hi hpos
+    have hdiv : ((m₀ * 2 ^ d + i) / 2 ^ (k₀ + d - k')) / 2 ^ (k' - k₀) = m₀ := by
+      have hd : (k₀ + d - k') + (k' - k₀) = d := by omega
+      have hi' : (0 : ℤ) ≤ i := by positivity
+      have hi2 : (i : ℤ) < 2 ^ d := by exact_mod_cast hi
+      rw [Int.ediv_ediv_of_nonneg (by positivity), ← pow_add, hd, add_comm,
+        Int.add_mul_ediv_right _ _ (by positivity), Int.ediv_eq_zero_of_lt hi' hi2, zero_add]
+    have hs := cellIcc_sub_of_div h1 hdiv
+    rw [locErr_congr ((eqOn_cell f k₀ m₀).mono hs)]
+    exact hanc k' h1 h2 i hi hpos
+  have hT' : T.treeErr (extF f (cL k₀ m₀) (cR k₀ m₀)) k₀ m₀ ≤ ε := by
+    rw [treeErr_congr T k₀ m₀ (eqOn_cell f k₀ m₀)]; exact hT
+  exact lower_count_pow (extF_cell_contDiff hf) (μ := μ) (fun j hj y hy => by
+    rw [d2On_eq hf (hsub j hj hy)]; exact hμ j hj y hy) hε hanc' hT'
+
+end countOn
 
 end Pendencias

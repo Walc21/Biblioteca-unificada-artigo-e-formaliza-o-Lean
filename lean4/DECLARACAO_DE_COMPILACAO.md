@@ -129,5 +129,5 @@ medida $\tilde\mu_f$ construída em `AddCircle 1` (`muCirc`, com $\mu_f=\sqrt8\,
 Ressalvas remanescentes: (i) «massa pontual» é a condição `FourPowers` sobre $|f''|$, que é a definição
 parentética do próprio texto, não um átomo formal de $\mathbb T$; (ii) em III.12.7(ii), a parte de convergência
 uniforme não foi reconferida linha a linha; (iii) a fidelidade dos enunciados Lean ao texto foi conferida por mim,
-sem revisão externa (folha `documentacao/CONFERENCIA_ENUNCIADOS_LEAN.md`, branch `conferencia-enunciados-lean`).
+sem revisão externa (folha `documentacao/CONFERENCIA_ENUNCIADOS_LEAN.md`).
 
